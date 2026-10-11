@@ -106,7 +106,13 @@ footer{background:#040F2B;color:rgba(255,255,255,.55);font-size:14px;padding:26p
 .lvc p b{color:var(--ink);font-weight:700;margin-right:4px}
 .two-p{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-bottom:34px}
 @media (max-width:1000px){.lv{grid-template-columns:1fr 1fr}}
-@media (max-width:820px){.lv,.two-p{grid-template-columns:1fr}}
+@media (max-width:820px){.lv,.two-p{grid-template-columns:1fr}.talks dl{grid-template-columns:1fr;gap:2px}.talks dd{margin-bottom:10px}}
+.talks{margin-top:34px;background:#fff;border:1px solid var(--line);padding:28px 30px}
+.talks h3{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--navy);margin-bottom:6px}
+.talks .sum{font-size:15.5px;color:var(--mute);margin-bottom:14px}
+.talks dl{display:grid;grid-template-columns:70px 1fr;gap:10px 18px;font-size:15.5px}
+.talks dt{font-weight:700;color:var(--gold)}
+.talks dd{color:var(--ink)}
 /* deep-blue band */
 section.dark{background:linear-gradient(170deg,var(--navy) 0%,var(--deep) 100%);color:#fff;border:0}
 .dark h2,.dark .it b{color:#fff}.dark .lb,.dark .it .n{color:var(--gold2)}
@@ -142,7 +148,7 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
  <ul class="gnb">
   <li><a href="#view">연구소 소개</a><ul class="sub"><li><a href="#view">경세제민의 생각</a></li><li><a href="#people">연구진</a></li><li><a href="#contact">오시는 길</a></li></ul></li>
   <li><a href="#research">정책연구</a><ul class="sub"><li><a href="#research">연구 분야</a></li><li><a href="#research">수행 방식</a></li></ul></li>
-  <li><a href="#edu">AI 교육</a><ul class="sub"><li><a href="#edu">AI 실전 교육</a></li><li><a href="#edu">AI 리터러시</a></li><li><a href="#edu">초급 · 중급 · 상급 · 전문가</a></li></ul></li>
+  <li><a href="#edu">AI 교육</a><ul class="sub"><li><a href="#edu">AI 실전 교육</a></li><li><a href="#edu">AI 리터러시</a></li><li><a href="#edu">AI 저널리즘</a></li><li><a href="#edu">강연</a></li><li><a href="#edu">초급 · 중급 · 상급 · 전문가</a></li></ul></li>
   <li><a href="#media">전문지</a><ul class="sub"><li><a href="#media">일 · 길 · 터 · 돈</a></li><li><a href="#news">브리핑 · 기사</a></li></ul></li>
   <li><a href="#record">연구 실적</a><ul class="sub"><li><a href="#record">해 본 일</a></li></ul></li>
   <li><a href="#contact">문의</a><ul class="sub"><li><a href="#contact">연구 의뢰</a></li><li><a href="mailto:weminpress@gmail.com">메일 보내기</a></li></ul></li>
@@ -186,17 +192,29 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
  <div class="lb">AI 교육</div>
  <h2>AI를 일에 쓰는 힘,<br>AI를 바로 읽는 눈</h2>
  <p class="intro">AI로 연구하고 기사를 쓰는 연구진이 직접 가르칩니다. 설명보다 실습이 먼저입니다. 교육이 끝난 날부터 업무에 씁니다.</p>
- <div class="two-p">
-  <div class="it"><div class="n">01</div><div><b>AI 실전 교육</b><span>문서 초안, 자료 정리와 분석, 보도자료·기사 작성을 각자의 실제 업무 자료로 실습합니다</span></div></div>
-  <div class="it"><div class="n">02</div><div><b>AI 리터러시</b><span>AI가 무엇을 잘하고 어디서 틀리는지, 사실 확인과 개인정보·저작권, 일자리 변화까지 바로 읽는 힘을 기릅니다</span></div></div>
+ <div class="grid">
+  <div class="it"><div class="n">01</div><div><b>AI 실전 교육</b><span>문서 초안, 자료 정리와 분석, 보도자료 작성을 각자의 실제 업무 자료로 실습합니다</span></div></div>
+  <div class="it"><div class="n">02</div><div><b>AI 리터러시</b><span>허위정보 판별, 저작권과 개인정보 보호, 편향 점검 — AI를 바로 읽고 확인하는 힘을 기릅니다</span></div></div>
+  <div class="it"><div class="n">03</div><div><b>AI 저널리즘</b><span>기자와 홍보 담당자를 위한 AI 활용 취재·기사 작성과 검증</span></div></div>
+  <div class="it"><div class="n">04</div><div><b>강연</b><span>기관·단체·노동조합·시민사회단체 외부강연과 특강</span></div></div>
  </div>
- <div class="lv">
-  <div class="lvc"><div class="st">1단계</div><h3>초급 · 기초</h3><p><b>실전</b>AI와 처음 대화하기, 원하는 답을 얻는 질문법</p><p><b>리터러시</b>AI는 무엇이고 어디서 틀리는가</p></div>
-  <div class="lvc"><div class="st">2단계</div><h3>중급</h3><p><b>실전</b>보고서·기획서 초안, 요약과 정리, 표와 그림</p><p><b>리터러시</b>사실 확인, 개인정보와 저작권 지키기</p></div>
-  <div class="lvc"><div class="st">3단계</div><h3>상급</h3><p><b>실전</b>자료 분석과 반복 업무 자동화, 부서 업무 설계</p><p><b>리터러시</b>AI 도입 기준과 책임, 일과 조직의 변화</p></div>
-  <div class="lvc"><div class="st">4단계</div><h3>전문가</h3><p><b>실전</b>연구·분석·정책 업무에 AI를 엮는 설계, 기관 내부 강사 양성</p><p><b>리터러시</b>기관의 AI 활용 지침과 검증 체계 만들기</p></div>
+ <div class="lv" style="margin-top:34px">
+  <div class="lvc"><div class="st">1단계</div><h3>초급 · 기초</h3><p><b>실전</b>AI와 처음 대화하기, 기본 명령어</p><p><b>리터러시</b>AI는 무엇이고 어디서 틀리는가</p></div>
+  <div class="lvc"><div class="st">2단계</div><h3>중급</h3><p><b>실전</b>내 문체와 업무 방식을 AI에 학습시키기</p><p><b>리터러시</b>허위정보 판별과 사실 확인</p></div>
+  <div class="lvc"><div class="st">3단계</div><h3>상급</h3><p><b>실전</b>보고서·기사처럼 복잡한 문서 작성과 업무 흐름 짜기</p><p><b>리터러시</b>저작권·개인정보 보호, 편향 점검</p></div>
+  <div class="lvc"><div class="st">4단계</div><h3>전문가</h3><p><b>실전</b>시스템 프롬프트 설계, 기관 맞춤 AI 업무 체계</p><p><b>리터러시</b>기관의 AI 활용 지침과 검증 체계 만들기</p></div>
  </div>
- <div class="note"><b>누구에게</b> — 공공기관과 기업의 직장인 재교육, 각종 단체·노동조합·시민사회단체 교육, 각종 강연. 특강부터 여러 회차 과정까지 기관 업무에 맞춰 짭니다. 강의 실적 — 노동조합 지회 조합원 대상 특강 「AI 시대, 사람이 하는 가장 귀한 일」(90분)</div>
+ <div class="talks">
+  <h3>강연 · 연수 실적</h3>
+  <p class="sum">2023~2026년 강연·연수 30여 회. 2024년 한 해에만 AI 저널리즘 강연 17회.</p>
+  <dl>
+   <dt>2026</dt><dd>인천항운노동조합 「AI 대전환 파도, 어떻게 넘을 것인가」 · 시민사회 공익활동가 「AGI 시대 공익활동가를 위한 실전 가이드」 · 노동조합 지회 조합원 특강 「AI 시대, 사람이 하는 가장 귀한 일」</dd>
+   <dt>2025</dt><dd>한국언론진흥재단 제365기 수습기자 기본교육(충청권) · 한국언론진흥재단 찾아가는 저널리즘(태안신문) · 「AI 범용시대 지역언론 생존의 길」 용인시민신문·보은사람들·당진시대 · 「지역언론 뉴스룸 AI 활용 실전」 · 「AI 범용시대 독일 언론과 민주주의」(금천)</dd>
+   <dt>2024</dt><dd>「인공지능 시대 지역언론의 새로운 길」 외 17회 — 한국언론진흥재단 대전세종지사(지역언론 주니어기자 역량강화 전문연수 포함)·광주지사, 경남지역신문발전위원회, 경남울산기자협회, 전국 지역신문 사별연수, 인천마당 인공지능 강연</dd>
+   <dt>2023</dt><dd>한국언론진흥재단 대전지사 「취재 아이템 발굴과 취재원 관리」 · 지역주간신문 기자 레벨업 전문연수</dd>
+  </dl>
+ </div>
+ <div class="note"><b>누구에게</b> — 공공기관과 기업의 직장인 재교육, 각종 단체·노동조합·시민사회단체 교육, 언론인 연수, 각종 강연. 특강부터 여러 회차 과정까지 맞춰 짭니다.</div>
 </div></section>
 
 <section class="s" id="media"><div class="wrap">
