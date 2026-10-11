@@ -2,12 +2,12 @@
 <html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>경세제민 AI·경제 연구소</title>
-<meta name="description" content="두루두루 고루고루 잘 사는 사회. 현장에서 찾고 데이터로 검증해 실행할 정책을 내놓는 인천의 민간 싱크탱크. 정책연구와 전문지.">
+<meta name="description" content="두루두루 고루고루 잘 사는 사회. 현장에서 찾고 데이터로 검증해 실행할 정책을 내놓는 인천의 민간 싱크탱크. 정책연구, AI 실전 교육과 AI 리터러시, 전문지.">
 <link rel="canonical" href="https://weminai.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://weminai.com/">
 <meta property="og:title" content="경세제민 AI·경제 연구소">
-<meta property="og:description" content="두루두루 고루고루 잘 사는 사회 — 정책연구 · 전문지">
+<meta property="og:description" content="두루두루 고루고루 잘 사는 사회 — 정책연구 · AI 교육 · 전문지">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
@@ -97,6 +97,16 @@ h2{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4vw,42px);line-height:
 .ct a{color:#fff}
 .co{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.3);font-family:"Noto Serif KR",serif;font-size:19px;color:var(--gold2)}
 footer{background:#040F2B;color:rgba(255,255,255,.55);font-size:14px;padding:26px 0;text-align:center}
+/* AI education levels */
+.lv{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+.lvc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);padding:24px 24px 22px}
+.lvc .st{font-size:13.5px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+.lvc h3{font-family:"Noto Serif KR",serif;font-size:23px;color:var(--navy);margin:6px 0 12px}
+.lvc p{font-size:15.5px;color:var(--mute);margin-top:8px}
+.lvc p b{color:var(--ink);font-weight:700;margin-right:4px}
+.two-p{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-bottom:34px}
+@media (max-width:1000px){.lv{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.lv,.two-p{grid-template-columns:1fr}}
 /* deep-blue band */
 section.dark{background:linear-gradient(170deg,var(--navy) 0%,var(--deep) 100%);color:#fff;border:0}
 .dark h2,.dark .it b{color:#fff}.dark .lb,.dark .it .n{color:var(--gold2)}
@@ -132,6 +142,7 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
  <ul class="gnb">
   <li><a href="#view">연구소 소개</a><ul class="sub"><li><a href="#view">경세제민의 생각</a></li><li><a href="#people">연구진</a></li><li><a href="#contact">오시는 길</a></li></ul></li>
   <li><a href="#research">정책연구</a><ul class="sub"><li><a href="#research">연구 분야</a></li><li><a href="#research">수행 방식</a></li></ul></li>
+  <li><a href="#edu">AI 교육</a><ul class="sub"><li><a href="#edu">AI 실전 교육</a></li><li><a href="#edu">AI 리터러시</a></li><li><a href="#edu">초급 · 중급 · 상급 · 전문가</a></li></ul></li>
   <li><a href="#media">전문지</a><ul class="sub"><li><a href="#media">일 · 길 · 터 · 돈</a></li><li><a href="#news">브리핑 · 기사</a></li></ul></li>
   <li><a href="#record">연구 실적</a><ul class="sub"><li><a href="#record">해 본 일</a></li></ul></li>
   <li><a href="#contact">문의</a><ul class="sub"><li><a href="#contact">연구 의뢰</a></li><li><a href="mailto:weminpress@gmail.com">메일 보내기</a></li></ul></li>
@@ -142,7 +153,7 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
  <div class="han">經世濟民 · 세상을 다스려 백성을 구한다</div>
  <h1>두루두루<br>고루고루<br><em>잘 사는 사회</em></h1>
  <p class="lead">현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p>
- <div class="two"><a class="btn solid" href="#research">정책연구</a><a class="btn" href="#media">전문지</a></div>
+ <div class="two"><a class="btn solid" href="#research">정책연구</a><a class="btn" href="#edu">AI 교육</a><a class="btn" href="#media">전문지</a></div>
 </div></section>
 
 <section class="s" id="view"><div class="wrap">
@@ -169,6 +180,23 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
   <div class="it"><div class="n">04</div><div><b>정책효과 · 사업평가</b><span>정책·사업 — 인과효과 분석(이중차분법 등), 지역경제 파급효과 분석(산업연관분석)</span></div></div>
  </div>
  <div class="note">과제마다 분야 공동연구원을 위촉해 함께 수행합니다. 분석은 외주하지 않고 직접 합니다.</div>
+</div></section>
+
+<section class="s tint" id="edu"><div class="wrap">
+ <div class="lb">AI 교육</div>
+ <h2>AI를 일에 쓰는 힘,<br>AI를 바로 읽는 눈</h2>
+ <p class="intro">AI로 연구하고 기사를 쓰는 연구진이 직접 가르칩니다. 설명보다 실습이 먼저입니다. 교육이 끝난 날부터 업무에 씁니다.</p>
+ <div class="two-p">
+  <div class="it"><div class="n">01</div><div><b>AI 실전 교육</b><span>문서 초안, 자료 정리와 분석, 보도자료·기사 작성을 각자의 실제 업무 자료로 실습합니다</span></div></div>
+  <div class="it"><div class="n">02</div><div><b>AI 리터러시</b><span>AI가 무엇을 잘하고 어디서 틀리는지, 사실 확인과 개인정보·저작권, 일자리 변화까지 바로 읽는 힘을 기릅니다</span></div></div>
+ </div>
+ <div class="lv">
+  <div class="lvc"><div class="st">1단계</div><h3>초급 · 기초</h3><p><b>실전</b>AI와 처음 대화하기, 원하는 답을 얻는 질문법</p><p><b>리터러시</b>AI는 무엇이고 어디서 틀리는가</p></div>
+  <div class="lvc"><div class="st">2단계</div><h3>중급</h3><p><b>실전</b>보고서·기획서 초안, 요약과 정리, 표와 그림</p><p><b>리터러시</b>사실 확인, 개인정보와 저작권 지키기</p></div>
+  <div class="lvc"><div class="st">3단계</div><h3>상급</h3><p><b>실전</b>자료 분석과 반복 업무 자동화, 부서 업무 설계</p><p><b>리터러시</b>AI 도입 기준과 책임, 일과 조직의 변화</p></div>
+  <div class="lvc"><div class="st">4단계</div><h3>전문가</h3><p><b>실전</b>연구·분석·정책 업무에 AI를 엮는 설계, 기관 내부 강사 양성</p><p><b>리터러시</b>기관의 AI 활용 지침과 검증 체계 만들기</p></div>
+ </div>
+ <div class="note"><b>누구에게</b> — 공공기관과 기업의 직장인 재교육, 각종 단체·노동조합·시민사회단체 교육, 각종 강연. 특강부터 여러 회차 과정까지 기관 업무에 맞춰 짭니다. 강의 실적 — 노동조합 지회 조합원 대상 특강 「AI 시대, 사람이 하는 가장 귀한 일」(90분)</div>
 </div></section>
 
 <section class="s" id="media"><div class="wrap">
