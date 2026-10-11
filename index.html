@@ -12,22 +12,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#16203A;--navy2:#1F2C4F;--gold:#B0832C;--gold2:#E0BC72;--paper:#FAF8F3;--tint:#EFEADF;--ink:#1C1F26;--mute:#555A64;--line:#DDD5C3}
+:root{--navy:#0A2A66;--navy2:#0F3A8A;--deep:#061B45;--gold:#B8892E;--gold2:#E6C27A;--paper:#F3F6FB;--tint:#E2EAF6;--ink:#0F1B33;--mute:#46526B;--line:#C8D4E8}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:var(--paper);word-break:keep-all;line-height:1.75;font-size:18px;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .sf{font-family:"Noto Serif KR",serif}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-/* nav */
-header{position:sticky;top:0;z-index:10;background:rgba(22,32,58,.97);color:#fff}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-family:"Noto Serif KR",serif;font-weight:700;font-size:19px;color:var(--gold2);text-decoration:none}
-nav a{color:rgba(255,255,255,.85);text-decoration:none;font-size:15px;margin-left:26px}
-nav a:hover{color:#fff}
-#menu{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
+/* header: think-tank style two-tier */
+.util{background:var(--deep);color:rgba(255,255,255,.75);font-size:13px}
+.util .wrap{display:flex;justify-content:flex-end;gap:22px;height:34px;align-items:center}
+.util a{color:rgba(255,255,255,.8);text-decoration:none}.util a:hover{color:#fff}
+.top{background:#fff;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.brand .mk{width:44px;height:44px;background:var(--navy);color:var(--gold2);font-family:"Noto Serif KR",serif;font-weight:700;font-size:26px;display:flex;align-items:center;justify-content:center;border-radius:6px}
+.brand .nm{font-family:"Noto Serif KR",serif;font-weight:700;font-size:21px;line-height:1.2;letter-spacing:-.01em}
+.brand .nm small{display:block;font-family:"Noto Sans KR",sans-serif;font-weight:500;font-size:11.5px;color:var(--mute);letter-spacing:.14em}
+.top .ask{display:inline-block;padding:9px 18px;background:var(--navy);color:#fff;text-decoration:none;font-size:14.5px;font-weight:500;border-radius:3px}
+header{position:sticky;top:0;z-index:20;background:var(--navy);box-shadow:0 2px 10px rgba(6,27,69,.25)}
+header .wrap{display:flex;align-items:stretch;height:58px}
+.gnb{display:flex;list-style:none;width:100%}
+.gnb>li{position:relative;flex:1;text-align:center}
+.gnb>li>a{display:flex;align-items:center;justify-content:center;height:58px;color:#fff;text-decoration:none;font-size:16.5px;font-weight:500;border-bottom:3px solid transparent}
+.gnb>li:hover>a,.gnb>li:focus-within>a{background:var(--navy2);border-bottom-color:var(--gold2)}
+.sub{display:none;position:absolute;top:58px;left:0;right:0;min-width:180px;background:#fff;list-style:none;box-shadow:0 10px 24px rgba(6,27,69,.18);border-top:3px solid var(--gold2);padding:8px 0;text-align:left}
+.gnb>li:hover .sub,.gnb>li:focus-within .sub{display:block}
+.sub a{display:block;padding:10px 20px;color:var(--ink);text-decoration:none;font-size:15px}
+.sub a:hover{background:var(--tint);color:var(--navy)}
+#menu{display:none;background:none;border:0;color:var(--navy);font-size:28px;cursor:pointer;line-height:1}
 /* hero */
-.hero{background:var(--navy);color:#fff}
+.hero{background:linear-gradient(160deg,var(--deep) 0%,var(--navy) 55%,var(--navy2) 100%);color:#fff}
 .hero .wrap{min-height:calc(88vh - 64px);display:flex;flex-direction:column;justify-content:center;padding-top:60px;padding-bottom:70px}
 .hero .han{font-size:16px;color:rgba(255,255,255,.72)}
 .hero h1{font-family:"Noto Serif KR",serif;font-size:clamp(46px,8vw,84px);line-height:1.22;margin-top:14px;letter-spacing:-.02em}
@@ -46,11 +61,11 @@ h2{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4vw,42px);line-height:
 .it .n{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--gold);font-weight:700}
 .it b{display:block;font-family:"Noto Serif KR",serif;font-size:23px;color:var(--navy);line-height:1.35}
 .it span{display:block;font-size:16.5px;color:var(--mute);margin-top:6px}
-.note{margin-top:34px;padding:22px 26px;background:var(--tint);font-size:17px}
+.note{margin-top:34px;padding:22px 26px;background:var(--tint);border-left:4px solid var(--navy);font-size:17px}
 .note b{color:var(--navy)}
 /* media */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
-.card{background:#fff;border:1px solid var(--line);padding:28px}
+.card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);padding:28px}
 .card .k{font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.06em}
 .card h3{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--navy);margin:8px 0 10px;line-height:1.4}
 .card p{font-size:16px;color:var(--mute)}
@@ -59,7 +74,7 @@ h2{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4vw,42px);line-height:
 .rec{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
 .proj{font-family:"Noto Serif KR",serif;font-size:26px;line-height:1.45;color:var(--navy);font-weight:700;margin-bottom:12px}
 .meta{font-size:16.5px;color:var(--mute)}
-.big{background:var(--navy);color:#fff;padding:34px 30px}
+.big{background:linear-gradient(150deg,var(--navy),var(--navy2));color:#fff;padding:34px 30px}
 .nums{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px}
 .nums b{display:block;font-family:"Noto Serif KR",serif;font-size:clamp(34px,4.5vw,48px);line-height:1.1}
 .nums b small{font-size:.5em}
@@ -71,9 +86,9 @@ h2{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4vw,42px);line-height:
 .pp small{font-family:"Noto Sans KR",sans-serif;font-size:17px;color:var(--gold);margin-left:10px}
 .cv{list-style:none;margin:16px 0 22px}
 .cv li{padding:11px 0;border-bottom:1px dotted var(--line)}
-.box{background:var(--tint);padding:22px 24px}
+.box{background:var(--tint);border-left:4px solid var(--navy);padding:22px 24px}
 /* contact */
-.contact{background:var(--navy);color:#fff;border:0}
+.contact{background:linear-gradient(165deg,var(--navy) 0%,var(--deep) 100%);color:#fff;border:0}
 .contact h2{color:#fff}
 .contact .lb{color:var(--gold2)}
 .tel{font-family:"Noto Serif KR",serif;font-size:clamp(38px,6vw,56px);font-weight:700;color:#fff;text-decoration:none;display:inline-block;margin:4px 0 28px}
@@ -81,25 +96,46 @@ h2{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4vw,42px);line-height:
 .ct dt{color:var(--gold2);font-weight:700;font-size:15px;padding-top:3px}
 .ct a{color:#fff}
 .co{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.3);font-family:"Noto Serif KR",serif;font-size:19px;color:var(--gold2)}
-footer{background:#111829;color:rgba(255,255,255,.55);font-size:14px;padding:26px 0;text-align:center}
+footer{background:#040F2B;color:rgba(255,255,255,.55);font-size:14px;padding:26px 0;text-align:center}
+/* deep-blue band */
+section.dark{background:linear-gradient(170deg,var(--navy) 0%,var(--deep) 100%);color:#fff;border:0}
+.dark h2,.dark .it b{color:#fff}.dark .lb,.dark .it .n{color:var(--gold2)}
+.dark .intro,.dark .it span{color:rgba(255,255,255,.78)}.dark .it{border-top-color:rgba(255,255,255,.2)}
+.dark .note{background:rgba(255,255,255,.08);border-left-color:var(--gold2);color:#fff}
+section.tint{background:var(--tint)}section.tint .box{background:#fff}
 @media (max-width:820px){
  body{font-size:17px}
- nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);padding:8px 28px 18px}
- nav.open{display:block}
- nav a{display:block;margin:12px 0 0}
- #menu{display:block}
+ .util{display:none}
+ .top .wrap{height:64px}.brand .mk{width:38px;height:38px;font-size:22px}.brand .nm{font-size:17px}.brand .nm small{font-size:10px;letter-spacing:.08em}
+ .top .ask{display:none}#menu{display:block}
+ header{display:none}header.open{display:block;position:fixed;top:64px;left:0;right:0;bottom:0;overflow:auto;box-shadow:none}
+ header .wrap{height:auto;display:block;padding-top:10px;padding-bottom:30px}
+ .gnb{display:block}.gnb>li{text-align:left;border-bottom:1px solid rgba(255,255,255,.15)}
+ .gnb>li>a{justify-content:flex-start;height:auto;padding:16px 0 6px;font-size:19px;font-family:"Noto Serif KR",serif;font-weight:700;color:var(--gold2);border:0}
+ .gnb>li:hover>a,.gnb>li:focus-within>a{background:none}
+ .sub{display:block;position:static;background:none;box-shadow:none;border:0;padding:0 0 12px}
+ .sub a{color:#fff;padding:8px 0 8px 14px;font-size:16px}.sub a:hover{background:none;color:var(--gold2)}
+ .top{position:sticky;top:0;z-index:30}
  .grid,.cards,.rec,.ppl{grid-template-columns:1fr}
  section.s{padding:68px 0}
  .it{grid-template-columns:42px 1fr}.it b{font-size:21px}
 }
 </style></head><body>
 
-<header><div class="wrap">
- <a class="brand" href="#top">경세제민 AI·경제연구소</a>
- <button id="menu" aria-label="메뉴">☰</button>
- <nav id="nav">
-  <a href="#view">경세제민의 생각</a><a href="#research">정책연구</a><a href="#media">전문지</a><a href="#record">해 본 일</a><a href="#people">연구진</a><a href="#contact">연락</a>
- </nav>
+<div class="util"><div class="wrap"><a href="tel:0327770421">032-777-0421</a><a href="mailto:weminpress@gmail.com">weminpress@gmail.com</a><a href="#contact">오시는 길</a></div></div>
+<div class="top"><div class="wrap">
+ <a class="brand" href="#top"><span class="mk">經</span><span class="nm">경세제민 AI·경제연구소<small>WEMINAI.COM</small></span></a>
+ <a class="ask" href="#contact">연구 의뢰 · 문의</a>
+ <button id="menu" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+</div></div>
+<header id="gnb"><div class="wrap">
+ <ul class="gnb">
+  <li><a href="#view">연구소 소개</a><ul class="sub"><li><a href="#view">경세제민의 생각</a></li><li><a href="#people">연구진</a></li><li><a href="#contact">오시는 길</a></li></ul></li>
+  <li><a href="#research">정책연구</a><ul class="sub"><li><a href="#research">연구 분야</a></li><li><a href="#research">수행 방식</a></li></ul></li>
+  <li><a href="#media">전문지</a><ul class="sub"><li><a href="#media">일 · 길 · 터 · 돈</a></li><li><a href="#news">브리핑 · 기사</a></li></ul></li>
+  <li><a href="#record">연구 실적</a><ul class="sub"><li><a href="#record">해 본 일</a></li></ul></li>
+  <li><a href="#contact">문의</a><ul class="sub"><li><a href="#contact">연구 의뢰</a></li><li><a href="mailto:weminpress@gmail.com">메일 보내기</a></li></ul></li>
+ </ul>
 </div></header>
 
 <section class="hero" id="top"><div class="wrap">
@@ -122,7 +158,7 @@ footer{background:#111829;color:rgba(255,255,255,.55);font-size:14px;padding:26p
  <div class="note"><b>균형경제론</b> — 서민 소득을 올려 수요를 살리고, 혁신으로 공급 비용을 낮추는 일을 함께 합니다.</div>
 </div></section>
 
-<section class="s" id="research"><div class="wrap">
+<section class="s dark" id="research"><div class="wrap">
  <div class="lb">정책연구</div>
  <h2>현장에서 찾고<br>데이터로 검증한다</h2>
  <p class="intro">지방자치단체와 공공기관의 연구용역을 수행합니다. 계량경제 방법으로 재고 따져, 실행할 수 있는 정책으로 만듭니다.</p>
@@ -145,7 +181,7 @@ footer{background:#111829;color:rgba(255,255,255,.55);font-size:14px;padding:26p
   <div class="it"><div class="n">터</div><div><b>도시와 공공개발</b><span>공공개발, 도시재생, 도시계획 · 지리경제학</span></div></div>
   <div class="it"><div class="n">돈</div><div><b>자산</b><span>안정적으로 벌고 지키는 자산 · 주식과 채권</span></div></div>
  </div>
- <div class="cards">
+ <div class="cards" id="news">
   <div class="card"><div class="k">브리핑</div><h3>인천시와 군·구는 무엇을 연구에 맡기나</h3><p>정책연구관리시스템에 등록된 인천시와 군·구 정책연구 724건을 분야와 유형으로 나눠 읽었습니다.</p><span class="soon">곧 공개</span></div>
   <div class="card"><div class="k">기사</div><h3>기사는 창간과 함께 이곳에 쌓입니다</h3><p>인천의 정책과 예산, 일과 살림에 닿는 소식을 사실대로 씁니다.</p><span class="soon">창간 준비 중</span></div>
  </div>
@@ -170,7 +206,7 @@ footer{background:#111829;color:rgba(255,255,255,.55);font-size:14px;padding:26p
  </div>
 </div></section>
 
-<section class="s" id="people"><div class="wrap">
+<section class="s tint" id="people"><div class="wrap">
  <div class="lb">연구진</div>
  <div class="ppl">
   <div>
@@ -204,5 +240,5 @@ footer{background:#111829;color:rgba(255,255,255,.55);font-size:14px;padding:26p
 </div></section>
 
 <footer>© 2026 경세제민에이아이경제연구소 주식회사 · weminai.com</footer>
-<script>document.getElementById('menu').onclick=function(){document.getElementById('nav').classList.toggle('open')};document.querySelectorAll('#nav a').forEach(function(a){a.onclick=function(){document.getElementById('nav').classList.remove('open')}})</script>
+<script>(function(){var m=document.getElementById('menu'),g=document.getElementById('gnb');m.onclick=function(){var o=g.classList.toggle('open');m.textContent=o?'✕':'☰';m.setAttribute('aria-expanded',o)};g.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){g.classList.remove('open');m.textContent='☰';m.setAttribute('aria-expanded',false);if(document.activeElement)document.activeElement.blur()})})})()</script>
 </body></html>
