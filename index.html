@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1A6DE0;--navy2:#4A90F5;--deep:#0A47B5;--gold:#A37400;--gold2:#FFD24A;--paper:#F5F9FF;--tint:#E8F0FE;--ink:#101A2E;--mute:#46526B;--line:#CBDDF7;--green:#00875A;--green2:#34D399}
+:root{--navy:#1A6DE0;--navy2:#4A90F5;--deep:#0A47B5;--gold:#9A6B00;--gold2:#F7C843;--paper:#F5F9FF;--tint:#E8F0FE;--ink:#101A2E;--mute:#46526B;--line:#CBDDF7;--green:#2E9E5B;--green2:#5BD08C;--green3:#E6F6EF;--red:#C9671B;--red2:#E8902F;--red3:#FDF0E2}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:var(--paper);word-break:keep-all;line-height:1.75;font-size:18px;-webkit-font-smoothing:antialiased}
@@ -70,7 +70,7 @@ h2{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4vw,42px);line-height:
 .card .k{font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.06em}
 .card h3{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--navy);margin:8px 0 10px;line-height:1.4}
 .card p{font-size:16px;color:var(--mute)}
-.soon{display:inline-block;margin-top:14px;font-size:13px;padding:3px 10px;background:rgba(0,135,90,.10);color:var(--green);font-weight:700}
+.soon{display:inline-block;margin-top:14px;font-size:13px;padding:3px 10px;background:rgba(46,158,91,.12);color:var(--green);font-weight:700}
 /* record */
 .rec{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
 .proj{font-family:"Noto Serif KR",serif;font-size:26px;line-height:1.45;color:var(--navy);font-weight:700;margin-bottom:12px}
@@ -114,6 +114,85 @@ footer{background:#040F2B;color:rgba(255,255,255,.55);font-size:14px;padding:26p
 .talks dl{display:grid;grid-template-columns:70px 1fr;gap:10px 18px;font-size:15.5px}
 .talks dt{font-weight:700;color:var(--gold)}
 .talks dd{color:var(--ink)}
+/* accent: 섹션마다 색을 나눈다 — 파랑(연구) 녹색(교육·기후) 붉은색(브리핑·미디어) */
+#edu .lb{color:var(--green)}
+#edu .lvc{border-top-color:var(--green)}
+#edu .lvc .st{color:var(--green)}
+#edu .talks dt{color:var(--green)}
+#edu h2{color:var(--deep)}
+.note.eco{background:var(--green3);border-left-color:var(--green)}
+.note.eco b{color:var(--green)}
+#brief .lb,#media .lb{color:var(--red)}
+#brief h2,#media h2{color:var(--deep)}
+#brief .it .n,#media .it .n{color:var(--red2)}
+#brief .card,#media .card{border-top-color:var(--red)}
+#brief .card .k,#media .card .k{color:var(--red)}
+#brief .card h3,#media .card h3{color:var(--deep)}
+.flag{display:inline-block;padding:3px 10px;margin-bottom:12px;background:var(--red);color:#fff;font-size:13px;font-weight:700;letter-spacing:.06em}
+.util{border-bottom:2px solid var(--red)}
+.top .ask{background:var(--red)}
+.top .ask:hover{background:var(--red2)}
+.gnb>li>a.on,.gnb>li>a:active{border-bottom-color:var(--red2)}
+.hero .han::before{content:"";display:inline-block;width:22px;height:3px;background:var(--red2);vertical-align:middle;margin-right:10px}
+
+/* ===== 언론사형 레이아웃 ===== */
+.util .wrap{justify-content:space-between}
+.util .date{color:rgba(255,255,255,.9);font-weight:500;letter-spacing:.02em}
+.util .ulinks{display:flex;gap:22px;align-items:center}
+.flash{background:#fff;border-bottom:1px solid var(--line)}
+.flash .wrap{display:flex;align-items:center;gap:14px;min-height:42px;padding-top:7px;padding-bottom:7px}
+.flash b{flex:none;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--red);border-left:3px solid var(--red);padding:2px 0 2px 10px}
+.flash span{font-size:15px;color:var(--mute)}
+/* 이념 띠 */
+.creed{background:linear-gradient(120deg,var(--deep) 0%,var(--navy) 62%,var(--navy2) 100%);color:#fff;border:0}
+.creed .wrap{padding-top:38px;padding-bottom:40px}
+.creed .han{font-size:14.5px;color:rgba(255,255,255,.75)}
+.creed h1{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4.6vw,48px);line-height:1.26;margin-top:10px;letter-spacing:-.02em}
+.creed h1 em{font-style:normal;color:var(--gold2)}
+.creed p{margin-top:14px;font-size:17px;color:rgba(255,255,255,.86);max-width:760px}
+/* 1면 */
+.front{padding:40px 0 10px;background:#fff;border-bottom:1px solid var(--line)}
+.fg{display:grid;grid-template-columns:1.65fr 1fr;gap:0 44px}
+.lead-art{padding-right:44px;border-right:1px solid var(--line)}
+.kick{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--red);border:1px solid var(--red);padding:3px 11px}
+.lead-art h2{font-family:"Noto Serif KR",serif;font-size:clamp(32px,4.4vw,46px);line-height:1.26;color:var(--ink);margin:16px 0 14px;letter-spacing:-.025em}
+.lead-art h2 a{text-decoration:none}
+.lead-art h2 a:hover{color:var(--deep)}
+.lead-art p{font-size:17.5px;color:var(--mute)}
+.byl{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+.side .sh{font-family:"Noto Serif KR",serif;font-size:19px;font-weight:700;color:var(--deep);padding-bottom:10px;border-bottom:3px solid var(--deep)}
+.slist{list-style:none;margin-top:4px}
+.slist li{padding:14px 0;border-bottom:1px dotted var(--line)}
+.slist li span{display:block;font-size:12px;font-weight:700;letter-spacing:.07em;margin-bottom:5px}
+.slist .c1{color:var(--navy)}.slist .c2{color:var(--green)}.slist .c3{color:var(--red)}
+.slist li a{display:block;font-size:16.5px;line-height:1.5;color:var(--ink);text-decoration:none;font-weight:500}
+.slist li a:hover{color:var(--deep);text-decoration:underline}
+.fnav{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:38px;border-top:1px solid var(--line)}
+.fnav a{display:block;padding:22px 24px 24px;text-decoration:none;border-right:1px solid var(--line);border-top:4px solid transparent}
+.fnav a:nth-child(1){border-top-color:var(--navy)}
+.fnav a:nth-child(2){border-top-color:var(--green)}
+.fnav a:nth-child(3){border-top-color:var(--red)}
+.fnav a:last-child{border-right:0}
+.fnav a:hover{background:var(--paper)}
+.fnav b{display:block;font-family:"Noto Serif KR",serif;font-size:22px;color:var(--deep)}
+.fnav span{display:block;font-size:15px;color:var(--mute);margin-top:6px}
+/* 섹션 머리 — 신문 가로줄 */
+.sechead{display:flex;align-items:baseline;gap:14px;margin:44px 0 18px;padding-bottom:9px;border-bottom:3px solid var(--deep)}
+.sechead b{font-family:"Noto Serif KR",serif;font-size:21px;color:var(--deep)}
+.sechead span{font-size:14.5px;color:var(--mute)}
+/* 연재 목차 */
+.arc{display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+.arc>div{padding:18px 0;border-top:1px solid var(--line)}
+.arc .t{font-family:"Noto Serif KR",serif;font-size:19.5px;color:var(--ink);line-height:1.45}
+.arc .t em{font-style:normal;font-size:13px;color:var(--red);font-weight:700;margin-left:8px}
+.arc p{font-size:15.5px;color:var(--mute);margin-top:5px}
+@media (max-width:900px){.fg{grid-template-columns:1fr}.lead-art{padding-right:0;border-right:0;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:26px}.fnav{grid-template-columns:1fr}.fnav a{border-right:0;border-bottom:1px solid var(--line)}.arc{grid-template-columns:1fr}.util .wrap{height:auto;padding-top:6px;padding-bottom:6px;flex-direction:column;gap:2px}.util .ulinks{gap:14px}}
+
+.dark .note{background:rgba(255,255,255,.10);border-left-color:var(--gold2);color:rgba(255,255,255,.95)}
+.dark .note b{color:var(--gold2)}
+.dark .note.eco,.dark .note[style]{border-left-color:var(--green2)!important}
+.dark .note.eco b:first-child{color:var(--green2)}
+
 /* deep-blue band */
 section.dark{background:linear-gradient(170deg,var(--navy) 0%,var(--deep) 100%);color:#fff;border:0}
 .dark h2,.dark .it b{color:#fff}.dark .lb,.dark .it .n{color:var(--gold2)}
@@ -139,7 +218,10 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
 }
 </style></head><body>
 
-<div class="util"><div class="wrap"><a href="tel:0327770421">032-777-0421</a><a href="mailto:weminpress@gmail.com">weminpress@gmail.com</a><a href="#contact">오시는 길</a></div></div>
+<div class="util"><div class="wrap">
+ <span class="date" id="today">2026년 10월 12일</span>
+ <span class="ulinks"><a href="tel:0327770421">032-777-0421</a><a href="mailto:weminpress@gmail.com">weminpress@gmail.com</a><a href="#contact">오시는 길</a></span>
+</div></div>
 <div class="top"><div class="wrap">
  <a class="brand" href="#top"><span class="mk"><b>經世</b><b>濟民</b></span><span class="nm">AI·경제 연구소<small>WEMINAI.COM</small></span></a>
  <a class="ask" href="#contact">연구 의뢰 · 문의</a>
@@ -159,11 +241,36 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
  </ul>
 </div></header>
 
-<section class="hero" id="top"><div class="wrap">
+<div class="flash"><div class="wrap"><b>정책브리핑</b><span>제1호 「인천시와 군·구는 무엇을 연구에 맡기나」 — 인천시와 군·구의 정책연구 724건을 분야와 유형으로 나눠 읽었습니다. 곧 공개합니다.</span></div></div>
+<section class="creed" id="top"><div class="wrap">
  <div class="han">經世濟民 · 사람이 주인입니다</div>
- <h1>두루두루<br>고루고루<br><em>잘 사는 세상</em></h1>
- <p class="lead">사람이 두루두루 고루고루 잘사는 세상을 위한 연구를 합니다. 현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p>
- <div class="two"><a class="btn solid" href="#policy">하는 일</a><a class="btn" href="#edu">AI 교육</a><a class="btn" href="#media">전문지</a></div>
+ <h1>두루두루 고루고루 <em>잘 사는 세상</em></h1>
+ <p>사람이 두루두루 고루고루 잘사는 세상을 위한 연구를 합니다. 현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p>
+</div></section>
+
+<section class="front"><div class="wrap">
+ <div class="fg">
+  <article class="lead-art">
+   <div class="kick">정책브리핑 제1호</div>
+   <h2><a href="#brief">인천시와 군·구는<br>무엇을 연구에 맡기나</a></h2>
+   <p>정책연구관리시스템에 등록된 인천시와 군·구의 정책연구 724건을 분야와 유형으로 나눠 읽었습니다. 어느 분야에 얼마를 쓰고 무엇을 맡기지 않는지, 공개 자료로 직접 셌습니다. 주제를 고르는 쪽도 묻는 쪽도 저희입니다.</p>
+   <div class="byl">경세제민 AI·경제 연구소 김갑봉 박사 · <span class="soon">곧 공개</span></div>
+  </article>
+  <aside class="side">
+   <div class="sh">연구소 소식</div>
+   <ul class="slist">
+    <li><span class="c1">연구 실적</span><a href="#record">인천 해양수산 산·학·연 거점 조성 타당성 검토 — B/C 1.39, NPV 973.0억원, IRR 9.3%</a></li>
+    <li><span class="c2">AI 교육</span><a href="#edu">지역언론 기자 연수와 AI 실전 교육 — 2012년부터 40여 회</a></li>
+    <li><span class="c3">미디어</span><a href="#media">전문지 창간 준비 — 일 · 길 · 터 · 돈</a></li>
+    <li><span class="c1">조사분석</span><a href="#survey">설문조사 설계부터 AHP 가중치와 SER-M 전략까지</a></li>
+   </ul>
+  </aside>
+ </div>
+ <div class="fnav">
+  <a href="#policy"><b>정책연구</b><span>기본계획 · 중장기 전략 · 조례 · 정책평가</span></a>
+  <a href="#service"><b>연구용역</b><span>타당성 · 원가 산정 · 출판 · 컨설팅</span></a>
+  <a href="#survey"><b>조사분석</b><span>설문 · 통계 · 데이터 · AHP · SER-M</span></a>
+ </div>
 </div></section>
 
 <section class="s" id="view"><div class="wrap">
@@ -273,9 +380,16 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
   <div class="it"><div class="n">돈</div><div><b>자산</b><span>안정적으로 벌고 지키는 자산 · 주식과 채권</span></div></div>
  </div>
  
- <div class="cards" id="news">
-  
-  <div class="card"><div class="k">기사</div><h3>경제·AI저널</h3><span class="soon">준비 중</span></div>
+ <div class="sechead" id="news"><b>연재</b><span>이미 쓴 원고의 차례입니다. 본문은 전문지 창간과 함께 공개합니다</span></div>
+ <div class="arc">
+  <div><div class="t">문명의 궤도 — 철도 이야기<em>연재</em></div><p>화물철도 활성화 전략, 다핵 균형국가 철도망, 글로벌 고속철도 시장, KTX 산천과 KTX 이음, 코레일·SR 이원화와 생명안전업무</p></div>
+  <div><div class="t">서해안벨트 핵심축, 인천발 서해선 KTX<em>6편</em></div><p>총론, 화물편 상·중·하, 공항편, 제3공항철도, 대륙편</p></div>
+  <div><div class="t">5극3특 해양주권<em>12편</em></div><p>인천 안쪽 경계, 남북 경계 확정, 남북 공동 대중국, 해상풍력 부두, 해양수도권, 환황해와 남북 뱃길</p></div>
+  <div><div class="t">해양 AI 융복합<em>6편</em></div><p>인천항 Sea&amp;Air, 광양항 피지컬 AI, 부산항 AX, 인천항 콜드체인 데이터센터, 자율운항선박 국제규범과 기술·시장</p></div>
+  <div><div class="t">항공<em>2편</em></div><p>인천공항 MRO 허브, UAM 초기 상용화 제도</p></div>
+  <div><div class="t">주간 AI 동향 · 주식 공부<em>연재</em></div><p>유럽 AI 표시의무 시행, AI 에이전트, 코스피·코스닥 순환매, 자사주와 지수</p></div>
+  <div><div class="t">복합물류<em>연재</em></div><p>복합운송의 개념부터</p></div>
+  <div><div class="t">칼럼<em>2편</em></div><p>기후위기 시대, 경기국제공항보다 제3공항철도가 낫다 · 에너지고속도로와 비수도권</p></div>
  </div>
 </div></section>
 
@@ -313,7 +427,7 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
   </div>
   <div>
    <div class="pp" style="font-size:28px">김효진<small>대표이사</small></div>
-   <ul class="cv"><li>조선해양공학 학사</li><li>도시재생학 석박사통합과정 수료</li><li>계약 · 사업관리</li></ul>
+   <ul class="cv"><li>조선해양공학 학사</li><li>도시계획 · 정책학 박사 수료</li><li>계약 · 사업관리</li></ul>
   </div>
  </div>
 </div></section>
@@ -324,7 +438,7 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
  <a class="tel" href="tel:0327770421">032-777-0421</a>
  <dl class="ct">
   <dt>메일</dt><dd><a href="mailto:weminpress@gmail.com">weminpress@gmail.com</a></dd>
-  <dt>주소</dt><dd>인천광역시 미추홀구 문화로 23, 201동 506호</dd>
+  <dt>주소</dt><dd>인천광역시 미추홀구 용현동 62-7</dd>
   <dt>설립</dt><dd>연구소 2025년 11월 11일 · 법인 2026년 4월 30일</dd>
   <dt>등록</dt><dd>사업자등록 · 나라장터 입찰참가자격</dd>
  </dl>
@@ -333,4 +447,5 @@ section.tint{background:var(--tint)}section.tint .box{background:#fff}
 
 <footer>© 2026 경세제민 AI·경제 연구소(주) · 등기 상호 경세제민에이아이경제연구소 주식회사 · weminai.com</footer>
 <script>(function(){var m=document.getElementById('menu'),g=document.getElementById('gnb');m.onclick=function(){var o=g.classList.toggle('open');m.textContent=o?'✕':'☰';m.setAttribute('aria-expanded',o)};g.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){g.classList.remove('open');m.textContent='☰';m.setAttribute('aria-expanded',false);if(document.activeElement)document.activeElement.blur()})})})()</script>
+<script>(function(){var d=new Date(),w=['일','월','화','수','목','금','토'],e=document.getElementById('today');if(e)e.textContent=d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일 '+w[d.getDay()]+'요일'})()</script>
 </body></html>
