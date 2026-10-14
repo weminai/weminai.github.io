@@ -1,179 +1,230 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#17365D">
-<title>경세제민 AI·경제 연구소</title>
-<meta name="description" content="두루두루 고루고루 잘 사는 세상. 인천의 민간 싱크탱크. 공항·물류, 철도·교통, 해양, 경제, AI를 현장과 데이터로 씁니다.">
-<link rel="canonical" href="https://weminai.com/">
-<meta property="og:type" content="website"><meta property="og:url" content="https://weminai.com/">
-<meta property="og:title" content="경세제민 AI·경제 연구소">
-<meta property="og:description" content="두루두루 고루고루 잘 사는 세상 — 공항·물류, 철도·교통, 해양, 경제, AI">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#111820;--mute:#5A6678;--line:#E2E7EE;--line2:#C9D2DD;--navy:#17365D;--accent:#C2691E;--paper:#fff}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:#fff;word-break:keep-all;-webkit-font-smoothing:antialiased}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>經世濟民 AI·경제 연구소</title>
+<meta name="description" content="경세제민 AI·경제 연구소 — 정책브리핑과 기사. 항공 철도 해양 경제 AI.">
+<link rel="icon" href="favicon.svg"><style>
+:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;
+--blue:#0B4FCE;--green:#1FBF5C;--green-d:#0E6B3C;--yellow:#FFC400;--yellow-d:#8A6100;--orange:#FF8A1F;--orange-d:#B24A0C}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.62;
+font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-/* 머리 */
-.util{border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
-.util .wrap{display:flex;justify-content:space-between;align-items:center;height:34px}
-.util a:hover{color:var(--ink)}
-.util .u2 a{margin-left:16px}
-.mast{border-bottom:2px solid var(--ink)}
-.mast .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-.mast>.wrap>a{font-family:"Noto Serif KR",serif;font-size:21px;letter-spacing:-.01em}
-.mast>.wrap>a b{color:var(--navy)}
-.mast nav a{font-size:15px;margin-left:24px;font-weight:500}
-.mast nav a:hover{color:var(--accent)}
-/* 기사 */
-.art{padding:46px 0 10px}
-.art .wrap{max-width:780px}
-.kick{font-size:14px;font-weight:700;color:var(--accent);letter-spacing:.02em;margin-bottom:14px}
-h1{font-family:"Noto Serif KR",serif;font-weight:700;font-size:clamp(30px,4.2vw,42px);line-height:1.34;letter-spacing:-.022em}
-ul.sub{list-style:none;margin:22px 0 0;padding:18px 0 0;border-top:1px solid var(--line)}
-ul.sub li{font-size:17px;color:#33404F;line-height:1.65;padding-left:14px;position:relative;margin-bottom:5px}
-ul.sub li:before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;background:var(--line2)}
-.byl{display:flex;align-items:center;gap:12px;margin:22px 0 0;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;color:var(--mute)}
-.byl b{color:var(--ink);font-size:15px}
-.body{font-size:18.5px;line-height:1.92;margin-top:34px;letter-spacing:-.003em}
-.body p{margin:0 0 24px}
-.body h2{font-family:"Noto Serif KR",serif;font-size:24px;line-height:1.46;margin:46px 0 20px;padding-bottom:10px;border-bottom:2px solid var(--ink);letter-spacing:-.015em}
-figure{margin:34px 0 30px}
-figure img{width:100%;display:block;border:1px solid var(--line)}
-figcaption{font-size:14.5px;line-height:1.66;color:#36424F;margin-top:10px;padding-left:11px;border-left:3px solid var(--accent)}
-figcaption b{color:var(--navy);margin-right:5px}
-figcaption .cr{display:block;font-size:12.5px;color:var(--mute);margin-top:3px}
-.tags{margin:36px 0 0;display:flex;flex-wrap:wrap;gap:7px}
-.tags span{font-size:13px;color:var(--mute);border:1px solid var(--line);padding:4px 10px;border-radius:2px}
-.note{margin-top:26px;padding:12px 14px;background:#F6F8FA;border-left:3px solid var(--line2);font-size:13.5px;color:var(--mute)}
-.ref{margin-top:44px;padding-top:26px;border-top:1px solid var(--line)}
-.ref h3{font-size:17px;margin-bottom:14px}
-.ref h4{font-size:14px;color:var(--accent);margin:18px 0 8px}
-.ref ul{list-style:none}
-.ref li{font-size:14px;line-height:1.72;color:#3A4654;padding-left:12px;text-indent:-12px;margin-bottom:7px;word-break:break-all}
-.ref a{color:var(--navy);text-decoration:underline}
-.back{margin:44px 0 60px;padding-top:22px;border-top:1px solid var(--line);font-size:15px}
-.back a{color:var(--navy);font-weight:500}
-/* 기사 목록 */
-.lst{padding:34px 0 60px}
-.secbar{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:9px;margin:38px 0 0}
-.secbar h2{font-family:"Noto Serif KR",serif;font-size:23px}
-.secbar span{font-size:13.5px;color:var(--mute)}
-.rows{display:grid;grid-template-columns:1fr;gap:0}
-.row{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
-.row img{width:100%;height:112px;object-fit:contain;padding:5px;background:#fff;border:1px solid var(--line);background:#F2F5F8}
-.row .tx h3{font-family:"Noto Serif KR",serif;font-size:21px;line-height:1.42;letter-spacing:-.018em}
-.row .tx h3:hover{color:var(--accent)}
-.row .tx p{font-size:15px;color:var(--mute);line-height:1.68;margin-top:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.row .tx .m{font-size:13px;color:var(--mute);margin-top:9px}
-.row .tx .m b{color:var(--accent);font-weight:700}
-footer{border-top:1px solid var(--line);background:#F6F8FA;padding:28px 0;font-size:13.5px;color:var(--mute)}
-@media(max-width:760px){
- .mast nav{display:none}
- .row{grid-template-columns:118px 1fr;gap:14px}
- .row img{height:80px}
- .row .tx h3{font-size:17.5px}
- .row .tx p{display:none}
- .body{font-size:17.5px}
-}
-
-/* ===== 1면 ===== */
-.issue{border-bottom:1px solid var(--line);font-size:13.5px}
-.issue .wrap{display:flex;align-items:center;justify-content:space-between;height:40px;overflow:hidden}
-.issue .ks{display:flex;gap:18px;color:#3A4654}
-.issue .ks a:before{content:"·";color:var(--accent);margin-right:6px;font-weight:700}
-.issue .ks a:hover{color:var(--accent)}
-.issue .dt{color:var(--mute);font-size:12.5px;white-space:nowrap}
-.front{padding:26px 0 10px}
-.fg{display:grid;grid-template-columns:270px 1fr 300px;gap:0 28px}
-.fg>div{min-width:0}
-.colL{border-right:1px solid var(--line);padding-right:26px}
-.colR{border-left:1px solid var(--line);padding-left:26px}
-.card{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--line)}
-.card:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
-.card img{width:100%;height:150px;object-fit:contain;padding:6px;background:#fff;object-position:center;border:1px solid var(--line);background:#F2F5F8}
-.card h3{font-family:"Noto Serif KR",serif;font-size:19px;line-height:1.44;margin-top:11px;letter-spacing:-.018em}
-.card h3:hover{color:var(--accent)}
-.lead-art img{width:100%;height:340px;object-fit:contain;padding:8px;border:1px solid var(--line);background:#F2F5F8}
-.lead-art .kick{margin:16px 0 8px}
-.lead-art h2{font-family:"Noto Serif KR",serif;font-size:clamp(28px,3.4vw,37px);line-height:1.3;letter-spacing:-.025em}
-.lead-art h2:hover{color:var(--accent)}
-.lead-art p{font-size:16px;color:#3A4654;line-height:1.76;margin-top:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.lead-art .by{font-size:13px;color:var(--mute);margin-top:12px}
-.rhead{font-size:14px;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:4px}
-.rlist{list-style:none}
-.rlist li{display:grid;grid-template-columns:1fr 74px;gap:12px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
-.rlist li:last-child{border-bottom:0}
-.rlist h4{font-size:15.5px;line-height:1.5;font-weight:500;letter-spacing:-.012em}
-.rlist h4:hover{color:var(--accent)}
-.rlist .n{font-size:11.5px;color:var(--accent);font-weight:700;display:block;margin-bottom:4px}
-.rlist img{width:74px;height:52px;object-fit:contain;background:#fff;border:1px solid var(--line);background:#F2F5F8}
-.sec{padding:30px 0 4px}
-.sec .hd{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:9px}
-.sec .hd h2{font-family:"Noto Serif KR",serif;font-size:22px}
-.sec .hd a{font-size:13.5px;color:var(--mute)}
-.sec .hd a:hover{color:var(--accent)}
-.s4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:22px 0 26px}
-.s4 img{width:100%;height:118px;object-fit:contain;padding:5px;background:#fff;border:1px solid var(--line);background:#F2F5F8}
-.s4 h3{font-size:16.5px;line-height:1.48;margin-top:10px;font-weight:500;letter-spacing:-.012em}
-.s4 h3:hover{color:var(--accent)}
-.s4 .n{font-size:11.5px;color:var(--accent);font-weight:700}
-.about{border-top:1px solid var(--ink);margin-top:26px;padding:26px 0 10px}
-.about .g{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
-.about b{display:block;font-size:16px;margin-bottom:7px}
-.about b:after{content:"";display:block;width:22px;height:2px;background:var(--accent);margin-top:7px}
-.about span{font-size:14px;color:var(--mute);line-height:1.68}
-.pending{font-size:14.5px;color:var(--mute);padding:20px 0 26px}
-@media(max-width:980px){.fg{grid-template-columns:1fr}.colL,.colR{border:0;padding:0}
- .colL{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{border-bottom:0}
- .colR{border-top:1px solid var(--ink);padding-top:18px;margin-top:20px}
- .s4{grid-template-columns:1fr 1fr}.about .g{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.colL{grid-template-columns:1fr}.s4{grid-template-columns:1fr}.lead-art img{height:210px}}
-
-
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+.util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.util .wrap{display:flex;justify-content:space-between;gap:14px;padding:6px 18px}
+.mast{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#F7FAFF)}
+.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;padding:18px 18px 14px}
+.logo{font-size:31px;font-weight:800;letter-spacing:-1px}
+.logo i{font-style:normal;color:var(--blue)}
+.mast .date{font-size:13px;color:var(--mute);padding-bottom:5px}
+.gnb{border-bottom:2px solid var(--blue);position:sticky;top:0;z-index:5;background:#fff}
+.gnb .wrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
+.gnb a{padding:11px 0 9px;border-bottom:3px solid transparent;white-space:nowrap}
+.gnb a:hover{border-color:var(--k,var(--blue));color:var(--k,var(--blue))}
+.flash{border-bottom:1px solid var(--line);font-size:13px}
+.flash .wrap{display:flex;gap:22px;flex-wrap:wrap;padding:8px 18px;color:var(--mute)}
+.flash b{font-weight:800;margin-right:5px}
+.top{border-bottom:3px solid var(--ink);background:linear-gradient(180deg,#F2F6FD,#FBFCFF)}
+.top .wrap{display:grid;grid-template-columns:1fr 310px;padding:0 18px}
+.lead{padding:26px 30px 30px 0;border-right:1px solid var(--line)}
+.lead .tag{display:inline-block;background:var(--blue);color:#fff;font-weight:800;font-size:12px;padding:3px 9px}
+.lead h1{font-size:40px;line-height:1.22;letter-spacing:-1.6px;margin:12px 0;font-weight:800}
+.lead p{margin:0 0 7px;font-size:16.5px;color:var(--sub)}
+.lead .by{margin-top:14px;font-size:13px;color:var(--mute);border-top:1px solid var(--line);padding-top:10px}
+.side{padding:22px 0 26px 22px}
+.side h3{margin:0 0 10px;font-size:15px;font-weight:800;border-bottom:2px solid var(--ink);padding-bottom:7px}
+.side ol{list-style:none;margin:0;padding:0;counter-reset:n}
+.side li{counter-increment:n;border-bottom:1px solid var(--line)}
+.side li a{display:grid;grid-template-columns:20px 1fr;gap:9px;padding:9px 0;align-items:start}
+.side li a::before{content:counter(n);font-size:13px;font-weight:800;color:var(--mute)}
+.side .st{font-size:14.5px;font-weight:600;line-height:1.45;letter-spacing:-.3px}
+.side .sk{display:block;font-size:11.5px;font-weight:800;margin-bottom:2px}
+/* 대분류 */
+.grp{padding:34px 0 8px;border-bottom:1px solid var(--line)}
+.gh{display:flex;align-items:baseline;gap:13px;border-bottom:4px solid var(--c);padding-bottom:8px;margin-bottom:6px}
+.gh h2{margin:0;font-size:27px;font-weight:800;letter-spacing:-.9px;background:var(--c);color:#111;padding:3px 13px 4px}
+.gh .gd{font-size:13.5px;color:var(--mute)}
+.gh .gn{margin-left:auto;font-size:13px;font-weight:800;color:var(--ct)}
+/* 시리즈 */
+.ser{padding:18px 0 4px;border-bottom:1px dashed var(--line)}
+.ser:last-child{border-bottom:0}
+.sh{display:flex;align-items:baseline;gap:10px;margin-bottom:11px}
+.sh h3{margin:0;font-size:18px;font-weight:800;color:var(--ct);letter-spacing:-.4px;
+ border-left:5px solid var(--c);padding-left:9px}
+.sh .sd{font-size:12.5px;color:var(--mute)}
+.sh .sn{margin-left:auto;font-size:12px;font-weight:700;color:var(--mute)}
+.sbody{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.big{border-right:1px solid var(--line);padding-right:24px;padding-left:12px;margin-left:-12px;
+ background:linear-gradient(90deg,#F7FAFF,rgba(255,255,255,0) 72%)}
+.big .kick{font-size:12.5px;font-weight:800;color:var(--ct)}
+.big h4{margin:5px 0 8px;font-size:22px;line-height:1.3;letter-spacing:-.7px;font-weight:800}
+.big p{margin:0;font-size:14px;color:var(--sub);line-height:1.6}
+.big .m{margin-top:9px;font-size:12.5px;color:var(--mute)}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{border-bottom:1px solid var(--line)}
+.rows li:last-child{border-bottom:0}
+.rows a{display:block;padding:8px 0}
+.rows .k{font-size:11.5px;font-weight:800;color:var(--ct);margin-right:7px}
+.rows .t{font-size:14.5px;font-weight:600;letter-spacing:-.3px}
+.rows .d{float:right;font-size:12px;color:var(--mute);margin-left:10px}
+.about{padding:30px 0 34px;border-top:3px solid var(--ink);margin-top:30px}
+.about h2{margin:0 0 4px;font-size:20px}
+.about .one{margin:0 0 18px;font-size:14.5px;color:var(--mute)}
+.about .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.about .col{border-top:4px solid var(--k);padding-top:10px}
+.about .col h4{margin:0 0 5px;font-size:15.5px;color:var(--kt,var(--k))}
+.about .col p{margin:0;font-size:13.5px;color:var(--mute);line-height:1.66}
+footer{background:var(--ink);color:#BEBEBA;border-top:5px solid var(--blue)}
+footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
+footer b{color:#fff}
+@media(max-width:900px){
+.top .wrap{grid-template-columns:1fr}
+.lead{border-right:0;padding:22px 0 18px}.lead h1{font-size:29px}
+.side{padding:0 0 22px;border-top:1px solid var(--line)}
+.sbody{grid-template-columns:1fr;gap:16px}
+.big{border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:14px}
+.about .cols{grid-template-columns:repeat(2,1fr)}
+.mast .wrap{align-items:flex-start;flex-direction:column;gap:6px}}
+@media(max-width:600px){.about .cols{grid-template-columns:1fr}.lead h1{font-size:26px}.gh h2{font-size:22px}}
 </style></head><body>
 <div class="util"><div class="wrap">
- <a class="home" href="/">經世濟民 · 사람이 주인입니다</a>
- <span class="u2"><a href="about.html">연구소 소개</a><a href="about.html#record">연구 실적</a><a href="about.html#contact">연구 의뢰 · 문의</a><a href="tel:0327770421">032-777-0421</a></span>
+<span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span>
+<span><a href="about.html">연구소 소개</a> · <a href="about.html">연구 실적</a> · 연구 의뢰 032-777-0421</span></div></div>
+<div class="mast"><div class="wrap"><a class="logo" href="./">經世濟民 <i>AI·경제 연구소</i></a>
+<span class="date">2026년 10월 14일 수요일</span></div></div>
+<nav class="gnb"><div class="wrap">
+<a href="media/">전체 기사</a>
+<a href="#정책브리핑" style="--k:var(--blue)">정책브리핑</a>
+<a href="#항공" style="--k:var(--blue)">항공</a>
+<a href="#철도" style="--k:var(--orange-d)">철도</a>
+<a href="#해양" style="--k:var(--green-d)">해양</a>
+<a href="#경제" style="--k:var(--yellow-d)">경제</a>
+<a href="#AI" style="--k:var(--green-d)">AI</a>
+<a href="about.html">연구소</a></div></nav>
+<div class="flash"><div class="wrap">
+<span><b style="color:var(--blue)">정책브리핑</b>제1호 인천 정책연구 724건</span>
+<span><b style="color:var(--blue)">항공</b>인천공항 미래 25편</span>
+<span><b style="color:var(--orange-d)">철도</b>서해선 KTX 8편</span>
+<span><b style="color:var(--green-d)">해양</b>5극3특 해양주권 10편</span></div></div>
+<div class="top"><div class="wrap">
+<div class="lead"><span class="tag">정책브리핑 제1호</span>
+<h1>인천시와 군·구는 무엇을 연구에 맡기나</h1>
+<p>정책연구관리시스템 프리즘에 올라온 인천광역시와 열한 개 군·구의 정책연구과제는 724건이다.</p>
+<p>가장 많은 것은 새 정책을 찾는 연구가 아니라 법령과 조례가 주기를 정해 둔 계획을 다시 쓰는 일이었다. 기본계획과 종합계획과 중장기계획이 137건, 다섯 건에 한 건꼴이다.</p>
+<div class="by">경세제민 AI·경제 연구소 · 10월 14일 발행</div></div>
+<aside class="side"><h3>최신 기사</h3><ol><li><a href="media/icng10.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항⑩</span><span class="st">나리타 환승 6%↓ 인천 20%↑, 도쿄와 다투는 일본발 미주 환승</span></span></a></li><li><a href="media/icng09.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항⑨</span><span class="st">환승률 9.51% 인천공항, 허브는 10%를 지켜야</span></span></a></li><li><a href="media/icng08.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항⑧</span><span class="st">반도체 운송액 110%↑, 인천공항 화물 장비·바이오·특송으로 넓혀야</span></span></a></li><li><a href="media/icng07.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항⑦</span><span class="st">면세 임대료 41%↓ 인천공항, 다음 금고는 항공사다</span></span></a></li><li><a href="media/icng06.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항⑥</span><span class="st">새 여객기 81% 소형기, 직항 대세에 허브는 뭘까</span></span></a></li><li><a href="media/icng05.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항⑤</span><span class="st">항공사만 101개 인천공항, 독점인데 경쟁하는 이유</span></span></a></li><li><a href="media/sov12.html"><span><span class="sk" style="color:var(--green-d)">5극3특 해양주권</span><span class="st">[5극3특 해양주권⑫] 7월엔 &#x27;권역별 특화&#x27;, 9월엔 &#x27;같은 기능&#x27;</span></span></a></li><li><a href="media/icng04b.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항④ 하</span><span class="st">수출은 하늘로 39%, 정비는 해외로 60%</span></span></a></li><li><a href="media/icng04a.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항④ 상</span><span class="st">인천 국제선 여객 세계 1위, 화물 허브는 푸둥에 밀렸다</span></span></a></li><li><a href="media/icng03.html"><span><span class="sk" style="color:var(--blue)">글로벌 인천공항③</span><span class="st">허브는 밀도로 이긴다, 인천 환승 598만명</span></span></a></li></ol></aside>
 </div></div>
-<div class="mast"><div class="wrap">
- <a href="/"><b>經世濟民</b> AI·경제 연구소</a>
- <nav><a href="media/index.html">기사</a><a href="media/index.html#air">공항·물류</a><a href="about.html#edu">AI 교육</a><a href="about.html#contact">문의</a></nav>
-</div></div>
-<div class="issue"><div class="wrap">
- <span class="ks"><a href="media/index.html">글로벌 인천공항</a><a href="media/index.html">글로벌 인천공항</a><a href="about.html#brief">정책브리핑 제1호</a><a href="about.html#edu">AI 교육 4단계</a></span>
- <span class="dt" id="today">2026년 10월 12일</span>
-</div></div>
-<section class="front"><div class="wrap">
- <div class="fg">
-  <div class="colL"><a class="card" href="media/icng09.html"><img src="media/img/icng09_p1.png" alt=""><h3>환승률 9.51% 인천공항, 허브는 10%를 지켜야</h3></a><a class="card" href="media/icng08.html"><img src="media/img/icng08_p1.png" alt=""><h3>반도체 운송액 110%↑, 인천공항 화물 장비·바이오·특송으로 넓혀야</h3></a></div>
-  <div>
-   <a class="lead-art" href="media/icng10.html">
-    <img src="media/img/icng10_p1.png" alt="">
-    <div class="kick">글로벌 인천공항⑩</div>
-    <h2>나리타 환승 6%↓ 인천 20%↑, 도쿄와 다투는 일본발 미주 환승</h2>
-    <p>올해 1~8월 인천공항 국제선 환승 여객은 592만4684명이다. 인천국제공항공사 항공통계를 보면 1년 전보다 19.6% 늘었다. 같은 기간 도쿄 나리타공항 환승 여객은 135만7862명으로 6% 줄었다.</p>
-    <div class="by">김갑봉 소장 · 2026년 10월 12일</div>
-   </a>
-  </div>
-  <div class="colR"><div class="rhead">최신 기사</div><ul class="rlist"><li><a href="media/icng07.html"><span class="n">글로벌 인천공항⑦</span><h4>면세 임대료 41%↓ 인천공항, 다음 금고는 항공사다</h4></a><a href="media/icng07.html"><img src="media/img/icng07_p1.png" alt=""></a></li><li><a href="media/icng06.html"><span class="n">글로벌 인천공항⑥</span><h4>새 여객기 81% 소형기, 직항 대세에 허브는 뭘까</h4></a><a href="media/icng06.html"><img src="media/img/icng06_p1.png" alt=""></a></li><li><a href="media/icng05.html"><span class="n">글로벌 인천공항⑤</span><h4>항공사만 101개 인천공항, 독점인데 경쟁하는 이유</h4></a><a href="media/icng05.html"><img src="media/img/icng05_p1.png" alt=""></a></li><li><a href="media/sky57.html"><span class="n">하늘길, 항공57</span><h4>카사블랑카에서 터미널까지</h4></a><a href="media/sky57.html"><img src="media/img/sky57_p1.png" alt=""></a></li><li><a href="media/sky56.html"><span class="n">하늘길, 항공56</span><h4>어린왕자와 야간비행</h4></a><a href="media/sky56.html"><img src="media/img/sky56_p1.png" alt=""></a></li><li><a href="media/sky_x32.html"><span class="n">하늘길, 번외㉜</span><h4>항공기는 왜 태평양을 직접 안 건널까</h4></a><a href="media/sky_x32.html"><img src="media/img/sky_x32_p1.png" alt=""></a></li></ul></div>
- </div>
-</div></section>
-<section class="sec"><div class="wrap"><div class="hd"><h2>공항·물류</h2><a href="media/index.html#air">기사 더 보기 →</a></div><div class="s4"><a href="media/icng10.html"><img src="media/img/icng10_p1.png" alt=""><span class="n">글로벌 인천공항⑩</span><h3>나리타 환승 6%↓ 인천 20%↑, 도쿄와 다투는 일본발 미주 환승</h3></a><a href="media/icng09.html"><img src="media/img/icng09_p1.png" alt=""><span class="n">글로벌 인천공항⑨</span><h3>환승률 9.51% 인천공항, 허브는 10%를 지켜야</h3></a><a href="media/icng08.html"><img src="media/img/icng08_p1.png" alt=""><span class="n">글로벌 인천공항⑧</span><h3>반도체 운송액 110%↑, 인천공항 화물 장비·바이오·특송으로 넓혀야</h3></a><a href="media/icng07.html"><img src="media/img/icng07_p1.png" alt=""><span class="n">글로벌 인천공항⑦</span><h3>면세 임대료 41%↓ 인천공항, 다음 금고는 항공사다</h3></a></div></div></section>
-<section class="about"><div class="wrap"><div class="g">
-  <a href="about.html"><b>연구소 소개</b><span>사람이 주인이고 기술은 수단입니다. 현장에서 찾고 데이터로 검증해 실행할 정책을 내놓습니다.</span></a>
-  <a href="about.html#service"><b>정책연구 · 연구용역</b><span>기본계획, 타당성과 경제성 분석, 원가 산정, 조례와 제도 개선, 출판과 편집.</span></a>
-  <a href="about.html#survey"><b>조사분석</b><span>설문 설계와 실태조사, 통계분석, AHP 가중치, SWOT와 SER-M 전략.</span></a>
-  <a href="about.html#edu"><b>AI 교육</b><span>시민과 노동자를 위한 AI 실전 교육과 리터러시. 초급·중급·고급·전문가 4단계.</span></a>
-</div></div></section>
-<footer><div class="wrap">
- 경세제민 AI·경제 연구소 · 인천광역시 미추홀구 용현동 62-7 · 032-777-0421 · weminpress@gmail.com<br>
- 기사의 글과 그림은 연구소가 만든 것입니다. 무단 전재와 재배포를 금합니다.
-</div></footer>
-<script>
-(function(){var d=new Date(),w=['일','월','화','수','목','금','토'],e=document.getElementById('today');
-if(e)e.textContent=d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일 '+w[d.getDay()]+'요일'})()
-</script>
+<main class="wrap">
+  <section class="grp" id="정책브리핑" style="--c:var(--blue);--ct:var(--blue)">
+    <div class="gh"><h2>정책브리핑</h2><span class="gd">정책 브리핑과 칼럼 — 일·길·터·돈</span><span class="gn">2편</span></div>
+    <div class="ser">
+      <div class="sh"><h3>브리핑 칼럼</h3><span class="sd">연구소 칼럼</span><span class="sn">2편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/col01.html"><span class="kick">주식 공부 · 칼럼</span><h4>기후위기 시대, 경기국제공항보다 &#x27;제3공항철도&#x27;가 낫다</h4><p>**경기도 &#x27;경기국제공항&#x27; 추진 vs 탄소중립 시대 역행 논란**</p><div class="m">김갑봉 소장</div></a>
+        <ul class="rows"><li><a href="media/col02.html"><span class="d"></span><span class="k">주식 공부 · 칼럼</span><span class="t">이재명 정부 에너지고속도로에 담긴 비수도권 식민지 가속화</span></a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="항공" style="--c:var(--blue);--ct:var(--blue)">
+    <div class="gh"><h2>항공</h2><span class="gd">공항과 항공산업</span><span class="gn">38편</span></div>
+    <div class="ser">
+      <div class="sh"><h3>인천공항 미래</h3><span class="sd">세계 3위가 채워야 할 것 — 환승·화물·배후단지·재원</span><span class="sn">25편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/icn24.html"><span class="kick">인천공항 미래㉔</span><h4>정비사 72만명 시대 오는데, 해외 의존은 56%에서 60%로 갔다</h4><p>인천 MRO 격납고 유치는 넷, 지금 돌아가는 곳은 개조시설 하나뿐</p><div class="m">김갑봉 소장</div></a>
+        <ul class="rows"><li><a href="media/icn23.html"><span class="d"></span><span class="k">인천공항 미래㉓</span><span class="t">창이는 제조사를 불러 훈련센터를 얻었고, 인천은 정비만 모았다</span></a></li><li><a href="media/icn22.html"><span class="d"></span><span class="k">인천공항 미래㉒</span><span class="t">인천공항 MRO단지에 인천 업체 2곳, 도색 격납고는 전무</span></a></li><li><a href="media/icn21.html"><span class="d"></span><span class="k">인천공항 미래㉑</span><span class="t">인천공항 25년, 동북아 허브 채우려면 지방공항 직결이 답</span></a></li><li><a href="media/icn20.html"><span class="d"></span><span class="k">인천공항 미래⑳</span><span class="t">인천공항 25년, 동북아 허브 채우려면 지방공항 직결이 답</span></a></li><li><a href="media/icn19.html"><span class="d"></span><span class="k">인천공항 미래⑲</span><span class="t">노무현 정신 계승하되 정책은 그만, 5극3특 권역별 공항공사체제로</span></a></li><li><a href="media/icn18.html"><span class="d"></span><span class="k">인천공항 미래⑱</span><span class="t">배당 3조3500억 빠져나간 인천공항, 이제 통합까지… 인천시 항공예산 40% 삭감</span></a></li><li><a href="media/icn17.html"><span class="d"></span><span class="k">인천공항 미래⑰</span><span class="t">인천공항 매출 2조5천억인데 인천 몫은 1조3천억… 공항경제권 빠진 성장</span></a></li><li><a href="media/icn16.html"><span class="d"></span><span class="k">인천공항 미래⑯</span><span class="t">인천공항 25년, 67조원 생산유발 세계 3위… 5단계 없으면 추월당한다</span></a></li></ul>
+      </div>
+    </div>
+    <div class="ser">
+      <div class="sh"><h3>글로벌 인천공항</h3><span class="sd">숫자로 보는 인천공항 — 환승률·화물·면세·항공사</span><span class="sn">11편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/icng10.html"><span class="kick">글로벌 인천공항⑩</span><h4>나리타 환승 6%↓ 인천 20%↑, 도쿄와 다투는 일본발 미주 환승</h4><div class="m">김갑봉 소장 · 2026-10-12</div></a>
+        <ul class="rows"><li><a href="media/icng09.html"><span class="d">10.11</span><span class="k">글로벌 인천공항⑨</span><span class="t">환승률 9.51% 인천공항, 허브는 10%를 지켜야</span></a></li><li><a href="media/icng08.html"><span class="d">10.10</span><span class="k">글로벌 인천공항⑧</span><span class="t">반도체 운송액 110%↑, 인천공항 화물 장비·바이오·특송으로 넓혀야</span></a></li><li><a href="media/icng07.html"><span class="d">10.10</span><span class="k">글로벌 인천공항⑦</span><span class="t">면세 임대료 41%↓ 인천공항, 다음 금고는 항공사다</span></a></li><li><a href="media/icng06.html"><span class="d">10.10</span><span class="k">글로벌 인천공항⑥</span><span class="t">새 여객기 81% 소형기, 직항 대세에 허브는 뭘까</span></a></li><li><a href="media/icng05.html"><span class="d">10.08</span><span class="k">글로벌 인천공항⑤</span><span class="t">항공사만 101개 인천공항, 독점인데 경쟁하는 이유</span></a></li><li><a href="media/icng04b.html"><span class="d">09.29</span><span class="k">글로벌 인천공항④ 하</span><span class="t">수출은 하늘로 39%, 정비는 해외로 60%</span></a></li><li><a href="media/icng04a.html"><span class="d">09.29</span><span class="k">글로벌 인천공항④ 상</span><span class="t">인천 국제선 여객 세계 1위, 화물 허브는 푸둥에 밀렸다</span></a></li><li><a href="media/icng03.html"><span class="d">09.28</span><span class="k">글로벌 인천공항③</span><span class="t">허브는 밀도로 이긴다, 인천 환승 598만명</span></a></li></ul>
+      </div>
+    </div>
+    <div class="ser">
+      <div class="sh"><h3>항공산업</h3><span class="sd">MRO와 UAM</span><span class="sn">2편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/etc_uam.html"><span class="kick">철도 · 항공</span><h4>[UAM] 상용화 목표는 2025년이었다, 지금은 2028년</h4><p>도심항공교통법 시행 2년, 시범운용구역은 아직 없다</p><div class="m">김갑봉 소장 · 2026-09-23</div></a>
+        <ul class="rows"><li><a href="media/etc_mro.html"><span class="d">08.11</span><span class="k">철도 · 항공</span><span class="t">인천공항 25년 만의 첫 항공기 개조, 허브 요건 하나 열렸다</span></a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="철도" style="--c:var(--orange);--ct:var(--orange-d)">
+    <div class="gh"><h2>철도</h2><span class="gd">철길과 대륙철도</span><span class="gn">11편</span></div>
+    <div class="ser">
+      <div class="sh"><h3>서해선 KTX</h3><span class="sd">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="sn">8편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/ktx01.html"><span class="kick">서해안벨트 핵심축, 인천발 서해선 KTX</span><h4>서해안벨트 핵심축 인천발 서해선 KTX①</h4><div class="m">김갑봉 소장</div></a>
+        <ul class="rows"><li><a href="media/ktx02.html"><span class="d"></span><span class="k">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="t">서해안벨트 핵심축 인천발 서해선 KTX②</span></a></li><li><a href="media/ktx03a.html"><span class="d"></span><span class="k">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="t">서해안벨트 핵심축 인천발 서해선 KTX③-상</span></a></li><li><a href="media/ktx03b.html"><span class="d"></span><span class="k">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="t">서해안벨트 핵심축 인천발 서해선 KTX③-중</span></a></li><li><a href="media/ktx03c.html"><span class="d"></span><span class="k">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="t">서해안벨트 핵심축 인천발 서해선 KTX③-하</span></a></li><li><a href="media/ktx04.html"><span class="d"></span><span class="k">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="t">서해안벨트 핵심축 인천발 서해선 KTX④</span></a></li><li><a href="media/ktx05.html"><span class="d"></span><span class="k">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="t">서해안벨트 핵심축 인천발 서해선 KTX⑤ 경기국제공항대신 제3공항철도</span></a></li><li><a href="media/ktx06.html"><span class="d"></span><span class="k">서해안벨트 핵심축, 인천발 서해선 KTX</span><span class="t">서해안벨트 핵심축 인천발 서해선 KTX⑥</span></a></li></ul>
+      </div>
+    </div>
+    <div class="ser">
+      <div class="sh"><h3>환황해 철도망</h3><span class="sd">대륙철도의 본질은 화물이다</span><span class="sn">1편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/hwang02.html"><span class="kick">환황해 철도망 · 인천항 복합물류</span><h4>[환황해 철도망②] 바닷길 36일, 철길 11일… 대륙철도는 짐으로 승부한다</h4><p>서울에서 베이징까지 사람은 비행기로 두 시간… 여객으로는 셈이 서지 않는다</p><div class="m">김갑봉 소장 · 2026-07-28</div></a>
+        <ul class="rows"></ul>
+      </div>
+    </div>
+    <div class="ser">
+      <div class="sh"><h3>철도 일반</h3><span class="sd">개통 127년 한국철도와 고속철 세대교체</span><span class="sn">2편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/etc_ktxgen.html"><span class="kick">철도 · 항공</span><h4>[철도] KTX-1 46편성 수명 2033년, 발주 시한은 2027년</h4><p>차세대 고속열차 49편성 784칸 예비타당성조사 통과, 1차 28편성 내년 발주</p><div class="m">김갑봉 소장 · 2026-09-23</div></a>
+        <ul class="rows"><li><a href="media/etc_railgen.html"><span class="d"></span><span class="k">철도 · 항공</span><span class="t">개통 127년 한국철도, 골격은 선진국 절반… &quot;6000km로 다시 그릴 때&quot;</span></a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="해양" style="--c:var(--green);--ct:var(--green-d)">
+    <div class="gh"><h2>해양</h2><span class="gd">바다와 항만</span><span class="gn">17편</span></div>
+    <div class="ser">
+      <div class="sh"><h3>5극3특 해양주권</h3><span class="sd">바다 경계와 항만공사, 해양수도권을 다시 묻는다</span><span class="sn">10편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/sov12.html"><span class="kick">5극3특 해양주권</span><h4>[5극3특 해양주권⑫] 7월엔 &#x27;권역별 특화&#x27;, 9월엔 &#x27;같은 기능&#x27;</h4><p>부산항은 환적 57%, 인천항은 정기항로 열에 아홉이 중국·동남아</p><div class="m">김갑봉 소장 · 2026-10-06</div></a>
+        <ul class="rows"><li><a href="media/sov11.html"><span class="d">09.23</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권⑪] 부산은 해양수도 완성, 인천은 해수부 예산안에 사업이 없다</span></a></li><li><a href="media/sov10.html"><span class="d">09.22</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권⑩] 부산은 409억, 인천은 진흥원 용역비 5억도 못 받아</span></a></li><li><a href="media/sov09.html"><span class="d">09.21</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권⑨] 7월에 맡기고 9월에 없앤다, 인천 해상풍력 부두</span></a></li><li><a href="media/sov06.html"><span class="d">09.08</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권⑥] 이재명 정부 항만공사 통합, 부산항 빚 4조4121억원 인천에 전가</span></a></li><li><a href="media/sov05.html"><span class="d">09.05</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권⑤] LH 분리 PA 통합 &#x27;원칙 없는 행정&#x27;... 지지율은 최저 기록</span></a></li><li><a href="media/sov04.html"><span class="d">09.04</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권④] 김대중 구상 노무현 설립 지역항만공사, 이재명 정부가 걷어차</span></a></li><li><a href="media/sov01.html"><span class="d">09.01</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권①] 인천 섬 197개 확정, 남은 것은 바다 경계다</span></a></li><li><a href="media/sov02.html"><span class="d">09.01</span><span class="k">5극3특 해양주권</span><span class="t">[5극3특 해양주권②] 서해 영해기점 마지막은 인천 섬 소령도, 그 위는 확정된 선이 없다</span></a></li></ul>
+      </div>
+    </div>
+    <div class="ser">
+      <div class="sh"><h3>해양 AI 융복합</h3><span class="sd">항만의 인공지능 전환 — SeaAir·피지컬 AI·자율운항</span><span class="sn">6편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/mai06.html"><span class="kick">해양 AI 융복합</span><h4>[해양 AI 융복합⑥] AI 완전자율운항선박, 2032년으로 옮겨 간 목표 연도</h4><p>2020년 정부가 걸었던 2025년 상용화, 여섯 해 만에 다시 짜는 레벨4 기술개발</p><div class="m">김갑봉 소장 · 2026-09-09</div></a>
+        <ul class="rows"><li><a href="media/mai05.html"><span class="d">08.26</span><span class="k">해양 AI 융복합</span><span class="t">[해양 AI 융복합⑤] 자율운항선박, 국제 규범이 배보다 먼저 왔다</span></a></li><li><a href="media/mai03.html"><span class="d">08.23</span><span class="k">해양 AI 융복합</span><span class="t">[해양 AI 융복합③] 부산항만공사, 국내 첫 &#x27;AI 항만&#x27; 전환 계획 내놨다</span></a></li><li><a href="media/mai04.html"><span class="d">08.23</span><span class="k">해양 AI 융복합</span><span class="t">[해양 AI 융복합④] 인천항 데이터센터, 네 번 밀린 착공 목표</span></a></li><li><a href="media/mai02.html"><span class="d">08.03</span><span class="k">해양 AI 융복합</span><span class="t">[해양 AI 융복합②] 광양항, 정부 &#x27;피지컬 AI 항만&#x27; 첫 실증 거점 됐다</span></a></li><li><a href="media/mai01.html"><span class="d">07.24</span><span class="k">해양 AI 융복합</span><span class="t">[해양 AI 융복합①] 공항 옆 인천항이 200㎞ 밖 군산항보다 늦는 까닭</span></a></li></ul>
+      </div>
+    </div>
+    <div class="ser">
+      <div class="sh"><h3>인천항 복합물류</h3><span class="sd">배와 철도와 트럭을 한 장으로 묶는다</span><span class="sn">1편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/logi01.html"><span class="kick">환황해 철도망 · 인천항 복합물류</span><h4>[인천항 복합물류①] 서류 한 장이 배와 철도와 트럭을 묶는다</h4><p>국내 화물은 도로가 92.7%, 국제 화물은 바다가 99.7%를 나른다</p><div class="m">김갑봉 소장 · 2026-09-04</div></a>
+        <ul class="rows"></ul>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="경제" style="--c:var(--yellow);--ct:var(--yellow-d)">
+    <div class="gh"><h2>경제</h2><span class="gd">돈과 자산</span><span class="gn">3편</span></div>
+    <div class="ser">
+      <div class="sh"><h3>주식공부</h3><span class="sd">지수와 순환매와 밸류에이션을 숫자로 읽는다</span><span class="sn">3편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/stk03.html"><span class="kick">주식 공부 · 칼럼</span><h4>[주식공부]</h4><p>코스피 18.45% 하락, 반등을 받친 건 자사주</p><div class="m">김갑봉 소장 · 2026-08-27</div></a>
+        <ul class="rows"><li><a href="media/stk02.html"><span class="d">08.15</span><span class="k">주식 공부 · 칼럼</span><span class="t">[주식공부]</span></a></li><li><a href="media/stk01.html"><span class="d">08.02</span><span class="k">주식 공부 · 칼럼</span><span class="t">[주식공부]</span></a></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="AI" style="--c:var(--green);--ct:var(--green-d)">
+    <div class="gh"><h2>AI</h2><span class="gd">인공지능</span><span class="gn">2편</span></div>
+    <div class="ser">
+      <div class="sh"><h3>AI동향</h3><span class="sd">규범과 산업을 함께 본다</span><span class="sn">2편</span></div>
+      <div class="sbody">
+        <a class="big" href="media/ai09.html"><span class="kick">주간 AI 동향</span><h4>[주간 AI 동향] AI 혼자 하는 프로그램 작업량, 3년 만에 163배</h4><p>개발자 12시간 걸릴 분량을 클로드 오퍼스 4.6이 두 번에 한 번꼴로 완수</p><div class="m">김갑봉 소장 · 2026-09-05</div></a>
+        <ul class="rows"><li><a href="media/ai08.html"><span class="d">08.23</span><span class="k">주간 AI 동향</span><span class="t">[주간 AI 동향] 유럽, 8월 2일부터 AI 생성물에 표시 의무</span></a></li></ul>
+      </div>
+    </div>
+  </section>
+<section class="about"><h2>경세제민 AI·경제 연구소</h2>
+<p class="one">사람이 목적이고 기술은 수단입니다. 현장에서 찾고 데이터로 검증해 실행할 정책을 내놓습니다.</p>
+<div class="cols">
+<div class="col" style="--k:var(--blue)"><h4>정책연구</h4><p>기본계획과 기본구상, 중장기 종합계획, 정책방안 수립.</p></div>
+<div class="col" style="--k:var(--green);--kt:var(--green-d)"><h4>타당성과 경제성</h4><p>사전타당성 검토, B/C와 NPV와 IRR 산정, 파급효과 분석.</p></div>
+<div class="col" style="--k:var(--orange);--kt:var(--orange-d)"><h4>조사분석</h4><p>실태조사와 수요조사, 통계분석, AHP 가중치, SWOT와 SER-M.</p></div>
+<div class="col" style="--k:var(--yellow);--kt:var(--yellow-d)"><h4>AI 교육</h4><p>시민과 노동자를 위한 AI 실전 교육. 초급 중급 고급 전문가 네 단계.</p></div>
+</div></section></main>
+<footer><div class="wrap"><b>경세제민 AI·경제연구소(주)</b> · 인천광역시 미추홀구 문화로 23, 201동 506호 · 032-777-0421 · weminpress@gmail.com<br>
+기사의 글과 그림은 연구소가 만든 것입니다. 무단 전재와 재배포를 금합니다.</div></footer>
 </body></html>
