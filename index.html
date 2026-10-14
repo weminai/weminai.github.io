@@ -2,7 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>經世濟民 AI·경제 연구소</title>
 <meta name="description" content="경세제민 AI·경제 연구소 — 정책브리핑과 기사. 항공 철도 해양 경제 AI.">
-<link rel="icon" href="favicon.svg"><style>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon_64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"><style>
 :root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;
 --blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62;--green:#22D06A;--green-d:#0E6B3C;--yellow:#FFD21E;--yellow-d:#8A6100;--orange:#FF9A33;--orange-d:#B24A0C}
 *{box-sizing:border-box}
@@ -14,13 +16,14 @@ a{color:inherit;text-decoration:none}
 .util .wrap{display:flex;justify-content:space-between;gap:14px;padding:6px 18px}
 .mast{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#F7FAFF)}
 .mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;padding:18px 18px 14px}
-.logo{font-size:31px;font-weight:800;letter-spacing:-1px}
-.logo i{font-style:normal;color:var(--blue)}
+.logo{display:block;line-height:0}
+.logo img{width:276px;height:auto;display:block}
+@media(max-width:560px){.logo img{width:228px}}
 .mast .date{font-size:13px;color:var(--mute);padding-bottom:5px}
 .gnb{border-bottom:2px solid var(--blue-d);position:sticky;top:0;z-index:5;background:#fff}
 .gnb .wrap{display:flex;gap:28px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
 .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
-.gnb a:hover{border-color:var(--blue-d);color:var(--blue-d)}
+.gnb a:hover{border-color:var(--k,var(--blue-d));color:var(--k,var(--blue-d))}
 .flash{border-bottom:1px solid var(--line);font-size:13px}
 .flash .wrap{display:flex;gap:22px;flex-wrap:wrap;padding:8px 18px;color:var(--mute)}
 .flash b{font-weight:800;margin-right:5px}
@@ -33,13 +36,16 @@ a{color:inherit;text-decoration:none}
 .lead .by{margin-top:14px;font-size:13px;color:var(--mute);border-top:1px solid var(--line);padding-top:10px}
 .side{padding:22px 0 26px 22px}
 .side h3{margin:0 0 10px;font-size:15px;font-weight:800;border-bottom:2px solid var(--ink);padding-bottom:7px}
+.fields{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.fields a{font-size:12.5px;font-weight:800;color:#fff;background:var(--k);padding:3px 10px 4px}
+.fields a.dk{color:#111}
 .side ol{list-style:none;margin:0;padding:0;counter-reset:n}
 .side li{counter-increment:n;border-bottom:1px solid var(--line)}
 .side li a{display:flex;gap:9px;padding:9px 0;align-items:center}
 .side li a::before{flex:none;width:16px}
 .side li a::before{content:counter(n);font-size:13px;font-weight:800;color:var(--mute)}
 .side .st{font-size:14.5px;font-weight:600;line-height:1.45;letter-spacing:-.3px}
-.side .sk{display:block;font-size:11.5px;font-weight:800;margin-bottom:2px}
+.side .sk{display:block;font-size:12px;font-weight:800;margin-bottom:3px}
 /* 대분류 */
 .grp{padding:26px 0 10px;border-bottom:1px solid var(--line)}
 .gh{display:flex;align-items:baseline;gap:13px;border-bottom:4px solid var(--c);padding-bottom:8px;margin-bottom:6px}
@@ -110,8 +116,8 @@ footer b{color:#fff}
 
 .grps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 30px;padding:18px 0 6px}
 .grp{padding:0;border-bottom:0}
-.gh{display:flex;align-items:baseline;gap:8px;border-bottom:3px solid var(--c);padding-bottom:5px;margin-bottom:8px}
-.gh h2{margin:0;font-size:19px;font-weight:800;letter-spacing:-.6px;background:var(--c);color:var(--gt,#111);padding:2px 10px 3px}
+.gh{display:flex;align-items:baseline;gap:8px;border-bottom:4px solid var(--c);padding-bottom:6px;margin-bottom:9px}
+.gh h2{margin:0;font-size:21px;font-weight:800;letter-spacing:-.6px;background:var(--c);color:var(--gt,#111);padding:4px 13px 5px}
 .gh .gd{font-size:12px;color:var(--mute)}
 .gh .more{margin-left:auto;font-size:12.5px;color:var(--mute);white-space:nowrap}
 .gh .more:hover{color:var(--ct)}
@@ -134,7 +140,9 @@ footer b{color:#fff}
 /* 연구소가 하는 일 */
 .biz{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft)}
 .biz .wrap{padding:15px 18px 17px}
-.bizline{margin:0 0 6px;font-size:13.5px;line-height:1.75;color:var(--sub)}
+.bizline{margin:0 0 7px;font-size:13.5px;line-height:1.9;color:var(--sub)}
+.bz{display:inline-block;margin-right:16px;border-left:4px solid var(--k);padding-left:7px}
+.bz i{font-style:normal;font-weight:800;color:var(--kt);margin-right:5px}
 .bizline b{font-weight:800;color:var(--ink);margin-right:8px}
 .bizwho{margin:0;font-size:13px;color:var(--mute)}
 .bizwho a{color:var(--blue-d);font-weight:700}
@@ -149,13 +157,13 @@ footer b{color:#fff}
 <div class="util"><div class="wrap">
 <span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span>
 <span><a href="about.html">연구소 소개</a> · <a href="about.html">연구 실적</a> · 연구 의뢰 032-777-0421</span></div></div>
-<div class="mast"><div class="wrap"><a class="logo" href="./">經世濟民 <i>AI·경제 연구소</i></a>
+<div class="mast"><div class="wrap"><a class="logo" href="./"><img src="logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
 <form class="srchtop" action="media/" method="get" role="search">
 <input type="search" name="q" placeholder="자료 검색" aria-label="기사 검색"><button type="submit">찾기</button></form>
 <span class="date">2026년 10월 14일 수요일</span></div></div>
 <nav class="gnb"><div class="wrap">
 <a href="media/">전체 기사</a>
-<a href="#정책브리핑">정책브리핑</a><a href="#해양">해양</a><a href="#항공">항공</a><a href="#철도">철도</a><a href="#복합물류">복합물류</a><a href="#도시계획·부동산">도시계획·부동산</a><a href="#기후위기">기후위기</a><a href="#경제">경제</a><a href="#AI">AI</a>
+<a href="#정책브리핑" style="--k:var(--blue-d)">정책브리핑</a><a href="#해양" style="--k:var(--green-d)">해양</a><a href="#항공" style="--k:var(--blue-d)">항공</a><a href="#철도" style="--k:var(--orange-d)">철도</a><a href="#복합물류" style="--k:var(--green-d)">복합물류</a><a href="#도시계획·부동산" style="--k:var(--orange-d)">도시계획·부동산</a><a href="#기후위기" style="--k:var(--green-d)">기후위기</a><a href="#경제" style="--k:var(--yellow-d)">경제</a><a href="#AI" style="--k:var(--green-d)">AI</a>
 <a href="about.html">연구소</a></div></nav>
 <div class="top"><div class="wrap">
 <div class="lead"><span class="tag">정책브리핑 제1호</span>
@@ -165,14 +173,15 @@ footer b{color:#fff}
 <figure class="leadpic"><img src="media/img/brief01_01.png" alt="인천 정책연구 724건 기관별 건수">
 <figcaption>인천광역시와 열한 개 군·구의 정책연구과제 724건을 기관별로 센 것이다. 작성 경세제민 AI·경제 연구소</figcaption></figure>
 <div class="by">경세제민 AI·경제 연구소 · 10월 14일 발행</div></div>
-<aside class="side"><h3>최신 자료</h3><ol><li><a href="media/gap03.html"><span><span class="sk" style="color:var(--blue-d)">불평등 브리핑</span><span class="st">[한국경제 불편한 진실⑳] 수도권·비수도권 — 충남에서 빠져나간 33조원, 서울로 들어온 73조원</span></span></a></li><li><a href="media/sov12.html"><span class="th"><img src="media/img/sov12_01.png" alt="" loading="lazy"></span><span><span class="sk" style="color:var(--green-d)">5극3특 해양주권</span><span class="st">[5극3특 해양주권⑫] 7월엔 &#x27;권역별 특화&#x27;, 9월엔 &#x27;같은 기능&#x27;</span></span></a></li><li><a href="media/icng10.html"><span class="th"><img src="media/img/icng10_p1.png" alt="" loading="lazy"></span><span><span class="sk" style="color:var(--blue-d)">글로벌 인천공항⑩</span><span class="st">나리타 환승 6%↓ 인천 20%↑, 도쿄와 다투는 일본발 미주 환승</span></span></a></li><li><a href="media/etc_ktxgen.html"><span class="th"><img src="media/img/etc_ktxgen_01.png" alt="" loading="lazy"></span><span><span class="sk" style="color:var(--orange-d)">철도 일반</span><span class="st">[철도] KTX-1 46편성 수명 2033년, 발주 시한은 2027년</span></span></a></li><li><a href="media/logi02.html"><span><span class="sk" style="color:var(--green-d)">인천항 복합물류</span><span class="st">[인천항 복합물류②] 인천항을 나서는 화물은 모두 트럭에 오른다</span></span></a></li></ol></aside>
+<aside class="side"><h3>최신 자료</h3><ol><li><a href="media/gap03.html"><span><span class="sk" style="color:var(--blue-d)">불평등 브리핑</span><span class="st">[한국경제 불편한 진실⑳] 수도권·비수도권 — 충남에서 빠져나간 33조원, 서울로 들어온 73조원</span></span></a></li><li><a href="media/sov12.html"><span class="th"><img src="media/img/sov12_01.png" alt="" loading="lazy"></span><span><span class="sk" style="color:var(--green-d)">5극3특 해양주권</span><span class="st">[5극3특 해양주권⑫] 7월엔 &#x27;권역별 특화&#x27;, 9월엔 &#x27;같은 기능&#x27;</span></span></a></li><li><a href="media/icng10.html"><span class="th"><img src="media/img/icng10_p1.png" alt="" loading="lazy"></span><span><span class="sk" style="color:var(--blue-d)">글로벌 인천공항⑩</span><span class="st">나리타 환승 6%↓ 인천 20%↑, 도쿄와 다투는 일본발 미주 환승</span></span></a></li><li><a href="media/etc_ktxgen.html"><span class="th"><img src="media/img/etc_ktxgen_01.png" alt="" loading="lazy"></span><span><span class="sk" style="color:var(--orange-d)">철도 일반</span><span class="st">[철도] KTX-1 46편성 수명 2033년, 발주 시한은 2027년</span></span></a></li><li><a href="media/logi02.html"><span><span class="sk" style="color:var(--green-d)">인천항 복합물류</span><span class="st">[인천항 복합물류②] 인천항을 나서는 화물은 모두 트럭에 오른다</span></span></a></li></ol>
+<div class="fields"><a href="#정책브리핑" style="--k:var(--blue)" class="">정책브리핑</a><a href="#해양" style="--k:var(--green)" class="dk">해양</a><a href="#항공" style="--k:var(--blue)" class="">항공</a><a href="#철도" style="--k:var(--orange)" class="dk">철도</a><a href="#복합물류" style="--k:var(--green)" class="dk">복합물류</a><a href="#도시계획·부동산" style="--k:var(--orange)" class="dk">도시계획·부동산</a><a href="#기후위기" style="--k:var(--green)" class="dk">기후위기</a><a href="#경제" style="--k:var(--yellow)" class="dk">경제</a><a href="#AI" style="--k:var(--green)" class="dk">AI</a></div></aside>
 </div></div>
 <section class="biz"><div class="wrap">
 <p class="bizline"><b>연구소가 하는 일</b>
-정책연구 — 기본계획과 기본구상, 중장기 종합계획, 정책방안 수립.
-타당성과 경제성 — 사전타당성 검토, B/C와 NPV와 IRR 산정, 파급효과 분석.
-조사분석 — 실태조사와 수요조사, 통계분석, AHP 가중치, SWOT와 SER-M.
-AI 교육 — 시민과 노동자를 위한 AI 실전 교육, 네 단계.</p>
+<span class="bz" style="--k:var(--blue);--kt:var(--blue-d)"><i>정책연구</i> 기본계획과 기본구상, 중장기 종합계획, 정책방안 수립</span>
+<span class="bz" style="--k:var(--green);--kt:var(--green-d)"><i>타당성과 경제성</i> 사전타당성 검토, B/C와 NPV와 IRR 산정, 파급효과 분석</span>
+<span class="bz" style="--k:var(--orange);--kt:var(--orange-d)"><i>조사분석</i> 실태조사와 수요조사, 통계분석, AHP 가중치, SWOT와 SER-M</span>
+<span class="bz" style="--k:var(--yellow);--kt:var(--yellow-d)"><i>AI 교육</i> 시민과 노동자를 위한 AI 실전 교육, 네 단계</span></p>
 <p class="bizwho">소장 김갑봉. 물류학 박사(계량경제학). 인천투데이 편집국장 22년.
 <a href="about.html">연구 실적</a> · 연구 의뢰 032-777-0421</p>
 </div></section>
