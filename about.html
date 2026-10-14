@@ -1,454 +1,171 @@
-<!doctype html>
-<html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#1A6DE0">
-<title>연구소 소개 — 경세제민 AI·경제 연구소</title>
-<meta name="description" content="두루두루 고루고루 잘 사는 세상. 현장에서 찾고 데이터로 검증해 실행할 정책을 내놓는 인천의 민간 싱크탱크. 정책연구 · 연구용역 · 조사분석 — 기본계획과 타당성 분석, 설문조사와 통계분석, 원가 산정, 출판과 편집. AI 실전 교육과 AI 리터러시, 전문지.">
-<link rel="canonical" href="https://weminai.com/about.html">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://weminai.com/">
-<meta property="og:title" content="경세제민 AI·경제 연구소">
-<meta property="og:description" content="두루두루 고루고루 잘 사는 세상 — 정책연구 · 연구용역 · 조사분석 · AI 교육 · 전문지">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연구소 소개 — 經世濟民 AI·경제 연구소</title><meta name="description" content="두루두루 고루고루 잘 사는 세상. 현장에서 찾고 데이터로 검증해 실행할 정책을 내놓는 인천의 민간 싱크탱크. 정책연구 · 연구용역 · 조사분석 · AI 교육 · 정책브리핑 · 전문지.">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon_64.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-:root{--navy:#1A6DE0;--navy2:#4A90F5;--deep:#0A47B5;--gold:#9A6B00;--gold2:#F7C843;--paper:#F5F9FF;--tint:#E8F0FE;--ink:#101A2E;--mute:#46526B;--line:#CBDDF7;--green:#2E9E5B;--green2:#5BD08C;--green3:#E6F6EF;--red:#C9671B;--red2:#E8902F;--red3:#FDF0E2}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:var(--paper);word-break:keep-all;line-height:1.75;font-size:18px;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.sf{font-family:"Noto Serif KR",serif}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-/* header: think-tank style two-tier */
-.util{background:var(--deep);color:rgba(255,255,255,.75);font-size:13px}
-.util .wrap{display:flex;justify-content:flex-end;gap:22px;height:34px;align-items:center}
-.util a{color:rgba(255,255,255,.8);text-decoration:none}.util a:hover{color:#fff}
-.top{background:#fff;border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
-.brand .mk{width:48px;height:48px;background:var(--navy);color:var(--gold2);font-family:"Noto Serif KR",serif;font-weight:700;font-size:16px;line-height:1.05;letter-spacing:.04em;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid var(--gold2);border-radius:4px;box-sizing:border-box}.brand .mk b{display:block;font-weight:700}
-.brand .nm{font-family:"Noto Serif KR",serif;font-weight:700;font-size:21px;line-height:1.2;letter-spacing:-.01em}
-.brand .nm small{display:block;font-family:"Noto Sans KR",sans-serif;font-weight:500;font-size:11.5px;color:var(--mute);letter-spacing:.14em}
-.top .ask{display:inline-block;padding:9px 18px;background:var(--navy);color:#fff;text-decoration:none;font-size:14.5px;font-weight:500;border-radius:3px}
-header{position:sticky;top:0;z-index:20;background:var(--navy);box-shadow:0 2px 10px rgba(6,27,69,.25)}
-header .wrap{display:flex;align-items:stretch;height:58px}
-.gnb{display:flex;list-style:none;width:100%}
-.gnb>li{position:relative;flex:1;text-align:center}
-.gnb>li>a{display:flex;align-items:center;justify-content:center;height:58px;color:#fff;text-decoration:none;font-size:16.5px;font-weight:500;border-bottom:3px solid transparent}
-.gnb>li:hover>a,.gnb>li:focus-within>a{background:var(--navy2);border-bottom-color:var(--gold2)}
-.sub{display:none;position:absolute;top:58px;left:0;right:0;min-width:180px;background:#fff;list-style:none;box-shadow:0 10px 24px rgba(6,27,69,.18);border-top:3px solid var(--gold2);padding:8px 0;text-align:left}
-.gnb>li:hover .sub,.gnb>li:focus-within .sub{display:block}
-.sub a{display:block;padding:10px 20px;color:var(--ink);text-decoration:none;font-size:15px}
-.sub a:hover{background:var(--tint);color:var(--navy)}
-#menu{display:none;background:none;border:0;color:var(--navy);font-size:28px;cursor:pointer;line-height:1}
-/* hero */
-.hero{background:linear-gradient(160deg,var(--deep) 0%,var(--navy) 55%,var(--navy2) 100%);color:#fff}
-.hero .wrap{min-height:calc(88vh - 64px);display:flex;flex-direction:column;justify-content:center;padding-top:60px;padding-bottom:70px}
-.hero .han{font-size:16px;color:rgba(255,255,255,.72)}
-.hero h1{font-family:"Noto Serif KR",serif;font-size:clamp(46px,8vw,84px);line-height:1.22;margin-top:14px;letter-spacing:-.02em}
-.hero h1 em{font-style:normal;color:var(--gold2)}
-.hero p.lead{margin-top:26px;font-size:clamp(17px,2.2vw,21px);color:rgba(255,255,255,.85);max-width:640px}
-.hero .two{margin-top:44px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;font-weight:500}
-.btn.solid{background:var(--gold2);border-color:var(--gold2);color:var(--deep);font-weight:700}
-/* sections */
-section.s{padding:96px 0;border-bottom:1px solid var(--line)}
-.lb{font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.06em;margin-bottom:12px}
-h2{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4vw,42px);line-height:1.32;color:var(--navy);margin-bottom:22px;letter-spacing:-.01em}
-.intro{font-size:19px;color:var(--mute);max-width:720px;margin-bottom:44px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
-.it{padding:24px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr}
-.it .n{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--gold);font-weight:700}
-.it b{display:block;font-family:"Noto Serif KR",serif;font-size:23px;color:var(--navy);line-height:1.35}
-.it span{display:block;font-size:16.5px;color:var(--mute);margin-top:6px}
-.note{margin-top:34px;padding:22px 26px;background:var(--tint);border-left:4px solid var(--navy);font-size:17px}
-.note b{color:var(--navy)}
-/* media */
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
-.card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);padding:28px}
-.card .k{font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.06em}
-.card h3{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--navy);margin:8px 0 10px;line-height:1.4}
-.card p{font-size:16px;color:var(--mute)}
-.soon{display:inline-block;margin-top:14px;font-size:13px;padding:3px 10px;background:rgba(46,158,91,.12);color:var(--green);font-weight:700}
-/* record */
-.rec{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
-.proj{font-family:"Noto Serif KR",serif;font-size:26px;line-height:1.45;color:var(--navy);font-weight:700;margin-bottom:12px}
-.meta{font-size:16.5px;color:var(--mute)}
-.big{background:linear-gradient(150deg,var(--navy),var(--navy2));color:#fff;padding:34px 30px}
-.nums{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px}
-.nums b{display:block;font-family:"Noto Serif KR",serif;font-size:clamp(34px,4.5vw,48px);line-height:1.1}
-.nums b small{font-size:.5em}
-.nums span{font-size:14px;color:rgba(255,255,255,.7)}
-.big p{font-size:15px;color:rgba(255,255,255,.75);margin-top:20px}
-/* people */
-.ppl{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
-.pp{font-family:"Noto Serif KR",serif;font-size:34px;font-weight:700;color:var(--navy)}
-.pp small{font-family:"Noto Sans KR",sans-serif;font-size:17px;color:var(--gold);margin-left:10px}
-.cv{list-style:none;margin:16px 0 22px}
-.cv li{padding:11px 0;border-bottom:1px dotted var(--line)}
-.box{background:var(--tint);border-left:4px solid var(--navy);padding:22px 24px}
-/* contact */
-.contact{background:linear-gradient(165deg,var(--navy) 0%,var(--deep) 100%);color:#fff;border:0}
-.contact h2{color:#fff}
-.contact .lb{color:var(--gold2)}
-.tel{font-family:"Noto Serif KR",serif;font-size:clamp(38px,6vw,56px);font-weight:700;color:#fff;text-decoration:none;display:inline-block;margin:4px 0 28px}
-.ct{display:grid;grid-template-columns:90px 1fr;row-gap:14px;font-size:18px;max-width:640px}
-.ct dt{color:var(--gold2);font-weight:700;font-size:15px;padding-top:3px}
-.ct a{color:#fff}
-.co{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.3);font-family:"Noto Serif KR",serif;font-size:19px;color:var(--gold2)}
-footer{background:#040F2B;color:rgba(255,255,255,.55);font-size:14px;padding:26px 0;text-align:center}
-/* AI education levels */
-.lv{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
-.lvc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);padding:24px 24px 22px}
-.lvc .st{font-size:13.5px;font-weight:700;color:var(--gold);letter-spacing:.08em}
-.lvc h3{font-family:"Noto Serif KR",serif;font-size:23px;color:var(--navy);margin:6px 0 12px}
-.lvc p{font-size:15.5px;color:var(--mute);margin-top:8px}
-.lvc p b{color:var(--ink);font-weight:700;margin-right:0}
-.lvc p:first-of-type b{display:block;font-family:"Noto Serif KR",serif;font-size:17px;color:var(--green);margin-bottom:2px}
-.note.eco{background:#EAF7F0;border-left-color:var(--green)}
-.note.eco b{color:var(--green)}
-.two-p{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-bottom:34px}
-@media (max-width:1000px){.lv{grid-template-columns:1fr 1fr}}
-@media (max-width:820px){.lv,.two-p{grid-template-columns:1fr}.talks dl{grid-template-columns:1fr;gap:2px}.talks dd{margin-bottom:10px}}
-.talks{margin-top:34px;background:#fff;border:1px solid var(--line);padding:28px 30px}
-.talks h3{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--navy);margin-bottom:6px}
-.talks .sum{font-size:15.5px;color:var(--mute);margin-bottom:14px}
-.talks dl{display:grid;grid-template-columns:70px 1fr;gap:10px 18px;font-size:15.5px}
-.talks dt{font-weight:700;color:var(--gold)}
-.talks dd{color:var(--ink)}
-/* accent: 섹션마다 색을 나눈다 — 파랑(연구) 녹색(교육·기후) 붉은색(브리핑·미디어) */
-#edu .lb{color:var(--green)}
-#edu .lvc{border-top-color:var(--green)}
-#edu .lvc .st{color:var(--green)}
-#edu .talks dt{color:var(--green)}
-#edu h2{color:var(--deep)}
-.note.eco{background:var(--green3);border-left-color:var(--green)}
-.note.eco b{color:var(--green)}
-#brief .lb,#media .lb{color:var(--red)}
-#brief h2,#media h2{color:var(--deep)}
-#brief .it .n,#media .it .n{color:var(--red2)}
-#brief .card,#media .card{border-top-color:var(--red)}
-#brief .card .k,#media .card .k{color:var(--red)}
-#brief .card h3,#media .card h3{color:var(--deep)}
-.flag{display:inline-block;padding:3px 10px;margin-bottom:12px;background:var(--red);color:#fff;font-size:13px;font-weight:700;letter-spacing:.06em}
-.util{border-bottom:2px solid var(--red)}
-.top .ask{background:var(--red)}
-.top .ask:hover{background:var(--red2)}
-.gnb>li>a.on,.gnb>li>a:active{border-bottom-color:var(--red2)}
-.hero .han::before{content:"";display:inline-block;width:22px;height:3px;background:var(--red2);vertical-align:middle;margin-right:10px}
+:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;--blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62;--orange:#FF9A33}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);line-height:1.62;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
 
-/* ===== 언론사형 레이아웃 ===== */
-.util .wrap{justify-content:space-between}
-.util .date{color:rgba(255,255,255,.9);font-weight:500;letter-spacing:.02em}
-.util .ulinks{display:flex;gap:22px;align-items:center}
-.flash{background:#fff;border-bottom:1px solid var(--line)}
-.flash .wrap{display:flex;align-items:center;gap:14px;min-height:42px;padding-top:7px;padding-bottom:7px}
-.flash b{flex:none;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--red);border-left:3px solid var(--red);padding:2px 0 2px 10px}
-.flash span{font-size:15px;color:var(--mute)}
-/* 이념 띠 */
-.creed{background:linear-gradient(120deg,var(--deep) 0%,var(--navy) 62%,var(--navy2) 100%);color:#fff;border:0}
-.creed .wrap{padding-top:38px;padding-bottom:40px}
-.creed .han{font-size:14.5px;color:rgba(255,255,255,.75)}
-.creed h1{font-family:"Noto Serif KR",serif;font-size:clamp(30px,4.6vw,48px);line-height:1.26;margin-top:10px;letter-spacing:-.02em}
-.creed h1 em{font-style:normal;color:var(--gold2)}
-.creed p{margin-top:14px;font-size:17px;color:rgba(255,255,255,.86);max-width:760px}
-/* 1면 */
-.front{padding:40px 0 10px;background:#fff;border-bottom:1px solid var(--line)}
-.fg{display:grid;grid-template-columns:1.65fr 1fr;gap:0 44px}
-.lead-art{padding-right:44px;border-right:1px solid var(--line)}
-.kick{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--red);border:1px solid var(--red);padding:3px 11px}
-.lead-art h2{font-family:"Noto Serif KR",serif;font-size:clamp(32px,4.4vw,46px);line-height:1.26;color:var(--ink);margin:16px 0 14px;letter-spacing:-.025em}
-.lead-art h2 a{text-decoration:none}
-.lead-art h2 a:hover{color:var(--deep)}
-.lead-art p{font-size:17.5px;color:var(--mute)}
-.byl{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
-.side .sh{font-family:"Noto Serif KR",serif;font-size:19px;font-weight:700;color:var(--deep);padding-bottom:10px;border-bottom:3px solid var(--deep)}
-.slist{list-style:none;margin-top:4px}
-.slist li{padding:14px 0;border-bottom:1px dotted var(--line)}
-.slist li span{display:block;font-size:12px;font-weight:700;letter-spacing:.07em;margin-bottom:5px}
-.slist .c1{color:var(--navy)}.slist .c2{color:var(--green)}.slist .c3{color:var(--red)}
-.slist li a{display:block;font-size:16.5px;line-height:1.5;color:var(--ink);text-decoration:none;font-weight:500}
-.slist li a:hover{color:var(--deep);text-decoration:underline}
-.fnav{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:38px;border-top:1px solid var(--line)}
-.fnav a{display:block;padding:22px 24px 24px;text-decoration:none;border-right:1px solid var(--line);border-top:4px solid transparent}
-.fnav a:nth-child(1){border-top-color:var(--navy)}
-.fnav a:nth-child(2){border-top-color:var(--green)}
-.fnav a:nth-child(3){border-top-color:var(--red)}
-.fnav a:last-child{border-right:0}
-.fnav a:hover{background:var(--paper)}
-.fnav b{display:block;font-family:"Noto Serif KR",serif;font-size:22px;color:var(--deep)}
-.fnav span{display:block;font-size:15px;color:var(--mute);margin-top:6px}
-/* 섹션 머리 — 신문 가로줄 */
-.sechead{display:flex;align-items:baseline;gap:14px;margin:44px 0 18px;padding-bottom:9px;border-bottom:3px solid var(--deep)}
-.sechead b{font-family:"Noto Serif KR",serif;font-size:21px;color:var(--deep)}
-.sechead span{font-size:14.5px;color:var(--mute)}
-/* 연재 목차 */
-.arc{display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
-.arc>div{padding:18px 0;border-top:1px solid var(--line)}
-.arc .t{font-family:"Noto Serif KR",serif;font-size:19.5px;color:var(--ink);line-height:1.45}
-.arc .t em{font-style:normal;font-size:13px;color:var(--red);font-weight:700;margin-left:8px}
-.arc p{font-size:15.5px;color:var(--mute);margin-top:5px}
-.ser ul{list-style:none;margin-top:8px}
-.ser li{display:grid;grid-template-columns:62px 1fr auto;gap:0 10px;align-items:baseline;padding:7px 0;border-top:1px dotted var(--line);font-size:15.5px;line-height:1.5}
-.ser li:first-child{border-top:0}
-.ser li b{font-family:"Noto Serif KR",serif;font-size:14px;color:var(--red);font-weight:700;text-align:right}
-.ser li span{font-size:13px;color:var(--mute);white-space:nowrap}
-@media (max-width:620px){.ser li{grid-template-columns:52px 1fr;}.ser li span{grid-column:2;font-size:12px}}
-@media (max-width:900px){.fg{grid-template-columns:1fr}.lead-art{padding-right:0;border-right:0;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:26px}.fnav{grid-template-columns:1fr}.fnav a{border-right:0;border-bottom:1px solid var(--line)}.arc{grid-template-columns:1fr}.util .wrap{height:auto;padding-top:6px;padding-bottom:6px;flex-direction:column;gap:2px}.util .ulinks{gap:14px}}
+.util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.util .wrap{display:flex;justify-content:space-between;padding:6px 18px}
+.mast{border-bottom:1px solid var(--line);background:#fff}
+.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}
+.logo{display:block;line-height:0}.logo img{width:276px;height:auto;display:block}
+.mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.mast .date{font-size:13px;color:var(--mute)}
+.srchtop{display:flex;gap:6px;align-items:center;margin:0}
+.srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}
+.srchtop input:focus{outline:0;border-color:var(--blue)}
+.srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:var(--blue);color:#fff;cursor:pointer}
+.srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}
+.srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}
+.srchtop .asktop:hover{background:#FFB15E}
+.gnb{border-bottom:2px solid var(--blue-d);background:#fff}
+.gnb .wrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
+.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
+.gnb a:hover,.gnb a.on{border-color:var(--blue-d);color:var(--blue-d)}
+footer{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid var(--blue-d)}
+footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
+footer b{color:#fff}footer a{text-decoration:underline}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}
+img{-webkit-user-drag:none;pointer-events:none}
+@media(max-width:700px){.srchtop input{width:100%}.mast .rt{align-items:stretch;width:100%}.srchtop{flex-wrap:wrap}.srchtop .asktop{margin-left:0}.srchtop .asktop::before{display:none}}
 
-.dark .note{background:rgba(255,255,255,.10);border-left-color:var(--gold2);color:rgba(255,255,255,.95)}
-.dark .note b{color:var(--gold2)}
-.dark .note.eco,.dark .note[style]{border-left-color:var(--green2)!important}
-.dark .note.eco b:first-child{color:var(--green2)}
-
-/* deep-blue band */
-section.dark{background:linear-gradient(170deg,var(--navy) 0%,var(--deep) 100%);color:#fff;border:0}
-.dark h2,.dark .it b{color:#fff}.dark .lb,.dark .it .n{color:var(--gold2)}
-.dark .intro,.dark .it span{color:rgba(255,255,255,.92)}.dark .it{border-top-color:rgba(255,255,255,.2)}
-.dark .note{background:rgba(255,255,255,.08);border-left-color:var(--gold2);color:#fff}
-section.tint{background:var(--tint)}section.tint .box{background:#fff}
-@media (max-width:820px){
- body{font-size:17px}
- .util{display:none}
- .top .wrap{height:64px}.brand .mk{width:42px;height:42px;font-size:13.5px;border-width:1.5px}.brand .nm{font-size:17px}.brand .nm small{font-size:10px;letter-spacing:.08em}
- .top .ask{display:none}#menu{display:block}
- header{display:none}header.open{display:block;position:fixed;top:64px;left:0;right:0;bottom:0;overflow:auto;box-shadow:none}
- header .wrap{height:auto;display:block;padding-top:10px;padding-bottom:30px}
- .gnb{display:block}.gnb>li{text-align:left;border-bottom:1px solid rgba(255,255,255,.15)}
- .gnb>li>a{justify-content:flex-start;height:auto;padding:16px 0 6px;font-size:19px;font-family:"Noto Serif KR",serif;font-weight:700;color:var(--gold2);border:0}
- .gnb>li:hover>a,.gnb>li:focus-within>a{background:none}
- .sub{display:block;position:static;background:none;box-shadow:none;border:0;padding:0 0 12px}
- .sub a{color:#fff;padding:8px 0 8px 14px;font-size:16px}.sub a:hover{background:none;color:var(--gold2)}
- .top{position:sticky;top:0;z-index:30}
- .grid,.cards,.rec,.ppl{grid-template-columns:1fr}
- section.s{padding:68px 0}
- .it{grid-template-columns:42px 1fr}.it b{font-size:21px}
-}
+.hero{background:var(--soft);border-bottom:3px solid var(--ink)}
+.hero .wrap{padding:26px 18px 22px}
+.hero .k{font-size:13px;font-weight:800;color:var(--blue-d);letter-spacing:.5px}
+.hero h1{margin:4px 0 8px;font-size:32px;letter-spacing:-1px}
+.hero p{margin:0;font-size:15px;color:var(--sub);max-width:760px}
+.toc{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.toc .wrap{display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
+.toc a{font-size:13.5px;font-weight:700;padding:5px 12px;border:1px solid #9FB2D4;color:var(--sub)}
+.toc a:hover{border-color:var(--blue-d);color:var(--blue-d)}
+main{padding:6px 0 10px}
+.s{padding:30px 0 6px;scroll-margin-top:56px}
+.s h2{margin:0 0 4px;font-size:24px;font-weight:800;letter-spacing:-.6px}
+.s .k{font-size:12.5px;font-weight:800;color:var(--blue-d)}
+.s .lead{font-size:15.5px;color:var(--sub);max-width:820px;margin:8px 0 14px}
+.s h2+.lead{margin-top:6px}
+.hd{border-bottom:3px solid var(--ink);padding-bottom:8px;margin-bottom:14px}
+.g2,.g3,.g4{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.c{border:1px solid var(--line);background:#fff;padding:14px 15px}
+.c b{display:block;font-size:12px;color:var(--blue-d);font-weight:800}
+.c h3{margin:2px 0 6px;font-size:16.5px;font-weight:800;letter-spacing:-.3px}
+.c p{margin:0;font-size:13.5px;color:var(--sub);line-height:1.6}
+.fn{border-top:2px solid var(--ink);padding-top:12px;margin-top:2px}
+.fn+.fn{margin-top:22px}
+.fn h3{margin:0 0 6px;font-size:19px;font-weight:800}
+.note{background:var(--soft);border-left:4px solid var(--blue-d);padding:11px 14px;font-size:14px;color:var(--sub);margin:14px 0 0}
+.lv{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+.lv div{padding:14px;border-right:1px solid var(--line)}.lv div:last-child{border-right:0}
+.lv b{font-size:12px;color:var(--blue-d)}.lv h4{margin:2px 0 4px;font-size:16px}.lv i{display:block;font-style:normal;font-weight:800;font-size:14px;margin-bottom:4px}.lv p{margin:0;font-size:13px;color:var(--sub)}
+.yr{display:grid;grid-template-columns:70px 1fr;gap:6px 14px;border-top:1px solid var(--line);padding:10px 0;font-size:14px;line-height:1.75}
+.yr b{font-size:16px;color:var(--blue-d)}
+.yr ul{margin:0;padding-left:16px}.yr li{margin:1px 0}
+.num{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);margin:12px 0}
+.num div{padding:16px;text-align:center;border-right:1px solid var(--line)}.num div:last-child{border-right:0}
+.num strong{display:block;font-size:30px;color:var(--blue-d);letter-spacing:-1px}.num span{font-size:13px;color:var(--mute)}
+.ppl{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+.ppl .c h3{font-size:19px}.ppl .c h3 small{font-size:13px;color:var(--mute);font-weight:700;margin-left:6px}
+.dl{display:grid;grid-template-columns:90px 1fr;border-top:2px solid var(--ink)}
+.dl dt,.dl dd{margin:0;padding:10px 4px;border-bottom:1px solid var(--line);font-size:14.5px}
+.dl dt{font-weight:800;color:var(--sub)}
+@media(max-width:900px){.g3,.g4,.lv{grid-template-columns:repeat(2,1fr)}.ppl{grid-template-columns:1fr}}
+@media(max-width:600px){.g2,.g3,.g4,.lv,.num{grid-template-columns:1fr}.lv div,.num div{border-right:0;border-bottom:1px solid var(--line)}.yr{grid-template-columns:1fr}}
 </style></head><body>
+<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>연구 의뢰 032-777-0421</span></div></div>
+<div class="mast"><div class="wrap"><a class="logo" href="./"><img src="logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
+<div class="rt"><span class="date" id="today"></span><form class="srchtop" action="media/" method="get" role="search"><input type="search" name="q" placeholder="자료 검색" aria-label="자료 검색"><button type="submit">찾기</button><a class="asktop" href="ask.html">의뢰·신청하기</a></form></div></div></div>
+<nav class="gnb"><div class="wrap"><a href="media/">전체 자료</a><a href="media/g_policy.html">정책브리핑</a><a href="media/g_ocean.html">해양</a><a href="media/g_air.html">항공</a><a href="media/g_rail.html">철도</a><a href="media/g_logistics.html">복합물류</a><a href="media/g_urban.html">도시계획·부동산</a><a href="media/g_climate.html">기후위기</a><a href="media/g_economy.html">경제</a><a href="media/g_ai.html">AI</a><a href="about.html" class="on">연구소</a></div></nav>
+<div class="hero"><div class="wrap"><span class="k">經世濟民 · 사람이 주인입니다</span>
+<h1>두루두루 고루고루 잘 사는 세상</h1>
+<p>사람이 두루두루 고루고루 잘사는 세상을 위한 연구를 합니다. 현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p></div></div>
+<nav class="toc"><div class="wrap"><a href="#view">경세제민의 생각</a><a href="#research">정책연구 · 연구용역 · 조사분석</a><a href="#edu">AI 교육</a><a href="#lecture">강연 · 교육 경력</a><a href="#brief">정책브리핑</a><a href="#media">미디어</a><a href="#record">연구 실적</a><a href="#people">연구진</a><a href="#contact">연락</a></div></nav>
+<main class="wrap">
+<section class="s" id="view"><div class="hd"><span class="k">경세제민의 생각</span><h2>사람이 주인이고 기술은 수단이자 도구다</h2></div>
+<p class="lead">역사적으로 사람보다 중한 것은 없습니다. AI 시대에도 이 원칙은 변하지 않습니다. 경제(經濟)라는 말도 경세제민을 줄인 것입니다. 나라 살림을 챙겨 사람이 잘 먹고 잘 살게 하는 일, 그것이 연구소가 하는 일입니다.</p>
+<div class="g4"><div class="c"><b>01</b><h3>가계는 생산의 주체다</h3><p>노동자·농민·자영업자·중소상공인이 경제를 지탱합니다. 가계가 무너지면 기업도 정부도 무너집니다.</p></div><div class="c"><b>02</b><h3>벌이가 늘어야 경제가 돈다</h3><p>돈은 서민에게 풀려야 돕니다. 서민 소득이 유효수요를 만듭니다.</p></div><div class="c"><b>03</b><h3>혁신으로 값을 낮춘다</h3><p>물류 효율화, AI, 에너지 전환으로 공급 비용을 낮추고 임금은 올립니다.</p></div><div class="c"><b>04</b><h3>시장도 정부도 완전하지 않다</h3><p>어느 한쪽에 기대지 않습니다. 그 사이 균형이 어디 있는지 찾습니다.</p></div></div>
+<p class="note"><b>균형경제론</b> — 서민 소득을 올려 수요를 살리고, 혁신으로 공급 비용을 낮추는 일을 함께 합니다.</p></section>
 
-<div class="util"><div class="wrap">
- <span class="date" id="today">2026년 10월 12일</span>
- <span class="ulinks"><a href="tel:0327770421">032-777-0421</a><a href="mailto:weminpress@gmail.com">weminpress@gmail.com</a><a href="#contact">오시는 길</a></span>
-</div></div>
-<div class="top"><div class="wrap">
- <a class="brand" href="/"><span class="mk"><b>經世</b><b>濟民</b></span><span class="nm">AI·경제 연구소<small>WEMINAI.COM</small></span></a>
- <a class="ask" href="#contact">연구 의뢰 · 문의</a>
- <button id="menu" aria-label="메뉴 열기" aria-expanded="false">☰</button>
-</div></div>
-<header id="gnb"><div class="wrap">
- <ul class="gnb">
-  <li><a href="#view">연구소 소개</a><ul class="sub"><li><a href="#view">경세제민의 생각</a></li><li><a href="#people">연구진</a></li><li><a href="#contact">오시는 길</a></li></ul></li>
-  <li><a href="#policy">정책연구</a><ul class="sub"><li><a href="#policy">기본계획 · 기본구상</a></li><li><a href="#policy">중장기 전략</a></li><li><a href="#policy">조례 · 제도 개선</a></li><li><a href="#policy">정책효과 · 사업평가</a></li></ul></li>
-  <li><a href="#service">연구용역</a><ul class="sub"><li><a href="#service">타당성 · 경제성 분석</a></li><li><a href="#service">원가 산정 · 요금 분석</a></li><li><a href="#service">출판 · 편집</a></li><li><a href="#service">컨설팅 · 교육</a></li></ul></li>
-  <li><a href="#survey">조사분석</a><ul class="sub"><li><a href="#survey">설문조사 설계</a></li><li><a href="#survey">실태 · 수요 · 만족도 조사</a></li><li><a href="#survey">통계분석</a></li><li><a href="#survey">데이터 분석</a></li><li><a href="#survey">AHP 분석</a></li><li><a href="#survey">SWOT · SER-M 전략</a></li></ul></li>
-  <li><a href="#edu">AI 교육</a><ul class="sub"><li><a href="#edu">AI 실전 교육</a></li><li><a href="#edu">AI 리터러시</a></li><li><a href="#edu">AI 저널리즘</a></li><li><a href="#edu">강연</a></li><li><a href="#edu">초급 · 중급 · 상급 · 전문가</a></li></ul></li>
-  <li><a href="#brief">정책브리핑</a><ul class="sub"><li><a href="#brief">주제와 차례</a></li><li><a href="#brief">첫 편</a></li></ul></li>
-  <li><a href="#media">미디어</a><ul class="sub"><li><a href="#media">전문지</a></li><li><a href="#media">일 · 길 · 터 · 돈</a></li><li><a href="#news">기사</a></li></ul></li>
-  <li><a href="#record">연구 실적</a><ul class="sub"><li><a href="#record">해 본 일</a></li></ul></li>
-  <li><a href="#contact">문의</a><ul class="sub"><li><a href="#contact">연구 의뢰</a></li><li><a href="mailto:weminpress@gmail.com">메일 보내기</a></li></ul></li>
- </ul>
-</div></header>
+<section class="s" id="research"><div class="hd"><span class="k">하는 일</span><h2>정책연구 · 연구용역 · 조사분석</h2></div>
+<div class="fn"><h3>기능 01 정책연구</h3><p class="lead">정책을 세우는 일입니다. 지방자치단체와 공공기관이 앞으로 무엇을 어떤 차례로 할 것인지를 자료로 따져 설계합니다.</p>
+<div class="g4"><div class="c"><b>01</b><h3>기본계획 · 기본구상</h3><p>법정계획, 종합계획, 발전계획, 분야별 기본구상 수립</p></div><div class="c"><b>02</b><h3>중장기 전략</h3><p>5개년 · 10개년 계획, 단계별 실행계획, 재원 조달 방안</p></div><div class="c"><b>03</b><h3>조례 · 제도 개선</h3><p>조례 제정과 개정 연구, 행정 절차 개선, 거버넌스 설계</p></div><div class="c"><b>04</b><h3>정책효과 · 사업평가</h3><p>인과효과 분석(이중차분법 등), 성과평가, 지역경제 파급효과 분석(산업연관분석)</p></div></div></div>
+<div class="fn"><h3>기능 02 연구용역</h3><p class="lead">맡기신 과제를 처음부터 끝까지 수행하는 일입니다. 설계와 분석과 집필을 한자리에서 합니다.</p>
+<div class="g4"><div class="c"><b>01</b><h3>타당성 분석 · 경제성 분석</h3><p>수요 예측, 비용편익분석(B/C · NPV · IRR), 민감도분석, 재무성 분석. 인천시 해양수산 산학연 거점 조성 용역에서 B/C 1.39, NPV 973.0억원, IRR 9.3%를 산출했습니다.</p></div><div class="c"><b>02</b><h3>원가 산정 · 요금 분석</h3><p>준공영제 표준운송원가, 위탁 관리대행 원가, 공공요금 현실화와 요금 체계 설계</p></div><div class="c"><b>03</b><h3>출판 · 편집</h3><p>백서, 자료집, 연보, 지역의 지(誌)와 사(史), 보고서 편집과 윤문, 발간물 기획과 제작</p></div><div class="c"><b>04</b><h3>컨설팅 · 교육</h3><p>데이터 기반 경영 컨설팅, 공공기관 실무자 대상 조사 설계와 통계 활용 교육</p></div></div></div>
+<div class="fn"><h3>기능 03 조사분석</h3><p class="lead">묻고 재는 일입니다. 집계에서 멈추지 않고 분석과 해석까지 합니다.</p>
+<div class="g3"><div class="c"><b>01</b><h3>설문조사 설계</h3><p>문항 개발, 표본 설계와 가중치 산정, 조사 방식 선택, 조사 실시와 자료 처리</p></div><div class="c"><b>02</b><h3>실태 · 수요 · 만족도 조사</h3><p>실태조사, 수요조사, 만족도조사, 인식조사, 시장조사</p></div><div class="c"><b>03</b><h3>통계분석</h3><p>교차분석, 회귀분석, 패널 분석, 인과추론. 분석은 외주하지 않고 직접 합니다.</p></div><div class="c"><b>04</b><h3>데이터 분석</h3><p>행정데이터와 공공데이터 결합, 지표 개발, 모형 구축, 시각화</p></div><div class="c"><b>05</b><h3>전문가 조사 · AHP 분석</h3><p>계층분석법(AHP) — 평가 계층 설계, 쌍대비교 설문, 가중치 산정, 일관성비율(CR) 검정. 대안 우선순위 결정, 평가지표 가중치 도출, 델파이 조사와 함께 씁니다.</p></div><div class="c"><b>06</b><h3>전략 수립 — SWOT · SER-M</h3><p>SER-M 모델(주체 · 환경 · 자원 · 메커니즘)로 조직이 성과를 낸 경로를 풀어 전략을 세웁니다. SWOT 분석은 그 가운데 환경 분석에 들어가 SO 전략을 끌어내고, 자원은 VRIN을 갖춘 핵심역량으로 따로 묻습니다. AHP 가중치와 묶어 전략 대안의 우선순위를 매깁니다.</p></div></div></div>
+<p class="note"><b>다루는 분야</b> — 교통(항공 · 철도 · 해운), 물류, 항만과 공항, 해양수산, 지역경제와 일자리, 노동, 도시재생과 원도심, 기후위기 대응과 에너지 전환, AI와 데이터<br>
+<b>수행 방식</b> — 세 기능은 동급입니다. 한 과제에 셋이 함께 들어가기도 하고 따로 맡기실 수도 있습니다. 셋 모두 의뢰를 받아 수행하거나, 연구소가 사업비를 마련해 수행합니다. 과제마다 분야 공동연구원을 위촉해 함께 수행합니다. 경세제민 AI·경제 연구소(주)는 2026년 4월 30일 설립됐고 본점은 인천 미추홀구에 있습니다.</p></section>
 
-<div class="flash"><div class="wrap"><b>정책브리핑</b><span>제1호 「인천시와 군·구는 무엇을 연구에 맡기나」 — 인천시와 군·구의 정책연구 724건을 분야와 유형으로 나눠 읽었습니다. 곧 공개합니다.</span></div></div>
-<section class="creed" id="top"><div class="wrap">
- <div class="han">經世濟民 · 사람이 주인입니다</div>
- <h1>두루두루 고루고루 <em>잘 사는 세상</em></h1>
- <p>사람이 두루두루 고루고루 잘사는 세상을 위한 연구를 합니다. 현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p>
-</div></section>
+<section class="s" id="edu"><div class="hd"><span class="k">AI 교육</span><h2>AI 실전 교육과 AI 리터러시</h2></div>
+<p class="lead">왜 배워야 하는가. 정보의 비대칭을 줄이기 위해서입니다. 가진 쪽은 이미 AI를 씁니다. 시민과 노동자가 자기를 지키고 민주주의를 지키려면, 저쪽이 쥔 도구를 이쪽도 쥐어야 합니다.</p>
+<p class="lead">급변하는 시대에 끌려다니지 않고 능동적으로 적응하기 위해서입니다. 그리고 무엇보다 자기계발입니다. AI를 제대로 쓰면 일하는 시간은 줄고, 자기 값어치는 올라갑니다. 줄어든 시간은 자기에게 돌아옵니다.</p>
+<p class="lead">그래서 교재는 배우는 분들이 하는 일에 맞춰 새로 짭니다. 실습은 그 자리에서 실제로 쓰는 문서로 합니다. 보고서면 보고서로, 단체교섭 자료면 그 자료로, 기사면 기사로 합니다.</p>
+<div class="g4"><div class="c"><b>01</b><h3>AI 실전 교육</h3><p>기본 명령어부터 시스템 프롬프트 설계까지 아래 4단계. 공공기관·기업 실무자, 직장인 재교육</p></div><div class="c"><b>02</b><h3>AI 리터러시</h3><p>허위정보 판별법 · 저작권 이슈 · 개인정보 보호 · 편향성 제거</p></div><div class="c"><b>03</b><h3>AI 저널리즘</h3><p>언론인을 위한 갈래입니다. 지역언론 기자 연수와 사별연수 — 한국언론진흥재단, 지역신문발전위원회, 기자협회</p></div><div class="c"><b>04</b><h3>강연</h3><p>노동조합과 시민사회, 학교와 단체 — 한 시간에서 반나절까지</p></div></div>
+<h3 style="margin:22px 0 8px;font-size:18px">네 단계 <small style="font-size:13px;color:var(--mute);font-weight:600">아는 것이 아니라 혼자 무엇을 할 수 있느냐로 나눕니다. 앞 단계를 건너뛰지 않습니다</small></h3>
+<div class="lv"><div><b>1단계</b><h4>초급</h4><i>AI와 말이 통한다</i><p>역할과 규칙을 붙여 묻습니다. 기밀과 개인정보를 넣지 않는 법, 학습 설정을 끄는 법을 익힙니다. AI가 틀릴 수 있다는 것을 압니다.</p></div>
+<div><b>2단계</b><h4>중급</h4><i>검색창 쓰듯 하지 않는다</i><p>일을 단계로 쪼개 맡깁니다. 나온 숫자는 원출처로, 인용은 실재 여부로, 둘 이상의 도구로 교차 검증합니다. 자기 이름으로 낼 수 있는 수준입니다.</p></div>
+<div><b>3단계</b><h4>고급</h4><i>규칙을 문서로 박는다</i><p>쓰임새별로 AI 비서를 만듭니다. 해서는 안 될 일까지 규칙에 넣어, 새로 열어도 품질이 흔들리지 않게 합니다. 쓰면서 규칙을 고칠 줄 압니다.</p></div>
+<div><b>4단계</b><h4>전문가</h4><i>혼자에서 조직으로</i><p>반복 업무를 흐름으로 묶고, 표준과 검증 절차와 금지 조항을 담은 지침을 만들어 넘깁니다. 쓰는 사람에서 설계하고 감독하는 사람으로 넘어갑니다.</p></div></div>
+<p class="note"><b>대상</b> — 공공기관과 기업 실무자, 직장인 재교육, 단체·노동조합·시민사회단체, 학생, 고령층, 언론인. 언론인 연수는 그 가운데 한 갈래입니다<br>
+<b>모든 단계의 끝은 검증입니다</b> — 초안은 AI가 만들고 검토는 사람이 합니다. 받아쓰면 남지 않고, 따지면 남습니다. 이 교육이 기르려는 것은 도구를 다루는 손이 아니라 따지는 힘입니다.</p></section>
 
-<section class="front"><div class="wrap">
- <div class="fg">
-  <article class="lead-art">
-   <div class="kick">정책브리핑 제1호</div>
-   <h2><a href="#brief">인천시와 군·구는<br>무엇을 연구에 맡기나</a></h2>
-   <p>정책연구관리시스템에 등록된 인천시와 군·구의 정책연구 724건을 분야와 유형으로 나눠 읽었습니다. 어느 분야에 얼마를 쓰고 무엇을 맡기지 않는지, 공개 자료로 직접 셌습니다. 주제를 고르는 쪽도 묻는 쪽도 저희입니다.</p>
-   <div class="byl">김갑봉 소장 · <span class="soon">곧 공개</span></div>
-  </article>
-  <aside class="side">
-   <div class="sh">연구소 소식</div>
-   <ul class="slist">
-    <li><span class="c1">연구 실적</span><a href="#record">인천 해양수산 산·학·연 거점 조성 타당성 검토 — B/C 1.39, NPV 973.0억원, IRR 9.3%</a></li>
-    <li><span class="c2">AI 교육</span><a href="#edu">지역언론 기자 연수와 AI 실전 교육 — 2012년부터 40여 회</a></li>
-    <li><span class="c3">미디어</span><a href="#media">전문지 창간 준비 — 일 · 길 · 터 · 돈</a></li>
-    <li><span class="c1">조사분석</span><a href="#survey">설문조사 설계부터 AHP 가중치와 SER-M 전략까지</a></li>
-   </ul>
-  </aside>
- </div>
- <div class="fnav">
-  <a href="#policy"><b>정책연구</b><span>기본계획 · 중장기 전략 · 조례 · 정책평가</span></a>
-  <a href="#service"><b>연구용역</b><span>타당성 · 원가 산정 · 출판 · 컨설팅</span></a>
-  <a href="#survey"><b>조사분석</b><span>설문 · 통계 · 데이터 · AHP · SER-M</span></a>
- </div>
-</div></section>
+<section class="s" id="lecture"><div class="hd"><span class="k">강연 · 교육 경력</span><h2>강연 · 연수 · 교육 실적</h2></div>
+<p class="lead">강연 자료와 공문, 강사 프로필에 적힌 날짜와 주최를 그대로 옮겼습니다. 2012년부터 외부 강연과 연수 강사 40회가 넘고, 그 가운데 한국언론진흥재단 연수·특강이 12회입니다.</p>
+<div class="yr"><b>2026</b><ul>
+<li>1.13 인천평화복지연대 「AI 시대, 공익활동가를 위한 실전 가이드」 · 인천항운노조 「AI 대전환 파도, 인천항운노조는 어떻게 넘을 것인가」 · 민주당 인천시당 지방선거 아카데미(2차) 「2030 AI 특이점, 지방선거와 정의로운 전환」</li>
+<li>노동조합 지회 조합원 대상 「AI 시대, 사람이 하는 가장 귀한 일」(90분)</li>
+<li>3.12 한국언론진흥재단 광주지사 「6.3 지방선거와 AI 활용 전략」 · 3.13 충청신문 「AGI 시대, AI 저널리즘 전략」 · 3.27 한국언론진흥재단 찾아가는 저널리즘 특강(대덕넷) 「AI 시대, 뉴스룸의 생존 전략」</li>
+<li>4.1 평택시민신문 「AGI 시대, 평택시민신문의 새로운 기회」 · 4.6 전북도민일보 특별강연 「AI 특이점 2030」 · 4.8 인천시민재단 「AI 시대, 시민사회 활동가를 위한 AI 실전 활용법」 · 4.14 한국언론진흥재단 찾아가는 저널리즘 특강(용인시민신문) 「지역 AI거버넌스와 미디어 리터러시 전략」</li>
+<li>6.15 무주진안신문 「AI 활용 실전 연수」 · 다같이유니온 AI 강연 「느린 아이 곁을 지키는 당신에게」</li></ul></div>
+<div class="yr"><b>2025</b><ul>
+<li>4.11 『AI시대, 봉기자가 본 독일 언론과 민주주의』 출판기념 강연(인천YMCA)</li>
+<li>「AI 범용시대 지역언론 생존의 길」 5.14 용인시민신문 · 5.16 보은사람들 · 7.23 당진시대 · 8.22 한국언론진흥재단 찾아가는 저널리즘(태안신문)</li>
+<li>9.12 한국언론진흥재단 제365기 수습기자 기본교육(대전·세종·충청권) 「AI와 함께 쓰는 첫 기사」 · 9.13 한국언론진흥재단 광주 「AI 범용시대, 지역언론 뉴스룸 AI 활용 실전 가이드」</li>
+<li>9.22 서울 금천구 시민사회단체 「AI 범용시대, 언론과 민주주의」 · 9.24 한일언론포럼(도쿄 와세다대학) 토론 · 10.29 부천 시민사회단체 「AI 범용시대, 민주주의 수호자를 위한 실전 가이드」 · 12.23 민주당 인천시당 지방선거 아카데미(1차)</li></ul></div>
+<div class="yr"><b>2024</b><ul>
+<li>AI 저널리즘 강연 「인공지능시대 지역언론의 새로운 길」 외 17회 — 4.24 순천·광양 · 4.26 울산저널 · 5.3 해남신문 · 5.17 사천·거제 · 6.19 성주신문 · 6.20 영주신문 · 7.9 한국언론진흥재단 대전세종지사 「인공지능시대 지역언론의 AI 활용 생존기」 · 7.10 고양신문 · 7.12 태안신문 · 7.30 한국언론진흥재단 대전세종지사 지역언론 주니어기자 역량강화(2차) 전문연수 「AI 활용 저널리즘」 · 8.28 (사)인천사람과문화 인천마당 「인공지능시대 호모사피엔스와 AI 사피엔스」 · 9.4 경남울산기자협회 · 10.18 금천신문 · 10.25 한국언론진흥재단 광주지사 · 10.28 원주투데이 · 11.15 파주 · 11.19 경남지역신문발전위원회 세미나 「지역신문 AI 활용 사례」</li></ul></div>
+<div class="yr"><b>2012~2023</b><ul>
+<li>2023.6.9 한국언론진흥재단 대전지사 「취재 아이템 발굴과 취재원 관리」 · 2023.6 지역주간신문 기자 레벨업 전문연수</li>
+<li>2022.11.1 한국로지스틱스학회 등 공동학술대회 발표 「항공자유화협정과 인천국제공항 물동량」 · 2022.10.7 서산시대 사별연수 · 2021.1 영종국제도시총연합회 글쓰기 강의</li>
+<li>2020.8.19 한국경영학회 융합학술대회 발표 · 2019.10.30 인천광역시·인천산학융합원 공동토론회 「인천 항공산업 육성 전략」 토론</li>
+<li>2014 티브로드 인천방송 「이슈&amp;이슈 인천」 출연(서해5도 뱃삯 지원사업, 인천의 공항정책) · 2014.10.15 경인방송 「상쾌한 아침」 출연 · 2013.11.7 티브로드 「인천경제청 개청 10년, 성과와 과제」 출연 · 2013.6.17 5R운동 확산 시민대토론회 토론</li>
+<li>2012 부평지역자활센터 「보도자료 작성법」 · 2012.7 청소년기자학교(부천) 「기자가 본 저널리즘」</li>
+<li>인천투데이 사내 교육 — 신입기자 저널리즘 글쓰기 교육(2021~2025, 5회), 「인천투데이 걸어온 길」(2021~2024, 3회)</li></ul></div>
+</section>
 
-<section class="s" id="view"><div class="wrap">
- <div class="lb">경세제민의 생각</div>
- <h2>사람이 주인이고<br>기술은 수단이자 도구다</h2>
- <p class="intro">역사적으로 사람보다 중한 것은 없습니다. AI 시대에도 이 원칙은 변하지 않습니다. 경제(經濟)라는 말도 경세제민을 줄인 것입니다. 나라 살림을 챙겨 사람이 잘 먹고 잘 살게 하는 일, 그것이 연구소가 하는 일입니다.</p>
- <div class="grid">
-  <div class="it"><div class="n">01</div><div><b>가계는 생산의 주체다</b><span>노동자·농민·자영업자·중소상공인이 경제를 지탱합니다. 가계가 무너지면 기업도 정부도 무너집니다.</span></div></div>
-  <div class="it"><div class="n">02</div><div><b>벌이가 늘어야 경제가 돈다</b><span>돈은 서민에게 풀려야 돕니다. 서민 소득이 유효수요를 만듭니다.</span></div></div>
-  <div class="it"><div class="n">03</div><div><b>혁신으로 값을 낮춘다</b><span>물류 효율화, AI, 에너지 전환으로 공급 비용을 낮추고 임금은 올립니다.</span></div></div>
-  <div class="it"><div class="n">04</div><div><b>시장도 정부도 완전하지 않다</b><span>어느 한쪽에 기대지 않습니다. 그 사이 균형이 어디 있는지 찾습니다.</span></div></div>
- </div>
- <div class="note"><b>균형경제론</b> — 서민 소득을 올려 수요를 살리고, 혁신으로 공급 비용을 낮추는 일을 함께 합니다.</div>
-</div></section>
+<section class="s" id="brief"><div class="hd"><span class="k">정책브리핑</span><h2>묻는 쪽이 저희입니다</h2></div>
+<p class="lead">연구소가 주제를 정해 정기적으로 발표합니다. 연구진과 객원연구원이 함께 씁니다. 맡기신 과제를 수행하는 정책연구 · 연구용역 · 조사분석과는 다릅니다. 저 셋은 의뢰를 받거나 사업비를 마련해 하는 일이고, 정책브리핑은 주제를 고르는 쪽도 묻는 쪽도 저희입니다. 전문지에 싣는 기사와도 다릅니다. 기사는 소식을 전하고, 브리핑은 자료를 따집니다.</p>
+<div class="g4"><div class="c"><b>01</b><h3>주제를 고른다</h3><p>인천시와 군·구의 현안 가운데 자료로 따질 수 있는 것 하나를 고릅니다</p></div><div class="c"><b>02</b><h3>공개 자료로 조사한다</h3><p>공공데이터와 행정자료, 공시와 통계를 모아 직접 셉니다</p></div><div class="c"><b>03</b><h3>짧게 쓴다</h3><p>수치와 출처와 도표를 갖춰 언론사가 그대로 받아 쓸 수 있게 냅니다</p></div><div class="c"><b>04</b><h3>함께 보낸다</h3><p>지방자치단체와 공공기관, 의회에도 같이 보냅니다</p></div></div>
+<p class="note"><b>첫 편</b> — 인천시와 군·구는 무엇을 연구에 맡기나. 정책연구관리시스템에 등록된 인천시와 군·구 정책연구 724건을 분야와 유형으로 나눠 읽었습니다. 곧 공개합니다. 지금까지 낸 브리핑은 <a href="media/g_policy.html" style="text-decoration:underline">정책브리핑</a>에서 보실 수 있습니다.</p></section>
 
-<section class="s dark" id="research"><div class="wrap">
- <div id="policy"></div>
- <div class="lb">기능 01</div>
- <h2>정책연구</h2>
- <p class="intro">정책을 세우는 일입니다. 지방자치단체와 공공기관이 앞으로 무엇을 어떤 차례로 할 것인지를 자료로 따져 설계합니다.</p>
- <div class="grid">
-  <div class="it"><div class="n">01</div><div><b>기본계획 · 기본구상</b><span>법정계획, 종합계획, 발전계획, 분야별 기본구상 수립</span></div></div>
-  <div class="it"><div class="n">02</div><div><b>중장기 전략</b><span>5개년 · 10개년 계획, 단계별 실행계획, 재원 조달 방안</span></div></div>
-  <div class="it"><div class="n">03</div><div><b>조례 · 제도 개선</b><span>조례 제정과 개정 연구, 행정 절차 개선, 거버넌스 설계</span></div></div>
-  <div class="it"><div class="n">04</div><div><b>정책효과 · 사업평가</b><span>인과효과 분석(이중차분법 등), 성과평가, 지역경제 파급효과 분석(산업연관분석)</span></div></div>
- </div>
+<section class="s" id="media"><div class="hd"><span class="k">미디어</span><h2>일하는 사람의 경제를 쓴다</h2></div>
+<p class="lead">사람들의 관심은 잘 먹고 잘 사는 것, 그리고 벌이가 끊기지 않는 것입니다. 노동경제학·교통경제학·지리경제학으로 일과 길과 터와 돈을 씁니다. 소식은 기사로 씁니다. 자료를 따진 것은 정책브리핑으로 따로 냅니다.</p>
+<div class="g4"><div class="c"><b>일</b><h3>일자리와 노동</h3><p>AI 시대 일자리와 다양한 노동자의 권익 · 노동경제학</p></div><div class="c"><b>길</b><h3>교통과 물류</h3><p>항공·철도·해운, 출퇴근과 물류 · 교통경제학</p></div><div class="c"><b>터</b><h3>도시와 공공개발</h3><p>공공개발, 도시재생, 도시계획 · 지리경제학</p></div><div class="c"><b>돈</b><h3>자산</h3><p>안정적으로 벌고 지키는 자산 · 주식과 채권</p></div></div></section>
 
- <div id="service" style="margin-top:78px"></div>
- <div class="lb">기능 02</div>
- <h2>연구용역</h2>
- <p class="intro">맡기신 과제를 처음부터 끝까지 수행하는 일입니다. 설계와 분석과 집필을 한자리에서 합니다.</p>
- <div class="grid">
-  <div class="it"><div class="n">01</div><div><b>타당성 분석 · 경제성 분석</b><span>수요 예측, 비용편익분석(B/C · NPV · IRR), 민감도분석, 재무성 분석. 인천시 해양수산 산학연 거점 조성 용역에서 B/C 1.39, NPV 973.0억원, IRR 9.3%를 산출했습니다.</span></div></div>
-  <div class="it"><div class="n">02</div><div><b>원가 산정 · 요금 분석</b><span>준공영제 표준운송원가, 위탁 관리대행 원가, 공공요금 현실화와 요금 체계 설계</span></div></div>
-  <div class="it"><div class="n">03</div><div><b>출판 · 편집</b><span>백서, 자료집, 연보, 지역의 지(誌)와 사(史), 보고서 편집과 윤문, 발간물 기획과 제작</span></div></div>
-  <div class="it"><div class="n">04</div><div><b>컨설팅 · 교육</b><span>데이터 기반 경영 컨설팅, 공공기관 실무자 대상 조사 설계와 통계 활용 교육</span></div></div>
- </div>
+<section class="s" id="record"><div class="hd"><span class="k">연구 실적</span><h2>해 본 일</h2></div>
+<div class="c"><h3>인천 해양수산 산·학·연 거점 조성을 위한 타당성 검토 및 기본계획 수립</h3>
+<p>발주 인천광역시 섬해양정책과 · 수행 인하대학교 산학협력단 · 2025년 12월 ~ 2026년 3월 · 120일<br>김갑봉 소장이 참여연구원으로 최종보고서 본문을 쓰고 경제성분석을 맡았습니다.</p>
+<div class="num"><div><strong>1.39</strong><span>B/C</span></div><div><strong>973억원</strong><span>NPV</span></div><div><strong>9.3%</strong><span>IRR</span></div></div>
+<p>방안2 기준 · 할인율 4.5% · 분석기간 30년 · 민감도 15개 시나리오 전부 B/C 1.0 이상</p></div></section>
 
- <div id="survey" style="margin-top:78px"></div>
- <div class="lb">기능 03</div>
- <h2>조사분석</h2>
- <p class="intro">묻고 재는 일입니다. 집계에서 멈추지 않고 분석과 해석까지 합니다.</p>
- <div class="grid">
-  <div class="it"><div class="n">01</div><div><b>설문조사 설계</b><span>문항 개발, 표본 설계와 가중치 산정, 조사 방식 선택, 조사 실시와 자료 처리</span></div></div>
-  <div class="it"><div class="n">02</div><div><b>실태 · 수요 · 만족도 조사</b><span>실태조사, 수요조사, 만족도조사, 인식조사, 시장조사</span></div></div>
-  <div class="it"><div class="n">03</div><div><b>통계분석</b><span>교차분석, 회귀분석, 패널 분석, 인과추론. 분석은 외주하지 않고 직접 합니다.</span></div></div>
-  <div class="it"><div class="n">04</div><div><b>데이터 분석</b><span>행정데이터와 공공데이터 결합, 지표 개발, 모형 구축, 시각화</span></div></div>
-  <div class="it"><div class="n">05</div><div><b>전문가 조사 · AHP 분석</b><span>계층분석법(AHP) — 평가 계층 설계, 쌍대비교 설문, 가중치 산정, 일관성비율(CR) 검정. 대안 우선순위 결정, 평가지표 가중치 도출, 델파이 조사와 함께 씁니다.</span></div></div>
-  <div class="it"><div class="n">06</div><div><b>전략 수립 — SWOT · SER-M</b><span>SER-M 모델(주체 · 환경 · 자원 · 메커니즘)로 조직이 성과를 낸 경로를 풀어 전략을 세웁니다. SWOT 분석은 그 가운데 환경 분석에 들어가 SO 전략을 끌어내고, 자원은 VRIN을 갖춘 핵심역량으로 따로 묻습니다. AHP 가중치와 묶어 전략 대안의 우선순위를 매깁니다.</span></div></div>
- </div>
- <div class="note" style="border-left-color:var(--green2)"><b>다루는 분야</b> — 교통(항공 · 철도 · 해운), 물류, 항만과 공항, 해양수산, 지역경제와 일자리, 노동, 도시재생과 원도심, <b style="color:var(--green2)">기후위기 대응과 에너지 전환</b>, AI와 데이터</div>
- <div class="note"><b>수행 방식</b> — 세 기능은 동급입니다. 한 과제에 셋이 함께 들어가기도 하고 따로 맡기실 수도 있습니다. 셋 모두 의뢰를 받아 수행하거나, 연구소가 사업비를 마련해 수행합니다. 과제마다 분야 공동연구원을 위촉해 함께 수행합니다. 경세제민 AI·경제연구소(주)는 2026년 4월 30일 설립됐고 본점은 인천 미추홀구에 있습니다.</div>
-</div></section>
+<section class="s" id="people"><div class="hd"><span class="k">연구진</span><h2>연구진</h2></div>
+<div class="ppl"><div class="c"><h3>김갑봉<small>소장</small></h3><p>토목공학 학사 · 언론홍보학 석사<br>물류학 박사 (인하대학교 물류전문대학원, 계량경제학)<br>전 인천투데이 편집국장 · 인천 지역언론 22년<br>전 인하대학교 산학협력단 산학연구교수<br>
+<a href="#lecture" style="text-decoration:underline">강연 · 교육 경력</a> — 외부 강연·연수 강사 40회 이상(2012~2026)</p>
+<p style="margin-top:8px">토목공학으로 기반시설을, 언론홍보학으로 소통을, 물류학으로 계량경제학을 익혔습니다. 이 셋을 엮어 AI 시대 경제·사회 전환을 연구합니다.</p></div>
+<div class="c"><h3>김효진<small>대표이사</small></h3><p>조선해양공학 학사<br>도시계획 · 정책학 박사 수료<br>계약 · 사업관리</p>
+<p style="margin-top:8px">분야마다 객원연구원을 모십니다. <a href="join.html" style="text-decoration:underline">객원연구원 신청</a></p></div></div></section>
 
-<section class="s tint" id="edu"><div class="wrap">
- <div class="lb">AI 교육</div>
- <h2>AI 실전 교육과<br>AI 리터러시</h2>
- <p class="intro">왜 배워야 하는가. 정보의 비대칭을 줄이기 위해서입니다. 가진 쪽은 이미 AI를 씁니다. 시민과 노동자가 자기를 지키고 민주주의를 지키려면, 저쪽이 쥔 도구를 이쪽도 쥐어야 합니다.</p>
- <p class="intro">급변하는 시대에 끌려다니지 않고 능동적으로 적응하기 위해서입니다. 그리고 무엇보다 자기계발입니다. AI를 제대로 쓰면 일하는 시간은 줄고, 자기 값어치는 올라갑니다. 줄어든 시간은 자기에게 돌아옵니다.</p>
- <p class="intro">그래서 교재는 배우는 분들이 하는 일에 맞춰 새로 짭니다. 실습은 그 자리에서 실제로 쓰는 문서로 합니다. 보고서면 보고서로, 단체교섭 자료면 그 자료로, 기사면 기사로 합니다.</p>
- <div class="grid">
-  <div class="it"><div class="n">01</div><div><b>AI 실전 교육</b><span>기본 명령어부터 시스템 프롬프트 설계까지 아래 4단계. 공공기관·기업 실무자, 직장인 재교육</span></div></div>
-  <div class="it"><div class="n">02</div><div><b>AI 리터러시</b><span>허위정보 판별법 · 저작권 이슈 · 개인정보 보호 · 편향성 제거</span></div></div>
-  <div class="it"><div class="n">03</div><div><b>AI 저널리즘</b><span>언론인을 위한 갈래입니다. 지역언론 기자 연수와 사별연수 — 한국언론진흥재단, 지역신문발전위원회, 기자협회</span></div></div>
-  <div class="it"><div class="n">04</div><div><b>강연</b><span>노동조합과 시민사회, 학교와 단체 — 한 시간에서 반나절까지</span></div></div>
- </div>
- <div class="sechead"><b>네 단계</b><span>아는 것이 아니라 혼자 무엇을 할 수 있느냐로 나눕니다. 앞 단계를 건너뛰지 않습니다</span></div>
- <div class="lv">
-  <div class="lvc"><div class="st">1단계</div><h3>초급</h3><p><b>AI와 말이 통한다</b></p><p>역할과 규칙을 붙여 묻습니다. 기밀과 개인정보를 넣지 않는 법, 학습 설정을 끄는 법을 익힙니다. AI가 틀릴 수 있다는 것을 압니다.</p></div>
-  <div class="lvc"><div class="st">2단계</div><h3>중급</h3><p><b>검색창 쓰듯 하지 않는다</b></p><p>일을 단계로 쪼개 맡깁니다. 나온 숫자는 원출처로, 인용은 실재 여부로, 둘 이상의 도구로 교차 검증합니다. 자기 이름으로 낼 수 있는 수준입니다.</p></div>
-  <div class="lvc"><div class="st">3단계</div><h3>고급</h3><p><b>규칙을 문서로 박는다</b></p><p>쓰임새별로 AI 비서를 만듭니다. 해서는 안 될 일까지 규칙에 넣어, 새로 열어도 품질이 흔들리지 않게 합니다. 쓰면서 규칙을 고칠 줄 압니다.</p></div>
-  <div class="lvc"><div class="st">4단계</div><h3>전문가</h3><p><b>혼자에서 조직으로</b></p><p>반복 업무를 흐름으로 묶고, 표준과 검증 절차와 금지 조항을 담은 지침을 만들어 넘깁니다. 쓰는 사람에서 설계하고 감독하는 사람으로 넘어갑니다.</p></div>
- </div>
- <div class="talks">
-  <h3>강연 · 연수 실적</h3>
-  <p class="sum">강연 자료에 적힌 날짜와 장소 그대로 옮겼습니다.</p>
-  <dl>
-   <dt>2026</dt><dd>1.12 시민사회 AI 강연 「AGI 시대 공익활동가를 위한 실전 가이드」 · 1.13 인천항운노조 「AI 대전환 파도, 인천항운노조는 어떻게 넘을 것인가」 · 노동조합 지회 조합원 대상 「AI 시대, 사람이 하는 가장 귀한 일」(90분)</dd>
-   <dt>2025</dt><dd>「AI 범용시대 지역언론 생존의 길」 5.14 용인시민신문 · 5.16 보은사람들 · 7.23 당진시대 / 8.22 한국언론진흥재단 찾아가는 저널리즘(태안신문) / 8.28 한국언론진흥재단 제365기 수습기자 기본교육(대전세종충청권) / 9.11 「AI 범용시대, 지역언론 뉴스룸 AI 활용 실전」 / 9.22 「AI 범용시대 독일 언론과 민주주의」(금천)</dd>
-   <dt>2024</dt><dd>AI 저널리즘 강연 「인공지능시대 지역언론의 새로운 길」 외 17회 — 4.24 순천·광양 · 4.26 울산저널 · 5.3 해남신문 · 5.17 사천·거제 · 6.19 성주신문 · 6.20 영주신문 · 7.9 한국언론진흥재단 대전세종지사 「인공지능시대 지역언론의 AI 활용 생존기」 · 7.10 고양신문 · 7.12 태안신문 · 7.30 한국언론진흥재단 대전세종지사 지역언론 주니어기자 역량강화(2차) 전문연수 「AI 활용 저널리즘」 · 8.28 인천마당 인공지능 강연 · 9.4 경남울산기자협회 · 10.18 금천신문 · 10.25 한국언론진흥재단 광주지사 · 10.28 원주투데이 · 11.15 파주 · 11.19 경남지역신문발전위원회</dd>
-   <dt>2023</dt><dd>6.9 한국언론진흥재단 대전지사 「취재 아이템 발굴과 취재원 관리」 · 6월 지역주간신문 기자 레벨업 전문연수</dd>
-   <dt>이전</dt><dd>2022.10.7 서산시대 사별연수 · 2012.7 청소년기자학교(부천) 「기자가 본 저널리즘」</dd>
-  </dl>
- </div>
- <div class="note"><b>대상</b> — 공공기관과 기업 실무자, 직장인 재교육, 단체·노동조합·시민사회단체, 학생, 고령층, 언론인. 언론인 연수는 그 가운데 한 갈래입니다</div>
- <div class="note eco"><b>모든 단계의 끝은 검증입니다</b> — 초안은 AI가 만들고 검토는 사람이 합니다. 받아쓰면 남지 않고, 따지면 남습니다. 이 교육이 기르려는 것은 도구를 다루는 손이 아니라 따지는 힘입니다.</div>
-</div></section>
-
-<section class="s" id="brief"><div class="wrap">
- <div class="lb">정책브리핑</div>
- <h2>묻는 쪽이<br>저희입니다</h2>
- <p class="intro">연구소가 주제를 정해 정기적으로 발표합니다. 연구진과 객원연구원이 함께 씁니다. 맡기신 과제를 수행하는 정책연구 · 연구용역 · 조사분석과는 다릅니다. 저 셋은 의뢰를 받거나 사업비를 마련해 하는 일이고, 정책브리핑은 주제를 고르는 쪽도 묻는 쪽도 저희입니다. 전문지에 싣는 기사와도 다릅니다. 기사는 소식을 전하고, 브리핑은 자료를 따집니다.</p>
- <div class="grid">
-  <div class="it"><div class="n">01</div><div><b>주제를 고른다</b><span>인천시와 군·구의 현안 가운데 자료로 따질 수 있는 것 하나를 고릅니다</span></div></div>
-  <div class="it"><div class="n">02</div><div><b>공개 자료로 조사한다</b><span>공공데이터와 행정자료, 공시와 통계를 모아 직접 셉니다</span></div></div>
-  <div class="it"><div class="n">03</div><div><b>짧게 쓴다</b><span>수치와 출처와 도표를 갖춰 언론사가 그대로 받아 쓸 수 있게 냅니다</span></div></div>
-  <div class="it"><div class="n">04</div><div><b>함께 보낸다</b><span>지방자치단체와 공공기관, 의회에도 같이 보냅니다</span></div></div>
- </div>
- <div class="cards">
-  <div class="card"><div class="k">첫 편</div><h3>인천시와 군·구는 무엇을 연구에 맡기나</h3><p>정책연구관리시스템에 등록된 인천시와 군·구 정책연구 724건을 분야와 유형으로 나눠 읽었습니다.</p><span class="soon">곧 공개</span></div>
- </div>
-</div></section>
-
-<section class="s tint" id="media"><div class="wrap">
- <div class="lb">미디어</div>
- <h2>일하는 사람의<br>경제를 쓴다</h2>
- <p class="intro">사람들의 관심은 잘 먹고 잘 사는 것, 그리고 벌이가 끊기지 않는 것입니다. 노동경제학·교통경제학·지리경제학으로 일과 길과 터와 돈을 씁니다. 소식은 기사로 씁니다. 자료를 따진 것은 정책브리핑으로 따로 냅니다.</p>
- <div class="grid">
-  <div class="it"><div class="n">일</div><div><b>일자리와 노동</b><span>AI 시대 일자리와 다양한 노동자의 권익 · 노동경제학</span></div></div>
-  <div class="it"><div class="n">길</div><div><b>교통과 물류</b><span>항공·철도·해운, 출퇴근과 물류 · 교통경제학</span></div></div>
-  <div class="it"><div class="n">터</div><div><b>도시와 공공개발</b><span>공공개발, 도시재생, 도시계획 · 지리경제학</span></div></div>
-  <div class="it"><div class="n">돈</div><div><b>자산</b><span>안정적으로 벌고 지키는 자산 · 주식과 채권</span></div></div>
- </div>
- 
- </div></section>
-
-<section class="s" id="record"><div class="wrap">
- <div class="lb">해 본 일</div>
- <div class="rec">
-  <div>
-   <div class="proj">인천 해양수산 산·학·연 거점 조성을 위한 타당성 검토 및 기본계획 수립</div>
-   <p class="meta">발주 인천광역시 섬해양정책과 · 수행 인하대학교 산학협력단<br>2025년 12월 ~ 2026년 3월 · 120일</p>
-   <p style="margin-top:16px">김갑봉 소장이 참여연구원으로 최종보고서 본문을 쓰고 경제성분석을 맡았습니다.</p>
-  </div>
-  <div class="big">
-   <div class="nums">
-    <div><b>1.39</b><span>B/C</span></div>
-    <div><b>973<small>억원</small></b><span>NPV</span></div>
-    <div><b>9.3<small>%</small></b><span>IRR</span></div>
-   </div>
-   <p>방안2 기준 · 할인율 4.5% · 분석기간 30년 · 민감도 15개 시나리오 전부 B/C 1.0 이상</p>
-  </div>
- </div>
-</div></section>
-
-<section class="s tint" id="people"><div class="wrap">
- <div class="lb">연구진</div>
- <div class="ppl">
-  <div>
-   <div class="pp">김갑봉<small>소장</small></div>
-   <ul class="cv">
-    <li>토목공학 학사 · 언론홍보학 석사</li>
-    <li>물류학 박사 (인하대학교 물류전문대학원, 계량경제학)</li>
-    <li>전 인천투데이 편집국장 · 인천 지역언론 22년</li>
-    <li>전 인하대학교 산학협력단 산학연구교수</li>
-   </ul>
-   <div class="box">토목공학으로 기반시설을, 언론홍보학으로 소통을, 물류학으로 계량경제학을 익혔습니다. 이 셋을 엮어 AI 시대 경제·사회 전환을 연구합니다.</div>
-  </div>
-  <div>
-   <div class="pp" style="font-size:28px">김효진<small>대표이사</small></div>
-   <ul class="cv"><li>조선해양공학 학사</li><li>도시계획 · 정책학 박사 수료</li><li>계약 · 사업관리</li></ul>
-  </div>
- </div>
-</div></section>
-
-<section class="s contact" id="contact"><div class="wrap">
- <div class="lb">연락</div>
- <h2>연락처</h2>
- <a class="tel" href="tel:0327770421">032-777-0421</a>
- <dl class="ct">
-  <dt>메일</dt><dd><a href="mailto:weminpress@gmail.com">weminpress@gmail.com</a></dd>
-  <dt>주소</dt><dd>인천광역시 미추홀구 용현동 62-7</dd>
-  <dt>설립</dt><dd>연구소 2025년 11월 11일 · 법인 2026년 4월 30일</dd>
-  <dt>등록</dt><dd>사업자등록 · 나라장터 입찰참가자격</dd>
- </dl>
- <div class="co">경세제민 AI·경제 연구소(주)</div>
-</div></section>
-
-<footer>© 2026 경세제민 AI·경제 연구소(주) · 등기 상호 경세제민에이아이경제연구소 주식회사 · weminai.com</footer>
-<script>(function(){var m=document.getElementById('menu'),g=document.getElementById('gnb');m.onclick=function(){var o=g.classList.toggle('open');m.textContent=o?'✕':'☰';m.setAttribute('aria-expanded',o)};g.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){g.classList.remove('open');m.textContent='☰';m.setAttribute('aria-expanded',false);if(document.activeElement)document.activeElement.blur()})})})()</script>
-<script>(function(){var d=new Date(),w=['일','월','화','수','목','금','토'],e=document.getElementById('today');if(e)e.textContent=d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일 '+w[d.getDay()]+'요일'})()</script>
+<section class="s" id="contact"><div class="hd"><span class="k">연락</span><h2>연락</h2></div>
+<dl class="dl"><dt>연락처</dt><dd>032-777-0421</dd><dt>메일</dt><dd>weminpress@gmail.com</dd><dt>주소</dt><dd>인천광역시 미추홀구 용현동 62-7</dd>
+<dt>설립</dt><dd>연구소 2025년 11월 11일 · 법인 2026년 4월 30일</dd><dt>등록</dt><dd>사업자등록 · 나라장터 입찰참가자격</dd>
+<dt>의뢰</dt><dd><a href="ask.html" style="text-decoration:underline">의뢰·신청하기</a> — 연구소가 하는 일은 모두 이 양식 하나로 신청하실 수 있습니다.</dd></dl></section>
+</main>
+<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천광역시 미추홀구 용현동 62-7 · 032-777-0421 · weminpress@gmail.com<br>
+자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
+<a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a></div></footer>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="nocopy.js"></script>
 </body></html>
