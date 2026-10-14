@@ -38,6 +38,12 @@ img{-webkit-user-drag:none;pointer-events:none}
 .hero .k{font-size:13px;font-weight:800;color:var(--blue-d);letter-spacing:.5px}
 .hero h1{margin:4px 0 8px;font-size:32px;letter-spacing:-1px}
 .hero p{margin:0;font-size:15px;color:var(--sub);max-width:760px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:center}
+.hero figure,.ph{margin:0}.hero figure img{width:100%;height:230px;object-fit:cover;display:block}
+.ph{margin:0 0 14px}.ph img{width:100%;height:230px;object-fit:cover;display:block}
+.ph figcaption,.hero figcaption{font-size:11.5px;color:var(--mute);margin-top:4px}
+.credit{font-size:12px;color:var(--mute);border-top:1px solid var(--line);padding:12px 0 4px;margin-top:22px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero figure img,.ph img{height:190px}}
 .toc{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
 .toc .wrap{display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
 .toc a{font-size:13.5px;font-weight:700;padding:5px 12px;border:1px solid #9FB2D4;color:var(--sub)}
@@ -80,9 +86,9 @@ main{padding:6px 0 10px}
 <div class="mast"><div class="wrap"><a class="logo" href="./"><img src="logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
 <div class="rt"><span class="date" id="today"></span><form class="srchtop" action="media/" method="get" role="search"><input type="search" name="q" placeholder="자료 검색" aria-label="자료 검색"><button type="submit">찾기</button><a class="asktop" href="ask.html">의뢰·신청하기</a></form></div></div></div>
 <nav class="gnb"><div class="wrap"><a href="media/">전체 자료</a><a href="media/g_policy.html">정책브리핑</a><a href="media/g_ocean.html">해양</a><a href="media/g_air.html">항공</a><a href="media/g_rail.html">철도</a><a href="media/g_logistics.html">복합물류</a><a href="media/g_urban.html">도시계획·부동산</a><a href="media/g_climate.html">기후위기</a><a href="media/g_economy.html">경제</a><a href="media/g_ai.html">AI</a><a href="about.html" class="on">연구소</a></div></nav>
-<div class="hero"><div class="wrap"><span class="k">經世濟民 · 사람이 주인입니다</span>
+<div class="hero"><div class="wrap"><div><span class="k">經世濟民 · 사람이 주인입니다</span>
 <h1>두루두루 고루고루 잘 사는 세상</h1>
-<p>사람이 두루두루 고루고루 잘사는 세상을 위한 연구를 합니다. 현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p></div></div>
+<p>사람이 두루두루 고루고루 잘사는 세상을 위한 연구를 합니다. 현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p></div><figure><img src="media/img/card_urban_02.jpg" alt="인천 송도국제도시"><figcaption>인천 송도국제도시 ⓒ한국관광콘텐츠랩-정규진</figcaption></figure></div></div>
 <nav class="toc"><div class="wrap"><a href="#view">경세제민의 생각</a><a href="#research">정책연구 · 연구용역 · 조사분석</a><a href="#edu">AI 교육</a><a href="#lecture">강연 · 교육 경력</a><a href="#brief">정책브리핑</a><a href="#media">미디어</a><a href="#record">연구 실적</a><a href="#people">연구진</a><a href="#contact">연락</a></div></nav>
 <main class="wrap">
 <section class="s" id="view"><div class="hd"><span class="k">경세제민의 생각</span><h2>사람이 주인이고 기술은 수단이자 도구다</h2></div>
@@ -90,7 +96,7 @@ main{padding:6px 0 10px}
 <div class="g4"><div class="c"><b>01</b><h3>가계는 생산의 주체다</h3><p>노동자·농민·자영업자·중소상공인이 경제를 지탱합니다. 가계가 무너지면 기업도 정부도 무너집니다.</p></div><div class="c"><b>02</b><h3>벌이가 늘어야 경제가 돈다</h3><p>돈은 서민에게 풀려야 돕니다. 서민 소득이 유효수요를 만듭니다.</p></div><div class="c"><b>03</b><h3>혁신으로 값을 낮춘다</h3><p>물류 효율화, AI, 에너지 전환으로 공급 비용을 낮추고 임금은 올립니다.</p></div><div class="c"><b>04</b><h3>시장도 정부도 완전하지 않다</h3><p>어느 한쪽에 기대지 않습니다. 그 사이 균형이 어디 있는지 찾습니다.</p></div></div>
 <p class="note"><b>균형경제론</b> — 서민 소득을 올려 수요를 살리고, 혁신으로 공급 비용을 낮추는 일을 함께 합니다.</p></section>
 
-<section class="s" id="research"><div class="hd"><span class="k">하는 일</span><h2>정책연구 · 연구용역 · 조사분석</h2></div>
+<section class="s" id="research"><div class="hd"><span class="k">하는 일</span><h2>정책연구 · 연구용역 · 조사분석</h2></div><figure class="ph"><img src="media/img/card_econ_01.jpg" alt="송도국제도시" loading="lazy"><figcaption>송도국제도시 ⓒ한국관광콘텐츠랩-정규진</figcaption></figure>
 <div class="fn"><h3>기능 01 정책연구</h3><p class="lead">정책을 세우는 일입니다. 지방자치단체와 공공기관이 앞으로 무엇을 어떤 차례로 할 것인지를 자료로 따져 설계합니다.</p>
 <div class="g4"><div class="c"><b>01</b><h3>기본계획 · 기본구상</h3><p>법정계획, 종합계획, 발전계획, 분야별 기본구상 수립</p></div><div class="c"><b>02</b><h3>중장기 전략</h3><p>5개년 · 10개년 계획, 단계별 실행계획, 재원 조달 방안</p></div><div class="c"><b>03</b><h3>조례 · 제도 개선</h3><p>조례 제정과 개정 연구, 행정 절차 개선, 거버넌스 설계</p></div><div class="c"><b>04</b><h3>정책효과 · 사업평가</h3><p>인과효과 분석(이중차분법 등), 성과평가, 지역경제 파급효과 분석(산업연관분석)</p></div></div></div>
 <div class="fn"><h3>기능 02 연구용역</h3><p class="lead">맡기신 과제를 처음부터 끝까지 수행하는 일입니다. 설계와 분석과 집필을 한자리에서 합니다.</p>
@@ -100,7 +106,7 @@ main{padding:6px 0 10px}
 <p class="note"><b>다루는 분야</b> — 교통(항공 · 철도 · 해운), 물류, 항만과 공항, 해양수산, 지역경제와 일자리, 노동, 도시재생과 원도심, 기후위기 대응과 에너지 전환, AI와 데이터<br>
 <b>수행 방식</b> — 세 기능은 동급입니다. 한 과제에 셋이 함께 들어가기도 하고 따로 맡기실 수도 있습니다. 셋 모두 의뢰를 받아 수행하거나, 연구소가 사업비를 마련해 수행합니다. 과제마다 분야 공동연구원을 위촉해 함께 수행합니다. 경세제민 AI·경제 연구소(주)는 2026년 4월 30일 설립됐고 본점은 인천 미추홀구에 있습니다.</p></section>
 
-<section class="s" id="edu"><div class="hd"><span class="k">AI 교육</span><h2>AI 실전 교육과 AI 리터러시</h2></div>
+<section class="s" id="edu"><div class="hd"><span class="k">AI 교육</span><h2>AI 실전 교육과 AI 리터러시</h2></div><figure class="ph"><img src="media/img/card_ai_02.jpg" alt="송도 야경" loading="lazy"><figcaption>송도 야경 ⓒ한국관광콘텐츠랩-김상기</figcaption></figure>
 <p class="lead">왜 배워야 하는가. 정보의 비대칭을 줄이기 위해서입니다. 가진 쪽은 이미 AI를 씁니다. 시민과 노동자가 자기를 지키고 민주주의를 지키려면, 저쪽이 쥔 도구를 이쪽도 쥐어야 합니다.</p>
 <p class="lead">급변하는 시대에 끌려다니지 않고 능동적으로 적응하기 위해서입니다. 그리고 무엇보다 자기계발입니다. AI를 제대로 쓰면 일하는 시간은 줄고, 자기 값어치는 올라갑니다. 줄어든 시간은 자기에게 돌아옵니다.</p>
 <p class="lead">그래서 교재는 배우는 분들이 하는 일에 맞춰 새로 짭니다. 실습은 그 자리에서 실제로 쓰는 문서로 합니다. 보고서면 보고서로, 단체교섭 자료면 그 자료로, 기사면 기사로 합니다.</p>
@@ -142,11 +148,11 @@ main{padding:6px 0 10px}
 <div class="g4"><div class="c"><b>01</b><h3>주제를 고른다</h3><p>인천시와 군·구의 현안 가운데 자료로 따질 수 있는 것 하나를 고릅니다</p></div><div class="c"><b>02</b><h3>공개 자료로 조사한다</h3><p>공공데이터와 행정자료, 공시와 통계를 모아 직접 셉니다</p></div><div class="c"><b>03</b><h3>짧게 쓴다</h3><p>수치와 출처와 도표를 갖춰 언론사가 그대로 받아 쓸 수 있게 냅니다</p></div><div class="c"><b>04</b><h3>함께 보낸다</h3><p>지방자치단체와 공공기관, 의회에도 같이 보냅니다</p></div></div>
 <p class="note"><b>첫 편</b> — 인천시와 군·구는 무엇을 연구에 맡기나. 정책연구관리시스템에 등록된 인천시와 군·구 정책연구 724건을 분야와 유형으로 나눠 읽었습니다. 곧 공개합니다. 지금까지 낸 브리핑은 <a href="media/g_policy.html" style="text-decoration:underline">정책브리핑</a>에서 보실 수 있습니다.</p></section>
 
-<section class="s" id="media"><div class="hd"><span class="k">미디어</span><h2>일하는 사람의 경제를 쓴다</h2></div>
+<section class="s" id="media"><div class="hd"><span class="k">미디어</span><h2>일하는 사람의 경제를 쓴다</h2></div><figure class="ph"><img src="media/img/card_rail_02.jpg" alt="인천국제공항 철길" loading="lazy"><figcaption>인천국제공항 철길 ⓒ한국관광콘텐츠랩-IR 스튜디오</figcaption></figure>
 <p class="lead">사람들의 관심은 잘 먹고 잘 사는 것, 그리고 벌이가 끊기지 않는 것입니다. 노동경제학·교통경제학·지리경제학으로 일과 길과 터와 돈을 씁니다. 소식은 기사로 씁니다. 자료를 따진 것은 정책브리핑으로 따로 냅니다.</p>
 <div class="g4"><div class="c"><b>일</b><h3>일자리와 노동</h3><p>AI 시대 일자리와 다양한 노동자의 권익 · 노동경제학</p></div><div class="c"><b>길</b><h3>교통과 물류</h3><p>항공·철도·해운, 출퇴근과 물류 · 교통경제학</p></div><div class="c"><b>터</b><h3>도시와 공공개발</h3><p>공공개발, 도시재생, 도시계획 · 지리경제학</p></div><div class="c"><b>돈</b><h3>자산</h3><p>안정적으로 벌고 지키는 자산 · 주식과 채권</p></div></div></section>
 
-<section class="s" id="record"><div class="hd"><span class="k">연구 실적</span><h2>해 본 일</h2></div>
+<section class="s" id="record"><div class="hd"><span class="k">연구 실적</span><h2>해 본 일</h2></div><figure class="ph"><img src="media/img/card_sea_01.jpg" alt="인천연안부두" loading="lazy"><figcaption>인천연안부두 ⓒ한국관광콘텐츠랩-한국관광공사 김지호</figcaption></figure>
 <div class="c"><h3>인천 해양수산 산·학·연 거점 조성을 위한 타당성 검토 및 기본계획 수립</h3>
 <p>발주 인천광역시 섬해양정책과 · 수행 인하대학교 산학협력단 · 2025년 12월 ~ 2026년 3월 · 120일<br>김갑봉 소장이 참여연구원으로 최종보고서 본문을 쓰고 경제성분석을 맡았습니다.</p>
 <div class="num"><div><strong>1.39</strong><span>B/C</span></div><div><strong>973억원</strong><span>NPV</span></div><div><strong>9.3%</strong><span>IRR</span></div></div>
@@ -163,6 +169,7 @@ main{padding:6px 0 10px}
 <dl class="dl"><dt>연락처</dt><dd>032-777-0421</dd><dt>메일</dt><dd>weminpress@gmail.com</dd><dt>주소</dt><dd>인천광역시 미추홀구 용현동 62-7</dd>
 <dt>설립</dt><dd>연구소 2025년 11월 11일 · 법인 2026년 4월 30일</dd><dt>등록</dt><dd>사업자등록 · 나라장터 입찰참가자격</dd>
 <dt>의뢰</dt><dd><a href="ask.html" style="text-decoration:underline">의뢰·신청하기</a> — 연구소가 하는 일은 모두 이 양식 하나로 신청하실 수 있습니다.</dd></dl></section>
+<p class="credit">사진 — 한국관광콘텐츠랩(한국관광공사) 공공누리 제1유형 · 촬영 정규진, 김상기, IR 스튜디오, 한국관광공사 김지호</p>
 </main>
 <footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천광역시 미추홀구 용현동 62-7 · 032-777-0421 · weminpress@gmail.com<br>
 자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
