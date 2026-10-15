@@ -1,21 +1,38 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>경제 — 經世濟民 AI·경제 연구소</title><meta name="description" content="경세제민 AI·경제 연구소 경제 — 경제정책·경기·조세·금융·산업">
-<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png"><style>
-:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;
---blue:#1A6DFF;--blue-d:#0B4FCE;--orange:#FF9A33}
-*{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);line-height:1.6;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<style>
+:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;--blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62;--orange:#FF9A33}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);line-height:1.62;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+
 .util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
 .util .wrap{display:flex;justify-content:space-between;padding:6px 18px}
-.mast .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
-.logo img{width:250px;height:auto;display:block}
-.asktop{font-weight:800;font-size:14px;padding:7px 16px;background:var(--orange);color:var(--ink)}
-.gnb{border-top:1px solid var(--line);border-bottom:2px solid var(--blue-d);background:#fff}
-.gnb .wrap{display:flex;gap:26px;font-weight:700;font-size:16px;overflow-x:auto}
-.gnb a{padding:11px 0 9px;border-bottom:3px solid transparent;white-space:nowrap}
+.mast{border-bottom:1px solid var(--line);background:#fff}
+.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}
+.logo{display:block;line-height:0}.logo img{width:276px;height:auto;display:block}
+.mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.mast .date{font-size:13px;color:var(--mute)}
+.srchtop{display:flex;gap:6px;align-items:center;margin:0}
+.srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}
+.srchtop input:focus{outline:0;border-color:var(--blue)}
+.srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:var(--blue);color:#fff;cursor:pointer}
+.srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}
+.srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}
+.srchtop .asktop:hover{background:#FFB15E}
+.gnb{border-bottom:2px solid var(--blue-d);background:#fff}
+.gnb .wrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
+.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
 .gnb a:hover,.gnb a.on{border-color:var(--blue-d);color:var(--blue-d)}
+footer{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid var(--blue-d)}
+footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
+footer b{color:#fff}footer a{text-decoration:underline}
+body{display:flex;flex-direction:column;min-height:100vh}body>main{flex:1 0 auto;width:100%}body>footer{margin-top:auto}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}
+img{-webkit-user-drag:none;pointer-events:none}
+@media(max-width:700px){.srchtop input{width:100%}.mast .rt{align-items:stretch;width:100%}.srchtop{flex-wrap:wrap}.srchtop .asktop{margin-left:0}.srchtop .asktop::before{display:none}}
+
 .hero{background:var(--soft);border-bottom:3px solid var(--ink)}
 .hero .wrap{padding:22px 18px 16px}
 .hero h1{margin:0 0 4px;font-size:30px;letter-spacing:-1px}
@@ -24,14 +41,18 @@ a{color:inherit;text-decoration:none}
 .sub .wrap{display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
 .sub a{font-size:13.5px;font-weight:700;padding:5px 12px;border:1px solid #9FB2D4;color:var(--sub)}
 .sub a:hover{border-color:var(--blue-d);color:var(--blue-d)}
+.sub a.on{border-color:var(--blue-d);background:var(--blue-d);color:#fff}.sub a.on em{color:#DDE8FF}
 .sub a em{font-style:normal;color:var(--mute);font-weight:600;margin-left:4px}
 .board{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 0 8px}
-.tile{display:block;border:1px solid var(--line);background:#fff}
+.tile{display:flex;flex-direction:column;border:1px solid var(--line);background:#fff}
 .tile:hover{border-color:var(--blue-d)}
-.tile .pic{display:block;height:130px;overflow:hidden;background:var(--soft);border-bottom:1px solid var(--line)}
-.tile .pic img{width:100%;height:100%;object-fit:contain;background:#fff;display:block}
-.tile .pic.no{display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#C9D3E6;letter-spacing:-1px}
-.tile .bd{display:block;padding:11px 13px 12px}
+.tile.full{grid-column:1/-1}.tile.w3{grid-column:span 3}.tile.w2{grid-column:span 2}
+.tile.full .pic,.tile.full .band,.tile.w3 .pic,.tile.w3 .band{height:220px}
+.tile .pic{display:block;height:150px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
+.tile .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.tile .pic.chart img{object-fit:contain}
+.tile .band{display:flex;align-items:flex-end;height:150px;padding:14px;background:var(--navy);color:#fff;font-size:17px;font-weight:800;line-height:1.4;letter-spacing:-.4px}
+.tile .bd{display:block;padding:11px 13px 12px;flex:1}
 .tile h3{margin:0;font-size:17px;font-weight:800;letter-spacing:-.4px;display:flex;justify-content:space-between;gap:8px}
 .tile h3 em{font-style:normal;font-size:12.5px;color:var(--blue-d);font-weight:700;white-space:nowrap}
 .tile p{margin:6px 0 0;font-size:13px;color:var(--sub);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -40,27 +61,34 @@ a{color:inherit;text-decoration:none}
 .ser h2 em{font-style:normal;font-size:13px;color:var(--mute);font-weight:700}
 .rows{list-style:none;margin:0;padding:0}
 .rows li{border-bottom:1px solid var(--line)}
-.rows a{display:grid;grid-template-columns:96px 1fr 70px;gap:14px;align-items:center;padding:10px 2px}
+.rows a{display:grid;grid-template-columns:1fr 70px;gap:14px;align-items:center;padding:11px 2px}
+.rows a.im{grid-template-columns:96px 1fr 70px}
 .rows a:hover .t{color:var(--blue-d)}
-.rows .th{width:96px;height:56px;background:var(--soft);overflow:hidden}
-.rows .th img{width:100%;height:100%;object-fit:contain;background:#fff}
+.rows .th{width:96px;height:56px;overflow:hidden}
+.rows .th img{width:100%;height:100%;object-fit:cover}
 .rows .t{font-size:15.5px;font-weight:700;letter-spacing:-.3px;line-height:1.45}
 .rows .s{display:block;font-size:13px;color:var(--mute);font-weight:500;margin-top:2px}
 .rows .d{font-size:12.5px;color:var(--mute);text-align:right}
-footer{margin-top:36px;background:var(--ink);color:#BEBEBA;border-top:5px solid var(--blue-d)}
-footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
-footer b{color:#fff}
-@media(max-width:900px){.board{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.board{grid-template-columns:1fr}.rows a{grid-template-columns:72px 1fr}.rows .th{width:72px;height:44px}.rows .d{display:none}}
-body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,select{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;pointer-events:none}
+@media(max-width:900px){.board{grid-template-columns:repeat(2,1fr)}.tile.w3{grid-column:auto}.tile.w2{grid-column:span 2}}
+@media(max-width:600px){.tile.w2{grid-column:auto}}
+@media(max-width:600px){.board{grid-template-columns:1fr}.rows a,.rows a.im{grid-template-columns:1fr}.rows .th,.rows .d{display:none}}
 </style></head><body>
-<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>032-777-0421</span></div></div>
-<div class="mast"><div class="wrap"><a class="logo" href="../"><img src="../logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a><a class="asktop" href="../ask.html">의뢰·신청하기</a></div></div>
-<nav class="gnb"><div class="wrap"><a href="index.html">전체 자료</a><a href="g_policy.html">정책브리핑</a><a href="g_ocean.html">해양</a><a href="g_air.html">항공</a><a href="g_rail.html">철도</a><a href="g_logistics.html">복합물류</a><a href="g_urban.html">도시계획·부동산</a><a href="g_climate.html">기후위기</a><a href="g_economy.html" class="on">경제</a><a href="g_ai.html">AI</a><a href="../about.html">연구소</a></div></nav>
-<div class="hero"><div class="wrap"><h1>경제</h1><p>경제정책·경기·조세·금융·산업 · 34편</p></div></div>
-<nav class="sub"><div class="wrap"><a href="#s0">노동 브리핑<em>2</em></a><a href="#s1">조세 브리핑<em>3</em></a><a href="#s2">기업·금융 브리핑<em>2</em></a><a href="#s3">증시 브리핑<em>5</em></a><a href="#s4">주식공부<em>14</em></a><a href="#s5">호남 반도체와 국가균형발전<em>5</em></a><a href="#s6">국제정세<em>3</em></a></div></nav>
-<main class="wrap"><div class="board"><a class="tile" href="#s0"><span class="pic no">노동 브리핑</span><span class="bd"><h3>노동 브리핑<em>2편</em></h3><p>자영업자와 최저임금 — 일</p></span></a><a class="tile" href="#s1"><span class="pic no">조세 브리핑</span><span class="bd"><h3>조세 브리핑<em>3편</em></h3><p>상속세와 재산세와 보유세, 누가 얼마나 내는가</p></span></a><a class="tile" href="#s2"><span class="pic no">기업·금융 브리핑</span><span class="bd"><h3>기업·금융 브리핑<em>2편</em></h3><p>배당과 주주환원, 누구의 몫인가</p></span></a><a class="tile" href="#s3"><span class="pic no">증시 브리핑</span><span class="bd"><h3>증시 브리핑<em>5편</em></h3><p>코스피 9000과 그 열매의 행방</p></span></a><a class="tile" href="#s4"><span class="pic"><img src="img/stk03_01.png" alt="" loading="lazy"></span><span class="bd"><h3>주식공부<em>14편</em></h3><p>지수와 순환매와 밸류에이션을 숫자로 읽는다</p></span></a><a class="tile" href="#s5"><span class="pic no">호남 반도체와 국가균형발전</span><span class="bd"><h3>호남 반도체와 국가균형발전<em>5편</em></h3><p>통계로 본 영·호남 격차, &#x27;역차별&#x27;은 어디에 있나</p></span></a><a class="tile" href="#s6"><span class="pic no">국제정세</span><span class="bd"><h3>국제정세<em>3편</em></h3><p>호르무즈 전쟁보험료, 군함 보낸 나라 배가 3배 문다</p></span></a></div><section class="ser" id="s0"><h2>노동 브리핑<em>2편</em></h2><ul class="rows"><li><a href="lab01.html"><span class="th"></span><span class="t">[경세제민] 자영업자① 자영업자는 사장인가 노동자인가<span class="s">IMF 이후 강제 창업 570만명... 빚 1120조원의 덫</span></span><span class="d">26.04.22</span></a></li><li><a href="lab02.html"><span class="th"></span><span class="t">[경세제민] 최저임금③ 독일 벌금 7억원, 한국은 2000만원<span class="s">중위임금 대비 한국 61%, 프랑스 62%로 비슷한데 왜 한국만 전쟁터인가</span></span><span class="d">26.04.22</span></a></li></ul></section><section class="ser" id="s1"><h2>조세 브리핑<em>3편</em></h2><ul class="rows"><li><a href="tax03.html"><span class="th"></span><span class="t">[경세제민] 한국경제 불편한 진실⑧-하<span class="s">보유세 깎아준 1조4800억원, 어린이집·도서관 예산이 날아갔다</span></span><span class="d">26.03.28</span></a></li><li><a href="tax01.html"><span class="th"></span><span class="t">[경세제민]상속세 과세 대상 6%, 나머지 94%는 왜 겁먹나<span class="s">사망자의 6%, 수도권 아파트 한 채 값에 걸린 착각</span></span><span class="d">26.03.17</span></a></li><li><a href="tax02.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑧] 재산세는 부자세금? 진짜 부자는 빠져나간다<span class="s">2023년부터 공동주택 공시가격 현실화율 69% 4년째 동결</span></span><span class="d">26.03.17</span></a></li></ul></section><section class="ser" id="s2"><h2>기업·금융 브리핑<em>2편</em></h2><ul class="rows"><li><a href="fin01.html"><span class="th"></span><span class="t">89조 버는 회사 하루 10% 폭락, 투기판 깐 금융수장 사퇴하라<span class="s">같은 날 대만은 올랐고 한국만 8.95% 폭락… 두 종목이 거래대금 51% 빨아들였다</span></span><span class="d">26.07.13</span></a></li><li><a href="fin02.html"><span class="th"></span><span class="t">[경세제민] 삼성 배당의 순서가 틀렸다, 주주가 왜 1순위인가<span class="s">노동자가 이익 만든 1차 기여자, 주주는 유상증자 빼면 자본 형성 기여도 없다</span></span><span class="d">26.04.28</span></a></li></ul></section><section class="ser" id="s3"><h2>증시 브리핑<em>5편</em></h2><ul class="rows"><li><a href="kos05.html"><span class="th"></span><span class="t">[코스피 9000 번외]<span class="s">전쟁도 멈춰 세운 주식, 삼성전자를 국민전자로</span></span><span class="d">26.06.03</span></a></li><li><a href="kos03.html"><span class="th"></span><span class="t">[코스피 9000 코앞] ③<span class="s">거품이 아니라 실적이다, 주도주가 장을 가른다</span></span><span class="d">26.06.02</span></a></li><li><a href="kos04.html"><span class="th"></span><span class="t">[코스피 9000 번외]<span class="s">AI시대 나도 &#x27;주식가치(밸류에이션, valuation)&#x27; 평가해 투자하는 방법</span></span><span class="d">26.06.02</span></a></li><li><a href="kos01.html"><span class="th"></span><span class="t">[코스피 9000 코앞 ①] 시민이 물꼬 튼 성장, 왜 남일 같을까<span class="s">정치 불확실성 풀리자 돌아온 외국인, 상법 개정과 사상 최대 수출이 신고가 떠받쳤다</span></span><span class="d">26.06.01</span></a></li><li><a href="kos02.html"><span class="th"></span><span class="t">[코스피 9000 코앞 ②]<span class="s">위기는 시민이 떠안고, 신고가는 자산가가 가져갔다</span></span><span class="d">26.06.01</span></a></li></ul></section><section class="ser" id="s4"><h2>주식공부<em>14편</em></h2><ul class="rows"><li><a href="stk03.html"><span class="th"><img src="img/stk03_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 코스피 18.45% 하락, 반등을 받친 건 자사주<span class="s">7월 22.19% 하락 뒤 8월 4.81% 반등</span></span><span class="d">26.08.27</span></a></li><li><a href="stk02.html"><span class="th"></span><span class="t">[주식공부] 코스피가 5.80% 오를 때 코스닥은 20.13% 올랐다</span><span class="d">26.08.15</span></a></li><li><a href="stk01.html"><span class="th"></span><span class="t">[주식공부] 사상 최대 실적 낸 이틀은 내렸고, 헤지펀드 청산 뒤 17.91% 올랐다</span><span class="d">26.08.02</span></a></li><li><a href="stk14.html"><span class="th"><img src="img/stk14_01.png" alt="" loading="lazy"></span><span class="t">코스피 7월에 21.07% 빠졌다, 나스닥은 4.72% 빠졌다<span class="s">6월 30일 8476.48이던 지수가 7월 24일 6690.62로 밀렸고, 코스닥은 18.33% 내렸다</span></span><span class="d">26.07.26</span></a></li><li><a href="stk13.html"><span class="th"><img src="img/stk13_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 코스피 하루 만에 4.46% 빠지고 3.56% 반등…이틀 사이 사이드카가 방향을 뒤집었다</span><span class="d">26.07.21</span></a></li><li><a href="stk12.html"><span class="th"><img src="img/stk12_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 코스피 한 주 8.77% 폭락…폭락하는 날 한국은행은 금리를 올렸다</span><span class="d">26.07.18</span></a></li><li><a href="stk11.html"><span class="th"><img src="img/stk11_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 89조 사상 최대 실적에도 코스피 한 주 7.57% 폭락…셀온이 삼킨 반도체</span><span class="d">26.07.11</span></a></li><li><a href="stk10.html"><span class="th"><img src="img/stk10_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 메타 한마디에 코스피 7.89% 폭락, 하루 만에 5.76% 반등…7일 삼성전자 실적이 가른다</span><span class="d">26.07.04</span></a></li><li><a href="stk09.html"><span class="th"><img src="img/stk09_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 이틀 만에 천국과 지옥…마이크론에 5.42% 오른 코스피, 애플에 5.81% 빠졌다</span><span class="d">26.06.28</span></a></li><li><a href="stk08.html"><span class="th"><img src="img/stk08_01.png" alt="" loading="lazy"></span><span class="t">코스피, 사상 최고가 주에 서킷브레이커 급락…다음 주 삼성 실적이 분기점</span><span class="d">26.06.27</span></a></li><li><a href="stk07.html"><span class="th"><img src="img/stk07_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 25년 7개월 지킨 왕좌, 하루 만에 주인이 바뀌었다 — 하이닉스가 삼성을 제친 날</span><span class="d">26.06.23</span></a></li><li><a href="stk06.html"><span class="th"><img src="img/stk06_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 코스피 9000 첫 돌파한 날, 코스닥은 3% 무너졌다</span><span class="d">26.06.21</span></a></li><li><a href="stk05.html"><span class="th"><img src="img/stk05_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 코스피 8000 되찾은 힘, 이번에도 한국 밖에서 왔다</span><span class="d">26.06.14</span></a></li><li><a href="stk04.html"><span class="th"><img src="img/stk04_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 코스피가 사흘 만에 8%씩 오르내린 까닭, 답은 다음 주 미국에 있다</span><span class="d">26.06.10</span></a></li></ul></section><section class="ser" id="s5"><h2>호남 반도체와 국가균형발전<em>5편</em></h2><ul class="rows"><li><a href="hon04.html"><span class="th"></span><span class="t">통계로 본 영·호남 격차, &#x27;역차별&#x27;은 어디에 있나<span class="s">산업화 60년, 국가산단과 고속도로가 경부축에 놓였다</span></span><span class="d">26.07.02</span></a></li><li><a href="hon00.html"><span class="th"></span><span class="t">70년 구호 국가균형발전, 마침내 첫발이 &#x27;호남반도체&#x27;<span class="s">이재명 대통령과 삼성·SK, 6월 29일 서남권에 800조원 투자해 메모리 팹 4기 공식 발표</span></span><span class="d">26.06.29</span></a></li><li><a href="hon01.html"><span class="th"></span><span class="t">공장만으론 안 된다, 호남에 인재를 부른다<span class="s">800조 서남권 반도체, 교육과 정주여건에 함께 투자해야 결실 맺는다</span></span><span class="d">26.06.29</span></a></li><li><a href="hon02.html"><span class="th"></span><span class="t">반도체 따라 길을 놓아라, 환황해선·호남광역급행·무안공항<span class="s">인천공항~무안공항 서해선이 환황해선의 시작, 군산~목포 110km가 마지막 고리</span></span><span class="d">26.06.29</span></a></li><li><a href="hon03.html"><span class="th"></span><span class="t">삼성·SK 800조 호남행, 국가균형발전 닻 올랐다<span class="s">이재명 대통령과 삼성·SK, 6월 29일 서남권에 800조원·메모리 팹 4기 발표</span></span><span class="d">26.06.29</span></a></li></ul></section><section class="ser" id="s6"><h2>국제정세<em>3편</em></h2><ul class="rows"><li><a href="intl02.html"><span class="th"></span><span class="t">호르무즈 전쟁보험료, 군함 보낸 나라 배가 3배 문다<span class="s">서방계 선박 선체 가액 7.5~10%, 아시아계 2.5~5%, 평시 0.15%</span></span><span class="d">26.09.14</span></a></li><li><a href="intl01.html"><span class="th"></span><span class="t">호르무즈 파병을 해서는 안 되는 열 가지 이유<span class="s">공개 협박은 파병 요청이 아니다, 우리가 응할 의무도 없다</span></span><span class="d">26.09.06</span></a></li><li><a href="intl03.html"><span class="th"></span><span class="t">트럼프 이란 침략 두 달, 미국 일극 체제 무너지는 7가지 신호<span class="s">협상 결렬, 호르무즈 통과량 18%로 폭락</span></span><span class="d">26.04.26</span></a></li></ul></section></main>
+<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>연구 의뢰 032-777-0421</span></div></div>
+<div class="mast"><div class="wrap"><a class="logo" href=".././"><img src="../logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
+<div class="rt"><span class="date" id="today"></span><form class="srchtop" action="../media/" method="get" role="search"><input type="search" name="q" placeholder="자료 검색" aria-label="자료 검색"><button type="submit">찾기</button><a class="asktop" href="../ask.html">의뢰·신청하기</a></form></div></div></div>
+<nav class="gnb"><div class="wrap"><a href="../media/">전체 자료</a><a href="../media/g_policy.html">정책브리핑</a><a href="../media/g_ocean.html">해양</a><a href="../media/g_air.html">항공</a><a href="../media/g_rail.html">철도</a><a href="../media/g_logistics.html">복합물류</a><a href="../media/g_urban.html">도시계획·부동산</a><a href="../media/g_climate.html">기후위기</a><a href="../media/g_economy.html" class="on">경제</a><a href="../media/g_ai.html">AI</a><a href="../about.html">연구소</a></div></nav>
+<div class="hero"><div class="wrap"><h1>경제</h1><p>경제정책·경기·조세·금융·산업 · 공개 자료 15편</p></div></div>
+<nav class="sub"><div class="wrap"><a id="back" href="#" style="display:none;border-color:var(--blue-d);color:var(--blue-d)">← 경제 전체 보기</a><a href="#노동-브리핑">노동 브리핑<em>2</em></a><a href="#조세-브리핑">조세 브리핑<em>3</em></a><a href="#기업·금융-브리핑">기업·금융 브리핑<em>2</em></a><a href="#증시-브리핑">증시 브리핑<em>5</em></a><a href="#주식공부">주식공부<em>3</em></a></div></nav>
+<main class="wrap"><div class="board"><a class="tile w2" href="#노동-브리핑"><span class="pic"><img src="img/card_econ_01.jpg" alt="" loading="lazy"></span><span class="bd"><h3>노동 브리핑<em>2편</em></h3><p>자영업자와 최저임금 — 일</p></span></a><a class="tile " href="#조세-브리핑"><span class="pic"><img src="img/card_econ_02.jpg" alt="" loading="lazy"></span><span class="bd"><h3>조세 브리핑<em>3편</em></h3><p>상속세와 재산세와 보유세, 누가 얼마나 내는가</p></span></a><a class="tile " href="#기업·금융-브리핑"><span class="pic"><img src="img/card_urban_02.jpg" alt="" loading="lazy"></span><span class="bd"><h3>기업·금융 브리핑<em>2편</em></h3><p>배당과 주주환원, 누구의 몫인가</p></span></a><a class="tile " href="#증시-브리핑"><span class="pic"><img src="img/sov10_04.jpg" alt="" loading="lazy"></span><span class="bd"><h3>증시 브리핑<em>5편</em></h3><p>코스피 9000과 그 열매의 행방</p></span></a><a class="tile " href="#주식공부"><span class="pic chart"><img src="img/stk03_01.png" alt="" loading="lazy"></span><span class="bd"><h3>주식공부<em>3편</em></h3><p>지수와 순환매와 밸류에이션을 숫자로 읽는다</p></span></a></div><section class="ser" id="노동-브리핑"><h2>노동 브리핑<em>2편</em></h2><ul class="rows"><li><a href="lab01.html"><span class="t">[경세제민] 자영업자① 자영업자는 사장인가 노동자인가<span class="s">IMF 이후 강제 창업 570만명... 빚 1120조원의 덫</span></span><span class="d">26.04.22</span></a></li><li><a href="lab02.html"><span class="t">[경세제민] 최저임금③ 독일 벌금 7억원, 한국은 2000만원<span class="s">중위임금 대비 한국 61%, 프랑스 62%로 비슷한데 왜 한국만 전쟁터인가</span></span><span class="d">26.04.22</span></a></li></ul></section><section class="ser" id="조세-브리핑"><h2>조세 브리핑<em>3편</em></h2><ul class="rows"><li><a href="tax03.html"><span class="t">[경세제민] 한국경제 불편한 진실⑧-하<span class="s">보유세 깎아준 1조4800억원, 어린이집·도서관 예산이 날아갔다</span></span><span class="d">26.03.28</span></a></li><li><a href="tax01.html"><span class="t">[경세제민]상속세 과세 대상 6%, 나머지 94%는 왜 겁먹나<span class="s">사망자의 6%, 수도권 아파트 한 채 값에 걸린 착각</span></span><span class="d">26.03.17</span></a></li><li><a href="tax02.html"><span class="t">[한국경제 불편한 진실⑧] 재산세는 부자세금? 진짜 부자는 빠져나간다<span class="s">2023년부터 공동주택 공시가격 현실화율 69% 4년째 동결</span></span><span class="d">26.03.17</span></a></li></ul></section><section class="ser" id="기업·금융-브리핑"><h2>기업·금융 브리핑<em>2편</em></h2><ul class="rows"><li><a href="fin01.html"><span class="t">89조 버는 회사 하루 10% 폭락, 투기판 깐 금융수장 사퇴하라<span class="s">같은 날 대만은 올랐고 한국만 8.95% 폭락… 두 종목이 거래대금 51% 빨아들였다</span></span><span class="d">26.07.13</span></a></li><li><a href="fin02.html"><span class="t">[경세제민] 삼성 배당의 순서가 틀렸다, 주주가 왜 1순위인가<span class="s">노동자가 이익 만든 1차 기여자, 주주는 유상증자 빼면 자본 형성 기여도 없다</span></span><span class="d">26.04.28</span></a></li></ul></section><section class="ser" id="증시-브리핑"><h2>증시 브리핑<em>5편</em></h2><ul class="rows"><li><a href="kos05.html"><span class="t">[코스피 9000 번외]<span class="s">전쟁도 멈춰 세운 주식, 삼성전자를 국민전자로</span></span><span class="d">26.06.03</span></a></li><li><a href="kos03.html"><span class="t">[코스피 9000 코앞] ③<span class="s">거품이 아니라 실적이다, 주도주가 장을 가른다</span></span><span class="d">26.06.02</span></a></li><li><a href="kos04.html"><span class="t">[코스피 9000 번외]<span class="s">AI시대 나도 &#x27;주식가치(밸류에이션, valuation)&#x27; 평가해 투자하는 방법</span></span><span class="d">26.06.02</span></a></li><li><a href="kos01.html"><span class="t">[코스피 9000 코앞 ①] 시민이 물꼬 튼 성장, 왜 남일 같을까<span class="s">정치 불확실성 풀리자 돌아온 외국인, 상법 개정과 사상 최대 수출이 신고가 떠받쳤다</span></span><span class="d">26.06.01</span></a></li><li><a href="kos02.html"><span class="t">[코스피 9000 코앞 ②]<span class="s">위기는 시민이 떠안고, 신고가는 자산가가 가져갔다</span></span><span class="d">26.06.01</span></a></li></ul></section><section class="ser" id="주식공부"><h2>주식공부<em>3편</em></h2><ul class="rows"><li><a class="im" href="stk03.html"><span class="th"><img src="img/stk03_01.png" alt="" loading="lazy"></span><span class="t">[주식공부] 코스피 18.45% 하락, 반등을 받친 건 자사주<span class="s">7월 22.19% 하락 뒤 8월 4.81% 반등</span></span><span class="d">26.08.27</span></a></li><li><a href="stk02.html"><span class="t">[주식공부] 코스피가 5.80% 오를 때 코스닥은 20.13% 올랐다</span><span class="d">26.08.15</span></a></li><li><a href="stk01.html"><span class="t">[주식공부] 사상 최대 실적 낸 이틀은 내렸고, 헤지펀드 청산 뒤 17.91% 올랐다</span><span class="d">26.08.02</span></a></li></ul></section></main>
+<script>(function(){var B=document.querySelector('.board'),K=document.getElementById('back'),H=document.querySelector('.hero h1'),H0=H.textContent;
+function show(){var h=decodeURIComponent(location.hash.slice(1)),s=h&&document.getElementById(h),S=document.querySelectorAll('.ser'),C=document.querySelectorAll('.sub a[href^="#"]');
+if(s&&s.className=='ser'){B.style.display='none';[].forEach.call(S,function(x){x.style.display=x===s?'':'none';});K.style.display='';H.textContent=H0+' · '+s.querySelector('h2').firstChild.textContent;window.scrollTo(0,0);}
+else{B.style.display='';[].forEach.call(S,function(x){x.style.display='';});K.style.display='none';H.textContent=H0;}
+[].forEach.call(C,function(a){a.classList.toggle('on',a.getAttribute('href')=='#'+encodeURI(h)||a.getAttribute('href')=='#'+h);});}
+window.addEventListener('hashchange',show);show();})();</script>
 <footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminpress@gmail.com<br>
-자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.</div></footer>
+자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
+<a href="../about.html">연구소 소개</a> · <a href="../ask.html">의뢰·신청하기</a> · <a href="../join.html">객원연구원 신청</a></div></footer>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
 <script src="../nocopy.js"></script>
 </body></html>

@@ -1,21 +1,38 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>기후위기 — 經世濟民 AI·경제 연구소</title><meta name="description" content="경세제민 AI·경제 연구소 기후위기 — 기후위기·에너지 전환·탄소중립">
-<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png"><style>
-:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;
---blue:#1A6DFF;--blue-d:#0B4FCE;--orange:#FF9A33}
-*{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);line-height:1.6;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<style>
+:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;--blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62;--orange:#FF9A33}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);line-height:1.62;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+
 .util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
 .util .wrap{display:flex;justify-content:space-between;padding:6px 18px}
-.mast .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
-.logo img{width:250px;height:auto;display:block}
-.asktop{font-weight:800;font-size:14px;padding:7px 16px;background:var(--orange);color:var(--ink)}
-.gnb{border-top:1px solid var(--line);border-bottom:2px solid var(--blue-d);background:#fff}
-.gnb .wrap{display:flex;gap:26px;font-weight:700;font-size:16px;overflow-x:auto}
-.gnb a{padding:11px 0 9px;border-bottom:3px solid transparent;white-space:nowrap}
+.mast{border-bottom:1px solid var(--line);background:#fff}
+.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}
+.logo{display:block;line-height:0}.logo img{width:276px;height:auto;display:block}
+.mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.mast .date{font-size:13px;color:var(--mute)}
+.srchtop{display:flex;gap:6px;align-items:center;margin:0}
+.srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}
+.srchtop input:focus{outline:0;border-color:var(--blue)}
+.srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:var(--blue);color:#fff;cursor:pointer}
+.srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}
+.srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}
+.srchtop .asktop:hover{background:#FFB15E}
+.gnb{border-bottom:2px solid var(--blue-d);background:#fff}
+.gnb .wrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
+.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
 .gnb a:hover,.gnb a.on{border-color:var(--blue-d);color:var(--blue-d)}
+footer{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid var(--blue-d)}
+footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
+footer b{color:#fff}footer a{text-decoration:underline}
+body{display:flex;flex-direction:column;min-height:100vh}body>main{flex:1 0 auto;width:100%}body>footer{margin-top:auto}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}
+img{-webkit-user-drag:none;pointer-events:none}
+@media(max-width:700px){.srchtop input{width:100%}.mast .rt{align-items:stretch;width:100%}.srchtop{flex-wrap:wrap}.srchtop .asktop{margin-left:0}.srchtop .asktop::before{display:none}}
+
 .hero{background:var(--soft);border-bottom:3px solid var(--ink)}
 .hero .wrap{padding:22px 18px 16px}
 .hero h1{margin:0 0 4px;font-size:30px;letter-spacing:-1px}
@@ -24,14 +41,18 @@ a{color:inherit;text-decoration:none}
 .sub .wrap{display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
 .sub a{font-size:13.5px;font-weight:700;padding:5px 12px;border:1px solid #9FB2D4;color:var(--sub)}
 .sub a:hover{border-color:var(--blue-d);color:var(--blue-d)}
+.sub a.on{border-color:var(--blue-d);background:var(--blue-d);color:#fff}.sub a.on em{color:#DDE8FF}
 .sub a em{font-style:normal;color:var(--mute);font-weight:600;margin-left:4px}
 .board{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 0 8px}
-.tile{display:block;border:1px solid var(--line);background:#fff}
+.tile{display:flex;flex-direction:column;border:1px solid var(--line);background:#fff}
 .tile:hover{border-color:var(--blue-d)}
-.tile .pic{display:block;height:130px;overflow:hidden;background:var(--soft);border-bottom:1px solid var(--line)}
-.tile .pic img{width:100%;height:100%;object-fit:contain;background:#fff;display:block}
-.tile .pic.no{display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#C9D3E6;letter-spacing:-1px}
-.tile .bd{display:block;padding:11px 13px 12px}
+.tile.full{grid-column:1/-1}.tile.w3{grid-column:span 3}.tile.w2{grid-column:span 2}
+.tile.full .pic,.tile.full .band,.tile.w3 .pic,.tile.w3 .band{height:220px}
+.tile .pic{display:block;height:150px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
+.tile .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.tile .pic.chart img{object-fit:contain}
+.tile .band{display:flex;align-items:flex-end;height:150px;padding:14px;background:var(--navy);color:#fff;font-size:17px;font-weight:800;line-height:1.4;letter-spacing:-.4px}
+.tile .bd{display:block;padding:11px 13px 12px;flex:1}
 .tile h3{margin:0;font-size:17px;font-weight:800;letter-spacing:-.4px;display:flex;justify-content:space-between;gap:8px}
 .tile h3 em{font-style:normal;font-size:12.5px;color:var(--blue-d);font-weight:700;white-space:nowrap}
 .tile p{margin:6px 0 0;font-size:13px;color:var(--sub);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -40,27 +61,34 @@ a{color:inherit;text-decoration:none}
 .ser h2 em{font-style:normal;font-size:13px;color:var(--mute);font-weight:700}
 .rows{list-style:none;margin:0;padding:0}
 .rows li{border-bottom:1px solid var(--line)}
-.rows a{display:grid;grid-template-columns:96px 1fr 70px;gap:14px;align-items:center;padding:10px 2px}
+.rows a{display:grid;grid-template-columns:1fr 70px;gap:14px;align-items:center;padding:11px 2px}
+.rows a.im{grid-template-columns:96px 1fr 70px}
 .rows a:hover .t{color:var(--blue-d)}
-.rows .th{width:96px;height:56px;background:var(--soft);overflow:hidden}
-.rows .th img{width:100%;height:100%;object-fit:contain;background:#fff}
+.rows .th{width:96px;height:56px;overflow:hidden}
+.rows .th img{width:100%;height:100%;object-fit:cover}
 .rows .t{font-size:15.5px;font-weight:700;letter-spacing:-.3px;line-height:1.45}
 .rows .s{display:block;font-size:13px;color:var(--mute);font-weight:500;margin-top:2px}
 .rows .d{font-size:12.5px;color:var(--mute);text-align:right}
-footer{margin-top:36px;background:var(--ink);color:#BEBEBA;border-top:5px solid var(--blue-d)}
-footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
-footer b{color:#fff}
-@media(max-width:900px){.board{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.board{grid-template-columns:1fr}.rows a{grid-template-columns:72px 1fr}.rows .th{width:72px;height:44px}.rows .d{display:none}}
-body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,select{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;pointer-events:none}
+@media(max-width:900px){.board{grid-template-columns:repeat(2,1fr)}.tile.w3{grid-column:auto}.tile.w2{grid-column:span 2}}
+@media(max-width:600px){.tile.w2{grid-column:auto}}
+@media(max-width:600px){.board{grid-template-columns:1fr}.rows a,.rows a.im{grid-template-columns:1fr}.rows .th,.rows .d{display:none}}
 </style></head><body>
-<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>032-777-0421</span></div></div>
-<div class="mast"><div class="wrap"><a class="logo" href="../"><img src="../logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a><a class="asktop" href="../ask.html">의뢰·신청하기</a></div></div>
-<nav class="gnb"><div class="wrap"><a href="index.html">전체 자료</a><a href="g_policy.html">정책브리핑</a><a href="g_ocean.html">해양</a><a href="g_air.html">항공</a><a href="g_rail.html">철도</a><a href="g_logistics.html">복합물류</a><a href="g_urban.html">도시계획·부동산</a><a href="g_climate.html" class="on">기후위기</a><a href="g_economy.html">경제</a><a href="g_ai.html">AI</a><a href="../about.html">연구소</a></div></nav>
-<div class="hero"><div class="wrap"><h1>기후위기</h1><p>기후위기·에너지 전환·탄소중립 · 3편</p></div></div>
-<nav class="sub"><div class="wrap"><a href="#s0">에너지정책브리핑<em>1</em></a><a href="#s1">에너지 전환<em>2</em></a></div></nav>
-<main class="wrap"><div class="board"><a class="tile" href="#s0"><span class="pic"><img src="img/col02_01.png" alt="" loading="lazy"></span><span class="bd"><h3>에너지정책브리핑<em>1편</em></h3><p>에너지고속도로와 국토 균형</p></span></a><a class="tile" href="#s1"><span class="pic no">에너지 전환</span><span class="bd"><h3>에너지 전환<em>2편</em></h3><p>남동발전 SMR 원전 협약, 영흥도를 가리키는 정황</p></span></a></div><section class="ser" id="s0"><h2>에너지정책브리핑<em>1편</em></h2><ul class="rows"><li><a href="col02.html"><span class="th"><img src="img/col02_01.png" alt="" loading="lazy"></span><span class="t">이재명 정부 에너지고속도로에 담긴 비수도권 식민지 가속화<span class="s">수도권 전력수요 44%, 발전설비는 23%... 서울 자급률 10.24%</span></span><span class="d"></span></a></li></ul></section><section class="ser" id="s1"><h2>에너지 전환<em>2편</em></h2><ul class="rows"><li><a href="ene01.html"><span class="th"></span><span class="t">남동발전 SMR 원전 협약, 영흥도를 가리키는 정황<span class="s">남동발전·현대건설 &#x27;석탄 연계 SMR&#x27; 협약, 대상은 폐지 예정 석탄부지</span></span><span class="d">26.07.08</span></a></li><li><a href="ene02.html"><span class="th"></span><span class="t">미국 침략 호르무즈 사태, 인천 해상풍력 6.2GW(기가와트) 시급<span class="s">미국의 이란 침략이 야기한 세계 에너지 비상사태</span></span><span class="d">26.03.29</span></a></li></ul></section></main>
+<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>연구 의뢰 032-777-0421</span></div></div>
+<div class="mast"><div class="wrap"><a class="logo" href=".././"><img src="../logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
+<div class="rt"><span class="date" id="today"></span><form class="srchtop" action="../media/" method="get" role="search"><input type="search" name="q" placeholder="자료 검색" aria-label="자료 검색"><button type="submit">찾기</button><a class="asktop" href="../ask.html">의뢰·신청하기</a></form></div></div></div>
+<nav class="gnb"><div class="wrap"><a href="../media/">전체 자료</a><a href="../media/g_policy.html">정책브리핑</a><a href="../media/g_ocean.html">해양</a><a href="../media/g_air.html">항공</a><a href="../media/g_rail.html">철도</a><a href="../media/g_logistics.html">복합물류</a><a href="../media/g_urban.html">도시계획·부동산</a><a href="../media/g_climate.html" class="on">기후위기</a><a href="../media/g_economy.html">경제</a><a href="../media/g_ai.html">AI</a><a href="../about.html">연구소</a></div></nav>
+<div class="hero"><div class="wrap"><h1>기후위기</h1><p>기후위기·에너지 전환·탄소중립 · 공개 자료 1편</p></div></div>
+<nav class="sub"><div class="wrap"><a id="back" href="#" style="display:none;border-color:var(--blue-d);color:var(--blue-d)">← 기후위기 전체 보기</a><a href="#에너지정책브리핑">에너지정책브리핑<em>1</em></a></div></nav>
+<main class="wrap"><div class="board"><a class="tile full" href="#에너지정책브리핑"><span class="pic"><img src="img/sov09_02.jpg" alt="" loading="lazy"></span><span class="bd"><h3>에너지정책브리핑<em>1편</em></h3><p>에너지고속도로와 국토 균형</p></span></a></div><section class="ser" id="에너지정책브리핑"><h2>에너지정책브리핑<em>1편</em></h2><ul class="rows"><li><a class="im" href="col02.html"><span class="th"><img src="img/col02_01.png" alt="" loading="lazy"></span><span class="t">이재명 정부 에너지고속도로에 담긴 비수도권 식민지 가속화<span class="s">수도권 전력수요 44%, 발전설비는 23%... 서울 자급률 10.24%</span></span><span class="d"></span></a></li></ul></section></main>
+<script>(function(){var B=document.querySelector('.board'),K=document.getElementById('back'),H=document.querySelector('.hero h1'),H0=H.textContent;
+function show(){var h=decodeURIComponent(location.hash.slice(1)),s=h&&document.getElementById(h),S=document.querySelectorAll('.ser'),C=document.querySelectorAll('.sub a[href^="#"]');
+if(s&&s.className=='ser'){B.style.display='none';[].forEach.call(S,function(x){x.style.display=x===s?'':'none';});K.style.display='';H.textContent=H0+' · '+s.querySelector('h2').firstChild.textContent;window.scrollTo(0,0);}
+else{B.style.display='';[].forEach.call(S,function(x){x.style.display='';});K.style.display='none';H.textContent=H0;}
+[].forEach.call(C,function(a){a.classList.toggle('on',a.getAttribute('href')=='#'+encodeURI(h)||a.getAttribute('href')=='#'+h);});}
+window.addEventListener('hashchange',show);show();})();</script>
 <footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminpress@gmail.com<br>
-자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.</div></footer>
+자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
+<a href="../about.html">연구소 소개</a> · <a href="../ask.html">의뢰·신청하기</a> · <a href="../join.html">객원연구원 신청</a></div></footer>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
 <script src="../nocopy.js"></script>
 </body></html>
