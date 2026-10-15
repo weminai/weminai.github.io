@@ -163,13 +163,13 @@ img{-webkit-user-drag:none;pointer-events:none}
   <p><b>분야</b><br>정책브리핑, 해양, 항공, 철도, 복합물류, 도시계획·부동산, 기후위기, 경제, AI</p>
   <p><b>절차</b><br>신청서 접수 → 서류 검토와 면담 → 명부 등록</p>
   <div class="box">
-    <b>연락</b><br>032-777-0421<br>weminpress@gmail.com<br>
+    <b>연락</b><br>032-777-0421<br>weminaimax@weminai.com<br>
     인천 미추홀구 용현동 55(수봉공원)
   </div>
   <div class="box"><b>다른 신청</b><br>연구·강연·교육·출판 신청은 <a href="ask.html" style="text-decoration:underline">의뢰·신청하기</a>에서 받습니다.</div>
 </aside>
 </div></div></main>
-<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminpress@gmail.com<br>
+<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminaimax@weminai.com<br>
 자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
 <a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a></div></footer>
 <script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
@@ -207,7 +207,7 @@ img{-webkit-user-drag:none;pointer-events:none}
   var btn=$('send');btn.disabled=true;btn.textContent='보내는 중…';say('');
   post(subj,P,function(){btn.textContent='보냈습니다';say('접수되었습니다. 연구소가 확인하고 연락드리겠습니다.');},
    function(){btn.disabled=false;btn.textContent='신청서 보내기';say('전송하지 못했습니다. 메일 프로그램으로 대신 보냅니다.',1);
-    location.href='mailto:weminpress@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(build());});});
+    location.href='mailto:weminaimax@weminai.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(build());});});
 
  var ENDPOINT='https://script.google.com/macros/s/AKfycbz2eXtTB1hTwJ7D9wxaNbN0MWjj1zNjnZPrOlrDHpCwNtk6uQgshBEJX8_PCnHVS7TkHg/exec';
  function post(subject, pairs, done, fail){
@@ -230,7 +230,7 @@ img{-webkit-user-drag:none;pointer-events:none}
    +'<h2>5. 참여 희망</h2>'+kv([['분야',picks('ar')],['참여 형태',picks('fm')],['참여 가능 시간',v('time')]])
    +'<h2>6. 자기소개서</h2><h3>(1) 지원 동기</h3><p>'+esc(v('q1'))+'</p><h3>(2) 전문성과 강점</h3><p>'+esc(v('q2'))+'</p><h3>(3) 하고 싶은 연구</h3><p>'+esc(v('q3'))+'</p>'
    +'<h2>7. 개인정보 수집·이용</h2><p>동의함</p>'
-   +'<div class="foot">경세제민 AI·경제 연구소(주) · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminpress@gmail.com</div>';
+   +'<div class="foot">경세제민 AI·경제 연구소(주) · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminaimax@weminai.com</div>';
   var doc='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
    +'<head><meta charset="utf-8"><title>객원연구원 신청서</title><style>body{font-family:"맑은 고딕",Malgun Gothic,sans-serif;font-size:11pt;line-height:1.7}'
    +'h1{font-size:16pt;border-bottom:2px solid #000;padding-bottom:6pt}h2{font-size:12.5pt;margin:16pt 0 6pt;border-bottom:1px solid #999;padding-bottom:3pt}h3{font-size:11pt;margin:10pt 0 3pt}'
@@ -239,9 +239,9 @@ img{-webkit-user-drag:none;pointer-events:none}
   var blob=new Blob(['﻿'+doc],{type:'application/msword;charset=utf-8'});
   var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='객원연구원신청서_'+(v('name')||'무기명')+'.doc';
   document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(a.href);},1500);
-  say('워드 파일을 내려받았습니다. weminpress@gmail.com 으로 붙임 보내 주십시오.');});
+  say('워드 파일을 내려받았습니다. weminaimax@weminai.com 으로 붙임 보내 주십시오.');});
  $('copy').addEventListener('click',function(){var t=build();
-  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){say('복사했습니다. weminpress@gmail.com 으로 붙여 보내 주십시오.');},
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){say('복사했습니다. weminaimax@weminai.com 으로 붙여 보내 주십시오.');},
   function(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);say('복사했습니다.');});});
 })();
 </script>
