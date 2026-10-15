@@ -1,38 +1,21 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>정책브리핑 — 經世濟民 AI·경제 연구소</title><meta name="description" content="경세제민 AI·경제 연구소 정책브리핑 — 분야를 가로지르는 브리핑">
-<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<style>
-:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;--blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62;--orange:#FF9A33}
-*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);line-height:1.62;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
-
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png"><style>
+:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;
+--blue:#1A6DFF;--blue-d:#0B4FCE;--orange:#FF9A33}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);line-height:1.6;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
 .util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
 .util .wrap{display:flex;justify-content:space-between;padding:6px 18px}
-.mast{border-bottom:1px solid var(--line);background:#fff}
-.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}
-.logo{display:block;line-height:0}.logo img{width:276px;height:auto;display:block}
-.mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
-.mast .date{font-size:13px;color:var(--mute)}
-.srchtop{display:flex;gap:6px;align-items:center;margin:0}
-.srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}
-.srchtop input:focus{outline:0;border-color:var(--blue)}
-.srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:var(--blue);color:#fff;cursor:pointer}
-.srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}
-.srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}
-.srchtop .asktop:hover{background:#FFB15E}
-.gnb{border-bottom:2px solid var(--blue-d);background:#fff}
-.gnb .wrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
-.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+.logo img{width:250px;height:auto;display:block}
+.asktop{font-weight:800;font-size:14px;padding:7px 16px;background:var(--orange);color:var(--ink)}
+.gnb{border-top:1px solid var(--line);border-bottom:2px solid var(--blue-d);background:#fff}
+.gnb .wrap{display:flex;gap:26px;font-weight:700;font-size:16px;overflow-x:auto}
+.gnb a{padding:11px 0 9px;border-bottom:3px solid transparent;white-space:nowrap}
 .gnb a:hover,.gnb a.on{border-color:var(--blue-d);color:var(--blue-d)}
-footer{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid var(--blue-d)}
-footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
-footer b{color:#fff}footer a{text-decoration:underline}
-body{display:flex;flex-direction:column;min-height:100vh}body>main{flex:1 0 auto;width:100%}body>footer{margin-top:auto}
-body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-input,textarea,select{-webkit-user-select:text;user-select:text}
-img{-webkit-user-drag:none;pointer-events:none}
-@media(max-width:700px){.srchtop input{width:100%}.mast .rt{align-items:stretch;width:100%}.srchtop{flex-wrap:wrap}.srchtop .asktop{margin-left:0}.srchtop .asktop::before{display:none}}
-
 .hero{background:var(--soft);border-bottom:3px solid var(--ink)}
 .hero .wrap{padding:22px 18px 16px}
 .hero h1{margin:0 0 4px;font-size:30px;letter-spacing:-1px}
@@ -41,18 +24,14 @@ img{-webkit-user-drag:none;pointer-events:none}
 .sub .wrap{display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
 .sub a{font-size:13.5px;font-weight:700;padding:5px 12px;border:1px solid #9FB2D4;color:var(--sub)}
 .sub a:hover{border-color:var(--blue-d);color:var(--blue-d)}
-.sub a.on{border-color:var(--blue-d);background:var(--blue-d);color:#fff}.sub a.on em{color:#DDE8FF}
 .sub a em{font-style:normal;color:var(--mute);font-weight:600;margin-left:4px}
 .board{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 0 8px}
-.tile{display:flex;flex-direction:column;border:1px solid var(--line);background:#fff}
+.tile{display:block;border:1px solid var(--line);background:#fff}
 .tile:hover{border-color:var(--blue-d)}
-.tile.full{grid-column:1/-1}.tile.w3{grid-column:span 3}.tile.w2{grid-column:span 2}
-.tile.full .pic,.tile.full .band,.tile.w3 .pic,.tile.w3 .band{height:220px}
-.tile .pic{display:block;height:150px;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
-.tile .pic img{width:100%;height:100%;object-fit:cover;display:block}
-.tile .pic.chart img{object-fit:contain}
-.tile .band{display:flex;align-items:flex-end;height:150px;padding:14px;background:var(--navy);color:#fff;font-size:17px;font-weight:800;line-height:1.4;letter-spacing:-.4px}
-.tile .bd{display:block;padding:11px 13px 12px;flex:1}
+.tile .pic{display:block;height:130px;overflow:hidden;background:var(--soft);border-bottom:1px solid var(--line)}
+.tile .pic img{width:100%;height:100%;object-fit:contain;background:#fff;display:block}
+.tile .pic.no{display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#C9D3E6;letter-spacing:-1px}
+.tile .bd{display:block;padding:11px 13px 12px}
 .tile h3{margin:0;font-size:17px;font-weight:800;letter-spacing:-.4px;display:flex;justify-content:space-between;gap:8px}
 .tile h3 em{font-style:normal;font-size:12.5px;color:var(--blue-d);font-weight:700;white-space:nowrap}
 .tile p{margin:6px 0 0;font-size:13px;color:var(--sub);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -61,34 +40,27 @@ img{-webkit-user-drag:none;pointer-events:none}
 .ser h2 em{font-style:normal;font-size:13px;color:var(--mute);font-weight:700}
 .rows{list-style:none;margin:0;padding:0}
 .rows li{border-bottom:1px solid var(--line)}
-.rows a{display:grid;grid-template-columns:1fr 70px;gap:14px;align-items:center;padding:11px 2px}
-.rows a.im{grid-template-columns:96px 1fr 70px}
+.rows a{display:grid;grid-template-columns:96px 1fr 70px;gap:14px;align-items:center;padding:10px 2px}
 .rows a:hover .t{color:var(--blue-d)}
-.rows .th{width:96px;height:56px;overflow:hidden}
-.rows .th img{width:100%;height:100%;object-fit:cover}
+.rows .th{width:96px;height:56px;background:var(--soft);overflow:hidden}
+.rows .th img{width:100%;height:100%;object-fit:contain;background:#fff}
 .rows .t{font-size:15.5px;font-weight:700;letter-spacing:-.3px;line-height:1.45}
 .rows .s{display:block;font-size:13px;color:var(--mute);font-weight:500;margin-top:2px}
 .rows .d{font-size:12.5px;color:var(--mute);text-align:right}
-@media(max-width:900px){.board{grid-template-columns:repeat(2,1fr)}.tile.w3{grid-column:auto}.tile.w2{grid-column:span 2}}
-@media(max-width:600px){.tile.w2{grid-column:auto}}
-@media(max-width:600px){.board{grid-template-columns:1fr}.rows a,.rows a.im{grid-template-columns:1fr}.rows .th,.rows .d{display:none}}
+footer{margin-top:36px;background:var(--ink);color:#BEBEBA;border-top:5px solid var(--blue-d)}
+footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
+footer b{color:#fff}
+@media(max-width:900px){.board{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.board{grid-template-columns:1fr}.rows a{grid-template-columns:72px 1fr}.rows .th{width:72px;height:44px}.rows .d{display:none}}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,select{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;pointer-events:none}
 </style></head><body>
-<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>연구 의뢰 032-777-0421</span></div></div>
-<div class="mast"><div class="wrap"><a class="logo" href=".././"><img src="../logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
-<div class="rt"><span class="date" id="today"></span><form class="srchtop" action="../media/" method="get" role="search"><input type="search" name="q" placeholder="자료 검색" aria-label="자료 검색"><button type="submit">찾기</button><a class="asktop" href="../ask.html">의뢰·신청하기</a></form></div></div></div>
-<nav class="gnb"><div class="wrap"><a href="../media/">전체 자료</a><a href="../media/g_policy.html" class="on">정책브리핑</a><a href="../media/g_ocean.html">해양</a><a href="../media/g_air.html">항공</a><a href="../media/g_rail.html">철도</a><a href="../media/g_logistics.html">복합물류</a><a href="../media/g_urban.html">도시계획·부동산</a><a href="../media/g_climate.html">기후위기</a><a href="../media/g_economy.html">경제</a><a href="../media/g_ai.html">AI</a><a href="../about.html">연구소</a></div></nav>
-<div class="hero"><div class="wrap"><h1>정책브리핑</h1><p>분야를 가로지르는 브리핑 · 공개 자료 14편</p></div></div>
-<nav class="sub"><div class="wrap"><a id="back" href="#" style="display:none;border-color:var(--blue-d);color:var(--blue-d)">← 정책브리핑 전체 보기</a><a href="#교통정책브리핑">교통정책브리핑<em>1</em></a><a href="#복지-브리핑">복지 브리핑<em>3</em></a><a href="#불평등-브리핑">불평등 브리핑<em>3</em></a><a href="#산업-브리핑">산업 브리핑<em>3</em></a><a href="#인프라-브리핑">인프라 브리핑<em>3</em></a><a href="#지방재정-브리핑">지방재정 브리핑<em>1</em></a></div></nav>
-<main class="wrap"><div class="board"><a class="tile " href="#교통정책브리핑"><span class="pic"><img src="img/sov10_04.jpg" alt="" loading="lazy"></span><span class="bd"><h3>교통정책브리핑<em>1편</em></h3><p>공항과 철도, 무엇을 먼저 놓을 것인가</p></span></a><a class="tile " href="#복지-브리핑"><span class="pic"><img src="img/card_urban_02.jpg" alt="" loading="lazy"></span><span class="bd"><h3>복지 브리핑<em>3편</em></h3><p>돌봄과 교육과 의료</p></span></a><a class="tile " href="#불평등-브리핑"><span class="pic chart"><img src="img/gap03_01.png" alt="" loading="lazy"></span><span class="bd"><h3>불평등 브리핑<em>3편</em></h3><p>AI와 계층 이동과 수도권·비수도권</p></span></a><a class="tile " href="#산업-브리핑"><span class="pic"><img src="img/card_econ_02.jpg" alt="" loading="lazy"></span><span class="bd"><h3>산업 브리핑<em>3편</em></h3><p>플랫폼과 에너지와 식량</p></span></a><a class="tile " href="#인프라-브리핑"><span class="pic"><img src="img/sov10_03.jpg" alt="" loading="lazy"></span><span class="bd"><h3>인프라 브리핑<em>3편</em></h3><p>물과 교통과 데이터</p></span></a><a class="tile " href="#지방재정-브리핑"><span class="pic chart"><img src="img/fis01_02.png" alt="" loading="lazy"></span><span class="bd"><h3>지방재정 브리핑<em>1편</em></h3><p>신설 자치구와 교부금, 국비와 시비</p></span></a></div><section class="ser" id="교통정책브리핑"><h2>교통정책브리핑<em>1편</em></h2><ul class="rows"><li><a href="col01.html"><span class="t">기후위기 시대, 경기국제공항보다 &#x27;제3공항철도&#x27;가 낫다<span class="s">경기도 &#x27;경기국제공항&#x27; 추진 vs 탄소중립 시대 역행 논란</span></span><span class="d"></span></a></li></ul></section><section class="ser" id="복지-브리핑"><h2>복지 브리핑<em>3편</em></h2><ul class="rows"><li><a href="wel02.html"><span class="t">[한국경제 불편한 진실⑩] 교육 — 사교육비 27조5351억원, 줄었다는 통계의 함정<span class="s">총액은 5.7% 줄었는데 학생 수는 2.3%밖에 줄지 않았다</span></span><span class="d">26.08.04</span></a></li><li><a href="wel01.html"><span class="t">[한국경제 불편한 진실⑨] 돌봄 — 멈추면 나라가 멈추는데, 값은 최저임금 언저리<span class="s">무급 가사·돌봄노동만 한 해 582조원, 국내총생산의 22.8%</span></span><span class="d">26.07.28</span></a></li><li><a href="wel03.html"><span class="t">[한국경제 불편한 진실⑪] 의료 — 3분 진료가 떠받친 세계 최고 접근성, 그 청구서가 온다</span><span class="d">26.07.05</span></a></li></ul></section><section class="ser" id="불평등-브리핑"><h2>불평등 브리핑<em>3편</em></h2><ul class="rows"><li><a class="im" href="gap03.html"><span class="th"><img src="img/gap03_01.png" alt="" loading="lazy"></span><span class="t">[한국경제 불편한 진실⑳] 수도권·비수도권 — 충남에서 빠져나간 33조원, 서울로 들어온 73조원<span class="s">충남 33조원·경북 21조원·울산 20조원 순유출, 서울 73조원·경기 44조원 순유입</span></span><span class="d">26.08.25</span></a></li><li><a href="gap02.html"><span class="t">[한국경제 불편한 진실⑲] 계층 이동 — 좁아진 사다리, 그 자리를 메우는 부모 지갑<span class="s">올 상반기 서울 부동산 증여 등기 1만3518건, 1년 만에 82.9% 증가</span></span><span class="d">26.08.11</span></a></li><li><a href="gap01.html"><span class="t">[한국경제 불편한 진실⑮] AI와 불평등 — 기술은 시간을 줄일 수 있지만, 시간을 줄인 건 늘 제도였다</span><span class="d">26.07.18</span></a></li></ul></section><section class="ser" id="산업-브리핑"><h2>산업 브리핑<em>3편</em></h2><ul class="rows"><li><a href="ind03.html"><span class="t">[한국경제 불편한 진실⑭] 식량 — 값싼 수입 밥상은 공짜가 아니라 &#x27;보험 미가입&#x27;이다<span class="s">국내에서 쓰는 곡물의 5분의 4가 수입이다. 곡물자급률은 21.6%까지 내려앉았다 (2024년 기준)</span></span><span class="d">26.07.07</span></a></li><li><a href="ind01.html"><span class="t">[한국경제 불편한 진실⑫] 플랫폼 — 주문 한 건에 매출 3할이 사라진다<span class="s">배달 중개이용료는 6.8%에서 9.8%로 올랐다가 거래액별 2.0~7.8%로 갈렸다</span></span><span class="d">26.07.05</span></a></li><li><a href="ind02.html"><span class="t">[한국경제 불편한 진실⑬] 에너지 — 싼 전기요금은 공짜가 아니라 &#x27;외상&#x27;이다</span><span class="d">26.07.05</span></a></li></ul></section><section class="ser" id="인프라-브리핑"><h2>인프라 브리핑<em>3편</em></h2><ul class="rows"><li><a href="inf03.html"><span class="t">[한국경제 불편한 진실⑱] 데이터 — 3756만건 유출, 10만원으로 매겨진 값<span class="s">쿠팡 개인정보 3756만건 유출, 과징금 6246억8100만원</span></span><span class="d">26.08.04</span></a></li><li><a href="inf02.html"><span class="t">[한국경제 불편한 진실⑰] 교통 — 세계에서 가장 긴 출퇴근, 값은 시간으로 낸다<span class="s">한국인 평균 출퇴근 1시간48분, 43개국 가운데 가장 길다</span></span><span class="d">26.07.28</span></a></li><li><a href="inf01.html"><span class="t">[한국경제 불편한 진실⑯] 물·인프라 — 원가의 4분의 3에 파는 수돗물, 낡은 관은 미래로 미룬다<span class="s">2024년 수돗물 생산원가는 톤당 1114원, 요금은 829원이다. 원가 회수율 74.4%</span></span><span class="d">26.07.21</span></a></li></ul></section><section class="ser" id="지방재정-브리핑"><h2>지방재정 브리핑<em>1편</em></h2><ul class="rows"><li><a class="im" href="fis01.html"><span class="th"><img src="img/fis01_02.png" alt="" loading="lazy"></span><span class="t">인천 신설구 100일, 개편 운영비 국비 0원에 분구 정산금 다툼<span class="s">설치법은 국가 지원 근거 뒀는데 2027년 정부예산안에 개편 운영비 빠져</span></span><span class="d">26.10.14</span></a></li></ul></section></main>
-<script>(function(){var B=document.querySelector('.board'),K=document.getElementById('back'),H=document.querySelector('.hero h1'),H0=H.textContent;
-function show(){var h=decodeURIComponent(location.hash.slice(1)),s=h&&document.getElementById(h),S=document.querySelectorAll('.ser'),C=document.querySelectorAll('.sub a[href^="#"]');
-if(s&&s.className=='ser'){B.style.display='none';[].forEach.call(S,function(x){x.style.display=x===s?'':'none';});K.style.display='';H.textContent=H0+' · '+s.querySelector('h2').firstChild.textContent;window.scrollTo(0,0);}
-else{B.style.display='';[].forEach.call(S,function(x){x.style.display='';});K.style.display='none';H.textContent=H0;}
-[].forEach.call(C,function(a){a.classList.toggle('on',a.getAttribute('href')=='#'+encodeURI(h)||a.getAttribute('href')=='#'+h);});}
-window.addEventListener('hashchange',show);show();})();</script>
-<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천광역시 미추홀구 용현동 62-7 · 032-777-0421 · weminpress@gmail.com<br>
-자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
-<a href="../about.html">연구소 소개</a> · <a href="../ask.html">의뢰·신청하기</a> · <a href="../join.html">객원연구원 신청</a></div></footer>
-<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>032-777-0421</span></div></div>
+<div class="mast"><div class="wrap"><a class="logo" href="../"><img src="../logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a><a class="asktop" href="../ask.html">의뢰·신청하기</a></div></div>
+<nav class="gnb"><div class="wrap"><a href="index.html">전체 자료</a><a href="g_policy.html" class="on">정책브리핑</a><a href="g_ocean.html">해양</a><a href="g_air.html">항공</a><a href="g_rail.html">철도</a><a href="g_logistics.html">복합물류</a><a href="g_urban.html">도시계획·부동산</a><a href="g_climate.html">기후위기</a><a href="g_economy.html">경제</a><a href="g_ai.html">AI</a><a href="../about.html">연구소</a></div></nav>
+<div class="hero"><div class="wrap"><h1>정책브리핑</h1><p>분야를 가로지르는 브리핑 · 13편</p></div></div>
+<nav class="sub"><div class="wrap"><a href="#s0">교통정책브리핑<em>1</em></a><a href="#s1">복지 브리핑<em>3</em></a><a href="#s2">불평등 브리핑<em>3</em></a><a href="#s3">산업 브리핑<em>3</em></a><a href="#s4">인프라 브리핑<em>3</em></a></div></nav>
+<main class="wrap"><div class="board"><a class="tile" href="#s0"><span class="pic no">교통정책브리핑</span><span class="bd"><h3>교통정책브리핑<em>1편</em></h3><p>공항과 철도, 무엇을 먼저 놓을 것인가</p></span></a><a class="tile" href="#s1"><span class="pic no">복지 브리핑</span><span class="bd"><h3>복지 브리핑<em>3편</em></h3><p>돌봄과 교육과 의료</p></span></a><a class="tile" href="#s2"><span class="pic"><img src="img/gap03_01.png" alt="" loading="lazy"></span><span class="bd"><h3>불평등 브리핑<em>3편</em></h3><p>AI와 계층 이동과 수도권·비수도권</p></span></a><a class="tile" href="#s3"><span class="pic no">산업 브리핑</span><span class="bd"><h3>산업 브리핑<em>3편</em></h3><p>플랫폼과 에너지와 식량</p></span></a><a class="tile" href="#s4"><span class="pic no">인프라 브리핑</span><span class="bd"><h3>인프라 브리핑<em>3편</em></h3><p>물과 교통과 데이터</p></span></a></div><section class="ser" id="s0"><h2>교통정책브리핑<em>1편</em></h2><ul class="rows"><li><a href="col01.html"><span class="th"></span><span class="t">기후위기 시대, 경기국제공항보다 &#x27;제3공항철도&#x27;가 낫다<span class="s">경기도 &#x27;경기국제공항&#x27; 추진 vs 탄소중립 시대 역행 논란</span></span><span class="d"></span></a></li></ul></section><section class="ser" id="s1"><h2>복지 브리핑<em>3편</em></h2><ul class="rows"><li><a href="wel02.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑩] 교육 — 사교육비 27조5351억원, 줄었다는 통계의 함정<span class="s">총액은 5.7% 줄었는데 학생 수는 2.3%밖에 줄지 않았다</span></span><span class="d">26.08.04</span></a></li><li><a href="wel01.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑨] 돌봄 — 멈추면 나라가 멈추는데, 값은 최저임금 언저리<span class="s">무급 가사·돌봄노동만 한 해 582조원, 국내총생산의 22.8%</span></span><span class="d">26.07.28</span></a></li><li><a href="wel03.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑪] 의료 — 3분 진료가 떠받친 세계 최고 접근성, 그 청구서가 온다</span><span class="d">26.07.05</span></a></li></ul></section><section class="ser" id="s2"><h2>불평등 브리핑<em>3편</em></h2><ul class="rows"><li><a href="gap03.html"><span class="th"><img src="img/gap03_01.png" alt="" loading="lazy"></span><span class="t">[한국경제 불편한 진실⑳] 수도권·비수도권 — 충남에서 빠져나간 33조원, 서울로 들어온 73조원<span class="s">충남 33조원·경북 21조원·울산 20조원 순유출, 서울 73조원·경기 44조원 순유입</span></span><span class="d">26.08.25</span></a></li><li><a href="gap02.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑲] 계층 이동 — 좁아진 사다리, 그 자리를 메우는 부모 지갑<span class="s">올 상반기 서울 부동산 증여 등기 1만3518건, 1년 만에 82.9% 증가</span></span><span class="d">26.08.11</span></a></li><li><a href="gap01.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑮] AI와 불평등 — 기술은 시간을 줄일 수 있지만, 시간을 줄인 건 늘 제도였다</span><span class="d">26.07.18</span></a></li></ul></section><section class="ser" id="s3"><h2>산업 브리핑<em>3편</em></h2><ul class="rows"><li><a href="ind03.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑭] 식량 — 값싼 수입 밥상은 공짜가 아니라 &#x27;보험 미가입&#x27;이다<span class="s">국내에서 쓰는 곡물의 5분의 4가 수입이다. 곡물자급률은 21.6%까지 내려앉았다 (2024년 기준)</span></span><span class="d">26.07.07</span></a></li><li><a href="ind01.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑫] 플랫폼 — 주문 한 건에 매출 3할이 사라진다<span class="s">배달 중개이용료는 6.8%에서 9.8%로 올랐다가 거래액별 2.0~7.8%로 갈렸다</span></span><span class="d">26.07.05</span></a></li><li><a href="ind02.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑬] 에너지 — 싼 전기요금은 공짜가 아니라 &#x27;외상&#x27;이다</span><span class="d">26.07.05</span></a></li></ul></section><section class="ser" id="s4"><h2>인프라 브리핑<em>3편</em></h2><ul class="rows"><li><a href="inf03.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑱] 데이터 — 3756만건 유출, 10만원으로 매겨진 값<span class="s">쿠팡 개인정보 3756만건 유출, 과징금 6246억8100만원</span></span><span class="d">26.08.04</span></a></li><li><a href="inf02.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑰] 교통 — 세계에서 가장 긴 출퇴근, 값은 시간으로 낸다<span class="s">한국인 평균 출퇴근 1시간48분, 43개국 가운데 가장 길다</span></span><span class="d">26.07.28</span></a></li><li><a href="inf01.html"><span class="th"></span><span class="t">[한국경제 불편한 진실⑯] 물·인프라 — 원가의 4분의 3에 파는 수돗물, 낡은 관은 미래로 미룬다<span class="s">2024년 수돗물 생산원가는 톤당 1114원, 요금은 829원이다. 원가 회수율 74.4%</span></span><span class="d">26.07.21</span></a></li></ul></section></main>
+<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminpress@gmail.com<br>
+자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.</div></footer>
 <script src="../nocopy.js"></script>
 </body></html>
