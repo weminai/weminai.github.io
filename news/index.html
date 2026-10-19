@@ -348,7 +348,18 @@ var MAP={
  "철도 일반":"철도",
  "항공산업":"항공",
  "인천 대형사업 타당성":"인천경제",
- "가계부채 브리핑":"정책브리핑"
+ "가계부채 브리핑":"경제",
+ "수출·고용 브리핑":"경제",
+ "조세 브리핑":"경제",
+ "복지 브리핑":"경제",
+ "불평등 브리핑":"경제",
+ "산업 브리핑":"경제",
+ "인프라 브리핑":"경제",
+ "증시 브리핑":"경제",
+ "노동 브리핑":"경제",
+ "기업·금융 브리핑":"경제",
+ "교통정책브리핑":"철도",
+ "에너지정책브리핑":"기후위기"
 };
 // 분야 값이 어느 지면으로 가는가 (표에 없는 묶음용)
 var FIELD={"정책브리핑":"정책브리핑","해양":"해양","항공":"항공","공항·물류":"항공","철도":"철도",
@@ -421,7 +432,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var top5={}; list.slice(0,5).forEach(function(p){ top5[p.id]=1; });   // 1면 위쪽에 쓴 것은 뺀다
   var bin={}; MENU.forEach(function(k){ bin[k]=[]; });
   var used={}; briefs.forEach(function(p){ used[p.id]=1; });
-  list.forEach(function(p){ if(top5[p.id]||used[p.id]||isBrief(p)) return; var k=secOf(p); (bin[k]=bin[k]||[]).push(p); });
+  list.forEach(function(p){ if(top5[p.id]||used[p.id]) return; var k=secOf(p); (bin[k]=bin[k]||[]).push(p); });
 
   var subHtml='';
   (SUBS["도시·부동산"]||[]).forEach(function(sb){
