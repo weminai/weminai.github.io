@@ -6,7 +6,7 @@
 :root{
  --paper:#fff; --ink:#111; --sub:#333; --mute:#6B6B68; --line:#D8D8D4; --rule:#111;
  --red:#C8102E; --navy:#0E2A62; --soft:#F6F5F2;
- --cobalt:#1A5CF0; --cobalt-l:#2E72FF;
+ --cobalt:#17428F; --cobalt-l:#1B4FA8;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);line-height:1.6;
@@ -30,7 +30,7 @@ main{flex:1 0 auto}
 .title h1{margin:0;font-size:54px;letter-spacing:-2px;font-weight:900;line-height:1;color:var(--cobalt-l)}
 /* 라틴 대문자는 한글보다 낮게 앉는다. AI만 키워 윗선·아랫선을 맞춘다 */
 .title h1 .lat{font-size:1.12em;letter-spacing:-2.5px;display:inline-block;transform:translateY(.012em);vertical-align:baseline}
-.title .en{display:block;margin-top:7px;font-size:11.5px;letter-spacing:4px;color:var(--cobalt);opacity:.78;font-weight:700}
+.title .en{display:block;margin-top:7px;font-size:11.5px;letter-spacing:4px;color:var(--cobalt);opacity:.62;font-weight:700}
 .title .slo{display:block;margin-top:9px;font-size:13.5px;color:var(--sub)}
 @media(max-width:820px){
  .mast .wrap{grid-template-columns:1fr;text-align:center;padding:14px 18px 12px}
@@ -43,6 +43,21 @@ main{flex:1 0 auto}
 .gnb a{padding:11px 0 9px;white-space:nowrap;border-bottom:3px solid transparent}
 .gnb a:hover{border-color:var(--red);color:var(--red)}
 .gnb .home{color:var(--mute);font-weight:700;margin-left:auto}
+/* 하위 메뉴 */
+.gnb .has{position:relative}
+.gnb .has>a::after{content:'\25BE';font-size:10px;margin-left:4px;color:var(--mute)}
+.gnb .sub{display:none;position:absolute;left:-10px;top:100%;z-index:40;background:#fff;
+ border:1px solid var(--rule);border-top:0;min-width:146px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.gnb .has:hover .sub,.gnb .has:focus-within .sub{display:block}
+.gnb .sub a{display:block;padding:9px 14px;font-size:14.5px;font-weight:700;border-bottom:1px solid var(--line)}
+.gnb .sub a:last-child{border-bottom:0}
+.gnb .sub a:hover{background:var(--soft);color:var(--red)}
+.gnb .sub a.off{color:#A9A9A4;font-weight:600}
+.gnb .sub a.off:hover{background:#fff;color:#A9A9A4;cursor:default}
+.gnb .sub a.off em{font-style:normal;font-size:11.5px;margin-left:5px}
+@media(max-width:900px){.gnb .sub{position:static;display:block;border:0;box-shadow:none;min-width:0}
+ .gnb .sub a{display:inline-block;padding:11px 0 9px;border:0;margin-right:16px;font-size:15.5px}
+ .gnb .has>a::after{display:none}}
 
 /* 속보띠 */
 .flash{border-bottom:1px solid var(--line);background:var(--soft);font-size:13.5px}
@@ -62,7 +77,8 @@ main{flex:1 0 auto}
 .lead h2{margin:10px 0 8px;font-size:40px;line-height:1.22;letter-spacing:-1.6px;font-weight:900}
 .lead h2 a:hover{color:var(--red)}
 .lead .sub{margin:0 0 12px;font-size:17px;color:var(--sub);line-height:1.5;font-weight:500}
-.lead figure{margin:0 0 12px}.lead img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.lead figure{margin:0 0 12px}.lead img{width:100%;height:330px;object-fit:cover;display:block;border:1px solid var(--line)}
+@media(max-width:600px){.lead img{height:210px}}
 .byl{font-size:12.5px;color:var(--mute);display:flex;gap:10px;align-items:center}
 .byl .nm{font-weight:800;color:var(--sub)}
 @media(max-width:600px){.lead h2{font-size:29px;letter-spacing:-1.1px}.lead .sub{font-size:15.5px}}
@@ -73,7 +89,7 @@ main{flex:1 0 auto}
 .major article h3{margin:0 0 6px;font-size:20px;line-height:1.3;letter-spacing:-.8px;font-weight:800}
 .major article h3 a:hover{color:var(--red)}
 .major article p{margin:0 0 7px;font-size:14px;color:var(--sub);line-height:1.5}
-.major img{width:100%;height:auto;display:block;border:1px solid var(--line);margin-bottom:9px}
+.major img{width:100%;height:132px;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:9px}
 @media(max-width:600px){.major{grid-template-columns:1fr}}
 
 /* 오른쪽 단 */
@@ -95,17 +111,18 @@ main{flex:1 0 auto}
 .opin .who{margin-top:9px;font-size:12.5px;color:var(--mute);font-weight:700}
 
 /* 분야별 */
-.secs{border-top:3px solid var(--rule);margin-top:26px;padding-top:4px}
-.sec{padding:16px 0 4px;border-bottom:1px solid var(--line)}
+.secs{border-top:3px solid var(--rule);margin-top:26px;padding-top:4px;
+ display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.sec{padding:14px 0 6px;border-bottom:1px solid var(--line)}
+@media(max-width:860px){.secs{grid-template-columns:1fr}}
 .sec h4{margin:0 0 8px;display:flex;align-items:baseline;gap:10px;font-size:19px;font-weight:900;letter-spacing:-.6px}
 .sec h4 a:hover{color:var(--red)}
 .sec h4 em{margin-left:auto;font-style:normal;font-size:12.5px;color:var(--mute);font-weight:600}
-.sec ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 28px}
+.sec ul{list-style:none;margin:0;padding:0}
 .sec li a{display:grid;grid-template-columns:1fr 80px;gap:12px;padding:7px 0;border-bottom:1px dotted var(--line)}
 .sec li .t{font-size:14.5px;font-weight:700;line-height:1.45}
 .sec li .d{font-size:12px;color:var(--mute);text-align:right;padding-top:2px}
 .sec li a:hover .t{color:var(--red)}
-@media(max-width:700px){.sec ul{grid-template-columns:1fr}}
 
 /* 바닥 */
 footer{margin-top:40px;border-top:5px solid var(--rule);background:#fff;color:var(--sub)}
@@ -145,13 +162,17 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 
 <nav class="gnb"><div class="wrap">
   <a href="#sec-정책브리핑">정책브리핑</a>
+  <a href="#sec-인천경제">인천경제</a>
   <a href="#sec-해양">해양</a>
   <a href="#sec-항공">항공</a>
   <a href="#sec-철도">철도</a>
   <a href="#sec-복합물류">복합물류</a>
-  <a href="#sec-도시계획·부동산">도시계획·부동산</a>
+  <span class="has"><a href="#sec-도시·부동산">도시·부동산</a>
+    <span class="sub" id="subUrban"></span>
+  </span>
   <a href="#sec-기후위기">기후위기</a>
   <a href="#sec-경제">경제</a>
+  <a href="#sec-국제관계">국제관계</a>
   <a href="#sec-AI">AI</a>
   <a class="home" href="/media/">전체 자료</a>
 </div></nav>
@@ -227,7 +248,46 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   if(box) box.innerHTML = d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+W[d.getDay()]+"요일<br>제호 AI경세제민";
 })();
 
-var ORDER=["정책브리핑","해양","항공","철도","복합물류","도시계획·부동산","기후위기","경제","AI"];
+// 지면. 메뉴에 보이는 차례와, 기사를 채우는 차례를 따로 둔다.
+// ★ 한 기사는 한 지면에만 들어간다(소장님 「중복되게 올리지 말라」). 먼저 채우는 지면이 가져간다.
+var INCHEON=/인천|송도|영종|강화|옹진|미추홀|부평|계양|남동구|검단|제물포/;
+var ECON=/경제|투자|산업|일자리|예산|재정|기업|수출|성장|세수|금융|물가|부채|소득|상권|고용/;
+var INTL=/중국|미국|일본|유럽|독일|프랑스|베트남|대만|러시아|해외|국제|글로벌|관세|수교|외교|북한|WTO|FTA|동남아/;
+
+var SECTIONS=[
+ {k:"정책브리핑", f:["정책브리핑"]},
+ {k:"해양",       f:["해양"]},
+ {k:"항공",       f:["항공","공항·물류"]},
+ {k:"철도",       f:["철도"]},
+ {k:"복합물류",   f:["복합물류"]},
+ {k:"도시·부동산", f:["도시계획·부동산","도시계획","도시재생","도시정비","부동산"], subs:[
+    {k:"도시계획", kw:/도시계획|지구단위|용도지역|도시기본계획|공간계획/},
+    {k:"도시재생", kw:/도시재생|원도심|쇠퇴|마을만들기/},
+    {k:"도시정비", kw:/재개발|재건축|정비사업|주거환경|리모델링/},
+    {k:"부동산",   kw:/부동산|아파트|주택|분양|집값|전세|월세|주담대|주택담보/}
+ ]},
+ {k:"기후위기",   f:["기후위기"]},
+ {k:"AI",         f:["AI"]},
+ {k:"인천경제",   both:[INCHEON,ECON]},
+ {k:"경제",       f:["경제"]},
+ {k:"국제관계",   kw:INTL}
+];
+// 메뉴에 거는 차례(보기 좋은 차례)
+var MENU=["정책브리핑","인천경제","해양","항공","철도","복합물류","도시·부동산","기후위기","경제","국제관계","AI"];
+
+var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||"")+" "+String(p["분야"]||""); };
+var used={};
+var pick=function(list,s){
+  return list.filter(function(p){
+    if(used[p.id]) return false;
+    var h=hay(p), ok=false;
+    if(s.f){ ok = s.f.indexOf(p["분야"])>=0; }
+    else if(s.both){ ok = s.both[0].test(h) && s.both[1].test(h); }
+    else { ok = s.kw.test(h); }
+    if(ok) used[p.id]=1;
+    return ok;
+  });
+};
 var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");};
 var href=function(p){ p=String(p||""); return p.charAt(0)==="/" ? p : "/"+p; };
 var dstr=function(s){ s=String(s||""); var m=s.match(/(\d{4})-(\d{2})-(\d{2})/); return m? (m[2].replace(/^0/,"")+"."+m[3]) : s; };
@@ -268,18 +328,27 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span></a></li>';
   }).join('');
 
-  // 분야별
-  var by={};
-  list.forEach(function(p){ var k=p["분야"]||"그 밖"; (by[k]=by[k]||[]).push(p); });
-  var keys=ORDER.filter(function(k){return by[k];}).concat(Object.keys(by).filter(function(k){return ORDER.indexOf(k)<0;}));
-  document.getElementById('secs').innerHTML = keys.map(function(k){
-    var arr=by[k];
-    return '<section class="sec" id="sec-'+esc(k)+'">'+
-      '<h4><span>'+esc(k)+'</span><em>'+arr.length+'편</em></h4>'+
-      '<ul>'+arr.slice(0,8).map(function(p){
-        return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></a></li>';
-      }).join('')+'</ul></section>';
-  }).join('');
+  // 지면
+  var li=function(p){ return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></a></li>'; };
+  // 1면 위쪽에 이미 쓴 다섯은 지면에서 뺀다(중복 금지)
+  list.slice(0,5).forEach(function(p){ used[p.id]=1; });
+  var made={}, subHtml='';
+  SECTIONS.forEach(function(s){
+    var arr=pick(list,s);
+    if(!arr.length && !s.subs) return;
+    var inner='<h4><span>'+esc(s.k)+'</span><em>'+arr.length+'편</em></h4>'+
+              '<ul>'+arr.slice(0,5).map(li).join('')+'</ul>';
+    if(s.subs){
+      s.subs.forEach(function(sb){
+        var a2=arr.filter(function(p){ return sb.kw.test(hay(p)); });
+        subHtml += a2.length ? '<a href="#sec-'+esc(s.k)+'">'+esc(sb.k)+'</a>'
+                             : '<a class="off">'+esc(sb.k)+'<em>준비 중</em></a>';
+      });
+    }
+    made[s.k]='<section class="sec" id="sec-'+esc(s.k)+'">'+inner+'</section>';
+  });
+  document.getElementById('secs').innerHTML = MENU.map(function(k){ return made[k]||''; }).join('');
+  var su=document.getElementById('subUrban'); if(su) su.innerHTML = subHtml;
 }).catch(function(){
   document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다. 잠시 뒤에 다시 열어 주십시오.</div>';
 });
