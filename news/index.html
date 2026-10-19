@@ -1,0 +1,284 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI경세제민 — 일·길·터·돈을 숫자로 읽는다</title>
+<meta name="description" content="AI경세제민. 인천의 교통과 물류, 항만과 공항, 도시와 지역경제를 숫자로 읽는 전문지. 경세제민 AI·경제연구소(주) 발행.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/favicon_64.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root{
+ --paper:#fff; --ink:#111; --sub:#333; --mute:#6B6B68; --line:#D8D8D4; --rule:#111;
+ --red:#C8102E; --navy:#0E2A62; --soft:#F6F5F2;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.6;
+ font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+ display:flex;flex-direction:column;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px;width:100%}
+main{flex:1 0 auto}
+
+/* 윗띠 */
+.top{background:var(--ink);color:#DCDCD8;font-size:12.5px}
+.top .wrap{display:flex;justify-content:space-between;gap:12px;padding:6px 18px}
+.top a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+
+/* 제호 */
+.mast{border-bottom:1px solid var(--line)}
+.mast .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:18px 18px 14px}
+.mast .lft,.mast .rgt{font-size:12.5px;color:var(--mute);line-height:1.7}
+.mast .rgt{text-align:right}
+.title{text-align:center}
+.title h1{margin:0;font-size:54px;letter-spacing:-2px;font-weight:900;line-height:1}
+.title .en{display:block;margin-top:7px;font-size:11.5px;letter-spacing:4px;color:var(--mute);font-weight:700}
+.title .slo{display:block;margin-top:9px;font-size:13.5px;color:var(--sub)}
+@media(max-width:820px){
+ .mast .wrap{grid-template-columns:1fr;text-align:center;padding:14px 18px 12px}
+ .mast .rgt{text-align:center}.title h1{font-size:38px;letter-spacing:-1.4px}
+}
+
+/* 섹션 메뉴 */
+.gnb{border-top:3px solid var(--rule);border-bottom:1px solid var(--rule);background:#fff}
+.gnb .wrap{display:flex;gap:22px;padding:0 18px;font-weight:800;font-size:15.5px;overflow-x:auto}
+.gnb a{padding:11px 0 9px;white-space:nowrap;border-bottom:3px solid transparent}
+.gnb a:hover{border-color:var(--red);color:var(--red)}
+.gnb .home{color:var(--mute);font-weight:700;margin-left:auto}
+
+/* 속보띠 */
+.flash{border-bottom:1px solid var(--line);background:var(--soft);font-size:13.5px}
+.flash .wrap{display:flex;align-items:center;gap:12px;padding:8px 18px;overflow:hidden}
+.flash b{color:var(--red);font-weight:900;white-space:nowrap;letter-spacing:-.3px}
+.flash .fl{display:flex;gap:26px;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.flash .fl::-webkit-scrollbar{display:none}
+.flash .fl a:hover{color:var(--red)}
+
+/* 1면 격자 */
+.front{display:grid;grid-template-columns:2.1fr 1fr;gap:0 30px;padding:24px 0 10px}
+.front>.col-r{border-left:1px solid var(--line);padding-left:28px}
+@media(max-width:900px){.front{grid-template-columns:1fr}.front>.col-r{border-left:0;padding-left:0;border-top:3px solid var(--rule);margin-top:20px;padding-top:16px}}
+
+/* 톱기사 */
+.lead .kicker{display:inline-block;font-size:12.5px;font-weight:900;color:#fff;background:var(--red);padding:3px 9px;letter-spacing:-.2px}
+.lead h2{margin:10px 0 8px;font-size:40px;line-height:1.22;letter-spacing:-1.6px;font-weight:900}
+.lead h2 a:hover{color:var(--red)}
+.lead .sub{margin:0 0 12px;font-size:17px;color:var(--sub);line-height:1.5;font-weight:500}
+.lead figure{margin:0 0 12px}.lead img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.byl{font-size:12.5px;color:var(--mute);display:flex;gap:10px;align-items:center}
+.byl .nm{font-weight:800;color:var(--sub)}
+@media(max-width:600px){.lead h2{font-size:29px;letter-spacing:-1.1px}.lead .sub{font-size:15.5px}}
+
+/* 주요기사 */
+.major{border-top:1px solid var(--rule);margin-top:22px;padding-top:16px;
+ display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+.major article h3{margin:0 0 6px;font-size:20px;line-height:1.3;letter-spacing:-.8px;font-weight:800}
+.major article h3 a:hover{color:var(--red)}
+.major article p{margin:0 0 7px;font-size:14px;color:var(--sub);line-height:1.5}
+.major img{width:100%;height:auto;display:block;border:1px solid var(--line);margin-bottom:9px}
+@media(max-width:600px){.major{grid-template-columns:1fr}}
+
+/* 오른쪽 단 */
+.col-r h4{margin:0 0 10px;font-size:16px;font-weight:900;letter-spacing:-.4px;
+ border-bottom:3px solid var(--rule);padding-bottom:6px}
+.col-r h4 .sm{float:right;font-size:12px;color:var(--mute);font-weight:600;padding-top:4px}
+.rank{list-style:none;margin:0 0 26px;padding:0;counter-reset:r}
+.rank li{counter-increment:r;border-bottom:1px solid var(--line)}
+.rank a{display:grid;grid-template-columns:22px 1fr;gap:9px;padding:9px 0;align-items:start}
+.rank a::before{content:counter(r);font-weight:900;color:var(--red);font-size:14px;line-height:1.5}
+.rank .t{font-size:14.5px;font-weight:700;line-height:1.45}
+.rank a:hover .t{color:var(--red)}
+
+/* 편집장 */
+.opin{background:var(--soft);border-top:3px solid var(--rule);padding:14px;margin-bottom:26px}
+.opin .lab{font-size:12px;font-weight:900;letter-spacing:1px;color:var(--red)}
+.opin h5{margin:6px 0 6px;font-size:17px;line-height:1.35;letter-spacing:-.6px;font-weight:800}
+.opin p{margin:0;font-size:13.5px;color:var(--sub)}
+.opin .who{margin-top:9px;font-size:12.5px;color:var(--mute);font-weight:700}
+
+/* 분야별 */
+.secs{border-top:3px solid var(--rule);margin-top:26px;padding-top:4px}
+.sec{padding:16px 0 4px;border-bottom:1px solid var(--line)}
+.sec h4{margin:0 0 8px;display:flex;align-items:baseline;gap:10px;font-size:19px;font-weight:900;letter-spacing:-.6px}
+.sec h4 a:hover{color:var(--red)}
+.sec h4 em{margin-left:auto;font-style:normal;font-size:12.5px;color:var(--mute);font-weight:600}
+.sec ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 28px}
+.sec li a{display:grid;grid-template-columns:1fr 80px;gap:12px;padding:7px 0;border-bottom:1px dotted var(--line)}
+.sec li .t{font-size:14.5px;font-weight:700;line-height:1.45}
+.sec li .d{font-size:12px;color:var(--mute);text-align:right;padding-top:2px}
+.sec li a:hover .t{color:var(--red)}
+@media(max-width:700px){.sec ul{grid-template-columns:1fr}}
+
+/* 바닥 */
+footer{margin-top:40px;border-top:5px solid var(--rule);background:#fff;color:var(--sub)}
+footer .wrap{padding:20px 18px 30px;font-size:13px;line-height:1.95}
+footer .pub{font-weight:900;color:var(--ink);font-size:15px;letter-spacing:-.4px}
+footer .meta{margin-top:8px;color:var(--mute)}
+footer .links{margin-top:10px}
+footer .links a{text-decoration:underline;margin-right:14px}
+footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);color:var(--mute);font-size:12.5px}
+.empty{padding:26px 0;color:var(--mute);font-size:14px}
+
+/* 회원 전용 표시 */
+.lock{display:inline-block;font-size:11.5px;font-weight:900;letter-spacing:-.2px;
+ color:#7A4B00;background:#FFE1AE;border:1px solid #E3B566;padding:1px 7px;margin-left:7px;vertical-align:middle}
+.lock.on::before{content:'\1F512';margin-right:3px;font-size:10.5px}
+.sec li .t .lock,.rank .t .lock{margin-left:5px}
+.notice{border:1px solid var(--line);background:var(--soft);padding:13px 15px;margin:22px 0 0;font-size:13.5px;color:var(--sub)}
+.notice b{color:var(--ink)}
+.notice a{color:var(--red);font-weight:800;text-decoration:underline}
+</style></head><body>
+
+<div class="top"><div class="wrap">
+  <span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span>
+  <span><a href="/">연구소 누리집</a> · <a href="/ask.html">의뢰·신청</a> · 032-777-0421</span>
+</div></div>
+
+<header class="mast"><div class="wrap">
+  <div class="lft" id="dateBox"></div>
+  <div class="title">
+    <h1>AI경세제민</h1>
+    <span class="en">AI GYEONGSEJEMIN</span>
+    <span class="slo">일·길·터·돈을 숫자로 읽는다</span>
+  </div>
+  <!-- 등록이 끝나면 아래 줄에 「인터넷신문 등록번호 인천 아00000」을 넣는다. 등록 전에는 적지 않는다 -->
+  <div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div>
+</div></header>
+
+<nav class="gnb"><div class="wrap">
+  <a href="#sec-정책브리핑">정책브리핑</a>
+  <a href="#sec-해양">해양</a>
+  <a href="#sec-항공">항공</a>
+  <a href="#sec-철도">철도</a>
+  <a href="#sec-복합물류">복합물류</a>
+  <a href="#sec-도시계획·부동산">도시계획·부동산</a>
+  <a href="#sec-기후위기">기후위기</a>
+  <a href="#sec-경제">경제</a>
+  <a href="#sec-AI">AI</a>
+  <a class="home" href="/media/">전체 자료</a>
+</div></nav>
+
+<div class="flash"><div class="wrap">
+  <b>새 기사</b>
+  <div class="fl" id="flash"></div>
+</div></div>
+
+<main><div class="wrap">
+
+  <div class="front">
+    <div class="col-l">
+      <article class="lead" id="lead"></article>
+      <div class="major" id="major"></div>
+    </div>
+
+    <aside class="col-r">
+      <h4>많이 본 기사<span class="sm">최근</span></h4>
+      <ol class="rank" id="rank"></ol>
+
+      <div class="opin">
+        <div class="lab">편집장의 눈</div>
+        <h5 id="opinT">기사로는 끝까지 따라가지 못한 것들</h5>
+        <p id="opinP">기자로 이십이 년, 그 가운데 편집국장으로 삼 년을 보내고 보니 남은 것이 있었다. 물류학 박사를 하며 배운 셈법으로 그것들을 다시 본다.</p>
+        <div class="who">편집장 김갑봉</div>
+      </div>
+
+      <h4>연구소</h4>
+      <ol class="rank">
+        <li><a href="/about.html"><span class="t">연구소 소개와 연구 실적</span></a></li>
+        <li><a href="/ask.html"><span class="t">연구 의뢰·강연·출판 신청</span></a></li>
+        <li><a href="/join.html"><span class="t">객원연구원 신청</span></a></li>
+      </ol>
+    </aside>
+  </div>
+
+  <section class="secs" id="secs"></section>
+
+  <div class="notice">
+    <b>요약은 누구에게나, 원문은 회원에게.</b>
+    「<span class="lock on">회원</span>」이 붙은 글은 요약까지 열려 있고 원문은 연구소 회원이 보십니다.
+    개인 회비는 월 3000원, 하루 100원입니다. 기관은 연 구독 10만원입니다.
+    <a href="/join.html">회원 안내</a>
+  </div>
+
+</div></main>
+
+<footer><div class="wrap">
+  <div class="pub">AI경세제민</div>
+  <div class="meta">
+    발행 경세제민 AI·경제연구소(주) · 발행인 김효진 · 편집인 김효진 · 편집장 김갑봉<br>
+    인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 등록 뒤 넣을 것: 인터넷신문 등록번호, 등록일자, 청소년보호책임자 -->
+  </div>
+  <div class="links">
+    <a href="/about.html">연구소 소개</a>
+    <a href="/media/">전체 자료</a>
+    <a href="/ask.html">의뢰·신청하기</a>
+    <a href="/join.html">객원연구원 신청</a>
+    <a href="/ask.html">정정보도 청구·제보</a>
+  </div>
+  <div class="copy">
+    자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다.
+    인용할 때는 출처(AI경세제민, weminai.com)를 반드시 밝혀 주십시오.
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  var W="일월화수목금토", d=new Date();
+  var box=document.getElementById('dateBox');
+  if(box) box.innerHTML = d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+W[d.getDay()]+"요일<br>제호 AI경세제민";
+})();
+
+var ORDER=["정책브리핑","해양","항공","철도","복합물류","도시계획·부동산","기후위기","경제","AI"];
+var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");};
+var href=function(p){ p=String(p||""); return p.charAt(0)==="/" ? p : "/"+p; };
+var dstr=function(s){ s=String(s||""); var m=s.match(/(\d{4})-(\d{2})-(\d{2})/); return m? (m[2].replace(/^0/,"")+"."+m[3]) : s; };
+// 공개 범위 — "요약"이면 원문은 회원에게만. 값이 없으면 전체 공개(이미 올린 글)
+var isMem=function(p){ return String(p["공개"]||"")==="요약" || p["회원전용"]===true; };
+var lock=function(p){ return isMem(p) ? '<span class="lock on">회원</span>' : ''; };
+
+fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
+  if(!Array.isArray(list)||!list.length){ document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다.</div>'; return; }
+  list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
+
+  // 속보띠 — 최신 여섯
+  document.getElementById('flash').innerHTML = list.slice(0,6).map(function(p){
+    return '<a href="'+href(p["파일"])+'">'+esc(p["제목"])+'</a>';
+  }).join('');
+
+  // 톱기사
+  var t=list[0];
+  document.getElementById('lead').innerHTML =
+    '<span class="kicker">'+esc(t["묶음"]||t["분야"])+'</span>'+
+    '<h2><a href="'+href(t["파일"])+'">'+esc(t["제목"])+'</a>'+lock(t)+'</h2>'+
+    (t["부제"]?'<p class="sub">'+esc(t["부제"])+'</p>':'')+
+    (t["대표그림"]?'<figure><a href="'+href(t["파일"])+'"><img src="'+href(t["대표그림"])+'" alt=""></a></figure>':'')+
+    '<div class="byl"><span class="nm">'+esc(t["바이라인"]||"")+'</span><span>'+esc(t["날짜"]||"")+'</span></div>';
+
+  // 주요기사 넷
+  document.getElementById('major').innerHTML = list.slice(1,5).map(function(p){
+    return '<article>'+
+      (p["대표그림"]?'<a href="'+href(p["파일"])+'"><img src="'+href(p["대표그림"])+'" alt=""></a>':'')+
+      '<h3><a href="'+href(p["파일"])+'">'+esc(p["제목"])+'</a>'+lock(p)+'</h3>'+
+      (p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+
+      '<div class="byl"><span class="nm">'+esc(p["바이라인"]||"")+'</span><span>'+esc(p["날짜"]||"")+'</span></div>'+
+    '</article>';
+  }).join('');
+
+  // 오른쪽 단
+  document.getElementById('rank').innerHTML = list.slice(0,7).map(function(p){
+    return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span></a></li>';
+  }).join('');
+
+  // 분야별
+  var by={};
+  list.forEach(function(p){ var k=p["분야"]||"그 밖"; (by[k]=by[k]||[]).push(p); });
+  var keys=ORDER.filter(function(k){return by[k];}).concat(Object.keys(by).filter(function(k){return ORDER.indexOf(k)<0;}));
+  document.getElementById('secs').innerHTML = keys.map(function(k){
+    var arr=by[k];
+    return '<section class="sec" id="sec-'+esc(k)+'">'+
+      '<h4><span>'+esc(k)+'</span><em>'+arr.length+'편</em></h4>'+
+      '<ul>'+arr.slice(0,8).map(function(p){
+        return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></a></li>';
+      }).join('')+'</ul></section>';
+  }).join('');
+}).catch(function(){
+  document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다. 잠시 뒤에 다시 열어 주십시오.</div>';
+});
+</script>
+</body></html>
