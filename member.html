@@ -110,6 +110,23 @@ main table{width:100%;border-collapse:collapse;margin:4px 0 8px}
 main table th{text-align:left;width:120px;vertical-align:top;padding:9px 10px 9px 0;font-size:14.5px;color:var(--navy);border-bottom:1px solid var(--line)}
 main table td{padding:9px 0;font-size:15px;border-bottom:1px solid var(--line)}
 .small{font-size:13.5px;color:var(--mute)}
+</style><style>
+.mform{border:2px solid var(--ink,#111);padding:18px 18px 14px;margin:0 0 26px;background:#fff}
+.mform h2{margin:0 0 4px;font-size:19px;font-weight:900}
+.mform .lead{margin:0 0 14px;font-size:13.5px;color:#555}
+.mform .row{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:start;margin-bottom:10px}
+.mform .row>label{font-size:14px;font-weight:700;padding-top:8px;color:#333}
+.mform .req::after{content:' *';color:#C0392B}
+.mform input[type=text],.mform input[type=email],.mform input[type=tel]{width:100%;box-sizing:border-box;font:inherit;font-size:14.5px;padding:8px 11px;border:1px solid #9FB2D4;background:#fff;border-radius:0}
+.mform .chk{display:flex;flex-wrap:wrap;gap:6px 14px;padding-top:7px}
+.mform .chk label{font-size:14px;font-weight:600;display:flex;align-items:center;gap:5px;cursor:pointer}
+.mform .agree{background:#F6F5F2;border:1px solid #D8D8D4;padding:11px 13px;font-size:12.8px;color:#333;line-height:1.75;margin:6px 0 10px}
+.mform .agree label{display:flex;gap:6px;align-items:center;font-weight:800;color:#111;margin-top:6px;cursor:pointer}
+.mform button{font:inherit;font-weight:800;font-size:15px;padding:11px 22px;border:0;cursor:pointer;background:#17428F;color:#fff}
+.mform button:disabled{opacity:.6}
+.mform .msg{font-size:13.5px;font-weight:700;margin-left:10px}
+.mform .hp{position:absolute;left:-9999px}
+@media(max-width:860px){.mform .row{grid-template-columns:1fr}.mform .row>label{padding-top:0}}
 </style></head><body>
 <div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>연구 의뢰 032-777-0421</span></div></div>
 <div class="mast"><div class="wrap"><a class="logo" href="./"><img src="logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
@@ -121,6 +138,33 @@ main table td{padding:9px 0;font-size:15px;border-bottom:1px solid var(--line)}
 </div></div>
 <main><div class="wrap"><div class="cols">
 <div>
+<section class="mform" id="join">
+  <h2>회원가입</h2>
+  <p class="lead">지금은 무료 회원입니다. 가입하시면 연구소가 확인한 뒤 전자우편으로 원문 보시는 방법을 알려 드립니다. 비밀번호는 받지 않습니다.</p>
+  <div class="row"><label class="req" for="m_name">성명</label><input type="text" id="m_name" autocomplete="name" maxlength="40"></div>
+  <div class="row"><label class="req" for="m_mail">전자우편</label><input type="email" id="m_mail" autocomplete="email" maxlength="120" placeholder="name@example.com"></div>
+  <div class="row"><label for="m_tel">연락처</label><input type="tel" id="m_tel" autocomplete="tel" maxlength="30" placeholder="선택"></div>
+  <div class="row"><label class="req">회원 종류</label><div class="chk">
+    <label><input type="radio" name="m_kind" value="개인 회원" checked>개인</label>
+    <label><input type="radio" name="m_kind" value="기관 회원">기관</label></div></div>
+  <div class="row"><label for="m_org">소속</label><input type="text" id="m_org" maxlength="80" placeholder="기관 회원은 기관 이름(선택)"></div>
+  <div class="row"><label>관심 분야</label><div class="chk">
+    <label><input type="checkbox" class="m_f" value="정책브리핑">정책브리핑</label><label><input type="checkbox" class="m_f" value="인천경제">인천경제</label>
+    <label><input type="checkbox" class="m_f" value="해양">해양</label><label><input type="checkbox" class="m_f" value="항공">항공</label>
+    <label><input type="checkbox" class="m_f" value="철도">철도</label><label><input type="checkbox" class="m_f" value="복합물류">복합물류</label>
+    <label><input type="checkbox" class="m_f" value="도시·부동산">도시·부동산</label><label><input type="checkbox" class="m_f" value="기후위기">기후위기</label>
+    <label><input type="checkbox" class="m_f" value="경제">경제</label><label><input type="checkbox" class="m_f" value="국제">국제</label>
+    <label><input type="checkbox" class="m_f" value="AI">AI</label></div></div>
+  <input type="text" id="m_hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="agree">
+    수집 목적: 회원 가입 접수와 원문 열람 안내<br>
+    수집 항목: 성명, 전자우편, 연락처(선택), 소속(선택), 관심 분야<br>
+    보유 기간: 탈퇴하시는 날까지. 탈퇴는 weminaimax@weminai.com 으로 말씀하시면 바로 지웁니다.<br>
+    전송 경로: 가입 내용은 연구소 구글 계정(미국 구글 서버)을 거쳐 연구소 메일과 접수 대장에 들어옵니다.<br>
+    동의하지 않으실 수 있으며, 동의하지 않으시면 가입을 받을 수 없습니다.
+    <label><input type="checkbox" id="m_ok"> 위 내용에 동의합니다.</label></div>
+  <button type="button" id="m_send">가입 신청</button><span class="msg" id="m_msg" role="status"></span>
+</section>
   <fieldset><legend>회원은 무엇을 보십니까</legend>
     <p>연구소가 쓰고 연구소가 그린 글입니다. 정책브리핑과 연재, 분야별 기사가 있습니다.
     요약은 누구에게나 열려 있습니다. <b>원문 전체와 도표 원자료는 회원이 보십니다.</b></p>
@@ -158,9 +202,9 @@ main table td{padding:9px 0;font-size:15px;border-bottom:1px solid var(--line)}
 </div>
 
 <aside>
-  <div class="box"><b>알려 달라 하시려면</b><br>
+  <div class="box"><b>전화·전자우편으로도 받습니다</b><br>
     032-777-0421<br>weminaimax@weminai.com<br>
-    전자우편으로 「회원 알림」이라 적어 보내 주시면 창구가 열릴 때 알려 드립니다.
+    가입 양식이 불편하시면 전자우편에 「회원가입」이라 적어 보내 주셔도 됩니다.
   </div>
   <div class="box"><b>연락</b><br>경세제민 AI·경제연구소(주)<br>
     인천 미추홀구 용현동 55(수봉공원)<br>032-777-0421</div>
@@ -174,4 +218,34 @@ main table td{padding:9px 0;font-size:15px;border-bottom:1px solid var(--line)}
 자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
 <a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a> · <a href="member.html">회원 안내</a></div></footer>
 <script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script>
+(function(){
+ var ENDPOINT='https://script.google.com/macros/s/AKfycbz2eXtTB1hTwJ7D9wxaNbN0MWjj1zNjnZPrOlrDHpCwNtk6uQgshBEJX8_PCnHVS7TkHg/exec';
+ function v(id){return (document.getElementById(id).value||'').trim();}
+ var btn=document.getElementById('m_send'),msg=document.getElementById('m_msg');
+ btn.addEventListener('click',function(){
+  var miss=[];
+  if(!v('m_name')) miss.push('성명');
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('m_mail'))) miss.push('전자우편');
+  if(!document.getElementById('m_ok').checked) miss.push('개인정보 동의');
+  if(miss.length){msg.style.color='#C0392B';msg.textContent='빠진 것: '+miss.join(', ');return;}
+  if(v('m_hp')){msg.style.color='#0E6B3C';msg.textContent='가입 신청을 받았습니다.';return;}
+  var kind=(document.querySelector('input[name=m_kind]:checked')||{}).value||'개인 회원';
+  var fs=[].slice.call(document.querySelectorAll('.m_f:checked')).map(function(c){return c.value;}).join('·');
+  var b=new URLSearchParams();
+  b.append('_form','신청'); b.append('_subject','[회원가입] '+kind+' — '+v('m_name')); b.append('_honey','');
+  [['신청 갈래','회원가입('+kind+')'],['기관·회사',v('m_org')||'개인'],['담당자',v('m_name')],['연락처',v('m_tel')],
+   ['전자우편',v('m_mail')],['제목','회원가입 신청'],['내용','관심 분야: '+(fs||'(고르지 않음)')],['개인정보 동의','동의함']]
+   .forEach(function(p){if(p[1]) b.append(p[0],p[1]);});
+  btn.disabled=true; btn.textContent='보내는 중…'; msg.textContent='';
+  fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:b}).then(function(){
+    btn.textContent='보냈습니다'; msg.style.color='#0E6B3C';
+    msg.textContent='가입 신청을 받았습니다. 연구소가 확인하고 전자우편으로 알려 드리겠습니다.';
+  }).catch(function(){
+    btn.disabled=false; btn.textContent='가입 신청'; msg.style.color='#C0392B';
+    msg.textContent='보내지 못했습니다. 잠시 뒤 다시 누르시거나 weminaimax@weminai.com 으로 보내 주십시오.';
+  });
+ });
+})();
+</script>
 </body></html>
