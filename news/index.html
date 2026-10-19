@@ -44,7 +44,8 @@ main{flex:1 0 auto}
 .gnb a:hover{border-color:var(--red);color:var(--red)}
 .gnb .home{color:var(--mute);font-weight:700;margin-left:auto}
 /* 하위 메뉴 */
-.gnb .has{position:relative}
+.gnb .has{position:relative;display:flex;align-items:flex-start}
+.gnb .has>a{display:block}
 .gnb .has>a::after{content:'\25BE';font-size:10px;margin-left:4px;color:var(--mute)}
 .gnb .sub{display:none;position:absolute;left:-10px;top:100%;z-index:40;background:#fff;
  border:1px solid var(--rule);border-top:0;min-width:146px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
@@ -103,6 +104,23 @@ main{flex:1 0 auto}
 .rank .t{font-size:14.5px;font-weight:700;line-height:1.45}
 .rank a:hover .t{color:var(--red)}
 
+/* 연구 브리핑 — 논문 수준 보고서 */
+.brief{margin:30px 0 0;border-top:3px solid var(--navy);border-bottom:1px solid var(--rule);background:var(--soft)}
+.brief .hd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:14px 16px 4px}
+.brief .hd h3{margin:0;font-size:21px;font-weight:900;letter-spacing:-1px;color:var(--navy)}
+.brief .hd p{margin:0;font-size:13px;color:var(--mute);font-weight:600}
+.brief .bd{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:6px 16px 16px}
+.brief article{padding:12px 16px;border-left:1px solid var(--line)}
+.brief article:first-child{border-left:0;padding-left:0}
+.brief .kk{display:block;font-size:11.5px;font-weight:900;color:var(--navy);letter-spacing:.3px;margin-bottom:5px}
+.brief h4{margin:0 0 5px;font-size:16.5px;font-weight:800;line-height:1.38;letter-spacing:-.5px}
+.brief h4 a:hover{color:var(--red)}
+.brief p{margin:0 0 6px;font-size:13.5px;color:var(--sub);line-height:1.5}
+.brief .dt{font-size:12px;color:var(--mute)}
+@media(max-width:900px){.brief .bd{grid-template-columns:1fr}
+ .brief article{border-left:0;border-top:1px solid var(--line);padding:12px 0}
+ .brief article:first-child{border-top:0}}
+
 /* 편집장 */
 .opin{background:var(--soft);border-top:3px solid var(--rule);padding:14px;margin-bottom:26px}
 .opin .lab{font-size:12px;font-weight:900;letter-spacing:1px;color:var(--red)}
@@ -111,10 +129,31 @@ main{flex:1 0 auto}
 .opin .who{margin-top:9px;font-size:12.5px;color:var(--mute);font-weight:700}
 
 /* 분야별 */
-.secs{border-top:3px solid var(--rule);margin-top:26px;padding-top:4px;
- display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
-.sec{padding:14px 0 6px;border-bottom:1px solid var(--line)}
-@media(max-width:860px){.secs{grid-template-columns:1fr}}
+.secs{border-top:3px solid var(--rule);margin-top:26px;
+ display:grid;grid-template-columns:1fr 1fr;column-gap:0;row-gap:0}
+.sec{padding:14px 22px 10px;border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.sec:nth-child(odd){border-right:1px solid var(--line);padding-left:0}
+.sec:nth-child(even){padding-right:0}
+.sec ul{flex:1}
+.sec li.blank{height:34px;border-bottom:1px dotted var(--line)}
+@media(max-width:860px){.secs{grid-template-columns:1fr}
+ .sec{padding:14px 0 10px}.sec:nth-child(odd){border-right:0}
+ .sec li.blank{display:none}}
+
+/* 광고 자리 — 광고가 없으면 숨는다 */
+.ad{display:none;margin:0 auto;text-align:center}
+.ad.on{display:block}
+.ad img{max-width:100%;height:auto;display:block;margin:0 auto}
+.ad .ph{border:1px dashed #C9C9C4;background:#FAFAF8;color:#9A9A95;
+ font-size:12px;letter-spacing:1px;display:flex;align-items:center;justify-content:center}
+.ad-top .ph{height:90px}
+.ad-mid .ph{height:90px}
+.ad-side .ph{height:250px}
+.ad-foot .ph{height:90px}
+.ad-top{margin:14px auto 0}
+.ad-mid{margin:20px auto 0;padding-top:16px;border-top:1px solid var(--line)}
+.ad-side{margin:0 0 24px}
+.ad-foot{margin:24px auto 0}
 .sec h4{margin:0 0 8px;display:flex;align-items:baseline;gap:10px;font-size:19px;font-weight:900;letter-spacing:-.6px}
 .sec h4 a:hover{color:var(--red)}
 .sec h4 em{margin-left:auto;font-style:normal;font-size:12.5px;color:var(--mute);font-weight:600}
@@ -177,6 +216,8 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <a class="home" href="/media/">전체 자료</a>
 </div></nav>
 
+<div class="wrap"><div class="ad ad-top" id="adTop"><div class="ph">광고 자리 970 × 90</div></div></div>
+
 <div class="flash"><div class="wrap">
   <b>새 기사</b>
   <div class="fl" id="flash"></div>
@@ -191,6 +232,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
     </div>
 
     <aside class="col-r">
+      <div class="ad ad-side" id="adSide"><div class="ph">광고 300 × 250</div></div>
       <h4>많이 본 기사<span class="sm">최근</span></h4>
       <ol class="rank" id="rank"></ol>
 
@@ -210,6 +252,13 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
     </aside>
   </div>
 
+  <section class="brief" id="sec-정책브리핑">
+    <div class="hd"><h3>연구 브리핑</h3><p>연구소가 내는 논문 수준의 보고서입니다. 한 편에 6000자에서 1만 자.</p></div>
+    <div class="bd" id="briefBd"></div>
+  </section>
+
+  <div class="ad ad-mid" id="adMid"><div class="ph">광고 자리 970 × 90</div></div>
+
   <section class="secs" id="secs"></section>
 
   <div class="notice">
@@ -219,14 +268,16 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
     <a href="/join.html">회원 안내</a>
   </div>
 
-</div></main>
+</div>  <div class="wrap"><div class="ad ad-foot" id="adFoot"><div class="ph">광고 자리 970 × 90</div></div></div>
+</main>
 
 <footer><div class="wrap">
   <div class="pub">AI경세제민</div>
   <div class="meta">
     발행 경세제민 AI·경제연구소(주) · 발행인 김효진 · 편집인 김효진 · 편집장 김갑봉<br>
     인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
-    <!-- 등록 뒤 넣을 것: 인터넷신문 등록번호, 등록일자, 청소년보호책임자 -->
+    <br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 등록 뒤 넣을 것: 인터넷신문 등록번호, 등록일자 -->
   </div>
   <div class="links">
     <a href="/about.html">연구소 소개</a>
@@ -242,52 +293,66 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 </div></footer>
 
 <script>
+/* 광고 — 자리는 늘 있고, 광고가 들어오면 그 자리만 켠다.
+   켜는 법: 아래 AD에 그림 주소와 링크를 넣는다. 비워 두면 그 자리는 화면에 나오지 않는다. */
+var AD={ top:null, side:null, mid:null, foot:null };
+/* 보기 — top:{img:"/ad/top_970x90.jpg", href:"https://...", alt:"○○ 광고"} */
+(function(){
+  Object.keys(AD).forEach(function(k){
+    var box=document.getElementById('ad'+k.charAt(0).toUpperCase()+k.slice(1));
+    if(!box) return;
+    var v=AD[k];
+    if(v&&v.img){
+      box.innerHTML='<a href="'+(v.href||'#')+'" rel="noopener"><img src="'+v.img+'" alt="'+(v.alt||'광고')+'"></a>';
+      box.classList.add('on');
+    }
+  });
+})();
 (function(){
   var W="일월화수목금토", d=new Date();
   var box=document.getElementById('dateBox');
   if(box) box.innerHTML = d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+W[d.getDay()]+"요일<br>제호 AI경세제민";
 })();
 
-// 지면. 메뉴에 보이는 차례와, 기사를 채우는 차례를 따로 둔다.
-// ★ 한 기사는 한 지면에만 들어간다(소장님 「중복되게 올리지 말라」). 먼저 채우는 지면이 가져간다.
-var INCHEON=/인천|송도|영종|강화|옹진|미추홀|부평|계양|남동구|검단|제물포/;
-var ECON=/경제|투자|산업|일자리|예산|재정|기업|수출|성장|세수|금융|물가|부채|소득|상권|고용/;
-var INTL=/중국|미국|일본|유럽|독일|프랑스|베트남|대만|러시아|해외|국제|글로벌|관세|수교|외교|북한|WTO|FTA|동남아/;
-
-var SECTIONS=[
- {k:"정책브리핑", f:["정책브리핑"]},
- {k:"해양",       f:["해양"]},
- {k:"항공",       f:["항공","공항·물류"]},
- {k:"철도",       f:["철도"]},
- {k:"복합물류",   f:["복합물류"]},
- {k:"도시·부동산", f:["도시계획·부동산","도시계획","도시재생","도시정비","부동산"], subs:[
-    {k:"도시계획", kw:/도시계획|지구단위|용도지역|도시기본계획|공간계획/},
-    {k:"도시재생", kw:/도시재생|원도심|쇠퇴|마을만들기/},
-    {k:"도시정비", kw:/재개발|재건축|정비사업|주거환경|리모델링/},
-    {k:"부동산",   kw:/부동산|아파트|주택|분양|집값|전세|월세|주담대|주택담보/}
- ]},
- {k:"기후위기",   f:["기후위기"]},
- {k:"AI",         f:["AI"]},
- {k:"인천경제",   both:[INCHEON,ECON]},
- {k:"경제",       f:["경제"]},
- {k:"국제관계",   kw:INTL}
-];
-// 메뉴에 거는 차례(보기 좋은 차례)
-var MENU=["정책브리핑","인천경제","해양","항공","철도","복합물류","도시·부동산","기후위기","경제","국제관계","AI"];
-
-var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||"")+" "+String(p["분야"]||""); };
-var used={};
-var pick=function(list,s){
-  return list.filter(function(p){
-    if(used[p.id]) return false;
-    var h=hay(p), ok=false;
-    if(s.f){ ok = s.f.indexOf(p["분야"])>=0; }
-    else if(s.both){ ok = s.both[0].test(h) && s.both[1].test(h); }
-    else { ok = s.kw.test(h); }
-    if(ok) used[p.id]=1;
-    return ok;
-  });
+// 지면. ★ 묶음마다 들어갈 지면을 하나로 박는다(소장님 「섹션 구분을 정확하게」 「중복되게 올리지 말라」).
+// 낱말로 짐작하지 않는다. 이 표에 없는 묶음만 「분야」 값으로 떨어진다.
+var MAP={
+ "인천 해양산업, 생존의 기로":"해양",
+ "127년 한국철도":"철도",
+ "중국철도":"국제관계",
+ "글로벌 인천공항":"인천경제",
+ "주식공부":"경제",
+ "AI동향":"AI",
+ "포스트 미토스 AI":"AI",
+ "하늘길, 항공이야기":"항공",
+ "UN AI 허브 인천":"인천경제",
+ "호남 반도체와 국가균형발전":"경제",
+ "AGI시대 지역언론":"AI",
+ "AI 메모리 전쟁":"AI",
+ "KTX·SR 통합":"철도",
+ "국제정세":"국제관계",
+ "고속철 운영과 요금":"철도",
+ "젠슨 황과 한국 반도체":"경제",
+ "부동산 브리핑":"도시·부동산",
+ "에너지 전환":"기후위기",
+ "환황해 철도망":"국제관계",
+ "서해선 KTX":"철도",
+ "지방재정 브리핑":"인천경제",
+ "정책브리핑":"정책브리핑"
 };
+// 분야 값이 어느 지면으로 가는가 (표에 없는 묶음용)
+var FIELD={"정책브리핑":"정책브리핑","해양":"해양","항공":"항공","공항·물류":"항공","철도":"철도",
+ "복합물류":"복합물류","도시계획·부동산":"도시·부동산","기후위기":"기후위기","경제":"경제","AI":"AI"};
+
+var MENU=["인천경제","해양","항공","철도","복합물류","도시·부동산","기후위기","경제","국제관계","AI"];
+var SUBS={"도시·부동산":[
+  {k:"도시계획", kw:/도시계획|지구단위|용도지역|도시기본계획|공간계획/},
+  {k:"도시재생", kw:/도시재생|원도심|쇠퇴|마을만들기/},
+  {k:"도시정비", kw:/재개발|재건축|정비사업|주거환경|리모델링/},
+  {k:"부동산",   kw:/부동산|아파트|주택|분양|집값|전세|월세|주담대|주택담보/}
+]};
+var secOf=function(p){ return MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; };
+var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||""); };
 var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");};
 var href=function(p){ p=String(p||""); return p.charAt(0)==="/" ? p : "/"+p; };
 var dstr=function(s){ s=String(s||""); var m=s.match(/(\d{4})-(\d{2})-(\d{2})/); return m? (m[2].replace(/^0/,"")+"."+m[3]) : s; };
@@ -324,30 +389,45 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   }).join('');
 
   // 오른쪽 단
-  document.getElementById('rank').innerHTML = list.slice(0,7).map(function(p){
+  document.getElementById('rank').innerHTML = list.slice(0,10).map(function(p){
     return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span></a></li>';
   }).join('');
 
-  // 지면
+  // 연구 브리핑 — 묶음에 '브리핑'이 있거나 분야가 정책브리핑인 글
+  var isBrief=function(p){ return /브리핑/.test(String(p["묶음"]||"")) || String(p["분야"]||"")==="정책브리핑"; };
+  var briefs=list.filter(isBrief).slice(0,3);
+  document.getElementById('briefBd').innerHTML = briefs.length ? briefs.map(function(p){
+    return '<article>'+
+      '<span class="kk">'+esc(p["묶음"]||"브리핑")+'</span>'+
+      '<h4><a href="'+href(p["파일"])+'">'+esc(p["제목"])+'</a>'+lock(p)+'</h4>'+
+      (p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+
+      '<div class="dt">'+esc(p["바이라인"]||"")+' · '+esc(p["날짜"]||"")+'</div>'+
+    '</article>';
+  }).join('') : '<article><p>준비 중입니다.</p></article>';
+
+  // 지면 — 기사마다 한 곳에만 들어간다
   var li=function(p){ return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></a></li>'; };
-  // 1면 위쪽에 이미 쓴 다섯은 지면에서 뺀다(중복 금지)
-  list.slice(0,5).forEach(function(p){ used[p.id]=1; });
-  var made={}, subHtml='';
-  SECTIONS.forEach(function(s){
-    var arr=pick(list,s);
-    if(!arr.length && !s.subs) return;
-    var inner='<h4><span>'+esc(s.k)+'</span><em>'+arr.length+'편</em></h4>'+
-              '<ul>'+arr.slice(0,5).map(li).join('')+'</ul>';
-    if(s.subs){
-      s.subs.forEach(function(sb){
-        var a2=arr.filter(function(p){ return sb.kw.test(hay(p)); });
-        subHtml += a2.length ? '<a href="#sec-'+esc(s.k)+'">'+esc(sb.k)+'</a>'
-                             : '<a class="off">'+esc(sb.k)+'<em>준비 중</em></a>';
-      });
-    }
-    made[s.k]='<section class="sec" id="sec-'+esc(s.k)+'">'+inner+'</section>';
+  var top5={}; list.slice(0,5).forEach(function(p){ top5[p.id]=1; });   // 1면 위쪽에 쓴 것은 뺀다
+  var bin={}; MENU.forEach(function(k){ bin[k]=[]; });
+  var used={}; briefs.forEach(function(p){ used[p.id]=1; });
+  list.forEach(function(p){ if(top5[p.id]||used[p.id]||isBrief(p)) return; var k=secOf(p); (bin[k]=bin[k]||[]).push(p); });
+
+  var subHtml='';
+  (SUBS["도시·부동산"]||[]).forEach(function(sb){
+    var n=(bin["도시·부동산"]||[]).filter(function(p){ return sb.kw.test(hay(p)); }).length;
+    subHtml += n ? '<a href="#sec-도시·부동산">'+esc(sb.k)+'</a>'
+                 : '<a class="off">'+esc(sb.k)+'<em>준비 중</em></a>';
   });
-  document.getElementById('secs').innerHTML = MENU.map(function(k){ return made[k]||''; }).join('');
+
+  var N=5;   // 지면마다 같은 줄 수 — 열이 맞는다
+  document.getElementById('secs').innerHTML = MENU.map(function(k){
+    var arr=bin[k]||[];
+    var rows=arr.slice(0,N).map(li).join('');
+    for(var i=arr.length;i<N;i++) rows+='<li class="blank"></li>';   // 빈 줄로 높이를 맞춘다
+    return '<section class="sec" id="sec-'+esc(k)+'">'+
+      '<h4><span>'+esc(k)+'</span><em>'+(arr.length?arr.length+'편':'준비 중')+'</em></h4>'+
+      '<ul>'+rows+'</ul></section>';
+  }).join('');
   var su=document.getElementById('subUrban'); if(su) su.innerHTML = subHtml;
 }).catch(function(){
   document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다. 잠시 뒤에 다시 열어 주십시오.</div>';
