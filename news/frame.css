@@ -40,3 +40,23 @@
 .nf .gnb .join{padding:6px 14px;border:0;border-radius:4px;background:#F07B12;color:#fff;font-size:14px;font-weight:800}
 .nf .gnb .join:hover{background:#D9650A;color:#fff;border-color:transparent}
 @media (max-width:640px){.nf .gnb .sch input{width:96px}}
+
+/* 기사 끝 — AI 고지·관련기사·기자·해시태그·저작권 (2026-10-21 소장님 지시, 인천투데이 양식) */
+.af{margin:34px 0 10px;font-size:15.5px}
+.af a{color:inherit;text-decoration:none}
+.af .ai{color:#2B8AE0;font-size:16.5px;margin:0 0 44px}
+.af h3{font-size:18px;font-weight:800;margin:0 0 14px}
+.af ul.rel{list-style:none;margin:0 0 34px;padding:0}
+.af ul.rel li{margin:0 0 9px;padding-left:18px;position:relative}
+.af ul.rel li::before{content:'ㄴ';position:absolute;left:0;top:0;color:#555;font-size:13px}
+.af ul.rel a:hover{text-decoration:underline}
+.af .by{display:flex;align-items:center;gap:14px;border-top:1px solid #D8D8D4;border-bottom:1px solid #D8D8D4;padding:20px 0;margin:0 0 26px}
+.af .by .pic{width:48px;height:48px;border-radius:50%;background:#17428F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;flex:none}
+.af .by .who{flex:1}.af .by b{display:block;font-size:17px}.af .by span{color:#6B6B68;font-size:14.5px}
+.af .by a.more{background:#2F5FB3;color:#fff !important;font-weight:700;font-size:14.5px;padding:7px 15px;white-space:nowrap}
+.af .tags{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 34px}
+.af .tags span{background:#EBEBEB;font-weight:700;font-size:14.5px;padding:5px 10px}
+.af .copy{font-size:15px;margin:0}
+/* 제호를 뉴스 1면과 똑같이 — 기사 쪽 article.css 의 h1 명조(Noto Serif KR)가 제호에 먹던 것을 막는다 (2026-10-21 소장님 지시) */
+.nf .title h1,.nf .title h1 a{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;font-weight:900}
+@media(min-width:821px){.nf .mast .wrap{padding:18px 18px 14px}.nf .title h1{font-size:54px;letter-spacing:-2px}.nf .title h1 .lat{letter-spacing:-2.5px}.nf .title .en{margin-top:7px;font-size:11.5px}.nf .title .slo{margin-top:9px;font-size:13.5px}}
