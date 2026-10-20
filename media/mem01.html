@@ -20,14 +20,14 @@
  <h1>내 AI는 왜 자꾸 딴 소리를 할까 — 토큰과 메모리가 결정하는 AI 답변의 품질</h1>
  <p class="sub">AI가 똑똑해지는 원리는 통계학 회귀분석과 같다</p>
  <p class="sub">무료와 유료의 차이는 결국 기억력(메모리)의 차이다</p>
- <div class="byl">김갑봉 소장 · 2026.04.05</div>
+ <div class="byl">김갑봉 기자 · 2026.04.05</div>
  <div class="body">
 <h2>1. AI가 앞의 대화를 잊어버리는 이유 — 임시 저장 공간과 기억 창의 한계</h2>
 <p>클로드나 챗GPT 같은 AI와 긴 대화를 나누다 보면 갑자기 앞에서 한 말을 까먹고 엉뚱한 답을 내놓을 때가 있다. AI가 멍청해서가 아니다. 기억 공간이 꽉 찼기 때문이다.</p>
-<figure><img src="img/card_ai_01.jpg" alt="인천 송도 야경" loading="lazy"><figcaption>인천 송도 야경<span class="cr">사진 ⓒ한국관광콘텐츠랩-김호열, 공공누리 제1유형</span></figcaption></figure>
+<figure><img src="img/card_ai_01.jpg" alt="인천 송도 야경" loading="lazy"><figcaption>인천 송도 야경</figcaption></figure>
 <p>AI는 대화할 때 앞에 나온 모든 단어 관계를 점수로 매겨서 임시 저장 공간에 쌓아둔다. 이 공간을 KV 캐시라고 한다. K는 키(Key, 단어 간 관련도), V는 밸류(Value, 전달할 정보)다. AI가 대화 내용을 기억하는 작업 책상이다. 문제는 이 책상 크기에 한계가 있다는 점이다. AI 업계에서는 이 한계를 '기억 창'(컨텍스트 윈도)이라고 부른다. 토큰은 AI가 글을 읽고 쓰는 기본 단위다. 토큰 1,000개가 한국어 약 500자에 해당한다. 클로드 무료 버전은 약 20만 토큰, 최신 유료 모델은 100만 토큰까지 담을 수 있다.</p>
 <p>핵심은 AI가 매 답변마다 대화 전체를 처음부터 다시 읽는다는 사실이다. 사람처럼 앞부분을 기억하고 있는 게 아니라, 매번 전체를 다시 처리한다. 대화가 길어질수록 한 번의 답변에 드는 비용이 눈덩이처럼 불어난다.</p>
-<figure><img src="img/mem01_c1.png" alt="[도표] 클로드 기억 창(문맥 창) 크기" loading="lazy"><figcaption>[도표] 클로드 기억 창(문맥 창) 크기<span class="cr">자료 본문(2026년 4월 기준). 경세제민 AI·경제 연구소 작성</span></figcaption></figure>
+<figure><img src="img/mem01_c1.png" alt="[도표] 클로드 기억 창(문맥 창) 크기" loading="lazy"><figcaption>[도표] 클로드 기억 창(문맥 창) 크기</figcaption></figure>
 <h2>2. 증거가 많을수록 정확해진다 — 베이지안 추론과 AI의 공통 원리</h2>
 <p>AI가 다음 단어를 고르는 과정은 통계학 베이지안 추론과 구조가 같다. 베이지안 추론은 18세기 영국 수학자 토머스 베이즈가 제안한 확률 이론이다. 핵심은 단순하다. 새로운 증거가 나올 때마다 판단을 고쳐나가면 점점 정확해진다.</p>
 <p>회귀분석으로 비유하면 더 쉽다. "기온이 오르면 아이스크림 매출이 느는가?"를 분석할 때 데이터 10개로는 판단이 흔들리지만, 1,000개를 모으면 예측이 정밀해진다. 표본이 커질수록 모집단에 가까워지기 때문이다. 표본이 모집단 전체와 같아지면 오차는 0이 된다.</p>
@@ -51,13 +51,13 @@
 <p>· Anthropic, "Context windows", Claude API Docs, 2026.</p>
 <p>· Anthropic, "How do usage and length limits work?", Claude Help Center, 2026.</p>
  </div>
- <div class="foot">
-  <p class="note">경세제민 AI·경제 연구소가 전문지 창간에 앞서 공개하는 연재입니다. 수치는 본문에 적힌 기준일을 따릅니다.</p>
-  <p class="ainote">*이 기사는 인공지능을 활용해 작성했습니다.</p>
-  <p><a href="/news/">전체기사</a> · <a href="/news/">첫 화면</a></p>
- </div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능을 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="mem02.html">[AI 메모리 전쟁②] 토큰 격차가 학력 격차가 된다</a></li><li><a href="mem03.html">[AI 메모리 전쟁③] 대학원생 92%가 AI를 쓰는데 진짜 공부는 어떻게</a></li><li><a href="mem04.html">[AI 메모리 전쟁④] AI 산업 병목이 GPU에서 메모리로 옮겨간다</a></li><li><a href="mem05.html">[AI 메모리 전쟁⑤] 개인투자자가 알아야 할 메모리 반도체의 현재와 미래</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<p class="copy">저작권자 © AI경세제민 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
 </div></article>
-<div class="nf"><footer class="nff"><div class="wrap"><div class="pub">AI경세제민</div><div class="meta">발행 경세제민 AI·경제연구소(주) · 발행인 김효진 · 편집인 김효진 · 편집장 김갑봉<br>인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/">뉴스 첫 화면</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/member.html">회원가입</a><a href="/news/ask.html">의뢰·신청하기</a><a href="/news/ask.html">정정보도 청구·제보</a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경세제민, weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub">AI경세제민</div><div class="meta">발행 경세제민 AI·경제연구소(주) · 발행인 김효진 · 편집인 김효진 · 편집장 김갑봉<br>인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/">뉴스 첫 화면</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/member.html">회원가입</a><a href="/news/ask.html">의뢰·신청하기</a><a href="/news/tip.html">제보하기</a><a href="/news/correct.html">정정보도 청구</a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경세제민, weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
 <script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
 <script src="../nocopy.js"></script>
 </body></html>
