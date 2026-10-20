@@ -177,7 +177,19 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 .notice{border:1px solid var(--line);background:var(--soft);padding:13px 15px;margin:22px 0 0;font-size:13.5px;color:var(--sub)}
 .notice b{color:var(--ink)}
 .notice a{color:var(--red);font-weight:800;text-decoration:underline}
-</style></head><body>
+
+/* 2026-10-21 소장님 지시 — 메뉴 맨 앞 전체기사, 오른쪽 끝 검색(코발트블루)·회원가입(주황) */
+.gnb .wrap{align-items:center;gap:16px}
+.gnb .all{color:#111;font-weight:900}
+.gnb .tools{margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.gnb .sch{display:flex;align-items:center;margin:0}
+.gnb .sch input{width:128px;height:32px;padding:0 10px;border:2px solid #17428F;border-right:0;border-radius:4px 0 0 4px;font:inherit;font-size:14px;font-weight:500;outline:none}
+.gnb .sch button{height:32px;padding:0 12px;border:0;border-radius:0 4px 4px 0;background:#17428F;color:#fff;font:inherit;font-size:14px;font-weight:800;cursor:pointer}
+.gnb a.join{padding:6px 14px;border:0;border-radius:4px;background:#F07B12;color:#fff;font-size:14px;font-weight:800}
+.gnb a.join:hover{background:#D9650A;color:#fff;border-color:transparent}
+@media (max-width:640px){.gnb .sch input{width:96px}}
+</style><script src="/news/fit.js" defer></script>
+</head><body>
 
 <div class="top"><div class="wrap">
   <span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span>
