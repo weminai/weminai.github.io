@@ -5,7 +5,8 @@
   function fit(){
     var hs=document.querySelectorAll(SEL);
     for(var i=0;i<hs.length;i++){
-      var h=hs[i]; h.style.whiteSpace='nowrap'; h.style.fontSize='';
+      var h=hs[i]; h.style.whiteSpace='nowrap'; h.style.fontSize=''; h.style.overflow='hidden';
+      for(var p=h.parentElement,k=0;p&&k<3;p=p.parentElement,k++){ p.style.minWidth='0'; }
       var s=parseFloat(getComputedStyle(h).fontSize)||40, n=0;
       while(h.scrollWidth>h.clientWidth+1 && s>13 && n<80){ s-=1; h.style.fontSize=s+'px'; n++; }
     }
