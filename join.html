@@ -164,15 +164,15 @@ img{-webkit-user-drag:none;pointer-events:none}
   <p><b>절차</b><br>신청서 접수 → 서류 검토와 면담 → 명부 등록</p>
   <div class="box">
     <b>연락</b><br>032-777-0421<br>weminaimax@weminai.com<br>
-    인천 미추홀구 용현동 55(수봉공원)
+    (22180) 인천 미추홀구 수봉남로24번길 74(수봉공원)
   </div>
   <div class="box"><b>다른 신청</b><br>연구·강연·교육·출판 신청은 <a href="ask.html" style="text-decoration:underline">의뢰·신청하기</a>에서 받습니다.</div>
 </aside>
 </div></div></main>
-<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminaimax@weminai.com<br>
+<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> · (22180) 인천 미추홀구 수봉남로24번길 74(수봉공원) · 032-777-0421 · weminaimax@weminai.com<br>
 청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com<br>
 자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
-<a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a> · <a href="member.html">회원 안내</a></div></footer>
+<a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a> · <a href="member.html">회원 안내</a> · <a href="/news/privacy.html">개인정보 처리방침</a></div></footer>
 <script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
 
 <script>
@@ -214,7 +214,7 @@ img{-webkit-user-drag:none;pointer-events:none}
  function post(subject, pairs, done, fail){
   if(document.getElementById('hp').value){ done(); return; }
   var b=new URLSearchParams();
-  b.append('_form','객원연구원'); b.append('_subject',subject); b.append('_honey','');
+  b.append('_form','객원연구원'); b.append('_subject',subject); b.append('_honey',(document.getElementById('hp')||{}).value||'');
   pairs.forEach(function(p){ if(p[1]) b.append(p[0],p[1]); });
   fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:b}).then(function(){done();}).catch(fail);
  }
@@ -231,7 +231,7 @@ img{-webkit-user-drag:none;pointer-events:none}
    +'<h2>5. 참여 희망</h2>'+kv([['분야',picks('ar')],['참여 형태',picks('fm')],['참여 가능 시간',v('time')]])
    +'<h2>6. 자기소개서</h2><h3>(1) 지원 동기</h3><p>'+esc(v('q1'))+'</p><h3>(2) 전문성과 강점</h3><p>'+esc(v('q2'))+'</p><h3>(3) 하고 싶은 연구</h3><p>'+esc(v('q3'))+'</p>'
    +'<h2>7. 개인정보 수집·이용</h2><p>동의함</p>'
-   +'<div class="foot">경세제민 AI·경제 연구소(주) · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminaimax@weminai.com</div>';
+   +'<div class="foot">경세제민 AI·경제 연구소(주) · (22180) 인천 미추홀구 수봉남로24번길 74(수봉공원) · 032-777-0421 · weminaimax@weminai.com</div>';
   var doc='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
    +'<head><meta charset="utf-8"><title>객원연구원 신청서</title><style>body{font-family:"맑은 고딕",Malgun Gothic,sans-serif;font-size:11pt;line-height:1.7}'
    +'h1{font-size:16pt;border-bottom:2px solid #000;padding-bottom:6pt}h2{font-size:12.5pt;margin:16pt 0 6pt;border-bottom:1px solid #999;padding-bottom:3pt}h3{font-size:11pt;margin:10pt 0 3pt}'

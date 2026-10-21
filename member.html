@@ -207,16 +207,16 @@ main table td{padding:9px 0;font-size:15px;border-bottom:1px solid var(--line)}
     가입 양식이 불편하시면 전자우편에 「회원가입」이라 적어 보내 주셔도 됩니다.
   </div>
   <div class="box"><b>연락</b><br>경세제민 AI·경제연구소(주)<br>
-    인천 미추홀구 용현동 55(수봉공원)<br>032-777-0421</div>
+    (22180) 인천 미추홀구 수봉남로24번길 74(수봉공원)<br>032-777-0421</div>
   <div class="box"><b>다른 신청</b><br>
     연구·강연·교육·출판 의뢰는 <a href="ask.html" style="text-decoration:underline">의뢰·신청하기</a>,<br>
     연구에 함께하시려면 <a href="join.html" style="text-decoration:underline">객원연구원 신청</a>입니다.</div>
 </aside>
 </div></div></main>
-<footer><div class="wrap"><b>경세제민 AI·경제연구소(주)</b> · 인천 미추홀구 용현동 55(수봉공원) · 032-777-0421 · weminaimax@weminai.com<br>
+<footer><div class="wrap"><b>경세제민 AI·경제연구소(주)</b> · (22180) 인천 미추홀구 수봉남로24번길 74(수봉공원) · 032-777-0421 · weminaimax@weminai.com<br>
 청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com<br>
 자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
-<a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a> · <a href="member.html">회원 안내</a></div></footer>
+<a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a> · <a href="member.html">회원 안내</a> · <a href="/news/privacy.html">개인정보 처리방침</a></div></footer>
 <script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
 <script>
 (function(){
@@ -233,7 +233,7 @@ main table td{padding:9px 0;font-size:15px;border-bottom:1px solid var(--line)}
   var kind=(document.querySelector('input[name=m_kind]:checked')||{}).value||'개인 회원';
   var fs=[].slice.call(document.querySelectorAll('.m_f:checked')).map(function(c){return c.value;}).join('·');
   var b=new URLSearchParams();
-  b.append('_form','신청'); b.append('_subject','[회원가입] '+kind+' — '+v('m_name')); b.append('_honey','');
+  b.append('_form','신청'); b.append('_subject','[회원가입] '+kind+' — '+v('m_name')); b.append('_honey',(document.getElementById('hp')||{}).value||'');
   [['신청 갈래','회원가입('+kind+')'],['기관·회사',v('m_org')||'개인'],['담당자',v('m_name')],['연락처',v('m_tel')],
    ['전자우편',v('m_mail')],['제목','회원가입 신청'],['내용','관심 분야: '+(fs||'(고르지 않음)')],['개인정보 동의','동의함']]
    .forEach(function(p){if(p[1]) b.append(p[0],p[1]);});
