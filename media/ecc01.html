@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+ AI경세제민 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 <figure> 의 <figcaption> 에는 사진 설명만. 출처 <span class="cr"> 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 <div class="tags"> 에 <span>#…</span> 로
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[경세제민] 반도체 애치슨 라인, 한국은 어디에 서 있나 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="미국 기술 봉쇄선 안의 한국, 중국 공장은 「유지만 하고 키우지 말라」">
+<link rel="canonical" href="https://weminai.com/media/ecc01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[경세제민] 반도체 애치슨 라인, 한국은 어디에 서 있나">
+<meta property="og:description" content="미국 기술 봉쇄선 안의 한국, 중국 공장은 「유지만 하고 키우지 말라」">
+<meta property="og:url" content="https://weminai.com/media/ecc01.html">
+<meta property="og:image" content="https://weminai.com/media/img/ecc01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script></head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">회원가입</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경세제민</a></h1><span class="en">AI GYEONGSEJEMIN</span><span class="slo">일하는 사람들을 위한 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=정책브리핑">정책브리핑</a><a href="/news/s.html?k=기획연재">기획연재</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=철도">철도</a><a href="/news/s.html?k=복합물류">복합물류</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후위기">기후위기</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=AI">AI</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="join" href="/news/member.html">회원가입</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">경세제민</div>
+ <h1>[경세제민] 반도체 애치슨 라인, 한국은 어디에 서 있나</h1>
+ <p class="sub">미국 기술 봉쇄선 안의 한국, 중국 공장은 「유지만 하고 키우지 말라」</p>
+ <p class="sub">D램 1위 되찾은 삼성, 파운드리는 TSMC 72.5% 대 삼성 5.9%로 벌어져</p>
+ <p class="sub">수출 폭증과 원화 강세 뒤에 고용 둔화와 고유가, 대체 불가능해야 버틴다</p>
+ <div class="byl">김갑봉 기자 · 2026년 10월 21일</div>
+ <div class="body">
+<p>1950년 1월 딘 애치슨 미국 국무장관은 태평양 방위선을 설명하며 한반도를 그 선 밖에 뒀다. 다섯 달 남짓 뒤 한국전쟁이 터졌다. 선 하나가 한 나라의 운명을 가를 수 있다는 기억이다.</p>
+<p>76년이 지난 지금 미국은 기술 위에 선을 긋는다. 선 안쪽은 미국 장비와 설계 도구를 쓰고, 바깥은 막힌다. 한국 반도체는 안쪽에 섰다. 그러나 안쪽이라고 마음대로 움직일 수 있는 것은 아니다.</p>
+<p>올해 한국 반도체는 사상 최대 호황을 맞았다. 9월 수출은 1년 전보다 83.5% 늘었다. 같은 시기 미국의 규제는 중국 공장의 앞날을 묶었다. 호황과 제약이 한꺼번에 왔다.</p>
+<figure><img src="img/ecc01_01.jpg" alt="2022년 5월 20일 한미 정상이 경기 평택 삼성전자 반도체 공장을 둘러보고 있다" loading="lazy"><figcaption>2022년 5월 20일 한미 정상이 경기 평택 삼성전자 반도체 공장을 둘러보고 있다</figcaption></figure>
+<h2>1. 중국 공장, 「돌리되 키우지 말라」</h2>
+<p>미국 상무부 산업안보국(BIS)은 2025년 8월 29일 검증된 최종사용자(VEU) 제도를 닫았다. 이 제도는 중국에 있는 외국 기업 공장이 미국산 장비를 허가 없이 들여오게 해 줬다. 삼성전자와 SK하이닉스 중국 공장이 대상이었다.</p>
+<p>BIS는 관보 게재 뒤 120일 안에 개별 허가를 받으라고 했다. 기존 공장 운영을 위한 허가는 내주겠다고 밝혔다. 다만 「중국 공장의 생산능력 확대나 기술 업그레이드 허가는 내줄 뜻이 없다」고 못 박았다.</p>
+<p>공장은 돌아가지만 세대 교체가 막힌다. 반도체 공장은 공정을 바꾸지 못하면 해마다 가치가 깎인다. 중국 공장은 수명이 정해진 자산이 됐다. 출구 전략을 서두를 때다(연구소 판단).</p>
+<p>선은 고정돼 있지도 않다. BIS는 1월 13일 엔비디아 H200 같은 인공지능 칩의 중국 수출 허가를 사안별로 심사한다고 바꿨다. 트럼프 대통령이 2025년 12월 8일 승인 고객 판매를 허용한 데 따른 조치다.</p>
+<h2>2. 파운드리, 격차는 더 벌어졌다</h2>
+<p>트렌드포스 집계로 올해 2분기 세계 파운드리(반도체 위탁생산) 시장에서 TSMC 점유율은 72.5%다. 삼성전자는 5.9%다. 2분기 매출은 TSMC 약 402억달러, 삼성전자 32억6000만달러다.</p>
+<p>삼성전자 매출도 늘었지만 경쟁사가 더 빨리 컸다. 중국 SMIC가 5.4%로 삼성을 0.5%포인트 차이로 바짝 쫓는다. 미국의 장비 통제에도 중국 위탁생산 업체는 자국 수요를 업고 자란다.</p>
+<p>트렌드포스는 삼성전자의 고대역폭메모리(HBM) 기반 다이 같은 첨단 공정 수주가 늘었다고 짚었다. 메모리와 위탁생산을 함께 가진 회사의 강점이다. 문제는 그 강점이 점유율로 이어지는 속도다.</p>
+<figure><img src="img/ecc01_02.jpg" alt="2026년 2분기 세계 파운드리 점유율(자료 트렌드포스, 경세제민 AI·경제연구소 작성)" loading="lazy"><figcaption>2026년 2분기 세계 파운드리 점유율(자료 트렌드포스, 경세제민 AI·경제연구소 작성)</figcaption></figure>
+<h2>3. 메모리, 삼성이 D램 1위를 되찾았다</h2>
+<p>메모리는 판이 다시 뒤집혔다. 트렌드포스 집계로 2분기 D램 매출 점유율은 삼성전자 39.4%, SK하이닉스 24.9%, 마이크론 23.3%다. 삼성전자는 매출 609억8000만달러로 1위에 올랐다.</p>
+<p>D램 업계 매출은 한 분기 만에 59.5% 늘어 1547억3000만달러다. 범용 D램 계약가격이 크게 오른 덕이다. 트렌드포스는 삼성전자가 HBM4를 먼저 대량 생산하고 출하해 출하량을 늘렸다고 봤다.</p>
+<p>SK하이닉스는 출하에서 HBM 비중이 가장 높아 평균 판매가격 상승 폭이 상대적으로 작았다. 엔비디아와 손잡고 HBM을 먼저 잡은 전략이 가격 급등기에는 오히려 덜 유리하게 작동했다.</p>
+<p>두 회사의 경쟁은 한국 메모리 전체의 몫을 키웠다. 삼성전자와 SK하이닉스를 합하면 2분기 D램 매출의 64.3%다. 미국 마이크론 혼자 이 공급을 대신할 수 없다. 미국이 한국을 선 안쪽에 두는 까닭이다.</p>
+<figure><img src="img/ecc01_03.jpg" alt="2026년 2분기 D램 매출 점유율(자료 트렌드포스, 경세제민 AI·경제연구소 작성)" loading="lazy"><figcaption>2026년 2분기 D램 매출 점유율(자료 트렌드포스, 경세제민 AI·경제연구소 작성)</figcaption></figure>
+<h2>4. 수출 폭증과 원화 강세, 그 그늘</h2>
+<p>호황은 숫자로 보인다. 관세청 잠정치로 10월 1~20일 수출은 616억달러로 1년 전보다 105.4% 늘었다. 반도체 수출은 222.5% 늘었다. 하루 평균 수출액 47억4000만달러는 역대 최대다.</p>
+<p>관세청은 조업일수 차이로 수치가 달라질 수 있다고 했다. 지난해 10월은 추석 연휴가 길었다. 그래도 9월 수출이 83.5% 늘어난 흐름과 겹친다. 반도체 업체가 판 달러에 원화는 10월 20일 1328.1원으로 2년 만에 가장 강해졌다.</p>
+<p>그늘도 있다. 재정경제부는 9월 취업자 증가가 11만3000명으로 폭이 줄었다고 밝혔다. 중동전쟁 등 불확실성과 고유가에 따른 물가 압력, 취약계층의 고용 여건 악화를 부담으로 꼽았다.</p>
+<p>반도체 이익이 기업 계정에 쌓이는 속도와 일자리가 늘어나는 속도가 다르다. 한국은행은 9월 수출물가가 40.9% 올랐다고 집계했다. 값으로 버는 호황은 고용을 크게 늘리지 않는다(연구소 판단).</p>
+<h2>5. 동맹의 값, 투자와 협상력</h2>
+<p>한국은 2025년 11월 14일 미국과 전략적 투자 양해각서를 맺었다. 금융위원회 자료로 그 가운데 조선 협력 투자만 1500억달러다. 올해 6월에는 한미전략투자공사와 조선 3사가 이행 협약을 맺었다.</p>
+<p>동맹은 시장 접근을 지키지만 값을 매긴다. 미국 공장 투자가 늘면 국내 협력업체가 따라가기 어렵다. 대기업의 해외 투자와 국내 공급망의 일감을 함께 셈해야 한다(연구소 판단).</p>
+<p>국내 생태계는 정책금융이 받친다. 국민성장펀드는 7월 HBM 테스트 장비 업체의 천안 공장 증설에 500억원 저리대출을 승인했다. 장비와 소재 기업을 키우는 일이 대기업 한두 곳의 호황을 산업 전체의 힘으로 바꾼다.</p>
+<h2>6. 대체 불가능해야 산다</h2>
+<p>미국이 한국을 선 안쪽에 둔 것은 한국 메모리가 필요해서다. 필요는 영원하지 않다. 중국 기업은 보조금을 업고 자라고, 미국은 자국 생산을 키운다. 시간이 지나면 한국을 덜 필요로 할 수 있다.</p>
+<p>살아남는 길은 대체 불가능성이다. 메모리는 HBM 세대 경쟁에서 앞서야 하고, 위탁생산은 첨단 공정 수율로 고객을 되찾아야 한다. 설계 전문 기업 생태계도 키워야 한다. 제조만 남으면 협상력도 줄어든다.</p>
+<p>선 안쪽에 섰다는 사실이 안전을 보장하지 않는다. 1950년의 선은 지도 위에 있었고 지금의 선은 허가증과 공급망 위에 있다. 기술에서 밀리지 않는 나라만이 그 선이 다시 그어질 때 자리를 지킨다.</p>
+<div class="refs"><h3>참고문헌</h3><h4>기관 자료</h4><ul><li>미국 상무부 산업안보국(BIS), 「Department of Commerce Closes Export Controls Loophole for Foreign-Owned Semiconductor Fabs in China」(보도자료), 2025년 8월 29일, 「Department of Commerce Revises License Review Policy for Semiconductors Exported to China」(보도자료), 2026년 1월 13일. BIS 보도자료 목록. https://www.bis.gov/news-updates</li><li>관세청(재정경제부 게재), 「2026년 10월 1일 ~ 10월 20일 수출입 현황(잠정치)」, 2026년 10월 21일, KDI 경제교육·정보센터 게재. https://eiec.kdi.re.kr/policy/materialView.do?num=288360</li><li>재정경제부 경제정책국, 「2026년 10월 최근 경제동향」, 2026년 10월 16일, KDI 경제교육·정보센터 게재. https://eiec.kdi.re.kr/policy/materialView.do?num=288176</li><li>한국은행 경제통계1국, 「2026년 9월 수출입물가지수 및 무역지수(잠정)」, 2026년 10월 16일, KDI 경제교육·정보센터 게재. https://eiec.kdi.re.kr/policy/materialView.do?num=288195</li><li>금융위원회, 「한미전략투자공사 및 정책금융기관-조선3사간 한미 조선협력투자 업무협약 체결」(보도자료), 2026년 6월 25일. https://www.fsc.go.kr/no010101/87187</li><li>금융위원회, 「국민성장펀드가 디스플레이 산업의 초격차와 HBM 공급망 경쟁력 강화를 지원합니다」(보도자료), 2026년 7월 30일. https://www.fsc.go.kr/no010101/87442</li></ul><h4>연구 논문과 보고서</h4><ul><li>TrendForce, &quot;Global Foundry Revenue Approaches US$53.49 Billion in 2Q26 as SMIC Narrows Market Share Gap with Samsung&quot;, 2026년 9월 9일. https://www.trendforce.com/presscenter/news/20260909-13225.html</li><li>TrendForce, &quot;DRAM Industry Revenue Rises 59.5% QoQ in 2Q26 as Supply Expansion Continues to Lag Demand Growth&quot;, 2026년 9월 7일. https://www.trendforce.com/presscenter/news/20260907-13219.html</li></ul><h4>언론 보도</h4><ul><li>김혜란, &quot;원·달러 환율, 올해 최저 종가…2.2원 내린 1328.1원 마감&quot;, 서울경제, 2026년 10월 20일. https://m.sedaily.com/article/20103845</li><li>최민경, &quot;원/달러 환율, 2.2원 내린 1328.1원&quot;, 머니투데이, 2026년 10월 20일. https://www.mt.co.kr/economy/2026/10/20/2026102015350643046</li></ul><h4>[사진 출처]</h4><ul><li>[사진1] Office of the President of the United States, &quot;President Biden and Yoon Suk-yeol at the Samsung Electronics Pyeongtaek Campus.jpg&quot;, 위키미디어 공용, 퍼블릭 도메인. https://commons.wikimedia.org/wiki/File:President_Biden_and_Yoon_Suk-yeol_at_the_Samsung_Electronics_Pyeongtaek_Campus.jpg</li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 AI 프로그램 클로드를 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="ecc02.html">[경세제민] 엉터리 경제학, 공급 대책을 거듭 내놔도 집값 기대는 왜 꺾이지 않나</a></li><li><a href="ecc03.html">[경세제민] 반도체 글로벌가치사슬과 인천국제공항, 값이 무게를 이기는 시대</a></li><li><a href="ecc04.html">[경세제민] AI 대전환 시대, 인천항만 업계 포용적 성장 방안</a></li><li><a href="bk01.html">[서평] 슘페터 『경제분석의 역사』 1권, 300년 전 질문이 오늘도 유효하다</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#반도체</span><span>#애치슨라인</span><span>#수출통제</span><span>#VEU</span><span>#파운드리</span><span>#D램</span><span>#HBM</span><span>#삼성전자</span><span>#SK하이닉스</span><span>#반도체수출</span></div>
+<p class="copy">저작권자 © AI경세제민 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub">AI경세제민</div><div class="meta">발행 경세제민 AI·경제연구소(주) · 발행인 김효진 · 편집인 김효진 · 편집장 김갑봉<br>인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/">뉴스 첫 화면</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/member.html">회원가입</a><a href="/news/ask.html">의뢰·신청하기</a><a href="/news/tip.html">제보하기</a><a href="/news/correct.html">정정보도 청구</a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경세제민, weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
