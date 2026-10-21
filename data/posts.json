@@ -525,7 +525,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/ai12.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/ai12_01.jpg"
  },
  {
   "id": "mai10",
@@ -547,7 +547,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "정책브리핑",
   "파일": "media/trade01.html",
-  "대표그림": "media/img/trade01_01.jpg"
+  "대표그림": "media/img/trade01_rep.jpg"
  },
  {
   "id": "ai11",
@@ -712,7 +712,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/ai10.html",
-  "대표그림": "media/img/card_ai_01.jpg"
+  "대표그림": "media/img/ai10_01.jpg"
  },
  {
   "id": "mai09",
@@ -734,7 +734,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/urb01.html",
-  "대표그림": "media/img/card_urban_01.jpg"
+  "대표그림": "media/img/urb01_rep.jpg"
  },
  {
   "id": "sov13",
@@ -1053,7 +1053,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/cn_ex03.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/cn_ex03_rep.jpg"
  },
  {
   "id": "cn_ex02",
@@ -1108,7 +1108,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/ksr03.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/ksr03_rep.jpg"
  },
  {
   "id": "ksr02",
@@ -1141,7 +1141,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/ksr04.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/ksr04_rep.jpg"
  },
  {
   "id": "ksr01",
@@ -1152,7 +1152,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/ksr01.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/ksr01_rep.jpg"
  },
  {
   "id": "sov06",
@@ -1262,7 +1262,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/stk03.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/stk03_rep.jpg"
  },
  {
   "id": "mai05",
@@ -1284,7 +1284,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/cn11.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/cn11_rep.jpg"
  },
  {
   "id": "urb03",
@@ -1295,7 +1295,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "도시계획·부동산",
   "파일": "media/urb03.html",
-  "대표그림": "media/img/card_urban_02.jpg"
+  "대표그림": "media/img/urb03_rep.jpg"
  },
  {
   "id": "urb02",
@@ -1306,7 +1306,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "도시계획·부동산",
   "파일": "media/urb02.html",
-  "대표그림": "media/img/card_urban_01.jpg"
+  "대표그림": "media/img/urb02_rep.jpg"
  },
  {
   "id": "gap03",
@@ -1372,7 +1372,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/stk02.html",
-  "대표그림": "media/img/card_econ_01.jpg"
+  "대표그림": "media/img/stk02_rep.jpg"
  },
  {
   "id": "etc_mro",
@@ -1383,7 +1383,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/etc_mro.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/etc_mro_rep.jpg"
  },
  {
   "id": "gap02",
@@ -1394,7 +1394,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/gap02.html",
-  "대표그림": "media/img/card_econ_01.jpg"
+  "대표그림": "media/img/gap02_rep.jpg"
  },
  {
   "id": "inf03",
@@ -1405,7 +1405,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/inf03.html",
-  "대표그림": "media/img/card_econ_01.jpg"
+  "대표그림": "media/img/inf03_rep.jpg"
  },
  {
   "id": "wel02",
@@ -1416,7 +1416,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/wel02.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/wel02_rep.jpg"
  },
  {
   "id": "mai02",
@@ -1493,7 +1493,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/ai05.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/ai05_rep.jpg"
  },
  {
   "id": "mai01",
@@ -1526,7 +1526,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/kr16.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/kr16_rep.jpg"
  },
  {
   "id": "kr15",
@@ -1537,7 +1537,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/kr15.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/kr15_rep.jpg"
  },
  {
   "id": "kr14",
@@ -1559,7 +1559,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/cn10.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/cn10_rep.jpg"
  },
  {
   "id": "stk13",
@@ -1592,7 +1592,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/kr13.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/kr13_rep.jpg"
  },
  {
   "id": "cn09",
@@ -1603,7 +1603,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/cn09.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/cn09_rep.jpg"
  },
  {
   "id": "cn08",
@@ -1636,7 +1636,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/cn06.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/cn06_rep.jpg"
  },
  {
   "id": "cn05",
@@ -1658,7 +1658,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/cn04.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/cn04_rep.jpg"
  },
  {
   "id": "cn03",
@@ -1713,7 +1713,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/ai04.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/ai04_rep.jpg"
  },
  {
   "id": "gap01",
@@ -1757,7 +1757,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/fin01.html",
-  "대표그림": "media/img/card_econ_01.jpg"
+  "대표그림": "media/img/fin01_rep.jpg"
  },
  {
   "id": "kr11",
@@ -1779,7 +1779,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/kr10.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/kr10_rep.jpg"
  },
  {
   "id": "stk11",
@@ -1790,7 +1790,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/stk11.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/stk11_rep.jpg"
  },
  {
   "id": "ai03",
@@ -1922,7 +1922,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/hon04.html",
-  "대표그림": "media/img/card_econ_01.jpg"
+  "대표그림": "media/img/hon04_rep.jpg"
  },
  {
   "id": "un06",
@@ -1944,7 +1944,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/un05.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/un05_rep.jpg"
  },
  {
   "id": "un04",
@@ -1955,7 +1955,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/un04.html",
-  "대표그림": "media/img/card_ai_01.jpg"
+  "대표그림": "media/img/un04_rep.jpg"
  },
  {
   "id": "kr06",
@@ -1966,7 +1966,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/kr06.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/kr06_rep.jpg"
  },
  {
   "id": "hon03",
@@ -1988,7 +1988,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/hon02.html",
-  "대표그림": "media/img/card_econ_01.jpg"
+  "대표그림": "media/img/hon02_rep.jpg"
  },
  {
   "id": "hon01",
@@ -2021,7 +2021,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/un03.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/un03_rep.jpg"
  },
  {
   "id": "un02",
@@ -2032,7 +2032,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/un02.html",
-  "대표그림": "media/img/card_ai_01.jpg"
+  "대표그림": "media/img/un02_rep.jpg"
  },
  {
   "id": "un01",
@@ -2043,7 +2043,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/un01.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/un01_rep.jpg"
  },
  {
   "id": "kr17",
@@ -2065,7 +2065,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/stk09.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/stk09_rep.jpg"
  },
  {
   "id": "ai01",
@@ -2076,7 +2076,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/ai01.html",
-  "대표그림": "media/img/card_ai_01.jpg"
+  "대표그림": "media/img/ai01_rep.jpg"
  },
  {
   "id": "stk08",
@@ -2109,7 +2109,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/stk07.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/stk07_rep.jpg"
  },
  {
   "id": "stk06",
@@ -2131,7 +2131,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/kr05.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/kr05_rep.jpg"
  },
  {
   "id": "hwang_ex02",
@@ -2186,7 +2186,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/hsr03.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/hsr03_rep.jpg"
  },
  {
   "id": "stk04",
@@ -2263,7 +2263,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/kos04.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/kos04_rep.jpg"
  },
  {
   "id": "kos01",
@@ -2296,7 +2296,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/hwang_ex01.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/hwang_ex01_rep.jpg"
  },
  {
   "id": "surv25",
@@ -2307,7 +2307,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv25.html",
-  "대표그림": "media/img/card_sea_02.jpg"
+  "대표그림": "media/img/surv25_rep.jpg"
  },
  {
   "id": "surv24",
@@ -2329,7 +2329,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/hsr02.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/hsr02_rep.jpg"
  },
  {
   "id": "hsr01",
@@ -2340,7 +2340,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/hsr01.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/hsr01_rep.jpg"
  },
  {
   "id": "surv23",
@@ -2395,7 +2395,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/myth04.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/myth04_rep.jpg"
  },
  {
   "id": "surv21",
@@ -2406,7 +2406,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv21.html",
-  "대표그림": "media/img/card_sea_02.jpg"
+  "대표그림": "media/img/surv21_rep.jpg"
  },
  {
   "id": "surv20",
@@ -2439,7 +2439,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/fin02.html",
-  "대표그림": "media/img/card_econ_01.jpg"
+  "대표그림": "media/img/fin02_rep.jpg"
  },
  {
   "id": "myth03",
@@ -2527,7 +2527,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv04.html",
-  "대표그림": "media/img/card_sea_01.jpg"
+  "대표그림": "media/img/surv04_rep.jpg"
  },
  {
   "id": "surv03",
@@ -2604,7 +2604,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "AI",
   "파일": "media/med01.html",
-  "대표그림": "media/img/card_ai_02.jpg"
+  "대표그림": "media/img/med01_rep.jpg"
  },
  {
   "id": "surv19",
@@ -2659,7 +2659,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv18.html",
-  "대표그림": "media/img/card_sea_02.jpg"
+  "대표그림": "media/img/surv18_rep.jpg"
  },
  {
   "id": "surv17",
@@ -2670,7 +2670,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv17.html",
-  "대표그림": "media/img/card_sea_01.jpg"
+  "대표그림": "media/img/surv17_rep.jpg"
  },
  {
   "id": "logi_ex01",
@@ -2681,7 +2681,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "복합물류",
   "파일": "media/logi_ex01.html",
-  "대표그림": "media/img/card_sea_02.jpg"
+  "대표그림": "media/img/logi_ex01_rep.jpg"
  },
  {
   "id": "surv16",
@@ -2703,7 +2703,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv15.html",
-  "대표그림": "media/img/card_sea_02.jpg"
+  "대표그림": "media/img/surv15_rep.jpg"
  },
  {
   "id": "myth00",
@@ -2780,7 +2780,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv14.html",
-  "대표그림": "media/img/card_sea_01.jpg"
+  "대표그림": "media/img/surv14_rep.jpg"
  },
  {
   "id": "surv13",
@@ -2791,7 +2791,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv13.html",
-  "대표그림": "media/img/card_sea_02.jpg"
+  "대표그림": "media/img/surv13_rep.jpg"
  },
  {
   "id": "surv12",
@@ -2802,7 +2802,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv12.html",
-  "대표그림": "media/img/card_sea_01.jpg"
+  "대표그림": "media/img/surv12_rep.jpg"
  },
  {
   "id": "surv11",
@@ -2835,7 +2835,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/ktx09.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/ktx09_rep.jpg"
  },
  {
   "id": "ene02",
@@ -2868,7 +2868,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/tax03.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/tax03_rep.jpg"
  },
  {
   "id": "surv08",
@@ -2879,7 +2879,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv08.html",
-  "대표그림": "media/img/card_sea_02.jpg"
+  "대표그림": "media/img/surv08_rep.jpg"
  },
  {
   "id": "surv07",
@@ -2890,7 +2890,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "해양",
   "파일": "media/surv07.html",
-  "대표그림": "media/img/card_sea_01.jpg"
+  "대표그림": "media/img/surv07_rep.jpg"
  },
  {
   "id": "tax01",
@@ -2912,7 +2912,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "경제",
   "파일": "media/tax02.html",
-  "대표그림": "media/img/card_econ_02.jpg"
+  "대표그림": "media/img/tax02_rep.jpg"
  },
  {
   "id": "col01",
@@ -2978,7 +2978,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn02.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/icn02_rep.jpg"
  },
  {
   "id": "icn03",
@@ -3033,7 +3033,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn07.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/icn07_rep.jpg"
  },
  {
   "id": "icn08",
@@ -3044,7 +3044,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn08.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/icn08_rep.jpg"
  },
  {
   "id": "icn09",
@@ -3066,7 +3066,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn10.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/icn10_rep.jpg"
  },
  {
   "id": "icn11",
@@ -3077,7 +3077,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn11.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/icn11_rep.jpg"
  },
  {
   "id": "icn12",
@@ -3099,7 +3099,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn13.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/icn13_rep.jpg"
  },
  {
   "id": "icn14",
@@ -3143,7 +3143,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn17.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/icn17_rep.jpg"
  },
  {
   "id": "icn18",
@@ -3176,7 +3176,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn20.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/icn20_rep.jpg"
  },
  {
   "id": "icn21",
@@ -3187,7 +3187,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn21.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/icn21_rep.jpg"
  },
  {
   "id": "icn22",
@@ -3198,7 +3198,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "항공",
   "파일": "media/icn22.html",
-  "대표그림": "media/img/card_rail_02.jpg"
+  "대표그림": "media/img/icn22_rep.jpg"
  },
  {
   "id": "icn23",
@@ -3231,7 +3231,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/ktx01.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/ktx01_rep.jpg"
  },
  {
   "id": "ktx02",
@@ -3286,7 +3286,7 @@
   "바이라인": "김갑봉 기자",
   "분야": "철도",
   "파일": "media/ktx04.html",
-  "대표그림": "media/img/card_rail_01.jpg"
+  "대표그림": "media/img/ktx04_rep.jpg"
  },
  {
   "id": "ktx05",
