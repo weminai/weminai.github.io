@@ -334,12 +334,12 @@ var subHtml=function(arr,k,cls){
   if(!SUBS[k]) return '';
   var h=SUBS[k].map(function(x){
     var ms=arr.filter(function(p){ return x.kw.test(hay(p)); });
-    var out = ms.length ? '<span>'+esc(x.k)+'<em>'+ms.length+'</em></span>'
+    var out = ms.length ? '<span>'+esc(x.k)+'</span>'
                         : '<span class="off">'+esc(x.k)+'<em>준비 중</em></span>';
     if(x.sub && ms.length){
       out += x.sub.map(function(y){
         var n=ms.filter(function(p){ return y.kw.test(hay(p)); }).length;
-        return n ? '<span class="kid">'+esc(y.k)+'<em>'+n+'</em></span>' : '';
+        return n ? '<span class="kid">'+esc(y.k)+'</span>' : '';
       }).join('');
     }
     return out;
@@ -361,7 +361,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
   var W=Q?Q.split(/\s+/):[];
   var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:list.filter(function(p){ return secOf(p)===K; }));
-  document.getElementById('pgN').textContent = arr.length ? arr.length+"편" : (Q?"0편":"준비 중");
+  document.getElementById('pgN').textContent = arr.length ? "" : (Q?"결과 없음":"준비 중");
   var sb=document.getElementById('pgS');
   sb.innerHTML=Q?'':subHtml(arr,K,'subsin');
   document.getElementById('pgL').innerHTML = arr.length ? arr.map(function(p){

@@ -395,12 +395,12 @@ var subHtml=function(arr,k,cls){
   if(!SUBS[k]) return '';
   var h=SUBS[k].map(function(x){
     var ms=arr.filter(function(p){ return x.kw.test(hay(p)); });
-    var out = ms.length ? '<span>'+esc(x.k)+'<em>'+ms.length+'</em></span>'
+    var out = ms.length ? '<span>'+esc(x.k)+'</span>'
                         : '<span class="off">'+esc(x.k)+'<em>준비 중</em></span>';
     if(x.sub && ms.length){
       out += x.sub.map(function(y){
         var n=ms.filter(function(p){ return y.kw.test(hay(p)); }).length;
-        return n ? '<span class="kid">'+esc(y.k)+'<em>'+n+'</em></span>' : '';
+        return n ? '<span class="kid">'+esc(y.k)+'</span>' : '';
       }).join('');
     }
     return out;
@@ -477,7 +477,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     var sb='';
     sb=subHtml(arr,k,'subs');
     return '<section class="sec" id="sec-'+esc(k)+'">'+
-      '<h4><a class="go" href="/news/s.html?k='+encodeURIComponent(k)+'">'+esc(k)+'</a><em>'+(arr.length?arr.length+'편':'준비 중')+'</em></h4>'+
+      '<h4><a class="go" href="/news/s.html?k='+encodeURIComponent(k)+'">'+esc(k)+'</a>'+(arr.length?'':'<em>준비 중</em>')+'</h4>'+
       sb+'<ul>'+rows+'</ul></section>';
   }).join('');
 }).catch(function(){
