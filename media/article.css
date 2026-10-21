@@ -76,3 +76,23 @@ footer::after{content:"자료의 글과 그림은 연구소의 지적재산입�
 
 /* 본문 좌우정렬 (2026-10-15 소장님 지시 「페이지의 텍스트를 좌우정렬 해주세요」) */
 .body p,figcaption,.note{text-align:justify}
+
+/* ── 기사 양식 2026-10-22 (소장님 「이 양식을 우리 기사에 준용해야 한다」 인천투데이 양식 준용) ── */
+.art .kick{display:block;font-size:15px;font-weight:700;color:#1A6DE0;letter-spacing:0;margin-bottom:12px}
+.art .byl{display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px;margin:26px 0 0;padding:0 0 16px;border-top:0;border-bottom:3px solid var(--ink);font-size:14px;color:var(--mute)}
+.art .byl .nm{color:var(--ink);font-weight:700;font-size:15px}
+.art .subs{margin:30px 0 0}
+.art .subs p{font-weight:700;font-size:19.5px;line-height:1.62;color:var(--ink);margin:0 0 4px;letter-spacing:-.01em}
+.art .body{margin-top:26px}
+.art .body h2{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-weight:700;font-size:20px;border-bottom:0;padding-bottom:0;margin:40px 0 16px}
+.art .body .dl{font-weight:500}
+.art .tools{display:flex;gap:0;margin:22px 0 0;width:max-content;border:1px solid var(--line2);border-radius:6px;background:#fff}
+.art .tools button{all:unset;cursor:pointer;width:46px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--ink);font-size:17px;font-weight:700;border-right:1px solid var(--line)}
+.art .tools button:last-child{border-right:0}
+.art .tools button:hover{background:#F3F6FA}
+.art .tools svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
+@media(min-width:1000px){.art .wrap{position:relative}.art .toolsbox{position:sticky;top:96px;height:0;z-index:3}.art .tools{position:absolute;left:-96px;top:0;margin:0;flex-direction:column;width:auto}.art .tools button{border-right:0;border-bottom:1px solid var(--line);width:52px;height:50px}.art .tools button:last-child{border-bottom:0}}
+.art.fs1 .body{font-size:20px}.art.fs2 .body{font-size:21.5px}.art.fs3 .body{font-size:23px}
+.art-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#111820;color:#fff;font-size:14px;padding:10px 16px;border-radius:6px;z-index:99;opacity:0;transition:opacity .2s}
+.art-toast.on{opacity:1}
+@media print{.art .tools,.art .toolsbox,.nf .top,.nf .mast,.nf .gnb,.nf footer{display:none!important}}
