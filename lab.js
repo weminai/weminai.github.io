@@ -25,7 +25,7 @@
   setInterval(function(){if(!stop&&!document.hidden)go(i+1);},3500);
  }).catch(function(){});
 })();
-/* 자료검색 — 연구소 안내 쪽과 정책브리핑·연구보고서를 찾는다(기사는 찾지 않는다) */
+/* 자료검색 — 연구소 안내 쪽과 전체 자료(posts.json)를 찾는다. 옛 누리집 검색 기능을 살린다(2026-10-23 소장님 「기존 기능은 다 살아 있어야」) */
 (function(){
  var u=document.getElementById('qlist'); if(!u||!window.fetch)return;
  var q=(new URLSearchParams(location.search).get('q')||'').trim(); var box=document.querySelector('.qbar input'); if(box)box.value=q;
@@ -43,7 +43,7 @@
   u.innerHTML=R.slice(0,80).map(function(x){return '<li><a href="'+e(x.f)+'"><span class="g">'+e(x.g)+'</span><span class="t">'+e(x.t)+'</span><span class="d">'+x.dt+'</span></a></li>';}).join('');
   };
   fetch('data/posts.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():[];}).then(function(ps){
-   (Array.isArray(ps)?ps:[]).filter(function(p){return p&&p.파일&&p.제목&&p.공개!=='보류'&&(p.분야==='정책브리핑'||/연구보고서/.test(String(p.분야||'')+String(p.묶음||'')))&&hit([p.제목,p.부제,p.묶음,p.분야,p.리드].join(' '));})
+   (Array.isArray(ps)?ps:[]).filter(function(p){return p&&p.파일&&p.제목&&p.공개!=='보류'&&hit([p.제목,p.부제,p.묶음,p.분야,p.리드].join(' '));})
     .sort(function(a,b){return (a.날짜||'')<(b.날짜||'')?1:-1;}).forEach(function(p){R.push({f:p.파일,g:p.묶음||p.분야||'',t:String(p.제목).replace(/^\s*\[[^\]]*\]\s*/,''),dt:d(p.날짜)});});
    done();
   }).catch(done);

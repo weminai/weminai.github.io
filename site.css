@@ -447,3 +447,20 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 .sx.s-autumn{background-color:#E87628;background-image:url(img/hero_autumn.jpg)}
 .sx.s-winter{background-color:#6080AA;background-image:url(img/hero_winter.jpg)}
 .sx::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,25,50,.28),rgba(10,25,50,0) 55%);pointer-events:none}
+
+/* 21차: 옛 기능 살리기 — 바닥글 사이트맵과 전체 메뉴(소장님 2026-10-23 「기존 홈페이지 있던 기능들은 다 살아 있어야」) */
+.foot .smap{display:grid;grid-template-columns:repeat(5,1fr);gap:22px 24px;padding:6px 0 28px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12)}
+.smc{display:flex;flex-direction:column;gap:5px}
+.smc a{color:#AEB8C6;font-size:13px;line-height:1.5}.smc a:hover{color:#fff}
+.smc a.smh{color:#fff;font-weight:700;font-size:14px;margin-bottom:4px}
+.fco p{margin:0 0 4px;font-size:13px;color:#AEB8C6}.fco b{color:#fff;font-weight:500}.fco a{color:#AEB8C6;text-decoration:underline}
+.mall{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:38px;height:38px;border:1px solid var(--l);border-radius:50%;background:#fff;cursor:pointer;padding:0 10px;margin-left:8px}
+.mall i{display:block;height:2px;background:#15202E;border-radius:1px}.mall:hover{border-color:#1A6DFF}.mall:hover i{background:#1A6DFF}
+.allm{position:fixed;inset:0;z-index:60;background:rgba(14,23,38,.97);overflow:auto;padding:70px 0 40px}
+.allm[hidden]{display:none}
+.allm .smap{display:grid;grid-template-columns:repeat(5,1fr);gap:28px 30px;margin-top:26px}
+.allm .smc a{font-size:15px}.allm .smc a.smh{font-size:17px;color:#fff;border-bottom:2px solid #1A6DFF;padding-bottom:6px}
+.allt{color:#fff;font-family:"Noto Serif KR",serif;font-size:24px}
+.allx{position:fixed;top:18px;right:24px;background:none;border:0;color:#fff;font-size:40px;line-height:1;cursor:pointer}
+@media(max-width:860px){.foot .smap,.allm .smap{grid-template-columns:1fr 1fr}.mbtn{display:none}}
+@media(max-width:960px){.top .sicon{margin-left:auto}}
