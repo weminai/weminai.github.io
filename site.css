@@ -464,3 +464,8 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 .allx{position:fixed;top:18px;right:24px;background:none;border:0;color:#fff;font-size:40px;line-height:1;cursor:pointer}
 @media(max-width:860px){.foot .smap,.allm .smap{grid-template-columns:1fr 1fr}.mbtn{display:none}}
 @media(max-width:960px){.top .sicon{margin-left:auto}}
+/* 22차: 로고 키움(소장님 2026-10-23 「연구소 로고가 너무 작아요」) */
+.top .wrap{height:96px}
+.brand img{height:68px}
+.gnb a{font-size:17px}
+@media(max-width:960px){.top .wrap{height:76px}.brand img{height:50px}}
