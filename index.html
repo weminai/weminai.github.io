@@ -1,264 +1,33 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>經世濟民 AI·경제 연구소</title>
-<meta name="description" content="경세제민 AI·경제 연구소 — 정책브리핑과 기사. 항공 철도 해양 경제 AI.">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="favicon_64.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png"><style>
-:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;
---blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62;--green:#22D06A;--green-d:#0E6B3C;--yellow:#FFD21E;--yellow-d:#8A6100;--orange:#FF9A33;--orange-d:#B24A0C}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);line-height:1.62;
-font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
-.util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
-.util .wrap{display:flex;justify-content:space-between;gap:14px;padding:6px 18px}
-.mast{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#F7FAFF)}
-.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;padding:18px 18px 14px}
-.logo{display:block;line-height:0}
-.logo img{width:276px;height:auto;display:block}
-@media(max-width:560px){.logo img{width:228px}}
-.mast .date{font-size:13px;color:var(--mute);padding-bottom:5px}
-.gnb{border-bottom:2px solid var(--blue-d);position:sticky;top:0;z-index:5;background:#fff}
-.gnb .wrap{display:flex;gap:28px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
-.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
-.gnb a:hover{border-color:var(--blue-d);color:var(--blue-d)}
-.flash{border-bottom:1px solid var(--line);font-size:13px}
-.flash .wrap{display:flex;gap:22px;flex-wrap:wrap;padding:8px 18px;color:var(--mute)}
-.flash b{font-weight:800;margin-right:5px}
-.top{border-bottom:3px solid var(--ink);background:linear-gradient(180deg,#F2F6FD,#FBFCFF)}
-.top .wrap{display:grid;grid-template-columns:1fr 310px;padding:0 18px}
-.lead{padding:20px 28px 22px 0;border-right:1px solid var(--line)}
-.lead .tag{display:inline-block;background:var(--blue);color:#fff;font-weight:800;font-size:12px;padding:3px 9px}
-.lead h1{font-size:34px;line-height:1.22;letter-spacing:-1.3px;margin:10px 0 11px;font-weight:800}
-.lead p{margin:0 0 6px;font-size:15px;color:var(--sub);line-height:1.6}
-.lead .by{margin-top:14px;font-size:13px;color:var(--mute);border-top:1px solid var(--line);padding-top:10px}
-.side{padding:22px 0 26px 22px}
-.side h3{margin:0 0 10px;font-size:15px;font-weight:800;border-bottom:2px solid var(--ink);padding-bottom:7px}
-.side ol{list-style:none;margin:0;padding:0;counter-reset:n}
-.side li{counter-increment:n;border-bottom:1px solid var(--line)}
-.side li a{display:flex;gap:9px;padding:9px 0;align-items:center}
-.side li a::before{flex:none;width:16px}
-.side li a::before{content:counter(n);font-size:13px;font-weight:800;color:var(--mute)}
-.side .st{font-size:14.5px;font-weight:600;line-height:1.45;letter-spacing:-.3px}
-.side .sk{display:block;font-size:11.5px;font-weight:700;color:var(--mute);margin-bottom:3px}
-/* 대분류 */
-.grp{padding:26px 0 10px;border-bottom:1px solid var(--line)}
-.gh{display:flex;align-items:baseline;gap:13px;border-bottom:4px solid var(--c);padding-bottom:8px;margin-bottom:6px}
-.gh h2{margin:0;font-size:27px;font-weight:800;letter-spacing:-.9px;background:var(--c);color:var(--gt,#111);padding:3px 13px 4px}
-.gh .gd{font-size:13.5px;color:var(--mute)}
-.gh .gn{margin-left:auto;font-size:13px;font-weight:800;color:var(--mute)}
-/* 시리즈 */
-.ser{padding:14px 0 6px}
-.sh{display:flex;align-items:baseline;gap:9px;margin-bottom:8px}
-.sh h3{margin:0;font-size:18px;font-weight:800;color:var(--ct);letter-spacing:-.4px;
- border-left:5px solid var(--c);padding-left:9px}
-.sh .sd{font-size:12.5px;color:var(--mute)}
-.sh .sn{margin-left:auto;font-size:12px;font-weight:700;color:var(--mute)}
-.sers{display:grid;grid-template-columns:1fr 1fr;gap:4px 36px}
-.sbody{display:block}
-.big{display:block;border-top:1px solid var(--line);padding-top:14px;padding-bottom:12px;
- border-bottom:1px solid var(--line);margin-bottom:4px}
-.big.haspic{display:grid;grid-template-columns:148px 1fr;gap:14px;align-items:start}
-.big .kick{font-size:12.5px;font-weight:800;color:var(--ct)}
-.big h4{margin:4px 0 6px;font-size:17.5px;line-height:1.34;letter-spacing:-.5px;font-weight:800}
-.big p{margin:0;font-size:13.5px;color:var(--sub);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.big .m{margin-top:7px;font-size:12px;color:var(--mute)}
-.big .txt{min-width:0}
-
-/* 사진 */
-.leadpic{margin:13px 0 8px}
-.leadpic img{width:100%;height:auto;display:block;border:1px solid var(--line)}
-.leadpic figcaption{font-size:12.5px;color:var(--mute);padding-top:6px;line-height:1.5}
-.leadsub{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:6px}
-.leadsub img{width:100%;height:auto;display:block;border:1px solid var(--line)}
-.leadsub figure{margin:0}
-.leadsub figcaption{font-size:12px;color:var(--mute);padding-top:4px}
-.big .cut{display:block;margin-bottom:10px;overflow:hidden;background:var(--soft)}
-.big .cut img{width:100%;height:auto;display:block}
-.side li a{align-items:center}
-.side .th{display:block;width:80px;height:44px;overflow:hidden;background:var(--soft);flex:none}
-.side .th img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
-.rows{list-style:none;margin:0;padding:0}
-.rows li{border-bottom:1px solid var(--line)}
-.rows li:last-child{border-bottom:0}
-.rows a{display:grid;grid-template-columns:48px 1fr 16px;gap:9px;align-items:center;padding:7.5px 0}
-.rows a:hover .t{color:var(--ct)}
-.rows a::after{content:'→';font-size:13px;color:#C8CFDC;text-align:right}
-.rows a:hover::after{color:var(--ct)}
-.rows .k{display:none}
-.rows .t{font-size:14px;font-weight:600;letter-spacing:-.3px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.rows .d{font-size:12.5px;color:var(--mute);font-weight:600}
-.about{padding:30px 0 34px;border-top:3px solid var(--ink);margin-top:30px}
-.about h2{margin:0 0 4px;font-size:20px}
-.about .one{margin:0 0 18px;font-size:14.5px;color:var(--mute)}
-.about .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.about .col{border-top:4px solid var(--k);padding-top:10px}
-.about .col h4{margin:0 0 5px;font-size:15.5px;color:var(--kt,var(--k))}
-.about .col p{margin:0;font-size:13.5px;color:var(--mute);line-height:1.66}
-footer{background:var(--ink);color:#BEBEBA;border-top:5px solid var(--blue)}
-footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
-footer b{color:#fff}
-@media(max-width:900px){
-.sers{grid-template-columns:1fr}
-.top .wrap{grid-template-columns:1fr}
-.lead{border-right:0;padding:22px 0 18px}.lead h1{font-size:29px}
-.side{padding:0 0 22px;border-top:1px solid var(--line)}
-.sbody{grid-template-columns:1fr;gap:16px}
-.big{border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:14px}
-.about .cols{grid-template-columns:repeat(2,1fr)}
-.mast .wrap{align-items:flex-start;flex-direction:column;gap:6px}}
-@media(max-width:600px){.about .cols{grid-template-columns:1fr}.lead h1{font-size:26px}.gh h2{font-size:22px}}
-
-.grps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 30px;padding:18px 0 6px;
- grid-auto-rows:1fr}
-.grp{display:flex;flex-direction:column}
-.grp .rows{margin-top:6px}
-.big .cut{flex:none}
-.big .cut img{width:100%;height:auto;display:block;background:#fff}
-.big{min-height:168px}
-.grp{padding:0;border-bottom:0}
-.gh{display:flex;align-items:center;gap:9px;border-bottom:3px solid var(--ink);
- padding-bottom:7px;margin-bottom:9px;flex-wrap:nowrap;height:48px;box-sizing:content-box}
-.gh h2{margin:0;font-size:21px;font-weight:800;color:var(--ink);
- padding:0;white-space:nowrap;flex:none;width:148px;
- display:flex;align-items:center;height:34px;box-sizing:border-box}
-.gh h2.w2{letter-spacing:9px}
-.gh h2.n3{letter-spacing:3px}
-.gh h2.n4{letter-spacing:0}
-.gh h2.n5{letter-spacing:-1.6px;font-size:19.5px}
-.gh h2.n7{letter-spacing:-2.6px;font-size:18px}
-.gh h2 .dot{letter-spacing:0;margin:0 2px}
-.gh .gd{min-width:0;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:11.5px;line-height:1.45}
-.gh .gd{font-size:12px;color:var(--mute)}
-.gh .more{margin-left:auto;font-size:12.5px;color:var(--mute);white-space:nowrap}
-.gh .more:hover{color:var(--ct)}
-.big{display:block;padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:2px}
-.big.haspic{display:block}
-.big .cut{display:block;margin-bottom:9px;overflow:hidden;background:var(--soft)}
-.big .cut img{width:100%;height:auto;display:block}
-.big .kick{font-size:11.5px;font-weight:700;color:var(--mute);display:block;height:17px;overflow:hidden}
-.big h4{margin:3px 0 4px;font-size:15.5px;line-height:1.32;letter-spacing:-.4px;font-weight:800;
- display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:41px}
-.big p{display:none}
-.big:not(.haspic) p{display:-webkit-box;margin-top:2px}
-.rows a{display:grid;grid-template-columns:1fr;gap:0;padding:5.5px 0}
-.rows a::after{content:none}
-.rows .d{display:none}
-.rows .t{font-size:13px;font-weight:600;line-height:1.42;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-@media(max-width:980px){.grps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.grps{grid-template-columns:1fr}}
-
-
-
-/* 연구 의뢰 칸 */
-.ask{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
-.askl b{font-weight:800;color:var(--ink);margin-right:8px;font-size:14.5px}
-.askl span{font-size:13px;color:var(--mute)}
-.askr{margin-left:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.askbtn{background:var(--blue);color:#fff;font-weight:800;font-size:14px;padding:8px 18px;white-space:nowrap}
-.askbtn:hover{background:var(--navy)}
-.asktel{font-size:13px;color:var(--mute);white-space:nowrap}
-/* 사이트맵 */
-.smap{display:grid;grid-template-columns:repeat(5,1fr);gap:14px 18px;padding:4px 0 18px;
- margin-bottom:16px;border-bottom:1px solid #3A3A38}
-.smc{display:flex;flex-direction:column;gap:3px}
-.smc a{font-size:12.5px;color:#9E9E9A;line-height:1.6}
-.smc a:hover{color:#fff}
-.smc .smh{font-size:13.5px;font-weight:800;color:#fff;margin-bottom:3px}
-@media(max-width:900px){.smap{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:560px){.smap{grid-template-columns:repeat(2,1fr)}.askr{margin-left:0}}
-/* 연구소가 하는 일 */
-.biz{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft)}
-.biz .wrap{padding:15px 18px 17px}
-.bizline{margin:0 0 7px;font-size:13.5px;line-height:1.9;color:var(--sub)}
-.bizline b{font-weight:800;color:var(--ink);margin-right:8px}
-.bizwho{margin:0;font-size:13px;color:var(--mute)}
-.bizwho a{color:var(--blue-d);font-weight:700}
-
-.bizhead{display:flex;align-items:baseline;gap:12px;margin:0 0 8px}
-.bizhead b{font-size:14.5px;font-weight:800;color:var(--ink)}
-.bizhead a{font-size:13px;color:var(--blue-d);font-weight:700}
-.bizlist{list-style:none;margin:0 0 4px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:6px 22px}
-.bizlist li{font-size:13px;line-height:1.55;color:var(--sub);padding:6px 0;border-top:1px solid var(--line)}
-.bizlist li b{display:block;font-size:14px;font-weight:800;color:var(--ink);margin-bottom:1px}
-@media(max-width:900px){.bizlist{grid-template-columns:repeat(2,1fr)}}
-/* 검색 */
-.srchtop{display:flex;gap:6px;align-items:center}
-.srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw}
-.srchtop input:focus{outline:0;border-color:var(--blue)}
-.srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:var(--blue);color:#fff;cursor:pointer}
-.srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:var(--orange);color:var(--ink);white-space:nowrap;margin-left:18px;position:relative}
-.srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}
-.srchtop .asktop:hover{background:#FFB15E}
-@media(max-width:700px){.srchtop input{width:100%}}
-body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,select{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;pointer-events:none}
-.credit{border-top:1px solid #DDE4F0;background:#fff}.credit .wrap{padding:10px 18px;font-size:12px;color:#71716E;line-height:1.7}
-</style></head><body>
-<div class="util"><div class="wrap">
-<span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span>
-<span><a href="about.html">연구소 소개</a> · <a href="about.html">연구 실적</a> · 연구 의뢰 032-777-0421</span></div></div>
-<div class="mast"><div class="wrap"><a class="logo" href="./"><img src="logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
-<form class="srchtop" action="media/" method="get" role="search">
-<input type="search" name="q" placeholder="자료 검색" aria-label="자료 검색"><button type="submit">찾기</button><a class="asktop" href="ask.html">의뢰·신청하기</a></form>
-<span class="date" id="today"></span></div></div>
-<nav class="gnb"><div class="wrap">
-<a href="/news/">전체 자료</a>
-<a href="media/g_policy.html">정책브리핑</a><a href="media/g_ocean.html">해양</a><a href="media/g_air.html">항공</a><a href="media/g_rail.html">철도</a><a href="media/g_logistics.html">복합물류</a><a href="media/g_urban.html">도시계획·부동산</a><a href="media/g_climate.html">기후위기</a><a href="media/g_economy.html">경제</a><a href="media/g_ai.html">AI</a>
-<a href="about.html">연구소</a></div></nav>
-<div class="top"><div class="wrap">
-<div class="lead"><span class="tag">가계부채 브리핑</span>
-<h1><a href="media/debt01.html">[가계부채 브리핑] 가계대출 9개월 만에 2조2000억원 감소, 주택담보대출은 3조3000억원 늘어</a></h1>
-<p>신용대출 3조원 줄고 분기 말 부실채권 상각·명절 상여금 겹쳐</p>
-<figure class="leadpic"><a href="media/debt01.html"><img src="media/img/debt01_01.jpg" alt="[가계부채 브리핑] 가계대출 9개월 만에 2조2000억원 감소, 주택담보대출은 3조3000억원 늘어"></a></figure>
-<div class="by">김갑봉 소장 · 10월 19일 · <a href="media/debt01.html">글 전문 읽기 →</a></div></div>
-<aside class="side"><h3>최신 자료</h3><ol><li><a href="media/trade01.html"><span class="th"><img src="media/img/trade01_01.jpg" alt="" loading="lazy"></span><span><span class="sk">수출·고용 브리핑</span><span class="st">수출 1209억달러 역대 최대, 제조업 고용보험 가입자는 외국인 빼면 4000명 줄어</span></span></a></li><li><a href="media/fis01.html"><span class="th"><img src="media/img/fis01_01.jpg" alt="" loading="lazy"></span><span><span class="sk">지방재정 브리핑</span><span class="st">인천 신설구 100일, 법은 「지원하며」라 썼는데 개편 국비 예산은 두 해째 0원</span></span></a></li><li><a href="media/brief01.html"><span class="th"><img src="media/img/brief01_01.png" alt="" loading="lazy"></span><span><span class="sk">정책브리핑</span><span class="st">인천시와 군·구는 무엇을 연구에 맡기나, 정책연구 727건을 다 세어 봤다</span></span></a></li><li><a href="media/urb01.html"><span class="th"><img src="media/img/card_urban_01.jpg" alt="" loading="lazy"></span><span><span class="sk">부동산 브리핑</span><span class="st">노후계획도시 선도지구, 분담금은 용적률 두 구간에서 갈린다</span></span></a></li><li><a href="media/urb03.html"><span class="th"><img src="media/img/card_urban_02.jpg" alt="" loading="lazy"></span><span><span class="sk">부동산 브리핑</span><span class="st">구월지구 B1구역, 인천에서 가장 높은 용적률 430% 받았다</span></span></a></li></ol></aside>
-</div></div>
-<section class="biz"><div class="wrap">
-<div class="bizhead"><b>연구소가 하는 일</b><a href="about.html">연구 실적</a></div>
-<ul class="bizlist">
-<li><b>정책연구</b>기본계획·기본구상, 중장기계획, 정책방안</li>
-<li><b>타당성·경제성</b>사전타당성, B/C·NPV·IRR, 파급효과</li>
-<li><b>조사·데이터 분석</b>실태·수요조사, 통계, AHP, SWOT·SER-M</li>
-<li><b>자문·컨설팅</b>공공기관·기업 정책·경영 자문</li>
-<li><b>강연·교육</b>4단계 AI 실전 교육, 경제·교통물류 강연</li>
-<li><b>출판·콘텐츠</b>정책브리핑, 보고서·단행본, 시사·경제 콘텐츠</li>
-<li><b>포럼·행사</b>포럼·세미나·토론회 기획과 운영</li>
-<li><b>홍보·광고</b>정책 홍보 기획과 광고 대행</li>
-</ul>
-<div class="ask">
-<div class="askl"><b>의뢰·신청</b><span>연구와 자문, 강연·교육, 행사, 출판·콘텐츠까지 누리집에서 바로 신청하실 수 있습니다.</span></div>
-<div class="askr">
-<a class="askbtn" href="ask.html" style="background:var(--orange);color:var(--ink)">의뢰·신청하기</a> <a class="askbtn" href="join.html" style="background:#fff;color:var(--ink);border:1px solid #9FB2D4">객원연구원 신청</a>
-<span class="asktel">032-777-0421 · weminaimax@weminai.com</span>
-</div></div>
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>경세제민 AI·경제연구소(주)</title><meta name="description" content="경세제민 AI·경제연구소(주) — 공공기관·지방정부·기업 연구용역. 인천시·지자체·공공기관이 믿고 맡기는 정책연구.">
+<meta property="og:title" content="경세제민 AI·경제연구소(주)"><meta property="og:description" content="경세제민 AI·경제연구소(주) — 공공기관·지방정부·기업 연구용역. 인천시·지자체·공공기관이 믿고 맡기는 정책연구."><meta property="og:type" content="website"><meta property="og:image" content="https://weminai.com/logo.png">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon_64.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head><body class="home2">
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><img src="logo.png" alt="경세제민 AI·경제연구소(주)"></a>
+<nav class="gnb" id="gnb"><a href="research.html">사업</a><a href="about.html">연구소</a></nav>
+<a class="sicon" href="search.html" aria-label="검색"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></a>
+<button class="mbtn" type="button" onclick="document.getElementById('gnb').classList.toggle('open')" aria-label="메뉴">메뉴</button>
+</div></header>
+<main>
+<section class="sx" id="sx"><script>(function(){var q=(location.search.match(/season=(\w+)/)||[])[1],m=new Date().getMonth()+1,s=q||(m>=3&&m<=5?'spring':m>=6&&m<=8?'summer':m>=9&&m<=11?'autumn':'winter');document.getElementById('sx').className='sx s-'+s;})();</script><div class="sxw">
+<h1>현장에서 묻고,<br>데이터로 답합니다</h1>
+<div class="sp"><a href="research.html#b11"><b>연구용역</b><span>기본계획 · 정책연구 · 타당성조사</span></a><a href="research.html#b13"><b>조사 · 컨설팅</b><span>실태조사 · 설문조사 · 정책 자문</span></a><a href="research.html#b15"><b>AI 교육</b><span>공공기관 · 단체 AI 실무 교육</span></a></div>
+<form class="ss" action="search.html" method="get"><input name="q" type="search" placeholder="자료검색" aria-label="검색어"><button type="submit" aria-label="검색"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button></form>
 </div></section>
-<main class="wrap"><div class="grps">
-  <section class="grp"><div class="gh"><h2>가계부채 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">1편</span></div><a class="big haspic" href="media/debt01.html"><span class="cut"><img src="media/img/debt01_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">가계부채 브리핑</span><h4>[가계부채 브리핑] 가계대출 9개월 만에 2조2000억원 감소, 주택담보대출은 3조3000억원 늘어</h4><p>신용대출 3조원 줄고 분기 말 부실채권 상각·명절 상여금 겹쳐</p></span></a><ul class="rows"></ul></section>
-  <section class="grp"><div class="gh"><h2>수출·고용 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">1편</span></div><a class="big haspic" href="media/trade01.html"><span class="cut"><img src="media/img/trade01_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">수출·고용 브리핑</span><h4>수출 1209억달러 역대 최대, 제조업 고용보험 가입자는 외국인 빼면 4000명 줄어</h4><p>반도체 603억달러로 수출 절반, 삼성전자 3분기 영업이익 107조4000억원</p></span></a><ul class="rows"></ul></section>
-  <section class="grp"><div class="gh"><h2>지방재정 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">1편</span></div><a class="big haspic" href="media/fis01.html"><span class="cut"><img src="media/img/fis01_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">지방재정 브리핑</span><h4>인천 신설구 100일, 법은 「지원하며」라 썼는데 개편 국비 예산은 두 해째 0원</h4><p>2026년 예산은 근거가 없어 빠지고, 2027년 정부안은 근거를 만든 뒤에도 빠져</p></span></a><ul class="rows"></ul></section>
-  <section class="grp"><div class="gh"><h2>정책브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">1편</span></div><a class="big haspic" href="media/brief01.html"><span class="cut"><img src="media/img/brief01_01.png" alt="" loading="lazy"></span><span class="txt"><span class="kick">정책브리핑</span><h4>인천시와 군·구는 무엇을 연구에 맡기나, 정책연구 727건을 다 세어 봤다</h4><p>기본계획·종합계획·중장기계획이 134건, 열에 둘 가까이가 계획을 다시 쓰는 일</p></span></a><ul class="rows"></ul></section>
-  <section class="grp"><div class="gh"><h2>부동산 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">3편</span></div><a class="big haspic" href="media/urb01.html"><span class="cut"><img src="media/img/card_urban_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">부동산 브리핑</span><h4>노후계획도시 선도지구, 분담금은 용적률 두 구간에서 갈린다</h4><p>구월 B1구역은 중심지구정비형 기준용적률 430%, 다섯 지구 가운데 가장 높다</p></span></a><ul class="rows"><li><a href="media/urb03.html"><span class="d">08.25</span><span class="t">구월지구 B1구역, 인천에서 가장 높은 용적률 430% 받았다</span></a></li><li><a href="media/urb02.html"><span class="d">08.25</span><span class="t">구월지구 B1구역 선도지구 선정 심층 분석</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>불평등 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">3편</span></div><a class="big haspic" href="media/gap03.html"><span class="cut"><img src="media/img/card_econ_02.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">불평등 브리핑</span><h4>[한국경제 불편한 진실⑳] 수도권·비수도권 — 충남에서 빠져나간 33조원, 서울로 들어온 73조원</h4><p>충남 33조원·경북 21조원·울산 20조원 순유출, 서울 73조원·경기 44조원 순유입</p></span></a><ul class="rows"><li><a href="media/gap02.html"><span class="d">08.11</span><span class="t">[한국경제 불편한 진실⑲] 계층 이동 — 좁아진 사다리, 그 자리를 메우는 부모 지갑</span></a></li><li><a href="media/gap01.html"><span class="d">07.18</span><span class="t">[한국경제 불편한 진실⑮] AI와 불평등 — 기술은 시간을 줄일 수 있지만, 시간을 줄인 건 늘 제도였다</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>인프라 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">3편</span></div><a class="big haspic" href="media/inf03.html"><span class="cut"><img src="media/img/card_econ_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">인프라 브리핑</span><h4>[한국경제 불편한 진실⑱] 데이터 — 3756만건 유출, 10만원으로 매겨진 값</h4><p>쿠팡 개인정보 3756만건 유출, 과징금 6246억8100만원</p></span></a><ul class="rows"><li><a href="media/inf02.html"><span class="d">07.28</span><span class="t">[한국경제 불편한 진실⑰] 교통 — 세계에서 가장 긴 출퇴근, 값은 시간으로 낸다</span></a></li><li><a href="media/inf01.html"><span class="d">07.21</span><span class="t">[한국경제 불편한 진실⑯] 물·인프라 — 원가의 4분의 3에 파는 수돗물, 낡은 관은 미래로 미룬다</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>복지 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">3편</span></div><a class="big haspic" href="media/wel02.html"><span class="cut"><img src="media/img/card_econ_02.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">복지 브리핑</span><h4>[한국경제 불편한 진실⑩] 교육 — 사교육비 27조5351억원, 줄었다는 통계의 함정</h4><p>총액은 5.7% 줄었는데 학생 수는 2.3%밖에 줄지 않았다</p></span></a><ul class="rows"><li><a href="media/wel01.html"><span class="d">07.28</span><span class="t">[한국경제 불편한 진실⑨] 돌봄 — 멈추면 나라가 멈추는데, 값은 최저임금 언저리</span></a></li><li><a href="media/wel03.html"><span class="d">07.05</span><span class="t">[한국경제 불편한 진실⑪] 의료 — 3분 진료가 떠받친 세계 최고 접근성, 그 청구서가 온다</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>기업·금융 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">2편</span></div><a class="big haspic" href="media/fin01.html"><span class="cut"><img src="media/img/card_econ_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">기업·금융 브리핑</span><h4>89조 버는 회사 하루 10% 폭락, 투기판 깐 금융수장 사퇴하라</h4><p>같은 날 대만은 올랐고 한국만 8.95% 폭락… 두 종목이 거래대금 51% 빨아들였다</p></span></a><ul class="rows"><li><a href="media/fin02.html"><span class="d">04.28</span><span class="t">[경세제민] 삼성 배당의 순서가 틀렸다, 주주가 왜 1순위인가</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>산업 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">3편</span></div><a class="big haspic" href="media/ind03.html"><span class="cut"><img src="media/img/card_econ_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">산업 브리핑</span><h4>[한국경제 불편한 진실⑭] 식량 — 값싼 수입 밥상은 공짜가 아니라 &#x27;보험 미가입&#x27;이다</h4><p>국내에서 쓰는 곡물의 5분의 4가 수입이다. 곡물자급률은 21.6%까지 내려앉았다 (2024년 기준)</p></span></a><ul class="rows"><li><a href="media/ind01.html"><span class="d">07.05</span><span class="t">[한국경제 불편한 진실⑫] 플랫폼 — 주문 한 건에 매출 3할이 사라진다</span></a></li><li><a href="media/ind02.html"><span class="d">07.05</span><span class="t">[한국경제 불편한 진실⑬] 에너지 — 싼 전기요금은 공짜가 아니라 &#x27;외상&#x27;이다</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>증시 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">5편</span></div><a class="big haspic" href="media/kos05.html"><span class="cut"><img src="media/img/card_econ_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">증시 브리핑</span><h4>[코스피 9000 번외]</h4><p>전쟁도 멈춰 세운 주식, 삼성전자를 국민전자로</p></span></a><ul class="rows"><li><a href="media/kos03.html"><span class="d">06.02</span><span class="t">[코스피 9000 코앞] ③</span></a></li><li><a href="media/kos04.html"><span class="d">06.02</span><span class="t">[코스피 9000 번외]</span></a></li><li><a href="media/kos01.html"><span class="d">06.01</span><span class="t">[코스피 9000 코앞 ①] 시민이 물꼬 튼 성장, 왜 남일 같을까</span></a></li><li><a href="media/kos02.html"><span class="d">06.01</span><span class="t">[코스피 9000 코앞 ②]</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>노동 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">2편</span></div><a class="big haspic" href="media/lab01.html"><span class="cut"><img src="media/img/card_econ_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">노동 브리핑</span><h4>[경세제민] 자영업자① 자영업자는 사장인가 노동자인가</h4><p>IMF 이후 강제 창업 570만명... 빚 1120조원의 덫</p></span></a><ul class="rows"><li><a href="media/lab02.html"><span class="d">04.22</span><span class="t">[경세제민] 최저임금③ 독일 벌금 7억원, 한국은 2000만원</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>조세 브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">3편</span></div><a class="big haspic" href="media/tax03.html"><span class="cut"><img src="media/img/card_econ_02.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">조세 브리핑</span><h4>[경세제민] 한국경제 불편한 진실⑧-하</h4><p>보유세 깎아준 1조4800억원, 어린이집·도서관 예산이 날아갔다</p></span></a><ul class="rows"><li><a href="media/tax01.html"><span class="d">03.17</span><span class="t">[경세제민]상속세 과세 대상 6%, 나머지 94%는 왜 겁먹나</span></a></li><li><a href="media/tax02.html"><span class="d">03.17</span><span class="t">[한국경제 불편한 진실⑧] 재산세는 부자세금? 진짜 부자는 빠져나간다</span></a></li></ul></section>
-  <section class="grp"><div class="gh"><h2>교통정책브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">1편</span></div><a class="big haspic" href="media/col01.html"><span class="cut"><img src="media/img/card_econ_01.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">교통정책브리핑</span><h4>기후위기 시대, 경기국제공항보다 &#x27;제3공항철도&#x27;가 낫다</h4><p>**경기도 &#x27;경기국제공항&#x27; 추진 vs 탄소중립 시대 역행 논란**</p></span></a><ul class="rows"></ul></section>
-  <section class="grp"><div class="gh"><h2>에너지정책브리핑</h2><span class="gd">연구소 브리핑</span><span class="more">1편</span></div><a class="big haspic" href="media/col02.html"><span class="cut"><img src="media/img/card_urban_02.jpg" alt="" loading="lazy"></span><span class="txt"><span class="kick">에너지정책브리핑</span><h4>이재명 정부 에너지고속도로에 담긴 비수도권 식민지 가속화</h4><p>수도권 전력수요 44%, 발전설비는 23%... 서울 자급률 10.24%</p></span></a><ul class="rows"></ul></section>
-</div>
+<section class="ksp"><div class="wrap"><h2>연구보고서 · 정책브리핑</h2>
+<div class="rot"><button class="ra l" type="button" aria-label="이전">‹</button><div class="rv"><div class="rt" id="rot"></div></div><button class="ra r" type="button" aria-label="다음">›</button></div></div></section>
 </main>
-<div class="credit"><div class="wrap">1면 사진 — 국회의사당: 대한민국국회 · 인천항 갑문, 월미전망대에서 본 인천항: 인천중구청 · 부산항 신항 컨테이너 야적장: 부산항만공사 · 신안 해상풍력 설치선: 전라남도 · 인천국제공항, 인천공항 자기부상철도: ⓒ한국관광콘텐츠랩-IR 스튜디오. 모두 공공누리 제1유형(출처표시).</div></div>
-<footer><div class="wrap">
-<nav class="smap"><div class="smc"><a class="smh" href="media/g_policy.html">정책브리핑</a><a href="media/g_policy.html#교통정책브리핑">교통정책브리핑</a><a href="media/g_policy.html#복지-브리핑">복지 브리핑</a><a href="media/g_policy.html#불평등-브리핑">불평등 브리핑</a><a href="media/g_policy.html#산업-브리핑">산업 브리핑</a><a href="media/g_policy.html#인프라-브리핑">인프라 브리핑</a><a href="media/g_policy.html#지방재정-브리핑">지방재정 브리핑</a></div><div class="smc"><a class="smh" href="media/g_ocean.html">해양</a><a href="media/g_ocean.html#인천해양주권">인천해양주권</a><a href="media/g_ocean.html#해양-AI-융복합">해양 AI 융복합</a></div><div class="smc"><a class="smh" href="media/g_air.html">항공</a><a href="media/g_air.html#인천공항-미래">인천공항 미래</a><a href="media/g_air.html#글로벌-인천공항">글로벌 인천공항</a><a href="media/g_air.html#항공산업">항공산업</a></div><div class="smc"><a class="smh" href="media/g_rail.html">철도</a><a href="media/g_rail.html#서해선-KTX">서해선 KTX</a><a href="media/g_rail.html#환황해-철도망">환황해 철도망</a><a href="media/g_rail.html#철도-일반">철도 일반</a></div><div class="smc"><a class="smh" href="media/g_logistics.html">복합물류</a><a href="media/g_logistics.html#인천항-복합물류">인천항 복합물류</a></div><div class="smc"><a class="smh" href="media/g_urban.html">도시계획·부동산</a><a href="media/g_urban.html#부동산-브리핑">부동산 브리핑</a></div><div class="smc"><a class="smh" href="media/g_climate.html">기후위기</a><a href="media/g_climate.html#에너지정책브리핑">에너지정책브리핑</a></div><div class="smc"><a class="smh" href="media/g_economy.html">경제</a><a href="media/g_economy.html#노동-브리핑">노동 브리핑</a><a href="media/g_economy.html#조세-브리핑">조세 브리핑</a><a href="media/g_economy.html#기업·금융-브리핑">기업·금융 브리핑</a><a href="media/g_economy.html#증시-브리핑">증시 브리핑</a><a href="media/g_economy.html#주식공부">주식공부</a></div><div class="smc"><a class="smh" href="media/g_ai.html">AI</a><a href="media/g_ai.html#AI동향">AI동향</a></div><div class="smc"><a class="smh" href="about.html">연구소</a><a href="about.html">연구소 소개</a><a href="about.html">연구 실적</a><a href="/news/">전체 자료</a><a href="ask.html">의뢰·신청하기</a><a href="join.html">객원연구원 신청</a> · <a href="member.html">회원 안내</a><a href="sitemap.xml">사이트맵 XML</a></div></nav>
-<b>경세제민 AI·경제 연구소(주)</b> (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · (22180) 인천 미추홀구 수봉남로24번길 74(수봉공원) · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>
-청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com<br>
-자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오. · <a href="/news/privacy.html">개인정보 처리방침</a></div></footer>
-<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
-<script src="latest.js"></script>
+<footer class="foot"><div class="wrap">
+<div class="fl"><a href="research.html">사업</a><a href="about.html">연구소</a><a href="ask.html">문의</a><a href="join.html">객원연구원 신청</a><a href="/news/privacy.html">개인정보 처리방침</a></div>
+<p>경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 대표이사 김효진 · 사업자등록번호 170-86-04032</p>
+<p>(22180) 인천 미추홀구 수봉남로24번길 74(수봉공원) · 032-777-0421 · weminaimax@weminai.com</p>
+<p>자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제연구소, weminai.com)를 밝혀 주십시오.</p>
+</div></footer>
 <script src="nocopy.js"></script>
+<script src="lab.js"></script>
 </body></html>

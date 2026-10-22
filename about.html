@@ -1,214 +1,74 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>연구소 소개 — 經世濟民 AI·경제 연구소</title><meta name="description" content="두루두루 고루고루 잘 사는 세상. 현장에서 찾고 데이터로 검증해 실행할 정책을 내놓는 인천의 민간 싱크탱크. 정책연구 · 연구용역 · 조사분석 · AI 교육 · 정책브리핑 · 전문지.">
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>연구소 — 경세제민 AI·경제연구소(주)</title><meta name="description" content="경세제민의 생각, AGI 시대 연구소의 자리, 연구진, 연혁, 오시는 길.">
+<meta property="og:title" content="연구소 — 경세제민 AI·경제연구소(주)"><meta property="og:description" content="경세제민의 생각, AGI 시대 연구소의 자리, 연구진, 연혁, 오시는 길."><meta property="og:type" content="website"><meta property="og:image" content="https://weminai.com/logo.png">
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon_64.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
-<style>
-:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;--blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62;--orange:#FF9A33}
-*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);line-height:1.62;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><img src="logo.png" alt="경세제민 AI·경제연구소(주)"></a>
+<nav class="gnb" id="gnb"><a href="research.html">사업</a><a href="about.html" class="on">연구소</a></nav>
+<a class="sicon" href="search.html" aria-label="검색"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></a>
+<button class="mbtn" type="button" onclick="document.getElementById('gnb').classList.toggle('open')" aria-label="메뉴">메뉴</button>
+</div></header>
+<main><section class="ph"><div class="wrap"><span class="k">연구소</span><h1>두루두루 고루고루 잘 사는 세상</h1>
+<p>사람이 주인이고 기술은 수단이자 도구입니다. 경제(經濟)라는 말도 경세제민(經世濟民)을 줄인 것입니다. 나라 살림을 챙겨 사람이 잘 먹고 잘 살게 하는 일, 그것이 연구소가 하는 일입니다.</p>
+<div class="loc"><a href="#idea">경세제민의 생각</a><a href="#place">AGI 시대 연구소의 자리</a><a href="#people">연구진</a><a href="#hist">연혁</a><a href="#map">오시는 길</a></div></div></section>
 
-.util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
-.util .wrap{display:flex;justify-content:space-between;padding:6px 18px}
-.mast{border-bottom:1px solid var(--line);background:#fff}
-.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}
-.logo{display:block;line-height:0}.logo img{width:276px;height:auto;display:block}
-.mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
-.mast .date{font-size:13px;color:var(--mute)}
-.srchtop{display:flex;gap:6px;align-items:center;margin:0}
-.srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}
-.srchtop input:focus{outline:0;border-color:var(--blue)}
-.srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:var(--blue);color:#fff;cursor:pointer}
-.srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}
-.srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}
-.srchtop .asktop:hover{background:#FFB15E}
-.gnb{border-bottom:2px solid var(--blue-d);background:#fff}
-.gnb .wrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
-.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
-.gnb a:hover,.gnb a.on{border-color:var(--blue-d);color:var(--blue-d)}
-footer{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid var(--blue-d)}
-footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
-footer b{color:#fff}footer a{text-decoration:underline}
-body{display:flex;flex-direction:column;min-height:100vh}body>main{flex:1 0 auto;width:100%}body>footer{margin-top:auto}
-body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-input,textarea,select{-webkit-user-select:text;user-select:text}
-img{-webkit-user-drag:none;pointer-events:none}
-@media(max-width:700px){.srchtop input{width:100%}.mast .rt{align-items:stretch;width:100%}.srchtop{flex-wrap:wrap}.srchtop .asktop{margin-left:0}.srchtop .asktop::before{display:none}}
+<section class="sec" id="idea"><div class="wrap">
+<div class="sh"><div><span class="k">경세제민의 생각</span><h2>균형경제론</h2></div></div>
+<p class="intro">서민 소득을 올려 수요를 살리고, 혁신으로 공급 비용을 낮추는 일을 함께 합니다.</p>
+<div class="grid g4">
+<div class="card"><span class="no">01</span><h3>가계는 생산의 주체다</h3><p>노동자·농민·자영업자·중소상공인이 경제를 지탱합니다. 가계가 무너지면 기업도 정부도 무너집니다.</p></div>
+<div class="card"><span class="no">02</span><h3>벌이가 늘어야 경제가 돈다</h3><p>돈은 서민에게 풀려야 돕니다. 서민 소득이 유효수요를 만듭니다.</p></div>
+<div class="card"><span class="no">03</span><h3>혁신으로 값을 낮춘다</h3><p>물류 효율화, AI, 에너지 전환으로 공급 비용을 낮추고 임금은 올립니다.</p></div>
+<div class="card"><span class="no">04</span><h3>시장도 정부도 완전하지 않다</h3><p>어느 한쪽에 기대지 않습니다. 그 사이 균형이 어디 있는지 찾습니다.</p></div>
+</div></div></section>
 
-.hero{background:var(--soft);border-bottom:3px solid var(--ink)}
-.hero .wrap{padding:26px 18px 22px}
-.hero .k{font-size:13px;font-weight:800;color:var(--blue-d);letter-spacing:.5px}
-.hero h1{margin:4px 0 8px;font-size:32px;letter-spacing:-1px}
-.hero p{margin:0;font-size:15px;color:var(--sub);max-width:760px}
-.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:center}
-.hero figure,.ph{margin:0}.hero figure img{width:100%;height:230px;object-fit:cover;display:block}
-.ph{margin:0 0 14px}.ph img{width:100%;height:230px;object-fit:cover;display:block}
-.ph figcaption,.hero figcaption{font-size:11.5px;color:var(--mute);margin-top:4px}
-.credit{font-size:12px;color:var(--mute);border-top:1px solid var(--line);padding:12px 0 4px;margin-top:22px}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero figure img,.ph img{height:190px}}
-.toc{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
-.toc .wrap{display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
-.toc a{font-size:13.5px;font-weight:700;padding:5px 12px;border:1px solid #9FB2D4;color:var(--sub)}
-.toc a:hover{border-color:var(--blue-d);color:var(--blue-d)}
-main{padding:6px 0 10px}
-.s{padding:30px 0 6px;scroll-margin-top:56px}
-.s h2{margin:0 0 4px;font-size:24px;font-weight:800;letter-spacing:-.6px}
-.s .k{font-size:12.5px;font-weight:800;color:var(--blue-d)}
-.s .lead{font-size:15.5px;color:var(--sub);max-width:820px;margin:8px 0 14px}
-.s h2+.lead{margin-top:6px}
-.hd{border-bottom:3px solid var(--ink);padding-bottom:8px;margin-bottom:14px}
-.g2,.g3,.g4{display:grid;gap:14px}
-.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.c{border:1px solid var(--line);background:#fff;padding:14px 15px}
-.c b{display:block;font-size:12px;color:var(--blue-d);font-weight:800}
-.c h3{margin:2px 0 6px;font-size:16.5px;font-weight:800;letter-spacing:-.3px}
-.c p{margin:0;font-size:13.5px;color:var(--sub);line-height:1.6}
-.fn{border-top:2px solid var(--ink);padding-top:12px;margin-top:2px}
-.fn+.fn{margin-top:22px}
-.fn h3{margin:0 0 6px;font-size:19px;font-weight:800}
-.note{background:var(--soft);border-left:4px solid var(--blue-d);padding:11px 14px;font-size:14px;color:var(--sub);margin:14px 0 0}
-.lv{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
-.lv div{padding:14px;border-right:1px solid var(--line)}.lv div:last-child{border-right:0}
-.lv b{font-size:12px;color:var(--blue-d)}.lv h4{margin:2px 0 4px;font-size:16px}.lv i{display:block;font-style:normal;font-weight:800;font-size:14px;margin-bottom:4px}.lv p{margin:0;font-size:13px;color:var(--sub)}
-.yr{display:grid;grid-template-columns:70px 1fr;gap:6px 14px;border-top:1px solid var(--line);padding:10px 0;font-size:14px;line-height:1.75}
-.yr b{font-size:16px;color:var(--blue-d)}
-.yr ul{margin:0;padding-left:16px}.yr li{margin:1px 0}
-.num{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);margin:12px 0}
-.num div{padding:16px;text-align:center;border-right:1px solid var(--line)}.num div:last-child{border-right:0}
-.num strong{display:block;font-size:30px;color:var(--blue-d);letter-spacing:-1px}.num span{font-size:13px;color:var(--mute)}
-.ppl{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
-.ppl .c h3{font-size:19px}.ppl .c h3 small{font-size:13px;color:var(--mute);font-weight:700;margin-left:6px}
-.dl{display:grid;grid-template-columns:90px 1fr;border-top:2px solid var(--ink)}
-.dl dt,.dl dd{margin:0;padding:10px 4px;border-bottom:1px solid var(--line);font-size:14.5px}
-.dl dt{font-weight:800;color:var(--sub)}
-@media(max-width:900px){.g3,.g4,.lv{grid-template-columns:repeat(2,1fr)}.ppl{grid-template-columns:1fr}}
-@media(max-width:600px){.g2,.g3,.g4,.lv,.num{grid-template-columns:1fr}.lv div,.num div{border-right:0;border-bottom:1px solid var(--line)}.yr{grid-template-columns:1fr}}
-.c .meta{font-size:15px;color:#6B7382;margin-top:8px}
-.g4 a.lk{display:block;text-decoration:none;color:inherit;transition:box-shadow .15s}
-.g4 a.lk:hover{box-shadow:0 2px 14px rgba(26,109,255,.18)}
-.g4 .go{display:block;margin-top:10px;font-size:14px;font-weight:700;color:#1A6DFF}
-.tag{display:inline-block;margin:4px 6px 0 0;padding:6px 12px;border:1px solid #D7DEE9;border-radius:999px;font-size:15px;color:#1F3B63;text-decoration:none}
-.tag:hover{border-color:#1A6DFF;color:#1A6DFF}
-.btn{display:inline-block;padding:12px 22px;background:#1A6DFF;color:#fff;text-decoration:none;font-weight:700;font-size:16px;border-radius:4px}
-</style></head><body>
-<div class="util"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span>연구 의뢰 032-777-0421</span></div></div>
-<div class="mast"><div class="wrap"><a class="logo" href="./"><img src="logo.png" alt="經世濟民 AI·경제 연구소 weminai.com" width="320" height="110"></a>
-<div class="rt"><span class="date" id="today"></span><form class="srchtop" action="media/" method="get" role="search"><input type="search" name="q" placeholder="자료 검색" aria-label="자료 검색"><button type="submit">찾기</button><a class="asktop" href="ask.html">의뢰·신청하기</a></form></div></div></div>
-<nav class="gnb"><div class="wrap"><a href="media/">전체 자료</a><a href="media/g_policy.html">정책브리핑</a><a href="media/g_ocean.html">해양</a><a href="media/g_air.html">항공</a><a href="media/g_rail.html">철도</a><a href="media/g_logistics.html">복합물류</a><a href="media/g_urban.html">도시계획·부동산</a><a href="media/g_climate.html">기후위기</a><a href="media/g_economy.html">경제</a><a href="media/g_ai.html">AI</a><a href="about.html" class="on">연구소</a></div></nav>
-<div class="hero"><div class="wrap"><div><span class="k">經世濟民 · 사람이 주인입니다</span>
-<h1>두루두루 고루고루 잘 사는 세상</h1>
-<p>사람이 두루두루 고루고루 잘사는 세상을 위한 연구를 합니다. 현장에서 문제를 찾고, 데이터로 검증하고, 실행할 수 있는 정책을 내놓습니다. 인천의 민간 싱크탱크입니다.</p></div><figure><img src="media/img/card_urban_02.jpg" alt="인천 송도국제도시"><figcaption>인천 송도국제도시 ⓒ한국관광콘텐츠랩-정규진</figcaption></figure></div></div>
-<nav class="toc"><div class="wrap"><a href="#view">경세제민의 생각</a><a href="#research">정책연구 · 연구용역 · 조사분석</a><a href="#edu">AI 교육</a><a href="#lecture">강연 · 교육 경력</a><a href="#brief">정책브리핑</a><a href="#media">미디어</a><a href="#record">연구 실적</a><a href="#people">연구진</a><a href="#contact">연락</a></div></nav>
-<main class="wrap">
-<section class="s" id="view"><div class="hd"><span class="k">경세제민의 생각</span><h2>사람이 주인이고 기술은 수단이자 도구다</h2></div>
-<p class="lead">역사적으로 사람보다 중한 것은 없습니다. AI 시대에도 이 원칙은 변하지 않습니다. 경제(經濟)라는 말도 경세제민을 줄인 것입니다. 나라 살림을 챙겨 사람이 잘 먹고 잘 살게 하는 일, 그것이 연구소가 하는 일입니다.</p>
-<div class="g4"><div class="c"><b>01</b><h3>가계는 생산의 주체다</h3><p>노동자·농민·자영업자·중소상공인이 경제를 지탱합니다. 가계가 무너지면 기업도 정부도 무너집니다.</p></div><div class="c"><b>02</b><h3>벌이가 늘어야 경제가 돈다</h3><p>돈은 서민에게 풀려야 돕니다. 서민 소득이 유효수요를 만듭니다.</p></div><div class="c"><b>03</b><h3>혁신으로 값을 낮춘다</h3><p>물류 효율화, AI, 에너지 전환으로 공급 비용을 낮추고 임금은 올립니다.</p></div><div class="c"><b>04</b><h3>시장도 정부도 완전하지 않다</h3><p>어느 한쪽에 기대지 않습니다. 그 사이 균형이 어디 있는지 찾습니다.</p></div></div>
-<p class="note"><b>균형경제론</b> — 서민 소득을 올려 수요를 살리고, 혁신으로 공급 비용을 낮추는 일을 함께 합니다.</p></section>
-
-<section class="s" id="research"><div class="hd"><span class="k">하는 일</span><h2>정책연구 · 연구용역 · 조사분석</h2></div><figure class="ph"><img src="media/img/card_econ_01.jpg" alt="송도국제도시" loading="lazy"><figcaption>송도국제도시 ⓒ한국관광콘텐츠랩-정규진</figcaption></figure>
-<div class="fn"><h3>기능 01 정책연구</h3><p class="lead">정책을 세우는 일입니다. 지방자치단체와 공공기관이 앞으로 무엇을 어떤 차례로 할 것인지를 자료로 따져 설계합니다.</p>
-<div class="g4"><div class="c"><b>01</b><h3>기본계획 · 기본구상</h3><p>법정계획, 종합계획, 발전계획, 분야별 기본구상 수립</p></div><div class="c"><b>02</b><h3>중장기 전략</h3><p>5개년 · 10개년 계획, 단계별 실행계획, 재원 조달 방안</p></div><div class="c"><b>03</b><h3>조례 · 제도 개선</h3><p>조례 제정과 개정 연구, 행정 절차 개선, 거버넌스 설계</p></div><div class="c"><b>04</b><h3>정책효과 · 사업평가</h3><p>인과효과 분석(이중차분법 등), 성과평가, 지역경제 파급효과 분석(산업연관분석)</p></div></div></div>
-<div class="fn"><h3>기능 02 연구용역</h3><p class="lead">맡기신 과제를 처음부터 끝까지 수행하는 일입니다. 설계와 분석과 집필을 한자리에서 합니다.</p>
-<div class="g4"><div class="c"><b>01</b><h3>타당성 분석 · 경제성 분석</h3><p>수요 예측, 비용편익분석(B/C · NPV · IRR), 민감도분석, 재무성 분석. 인천시 해양수산 산학연 거점 조성 용역에서 B/C 1.39, NPV 973.0억원, IRR 9.3%를 산출했습니다.</p></div><div class="c"><b>02</b><h3>원가 산정 · 요금 분석</h3><p>준공영제 표준운송원가, 위탁 관리대행 원가, 공공요금 현실화와 요금 체계 설계</p></div><div class="c"><b>03</b><h3>출판 · 편집</h3><p>백서, 자료집, 연보, 지역의 지(誌)와 사(史), 보고서 편집과 윤문, 발간물 기획과 제작</p></div><div class="c"><b>04</b><h3>컨설팅 · 교육</h3><p>데이터 기반 경영 컨설팅, 공공기관 실무자 대상 조사 설계와 통계 활용 교육</p></div></div></div>
-<div class="fn"><h3>기능 03 조사분석</h3><p class="lead">설문을 돌려 드리지 않습니다. 물어서 나온 말과 실제로 한 행동을 맞대어, 그 차이에서 정책을 찾아 드립니다.</p>
-<p class="note" style="margin:0 0 18px"><b>왜 다른가</b> — 데이터가 있으면 분석은 이제 누구나 합니다. 조사분석은 다릅니다. 없는 데이터를 만들어 내는 일이라 사람이 물어봐야 생깁니다. 저희는 네 가지를 다르게 합니다. 첫째, 설문 결과를 행정·공공데이터와 결합해 말과 행동의 간격을 봅니다. 둘째, 같은 문항을 반복해 인천의 시계열로 쌓습니다. 셋째, 응답률과 가중치와 한계를 보고서 맨 앞에 적습니다. 넷째, 남이 한 조사도 검증합니다. 실사는 조사 전문기관과 컨소시엄으로 수행하고, 설계와 결합과 해석은 저희가 직접 합니다.</p>
-<div class="g3"><div class="c"><b>01</b><h3>설문조사 설계</h3><p>문항 개발, 표본 설계와 가중치 산정, 조사 방식 선택, 조사 실시와 자료 처리</p></div><div class="c"><b>02</b><h3>실태 · 수요 · 만족도 조사</h3><p>실태조사, 수요조사, 만족도조사, 인식조사, 시장조사</p></div><div class="c"><b>03</b><h3>통계분석</h3><p>교차분석, 회귀분석, 패널 분석, 인과추론. 분석은 외주하지 않고 직접 합니다.</p></div><div class="c"><b>04</b><h3>데이터 분석</h3><p>행정데이터와 공공데이터 결합, 지표 개발, 모형 구축, 시각화</p></div><div class="c"><b>05</b><h3>전문가 조사 · AHP 분석</h3><p>계층분석법(AHP) — 평가 계층 설계, 쌍대비교 설문, 가중치 산정, 일관성비율(CR) 검정. 대안 우선순위 결정, 평가지표 가중치 도출, 델파이 조사와 함께 씁니다.</p></div><div class="c"><b>06</b><h3>전략 수립 — SWOT · SER-M</h3><p>SER-M 모델(주체 · 환경 · 자원 · 메커니즘)로 조직이 성과를 낸 경로를 풀어 전략을 세웁니다. SWOT 분석은 그 가운데 환경 분석에 들어가 SO 전략을 끌어내고, 자원은 VRIN을 갖춘 핵심역량으로 따로 묻습니다. AHP 가중치와 묶어 전략 대안의 우선순위를 매깁니다.</p></div><div class="c"><b>07</b><h3>말과 행동 맞대기</h3><p>설문 응답을 카드매출, 생활인구, 통행량, 건축허가, 사업자등록 같은 행정데이터와 맞대어 봅니다. 「대중교통을 늘려야 한다」고 답한 사람들이 실제로는 차를 몰고 다닙니다. 그 간격이 벌어지는 자리에서 진짜 정책 과제가 나옵니다.</p></div><div class="c"><b>08</b><h3>조사 검증 · 재분석</h3><p>남이 수행한 조사의 문항을 감수하고 원자료를 다시 돌립니다. AI가 작성한 응답, 봇이 섞인 온라인 패널, 직진응답을 걸러 냅니다. 유도질문으로 끌어낸 결과인지 봅니다. 건설에 감리가 있듯 조사에도 검증이 있어야 합니다.</p></div><div class="c"><b>09</b><h3>질적조사를 양적 규모로</h3><p>심층면접 녹취의 질적 코딩, 개방형 응답과 민원 데이터 전수 분류를 AI로 수행합니다. 사람이 몇 달 걸리던 일을 며칠로 줄여, 표본 몇백에 개방형 한 문항이 아니라 수천 건을 다 읽고 분류한 결과를 내놓습니다.</p></div></div></div>
-<p class="note"><b>다루는 분야</b> — 교통(항공 · 철도 · 해운), 물류, 항만과 공항, 해양수산, 지역경제와 일자리, 노동, 도시재생과 원도심, 기후위기 대응과 에너지 전환, AI와 데이터<br>
-<b>수행 방식</b> — 세 기능은 동급입니다. 한 과제에 셋이 함께 들어가기도 하고 따로 맡기실 수도 있습니다. 셋 모두 의뢰를 받아 수행하거나, 연구소가 사업비를 마련해 수행합니다. 과제마다 분야 공동연구원을 위촉해 함께 수행합니다. 경세제민 AI·경제 연구소(주)는 2026년 4월 30일 설립됐고 본점은 인천 미추홀구에 있습니다.</p></section>
-
-<section class="s" id="edu"><div class="hd"><span class="k">AI 교육</span><h2>AI 실전 교육과 AI 리터러시</h2></div><figure class="ph"><img src="media/img/card_ai_02.jpg" alt="송도 야경" loading="lazy"><figcaption>송도 야경 ⓒ한국관광콘텐츠랩-김상기</figcaption></figure>
-<p class="lead">왜 배워야 하는가. 정보의 비대칭을 줄이기 위해서입니다. 가진 쪽은 이미 AI를 씁니다. 시민과 노동자가 자기를 지키고 민주주의를 지키려면, 저쪽이 쥔 도구를 이쪽도 쥐어야 합니다.</p>
-<p class="lead">급변하는 시대에 끌려다니지 않고 능동적으로 적응하기 위해서입니다. 그리고 무엇보다 자기계발입니다. AI를 제대로 쓰면 일하는 시간은 줄고, 자기 값어치는 올라갑니다. 줄어든 시간은 자기에게 돌아옵니다.</p>
-<p class="lead">그래서 교재는 배우는 분들이 하는 일에 맞춰 새로 짭니다. 실습은 그 자리에서 실제로 쓰는 문서로 합니다. 보고서면 보고서로, 단체교섭 자료면 그 자료로, 기사면 기사로 합니다.</p>
-<div class="g4"><div class="c"><b>01</b><h3>AI 실전 교육</h3><p>기본 명령어부터 시스템 프롬프트 설계까지 아래 4단계. 공공기관·기업 실무자, 직장인 재교육</p></div><div class="c"><b>02</b><h3>AI 리터러시</h3><p>허위정보 판별법 · 저작권 이슈 · 개인정보 보호 · 편향성 제거</p></div><div class="c"><b>03</b><h3>AI 저널리즘</h3><p>언론인을 위한 갈래입니다. 지역언론 기자 연수와 사별연수 — 한국언론진흥재단, 지역신문발전위원회, 기자협회</p></div><div class="c"><b>04</b><h3>강연</h3><p>노동조합과 시민사회, 학교와 단체 — 한 시간에서 반나절까지</p></div></div>
-<h3 style="margin:22px 0 8px;font-size:18px">네 단계 <small style="font-size:13px;color:var(--mute);font-weight:600">아는 것이 아니라 혼자 무엇을 할 수 있느냐로 나눕니다. 앞 단계를 건너뛰지 않습니다</small></h3>
-<div class="lv"><div><b>1단계</b><h4>초급</h4><i>AI와 말이 통한다</i><p>역할과 규칙을 붙여 묻습니다. 기밀과 개인정보를 넣지 않는 법, 학습 설정을 끄는 법을 익힙니다. AI가 틀릴 수 있다는 것을 압니다.</p></div>
-<div><b>2단계</b><h4>중급</h4><i>검색창 쓰듯 하지 않는다</i><p>일을 단계로 쪼개 맡깁니다. 나온 숫자는 원출처로, 인용은 실재 여부로, 둘 이상의 도구로 교차 검증합니다. 자기 이름으로 낼 수 있는 수준입니다.</p></div>
-<div><b>3단계</b><h4>고급</h4><i>규칙을 문서로 박는다</i><p>쓰임새별로 AI 비서를 만듭니다. 해서는 안 될 일까지 규칙에 넣어, 새로 열어도 품질이 흔들리지 않게 합니다. 쓰면서 규칙을 고칠 줄 압니다.</p></div>
-<div><b>4단계</b><h4>전문가</h4><i>혼자에서 조직으로</i><p>반복 업무를 흐름으로 묶고, 표준과 검증 절차와 금지 조항을 담은 지침을 만들어 넘깁니다. 쓰는 사람에서 설계하고 감독하는 사람으로 넘어갑니다.</p></div></div>
-<p class="note"><b>대상</b> — 공공기관과 기업 실무자, 직장인 재교육, 단체·노동조합·시민사회단체, 학생, 고령층, 언론인. 언론인 연수는 그 가운데 한 갈래입니다<br>
-<b>모든 단계의 끝은 검증입니다</b> — 초안은 AI가 만들고 검토는 사람이 합니다. 받아쓰면 남지 않고, 따지면 남습니다. 이 교육이 기르려는 것은 도구를 다루는 손이 아니라 따지는 힘입니다.</p></section>
-
-<section class="s" id="lecture"><div class="hd"><span class="k">강연 · 교육 경력</span><h2>강연 · 연수 · 교육 실적</h2></div>
-<p class="lead">강연 자료와 공문, 강사 프로필에 적힌 날짜와 주최를 그대로 옮겼습니다. 2012년부터 외부 강연과 연수 강사 40회가 넘고, 그 가운데 한국언론진흥재단 연수·특강이 12회입니다.</p>
-<div class="yr"><b>2026</b><ul>
-<li>1.13 인천평화복지연대 「AI 시대, 공익활동가를 위한 실전 가이드」 · 인천항운노조 「AI 대전환 파도, 인천항운노조는 어떻게 넘을 것인가」 · 민주당 인천시당 지방선거 아카데미(2차) 「2030 AI 특이점, 지방선거와 정의로운 전환」</li>
-<li>노동조합 지회 조합원 대상 「AI 시대, 사람이 하는 가장 귀한 일」(90분)</li>
-<li>3.12 한국언론진흥재단 광주지사 「6.3 지방선거와 AI 활용 전략」 · 3.13 충청신문 「AGI 시대, AI 저널리즘 전략」 · 3.27 한국언론진흥재단 찾아가는 저널리즘 특강(대덕넷) 「AI 시대, 뉴스룸의 생존 전략」</li>
-<li>4.1 평택시민신문 「AGI 시대, 평택시민신문의 새로운 기회」 · 4.6 전북도민일보 특별강연 「AI 특이점 2030」 · 4.8 인천시민재단 「AI 시대, 시민사회 활동가를 위한 AI 실전 활용법」 · 4.14 한국언론진흥재단 찾아가는 저널리즘 특강(용인시민신문) 「지역 AI거버넌스와 미디어 리터러시 전략」</li>
-<li>6.15 무주진안신문 「AI 활용 실전 연수」 · 다같이유니온 AI 강연 「느린 아이 곁을 지키는 당신에게」</li>
-<li>10.20 충청남도노동권익센터 「노동-시민단체 활동가 AI 교육」(하루 3강 — AI 윤리·AI 활용 실습 1~3, 10:00~17:40, 노동-시민단체 활동가·민간위탁기관 등 20여 명)</li></ul></div>
-<div class="yr"><b>2025</b><ul>
-<li>4.11 『AI시대, 봉기자가 본 독일 언론과 민주주의』 출판기념 강연(인천YMCA)</li>
-<li>「AI 범용시대 지역언론 생존의 길」 5.14 용인시민신문 · 5.16 보은사람들 · 7.23 당진시대 · 8.22 한국언론진흥재단 찾아가는 저널리즘(태안신문)</li>
-<li>9.12 한국언론진흥재단 제365기 수습기자 기본교육(대전·세종·충청권) 「AI와 함께 쓰는 첫 기사」 · 9.13 한국언론진흥재단 광주 「AI 범용시대, 지역언론 뉴스룸 AI 활용 실전 가이드」</li>
-<li>9.22 서울 금천구 시민사회단체 「AI 범용시대, 언론과 민주주의」 · 9.24 한일언론포럼(도쿄 와세다대학) 토론 · 10.29 부천 시민사회단체 「AI 범용시대, 민주주의 수호자를 위한 실전 가이드」 · 12.23 민주당 인천시당 지방선거 아카데미(1차)</li></ul></div>
-<div class="yr"><b>2024</b><ul>
-<li>AI 저널리즘 강연 「인공지능시대 지역언론의 새로운 길」 외 17회 — 4.24 순천·광양 · 4.26 울산저널 · 5.3 해남신문 · 5.17 사천·거제 · 6.19 성주신문 · 6.20 영주신문 · 7.9 한국언론진흥재단 대전세종지사 「인공지능시대 지역언론의 AI 활용 생존기」 · 7.10 고양신문 · 7.12 태안신문 · 7.30 한국언론진흥재단 대전세종지사 지역언론 주니어기자 역량강화(2차) 전문연수 「AI 활용 저널리즘」 · 8.28 (사)인천사람과문화 인천마당 「인공지능시대 호모사피엔스와 AI 사피엔스」 · 9.4 경남울산기자협회 · 10.18 금천신문 · 10.25 한국언론진흥재단 광주지사 · 10.28 원주투데이 · 11.15 파주 · 11.19 경남지역신문발전위원회 세미나 「지역신문 AI 활용 사례」</li></ul></div>
-<div class="yr"><b>2012~2023</b><ul>
-<li>2023.6.9 한국언론진흥재단 대전지사 「취재 아이템 발굴과 취재원 관리」 · 2023.6 지역주간신문 기자 레벨업 전문연수</li>
-<li>2022.11.1 한국로지스틱스학회 등 공동학술대회 발표 「항공자유화협정과 인천국제공항 물동량」 · 2022.10.7 서산시대 사별연수 · 2021.1 영종국제도시총연합회 글쓰기 강의</li>
-<li>2020.8.19 한국경영학회 융합학술대회 발표 · 2019.10.30 인천광역시·인천산학융합원 공동토론회 「인천 항공산업 육성 전략」 토론</li>
-<li>2014 티브로드 인천방송 「이슈&amp;이슈 인천」 출연(서해5도 뱃삯 지원사업, 인천의 공항정책) · 2014.10.15 경인방송 「상쾌한 아침」 출연 · 2013.11.7 티브로드 「인천경제청 개청 10년, 성과와 과제」 출연 · 2013.6.17 5R운동 확산 시민대토론회 토론</li>
-<li>2012 부평지역자활센터 「보도자료 작성법」 · 2012.7 청소년기자학교(부천) 「기자가 본 저널리즘」</li>
-<li>인천투데이 사내 교육 — 신입기자 저널리즘 글쓰기 교육(2021~2025, 5회), 「인천투데이 걸어온 길」(2021~2024, 3회)</li></ul></div>
-</section>
-
-<section class="s" id="brief"><div class="hd"><span class="k">정책브리핑</span><h2>묻는 쪽이 저희입니다</h2></div>
-<p class="lead">연구소가 주제를 정해 정기적으로 발표합니다. 연구진과 객원연구원이 함께 씁니다. 맡기신 과제를 수행하는 정책연구 · 연구용역 · 조사분석과는 다릅니다. 저 셋은 의뢰를 받거나 사업비를 마련해 하는 일이고, 정책브리핑은 주제를 고르는 쪽도 묻는 쪽도 저희입니다. 전문지에 싣는 기사와도 다릅니다. 기사는 소식을 전하고, 브리핑은 자료를 따집니다.</p>
-<div class="g4"><div class="c"><b>01</b><h3>주제를 고른다</h3><p>인천시와 군·구의 현안 가운데 자료로 따질 수 있는 것 하나를 고릅니다</p></div><div class="c"><b>02</b><h3>공개 자료로 조사한다</h3><p>공공데이터와 행정자료, 공시와 통계를 모아 직접 셉니다</p></div><div class="c"><b>03</b><h3>짧게 쓴다</h3><p>수치와 출처와 도표를 갖춰 언론사가 그대로 받아 쓸 수 있게 냅니다</p></div><div class="c"><b>04</b><h3>함께 보낸다</h3><p>지방자치단체와 공공기관, 의회에도 같이 보냅니다</p></div></div>
-<p class="note"><b>첫 편</b> — 인천시와 군·구는 무엇을 연구에 맡기나. 정책연구관리시스템에 등록된 인천시와 군·구 정책연구 724건을 분야와 유형으로 나눠 읽었습니다. 곧 공개합니다. 지금까지 낸 브리핑은 <a href="media/g_policy.html" style="text-decoration:underline">정책브리핑</a>에서 보실 수 있습니다.</p></section>
-
-<section class="s" id="media"><div class="hd"><span class="k">미디어</span><h2>일하는 사람의 경제를 쓴다</h2></div><figure class="ph"><img src="media/img/card_rail_02.jpg" alt="인천국제공항 철길" loading="lazy"><figcaption>인천국제공항 철길 ⓒ한국관광콘텐츠랩-IR 스튜디오</figcaption></figure>
-<p class="lead">사람들의 관심은 잘 먹고 잘 사는 것, 그리고 벌이가 끊기지 않는 것입니다. 노동경제학·교통경제학·지리경제학으로 일과 길과 터와 돈을 씁니다. 소식은 기사로 씁니다. 자료를 따진 것은 정책브리핑으로 따로 냅니다.</p>
-<div class="g4">
-<a class="c lk" href="media/g_economy.html"><b>일</b><h3>일자리와 노동</h3><p>AI 시대 일자리와 다양한 노동자의 권익 · 노동경제학</p><span class="go">기사 보기 →</span></a>
-<a class="c lk" href="media/g_rail.html"><b>길</b><h3>교통과 물류</h3><p>항공·철도·해운, 출퇴근과 물류 · 교통경제학</p><span class="go">기사 보기 →</span></a>
-<a class="c lk" href="media/g_urban.html"><b>터</b><h3>도시와 공공개발</h3><p>공공개발, 도시재생, 도시계획 · 지리경제학</p><span class="go">기사 보기 →</span></a>
-<a class="c lk" href="media/g_economy.html"><b>돈</b><h3>자산</h3><p>안정적으로 벌고 지키는 자산 · 주식과 채권</p><span class="go">기사 보기 →</span></a>
+<section class="sec alt" id="place"><div class="wrap">
+<div class="sh"><div><span class="k">AGI 시대 연구소의 자리</span><h2>분석하는 곳이 아니라, 판단하고 책임지는 곳</h2></div></div>
+<div class="prose">
+<p class="quote">분석은 이제 누구나 합니다. 저희는 발로 자료를 구하고, 그 숫자를 책임지고 설명합니다.</p>
+<p>데이터와 자료만 있으면 웬만한 분석은 AI가 사람보다 빨리 합니다. 그래서 연구소는 AI가 하지 못하는 세 가지에 힘을 씁니다.</p>
 </div>
-<p class="lead" style="margin-top:22px"><b>분야별로 바로 가기</b><br>
-<a class="tag" href="media/g_policy.html">정책브리핑</a>
-<a class="tag" href="media/g_ocean.html">해양</a>
-<a class="tag" href="media/g_air.html">항공</a>
-<a class="tag" href="media/g_rail.html">철도</a>
-<a class="tag" href="media/g_logistics.html">복합물류</a>
-<a class="tag" href="media/g_urban.html">도시계획·부동산</a>
-<a class="tag" href="media/g_climate.html">기후위기</a>
-<a class="tag" href="media/g_economy.html">경제</a>
-<a class="tag" href="media/g_ai.html">AI</a></p>
-<p style="margin-top:18px"><a class="btn" href="media/g_media.html">기사 전체 보기 →</a></p>
-</section>
+<div class="grid g3">
+<div class="card"><span class="no">하나</span><h3>발로 구하는 자료</h3><p>공개 통계로 풀리는 과제는 애초에 용역이 나오지 않습니다. 기관 내부 자료, 사업자 협조자료, 현장 면담은 사람이 가서 받아 와야 합니다.</p></div>
+<div class="card"><span class="no">둘</span><h3>지역의 맥락</h3><p>어떤 사업이 왜 좌초했는지는 데이터가 아니라 기사와 회의록과 사람 안에 있습니다. 인천 현장을 20여 년 지켜본 눈으로 읽습니다.</p></div>
+<div class="card"><span class="no">셋</span><h3>설명하는 책임</h3><p>의회와 주민과 언론 앞에서 묻는 말에 답하는 일은 사람이 합니다. 연구소는 숫자의 근거와 한계를 먼저 밝히고 책임지고 설명합니다.</p></div>
+</div>
+<div class="prose" style="margin-top:22px"><p>AI가 만든 분석에는 출처 없는 계수와 없는 선행연구가 섞이기 쉽습니다. 연구소는 AI를 가장 앞서 쓰면서 계량경제학으로 그 결과를 검증합니다. AI를 잘 쓰는 것보다 AI를 의심할 줄 아는 것이 값입니다.</p></div>
+</div></section>
 
-<section class="s" id="record"><div class="hd"><span class="k">연구 실적</span><h2>해 본 일</h2></div><figure class="ph"><img src="media/img/card_sea_01.jpg" alt="인천연안부두" loading="lazy"><figcaption>인천연안부두 ⓒ한국관광콘텐츠랩-한국관광공사 김지호</figcaption></figure>
-<div class="c"><h3>인천 전통시장 중장기 발전전략 연구</h3>
-<p>발주 인천광역시의회 「인천 전통시장 미래전략 연구회」 · 2026년 9월 ~ 11월<br>인천 전역 전통시장·상점가가 대상입니다. 운영 현황과 기존 지원정책의 성과·한계를 진단하고, 국내외 우수사례와 신기술 적용사례를 들여다봐 인천형 중장기 발전전략과 기술·공간 혁신형 폭염 대응책을 내놓습니다.</p>
-<p class="meta">산출물 — 착수보고서 · 중간보고서 · 최종보고서(책자·전자파일) · 요약보고서(발표자료)</p></div>
+<section class="sec" id="people"><div class="wrap"><div class="sh"><div><span class="k">연구진</span><h2>책임지고 설명하는 사람</h2></div></div><div class="grid g2">
+<article class="card person"><div class="ph0">金</div><div><h3>김갑봉</h3><span class="role">소장 · 연구책임</span><ul>
+<li>물류학 박사(인하대학교 물류전문대학원, 계량경제학)</li><li>언론홍보학 석사 · 토목공학 학사</li>
+<li>전 인천투데이 편집국장 · 인천 지역언론 20여 년</li><li>전 인하대학교 산학협력단 산학연구교수</li>
+<li>외부 강연·연수 강사 40회 이상(2012~2026)</li></ul></div></article>
+<article class="card person"><div class="ph0">金</div><div><h3>김효진</h3><span class="role">대표이사 · 연구원</span><ul>
+<li>도시계획·정책학 박사 수료</li><li>조선해양공학 학사</li><li>계약·사업관리, 제도 분석</li></ul></div></article>
+</div><div class="grid g2" style="margin-top:18px"><div class="card"><h3>객원연구원</h3><p>과제마다 분야 전문가를 객원연구원으로 위촉합니다. 도시계획 박사와 도시공학 박사가 함께합니다.</p><a class="tag" href="join.html">객원연구원 신청 →</a></div><div class="card"><h3>컨소시엄 기술 인력</h3><p>구조기술사, 토질 및 기초 기술사, 시공기술사, 토목기사, 도시계획기사 등이 과제별로 함께합니다.</p></div></div></div></section>
+<section class="sec alt" id="hist"><div class="wrap">
+<div class="sh"><div><span class="k">연혁</span><h2>걸어온 길</h2></div></div>
+<div class="yr">
+<b>2025.11.11</b><div>경세제민 AI·경제연구소 창립(인천)</div>
+<b>2026.4.30</b><div>법인 설립 — 경세제민에이아이경제연구소 주식회사</div>
+<b>2026.9</b><div>인천광역시의회 연구회 정책연구 두 과제 착수(전통시장 중장기 발전전략, 입체복합 도시공간 창출 모델)</div>
+</div></div></section>
 
-<div class="c"><h3>인천형 입체복합 도시공간 창출 모델 개발</h3>
-<p>발주 인천광역시의회 「인천 택지지구 공간 재창조 연구회」 · 2026년 9월 ~ 11월<br>연수·선학, 구월, 계산, 갈산·부평·부개, 만수1·2·3 다섯 권역이 대상입니다. 주택을 다시 짓는 것이 아니라 없던 공간을 새로 만들어내는 쪽으로, 지하·지상·공중공간을 통합 활용하는 모델과 제도·재정 기반, 단계별 실행 로드맵을 세웁니다.</p>
-<p class="meta">공간창출 3대 축 — 지하 · 공중 · 유휴부지</p></div>
-
-<div class="c"><h3>인천 해양수산 산·학·연 거점 조성을 위한 타당성 검토 및 기본계획 수립</h3>
-<p>발주 인천광역시 섬해양정책과 · 수행 인하대학교 산학협력단 · 2025년 12월 ~ 2026년 3월 · 120일<br>김갑봉 소장이 참여연구원으로 최종보고서 본문을 쓰고 경제성분석을 맡았습니다.</p>
-<div class="num"><div><strong>1.39</strong><span>B/C</span></div><div><strong>973억원</strong><span>NPV</span></div><div><strong>9.3%</strong><span>IRR</span></div></div>
-<p>방안2 기준 · 할인율 4.5% · 분석기간 30년 · 민감도 15개 시나리오 전부 B/C 1.0 이상</p></div></section>
-
-<section class="s" id="people"><div class="hd"><span class="k">연구진</span><h2>연구진</h2></div>
-<div class="ppl"><div class="c"><h3>김갑봉<small>소장</small></h3><p>토목공학 학사 · 언론홍보학 석사<br>물류학 박사 (인하대학교 물류전문대학원, 계량경제학)<br>전 인천투데이 편집국장 · 인천 지역언론 22년<br>전 인하대학교 산학협력단 산학연구교수<br>
-<a href="#lecture" style="text-decoration:underline">강연 · 교육 경력</a> — 외부 강연·연수 강사 40회 이상(2012~2026)</p>
-<p style="margin-top:8px">토목공학으로 기반시설을, 언론홍보학으로 소통을, 물류학으로 계량경제학을 익혔습니다. 이 셋을 엮어 AI 시대 경제·사회 전환을 연구합니다.</p></div>
-<div class="c"><h3>김효진<small>대표이사</small></h3><p>조선해양공학 학사<br>도시계획 · 정책학 박사 수료<br>계약 · 사업관리</p>
-<p style="margin-top:8px">분야마다 객원연구원을 모십니다. <a href="join.html" style="text-decoration:underline">객원연구원 신청</a></p></div></div></section>
-
-<section class="s" id="contact"><div class="hd"><span class="k">연락</span><h2>연락</h2></div>
-<dl class="dl"><dt>연락처</dt><dd>032-777-0421</dd><dt>메일</dt><dd>weminaimax@weminai.com</dd><dt>주소</dt><dd>(22180) 인천 미추홀구 수봉남로24번길 74(수봉공원)</dd>
-<dt>설립</dt><dd>연구소 2025년 11월 11일 · 법인 2026년 4월 30일</dd><dt>등록</dt><dd>사업자등록 · 나라장터 입찰참가자격</dd>
-<dt>의뢰</dt><dd><a href="ask.html" style="text-decoration:underline">의뢰·신청하기</a> — 연구소가 하는 일은 모두 이 양식 하나로 신청하실 수 있습니다.</dd></dl></section>
-<p class="credit">사진 — 한국관광콘텐츠랩(한국관광공사) 공공누리 제1유형 · 촬영 정규진, 김상기, IR 스튜디오, 한국관광공사 김지호</p>
-</main>
-<footer><div class="wrap"><b>경세제민 AI·경제 연구소(주)</b> (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · (22180) 인천 미추홀구 수봉남로24번길 74(수봉공원) · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>
-청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com<br>
-자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제 연구소, weminai.com)를 반드시 밝혀 주십시오.<br>
-<a href="about.html">연구소 소개</a> · <a href="ask.html">의뢰·신청하기</a> · <a href="join.html">객원연구원 신청</a> · <a href="member.html">회원 안내</a> · <a href="/news/privacy.html">개인정보 처리방침</a></div></footer>
-<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<section class="sec" id="map"><div class="wrap">
+<div class="sh"><div><span class="k">오시는 길</span><h2>연락처</h2></div></div>
+<table class="tbl"><tr><th>주소</th><td>(22180) 인천 미추홀구 수봉남로24번길 74(수봉공원)</td></tr>
+<tr><th>전화</th><td>032-777-0421</td></tr><tr><th>전자우편</th><td>weminaimax@weminai.com</td></tr>
+<tr><th>누리집</th><td>weminai.com</td></tr>
+<tr><th>등록</th><td>사업자등록번호 170-86-04032 · 나라장터 학술·연구용역 입찰참가자격</td></tr></table>
+</div></section></main>
+<footer class="foot"><div class="wrap">
+<div class="fl"><a href="research.html">사업</a><a href="about.html">연구소</a><a href="ask.html">문의</a><a href="join.html">객원연구원 신청</a><a href="/news/privacy.html">개인정보 처리방침</a></div>
+<p>경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 대표이사 김효진 · 사업자등록번호 170-86-04032</p>
+<p>(22180) 인천 미추홀구 수봉남로24번길 74(수봉공원) · 032-777-0421 · weminaimax@weminai.com</p>
+<p>자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(경세제민 AI·경제연구소, weminai.com)를 밝혀 주십시오.</p>
+</div></footer>
 <script src="nocopy.js"></script>
 </body></html>
