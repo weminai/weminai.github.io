@@ -469,3 +469,8 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 .brand img{height:68px}
 .gnb a{font-size:17px}
 @media(max-width:960px){.top .wrap{height:76px}.brand img{height:50px}}
+/* 23차: 로고 더 키움 — 옛 누리집 크기(320×110)에 맞춤(소장님 「여전히 작은 것 같은데」) */
+.top .wrap{height:124px}
+.brand img{height:104px}
+.gnb a{font-size:18px}
+@media(max-width:960px){.top .wrap{height:84px}.brand img{height:62px}}
