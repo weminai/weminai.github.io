@@ -60,3 +60,5 @@
 /* 제호를 뉴스 1면과 똑같이 — 기사 쪽 article.css 의 h1 명조(Noto Serif KR)가 제호에 먹던 것을 막는다 (2026-10-21 소장님 지시) */
 .nf .title h1,.nf .title h1 a{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;font-weight:900}
 @media(min-width:821px){.nf .mast .wrap{padding:18px 18px 14px}.nf .title h1{font-size:54px;letter-spacing:-2px}.nf .title h1 .lat{letter-spacing:-2.5px}.nf .title .en{margin-top:7px;font-size:11.5px}.nf .title .slo{margin-top:9px;font-size:13.5px}}
+/* 제호 10t(2026-10-23 확정) — 글자 대신 제호 그림. 글자는 남겨 검색·낭독용 */
+.mast .title h1 a{display:inline-block;height:1.3em;width:5.37em;background:url(/news/jeho.svg) center/contain no-repeat;color:transparent!important;text-indent:110%;white-space:nowrap;overflow:hidden;vertical-align:top}
