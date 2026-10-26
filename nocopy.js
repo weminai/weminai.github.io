@@ -20,8 +20,11 @@
       if(root.nodeType!==1) root=root.parentNode;
       if(open(root)) continue;
       var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null), n;
-      while((n=w.nextNode())){ if(!r.intersectsNode(n)||!/\S/.test(n.nodeValue)) continue; if(!open(n)) return false; } }
+      while((n=w.nextNode())){ if(!r.intersectsNode(n)||!/\S/.test(n.nodeValue)) continue; if(skip(n)) continue; if(!open(n)) return false; } }
     return true; }
+  /* 글자 크기·저장·인쇄·공유 단추 같은 화면 도구는 고른 범위에 끼어도 막지 않고, 복사한 글에서 뺀다 (2026-10-26 소장님 「왜 복사하기와 붙여넣기가 안되지?」) */
+  var SKIP='button,.tools,.art .tools,[aria-hidden="true"],script,style';
+  function skip(n){ n=el(n); return !!(n && n.closest && n.closest(SKIP)); }
   function mark(n){ if(!n) return; n.classList.add('cp-open'); n.style.webkitUserSelect='text'; n.style.userSelect='text'; n.style.webkitTouchCallout='default'; }
   function setup(){
     /* 리드문 — 기사 본문 첫 문단 */
@@ -31,7 +34,7 @@
     /* 분야 꼬리표 → 분야 지면 */
     var k=document.querySelector('.art .kick');
     if(k && !k.querySelector('a')){ var t=k.textContent.trim(), s=SEC[t];
-      if(s){ var a=document.createElement('a'); a.href='/news/s.html?k='+encodeURIComponent(s); a.textContent=t; a.style.color='inherit'; a.style.textDecoration='none';
+      if(s){ var a=document.createElement('a'); a.href='/news/s.html?k='+encodeURIComponent(s); a.textContent=t; a.style.color='inherit'; a.style.textDecoration='none'; a.setAttribute('draggable','false');
         k.textContent=''; k.appendChild(a); } }
     /* 회원가입 → 후원하기 */
     [].forEach.call(document.querySelectorAll('a[href$="member.html"]'),function(a){
@@ -61,8 +64,10 @@
       if(tg && tg.closest && tg.closest('input,textarea,select,[contenteditable]')) return;
       if(!selOpen()){ e.preventDefault(); return; }
       var s=window.getSelection(); if(!s||s.isCollapsed||!e.clipboardData) return;
-      var o=src(), txt=s.toString();
+      var o=src();
       var div=document.createElement('div'); for(var i=0;i<s.rangeCount;i++){ div.appendChild(s.getRangeAt(i).cloneContents()); }
+      [].forEach.call(div.querySelectorAll(SKIP),function(x){ x.parentNode.removeChild(x); });
+      div.style.cssText='position:fixed;left:-9999px;top:0;white-space:pre-wrap'; document.body.appendChild(div); var txt=div.innerText.replace(/[ \t\u00a0]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim(); document.body.removeChild(div); div.removeAttribute('style');
       var line='출처: AI경세제민(경세제민 AI·경제연구소(주)) 「'+o.t+'」';
       e.clipboardData.setData('text/plain', txt+'\n\n'+line+'\n'+o.u);
       e.clipboardData.setData('text/html', div.innerHTML+'<p>'+esc(line)+'<br><a href="'+esc(o.u)+'">'+esc(o.u)+'</a></p>');
