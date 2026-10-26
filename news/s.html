@@ -198,7 +198,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 
 <div class="top"><div class="wrap">
   <span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span>
-  <span><a href="/news/member.html">회원가입</a> · 032-777-0421</span>
+  <span><a href="/news/member.html">후원하기</a> · 032-777-0421</span>
 </div></div>
 
 <header class="mast"><div class="wrap">
@@ -212,15 +212,11 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div>
 </div></header>
 
-<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=정책브리핑">정책브리핑</a><a href="/news/s.html?k=기획연재">기획연재</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후위기">기후위기</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=금융·증시">금융·증시</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=철도">철도</a><a href="/news/s.html?k=복합물류">복합물류</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="join" href="/news/member.html">회원가입</a></span></div></nav>
+<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=정책브리핑">정책브리핑</a><a href="/news/s.html?k=기획연재">기획연재</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후위기">기후위기</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=금융·증시">금융·증시</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=철도">철도</a><a href="/news/s.html?k=복합물류">복합물류</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
 <main><div class="wrap">
   <div class="pghd"><h2 id="pgT">지면</h2><span id="pgN"></span></div>
   <div class="subs" id="pgS"></div>
   <ul class="rows" id="pgL"></ul>
-  <div class="notice">
-    <b>요약은 누구에게나, 원문은 회원에게.</b> 개인 회비는 월 3000원, 하루 100원입니다. 기관은 연 구독 10만원입니다.
-    <a href="/news/member.html">회원가입</a>
-  </div>
 </div></main>
 <footer><div class="wrap">
   <div class="pub">AI경세제민</div>
@@ -234,7 +230,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
     <a href="/news/">뉴스 첫 화면</a>
     <a href="/news/s.html?k=전체">전체기사</a>
     <a href="/news/ask.html">의뢰·신청하기</a>
-    <a href="/news/member.html">회원가입</a>
+    <a href="/news/member.html">후원하기</a>
     <a href="/news/tip.html">제보하기</a><a href="/news/correct.html">정정보도 청구</a><a href="/news/privacy.html">개인정보 처리방침</a>
   </div>
   <div class="copy">
@@ -354,7 +350,7 @@ var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/<
 var href=function(p){ p=String(p||""); return p.charAt(0)==="/" ? p : "/"+p; };
 var dstr=function(s){ s=String(s||""); var m=s.match(/(\d{4})-(\d{2})-(\d{2})/); return m? (m[2].replace(/^0/,"")+"."+m[3]) : ""; };
 var isMem=function(p){ return String(p["공개"]||"")==="요약" || p["회원전용"]===true; };
-var lock=function(p){ return isMem(p) ? '<span class="lock on">회원</span>' : ''; };
+var lock=function(p){ return ''; }; /* 2026-10-26 소장님 「쓸데 없는 유료회원제 문구 지우라」 — 회원 꼬리표를 뗐다 */
 var K=decodeURIComponent((location.search.match(/[?&]k=([^&]*)/)||[])[1]||"경제");
 var Q=decodeURIComponent(((location.search.match(/[?&]q=([^&]*)/)||[])[1]||"").replace(/\+/g," ")).trim();
 document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":K); document.title=(Q?('검색 '+Q):K)+" — AI경세제민";
