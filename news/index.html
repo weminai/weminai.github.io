@@ -462,7 +462,8 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var top5={}; list.slice(0,5).forEach(function(p){ top5[p.id]=1; });   // 1면 위쪽에 쓴 것은 뺀다
   var bin={}; MENU.forEach(function(k){ bin[k]=[]; });
   var used={}; briefs.forEach(function(p){ used[p.id]=1; });
-  list.forEach(function(p){ if(top5[p.id]||used[p.id]) return; var k=secOf(p); (bin[k]=bin[k]||[]).push(p); });
+  // 2026-10-28 소장님 「톱기사가 당연히 아래섹션에도 보이는 게 당연하다」 — 톱기사·주요기사·브리핑 칸 글도 제 섹션 칸에 넣는다. 섹션 쪽(s.html)과 같게 한다
+  list.forEach(function(p){ var k=secOf(p); (bin[k]=bin[k]||[]).push(p); });
 
   var N=5;   // 지면마다 같은 줄 수 — 열이 맞는다
   document.getElementById('secs').innerHTML = MENU.map(function(k){
