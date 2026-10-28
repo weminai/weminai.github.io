@@ -6,16 +6,21 @@
    — 분야 꼬리표를 누르면 그 분야 지면(/news/s.html?k=분야)으로 간다
    2026-10-26 소장님 「회원가입은 후원회원으로 전환하고」 「각 콘텐츠마다 달리면 좋겠다. 건당 500원에서 월 CMS는 3000원부터 5000, 1만원이상으로」
    — 「회원가입」 연결 글자를 「후원하기」로 바꾸고, 글 끝마다 후원 안내 상자를 단다 */
+/* 2026-10-29 소장님 「연구브리핑과 보고서, 기획연재를 제외한 나머지 콘텐츠는 복사하기를 허용해주세요」 「지금은 우리를 적극 알릴 때입니다」 「뉴스홈페이지요」
+   — 뉴스 누리집(news.weminai.com)의 기사는 본문 전체 복사를 연다. 연구 브리핑(분야 정책브리핑·묶음에 브리핑), 연구보고서(article.rp·분야 연구보고서), 기획연재(섹션 기획연재)는 종전대로 리드문까지.
+   — 어느 쪽이든 복사한 글 끝에는 출처(제호·제목·주소)가 붙는다. 제호는 「AI경제저널」(공통지침 마흔셋) */
 (function(){
   try{ if(window.top!==window.self){ window.top.location=window.self.location; } }catch(e){ document.documentElement.style.display='none'; }
   var OPEN='input,textarea,select,[contenteditable],.art .kick,.art h1,.art .sub,.art .subs,.art .byl,.af .by .who,.cp-open';
   var SEC={"정책브리핑":"정책브리핑","해양":"해양","항공":"항공","공항·물류":"항공","철도":"철도","복합물류":"복합물류",
     "도시계획·부동산":"도시·부동산","도시·부동산":"도시·부동산","기후위기":"기후위기","경제":"경제","AI":"AI",
     "국제":"국제","국제관계":"국제","인천경제":"인천경제","금융·증시":"금융·증시","기획연재":"기획연재"};
+  var FREE=false;
   function el(n){ return n && (n.nodeType===1 ? n : n.parentElement); }
-  function open(n){ n=el(n); return !!(n && n.closest && n.closest(OPEN)); }
+  function open(n){ if(FREE) return true; n=el(n); return !!(n && n.closest && n.closest(OPEN)); }
   /* 고른 글자가 모두 열린 칸 안에 있을 때만 참 — 리드문에서 둘째 문단까지 끌어 고르면 막힌다 */
   function selOpen(){ var s=window.getSelection&&window.getSelection(); if(!s||s.isCollapsed) return false;
+    if(FREE) return true;
     for(var i=0;i<s.rangeCount;i++){ var r=s.getRangeAt(i), root=r.commonAncestorContainer;
       if(root.nodeType!==1) root=root.parentNode;
       if(open(root)) continue;
@@ -51,7 +56,25 @@
       end.parentNode.insertBefore(g,end.nextSibling);
     }
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+  /* 뉴스 누리집 기사 — 복사 허용 여부를 posts.json 으로 가린다 */
+  function setFree(){ FREE=true; var st=document.createElement('style');
+    st.textContent='.art .body,.art .body *{-webkit-user-select:text!important;user-select:text!important;-webkit-touch-callout:default!important}';
+    document.head.appendChild(st); }
+  function decide(){
+    if(!/^news\./.test(location.hostname)) return;
+    if(document.querySelector('article.rp')) return;
+    var k=document.querySelector('.art .kick'); if(!k) return;
+    var kt=k.textContent.replace(/\s+/g,'').trim(); if(kt==='정책브리핑'||kt==='연구보고서'||kt==='기획연재') return;
+    var f=(location.pathname.split('/').pop()||''); if(!f) return;
+    if(!window.fetch) return;
+    fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(a){
+      var p=null; for(var i=0;i<a.length;i++){ if(String(a[i]['파일']||'').split('/').pop()===f){ p=a[i]; break; } }
+      if(!p) return;
+      if(/브리핑/.test(String(p['묶음']||''))||p['분야']==='정책브리핑'||p['분야']==='연구보고서'||p['섹션']==='기획연재') return;
+      setFree();
+    })['catch'](function(){});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){ setup(); decide(); }); else { setup(); decide(); }
   function src(){
     var h=document.querySelector('.art h1,.rp h1'), t=(h?h.textContent:document.title.split(' · ')[0]).replace(/\s+/g,' ').trim();
     var u=location.origin+location.pathname;
@@ -68,7 +91,7 @@
       var div=document.createElement('div'); for(var i=0;i<s.rangeCount;i++){ div.appendChild(s.getRangeAt(i).cloneContents()); }
       [].forEach.call(div.querySelectorAll(SKIP),function(x){ x.parentNode.removeChild(x); });
       div.style.cssText='position:fixed;left:-9999px;top:0;white-space:pre-wrap'; document.body.appendChild(div); var txt=div.innerText.replace(/[ \t\u00a0]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim(); document.body.removeChild(div); div.removeAttribute('style');
-      var line='출처: AI경세제민(경세제민 AI·경제연구소(주)) 「'+o.t+'」';
+      var line='출처: AI경제저널(경세제민 AI·경제연구소(주)) 「'+o.t+'」';
       e.clipboardData.setData('text/plain', txt+'\n\n'+line+'\n'+o.u);
       e.clipboardData.setData('text/html', div.innerHTML+'<p>'+esc(line)+'<br><a href="'+esc(o.u)+'">'+esc(o.u)+'</a></p>');
       e.preventDefault();
