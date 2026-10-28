@@ -344,7 +344,10 @@ var subHtml=function(arr,k,cls){
   }).join('');
   return '<div class="'+cls+'">'+h+'</div>';
 };
-var secOf=function(p){ return MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; };
+// 2026-10-28 소장님 「모든 기사는 섹션이 지정돼 있다」 「지정이 안 돼 있으면 지정해야 한다」 — posts.json 「섹션」 값이 먼저다. 값이 없거나 틀릴 때만 표로 짐작한다
+var SECS=["기획연재","인천경제","도시·부동산","기후위기","경제","금융·증시","국제","AI","해양","항공","철도","복합물류"];
+var secOf=function(p){ var s=p["섹션"]; if(s && SECS.indexOf(s)>=0) return s; return MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; };
+var isBrief=function(p){ return /브리핑/.test(String(p["묶음"]||"")) || String(p["분야"]||"")==="정책브리핑"; };
 var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||""); };
 var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");};
 var href=function(p){ p=String(p||""); return p.charAt(0)==="/" ? p : "/"+p; };
@@ -358,7 +361,7 @@ document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체
 fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
   list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
   var W=Q?Q.split(/\s+/):[];
-  var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:list.filter(function(p){ return secOf(p)===K; }));
+  var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:(K==="정책브리핑")?list.filter(isBrief):list.filter(function(p){ return secOf(p)===K; }));
   document.getElementById('pgN').textContent = arr.length ? "" : (Q?"결과 없음":"준비 중");
   var sb=document.getElementById('pgS');
   sb.innerHTML=Q?'':subHtml(arr,K,'subsin');
