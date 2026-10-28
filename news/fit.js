@@ -17,3 +17,18 @@
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   if(window.MutationObserver){ var mo=new MutationObserver(function(){ later(); }); var go=function(){ mo.observe(document.body,{childList:true,subtree:true}); }; if(document.body) go(); else document.addEventListener('DOMContentLoaded',go); }
 })();
+
+/* 연구소 홈페이지 바로가기 — 제호 왼쪽 칸에 연구소 로고 (2026-10-28 소장님 「뉴스 홈페이지에 연구소 홈페이지 바로가기가 있으면 좋겠고」 「연구소는 연구소 로고를 사용해서 바로가기」) */
+(function(){
+  function add(){
+    var l=document.querySelector('.mast .lft'); if(!l||l.querySelector('a.labhome')) return;
+    var st=document.createElement('style');
+    st.textContent='.mast .lft .labhome{display:inline-block;margin-bottom:4px}.mast .lft .labhome img{display:block;height:46px;width:auto}@media(max-width:820px){.mast .lft .labhome img{height:34px;margin:0 auto}}';
+    document.head.appendChild(st);
+    var a=document.createElement('a'); a.className='labhome'; a.href='https://weminai.com/'; a.title='경세제민 AI·경제연구소 홈페이지';
+    var i=document.createElement('img'); i.src='https://weminai.com/logo.png'; i.alt='경세제민 AI·경제연구소 홈페이지'; a.appendChild(i);
+    l.insertBefore(a,l.firstChild);
+    if(l.childNodes.length>1 && l.childNodes[1].nodeName!=='BR') l.insertBefore(document.createElement('br'),a.nextSibling);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',add); else add();
+})();
