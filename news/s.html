@@ -1,6 +1,7 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><script>if(/^(www\.)?weminai\.com$/.test(location.hostname))location.replace("https://news.weminai.com"+location.pathname+location.search+location.hash);</script><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI경세제민 — 일하는 사람들의 전문지</title>
-<meta name="description" content="AI경세제민. 인천의 교통과 물류, 항만과 공항, 도시와 지역경제를 숫자로 읽는 전문지. 경세제민 AI·경제연구소(주) 발행.">
+<title>AI경제저널 — 일하는 사람들의 전문지</title>
+<meta name="description" content="AI경제저널. 인천의 교통과 물류, 항만과 공항, 도시와 지역경제를 숫자로 읽는 전문지. 경세제민 AI·경제연구소(주) 발행.">
+<meta property="og:site_name" content="AI경제저널"><meta property="og:type" content="website"><meta property="og:title" content="AI경제저널 — 일하는 사람들의 전문지"><meta property="og:description" content="인천의 교통과 물류, 항만과 공항, 도시와 지역경제를 숫자로 읽는 전문지. 경세제민 AI·경제연구소(주) 발행."><meta property="og:url" content="https://news.weminai.com/"><meta property="og:image" content="https://news.weminai.com/news/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://news.weminai.com/news/og.png">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/favicon_64.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
 :root{
@@ -205,7 +206,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <div class="lft" id="dateBox"></div>
   <div class="title">
     <h1><a href="/news/" style="color:inherit;text-decoration:none"><span class="lat">AI</span>경세제민</a></h1>
-    <span class="en">AI GYEONGSEJEMIN</span>
+    <span class="en">AI ECONOMY JOURNAL</span>
     <span class="slo">일하는 사람들의 전문지</span>
   </div>
   <!-- 등록이 끝나면 아래 줄에 「인터넷신문 등록번호 인천 아00000」을 넣는다. 등록 전에는 적지 않는다 -->
@@ -219,7 +220,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <ul class="rows" id="pgL"></ul>
 </div></main>
 <footer><div class="wrap">
-  <div class="pub">AI경세제민</div>
+  <div class="pub">AI경제저널</div>
   <div class="meta">
     발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진 · 편집장 김갑봉<br>
     (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com
@@ -235,7 +236,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   </div>
   <div class="copy">
     자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다.
-    인용할 때는 출처(AI경세제민, weminai.com)를 반드시 밝혀 주십시오.
+    인용할 때는 출처(AI경제저널, weminai.com)를 반드시 밝혀 주십시오.
   </div>
 </div></footer>
 
@@ -356,7 +357,7 @@ var isMem=function(p){ return String(p["공개"]||"")==="요약" || p["회원전
 var lock=function(p){ return ''; }; /* 2026-10-26 소장님 「쓸데 없는 유료회원제 문구 지우라」 — 회원 꼬리표를 뗐다 */
 var K=decodeURIComponent((location.search.match(/[?&]k=([^&]*)/)||[])[1]||"경제");
 var Q=decodeURIComponent(((location.search.match(/[?&]q=([^&]*)/)||[])[1]||"").replace(/\+/g," ")).trim();
-document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":K); document.title=(Q?('검색 '+Q):K)+" — AI경세제민";
+document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":K); document.title=(Q?('검색 '+Q):K)+" — AI경제저널";
 (function(){var i=document.querySelector('.gnb .sch input'); if(i&&Q) i.value=Q;})();
 fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
   list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
