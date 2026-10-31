@@ -4,6 +4,8 @@
   var SEL='article.art h1, .lead h2';
   function fit(){
     var hs=document.querySelectorAll(SEL);
+    /* 2026-11-01 소장님 승인 — 휴대전화(폭 640 이하)에서는 헤드라인 두 줄까지 허용, 한 줄로 줄이지 않는다 */
+    if(window.innerWidth<=640){ for(var j=0;j<hs.length;j++){ hs[j].style.whiteSpace='normal'; hs[j].style.fontSize=''; hs[j].style.overflow=''; } return; }
     for(var i=0;i<hs.length;i++){
       var h=hs[i]; h.style.whiteSpace='nowrap'; h.style.fontSize=''; h.style.overflow='hidden';
       for(var p=h.parentElement,k=0;p&&k<3;p=p.parentElement,k++){ p.style.minWidth='0'; }
