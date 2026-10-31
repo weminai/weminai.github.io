@@ -180,8 +180,8 @@ fetch('/data/numbers.json',{cache:'no-cache'}).then(function(r){return r.ok?r.js
 // 많이 본 기사 — 조회수 집계 주소가 생기면 여기에 넣는다(구글 앱스 스크립트). 비어 있으면 칸을 숨긴다
 var VIEWS_URL = "";
 /* 1면 배치(지시서 정본 「1면 배치 원칙」 + 2026-11-01 소장님 「중요도 순으로 배치」 「한 섹션의 글만 도배되게 하지 말라」)
-   차례: 날짜·시각순, 같은 때는 섹션 중요도 순(메뉴 차례). 헤드라인 4(큰 1 + 작은 3) → 6(제목·부제) → 6(사진) → 10(이어서 읽기) → 10(더 읽을 기사). 등급 이름은 화면에 쓰지 않는다
-   「갈래」가 「발표」인 글은 「맨위」 지정이 없으면 헤드라인에 들지 않는다. 헤드라인은 평균 3시간 — 「시각」 칸이 있으면 넷이 모두 3시간을 넘기기 전에는 새 글이 들지 않는다
+   차례: 날짜·시각순, 같은 때는 섹션 중요도 순(메뉴 차례). 헤드라인 5(큰 1 + 작은 4 — 2026-11-01 소장님 「헤드라인에 5개가 있어야 하는데」) → 6(제목·부제) → 6(사진) → 10(이어서 읽기) → 10(더 읽을 기사). 등급 이름은 화면에 쓰지 않는다
+   「갈래」가 「발표」인 글은 「맨위」 지정이 없으면 헤드라인에 들지 않는다. 헤드라인은 평균 3시간 — 「시각」 칸이 있으면 다섯이 모두 3시간을 넘기기 전에는 새 글이 들지 않는다
    한 칸 안에서 한 섹션은 두 편까지(헤드라인은 한 편) */
 fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
   if(!Array.isArray(list)||!list.length){ document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다.</div>'; return; }
@@ -199,7 +199,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var slots=[];
   cand.forEach(function(p){
     var s=secOf(p); var same=slots.filter(function(x){ return secOf(x)===s; });
-    if(slots.length<4){ if(same.length){ if(tm(p)-tm(same[0])>=3*36e5){ slots.splice(slots.indexOf(same[0]),1); slots.push(p);} } else slots.push(p); return; }
+    if(slots.length<5){ if(same.length){ if(tm(p)-tm(same[0])>=3*36e5){ slots.splice(slots.indexOf(same[0]),1); slots.push(p);} } else slots.push(p); return; }
     var old=slots.slice().sort(function(a,b){ return tm(a)-tm(b); })[0];
     if(tm(p)-tm(old)>=3*36e5){ var rep=same.length?same[0]:old; if(same.length && tm(p)-tm(rep)<3*36e5) return; slots.splice(slots.indexOf(rep),1); slots.push(p); }
   });
