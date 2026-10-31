@@ -90,7 +90,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <h1><a href="/news/">AI경제저널</a></h1>
   <span class="slo">일하는 사람들의 전문지<br>교통·해양·항공·도시·지역경제를 숫자와 원문으로</span>
   <!-- 등록이 끝나면 「인터넷신문 등록번호 인천 아00000」을 바닥글에 넣는다. 등록 전에는 적지 않는다 -->
-  <div class="pubby">발행 <b>경세제민 AI·경제연구소(주)</b><br>연구소가 만드는 경제 전문지</div>
+  <div class="pubby">발행 <b>경세제민 AI·경제연구소(주)</b> · 창간 준비호<br>연구소가 만드는 경제 전문지</div>
 </div></header>
 <nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
 <div class="wrap"><div class="ad ad-top" id="adTop"></div></div>
@@ -127,7 +127,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 var AD={ top:null, side:null, mid:null, foot:null };
 (function(){ Object.keys(AD).forEach(function(k){ var box=document.getElementById('ad'+k.charAt(0).toUpperCase()+k.slice(1)); var v=AD[k];
   if(box&&v&&v.img){ box.innerHTML='<a href="'+(v.href||'#')+'" rel="noopener"><img src="'+v.img+'" alt="'+(v.alt||'광고')+'"></a>'; box.classList.add('on'); } }); })();
-(function(){ var W="일월화수목금토", d=new Date(); var b=document.getElementById('dateBox'); if(b) b.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+W[d.getDay()]+"요일"; })();
+(function(){ var W="일월화수목금토", d=new Date(); var b=document.getElementById('dateBox'); if(b) b.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+W[d.getDay()]+"요일 · 창간 준비호"; })();
 
 // 섹션 열하나(2026-10-31). posts.json 「섹션」 값이 먼저다. 기획연재는 제목에 연재 번호(①…)가 붙은 글, 학술은 섹션 값 「학술」
 var SEC=["인천경제","경제","교통경제","해양","항공","도시·부동산","기후·에너지","AI","국제","학술","기획연재"];
