@@ -4,6 +4,7 @@
 <meta property="og:site_name" content="AI경제저널"><meta property="og:type" content="website"><meta property="og:title" content="AI경제저널 — 일하는 사람들의 전문지"><meta property="og:description" content="인천의 교통과 물류, 항만과 공항, 도시와 지역경제를 숫자로 읽는 전문지. 경세제민 AI·경제연구소(주) 발행."><meta property="og:url" content="https://news.weminai.com/"><meta property="og:image" content="https://news.weminai.com/news/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://news.weminai.com/news/og.png">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/favicon_64.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
+/* 2026-11-01 1면 시안2 — 소장님 「제호는 가운데」 「제호가 작다」 「중요도 순으로 배치」 「사진이 너무 없다」 「답답하다」 「전문분야와 상단의 섹션이 중복」 「공간 낭비하지 말라」 「한 섹션의 글만 도배되게 하지 말라」 「웹페이지 적용하라 지금 바로」. 참고 한겨레·경향·연합·시사인 짜임 */
 /* 2026-10-31 4단계 1면 — 권고안 E1(미색). 소장님 「권고대로 합니다」 「전문지라는 분위기와 전문지라는 실력이 드러나야 함」 「인천경제가 맨 앞에」 「독자참여는 1면에 안보여도 됨」 */
 :root{--paper:#FBF8F1;--ink:#1a1a1a;--sub:#3d3d3a;--mute:#76736b;--line:#E2DCCD;--acc:#9E1B32;--red:#C8102E;--cob:#17428F;--cob-l:#1B4FA8;--deep:#14213D}
 *{box-sizing:border-box}
@@ -14,10 +15,6 @@ main{flex:1 0 auto}
 .serif,.lead h2,.sub2 h3,.deep h4,.dense h4,.card h5{font-family:"Noto Serif KR","Noto Serif CJK KR","Nanum Myeongjo",serif}
 .top{border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}.top .wrap{display:flex;justify-content:space-between;gap:12px;padding:6px 20px}
 .top a{text-decoration:underline;text-underline-offset:2px}
-.mast .wrap{display:flex;align-items:center;gap:22px;padding:16px 20px 12px}
-.mast h1{margin:0;line-height:0}.mast h1 a{display:inline-block;width:186px;height:50px;background:url(/news/jeho.svg) left center/contain no-repeat;color:transparent;text-indent:110%;white-space:nowrap;overflow:hidden}
-.mast .slo{font-size:13px;color:var(--sub);border-left:1px solid var(--line);padding-left:18px;line-height:1.5}
-.mast .pubby{margin-left:auto;text-align:right;font-size:12px;color:var(--mute);line-height:1.6}.mast .pubby b{color:var(--ink)}
 /* 섹션 메뉴 */
 .gnb{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);background:#fff}
 .gnb .wrap{display:flex;align-items:center;gap:0;padding:0 20px;overflow-x:auto;scrollbar-width:none}.gnb .wrap::-webkit-scrollbar{display:none}
@@ -35,38 +32,7 @@ main{flex:1 0 auto}
 .numbar a{padding:11px 14px;border-right:1px solid rgba(255,255,255,.12);display:block}.numbar a:hover b{text-decoration:underline}
 .numbar b{display:block;font-size:19px;font-weight:900;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
 .numbar span{display:block;font-size:11.5px;color:#C9D2E6;line-height:1.35;margin-top:2px}
-/* 1면 3단 */
-.three{display:grid;grid-template-columns:230px minmax(0,1fr) 270px;margin-top:22px}
-.three>*{padding:0 22px;min-width:0}.three>*:first-child{padding-left:0;border-right:1px solid var(--line)}.three>*:last-child{padding-right:0;border-left:1px solid var(--line)}
-.lab{font-size:12px;font-weight:900;letter-spacing:1.5px;color:var(--acc);border-bottom:2px solid var(--ink);padding-bottom:5px;margin-bottom:6px}
-.tl{list-style:none;margin:0;padding:0}.tl li a{display:block;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:600;line-height:1.45}
-.tl li i{display:block;font-style:normal;font-size:11.5px;color:var(--mute);font-weight:700;margin-bottom:2px}.tl a:hover .t{color:var(--acc)}
 .kd{display:inline-block;font-size:11px;font-weight:800;color:var(--cob);border:1px solid var(--cob);padding:0 6px;margin-right:6px;vertical-align:1px;line-height:1.6;font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
-.lead .im{width:100%;height:330px;object-fit:cover;object-position:50% 22%}
-.lead .kk{display:inline-block;font-size:12px;font-weight:900;color:#fff;background:var(--red);padding:3px 9px;margin-top:12px}
-.lead h2{font-size:34px;line-height:1.3;letter-spacing:-1px;margin:8px 0}.lead h2 a:hover{color:var(--acc)}
-.lead p{font-size:16px;color:var(--sub);margin:0 0 6px}.byl{font-size:12.5px;color:var(--mute)}.byl b{color:var(--sub)}
-.lead .basis{margin-top:10px;font-size:13px;color:var(--sub);background:#fff;border-left:3px solid var(--cob);padding:8px 12px}
-.sub2{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);margin-top:20px}
-.sub2 article{padding:14px 18px 14px 0;border-bottom:1px solid var(--line)}.sub2 article:nth-child(even){padding:14px 0 14px 18px;border-left:1px solid var(--line)}
-.sub2 .k{font-size:12px;font-weight:800;color:var(--acc)}.sub2 h3{font-size:18.5px;line-height:1.4;margin:4px 0 6px}.sub2 h3 a:hover{color:var(--acc)}
-.idx{list-style:none;margin:0 0 22px;padding:0}.idx li a{display:block;padding:8px 0;border-bottom:1px solid var(--line);font-weight:800;font-size:15px}
-.idx li small{display:block;font-weight:500;font-size:11.5px;color:var(--mute);margin-top:1px}.idx li a:hover{color:var(--acc)}
-.card{background:#fff;border:1px solid var(--line);padding:14px;margin-bottom:18px}.card.rep{border-top:3px solid var(--cob)}
-.card .cl{font-size:12px;font-weight:900;letter-spacing:1px;color:var(--acc)}.card.rep .cl{color:var(--cob)}
-.card h5{font-size:16px;margin:6px 0;line-height:1.4}.card h5 a:hover{color:var(--acc)}.card p{font-size:12.5px;color:var(--sub);margin:0}.card .who{margin-top:8px;font-size:12px;color:var(--mute);font-weight:700}
-/* 심층·기획연재 */
-.deep{border-top:3px double var(--ink);margin-top:30px;padding-top:14px}
-.deep .h{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}.deep .h h2{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:24px;margin:0}.deep .h a{font-size:13px;color:var(--mute)}
-.deep .g{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.deep .im{width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:10px}.deep .k{font-size:12px;font-weight:800;color:var(--acc)}
-.deep h4{font-size:17.5px;line-height:1.42;margin:4px 0 6px}.deep a:hover h4{color:var(--acc)}
-/* 섹션별 */
-.dense{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px double var(--ink);margin-top:34px}
-.dense section{padding:14px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.dense section:nth-child(4n){border-right:0}.dense section:nth-child(4n+1){padding-left:0}
-.dense h4{font-size:19px;margin:0 0 8px}.dense h4 a:hover{color:var(--acc)}.dense ul{list-style:none;margin:0;padding:0}
-.dense li a{display:block;font-size:13.8px;padding:6px 0;border-top:1px solid var(--line);line-height:1.45}.dense li a:hover{color:var(--acc)}
-.dense .none{font-size:13px;color:var(--mute)}
 /* 광고 자리 — 광고가 없으면 숨는다 */
 .ad{display:none;margin:0 auto;text-align:center}.ad.on{display:block}.ad img{max-width:100%;height:auto;display:block;margin:0 auto}
 .ad-top{margin:14px auto 0}.ad-mid{margin:24px auto 0}.ad-side{margin:0 0 20px}.ad-foot{margin:24px auto 0}
@@ -76,40 +42,82 @@ footer .pub{font-weight:900;color:var(--ink);font-size:15px}footer .meta{margin-
 footer .links{margin-top:10px;display:flex;flex-wrap:wrap;gap:2px 16px}footer .links a{text-decoration:underline}
 footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);color:var(--mute);font-size:12.5px}
 .empty{padding:26px 0;color:var(--mute);font-size:14px}
-@media(max-width:1000px){.three{grid-template-columns:1fr}.three>*{padding:0!important;border:0!important}.three>*:first-child{order:2;margin-top:24px}.three>*:last-child{order:3;margin-top:24px}
- .dense{grid-template-columns:1fr 1fr}.dense section{border-right:0;padding-left:0}.deep .g{grid-template-columns:1fr 1fr}
+
+.mast{text-align:center;padding:22px 0 14px}
+.mast h1{margin:0;line-height:0}.mast h1 a{display:inline-block;width:342px;height:92px;background:url(/news/jeho.svg) center/contain no-repeat;color:transparent;text-indent:110%;white-space:nowrap;overflow:hidden}
+.mast .slo{margin-top:8px;font-size:14.5px;color:var(--sub);letter-spacing:.04em}.mast .slo b{color:var(--ink)}
+.ph{display:block;width:100%;object-fit:cover;background:#e9e4d8}
+.k{font-size:12.5px;margin:8px 0 3px}.k .s{color:var(--red);font-weight:800}.k .d{color:var(--mute);margin-left:4px}
+.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:26px;padding:24px 0;border-bottom:1px solid var(--line)}
+.hero .ph{aspect-ratio:16/9;object-position:50% 22%}
+.hero h2{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:34px;line-height:1.3;letter-spacing:-1px;margin:6px 0 8px}
+.hero p{font-size:16px;color:var(--sub);margin:0 0 6px}.byl{font-size:12.5px;color:var(--mute)}.byl b{color:var(--sub)}
+.hero .basis{margin-top:10px;font-size:13px;color:var(--sub);background:#fff;border-left:3px solid var(--cob);padding:8px 12px}
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;align-content:start}.g4 .ph{aspect-ratio:4/3;object-position:50% 22%}
+.g4 h3{font-size:15.5px;line-height:1.42;margin:0;font-weight:700;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
+.main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px}
+.blk{border-top:3px solid var(--ink);margin-top:26px}.bh{font-weight:900;font-size:15px;padding:10px 0 6px;letter-spacing:.03em}.bh a:hover{color:var(--acc)}
+.bg{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;padding-bottom:18px}.bg .lead .ph{aspect-ratio:3/2;object-position:50% 22%}
+.bg .lead h3{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:23px;line-height:1.38;margin:2px 0 6px}.bg .lead p{font-size:14.5px;color:var(--sub);margin:0}
+.li{display:grid;grid-template-columns:minmax(0,1fr) 104px;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}.li:first-child{padding-top:2px}
+.li .t{display:block;font-size:15.3px;line-height:1.45;font-weight:700}.li .ph{aspect-ratio:4/3;object-position:50% 22%}
+.side .box{border-top:3px solid var(--ink);margin-top:26px}.side ol{list-style:none;margin:0;padding:0;counter-reset:n}
+.side ol li a{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.45;font-weight:600}
+.side ol li a:before{counter-increment:n;content:counter(n);color:var(--red);font-weight:900;font-size:17px;min-width:14px}
+.card{background:#fff;border:1px solid var(--line);padding:14px;margin-top:18px}.card.rep{border-top:3px solid var(--cob)}
+.card .cl{font-size:12px;font-weight:900;letter-spacing:1px;color:var(--acc)}.card.rep .cl{color:var(--cob)}
+.card h5{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:16px;margin:6px 0;line-height:1.4}.card p{font-size:12.5px;color:var(--sub);margin:0}.card .who{margin-top:8px;font-size:12px;color:var(--mute);font-weight:700}
+.tipbox{background:var(--deep);color:#fff;padding:16px;margin-top:18px;font-size:13.5px;line-height:1.55}.tipbox b{color:#F4C95D}
+.tipbox .row{display:flex;gap:8px;margin-top:10px}.tipbox .row a{flex:1;text-align:center;padding:8px 0;border-radius:3px;font-weight:800}.tipbox .j{background:#F07B12}.tipbox .t2{border:1px solid #fff}
+.row4{border-top:3px solid var(--ink);margin-top:30px}.row4 .g{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding-bottom:10px}
+.row4 .ph{aspect-ratio:3/2;object-position:50% 22%}.row4 h4{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:18px;line-height:1.4;margin:2px 0 6px}.row4 p{font-size:13.5px;color:var(--sub);margin:0}
+.pr{background:var(--deep);color:#fff;border-top:0;padding:16px 20px 20px;margin-left:-20px;margin-right:-20px}.pr .bh{color:#F4C95D}
+.pr .ph{aspect-ratio:4/3}.pr .t{display:block;font-size:14px;line-height:1.45;margin-top:8px;font-weight:600}
+.secs{border-top:3px solid var(--ink);margin-top:30px}.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:26px 22px;padding-bottom:10px}
+.sc .sh{display:flex;justify-content:space-between;font-weight:900;font-size:16px;border-bottom:1px solid var(--ink);padding-bottom:7px;margin-bottom:10px}.sc .sh span{color:var(--mute)}
+.sc .ph{aspect-ratio:16/10;object-position:50% 22%}.sc h4{font-size:15px;line-height:1.45;margin:9px 0 4px}
+.sc ul{list-style:none;margin:0;padding:0}.sc li a{display:block;font-size:13.5px;color:#333;line-height:1.45;padding:6px 0;border-top:1px solid var(--line)}.sc li a:hover{color:var(--acc)}
+.sc .em{background:#f1eee6;padding:18px;font-size:14px;line-height:1.6;color:#444;aspect-ratio:16/10;display:flex;align-items:center}
+.sc .sp{background:var(--deep);color:#fff;padding:16px;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:center;gap:9px;font-size:13.5px;line-height:1.5}
+.sc .sp a{text-align:center;padding:7px 0;border-radius:3px;font-weight:800}
+.empty{padding:26px 0;color:var(--mute);font-size:14px}
+@media(max-width:1000px){.hero,.main,.bg{grid-template-columns:1fr}.row4 .g,.sg{grid-template-columns:1fr 1fr}
  .numbar .wrap{grid-template-columns:repeat(3,1fr)}.numbar .ttl{grid-column:1/-1;border-right:0;padding:10px 0 4px}}
-@media(max-width:640px){.wrap{padding:0 16px}.mast .slo,.mast .pubby{display:none}.mast h1 a{width:140px;height:38px}.top .wrap span:last-child{display:none}
- .lead .im{height:220px}.sub2{grid-template-columns:1fr}.sub2 article,.sub2 article:nth-child(even){padding:12px 0;border-left:0}
- .dense{grid-template-columns:1fr}.deep .g{grid-template-columns:1fr}.gnb .sch input{width:90px}
- .numbar .wrap{grid-template-columns:1fr 1fr;padding:0 16px}.numbar a{padding:9px 8px}.numbar b{font-size:16px}}
+@media(max-width:640px){.wrap{padding:0 16px}.top{display:none}.mast{padding:10px 0 6px}.mast h1 a{width:164px;height:44px}.mast .slo{font-size:12px;margin-top:4px}.mast .slo span{display:none}
+ .gnb .sch{display:none}.hero{padding:16px 0}.hero h2{font-size:25px}.g4{gap:14px}.g4 h3{font-size:14px}
+ .numbar .wrap{display:flex;overflow-x:auto;padding:0 16px;scrollbar-width:none}.numbar .ttl{flex:0 0 auto;padding:10px 12px 0 0;border:0}.numbar a{flex:0 0 150px;padding:9px 12px}.numbar b{font-size:16px}
+ .li{grid-template-columns:minmax(0,1fr) 88px}.row4 .g{gap:14px}.row4 h4{font-size:15px}.row4 p{display:none}.pr{margin-left:-16px;margin-right:-16px;padding:14px 16px}
+ .sg{gap:20px 14px}.sc .em,.sc .sp{aspect-ratio:auto;min-height:110px}}
 </style><script src="/news/fit.js" defer></script>
 </head><body>
 <div class="top"><div class="wrap"><span id="dateBox"></span><span>經世濟民 · 두루두루 고루고루 잘 사는 사회 · 032-777-0421</span></div></div>
 <header class="mast"><div class="wrap">
   <h1><a href="/news/">AI경제저널</a></h1>
-  <span class="slo">일하는 사람들의 전문지<br>교통·해양·항공·도시·지역경제를 숫자와 원문으로</span>
+  <div class="slo"><b>일하는 사람들의 전문지</b><span> · 교통·해양·항공·도시·지역경제를 숫자와 원문으로</span></div>
   <!-- 등록이 끝나면 「인터넷신문 등록번호 인천 아00000」을 바닥글에 넣는다. 등록 전에는 적지 않는다 -->
-  <div class="pubby">발행 <b>경세제민 AI·경제연구소(주)</b> · 창간 준비호<br>연구소가 만드는 경제 전문지</div>
 </div></header>
 <nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
 <div class="wrap"><div class="ad ad-top" id="adTop"></div></div>
 <div class="numbar" id="numbar" hidden><div class="wrap"><div class="ttl">숫자로 읽는<br>이번 주</div><span id="nums" style="display:contents"></span></div></div>
 <main><div class="wrap">
-  <div class="three">
-    <aside><div class="lab">최신</div><ul class="tl" id="latest"></ul></aside>
-    <div><article class="lead" id="lead"></article><div class="sub2" id="major"></div></div>
-    <aside>
+  <section class="hero"><div id="lead"></div><div class="g4" id="four"></div></section>
+  <div class="main">
+    <div id="blocks"></div>
+    <aside class="side">
       <div class="ad ad-side" id="adSide"></div>
-      <div class="lab">전문 분야</div><ul class="idx" id="idx"></ul>
+      <div class="box" id="mostBox" hidden><div class="bh">많이 본 기사</div><ol id="most"></ol></div>
+      <div class="box"><div class="bh">편집국이 고른 심층</div><ol id="pick"></ol></div>
       <div class="card rep" id="repCard"></div>
       <div class="card" id="acadCard"></div>
       <div class="card"><span class="cl">편집국장의 눈</span><h5>기사로는 끝까지 따라가지 못한 것들</h5><p>기자로 이십이 년, 그 가운데 편집국장으로 삼 년을 보내고 보니 남은 것이 있었다. 물류학 박사를 하며 배운 셈법으로 그것들을 다시 본다.</p><div class="who">편집국장 김갑봉</div></div>
+      <div class="tipbox"><b>제보와 후원</b><br>권력을 감시하는 기사는 독자의 제보에서 시작합니다.<div class="row"><a class="j" href="/news/member.html">후원하기</a><a class="t2" href="/news/tip.html">제보</a></div></div>
     </aside>
   </div>
-  <section class="deep"><div class="h"><h2>심층 · 기획연재</h2><a href="/news/s.html?k=기획연재">숫자와 원문으로 끝까지 ›</a></div><div class="g" id="deepG"></div></section>
+  <section class="row4"><div class="bh"><a href="/news/s.html?k=기획연재">심층 · 기획연재 ›</a></div><div class="g" id="deepG"></div></section>
   <div class="ad ad-mid" id="adMid"></div>
-  <div class="dense" id="dense"></div>
+  <section class="row4 pr"><div class="bh">사진으로 보는 현장</div><div class="g" id="photoG"></div></section>
+  <section class="secs"><div class="bh">섹션</div><div class="sg" id="secG"></div></section>
 </div><div class="wrap"><div class="ad ad-foot" id="adFoot"></div></div></main>
 <footer><div class="wrap">
   <div class="pub">AI경제저널</div>
@@ -146,48 +154,79 @@ var dstr=function(s){ var m=String(s||"").match(/(\d{4})-(\d{2})-(\d{2})/); retu
 var kick=function(t){ var m=String(t||"").match(/^\[([^\]]+)\]/); return m?m[1]:""; };
 var K=function(s){ return '/news/s.html?k='+encodeURIComponent(s); };
 
-document.getElementById('idx').innerHTML=SEC.filter(function(s){return s!=="기획연재";}).map(function(s){
-  return '<li><a href="'+K(s)+'">'+esc(s)+'<small>'+esc(SUBT[s])+'</small></a></li>'; }).join('');
-
 // 숫자로 읽는 이번 주 — /data/numbers.json. 숫자는 우리 기사에 있는 것만. 파일이 없거나 비면 띠를 숨긴다
 fetch('/data/numbers.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
   var a=(d&&d["숫자"])||[]; if(!a.length) return;
   document.getElementById('nums').innerHTML=a.slice(0,6).map(function(x){ return '<a href="'+href(x["파일"])+'"><b>'+esc(x["값"])+'</b><span>'+esc(x["설명"])+'</span></a>'; }).join('');
   document.getElementById('numbar').hidden=false; }).catch(function(){});
 
+
+// 많이 본 기사 — 조회수 집계 주소가 생기면 여기에 넣는다(구글 앱스 스크립트). 비어 있으면 칸을 숨긴다
+var VIEWS_URL = "";
+
 fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
   if(!Array.isArray(list)||!list.length){ document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다.</div>'; return; }
   list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
-  var pics=list.filter(function(p){ return p["대표그림"]; });
-  var t=pics[0]||list[0], used={}; used[t.id]=1;
-  var major=list.filter(function(p){ return !used[p.id]; }).slice(0,4); major.forEach(function(p){ used[p.id]=1; });
+  var used={}, pr=function(p){ return SEC.indexOf(secOf(p)); };
+  var day=function(p){ var m=String(p["날짜"]||"").match(/(\d{4})-(\d{2})-(\d{2})/); return m?Date.UTC(+m[1],m[2]-1,+m[3]):0; };
+  var now=day(list[0]);
+  var pic=function(p){ return !!p["대표그림"]; };
+  var free=function(p){ return !used[p.id]; };
+  var use=function(p){ used[p.id]=1; return p; };
+  var img=function(p,lazy){ return '<img class="ph" src="'+href(p["대표그림"])+'" alt=""'+(lazy?' loading="lazy"':'')+'>'; };
+  var ttl=function(p){ return esc(p["제목"]); };
+  var K2=function(p){ return '<div class="k"><span class="s">'+esc(secOf(p))+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
+  // 중요도 순(메뉴 차례) — 최근 글 가운데 앞 섹션이 먼저. 7일 안에 없으면 30일, 그래도 없으면 전체
+  var within=function(n){ return list.filter(function(p){ return pic(p) && now-day(p)<=n*864e5; }); };
+  var pool=within(7); if(pool.length<5) pool=within(30); if(pool.length<5) pool=list.filter(pic);
+  var byPri=pool.slice().sort(function(a,b){ return (pr(a)-pr(b)) || String(b["날짜"]).localeCompare(String(a["날짜"])); });
   // 톱기사
-  document.getElementById('lead').innerHTML=
-    (t["대표그림"]?'<a href="'+href(t["파일"])+'"><img class="im" src="'+href(t["대표그림"])+'" alt=""></a>':'')+
-    '<span class="kk">'+esc(kick(t["제목"])||secOf(t))+'</span>'+
-    '<h2><a href="'+href(t["파일"])+'">'+esc(String(t["제목"]).replace(/^\[[^\]]+\]\s*/,''))+'</a></h2>'+
-    (t["부제"]?'<p>'+esc(t["부제"])+'</p>':'')+
-    '<div class="byl"><b>'+esc(t["바이라인"]||"")+'</b> · '+esc(dstr(t["날짜"]))+'</div>'+
-    (t["근거"]?'<div class="basis"><b>이 기사의 근거</b> — '+esc(t["근거"])+'</div>':'');
-  // 주요기사 넷
-  document.getElementById('major').innerHTML=major.map(function(p){
-    return '<article><div class="k"><span class="kd">'+kind(p)+'</span>'+esc(secOf(p))+'</div><h3><a href="'+href(p["파일"])+'">'+esc(p["제목"])+'</a></h3><div class="byl">'+esc(p["바이라인"]||"")+' · '+esc(dstr(p["날짜"]))+'</div></article>'; }).join('');
-  // 최신
-  document.getElementById('latest').innerHTML=list.filter(function(p){ return !used[p.id]; }).slice(0,9).map(function(p){
-    return '<li><a href="'+href(p["파일"])+'"><i>'+esc(dstr(p["날짜"]))+' · '+esc(secOf(p))+'</i><span class="kd">'+kind(p)+'</span><span class="t">'+esc(p["제목"])+'</span></a></li>'; }).join('');
+  var t=use(byPri[0]);
+  document.getElementById('lead').innerHTML='<a href="'+href(t["파일"])+'">'+img(t)+K2(t)+'<h2>'+ttl(t)+'</h2>'+(t["부제"]?'<p>'+esc(t["부제"])+'</p>':'')+'</a><div class="byl"><b>'+esc(t["바이라인"]||"")+'</b></div>'+(t["근거"]?'<div class="basis"><b>이 기사의 근거</b> — '+esc(t["근거"])+'</div>':'');
+  // 사진 기사 넷 — 섹션이 겹치지 않게, 중요도 순
+  var four=[], fs={}; fs[secOf(t)]=1;
+  byPri.forEach(function(p){ if(four.length<4 && free(p) && !fs[secOf(p)]){ fs[secOf(p)]=1; four.push(use(p)); } });
+  pool.forEach(function(p){ if(four.length<4 && free(p)) four.push(use(p)); });
+  document.getElementById('four').innerHTML=four.map(function(p){ return '<a href="'+href(p["파일"])+'">'+img(p)+K2(p)+'<h3>'+ttl(p)+'</h3></a>'; }).join('');
+  // 덩어리 셋 — 섹션 셋씩. 한 덩어리 안에서 한 섹션은 둘까지(도배 금지)
+  var GR=[["인천경제","경제","교통경제"],["해양","항공","도시·부동산"],["기후·에너지","AI","국제"]];
+  document.getElementById('blocks').innerHTML=GR.map(function(g){
+    var c=list.filter(function(p){ return free(p) && g.indexOf(secOf(p))>=0; });
+    var lead=c.filter(pic)[0]; if(!lead) return '';
+    use(lead); var cnt={}; cnt[secOf(lead)]=1; var li=[];
+    c.forEach(function(p){ var s=secOf(p); if(li.length<5 && free(p) && pic(p) && (cnt[s]||0)<2){ cnt[s]=(cnt[s]||0)+1; li.push(use(p)); } });
+    return '<section class="blk"><div class="bh">'+g.map(function(s){ return '<a href="'+K(s)+'">'+esc(s)+'</a>'; }).join(' · ')+'</div><div class="bg">'+
+      '<a class="lead" href="'+href(lead["파일"])+'">'+img(lead,1)+K2(lead)+'<h3>'+ttl(lead)+'</h3>'+(lead["부제"]?'<p>'+esc(lead["부제"])+'</p>':'')+'</a><div>'+
+      li.map(function(p){ return '<a class="li" href="'+href(p["파일"])+'"><div>'+K2(p)+'<span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; }).join('')+'</div></div></section>';
+  }).join('');
+  // 편집국이 고른 심층 — 분석·해설·서평·칼럼·연구보고서, 섹션마다 하나
+  var ps={}, pick=list.filter(function(p){ var k=kind(p); if(!free(p)||ps[secOf(p)]||!/분석|해설|서평|칼럼|연구보고서/.test(k)) return false; ps[secOf(p)]=1; return true; }).slice(0,5).map(use);
+  document.getElementById('pick').innerHTML=pick.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join('');
   // 연구보고서·학술
   var rep=list.filter(function(p){ return p["분야"]==="연구보고서"; })[0];
   document.getElementById('repCard').innerHTML='<span class="cl">연구보고서</span>'+(rep?'<h5><a href="'+href(rep["파일"])+'">'+esc(rep["제목"])+'</a></h5><p>'+esc(rep["부제"]||"")+'</p>':'<h5>준비 중입니다</h5>');
   var ac=list.filter(function(p){ return secOf(p)==="학술"; })[0];
   document.getElementById('acadCard').innerHTML='<span class="cl">학술 · 이주의 논문</span>'+(ac?'<h5><a href="'+href(ac["파일"])+'">'+esc(ac["제목"])+'</a></h5><p>'+esc(ac["부제"]||"")+'</p>':'<h5>첫 회를 준비하고 있습니다</h5><p>인천 지역 대학·연구기관의 논문, 세계 과학 논문을 주 1편 원문을 읽고 쉽게 풉니다.</p>');
-  // 심층·기획연재 — 연재 번호가 붙은 글, 연재마다 최신 한 편, 그림 있는 것, 위에서 쓴 글은 뺀다
-  var seen={}, deep=list.filter(function(p){ if(!isSer(p)||!p["대표그림"]||used[p.id]||seen[p["묶음"]]) return false; seen[p["묶음"]]=1; return true; }).slice(0,4);
-  document.getElementById('deepG').innerHTML=deep.map(function(p){
-    return '<a href="'+href(p["파일"])+'"><img class="im" src="'+href(p["대표그림"])+'" alt="" loading="lazy"><span class="k">'+esc(p["묶음"])+'</span><h4>'+esc(String(p["제목"]).replace(/^\[[^\]]+\]\s*/,''))+'</h4><div class="byl">'+esc(p["바이라인"]||"")+' · '+esc(dstr(p["날짜"]))+'</div></a>'; }).join('');
-  // 섹션별 — 톱·주요기사도 제 섹션에 넣는다(소장님 2026-10-28)
-  document.getElementById('dense').innerHTML=SEC.filter(function(s){return s!=="기획연재";}).map(function(s){
-    var arr=list.filter(function(p){ return secOf(p)===s; }).slice(0,4);
-    return '<section><h4><a href="'+K(s)+'">'+esc(s)+'</a></h4>'+(arr.length?'<ul>'+arr.map(function(p){ return '<li><a href="'+href(p["파일"])+'"><span class="kd">'+kind(p)+'</span>'+esc(p["제목"])+'</a></li>'; }).join('')+'</ul>':'<p class="none">첫 기사를 준비하고 있습니다.</p>')+'</section>'; }).join('');
+  // 심층·기획연재 넷 — 연재마다 하나, 섹션 겹치지 않게
+  var sb={}, ss={}, deep=list.filter(function(p){ if(!free(p)||!pic(p)||!isSer(p)||sb[p["묶음"]]||ss[secOf(p)]) return false; sb[p["묶음"]]=1; ss[secOf(p)]=1; return true; }).slice(0,4).map(use);
+  document.getElementById('deepG').innerHTML=deep.map(function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+'<div class="k"><span class="s">'+esc(p["묶음"])+'</span></div><h4>'+esc(String(p["제목"]).replace(/^\[[^\]]+\]\s*/,''))+'</h4>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>'; }).join('');
+  // 사진으로 보는 현장 넷 — 섹션 겹치지 않게
+  var ph={}, photo=list.filter(function(p){ if(!free(p)||!pic(p)||ph[secOf(p)]) return false; ph[secOf(p)]=1; return true; }).slice(0,4).map(use);
+  document.getElementById('photoG').innerHTML=photo.map(function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+'<span class="t">'+ttl(p)+'</span></a>'; }).join('');
+  // 섹션 열하나 + 후원 칸
+  var MSG={"학술":"좋은 연구를 일하는 사람들의 말로 소개합니다. 매주 한 편, 창간과 함께 시작합니다.","기획연재":"숫자와 원문으로 끝까지 따라가는 연재가 이 자리에 실립니다."};
+  document.getElementById('secG').innerHTML=SEC.map(function(s){
+    var arr=list.filter(function(p){ return (s==="기획연재"?isSer(p):secOf(p)===s); }); // 섹션 칸은 위에 걸린 글도 제 섹션에 보인다(통합지침 마흔 5항 (1))
+    var top=arr.filter(pic)[0];
+    var h='<div class="sc"><div class="sh"><a href="'+K(s)+'">'+esc(s)+'</a><span>›</span></div>';
+    if(!top) return h+'<div class="em">'+esc(MSG[s]||"첫 기사를 준비하고 있습니다.")+'</div></div>';
+    var rest=arr.filter(function(p){ return p!==top; }).slice(0,2);
+    return h+'<a href="'+href(top["파일"])+'">'+img(top,1)+'<h4>'+ttl(top)+'</h4></a><ul>'+rest.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join('')+'</ul></div>';
+  }).join('')+'<div class="sc"><div class="sh">함께 만드는 신문</div><div class="sp">광고에 기대지 않고 독자의 후원으로 만듭니다.<a style="background:#F07B12" href="/news/member.html">후원하기</a><a style="border:1px solid #fff" href="/news/tip.html">기사 제보</a></div></div>';
+  // 많이 본 기사
+  if(VIEWS_URL){ fetch(VIEWS_URL).then(function(r){return r.json();}).then(function(v){
+    var m={}; list.forEach(function(p){ m[p.id]=p; }); var top=(v&&v.top||[]).map(function(id){ return m[id]; }).filter(Boolean).slice(0,5);
+    if(top.length){ document.getElementById('most').innerHTML=top.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join(''); document.getElementById('mostBox').hidden=false; } }).catch(function(){}); }
 }).catch(function(){ document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다. 잠시 뒤에 다시 열어 주십시오.</div>'; });
 </script>
 </body></html>
