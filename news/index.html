@@ -204,13 +204,19 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     if(tm(p)-tm(old)>=3*36e5){ var rep=same.length?same[0]:old; if(same.length && tm(p)-tm(rep)<3*36e5) return; slots.splice(slots.indexOf(rep),1); slots.push(p); }
   });
   list.filter(function(p){ return top(p); }).forEach(function(p){ if(slots.indexOf(p)<0){ slots.sort(function(a,b){ return tm(a)-tm(b); }); slots.shift(); slots.push(p);} });
+  // 헤드라인 가운데 하나는 반드시 인천경제(2026-11-01 소장님 「헤드라인 중 1개는 반드시 인천경제 기사가 들어가게 하라」)
+  if(!slots.some(function(p){ return secOf(p)==="인천경제"; })){ var ic=list.filter(function(p){ return secOf(p)==="인천경제" && pic(p); })[0]||list.filter(function(p){ return secOf(p)==="인천경제"; })[0];
+    if(ic){ slots.sort(function(a,b){ return tm(a)-tm(b); }); if(slots.length>=5) slots.shift(); slots.push(ic); } }
   slots.sort(function(a,b){ return (tm(b)-tm(a)) || (pr(a)-pr(b)); }); slots.forEach(use);
   var t=slots[0];
   document.getElementById('lead').innerHTML='<a href="'+href(t["파일"])+'">'+img(t)+K2(t)+'<h2>'+ttl(t)+'</h2>'+(t["부제"]?'<p>'+esc(t["부제"])+'</p>':'')+'</a><div class="byl"><b>'+esc(t["바이라인"]||"")+'</b></div>'+(t["근거"]?'<div class="basis"><b>이 기사의 근거</b> — '+esc(t["근거"])+'</div>':'');
   document.getElementById('h3').innerHTML=slots.slice(1).map(function(p){ return '<a href="'+href(p["파일"])+'"><div>'+K2(p)+'<h3>'+ttl(p)+'</h3></div>'+img(p)+'</a>'; }).join('');
   // 다음 칸들 — 시간 차례, 한 칸에 한 섹션 두 편까지
   var take=function(n,needPic){ var c={}, out=[]; list.forEach(function(p){ var s=secOf(p); if(out.length<n && free(p) && (!needPic||pic(p)) && (c[s]||0)<2){ c[s]=(c[s]||0)+1; out.push(use(p)); } }); return out; };
-  document.getElementById('t6').innerHTML=take(6).map(function(p){ return '<a href="'+href(p["파일"])+'">'+K2(p)+'<h3>'+ttl(p)+'</h3>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>'; }).join('');
+  // 헤드라인 아래 여섯 칸의 왼쪽 위는 인천경제 고정(2026-11-01 소장님 「인천경제는 으뜸기사 섹션 왼쪽 상단에 고정하라」)
+  var icf=list.filter(function(p){ return free(p) && secOf(p)==="인천경제"; })[0]; if(icf) use(icf);
+  var six=take(icf?5:6); if(icf) six.unshift(icf);
+  document.getElementById('t6').innerHTML=six.map(function(p){ return '<a href="'+href(p["파일"])+'">'+K2(p)+'<h3>'+ttl(p)+'</h3>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>'; }).join('');
   document.getElementById('p6').innerHTML=take(6,1).map(function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+K2(p)+'<h3>'+ttl(p)+'</h3></a>'; }).join('');
   document.getElementById('t10a').innerHTML=take(10).map(function(p){ return '<a class="li" href="'+href(p["파일"])+'"><div>'+K2(p)+'<span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; }).join('');
   // 편집국 추천(소장님 「편집국 추천 이라고만 쓰라」) — 번호 없이, 섹션 이름과 작은 사진. 섹션마다 하나
