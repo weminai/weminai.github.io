@@ -183,7 +183,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 .notice a{color:var(--red);font-weight:800;text-decoration:underline}
 
 /* 2026-10-21 소장님 지시 — 메뉴 맨 앞 전체기사, 오른쪽 끝 검색(코발트블루)·회원가입(주황) */
-.gnb .wrap{align-items:center;gap:16px}
+.gnb .wrap{align-items:center;gap:16px;scrollbar-width:none}.gnb .wrap::-webkit-scrollbar{display:none}
 .gnb .all{color:#111;font-weight:900}
 .gnb .tools{margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 0 auto}
 .gnb .sch{display:flex;align-items:center;margin:0}
@@ -191,6 +191,8 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 .gnb .sch button{height:32px;padding:0 12px;border:0;border-radius:0 4px 4px 0;background:#17428F;color:#fff;font:inherit;font-size:14px;font-weight:800;cursor:pointer}
 .gnb a.join{padding:6px 14px;border:0;border-radius:4px;background:#F07B12;color:#fff;font-size:14px;font-weight:800}
 .gnb a.join:hover{background:#D9650A;color:#fff;border-color:transparent}
+.gnb a.tip{padding:4px 11px;border:2px solid #17428F;border-radius:4px;color:#17428F;font-size:14px;font-weight:800}
+.gnb a.tip:hover{background:#17428F;color:#fff;border-color:#17428F}
 @media (max-width:640px){.gnb .sch input{width:96px}}
 /* 제호 10t(2026-10-23 확정) — 글자 대신 제호 그림. 글자는 남겨 검색·낭독용 */
 .mast .title h1 a{display:inline-block;height:1.3em;width:5.37em;background:url(/news/jeho.svg) center/contain no-repeat;color:transparent!important;text-indent:110%;white-space:nowrap;overflow:hidden;vertical-align:top}
@@ -213,7 +215,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div>
 </div></header>
 
-<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=정책브리핑">정책브리핑</a><a href="/news/s.html?k=기획연재">기획연재</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후위기">기후위기</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=금융·증시">금융·증시</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=철도">철도</a><a href="/news/s.html?k=복합물류">복합물류</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
+<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
 <main><div class="wrap">
   <div class="pghd"><h2 id="pgT">지면</h2><span id="pgN"></span></div>
   <div class="subs" id="pgS"></div>
@@ -222,7 +224,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 <footer><div class="wrap">
   <div class="pub">AI경제저널</div>
   <div class="meta">
-    발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진 · 편집장 김갑봉<br>
+    발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진 · 편집국장 김갑봉<br>
     (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com
     <br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com
     <!-- 등록 뒤 넣을 것: 인터넷신문 등록번호, 등록일자 -->
@@ -309,7 +311,7 @@ var FIELD={"정책브리핑":"정책브리핑","해양":"해양","항공":"항�
  "복합물류":"복합물류","도시계획·부동산":"도시·부동산","기후위기":"기후위기","경제":"경제","AI":"AI",
  "국제":"국제","인천경제":"인천경제"};
 
-var MENU=["기획연재","인천경제","해양","항공","철도","복합물류","도시·부동산","기후위기","경제","금융·증시","국제","AI"];
+var MENU=SECS;
 var SUBS={"국제":[
   {k:"동북아", kw:/동북아|한중수교|한일수교|한중|한일|중국|일본|북한|조선|남북|평양|시진핑|베이징|상하이|다카이치|도쿄|야스쿠니|자민당|니케이|희토류|한한령|대만|몽골|극동/,
    sub:[{k:"북한(조선)", kw:/남북|북한|조선|평양|개성|통일|신의주|압록강|김정은/},
@@ -323,6 +325,20 @@ var SUBS={"국제":[
   {k:"미주", kw:/미주|북미|남미|중남미|미국|워싱턴|캐나다|멕시코|트럼프|브라질|아르헨티나|칠레|페루|콜롬비아/,
    sub:[{k:"북미", kw:/북미|미국|워싱턴|캐나다|멕시코|트럼프/},
         {k:"남미", kw:/남미|중남미|브라질|아르헨티나|칠레|페루|콜롬비아/}]}
+],"교통경제":[
+  {k:"철도", kw:/철도|KTX|SRT|GTX|고속철|열차|노선|역사|전철/},
+  {k:"도로", kw:/도로|고속도로|교량|터널|IC|나들목/},
+  {k:"대중교통", kw:/대중교통|버스|지하철|광역교통|환승/},
+  {k:"물류", kw:/물류|화물|컨테이너|복합운송|로테르담|운송인/}
+],"경제":[
+  {k:"거시·정책", kw:/거시|성장률|국민총소득|GDP|재정|조세|세수|예산|대미투자|지방재정/},
+  {k:"금융·증시", kw:/금융|증시|코스피|주식|금리|채권|레버리지|대출|은행/},
+  {k:"산업·노동", kw:/산업|반도체|방산|노동|임금|일자리|고용|최저임금/},
+  {k:"민생·복지", kw:/복지|연금|가계|자영업|불평등|민생|빚/}
+],"해양":[
+  {k:"해운·항만", kw:/해운|항만|인천항|부산항|신항|부두|선박|컨테이너/},
+  {k:"수산업", kw:/수산|어업|어민|어선|어촌/},
+  {k:"섬", kw:/섬|도서|연안여객|백령|연평|덕적|영흥/}
 ],"도시·부동산":[
   {k:"도시계획", kw:/도시계획|지구단위|용도지역|도시기본계획|공간계획/},
   {k:"도시재생", kw:/도시재생|원도심|쇠퇴|마을만들기/},
@@ -346,10 +362,14 @@ var subHtml=function(arr,k,cls){
   return '<div class="'+cls+'">'+h+'</div>';
 };
 // 2026-10-28 소장님 「모든 기사는 섹션이 지정돼 있다」 「지정이 안 돼 있으면 지정해야 한다」 — posts.json 「섹션」 값이 먼저다. 값이 없거나 틀릴 때만 표로 짐작한다
-var SECS=["기획연재","인천경제","도시·부동산","기후위기","경제","금융·증시","국제","AI","해양","항공","철도","복합물류"];
-var secOf=function(p){ var s=p["섹션"]; if(s && SECS.indexOf(s)>=0) return s; return MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; };
+var SECS=["인천경제","경제","교통경제","해양","항공","도시·부동산","기후·에너지","AI","국제","학술","기획연재"];   // 2026-10-31 섹션 열하나, 인천경제 맨 앞
+var OLDSEC={"철도":"교통경제","복합물류":"교통경제","금융·증시":"경제","기후위기":"기후·에너지"};
+var secOf=function(p){ var s=p["섹션"]||""; s=OLDSEC[s]||s; if(s && SECS.indexOf(s)>=0) return s; s=MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; return OLDSEC[s]||s; };
+var isSer=function(p){ return /[①-⑳㉑-㉟]/.test(String(p["제목"]||"")); };
+// 옛 주소(기사 쪽에 남은 s.html?k=철도 같은 것)는 새 섹션의 하위로 보낸다
+var ALIAS={"철도":["교통경제","철도"],"복합물류":["교통경제","물류"],"금융·증시":["경제","금융·증시"],"기후위기":["기후·에너지",""]};
 var isBrief=function(p){ return /브리핑/.test(String(p["묶음"]||"")) || String(p["분야"]||"")==="정책브리핑"; };
-var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||""); };
+var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||"")+" "+String(p["하위"]||""); };
 var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");};
 var href=function(p){ p=String(p||""); return p.charAt(0)==="/" ? p : "/"+p; };
 var dstr=function(s){ s=String(s||""); var m=s.match(/(\d{4})-(\d{2})-(\d{2})/); return m? (m[2].replace(/^0/,"")+"."+m[3]) : ""; };
@@ -357,12 +377,12 @@ var isMem=function(p){ return String(p["공개"]||"")==="요약" || p["회원전
 var lock=function(p){ return ''; }; /* 2026-10-26 소장님 「쓸데 없는 유료회원제 문구 지우라」 — 회원 꼬리표를 뗐다 */
 var K=decodeURIComponent((location.search.match(/[?&]k=([^&]*)/)||[])[1]||"경제");
 var Q=decodeURIComponent(((location.search.match(/[?&]q=([^&]*)/)||[])[1]||"").replace(/\+/g," ")).trim();
-document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":K); document.title=(Q?('검색 '+Q):K)+" — AI경제저널";
+document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":(ALIAS[K]?(ALIAS[K][0]+(ALIAS[K][1]?' · '+ALIAS[K][1]:'')):K)); document.title=(Q?('검색 '+Q):K)+" — AI경제저널";
 (function(){var i=document.querySelector('.gnb .sch input'); if(i&&Q) i.value=Q;})();
 fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
   list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
   var W=Q?Q.split(/\s+/):[];
-  var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:(K==="정책브리핑")?list.filter(isBrief):list.filter(function(p){ return secOf(p)===K; }));
+  var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:(K==="정책브리핑")?list.filter(isBrief):(K==="기획연재")?list.filter(isSer):ALIAS[K]?list.filter(function(p){ return secOf(p)===ALIAS[K][0] && (!ALIAS[K][1] || hay(p).indexOf(ALIAS[K][1])>=0 || (ALIAS[K][1]==="물류"&&/물류|화물|컨테이너/.test(hay(p)))); }):list.filter(function(p){ return secOf(p)===K; }));
   document.getElementById('pgN').textContent = arr.length ? "" : (Q?"결과 없음":"준비 중");
   var sb=document.getElementById('pgS');
   sb.innerHTML=Q?'':subHtml(arr,K,'subsin');

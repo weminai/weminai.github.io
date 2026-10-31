@@ -1,4 +1,4 @@
-/* AI경세제민 뉴스 틀 — 기사 쪽(media/*.html)과 뉴스 부속 쪽에 씌운다. .nf 안에서만 먹는다 */
+/* AI경제저널 뉴스 틀 — 기사 쪽(media/*.html)과 뉴스 부속 쪽에 씌운다. .nf 안에서만 먹는다 */
 .nf{--ink:#111;--sub:#333;--mute:#6B6B68;--line:#D8D8D4;--rule:#111;--red:#C8102E;--cobalt:#17428F;--cobalt-l:#1B4FA8;
  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:var(--ink);line-height:1.6}
 .nf a{color:inherit;text-decoration:none}
@@ -62,3 +62,10 @@
 @media(min-width:821px){.nf .mast .wrap{padding:18px 18px 14px}.nf .title h1{font-size:54px;letter-spacing:-2px}.nf .title h1 .lat{letter-spacing:-2.5px}.nf .title .en{margin-top:7px;font-size:11.5px}.nf .title .slo{margin-top:9px;font-size:13.5px}}
 /* 제호 10t(2026-10-23 확정) — 글자 대신 제호 그림. 글자는 남겨 검색·낭독용 */
 .mast .title h1 a{display:inline-block;height:1.3em;width:5.37em;background:url(/news/jeho.svg) center/contain no-repeat;color:transparent!important;text-indent:110%;white-space:nowrap;overflow:hidden;vertical-align:top}
+
+/* 2026-10-31 4단계 — 상단 오른쪽 검색·제보·후원하기(소장님 「상단: 제보·후원하기」) */
+.nf .gnb .tip{padding:5px 12px;border:2px solid var(--cobalt);border-radius:4px;color:var(--cobalt);font-size:14px;font-weight:800}
+.nf .gnb .tip:hover{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+@media (max-width:640px){.nf .gnb .tip{padding:4px 9px}}
+/* 2026-10-31 섹션 메뉴 가로 스크롤 막대 숨김(윈도우에서 회색 막대가 드러남) — 밀어서 넘기는 것은 그대로 */
+.nf .gnb .wrap{scrollbar-width:none}.nf .gnb .wrap::-webkit-scrollbar{display:none}

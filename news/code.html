@@ -1,0 +1,154 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><script>if(/^(www\.)?weminai\.com$/.test(location.hostname))location.replace("https://news.weminai.com"+location.pathname+location.search+location.hash);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>편집규약 — AI경제저널</title>
+<meta name="description" content="AI경제저널 편집규약. 편집권의 독립, 편집 방향, 기사가 만들어지는 절차, 수정·삭제와 정정, 독자와 위원회, 기록과 공개.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon_64.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root{--paper:#fff;--soft:#F2F6FD;--ink:#141414;--sub:#3A3A3A;--mute:#71716E;--line:#DDE4F0;
+--blue:#1A6DFF;--blue-d:#0B4FCE;--navy:#0E2A62}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.62;
+font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1020px;margin:0 auto;padding:0 18px}
+.util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.util .wrap{display:flex;justify-content:space-between;padding:6px 18px}
+.mast{border-bottom:1px solid var(--line)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+.logo{display:block;line-height:0}.logo img{width:276px;height:auto;display:block}
+.gnb{border-bottom:2px solid var(--blue-d)}
+.gnb .wrap{display:flex;gap:28px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
+.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
+.gnb a:hover{border-color:var(--blue-d);color:var(--blue-d)}
+.hero{border-bottom:3px solid var(--ink);background:var(--soft)}
+.hero .wrap{padding:22px 18px 20px}
+.hero h1{margin:0 0 6px;font-size:28px;letter-spacing:-1px}
+.hero p{margin:0;font-size:14.5px;color:var(--sub)}
+main{padding:24px 0 40px}
+.cols{display:grid;grid-template-columns:1fr 300px;gap:34px}
+form{display:block}
+fieldset{border:0;padding:0;margin:0 0 22px}
+legend{font-size:17px;font-weight:800;padding:0 0 8px;border-bottom:2px solid var(--ink);width:100%;margin-bottom:12px}
+.row{display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:start;margin-bottom:11px}
+.row>label{font-size:14px;font-weight:700;padding-top:9px;color:var(--sub)}
+.row .req::after{content:' *';color:#C0392B}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{
+ width:100%;font:inherit;font-size:14.5px;padding:8px 11px;border:1px solid #9FB2D4;background:#fff;border-radius:0}
+textarea{min-height:110px;resize:vertical;line-height:1.6}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--blue)}
+.chk{display:flex;flex-wrap:wrap;gap:8px 16px;padding-top:7px}
+.chk label{font-size:14px;font-weight:600;display:flex;align-items:center;gap:5px;cursor:pointer}
+.kg{display:flex;flex-direction:column;gap:7px;padding-top:4px}
+.kgr{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;padding-bottom:7px;border-bottom:1px dotted var(--line)}
+.kgr b{width:86px;font-size:13px;color:var(--mute);flex:none}
+.kgr label{font-size:14px;font-weight:600;display:flex;align-items:center;gap:5px;cursor:pointer}
+.det{display:none}
+.agree{background:var(--soft);border:1px solid var(--line);padding:12px 14px;font-size:13px;color:var(--sub);line-height:1.75}
+.agree label{display:flex;gap:6px;align-items:center;font-weight:800;color:var(--ink);margin-top:6px;cursor:pointer}
+.hint{font-size:12.5px;color:var(--mute);margin:4px 0 0}
+.act{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:6px;border-top:1px solid var(--line);margin-top:4px}
+button{font:inherit;font-weight:800;font-size:15px;padding:11px 22px;border:0;cursor:pointer}
+.b1{background:var(--blue);color:#fff}.b1:hover{background:var(--navy)}
+.b2{background:#fff;color:var(--ink);border:1px solid #9FB2D4}
+.ok{font-size:13px;color:#0E6B3C;font-weight:700}
+aside{font-size:13.5px}
+aside h3{margin:0 0 9px;font-size:15px;font-weight:800;border-bottom:2px solid var(--ink);padding-bottom:7px}
+aside p{margin:0 0 12px;color:var(--sub);line-height:1.7}
+aside b{color:var(--ink)}
+aside .src{font-size:12px;color:var(--mute)}
+.box{background:var(--soft);border:1px solid var(--line);padding:13px 14px;margin-bottom:14px}
+footer{background:var(--ink);color:#BEBEBA;border-top:5px solid var(--blue-d);margin-top:30px}
+footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
+footer b{color:#fff}
+@media(max-width:860px){.cols{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row>label{padding-top:0}}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,select{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;pointer-events:none}
+
+.util{background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.util .wrap{display:flex;justify-content:space-between;padding:6px 18px}
+.mast{border-bottom:1px solid var(--line);background:#fff}
+.mast .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}
+.logo{display:block;line-height:0}.logo img{width:276px;height:auto;display:block}
+.mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.mast .date{font-size:13px;color:var(--mute)}
+.srchtop{display:flex;gap:6px;align-items:center;margin:0}
+.srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}
+.srchtop input:focus{outline:0;border-color:var(--blue)}
+.srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:var(--blue);color:#fff;cursor:pointer}
+.srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}
+.srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}
+.srchtop .asktop:hover{background:#FFB15E}
+.gnb{border-bottom:2px solid var(--blue-d);background:#fff}
+.gnb .wrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}
+.gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}
+.gnb a:hover,.gnb a.on{border-color:var(--blue-d);color:var(--blue-d)}
+footer{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid var(--blue-d)}
+footer .wrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}
+footer b{color:#fff}footer a{text-decoration:underline}
+body{display:flex;flex-direction:column;min-height:100vh}body>main{flex:1 0 auto;width:100%}body>footer{margin-top:auto}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}
+img{-webkit-user-drag:none;pointer-events:none}
+@media(max-width:700px){.srchtop input{width:100%}.mast .rt{align-items:stretch;width:100%}.srchtop{flex-wrap:wrap}.srchtop .asktop{margin-left:0}.srchtop .asktop::before{display:none}}
+.wrap{max-width:1160px}
+</style><link rel="stylesheet" href="/news/frame.css"></head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<div class="hero"><div class="wrap">
+<h1>편집규약</h1>
+<p>AI경제저널의 편집권과 기사가 독자에게 닿기까지의 절차를 밝힙니다. 2026년 11월 ○일 시행.</p>
+</div></div>
+<main><div class="wrap"><div class="pv">
+<h2>제1장 총칙</h2>
+<p><b>제1조(목적)</b> 이 규약은 AI경제저널의 편집권을 지키고, 기사가 기획되어 독자에게 닿기까지의 절차와 책임을 정한다.</p>
+<p><b>제2조(정신)</b> AI경제저널은 일하는 사람들의 전문지다. 편집은 윤리강령을 따르고, 진실과 사람 앞에 겸손하며, 독자의 알 권리를 넓히는 데 쓴다.</p>
+<p><b>제3조(용어)</b> 이 규약에서 「발행인」은 경세제민 AI·경제연구소(주) 대표이사를, 「편집국」은 편집국장과 기자, 편집자를, 「데스크」는 기사를 검토해 싣기를 정하는 편집국장 또는 편집국장이 맡긴 사람을 말한다.</p>
+<h2>제2장 편집권의 독립</h2>
+<p><b>제4조(편집권)</b> 기사의 기획, 취재, 작성, 편집, 배치에 관한 권한은 편집국에 있고, 최종 책임은 편집국장이 진다.</p>
+<p><b>제5조(독립의 보장)</b> ① 발행인은 편집국의 편집권을 존중한다. 발행인과 회사의 영업, 광고, 후원, 연구용역은 기사의 내용과 배치에 간섭하지 않는다.</p>
+<p>② 외부의 압력이나 청탁이 있으면 편집국장은 그 내용을 기록하고, 필요하면 독자권익위원회에 알린다.</p>
+<p><b>제6조(편집국장)</b> ① 편집국장은 발행인이 편집국 구성원의 의견을 들어 임명한다.</p>
+<p>② 편집국장은 편집 방향을 정하고, 편집회의를 주재하며, 윤리강령과 이 규약이 지켜지게 한다.</p>
+<p>③ 편집국장의 이름과 연락처는 누리집에 밝힌다.</p>
+<h2>제3장 편집 방향과 지면</h2>
+<p><b>제7조(편집 방향)</b> ① 경제 분야에서 일하는 사람들에게 꼭 필요한 정보를 우선한다.</p>
+<p>② 인천과 직결된 정보를 먼저 다룬다. 전국 사안이라도 인천시민이 해당하면 무엇을 받고 무엇을 해야 하는지 친절하게 설명한다.</p>
+<p>③ 독자는 인천시민이 먼저이고, 수도권과 다른 지역 독자도 읽을 수 있게 쓴다.</p>
+<p>④ 속보보다 심층을 앞세운다.</p>
+<p><b>제8조(섹션)</b> 지면은 경제, 인천경제, 교통경제, 해양, 항공, 도시·부동산, 기후·에너지, AI, 국제, 학술, 기획연재로 나눈다. 섹션과 그 아래 칸은 편집회의를 거쳐 편집국장이 바꾼다.</p>
+<p><b>제9조(배치)</b> 1면 톱기사와 주요기사, 섹션 배치는 편집국장이 정한다. 같은 기사를 한 화면에 겹쳐 싣지 않는다.</p>
+<h2>제4장 기사가 만들어지는 절차</h2>
+<p><b>제10조(편집회의)</b> ① 편집국은 정기적으로 편집회의를 열어 다룰 사안, 기획·심층 보도 계획, 배치를 정한다.</p>
+<p>② 편집회의 안은 보도자료, 정부 정책브리핑, 독자 제보, 기자의 발굴로 만든다.</p>
+<p>③ 회의 결과는 기록으로 남긴다.</p>
+<p><b>제11조(취재와 작성)</b> ① 기사는 윤리강령이 정한 원칙에 따라 쓴다. 숫자는 원출처로, 인용은 원문으로 확인한다.</p>
+<p>② 보도자료는 그대로 싣지 않는다. 사실을 다시 확인하고 필요한 취재를 더해 새로 쓴다.</p>
+<p>③ 인공지능을 쓴 경우 윤리강령 제5장을 따른다.</p>
+<p><b>제12조(데스킹)</b> ① 모든 기사는 싣기 전에 데스크를 거친다.</p>
+<p>② 데스크는 사실과 출처, 제목과 본문의 일치, 균형, 표기와 문장, 저작권을 본다.</p>
+<p>③ 데스크를 거치지 않은 기사는 싣지 않는다.</p>
+<p><b>제13조(바이라인)</b> 기사에는 쓴 기자의 실명을 밝힌다. 외부 필자의 글은 필자 이름과 소속을 밝힌다.</p>
+<p><b>제14조(기획·심층 보도)</b> 기획·심층 보도는 계획, 취재 과정, 결과를 기록한다.</p>
+<h2>제5장 기사의 수정과 삭제, 정정과 반론</h2>
+<p><b>제15조(수정)</b> 사실이 바뀌거나 잘못이 확인되면 기사를 고치고, 고친 날과 고친 내용을 기사 본문에 밝힌다. 오탈자처럼 뜻이 바뀌지 않는 고침은 밝히지 않을 수 있다.</p>
+<p><b>제16조(삭제)</b> 기사는 원칙적으로 지우지 않는다. 법원 판결, 언론중재위원회 결정, 개인의 생명과 안전에 관한 사유가 있을 때만 편집국장이 정해 지우고, 그 사유를 기록한다.</p>
+<p><b>제17조(정정과 반론)</b> 정정·반론보도 청구는 윤리강령 제6장과 언론중재법에 따라 처리한다. 결과는 정정·반론 칸에 싣는다.</p>
+<h2>제6장 독자와 위원회</h2>
+<p><b>제18조(독자참여)</b> 반론, 의견, 독자투고, 정정보도 청구, 제보를 받는 칸을 두고, 들어온 의견은 편집회의에서 살핀다.</p>
+<p><b>제19조(독자권익위원회)</b> 독자권익위원회의 평가와 권고는 편집회의에 올려 반영 여부를 정하고, 결과를 공개한다.</p>
+<p><b>제20조(고충처리인)</b> 고충처리인이 낸 권고는 편집국장이 검토해 처리하고, 그 결과를 기록한다.</p>
+<h2>제7장 기록과 공개</h2>
+<p><b>제21조(기록)</b> 편집국은 다음을 기록하고 보관한다.</p>
+<p>1. 편집회의록</p>
+<p>2. 달마다의 기사 수, 섹션별 기사 수, 자체 생산 기사 비율, 기획·심층 기사 수</p>
+<p>3. 정정·반론과 독자 의견 처리 결과</p>
+<p>4. 윤리강령 준수 점검 회의록</p>
+<p><b>제22조(공개)</b> 이 규약과 윤리강령, 독자권익위원회 회의 결과는 누리집에 공개한다.</p>
+<h2>부칙</h2>
+<p><b>제1조(시행)</b> 이 규약은 2026년 11월 ○일부터 시행한다.</p>
+<p><b>제2조(개정)</b> 이 규약은 편집국 논의를 거쳐 편집국장이 고친다. 편집권 독립에 관한 제2장을 고칠 때는 발행인과 편집국이 함께 정한다.</p>
+</div></div></main>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub">AI경제저널</div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진 · 편집국장 김갑봉<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/">뉴스 첫 화면</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/ask.html">의뢰·신청하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="/nocopy.js"></script>
+</body></html>
