@@ -224,7 +224,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div>
 </div></header>
 
-<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
+<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
 <main><div class="wrap">
   <div class="pghd"><h2 id="pgT">지면</h2><span id="pgN"></span></div>
   <div class="subs" id="pgS"></div>
@@ -366,7 +366,7 @@ var subHtml=function(arr,k,cls){
   return '<div class="'+cls+'">'+h+'</div>';
 };
 // 2026-10-28 소장님 「모든 기사는 섹션이 지정돼 있다」 「지정이 안 돼 있으면 지정해야 한다」 — posts.json 「섹션」 값이 먼저다. 값이 없거나 틀릴 때만 표로 짐작한다
-var SECS=["인천경제","경제","교통경제","해양","항공","도시·부동산","기후·에너지","AI","국제","학술","기획연재"];   // 2026-10-31 섹션 열하나, 인천경제 맨 앞
+var SECS=["인천경제","경제","교통경제","해양","항공","도시·부동산","지방자치","기후·에너지","AI","국제","학술","기획연재"];   // 2026-11-02 지방자치 더함, 섹션 열둘   // 2026-10-31 섹션 열하나, 인천경제 맨 앞
 var OLDSEC={"철도":"교통경제","복합물류":"교통경제","금융·증시":"경제","기후위기":"기후·에너지"};
 var secOf=function(p){ var s=p["섹션"]||""; s=OLDSEC[s]||s; if(s && SECS.indexOf(s)>=0) return s; s=MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; return OLDSEC[s]||s; };
 // 2026-11-02 소장님 「기획연재 섹션에 왜 기획연재에 해당하지 않는 기사들이 있지?」 「기획연재에 해당하지 않는 기사는 모두 해당 섹션으로 이관하라」 — 기획연재 쪽은 posts.json 섹션 값 「기획연재」 글만. 연재 번호(①…)가 붙어도 섹션이 다르면 그 섹션 쪽에 나온다
