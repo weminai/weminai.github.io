@@ -103,6 +103,7 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
 .t10 a .s{color:var(--red);font-weight:800;font-size:12.5px;margin-right:6px}
 @media(max-width:1000px){.t6,.p6{grid-template-columns:1fr 1fr}.t6 a,.t6 a:nth-child(n){padding:12px 0;border-left:0}}
 @media(max-width:640px){.t6,.p6,.t10{grid-template-columns:1fr}.h3l a{grid-template-columns:minmax(0,1fr) 96px}}
+.ph.emp{aspect-ratio:3/2;background:#E9E4D8 url(/news/jeho.svg) center/46% no-repeat;opacity:.55}
 </style><script src="/news/fit.js" defer></script>
 </head><body>
 <div class="top"><div class="wrap"><span id="dateBox"></span><span>經世濟民 · 두루두루 고루고루 잘 사는 사회 · 032-777-0421</span></div></div>
@@ -136,14 +137,14 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
   <section class="secs"><div class="bh">섹션</div><div class="sg" id="secG"></div></section>
 </div><div class="wrap"><div class="ad ad-foot" id="adFoot"></div></div></main>
 <footer><div class="wrap">
-  <div class="pub">AI경제저널</div>
+  <div class="pub"><a href="/news/">AI경제저널</a></div>
   <div class="meta">
     발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진 · 편집국장 김갑봉<br>
     (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com
     <br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com
     <!-- 등록 뒤 넣을 것: 인터넷신문 등록번호, 등록일자 -->
   </div>
-  <div class="links"><a href="/news/">뉴스 첫 화면</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/ask.html">의뢰·신청하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div>
+  <div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div>
   <div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div>
 </div></footer>
 <script>
@@ -213,11 +214,18 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   document.getElementById('h3').innerHTML=slots.slice(1).map(function(p){ return '<a href="'+href(p["파일"])+'"><div>'+K2(p)+'<h3>'+ttl(p)+'</h3></div>'+img(p)+'</a>'; }).join('');
   // 다음 칸들 — 시간 차례, 한 칸에 한 섹션 두 편까지
   var take=function(n,needPic){ var c={}, out=[]; list.forEach(function(p){ var s=secOf(p); if(out.length<n && free(p) && (!needPic||pic(p)) && (c[s]||0)<2){ c[s]=(c[s]||0)+1; out.push(use(p)); } }); return out; };
-  // 헤드라인 아래 여섯 칸의 왼쪽 위는 인천경제 고정(2026-11-01 소장님 「인천경제는 으뜸기사 섹션 왼쪽 상단에 고정하라」)
-  var icf=list.filter(function(p){ return free(p) && secOf(p)==="인천경제"; })[0]; if(icf) use(icf);
-  var six=take(icf?5:6); if(icf) six.unshift(icf);
-  document.getElementById('t6').innerHTML=six.map(function(p){ return '<a href="'+href(p["파일"])+'">'+K2(p)+'<h3>'+ttl(p)+'</h3>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>'; }).join('');
-  document.getElementById('p6').innerHTML=take(6,1).map(function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+K2(p)+'<h3>'+ttl(p)+'</h3></a>'; }).join('');
+  // 헤드라인 아래 열두 칸 = 상단 메뉴 섹션 열하나, 칸마다 섹션 고정(2026-11-02 소장님 「상단 섹션 11개와 탑기사 섹션 아래 12개 섹션을 일치시키고 싶다」 「고정으로」 「인천경제가 두번 들어가면 좋겠다」 「인천경제는 위에 6개중 한개」)
+  // 메뉴 차례 — 제목 칸 여섯: 인천경제·경제·교통경제·해양·항공·도시·부동산 / 사진 칸 여섯: 인천경제·기후·에너지·AI·국제·학술·기획연재
+  // 칸마다 그 섹션에서 아직 1면에 안 걸린 가장 새 글 한 편. 그 섹션에 걸 글이 없으면 다른 섹션 글로 메우지 않고 「준비 중」 칸을 둔다(칸과 상단 섹션이 늘 일치)
+  var FIX=["인천경제","경제","교통경제","해양","항공","도시·부동산","인천경제","기후·에너지","AI","국제","학술","기획연재"];
+  var bySec=function(s,needPic){ return list.filter(function(p){ return free(p) && (!needPic||pic(p)) && (s==="기획연재"?isSer(p):secOf(p)===s); })[0]; };
+  var fill=function(needPic){ return list.filter(function(p){ return free(p) && (!needPic||pic(p)); })[0]; };
+  var got=FIX.map(function(s,i){ var p=bySec(s,i>=6); if(p) use(p); return p; });
+  var EMP=function(s,ph){ return '<a href="'+K(s)+'">'+(ph?'<div class="ph emp"></div>':'')+'<div class="k"><span class="s">'+esc(s)+'</span></div><h3>'+esc(MSG0[s]||"첫 기사를 준비하고 있습니다")+'</h3></a>'; };
+  var MSG0={"학술":"이주의 논문 — 창간과 함께 매주 한 편을 싣습니다"};
+  var K3=function(p,s){ return '<div class="k"><span class="s">'+esc(s)+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
+  document.getElementById('t6').innerHTML=got.slice(0,6).map(function(p,i){ return p?'<a href="'+href(p["파일"])+'">'+K3(p,FIX[i])+'<h3>'+ttl(p)+'</h3>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>':EMP(FIX[i],0); }).join('');
+  document.getElementById('p6').innerHTML=got.slice(6).map(function(p,i){ return p?'<a href="'+href(p["파일"])+'">'+img(p,1)+K3(p,FIX[i+6])+'<h3>'+ttl(p)+'</h3></a>':EMP(FIX[i+6],1); }).join('');
   document.getElementById('t10a').innerHTML=take(10).map(function(p){ return '<a class="li" href="'+href(p["파일"])+'"><div>'+K2(p)+'<span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; }).join('');
   // 편집국 추천(소장님 「편집국 추천 이라고만 쓰라」) — 번호 없이, 섹션 이름과 작은 사진. 섹션마다 하나
   var ps={}, pick=list.filter(function(p){ var k=kind(p); if(!free(p)||!pic(p)||(ps[secOf(p)]||0)>=2||!/분석|해설|서평|칼럼|연구보고서/.test(k)) return false; ps[secOf(p)]=(ps[secOf(p)]||0)+1; return true; }).slice(0,10).map(use);

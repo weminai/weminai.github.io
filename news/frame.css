@@ -69,3 +69,9 @@
 @media (max-width:640px){.nf .gnb .tip{padding:4px 9px}}
 /* 2026-10-31 섹션 메뉴 가로 스크롤 막대 숨김(윈도우에서 회색 막대가 드러남) — 밀어서 넘기는 것은 그대로 */
 .nf .gnb .wrap{scrollbar-width:none}.nf .gnb .wrap::-webkit-scrollbar{display:none}
+/* 2026-11-02 제호 크기를 1면과 같게(소장님 「메인화면과 기사화면의 제호 크기를 일관되게 유지하라」) — 1면 news/index.html 과 같은 값: 넓은 화면 342×92, 폭 640 이하 164×44 */
+.nf .mast .title h1{line-height:0}
+.nf .mast .title h1 a{width:342px;height:92px}
+@media(max-width:640px){.nf .mast .title h1 a{width:164px;height:44px}}
+.nff .pub a{color:inherit;text-decoration:none!important}
+.nf .nff .links b{color:var(--ink)}
