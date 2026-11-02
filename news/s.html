@@ -205,6 +205,16 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 @keyframes sRotKo{0%,47%{opacity:1}50%,97%{opacity:0}100%{opacity:1}}@keyframes sRotEn{0%,47%{opacity:0}50%,97%{opacity:1}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.mast .title .slo{animation:none}.mast .title .en{display:none}}
 @media(max-width:640px){.mast .title h1 a{width:164px;height:44px}.mast .title .slo{font-size:12px;margin-top:4px}.mast .title .en{font-size:10px;letter-spacing:3px;margin-top:4px}}
+
+/* 2026-11-03 쪽 넘기기 — 소장님 「한 페이지에 기사가 20개씩만」 「다음 페이지로 넘어가게」 「모든 섹션에도 동일하게」 「하위 섹션도」 */
+.pager{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:26px 0 10px}
+.pager a,.pager span{min-width:34px;padding:7px 10px;border:1px solid #D8D6CF;border-radius:4px;text-align:center;font-size:14px;font-weight:700;color:var(--ink,#141414);background:#fff}
+.pager a:hover{border-color:#0B4FCE;color:#0B4FCE}
+.pager .on{background:#0B4FCE;border-color:#0B4FCE;color:#fff}
+.pager .gap{border:0;background:none;min-width:auto;padding:7px 2px;color:#999}
+.subsin a{color:var(--navy);text-decoration:none}
+.subsin a:hover,.subsin a.on{text-decoration:underline;text-underline-offset:3px}
+.subsin a.on{color:#0B4FCE}
 </style><script src="/news/fit.js" defer></script>
 </head><body>
 
@@ -229,6 +239,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <div class="pghd"><h2 id="pgT">지면</h2><span id="pgN"></span></div>
   <div class="subs" id="pgS"></div>
   <ul class="rows" id="pgL"></ul>
+  <nav class="pager" id="pgP" aria-label="쪽 넘기기"></nav>
 </div></main>
 <footer><div class="wrap">
   <div class="pub"><a href="/news/">AI경제저널</a></div>
@@ -353,12 +364,12 @@ var subHtml=function(arr,k,cls){
   if(!SUBS[k]) return '';
   var h=SUBS[k].map(function(x){
     var ms=arr.filter(function(p){ return x.kw.test(hay(p)); });
-    var out = ms.length ? '<span>'+esc(x.k)+'</span>'
+    var out = ms.length ? '<span><a class="'+(SUB===x.k?'on':'')+'" href="'+qs({sub:x.k,p:1})+'">'+esc(x.k)+'</a></span>'
                         : '<span class="off">'+esc(x.k)+'<em>준비 중</em></span>';
     if(x.sub && ms.length){
       out += x.sub.map(function(y){
         var n=ms.filter(function(p){ return y.kw.test(hay(p)); }).length;
-        return n ? '<span class="kid">'+esc(y.k)+'</span>' : '';
+        return n ? '<span class="kid"><a class="'+(SUB===y.k?'on':'')+'" href="'+qs({sub:y.k,p:1})+'">'+esc(y.k)+'</a></span>' : '';
       }).join('');
     }
     return out;
@@ -382,15 +393,35 @@ var isMem=function(p){ return String(p["공개"]||"")==="요약" || p["회원전
 var lock=function(p){ return ''; }; /* 2026-10-26 소장님 「쓸데 없는 유료회원제 문구 지우라」 — 회원 꼬리표를 뗐다 */
 var K=decodeURIComponent((location.search.match(/[?&]k=([^&]*)/)||[])[1]||"경제");
 var Q=decodeURIComponent(((location.search.match(/[?&]q=([^&]*)/)||[])[1]||"").replace(/\+/g," ")).trim();
+var SUB=decodeURIComponent(((location.search.match(/[?&]sub=([^&]*)/)||[])[1]||"").replace(/\+/g," ")).trim();
+var PG=Math.max(1,parseInt((location.search.match(/[?&]p=(\d+)/)||[])[1]||"1",10)||1), PER=20;
+var qs=function(o){ var k=('k' in o)?o.k:K, q=('q' in o)?o.q:Q, sb=('sub' in o)?o.sub:SUB, pg=('p' in o)?o.p:PG; var a=[];
+  if(q) a.push('q='+encodeURIComponent(q)); else a.push('k='+encodeURIComponent(k)); if(sb) a.push('sub='+encodeURIComponent(sb)); if(pg>1) a.push('p='+pg); return '?'+a.join('&'); };
+var subKw=function(k,name){ var hit=null; (SUBS[k]||[]).forEach(function(x){ if(x.k===name) hit=x.kw; (x.sub||[]).forEach(function(y){ if(y.k===name) hit=y.kw; }); }); return hit; };
 document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":(ALIAS[K]?(ALIAS[K][0]+(ALIAS[K][1]?' · '+ALIAS[K][1]:'')):K)); document.title=(Q?('검색 '+Q):K)+" — AI경제저널";
 (function(){var i=document.querySelector('.gnb .sch input'); if(i&&Q) i.value=Q;})();
 fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
   list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
   var W=Q?Q.split(/\s+/):[];
   var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:(K==="정책브리핑")?list.filter(isBrief):(K==="기획연재")?list.filter(function(p){ return p["섹션"]==="기획연재"; }):ALIAS[K]?list.filter(function(p){ return secOf(p)===ALIAS[K][0] && (!ALIAS[K][1] || hay(p).indexOf(ALIAS[K][1])>=0 || (ALIAS[K][1]==="물류"&&/물류|화물|컨테이너/.test(hay(p)))); }):list.filter(function(p){ return secOf(p)===K; }));
-  document.getElementById('pgN').textContent = arr.length ? "" : (Q?"결과 없음":"준비 중");
   var sb=document.getElementById('pgS');
   sb.innerHTML=Q?'':subHtml(arr,K,'subsin');
+  if(SUB && sb.firstChild) sb.firstChild.insertAdjacentHTML('afterbegin','<span><a href="'+qs({sub:'',p:1})+'">전체</a></span>');
+  // 하위 섹션을 고르면 그 하위 글만(2026-11-03)
+  var skw=(!Q&&SUB)?subKw(K,SUB):null; if(skw){ arr=arr.filter(function(p){ return skw.test(hay(p)); }); document.getElementById('pgT').textContent+=' · '+SUB; }
+  document.getElementById('pgN').textContent = arr.length ? (arr.length+'건') : (Q?"결과 없음":"준비 중");
+  // 한 쪽에 20개씩(2026-11-03 소장님 「한 페이지에 기사가 20개씩만 보이게」 「다음 페이지로 넘어가게」)
+  var NP=Math.max(1,Math.ceil(arr.length/PER)); if(PG>NP) PG=NP; var all=arr; arr=all.slice((PG-1)*PER,PG*PER);
+  var pv=document.getElementById('pgP'), pl=[];
+  if(NP>1){ var ln=function(n,t,c){ return '<a class="'+(c||'')+'" href="'+qs({p:n})+'">'+t+'</a>'; };
+    if(PG>1) pl.push(ln(PG-1,'이전'));
+    var a=Math.max(1,PG-4), b=Math.min(NP,a+8); a=Math.max(1,b-8);
+    if(a>1){ pl.push(ln(1,'1')); if(a>2) pl.push('<span class="gap">…</span>'); }
+    for(var n=a;n<=b;n++) pl.push(n===PG?'<span class="on">'+n+'</span>':ln(n,String(n)));
+    if(b<NP){ if(b<NP-1) pl.push('<span class="gap">…</span>'); pl.push(ln(NP,String(NP))); }
+    if(PG<NP) pl.push(ln(PG+1,'다음'));
+  }
+  pv.innerHTML=pl.join('');
   document.getElementById('pgL').innerHTML = arr.length ? arr.map(function(p){
     return '<li><a href="'+href(p["파일"])+'"><span class="t">'+esc(p["제목"])+lock(p)+'</span>'+
       '<span class="d">'+esc(dstr(p["날짜"]))+'</span>'+

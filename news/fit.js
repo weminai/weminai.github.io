@@ -90,3 +90,45 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',add); else add();
 })();
 
+
+/* 소셜미디어 공유 단추 — 기획연재·브리핑·보고서·연구보고서를 뺀 모든 기사(2026-11-03 소장님 「소셜미디어에 공유하기 기능을 추가할 수 없습니까?」 「네이버밴드도사람이 많고요」 「인스타도 할 수 있게하고요」)
+   제목 아래와 본문 끝 두 곳. 기사 쪽마다 고치지 않고 여기서 넣는다. 대상은 posts.json 으로 가린다 */
+(function(){
+  if(!/^\/media\/[^\/]+\.html$/.test(location.pathname)) return;
+  var file=location.pathname.split('/').pop();
+  var url='https://news.weminai.com/media/'+file;
+  function toast(m){ var t=document.createElement('div'); t.className='shtoast'; t.textContent=m; document.body.appendChild(t); setTimeout(function(){ if(t.parentNode) t.parentNode.removeChild(t); },3200); }
+  function copy(m){ var done=function(){ toast(m); };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done,function(){ prompt('아래 주소를 복사해 주십시오',url); }); }
+    else { prompt('아래 주소를 복사해 주십시오',url); } }
+  function native(title,fb){ if(navigator.share){ navigator.share({title:title,url:url}).catch(function(){}); } else copy(fb); }
+  function build(p){
+    var title=String(p["제목"]||document.title);
+    var st=document.createElement('style');
+    st.textContent='.share{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:14px 0 4px}.share .lb{font-size:13px;font-weight:800;color:#555;margin-right:4px}'+
+      '.share button{font:inherit;font-size:13px;font-weight:800;padding:6px 11px;border-radius:16px;border:0;cursor:pointer;color:#fff;line-height:1.2}'+
+      '.share .ka{background:#FEE500;color:#191919}.share .bd{background:#06C755}.share .fb{background:#1877F2}.share .x{background:#000}.share .ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)}.share .cp{background:#fff;color:#333;border:1px solid #BBB}'+
+      '.shtoast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#141414;color:#fff;padding:10px 16px;border-radius:6px;font-size:14px;z-index:9999;max-width:90%}'+
+      '@media print{.share{display:none}}';
+    document.head.appendChild(st);
+    var html='<span class="lb">공유</span><button type="button" class="ka" data-s="ka">카카오톡</button><button type="button" class="bd" data-s="bd">밴드</button><button type="button" class="fb" data-s="fb">페이스북</button><button type="button" class="x" data-s="x">X</button><button type="button" class="ig" data-s="ig">인스타그램</button><button type="button" class="cp" data-s="cp">링크 복사</button>';
+    var spots=[document.querySelector('article .byl'), document.querySelector('article .af')];
+    spots.forEach(function(el,i){ if(!el) return; var d=document.createElement('div'); d.className='share'; d.innerHTML=html; if(i===0) el.parentNode.insertBefore(d,el.nextSibling); else el.parentNode.insertBefore(d,el); });
+    document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.share button'); if(!b) return; var s=b.getAttribute('data-s'), u=encodeURIComponent(url), t=encodeURIComponent(title);
+      if(s==='fb') window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'_blank','noopener,width=620,height=560');
+      else if(s==='x') window.open('https://twitter.com/intent/tweet?text='+t+'&url='+u,'_blank','noopener,width=620,height=560');
+      else if(s==='bd') window.open('https://band.us/plugin/share?body='+encodeURIComponent(title+'\n'+url)+'&route='+encodeURIComponent('news.weminai.com'),'_blank','noopener,width=620,height=640');
+      else if(s==='ka') native(title,'기사 주소를 복사했습니다. 카카오톡 대화창에 붙여 넣어 주십시오.');
+      else if(s==='ig') native(title,'기사 주소를 복사했습니다. 인스타그램 스토리·프로필 링크에 붙여 넣어 주십시오.');
+      else if(s==='cp') copy('기사 주소를 복사했습니다.');
+    });
+  }
+  fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(list){
+    var p=null; for(var i=0;i<list.length;i++){ if(String(list[i]["파일"]||'').split('/').pop()===file){ p=list[i]; break; } }
+    if(!p) return;
+    var hay=[p["제목"],p["묶음"],p["분야"],p["갈래"]].join(' ');
+    if(p["섹션"]==="기획연재" || /브리핑|보고서/.test(hay)) return;   /* 기획연재·브리핑·보고서(월간·분기·반기·연간)·연구보고서는 빼라 */
+    var go=function(){ build(p); };
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
+  }).catch(function(){});
+})();

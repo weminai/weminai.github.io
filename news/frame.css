@@ -86,3 +86,6 @@
 .nf .mast .title .en{font-size:12px;font-weight:700;letter-spacing:4px;color:#17428F;animation-name:rotEnF}
 @keyframes rotEnF{0%,47%{opacity:0}50%,97%{opacity:1}100%{opacity:0}}
 @media(max-width:640px){.nf .mast .title .slo{font-size:12px;margin-top:4px}.nf .mast .title .en{font-size:10px;letter-spacing:3px;margin-top:4px}}
+
+/* 2026-11-03 메뉴 열둘 한 줄 — 윈도 글꼴에서 「후원하기」가 잘려 간격을 줄임(1면은 news/index.html 이 따로 정함) */
+@media (min-width:641px){.nf .gnb .wrap{gap:11px}.nf .gnb .sch input{width:112px}}
