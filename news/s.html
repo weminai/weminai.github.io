@@ -196,6 +196,15 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
 @media (max-width:640px){.gnb .sch input{width:96px}}
 /* 제호 10t(2026-10-23 확정) — 글자 대신 제호 그림. 글자는 남겨 검색·낭독용 */
 .mast .title h1 a{display:inline-block;height:1.3em;width:5.37em;background:url(/news/jeho.svg) center/contain no-repeat;color:transparent!important;text-indent:110%;white-space:nowrap;overflow:hidden;vertical-align:top}
+/* 2026-11-02 섹션 쪽 제호도 1면·기사면과 같게 — 소장님 「메인화면의 제호랑 기사 클릭시 기사면 제호는 동일해야 합니다」 「승인」(「내 지시다」, 경세제민연구소 홈페이지 관리 회차). 제호 그림 342×92(휴대전화 164×44), 아래 「일하는 사람들의 전문지」와 「AI ECONOMY JOURNAL」 10초씩 번갈아 */
+.mast .title{display:grid;justify-items:center}.mast .title h1{grid-row:1;grid-column:1;line-height:0}
+.mast .title h1 a{width:342px;height:92px}
+.mast .title .en,.mast .title .slo{grid-row:2;grid-column:1;align-self:center;margin-top:8px}
+.mast .title .slo{font-size:14.5px;font-weight:700;color:#1a1a1a;letter-spacing:.04em;animation:sRotKo 20s infinite}
+.mast .title .en{font-size:12px;font-weight:700;letter-spacing:4px;color:#17428F;opacity:0;animation:sRotEn 20s infinite}
+@keyframes sRotKo{0%,47%{opacity:1}50%,97%{opacity:0}100%{opacity:1}}@keyframes sRotEn{0%,47%{opacity:0}50%,97%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.mast .title .slo{animation:none}.mast .title .en{display:none}}
+@media(max-width:640px){.mast .title h1 a{width:164px;height:44px}.mast .title .slo{font-size:12px;margin-top:4px}.mast .title .en{font-size:10px;letter-spacing:3px;margin-top:4px}}
 </style><script src="/news/fit.js" defer></script>
 </head><body>
 
@@ -229,7 +238,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
     <br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com
     <!-- 등록 뒤 넣을 것: 인터넷신문 등록번호, 등록일자 -->
   </div>
-  <div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div>
+  <div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/committee.html">독자권익위원회</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div>
   <div class="copy">
     자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다.
     인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.
