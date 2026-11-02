@@ -1,0 +1,71 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 <figure> 의 <figcaption> 에는 사진 설명만. 출처 <span class="cr"> 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 <div class="tags"> 에 <span>#…</span> 로
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>인천시·필라델피아, 바이오·교육·문화 교류 확대 논의 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="박찬대 시장, 필라델피아 대표단 접견">
+<link rel="canonical" href="https://weminai.com/media/phl01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="인천시·필라델피아, 바이오·교육·문화 교류 확대 논의">
+<meta property="og:description" content="박찬대 시장, 필라델피아 대표단 접견">
+<meta property="og:url" content="https://weminai.com/media/phl01.html">
+<meta property="og:image" content="https://weminai.com/media/img/phl01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">인천경제</div>
+ <h1>인천시·필라델피아, 바이오·교육·문화 교류 확대 논의</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.02</span><span class="dt">업데이트 2026.11.02</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>박찬대 시장, 필라델피아 대표단 접견</p><p>2027년 6월 바이오 박람회 참여 제안</p><p>5일 필라델피아 오케스트라 인천 공연</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 박찬대 인천시장이 2일 시청에서 미국 필라델피아시 대표단을 만나 경제와 교육, 문화예술 교류를 넓히는 방안을 논의했다. 필라델피아시는 2027년 6월 열리는 「바이오 인터내셔널 컨벤션」에 인천 바이오기업이 참여하라고 제안했다.</p>
+<p>인천시는 송도 바이오클러스터를 바탕으로 현지 기업과 기술 교류, 투자 협력을 검토한다. 두 도시는 1983년 자매결연을 맺고 43년째 교류하고 있다.</p>
+<h2>43년 자매도시 대표단 접견</h2>
+<figure><img src="img/phl01_01.jpg" alt="미국 필라델피아 독립기념관 앞 자유의 종. 필라델피아시는 2015년 이 종을 본뜬 조형물을 인천에 기증했다" loading="lazy"><figcaption>미국 필라델피아 독립기념관 앞 자유의 종. 필라델피아시는 2015년 이 종을 본뜬 조형물을 인천에 기증했다</figcaption></figure>
+<p>이날 접견에는 크리스 알린 필라델피아시 부비서실장 등 대표단이 참석했다. 대표단은 10월 31일부터 11월 6일까지 한국에 머문다.</p>
+<p>대표단은 인천 개항장과 송도글로벌캠퍼스를 둘러본다. 오는 5일에는 인천스타트업파크에서 특별강연을 연다.</p>
+<p>박찬대 시장은 두 도시를 "43년간 깊은 신뢰를 쌓아온 소중한 동반자"라고 했다. 박 시장은 시민이 체감할 수 있는 실질적 협력 성과를 만들겠다고 밝혔다.</p>
+<h2>2027년 6월 바이오 박람회 참여 제안</h2>
+<p>필라델피아시가 참여를 제안한 행사는 「바이오 인터내셔널 컨벤션」이다. 이 박람회는 2027년 6월 열린다.</p>
+<p>인천시는 송도 바이오클러스터를 기반으로 필라델피아 현지 기업과의 기술 교류와 투자 협력 가능성을 검토한다. 참가 기업 수와 지원 예산은 아직 정하지 않았다.</p>
+<h2>9월 인천 의약품 수출 16.1% 감소</h2>
+<p>한국무역협회 인천지역본부 집계를 보면 9월 인천 의약품 수출은 5억9000만 달러다. 1년 전보다 16.1% 줄어 11개월 만에 감소로 돌아섰다.</p>
+<p>최대 시장 스위스로 가는 의약품 수출이 77.8% 줄었다. 미국과 헝가리로 가는 수출은 늘었다. 같은 달 인천 전체 수출은 61억6695만 달러로 14.2% 늘어 역대 최대를 기록했다. 반도체가 41.8%를 차지했다.</p>
+<figure><img src="img/phl01_02.jpg" alt="2026년 9월 인천 의약품 수출 5억9000만 달러(전년 같은 달보다 16.1% 감소)와 인천 전체 수출 61억6695만 달러(14.2% 증가). 자료 한국무역협회 인천지역본부(2026.10.26). 경세제민 AI·경제 연구소 작성." loading="lazy"><figcaption>2026년 9월 인천 의약품 수출 5억9000만 달러(전년 같은 달보다 16.1% 감소)와 인천 전체 수출 61억6695만 달러(14.2% 증가). 자료 한국무역협회 인천지역본부(2026.10.26). 경세제민 AI·경제 연구소 작성.</figcaption></figure>
+<h2>청소년·대학 교류도 모색</h2>
+<p>교육 분야에서는 청소년 교류를 넓힌다. 인천아라고등학교 학생들이 온라인 프로그램 「시민외교 아카데미」로 미국 청소년과 만난다.</p>
+<p>인천글로벌캠퍼스는 필라델피아 지역 대학인 펜실베이니아대, 드렉셀대와 교수·학생 교류와 공동연구를 모색한다.</p>
+<h2>5일 필라델피아 오케스트라 인천 공연</h2>
+<p>오는 5일에는 아트센터인천 콘서트홀에서 필라델피아 오케스트라가 공연한다. 마린 알솝이 지휘하고 피아니스트 임윤찬이 협연한다. 두 도시는 인천시립교향악단과 필라델피아 음악인의 교류도 이어 가기로 했다.</p>
+<p>필라델피아시는 2015년 인천에 「자유의 종」 조형물을 기증했다. 인천시는 2017년 우호 상징 조형물 「친구맺기」를 필라델피아에 보냈다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>인천시, 「인천시, 미국 필라델피아시 대표단 접견, 43년 자매도시 우정, 미래협력으로 이어간다」, 2026.11.2. https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015874093</li><li>한국무역협회 인천지역본부, 「2026년 9월 인천 수출입 동향」, 2026.10.26(인천투데이·중부일보 보도로 확인).</li><li>경기신문, 「인천 바이오기업, 미국 진출 길 넓히나…필라델피아와 협력 확대」, 2026.11.2. https://www.kgnews.co.kr/news/article.html?no=917818</li><li>국제뉴스, 「인천-필라델피아, 바이오·교육·문화예술 협력 논의」, 2026.11.2. https://www.gukjenews.com/news/articleView.html?idxno=3739323</li><li>중부일보, 「9월 인천 수출 14.2% 증가, 월 수출 60억 달러 최초 달성」, 2026.10.27. https://www.joongboo.com/news/articleView.html?idxno=363740536</li><li>인천투데이, 「반도체에 웃은 인천 수출, 중고차·의약품 '울상'···편중 완화 '과제'」, 2026.10.27. https://www.incheontoday.com/news/articleView.html?idxno=325502</li><li>브레이크뉴스, 「2026년 9월 인천지역 무역수지 3.5억 달러 적자 기록」, 2026.10.16. http://www.breaknews.com/1243449</li></ul><h4>[사진 출처]</h4><ul><li>[사진1] 미국 국립공원관리청(NPS), 「The Liberty Bell」, NPGallery, 퍼블릭 도메인, https://npgallery.nps.gov/AssetDetail/66653495-155d-451f-6770-6e8d764a352a</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="icexp01.html">10월 수출 1152억 달러…인천 9월 수출은 반도체 빼면 8.3% 감소</a></li><li><a href="insb01.html">인천신용보증재단, 소상공인 495억원 협약보증 2일부터 접수</a></li><li><a href="g20tx01.html">인천 택시 4606대, 2028 G20 정상회의 유치 홍보 나선다</a></li><li><a href="islw01.html">인천시, 강화·옹진 섬 식수 공급 개선 토론회 열어</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천필라델피아</span><span>#자매도시</span><span>#박찬대</span><span>#송도바이오클러스터</span><span>#바이오인터내셔널컨벤션</span><span>#인천의약품수출</span><span>#인천글로벌캠퍼스</span><span>#필라델피아오케스트라</span><span>#인천경제</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진 · 편집국장 김갑봉<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김효진 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
