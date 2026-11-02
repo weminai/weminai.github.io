@@ -75,3 +75,9 @@
 @media(max-width:640px){.nf .mast .title h1 a{width:164px;height:44px}}
 .nff .pub a{color:inherit;text-decoration:none!important}
 .nf .nff .links b{color:var(--ink)}
+/* 2026-11-02 제호 아래 한글·영어 10초마다 번갈아(소장님 「한글과 영어가 10초 간격으로 반복되게 하라」, 1면과 같게) */
+.nf .title{display:grid;justify-items:center}.nf .title h1{grid-row:1}
+.nf .title .en,.nf .title .slo{grid-row:2;grid-column:1;align-self:center;margin-top:8px}
+.nf .title .slo{animation:rotKo 20s infinite}.nf .title .en{animation:rotEn 20s infinite;opacity:0}
+@keyframes rotKo{0%,47%{opacity:1}50%,97%{opacity:0}100%{opacity:1}}@keyframes rotEn{0%,47%{opacity:0}50%,97%{opacity:.62}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.nf .title .slo{animation:none}.nf .title .en{display:none}}

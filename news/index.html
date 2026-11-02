@@ -104,13 +104,20 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
 @media(max-width:1000px){.t6,.p6{grid-template-columns:1fr 1fr}.t6 a,.t6 a:nth-child(n){padding:12px 0;border-left:0}}
 @media(max-width:640px){.t6,.p6,.t10{grid-template-columns:1fr}.h3l a{grid-template-columns:minmax(0,1fr) 96px}}
 .bh.ab{display:flex;align-items:center;justify-content:space-between}.abt{display:flex;gap:4px}.abt button{font:inherit;font-size:12.5px;font-weight:800;padding:2px 10px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}.abt button.on{background:var(--ink);color:#fff}.abp[hidden]{display:none}
+/* 2026-11-02 소장님 「일하는 사람들의 전문지만 남기고 지우라고」 「일하는 사람들의 전문지 위치에 AI ECONOMY JOURNAL」 「한글과 영어가 10초 간격으로 반복되게 하라」 — 한 자리에서 10초마다 번갈아 */
+.mast .rot{display:grid;justify-items:center}.mast .rot>*{grid-area:1/1}
+.mast .rot .en{font-size:12px;letter-spacing:4px;color:var(--cob);font-weight:700;align-self:center}
+.mast .rot .ko{animation:rotKo 20s infinite}.mast .rot .en{animation:rotEn 20s infinite}
+@keyframes rotKo{0%,47%{opacity:1}50%,97%{opacity:0}100%{opacity:1}}@keyframes rotEn{0%,47%{opacity:0}50%,97%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.mast .rot .ko{animation:none}.mast .rot .en{display:none}}
+@media(max-width:640px){.mast .rot .en{font-size:10px;letter-spacing:3px}}
 .ph.emp{aspect-ratio:3/2;background:#E9E4D8 url(/news/jeho.svg) center/46% no-repeat;opacity:.55}
 </style><script src="/news/fit.js" defer></script>
 </head><body>
 <div class="top"><div class="wrap"><span id="dateBox"></span><span>經世濟民 · 두루두루 고루고루 잘 사는 사회 · 032-777-0421</span></div></div>
 <header class="mast"><div class="wrap">
   <h1><a href="/news/">AI경제저널</a></h1>
-  <div class="slo"><b>일하는 사람들의 전문지</b><span> · 교통·해양·항공·도시·지역경제를 숫자와 원문으로</span></div>
+  <div class="slo rot"><b class="ko">일하는 사람들의 전문지</b><span class="en">AI ECONOMY JOURNAL</span></div>
   <!-- 등록이 끝나면 「인터넷신문 등록번호 인천 아00000」을 바닥글에 넣는다. 등록 전에는 적지 않는다 -->
 </div></header>
 <nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
