@@ -138,7 +138,7 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
       <div class="tipbox"><b>제보와 후원</b><br>권력을 감시하는 기사는 독자의 제보에서 시작합니다.<div class="row"><a class="j" href="/news/member.html">후원하기</a><a class="t2" href="/news/tip.html">제보</a></div></div>
     </aside>
   </div>
-  <section class="row4"><div class="bh"><a href="/news/s.html?k=기획연재">심층 · 기획연재 ›</a></div><div class="g" id="deepG"></div></section>
+  <section class="row4"><div class="bh"><a href="/news/s.html?k=기획연재">기획연재 ›</a></div><div class="g" id="deepG"></div></section>
   <div class="ad ad-mid" id="adMid"></div>
   <section class="row4 pr"><div class="bh">사진으로 보는 현장</div><div class="g" id="photoG"></div></section>
   <section class="blk"><div class="bh">더 읽을 기사</div><div class="t10" id="t10b"></div></section>
@@ -204,7 +204,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var K2=function(p){ return '<div class="k"><span class="s">'+esc(secOf(p))+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
   var today=new Date(); var top=function(p){ var m=String(p["맨위"]||"").match(/(\d{4})-(\d{2})-(\d{2})/); return m && Date.UTC(+m[1],m[2]-1,+m[3])>=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate())-864e5; };
   // 헤드라인 넷 — 시간 차례로 흘려 보내며 자리 넷을 채운다(3시간 규칙)
-  var cand=list.filter(function(p){ return pic(p) && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse();
+  var cand=list.filter(function(p){ return pic(p) && p["섹션"]!=="기획연재" && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse();
   var slots=[];
   cand.forEach(function(p){
     var s=secOf(p); var same=slots.filter(function(x){ return secOf(x)===s; });
@@ -225,12 +225,14 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   // 헤드라인 아래 열두 칸 = 상단 메뉴 섹션 열하나, 칸마다 섹션 고정(2026-11-02 소장님 「상단 섹션 11개와 탑기사 섹션 아래 12개 섹션을 일치시키고 싶다」 「고정으로」 「인천경제가 두번 들어가면 좋겠다」 「인천경제는 위에 6개중 한개」)
   // 메뉴 차례 — 제목 칸 여섯: 인천경제·경제·교통경제·해양·항공·도시·부동산 / 사진 칸 여섯: 인천경제·기후·에너지·AI·국제·학술·기획연재
   // 칸마다 그 섹션에서 아직 1면에 안 걸린 가장 새 글 한 편. 그 섹션에 걸 글이 없으면 다른 섹션 글로 메우지 않고 「준비 중」 칸을 둔다(칸과 상단 섹션이 늘 일치)
+  // 기획연재 글은 아래 「기획연재」 칸에만 건다 — 먼저 떼어 둔다(2026-11-02 소장님 「연재는 기획연재 칸에만」, 「내 지시다」 경세제민연구소 홈페이지 관리 회차). 위 칸의 기획연재 자리는 안내만
+  var deep=list.filter(function(p){ return p["섹션"]==="기획연재"; }).map(use), sbx={}; deep=deep.filter(function(p){ if(sbx[p["묶음"]]) return false; sbx[p["묶음"]]=1; return true; });
   var FIX=["인천경제","경제","교통경제","해양","항공","도시·부동산","인천경제","기후·에너지","AI","국제","학술","기획연재"];
-  var bySec=function(s,needPic){ return list.filter(function(p){ return free(p) && (!needPic||pic(p)) && (s==="기획연재"?isSer(p):secOf(p)===s); })[0]; };
+  var bySec=function(s,needPic){ return list.filter(function(p){ return free(p) && (!needPic||pic(p)) && (s==="기획연재"?p["섹션"]==="기획연재":secOf(p)===s); })[0]; };
   var fill=function(needPic){ return list.filter(function(p){ return free(p) && (!needPic||pic(p)); })[0]; };
   var got=FIX.map(function(s,i){ var p=bySec(s,i>=6); if(p) use(p); return p; });
   var EMP=function(s,ph){ return '<a href="'+K(s)+'">'+(ph?'<div class="ph emp"></div>':'')+'<div class="k"><span class="s">'+esc(s)+'</span></div><h3>'+esc(MSG0[s]||"첫 기사를 준비하고 있습니다")+'</h3></a>'; };
-  var MSG0={"학술":"이주의 논문 — 창간과 함께 매주 한 편을 싣습니다"};
+  var MSG0={"학술":"이주의 논문 — 창간과 함께 매주 한 편을 싣습니다","기획연재":"연재는 아래 「기획연재」 칸에서 돌아가며 보입니다"};
   var K3=function(p,s){ return '<div class="k"><span class="s">'+esc(s)+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
   document.getElementById('t6').innerHTML=got.slice(0,6).map(function(p,i){ return p?'<a href="'+href(p["파일"])+'">'+K3(p,FIX[i])+'<h3>'+ttl(p)+'</h3>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>':EMP(FIX[i],0); }).join('');
   document.getElementById('p6').innerHTML=got.slice(6).map(function(p,i){ return p?'<a href="'+href(p["파일"])+'">'+img(p,1)+K3(p,FIX[i+6])+'<h3>'+ttl(p)+'</h3></a>':EMP(FIX[i+6],1); }).join('');
@@ -248,26 +250,37 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   box.addEventListener('mouseenter',function(){ hold=true; }); box.addEventListener('mouseleave',function(){ hold=false; });
   setInterval(function(){ if(!hold && !document.hidden) show(1-cur); },10000);
   // 편집국 추천(소장님 「편집국 추천 이라고만 쓰라」) — 번호 없이, 섹션 이름과 작은 사진. 섹션마다 하나
-  var ps={}, pick=list.filter(function(p){ var k=kind(p); if(!free(p)||!pic(p)||(ps[secOf(p)]||0)>=2||!/분석|해설|서평|칼럼|연구보고서/.test(k)) return false; ps[secOf(p)]=(ps[secOf(p)]||0)+1; return true; }).slice(0,10).map(use);
+  var ps={}, pick=list.filter(function(p){ var k=kind(p); if(p["분야"]==="연구보고서"||!free(p)||!pic(p)||(ps[secOf(p)]||0)>=2||!/분석|해설|서평|칼럼|연구보고서/.test(k)) return false; ps[secOf(p)]=(ps[secOf(p)]||0)+1; return true; }).slice(0,10).map(use);
   document.getElementById('pick').innerHTML=pick.map(function(p){ return '<a href="'+href(p["파일"])+'"><div><div class="k"><span class="s">'+esc(secOf(p))+'</span></div><span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; }).join('');
-  var rep=list.filter(function(p){ return p["분야"]==="연구보고서"; })[0];
+  var rep=list.filter(function(p){ return p["분야"]==="연구보고서"; })[0]; if(rep) use(rep);
   document.getElementById('repCard').innerHTML='<span class="cl">연구보고서</span>'+(rep?'<h5><a href="'+href(rep["파일"])+'">'+esc(rep["제목"])+'</a></h5><p>'+esc(rep["부제"]||"")+'</p>':'<h5>준비 중입니다</h5>');
   var ac=list.filter(function(p){ return secOf(p)==="학술"; })[0];
   document.getElementById('acadCard').innerHTML='<span class="cl">학술 · 이주의 논문</span>'+(ac?'<h5><a href="'+href(ac["파일"])+'">'+esc(ac["제목"])+'</a></h5><p>'+esc(ac["부제"]||"")+'</p>':'<h5>첫 회를 준비하고 있습니다</h5><p>인천 지역 대학·연구기관의 논문, 세계 과학 논문을 주 1편 원문을 읽고 쉽게 풉니다.</p>');
-  var sb={}, ss={}, deep=list.filter(function(p){ if(!free(p)||!pic(p)||!isSer(p)||sb[p["묶음"]]||ss[secOf(p)]) return false; sb[p["묶음"]]=1; ss[secOf(p)]=1; return true; }).slice(0,4).map(use);
-  document.getElementById('deepG').innerHTML=deep.map(function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+'<div class="k"><span class="s">'+esc(p["묶음"])+'</span></div><h4>'+esc(String(p["제목"]).replace(/^\[[^\]]+\]\s*/,''))+'</h4>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>'; }).join('');
+  // 기획연재 칸 — 섹션 「기획연재」 글만, 연재(묶음)마다 가장 새 글 한 편, 10초마다 한 칸씩 돌아간다(2026-11-02 소장님 「여기는 기획연재만 넣으라」 「기획연재 각 시리즈가 순환하게」 「심층을 빼고」)
+  var dcard=function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+'<div class="k"><span class="s">'+esc(p["묶음"])+'</span></div><h4>'+esc(String(p["제목"]).replace(/^\[[^\]]+\]\s*/,''))+'</h4>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>'; };
+  var dG=document.getElementById('deepG'), d0=0, dHold=false;
+  var dShow=function(){ var n=deep.length, k=Math.min(4,n), out=[]; for(var t=0;t<k;t++) out.push(deep[(d0+t)%n]); dG.innerHTML=out.map(dcard).join(''); };
+  dShow(); dG.addEventListener('mouseenter',function(){ dHold=true; }); dG.addEventListener('mouseleave',function(){ dHold=false; });
+  if(deep.length>1) setInterval(function(){ if(!dHold && !document.hidden){ d0=(d0+1)%deep.length; dShow(); } },10000);
   var ph={}, photo=list.filter(function(p){ if(!free(p)||!pic(p)||ph[secOf(p)]) return false; ph[secOf(p)]=1; return true; }).slice(0,4).map(use);
   document.getElementById('photoG').innerHTML=photo.map(function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+'<span class="t">'+ttl(p)+'</span></a>'; }).join('');
   document.getElementById('t10b').innerHTML=take(10).map(function(p){ return '<a href="'+href(p["파일"])+'"><span class="s">'+esc(secOf(p))+'</span>'+ttl(p)+'</a>'; }).join('');
-  // 섹션 열하나 + 후원 칸 — 섹션 칸은 위에 걸린 글도 제 섹션에 보인다(통합지침 마흔 5항 (1))
+  // 섹션 열하나 + 후원 칸 — 2026-11-02 소장님 「같은 기사가 계속 보이는 게 이상하지 않아요?」 「똑 같은 기사가 위에도 있고」 「중간에도 있고」 「아래에도 있고」 「승인」 → 1면에서 한 기사는 한 번만. 섹션 칸은 위에 안 걸린 그 섹션 글만 건다(통합지침 마흔 5항 (1) 바뀜). 그 섹션 글을 빠짐없이 보는 일은 섹션 쪽(news/s.html)이 맡는다
   var MSG={"학술":"좋은 연구를 일하는 사람들의 말로 소개합니다. 매주 한 편, 창간과 함께 시작합니다.","기획연재":"숫자와 원문으로 끝까지 따라가는 연재가 이 자리에 실립니다."};
   document.getElementById('secG').innerHTML=SEC.map(function(s){
-    var arr=list.filter(function(p){ return (s==="기획연재"?isSer(p):secOf(p)===s); }); var tp=arr.filter(pic)[0];
+    var arr=list.filter(function(p){ return free(p) && (s==="기획연재"?p["섹션"]==="기획연재":secOf(p)===s); }); var tp=arr.filter(pic)[0];
     var h='<div class="sc"><div class="sh"><a href="'+K(s)+'">'+esc(s)+'</a><span>›</span></div>';
     if(!tp) return h+'<div class="em">'+esc(MSG[s]||"첫 기사를 준비하고 있습니다.")+'</div></div>';
-    var rest=arr.filter(function(p){ return p!==tp; }).slice(0,2);
+    use(tp); var rest=arr.filter(function(p){ return p!==tp; }).slice(0,2).map(use);
     return h+'<a href="'+href(tp["파일"])+'">'+img(tp,1)+'<h4>'+ttl(tp)+'</h4></a><ul>'+rest.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join('')+'</ul></div>';
   }).join('')+'<div class="sc"><div class="sh">함께 만드는 신문</div><div class="sp">광고에 기대지 않고 독자의 후원으로 만듭니다.<a style="background:#F07B12" href="/news/member.html">후원하기</a><a style="border:1px solid #fff" href="/news/tip.html">기사 제보</a></div></div>';
+  // 왼쪽 빈자리 채우기 — 2026-11-02 소장님 「이 여백을 어떻게 할 것인지 대책을 제시하라」. 오른쪽 칸이 왼쪽보다 길면 「이어서 읽기」 아래에 1면에 아직 안 걸린 새 글을 한 줄씩 더해 높이를 맞춘다(최대 열 줄, 두 칸이 나란할 때만)
+  (function(){ var col=document.getElementById('t10a'), side=document.querySelector('aside.side'); if(!col||!side||side.getBoundingClientRect().left<col.getBoundingClientRect().right) return;
+    var more=document.createElement('div'); more.className='more'; col.parentNode.appendChild(more);
+    var pool=list.filter(free), n=0;
+    var gap=function(){ return side.getBoundingClientRect().bottom - more.getBoundingClientRect().bottom; };
+    while(n<10 && pool.length && gap()>90){ var p=use(pool.shift()); var s=secOf(p); more.insertAdjacentHTML('beforeend','<a class="li" href="'+href(p["파일"])+'"><div>'+K3(p,s)+'<span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'); n++; }
+  })();
   if(VIEWS_URL){ fetch(VIEWS_URL).then(function(r){return r.json();}).then(function(v){
     var m={}; list.forEach(function(p){ m[p.id]=p; }); var tp=(v&&v.top||[]).map(function(id){ return m[id]; }).filter(Boolean).slice(0,5);
     if(tp.length){ document.getElementById('most').innerHTML=tp.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join(''); document.getElementById('mostBox').hidden=false; } }).catch(function(){}); }

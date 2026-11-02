@@ -22,6 +22,8 @@
 
 /* 연구소 홈페이지 바로가기 — 제호 왼쪽 칸에 연구소 로고 (2026-10-28 소장님 「뉴스 홈페이지에 연구소 홈페이지 바로가기가 있으면 좋겠고」 「연구소는 연구소 로고를 사용해서 바로가기」) */
 (function(){
+  /* 2026-11-02 소장님 「제호 왼쪽에 연구소 지우라」(「내 지시다」) — 제호 왼쪽 연구소 로고를 더 넣지 않는다(10-28 바로가기 결정을 소장님이 거두심) */
+  return;
   function add(){
     var l=document.querySelector('.mast .lft'); if(!l||l.querySelector('a.labhome')) return;
     var st=document.createElement('style');

@@ -81,3 +81,8 @@
 .nf .title .slo{animation:rotKo 20s infinite}.nf .title .en{animation:rotEn 20s infinite;opacity:0}
 @keyframes rotKo{0%,47%{opacity:1}50%,97%{opacity:0}100%{opacity:1}}@keyframes rotEn{0%,47%{opacity:0}50%,97%{opacity:.62}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.nf .title .slo{animation:none}.nf .title .en{display:none}}
+/* 2026-11-02 1면과 기사면 제호 같게 — 소장님 「메인화면의 제호랑 기사 클릭시 기사면 제호는 동일해야 합니다」(「내 지시다」, 경세제민연구소 홈페이지 관리 회차). 1면(news/index.html .mast .slo b / .mast .rot .en)과 같은 글꼴·크기·색 */
+.nf .mast .title .slo{font-size:14.5px;font-weight:700;color:#1a1a1a;letter-spacing:.04em}
+.nf .mast .title .en{font-size:12px;font-weight:700;letter-spacing:4px;color:#17428F;animation-name:rotEnF}
+@keyframes rotEnF{0%,47%{opacity:0}50%,97%{opacity:1}100%{opacity:0}}
+@media(max-width:640px){.nf .mast .title .slo{font-size:12px;margin-top:4px}.nf .mast .title .en{font-size:10px;letter-spacing:3px;margin-top:4px}}
