@@ -82,3 +82,11 @@
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fold); else fold();
 })();
+
+/* 바닥글 「독자권익위원회」 — 편집규약 다음에 규정 쪽 링크(2026-11-03 소장님 「독자권익위원회 표준 정관(?) 규정을 만들어서 하단에 넣으세요」 「내가 지시한 사항 여기서 다 이행하라」). 기사 쪽마다 고치지 않고 여기서 넣는다 */
+(function(){
+  function add(){ var c=document.querySelector('.nff .links a[href="/news/code.html"]'); if(!c||document.querySelector('.nff .links a[href="/news/committee.html"]')) return;
+    var a=document.createElement('a'); a.href='/news/committee.html'; a.textContent='독자권익위원회'; c.parentNode.insertBefore(a,c.nextSibling); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',add); else add();
+})();
+
