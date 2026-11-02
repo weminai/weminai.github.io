@@ -1,7 +1,7 @@
 /* fit.js — 헤드라인 제목을 늘 한 줄로 (2026-10-21 소장님 「헤드라인 제목은 항상 한줄이 되게하라 지침이다」)
    기사 쪽 큰 제목(article.art h1)과 뉴스 1면 머리기사 제목(.lead h2) */
 (function(){
-  var SEL='article.art h1, .lead h2';
+  var SEL='article.art h1, .lead h2, #lead h2';   /* 2026-11-03 1면 머리기사 칸은 id="lead" — 소장님 「제목은 항상 한줄을 유지하라」 「다른예약작업이 기사를 올려도」 */
   function fit(){
     var hs=document.querySelectorAll(SEL);
     /* 2026-11-01 소장님 승인 — 휴대전화(폭 640 이하)에서는 헤드라인 두 줄까지 허용, 한 줄로 줄이지 않는다 */

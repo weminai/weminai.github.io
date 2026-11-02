@@ -18,7 +18,7 @@ main{flex:1 0 auto}
 /* 섹션 메뉴 */
 .gnb{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);background:#fff}
 .gnb .wrap{display:flex;align-items:center;gap:0;padding:0 20px;overflow-x:auto;scrollbar-width:none}.gnb .wrap::-webkit-scrollbar{display:none}
-.gnb a{white-space:nowrap;font-weight:700;font-size:14.5px;padding:10px 12px;border-right:1px solid var(--line)}
+.gnb a{white-space:nowrap;font-weight:700;font-size:14.5px;padding:10px 9px;border-right:1px solid var(--line)}
 .gnb a.all{padding-left:0;font-weight:900}.gnb a:hover{color:var(--acc)}
 .gnb .tools{margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 0 auto;padding-left:12px}
 .gnb .tools a{border:0;padding:5px 12px;border-radius:4px;font-size:14px;font-weight:800}
@@ -222,7 +222,8 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var topP=slots.filter(top)[0]; if(topP){ slots.splice(slots.indexOf(topP),1); slots.unshift(topP); }
   slots.forEach(use);
   var t=slots[0];
-  document.getElementById('lead').innerHTML='<a href="'+href(t["파일"])+'">'+img(t)+K2(t)+'<h2>'+ttl(t)+'</h2>'+(t["부제"]?'<p>'+esc(t["부제"])+'</p>':'')+'</a><div class="byl"><b>'+esc(t["바이라인"]||"")+'</b></div>'+(t["근거"]?'<div class="basis"><b>이 기사의 근거</b> — '+esc(t["근거"])+'</div>':'');
+  document.getElementById('lead').innerHTML='<a href="'+href(t["파일"])+'">'+img(t)+K2(t)+'<h2>'+ttl(t)+'</h2></a>'+   /* 2026-11-03 소장님 「헤드라인 기사에서 기자명 삭제하라」 「부제목도 필요 없다」 */
+    (t["근거"]?'<div class="basis"><b>이 기사의 근거</b> — '+esc(t["근거"])+'</div>':'');
   document.getElementById('h3').innerHTML=slots.slice(1).map(function(p){ return '<a href="'+href(p["파일"])+'"><div>'+K2(p)+'<h3>'+ttl(p)+'</h3></div>'+img(p)+'</a>'; }).join('');
   // 다음 칸들 — 시간 차례, 한 칸에 한 섹션 두 편까지
   var take=function(n,needPic){ var c={}, out=[]; list.forEach(function(p){ var s=secOf(p); if(out.length<n && free(p) && (!needPic||pic(p)) && (c[s]||0)<2){ c[s]=(c[s]||0)+1; out.push(use(p)); } }); return out; };
