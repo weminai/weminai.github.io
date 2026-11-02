@@ -103,6 +103,7 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
 .t10 a .s{color:var(--red);font-weight:800;font-size:12.5px;margin-right:6px}
 @media(max-width:1000px){.t6,.p6{grid-template-columns:1fr 1fr}.t6 a,.t6 a:nth-child(n){padding:12px 0;border-left:0}}
 @media(max-width:640px){.t6,.p6,.t10{grid-template-columns:1fr}.h3l a{grid-template-columns:minmax(0,1fr) 96px}}
+.bh.ab{display:flex;align-items:center;justify-content:space-between}.abt{display:flex;gap:4px}.abt button{font:inherit;font-size:12.5px;font-weight:800;padding:2px 10px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}.abt button.on{background:var(--ink);color:#fff}.abp[hidden]{display:none}
 .ph.emp{aspect-ratio:3/2;background:#E9E4D8 url(/news/jeho.svg) center/46% no-repeat;opacity:.55}
 </style><script src="/news/fit.js" defer></script>
 </head><body>
@@ -119,7 +120,7 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
   <section class="hero"><div id="lead"></div><div class="h3l" id="h3"></div></section>
   <section class="t6" id="t6"></section>
   <div class="main">
-    <div><div class="p6" id="p6"></div><section class="blk"><div class="bh">이어서 읽기</div><div id="t10a"></div></section></div>
+    <div><div class="p6" id="p6"></div><section class="blk"><div class="bh ab">이어서 읽기<span class="abt" id="abt"><button type="button" data-p="0" class="on">A판</button><button type="button" data-p="1">B판</button></span></div><div id="t10a"></div></section></div>
     <aside class="side">
       <div class="ad ad-side" id="adSide"></div>
       <div class="box" id="mostBox" hidden><div class="bh">많이 본 기사</div><ol id="most"></ol></div>
@@ -226,7 +227,19 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var K3=function(p,s){ return '<div class="k"><span class="s">'+esc(s)+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
   document.getElementById('t6').innerHTML=got.slice(0,6).map(function(p,i){ return p?'<a href="'+href(p["파일"])+'">'+K3(p,FIX[i])+'<h3>'+ttl(p)+'</h3>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>':EMP(FIX[i],0); }).join('');
   document.getElementById('p6').innerHTML=got.slice(6).map(function(p,i){ return p?'<a href="'+href(p["파일"])+'">'+img(p,1)+K3(p,FIX[i+6])+'<h3>'+ttl(p)+'</h3></a>':EMP(FIX[i+6],1); }).join('');
-  document.getElementById('t10a').innerHTML=take(10).map(function(p){ return '<a class="li" href="'+href(p["파일"])+'"><div>'+K2(p)+'<span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; }).join('');
+  // 이어서 읽기 — A판·B판(2026-11-02 소장님 「여기도 화면이 두번 바뀌게 하라」 「11개섹션인데」 「A판 B판인데」 「인천경제를 빼면 10개다」)
+  // 인천경제를 뺀 열 섹션을 메뉴 차례로 다섯씩 나누고, 판마다 맨 위에 인천경제 한 편을 더해 여섯 편씩(소장님 「인천경제를 뺀 10개를 5개로 나누어 A판 5개 B판에 5개」 「그리고 인천경제는 기사가 6개씩 A와 B판에」)
+  // A판 — 인천경제·경제·교통경제·해양·항공·도시·부동산 / B판 — 인천경제·기후·에너지·AI·국제·학술·기획연재(위 열두 칸과 같은 짜임). 섹션마다 아직 1면에 안 걸린 가장 새 글 한 편. 두 판이 번갈아 바뀐다(10초, 마우스를 올리면 멈춤, 단추로 고름)
+  var SEC10=SEC.filter(function(s){ return s!=="인천경제"; });
+  var pg=[["인천경제"].concat(SEC10.slice(0,5)),["인천경제"].concat(SEC10.slice(5))].map(function(g){ return g.map(function(s){ var p=bySec(s,0); if(p) use(p); return [s,p]; }); });
+  var row=function(x){ var s=x[0], p=x[1]; if(!p) return '<a class="li" href="'+K(s)+'"><div><div class="k"><span class="s">'+esc(s)+'</span></div><span class="t">'+esc(MSG0[s]||"첫 기사를 준비하고 있습니다")+'</span></div></a>';
+    return '<a class="li" href="'+href(p["파일"])+'"><div>'+K3(p,s)+'<span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; };
+  var box=document.getElementById('t10a'); box.innerHTML=pg.map(function(g,k){ return '<div class="abp"'+(k?' hidden':'')+'>'+g.map(row).join('')+'</div>'; }).join('');
+  var cur=0, btn=[].slice.call(document.querySelectorAll('#abt button')), pan=[].slice.call(box.children), hold=false;
+  var show=function(k){ cur=k; pan.forEach(function(e,i){ e.hidden=(i!==k); }); btn.forEach(function(b,i){ b.classList.toggle('on',i===k); }); };
+  btn.forEach(function(b,i){ b.addEventListener('click',function(){ show(i); }); });
+  box.addEventListener('mouseenter',function(){ hold=true; }); box.addEventListener('mouseleave',function(){ hold=false; });
+  setInterval(function(){ if(!hold && !document.hidden) show(1-cur); },10000);
   // 편집국 추천(소장님 「편집국 추천 이라고만 쓰라」) — 번호 없이, 섹션 이름과 작은 사진. 섹션마다 하나
   var ps={}, pick=list.filter(function(p){ var k=kind(p); if(!free(p)||!pic(p)||(ps[secOf(p)]||0)>=2||!/분석|해설|서평|칼럼|연구보고서/.test(k)) return false; ps[secOf(p)]=(ps[secOf(p)]||0)+1; return true; }).slice(0,10).map(use);
   document.getElementById('pick').innerHTML=pick.map(function(p){ return '<a href="'+href(p["파일"])+'"><div><div class="k"><span class="s">'+esc(secOf(p))+'</span></div><span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; }).join('');
