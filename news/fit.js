@@ -133,3 +133,5 @@
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
   }).catch(function(){});
 })();
+/* 2026-11-03 외국어 자동 번역 국기 띠(news/lang.js)를 부른다 — 소장님 「내 지시다」. fit.js 를 쓰는 1면·섹션·기사 쪽 모두에 제호 위로 들어간다 */
+(function(){ if(document.querySelector('script[src*="/news/lang.js"]')) return; var s=document.createElement('script'); s.src='/news/lang.js?v=261103'; s.defer=true; (document.head||document.documentElement).appendChild(s); })();
