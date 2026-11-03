@@ -1,0 +1,77 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 <figure> 의 <figcaption> 에는 사진 설명만. 출처 <span class="cr"> 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 <div class="tags"> 에 <span>#…</span> 로
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>인천 10월 소비자물가 2.7% 올라…외식 뺀 개인서비스는 4.0%로 수도권 최고 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="전국 2.8%보다 낮지만 한 달 새 0.1%포인트 올라">
+<link rel="canonical" href="https://weminai.com/media/icpi01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="인천 10월 소비자물가 2.7% 올라…외식 뺀 개인서비스는 4.0%로 수도권 최고">
+<meta property="og:description" content="전국 2.8%보다 낮지만 한 달 새 0.1%포인트 올라">
+<meta property="og:url" content="https://weminai.com/media/icpi01.html">
+<meta property="og:image" content="https://weminai.com/media/img/icpi01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">인천경제</div>
+ <h1>인천 10월 소비자물가 2.7% 올라…외식 뺀 개인서비스는 4.0%로 수도권 최고</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.03</span><span class="dt">업데이트 2026.11.03</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>전국 2.8%보다 낮지만 한 달 새 0.1%포인트 올라</p><p>신선식품 6.2% 내릴 때 외식·가공식품은 2.9% 올라</p><p>정부, 김장재료 최대 50% 할인…가을배추 생산 18.5% 늘어</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 국가데이터처는 인천의 10월 소비자물가가 1년 전보다 2.7% 올랐다고 3일 밝혔다. 「2026년 10월 소비자물가동향」의 시도별 집계다.</p>
+<p>인천 소비자물가지수는 120.89(2020년=100)로 전월보다 0.2% 올랐다. 전국 상승률 2.8%보다 0.1%포인트 낮다.</p>
+<h2>전국 내릴 때 인천은 올라</h2>
+<p>인천은 9월에 2.6%로 대구와 함께 17개 시도 가운데 상승률이 가장 낮았다. 10월에는 2.7%로 0.1%포인트 올랐다. 같은 달 전국 상승률은 2.9%에서 2.8%로 0.1%포인트 내렸다.</p>
+<p>수도권에서는 서울이 2.5%, 경기가 2.9% 올랐다. 시도별 상승률은 충북과 경남이 3.2%로 가장 높고, 서울과 대구가 2.5%로 가장 낮았다.</p>
+<h2>외식 뺀 개인서비스 4.0%</h2>
+<p>인천의 외식을 뺀 개인서비스 물가는 1년 전보다 4.0% 올랐다. 서울 3.5%, 경기 3.4%보다 높고 전국 3.6%도 웃돈다. 수도권 세 시도 가운데 가장 높다.</p>
+<p>인천 개인서비스 전체는 3.4% 올랐다. 외식은 2.7%로 전국 2.9%보다 낮았고, 공공서비스는 1.4%로 전국 1.7%보다 낮았다.</p>
+<p>전국에서 외식을 뺀 개인서비스는 보험서비스료(13.4%)와 해외단체여행비(11.5%), 공동주택관리비(3.1%)가 끌어올렸다. 이 갈래가 10월 전체 물가 상승률 2.8%에 보탠 몫(기여도)은 0.73%포인트로 품목 묶음 가운데 가장 크다.</p>
+<figure><img src="img/icpi01_02.png" alt="2026년 10월 수도권 시도별 소비자물가와 외식 뺀 개인서비스 등락률(전년동월비, %). 전국 2.8·3.6, 서울 2.5·3.5, 경기 2.9·3.4, 인천 2.7·4.0. 자료 국가데이터처. 경세제민 AI·경제 연구소 작성." loading="lazy"><figcaption>2026년 10월 수도권 시도별 소비자물가와 외식 뺀 개인서비스 등락률(전년동월비, %). 전국 2.8·3.6, 서울 2.5·3.5, 경기 2.9·3.4, 인천 2.7·4.0. 자료 국가데이터처. 경세제민 AI·경제 연구소 작성.</figcaption></figure>
+<h2>재료값 내리고 차림값 올라</h2>
+<p>전국 신선식품지수는 1년 전보다 6.2% 내렸다. 상추가 44.3%, 오이가 39.5%, 호박이 38.4%, 배추가 11.8% 떨어졌다. 농축수산물 전체는 1.7% 내렸다.</p>
+<figure><img src="img/icpi01_01.jpg" alt="서울 망원시장 수산물 좌판. 2023년 4월 촬영" loading="lazy"><figcaption>서울 망원시장 수산물 좌판. 2023년 4월 촬영</figcaption></figure>
+<p>같은 달 외식과 가공식품은 각각 2.9% 올랐다. 빵이 5.9%, 즉석식품이 12.4% 올랐다. 외식 상승률과 농축수산물 상승률의 차이는 4.6%포인트다(연구소 계산).</p>
+<p>석유류는 14.9% 올랐다. 경유가 19.7%, 휘발유가 11.6% 뛰었다. 석유류가 10월 물가 상승률에 보탠 몫은 0.56%포인트다.</p>
+<p>권대영 재정경제부 제1차관은 같은 날 물가관계차관회의를 열고 석유 최고가격제가 10월 물가상승률을 약 0.8%포인트 낮춘 것으로 추정한다고 밝혔다. 정부는 휘발유값이 리터당 1850원대, 경유값이 1840원대를 유지하고 있다고 설명했다.</p>
+<p>권 차관은 &quot;누적된 물가 상승의 여파로 체감물가는 여전히 높고 물가 상방압력과 리스크도 남아 있는 만큼, 경각심을 가지고 물가 관리에 모든 역량을 집중하겠다&quot;고 말했다. 정부는 농축수산물 가격이 3개월 연속 1년 전보다 내렸다고 밝혔다.</p>
+<p>식료품과 에너지를 뺀 근원물가는 전월보다 0.4%, 1년 전보다 2.8% 올랐다. 1~10월 누계 상승률은 2.7%다.</p>
+<h2>김장재료 최대 50% 할인</h2>
+<p>농림축산식품부와 해양수산부는 같은 날 「2026 김장재료 수급안정대책」을 발표했다. 한국농촌경제연구원은 올해 가을배추 생산량을 121만4000톤, 가을무를 37만2000톤으로 내다봤다. 1년 전보다 각각 18.5%, 11.1% 많다.</p>
+<figure><img src="img/icpi01_03.jpg" alt="서울 광장시장 골목에 놓인 전과 부침개. 2008년 7월 촬영" loading="lazy"><figcaption>서울 광장시장 골목에 놓인 전과 부침개. 2008년 7월 촬영</figcaption></figure>
+<p>정부는 11월 9일부터 12월 6일까지 대책을 시행한다. 농수산물 할인에 640억원을 들여 최대 50%까지 값을 깎아 준다. 농산물은 440억원으로 대형·중소형마트에서 김장재료 전 품목과 수육용 돼지고기 등을 최대 40% 할인한다(10월 29일~12월 2일).</p>
+<p>전통시장 등에서 쓰는 농할상품권은 200억원어치를 20% 할인해 판다. 고령층은 11월 2일부터 8일까지, 전체 국민은 11월 9일부터 15일까지 살 수 있다. 한도는 10만원이다.</p>
+<p>수산물은 「대한민국 수산대전_김장 특별전」(10월 28일~11월 29일)에 200억원을 들여 천일염과 새우젓, 멸치액젓, 굴 등을 최대 50% 할인한다.</p>
+<p>인천시는 지난해 11월 17일 김장철을 맞아 19일부터 23일까지 중구 인천종합어시장 등 9개 전통시장에서 온누리상품권 환급행사를 연다고 밝혔다. 전통시장과 수산물 소비를 늘리기 위한 행사다.</p>
+<p>국가데이터처는 2025년을 기준으로 바꾼 소비자물가지수를 오는 12월 공표할 예정이다. 이에 따라 2020년 기준으로 공표한 수치는 바뀔 수 있다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>&quot;2026년 10월 소비자물가동향&quot;, 국가데이터처, 2026.11.3., https://mods.go.kr/board.es?mid=a10301010000&amp;bid=213&amp;act=view&amp;list_no=447801</li><li>&quot;인천시, 김장철 맞이 온누리상품권 환급행사 개최 … 전통시장 활력 불어넣는다&quot;, 인천시, 2025.11.17., https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000013536261</li><li>&quot;2026년 9월 소비자물가동향&quot;, 국가데이터처, 2026.10.2., https://mods.go.kr/board.es?mid=a10301010000&amp;bid=213&amp;list_no=447322&amp;act=view</li><li>&quot;10월 소비자물가는 2.8% 기록, 김장재료 수급안정 위해 역대 최대규모 김장대책(640억원) 시행, 동절기 농축수산물 수급 안정 총력(11월 물가관계차관회의)&quot;, 재정경제부 등 관계부처 합동, 2026.11.3., https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787669</li><li>&quot;가을배추·무 풍작, 올해 김장은 부담 없이 &#x27;한 포기 더&#x27; 담그세요!(2026 김장재료 수급안정대책)&quot;, 농림축산식품부·해양수산부, 2026.11.3., https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787658</li></ul><h4>[사진 출처]</h4><ul><li>[사진1] Enamoradadecorea, &quot;Mercado Mangwon en Seúl.jpg&quot;, 위키미디어 공용, CC0, 2023.4.11., https://commons.wikimedia.org/wiki/File:Mercado_Mangwon_en_Se%C3%BAl.jpg</li><li>[사진2] Pfc. Bo Park(미국 육군 제2보병사단 공보실), &quot;Korean pancakes and pan-fried foods at Gwangjang Market.jpg&quot;, 위키미디어 공용, 퍼블릭 도메인, 2008.7.10., https://commons.wikimedia.org/wiki/File:Korean_pancakes_and_pan-fried_foods_at_Gwangjang_Market.jpg</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="cw01.html">인천시, 천원택배 운영·배송체계 일원화…무인 집화·간편결제 도입</a></li><li><a href="ipa01.html">박인서 인천항만공사 사장 취임…&quot;미해결 현안 푸는 해결사 되겠다&quot;</a></li><li><a href="icexp01.html">누적 수출 9000억 달러 첫 돌파…인천 비중은 5.1%로 낮아져</a></li><li><a href="insb01.html">인천신용보증재단, 소상공인 495억원 협약보증 2일부터 접수</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천물가</span><span>#소비자물가</span><span>#개인서비스</span><span>#외식물가</span><span>#가공식품</span><span>#석유류</span><span>#김장재료</span><span>#농할상품권</span><span>#인천경제</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
