@@ -489,3 +489,6 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 /* 2026-11-02 좁은 화면 — 연구소 소개 연구진 카드가 폭 390에서 399로 넘치던 것 바로잡음(소장님 「승인」) */
 .person{grid-template-columns:88px minmax(0,1fr)}.person>div{min-width:0}.person li{overflow-wrap:anywhere}
 @media(max-width:480px){.person{grid-template-columns:64px minmax(0,1fr);gap:12px}.person .ph0{width:64px;height:64px;font-size:24px}}
+/* 2026-11-03 위 메뉴에 「언론보도」를 더해 961~1240 폭에서 넘치지 않게 메뉴 사이를 좁힘(소장님 「언론보도 메뉴를 신설」 「승인」) */
+@media(min-width:961px) and (max-width:1240px){.gnb{gap:22px}.gnb a{font-size:16px}}
+@media(min-width:961px) and (max-width:1060px){.gnb{gap:16px}.gnb a{font-size:15px}.gnb a.newsgo small{font-size:10.5px}}
