@@ -1,0 +1,98 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 <figure> 의 <figcaption> 에는 사진 설명만. 출처 <span class="cr"> 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 <div class="tags"> 에 <span>#…</span> 로
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[10차 개헌과 지방분권①] 39년 만의 개헌 시도, 지방자치 조항은 그대로였다 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="균형발전 의무는 넣고 지방분권은 뺐다">
+<link rel="canonical" href="https://weminai.com/media/amd01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[10차 개헌과 지방분권①] 39년 만의 개헌 시도, 지방자치 조항은 그대로였다">
+<meta property="og:description" content="균형발전 의무는 넣고 지방분권은 뺐다">
+<meta property="og:url" content="https://weminai.com/media/amd01.html">
+<meta property="og:image" content="https://weminai.com/media/img/amd01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<style>.art .body table.tbl{width:100%;border-collapse:collapse;margin:18px 0 6px;font-size:15px}.art .body table.tbl caption{text-align:left;font-weight:700;margin-bottom:6px}.art .body table.tbl th,.art .body table.tbl td{border:1px solid #DDE4F0;padding:7px 9px;text-align:left;vertical-align:top}.art .body table.tbl th{background:#F2F6FD}.art .body p.src{font-size:13px;color:#71716E;margin-top:0}.art .body figure.sm{max-width:240px}.art .body figure.sm img{width:100%;height:auto}.art .body figure.sm figcaption{text-align:left}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">지방자치</div>
+ <h1>[10차 개헌과 지방분권①] 39년 만의 개헌 시도, 지방자치 조항은 그대로였다</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.03</span><span class="dt">업데이트 2026.11.03 10:25</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>균형발전 의무는 넣고 지방분권은 뺐다</p><p>시도지사협의회 「국세·지방세 7대 3, 재정분권으로」</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 1987년 이후 39년 만에 헌법을 고치려던 개정안은 지방자치 조항에 손대지 않았다. 올해 4월 3일 의원 187명이 발의한 개헌안은 헌법 이름과 전문, 계엄, 균형발전 네 곳을 손봤다. 헌법 제8장 지방자치의 제117조와 제118조는 1987년 문장 그대로 남았다.</p>
+<p>그 개헌안은 5월 본회의에서 멈췄다. 국회의장은 내년 후반기 합의 개헌을 새 목표로 내걸었다. 박찬대 인천시장이 회장을 맡은 대한민국시도지사협의회는 지난달 재정분권을 다시 요구했다. 다음 개헌안이 지방정부의 권한을 다룰지는 아직 정해지지 않았다.</p>
+<figure><img src="img/amd01_01.jpg" alt="서울 여의도 국회의사당. 앞 도로로 차들이 지나고 광장에 시민들이 걷는다." loading="lazy"><figcaption>서울 여의도 국회의사당. 올해 4월 의원 187명이 발의한 헌법 개정안은 지금도 국회에 계류돼 있다.</figcaption></figure>
+<h2>이름·전문·계엄·균형발전, 네 곳만 고쳤다</h2>
+<p>개헌안은 헌법 이름 「大韓民國憲法」을 「대한민국헌법」으로 바꿨다. 전문의 「4·19 민주이념」은 「4·19혁명, 부마민주항쟁 및 5·18민주화운동의 민주이념」으로 넓혔다.</p>
+<p>제77조는 계엄을 선포한 대통령이 지체 없이 국회 승인을 받게 했다. 승인이 부결되거나 48시간 안에 승인이 없으면 계엄은 곧바로 효력을 잃는다. 국회가 재적의원 과반 찬성으로 해제를 의결해도 마찬가지다.</p>
+<p>지역에 닿는 조문은 제123조 제2항 하나다. 지금 헌법은 「국가는 지역간의 균형있는 발전을 위하여 지역경제를 육성할 의무를 진다」고 적었다. 개헌안은 여기에 생활기반 구축과 지역 간 격차 해소를 더했다. 제안 이유는 생활기반을 교육·의료·문화·일자리·주거·교통으로 풀었다.</p>
+<table class="tbl"><caption>헌법 개정안(의안번호 2218099)이 고친 곳과 그대로 둔 곳</caption><thead><tr><th>조문</th><th>내용</th><th>개정안</th></tr></thead><tbody><tr><td>제명</td><td>헌법 이름</td><td>한글로 바꿈</td></tr><tr><td>전문</td><td>계승하는 민주이념</td><td>부마민주항쟁·5·18민주화운동 더함</td></tr><tr><td>제77조</td><td>계엄</td><td>국회 승인제, 48시간 안 미승인 때 효력 상실</td></tr><tr><td>제123조 제2항</td><td>지역 균형발전</td><td>생활기반 구축·격차 해소 의무 더함</td></tr><tr><td>제117조</td><td>자치사무·자치입법(「법령의 범위 안에서」)</td><td>그대로</td></tr><tr><td>제118조</td><td>지방의회, 조직·운영은 법률로</td><td>그대로</td></tr></tbody></table>
+<p class="src">자료 국회 의안정보시스템 의안원문, 국가법령정보센터. AI경제저널 정리</p>
+<h2>균형발전은 넣고 분권은 뺐다</h2>
+<p>제안 이유는 지역 불균형을 개헌의 까닭으로 들었다. 전국 기초지방자치단체의 절반 이상이 소멸 위기 지역이고, 인구의 과반이 일정 지역에 몰려 있다는 것이다. 국회가 18세 이상 1만2천 명에게 물은 결과도 실었다. 83.0%가 균형발전의 국가 책임을 헌법에 적는 데 찬성했다.</p>
+<p>지방정부의 권한을 정하는 제117조는 고치지 않았다. 지금 헌법은 지방자치단체가 「법령의 범위 안에서」 자치에 관한 규정을 만들 수 있다고 정한다. 조례가 법률뿐 아니라 대통령령과 부령의 테두리 안에 놓인다. 헌법 제59조는 조세의 종목과 세율을 법률로 정하게 했다. 지방세의 세목과 세율도 국회가 만든 법률이 정한다.</p>
+<p>분권 조항이 아예 거론되지 않은 것은 아니다. 김영배 더불어민주당 의원은 2월 24일 국회 본회의에서 최소한의 합의 의제를 꼽았다. 계엄 조항과 5·18 정신, 그리고 "지방분권 국가 대한민국을 선언하는 내용"이다. 4월 3일 발의된 개헌안에는 지방분권 대신 균형발전 의무가 들어갔다.</p>
+<h2>본회의에서 멈춘 개헌안</h2>
+<p>개헌안은 5월 7일 제435회 국회 제1차 본회의에 올랐다. 헌법 제130조는 개헌안을 재적의원 3분의 2 이상 찬성으로 의결하게 한다. 국민의힘 의원들이 표결에 참여하지 않았고, 투표는 오후 4시 4분 성립하지 않았다.</p>
+<p>우원식 당시 국회의장은 다음 날 다시 표결하려 했다. 국민의힘이 무제한토론(필리버스터)으로 맞서자 그는 "의장은 헌법 개정안 상정하지 않겠습니다"라고 말했다. 6월 3일 지방선거와 함께 치르려던 국민투표 절차도 이날 멈췄다. 개헌안은 지금도 본회의 부의 상태로 계류돼 있다.</p>
+<h2>다시 열린 개헌 시간표, 지방분권은 아직 없다</h2>
+<p>조정식 국회의장은 7월 28일 기자간담회에서 개헌 일정을 내놨다. 의장 직속 헌법개정자문위원회를 출범시켜 로드맵과 의제를 마련하겠다고 했다. 국민이 직접 참여하는 디지털 플랫폼도 약속했다. 목표는 내년 후반기 합의 개헌이다.</p>
+<p>의장이 꼽은 과제는 네 가지다. 5·18 정신의 헌법 전문 수록, 대통령 계엄선포권 제한, 권력구조 개편, 선거관리 개혁이다. 지방분권은 이 목록에 없다. 전국 49개 시민사회단체가 모인 시민주도 헌법개정 전국네트워크는 같은 날 성명을 냈다. 숙의와 공론이 가능한 시민참여 절차를 마련하라는 요구다.</p>
+<h2>인천시장이 이끄는 시도지사협의회 「재정분권」</h2>
+<p>지방정부의 요구는 돈에 모인다. 박찬대 인천시장은 대한민국시도지사협의회 회장이다. 그는 10월 19일 서울 프레스센터 기자간담회에서 국정과제인 국세·지방세 비율 7대 3 개선을 짚었다. 이 목표가 실질적인 재정분권으로 이어져야 한다는 것이다.</p>
+<figure class="sm"><img src="img/amd01_02.jpg" alt="박찬대 인천시장 공식 초상" loading="lazy"><figcaption>박찬대 인천시장. 대한민국시도지사협의회 회장을 맡고 있다.</figcaption></figure>
+<p>협의회 자료를 보면 국고보조사업은 2000년 7조4천억원에서 2024년 83조8천억원으로 11배 넘게 커졌다. 지방정부가 함께 내야 하는 대응지방비도 따라 늘었다. 협의회는 내년 주요 국고보조사업 11개의 대응지방비 증가액만 3조726억원으로 분석했다.</p>
+<p>시·도지사들은 10월 16일 제주 간담회에서 공동건의문에 합의했다. 지방교부세 산정방식은 지금대로 둔다. 범정부 재정분권 TF를 다시 돌려 지방교부세율과 지방세 비중을 올린다. 건의문의 뼈대다.</p>
+<p>인천시장이 협의회장으로 분권을 요구한 것은 처음이 아니다. 유정복 전 인천시장은 협의회장이던 2025년 3월 4일 분권형 헌법 개정안을 공표했다. 박 시장은 국회의원이던 올해 4월 개헌안 공동발의자 187명 가운데 한 명이었다.</p>
+<figure><img src="img/amd01_03.jpg" alt="인천시청과 앞 광장. 광장에서 자전거를 타는 시민이 보인다." loading="lazy"><figcaption>인천시청과 시청 앞 광장(2015년 촬영). 인천시장은 2025년과 2026년 잇따라 대한민국시도지사협의회장을 맡았다.</figcaption></figure>
+<h2>국세 74.7%, 지방세 25.3%</h2>
+<p>국가데이터처 e-나라지표에 따르면 2024년 전체 조세 가운데 국세는 74.7%, 지방세는 25.3%였다. 2015년 지방세 비중 24.6%와 견주면 0.7%포인트 늘었다. 2019년 이후로는 2020년의 26.3%가 가장 높았다.</p>
+<figure><img src="img/amd01_04.jpg" alt="2005년부터 2024년까지 전체 조세 가운데 지방세와 국세 비중 막대그래프. 지방세는 22.0%에서 25.3% 사이." loading="lazy"><figcaption>전체 조세 가운데 지방세와 국세 비중. 자료 국가데이터처 e-나라지표.</figcaption></figure>
+<p>올해 지방자치단체 평균 재정자립도는 47.3%다. 행정안전부 「2026년도 지방자치단체 예산 및 기금 개요」의 값이다. 재정자립도는 총수입에서 지방세와 세외수입이 차지하는 비중이다. 지방정부 살림의 절반 넘게를 스스로 거두지 않은 돈으로 꾸린다는 뜻이다.</p>
+<h2>인천에 남은 물음</h2>
+<p>국회 설문에서 응답자 69.5%는 합의 가능한 의제부터 고치는 단계적 개헌을 지지했다. 지난 개헌안은 그 첫 단계에서 지방자치 조항을 고르지 않았다. 의장이 꼽은 다음 개헌 과제에도 지방분권은 아직 없다.</p>
+<p>인천경실련은 지난해 8월 12일 성명을 냈다. 국회가 개헌특별위원회를 꾸려 지방분권 개헌에 대한 지방정부와 주민 의견을 모으라는 촉구다. 시도지사협의회가 같은 달 7일 낸 특별지방행정기관 이양 공동건의문도 지지했다. 해양항만·고용노동 등 여섯 분야 사무를 재정·인력·조직과 함께 지방으로 넘기라는 건의다.</p>
+<div class="refs"><h3>참고문헌</h3><ul>
+<li>"대한민국헌법 개정안(우원식의원 등 187인, 의안번호 2218099)", 국회 의안정보시스템, 2026.4.3., <a href="https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_M2A6F0G4E0U3T1Z7E5L6I3A1T5D3N9" target="_blank" rel="noopener">https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_M2A6F0G4E0U3T1Z7E5L6I3A1T5D3N9</a></li>
+<li>"제22대국회 제435회 제1차·제2차 국회본회의 회의록", 국회, 2026.5.7.·5.8., <a href="https://record.assembly.go.kr/assembly/" target="_blank" rel="noopener">https://record.assembly.go.kr/assembly/</a></li>
+<li>"제22대국회 제432회 제8차 국회본회의 회의록", 국회, 2026.2.24., <a href="https://record.assembly.go.kr/assembly/" target="_blank" rel="noopener">https://record.assembly.go.kr/assembly/</a></li>
+<li>"대한민국헌법"(제59조·제117조·제118조·제123조·제130조), 국가법령정보센터, <a href="https://www.law.go.kr/법령/대한민국헌법" target="_blank" rel="noopener">https://www.law.go.kr/법령/대한민국헌법</a></li>
+<li>"박찬대 대한민국시도지사협의회장 기자 간담회 개최", 대한민국시도지사협의회, 2026.10.19., <a href="https://www.gaok.or.kr/front/viewAritcle.do?bbsId=BBS_0005&amp;nttId=47865" target="_blank" rel="noopener">https://www.gaok.or.kr/front/viewAritcle.do?bbsId=BBS_0005&amp;nttId=47865</a></li>
+<li>"유정복 시도지사협의회장 분권형 헌법 개정안 공표", 대한민국시도지사협의회, 2025.3.4., <a href="https://www.gaok.or.kr/front/viewAritcle.do?bbsId=BBS_0005&amp;nttId=29492" target="_blank" rel="noopener">https://www.gaok.or.kr/front/viewAritcle.do?bbsId=BBS_0005&amp;nttId=29492</a></li>
+<li>"[시민개헌넷] 개헌 논의 일정 밝힌 의장, 시민참여 보장해야", 시민주도 헌법개정 전국네트워크(참여연대 게재), 2026.7.28., <a href="https://peoplepower21.org/solidarity/2026730" target="_blank" rel="noopener">https://peoplepower21.org/solidarity/2026730</a></li>
+<li>"국세 및 지방세 비중", 국가데이터처 e-나라지표, <a href="https://www.index.go.kr/unify/idx-info.do?idxCd=1123" target="_blank" rel="noopener">https://www.index.go.kr/unify/idx-info.do?idxCd=1123</a></li>
+<li>"지방자치단체 재정자립도"(행정안전부 「2026년도 지방자치단체 예산 및 기금 개요」), 국가데이터처 e-나라지표, <a href="https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=2458" target="_blank" rel="noopener">https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=2458</a></li>
+<li>"[성명] 조속한 '특별지방행정기관 지방 이양'과 '지방분권 개헌'을 촉구한다", 인천경실련, 2025.8.12., <a href="https://ccej.or.kr/posts/xlto31a" target="_blank" rel="noopener">https://ccej.or.kr/posts/xlto31a</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진 1] 위키미디어 공용, Bcody80, 「Korean National Assembly」(퍼블릭 도메인, 2007년 2월 17일 촬영)</li><li>[사진 2] 인천광역시청 총무과, 위키미디어 공용 「Park Chan-dae's Portrait (2026.7)」(공공누리 제1유형 출처표시)</li><li>[사진 3] 위키미디어 공용, IRTC1015, 「Incheon City Hall」(퍼블릭 도메인, 2015년 3월 5일 촬영)</li><li>[표·도표 1] AI경제저널 작성. 자료 국회 의안정보시스템, 국가법령정보센터, 국가데이터처 e-나라지표</li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 AI 프로그램 클로드를 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="fis01.html">인천 신설구 100일, 법은 「지원하며」라 썼는데 개편 국비 예산은 두 해째 0원</a></li><li><a href="islw01.html">인천시, 강화·옹진 섬 식수 공급 개선 토론회 열어</a></li><li><a href="phl01.html">인천시·필라델피아, 바이오·교육·문화 교류 확대 논의</a></li><li><a href="brief01.html">인천시와 군·구는 무엇을 연구에 맡기나, 정책연구 727건을 다 세어 봤다</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#10차개헌</span><span>#지방분권</span><span>#헌법개정안</span><span>#지방자치</span><span>#재정분권</span><span>#시도지사협의회</span><span>#박찬대</span><span>#국세지방세</span><span>#인천</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
