@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그를 적지 않는다 — 바꿔 넣기가 주석 속 글자를 잡아 쪽이 하얗게 된 일(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>인천 중소기업인대상에 수성밸브공업 이광균 대표…우수기업 73곳 선정 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="유망 35곳·비전 29곳·중견성장사다리 9곳">
+<link rel="canonical" href="https://weminai.com/media/icsme01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="인천 중소기업인대상에 수성밸브공업 이광균 대표…우수기업 73곳 선정">
+<meta property="og:description" content="유망 35곳·비전 29곳·중견성장사다리 9곳">
+<meta property="og:url" content="https://weminai.com/media/icsme01.html">
+<meta property="og:image" content="https://weminai.com/media/img/icsme01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">인천경제</div>
+ <h1>인천 중소기업인대상에 수성밸브공업 이광균 대표…우수기업 73곳 선정</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.05</span><span class="dt">업데이트 2026.11.05 16:33</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>유망 35곳·비전 29곳·중견성장사다리 9곳</p><p>경영안정자금 이자차액 우대, 지방세 세무조사 유예</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 인천시가 올해 중소기업인대상 수상자 6명과 우수기업 73곳을 뽑아 5일 시상했다. 시상식은 미추홀타워 인천기업경영지원센터에서 열렸다. 지역경제 발전과 기술 혁신을 이끈 기업인과 기업을 찾아 격려하는 자리다.</p>
+<figure><img src="img/icsme01_01.jpg" alt="중소기업인대상 시상식 무대에서 수상자들이 상패를 들고 서 있다." loading="lazy"><figcaption>5일 미추홀타워 인천기업경영지원센터에서 열린 「2026년 인천 중소기업인대상 시상 및 우수기업 인증서 수여식」에서 수상자들이 기념촬영을 하고 있다.</figcaption></figure>
+<p>대상은 수성밸브공업 이광균 대표이사가 받았다. 수성밸브공업은 검단구에 있는 산업용 밸브 제조기업이다. 1999년 세워져 유체 역류를 막는 체크밸브 등을 만든다.</p>
+<p>인천시는 수성밸브공업이 국제 인증과 특허로 품질 혁신을 이뤘다고 설명했다. 근로환경을 개선하고 지역사회 상생에 앞장선 공로도 높이 평가했다고 밝혔다.</p>
+<p>우수상은 비엔세라 RAKHMATZODA DZHAKHONGIR 대표이사와 인목 석정기 대표이사가 받았다. 장려상은 위드퍼 한상담, 명성마그네트 정광채, 수빈조명 오훈성 대표이사에게 돌아갔다.</p>
+<h2>우수기업은 성장 단계로 나눠 뽑았다</h2>
+<p>우수기업은 유망중소기업 35곳, 비전기업 29곳, 중견성장사다리기업 9곳이다. 유망중소기업에는 케이피나인, 비전기업에는 이온폴리스, 중견성장사다리기업에는 이너트론 등이 들었다.</p>
+<p>인천시는 1차 서류평가와 2차 현지실사를 거쳤다. 이어 심의위원회의 최종 평가로 수상자와 우수기업을 정했다. 중소기업인대상은 대상·우수상·장려상으로 나눴다.</p>
+<p>선정 기업과 수상 기업인은 중소기업 경영안정자금의 이자차액보전을 우대받는다. 시 기업지원사업에서 가점을 받고, 지방세 세무조사도 유예된다.</p>
+<h2>혜택의 무게는 이자에 있다</h2>
+<p>혜택 가운데 기업의 현금 흐름에 바로 닿는 것은 이자 지원이다. 한국은행에 따르면 9월 예금은행 신규 대출금리는 연 4.57%로 한 달 새 0.17%포인트 올랐다.</p>
+<p>이자보상비율은 영업이익을 이자비용으로 나눈 값이다. 한국은행의 2025년 기업경영분석에서 이 비율이 100% 미만인 기업은 42.9%였다. 열 곳 가운데 네 곳 넘게 영업으로 이자를 다 갚지 못했다.</p>
+<p>인천 제조 현장의 일자리는 늘고 있다. 경인지방데이터청에 따르면 인천 9월 제조업 취업자는 1만1000명(3.5%) 늘었다. 다만 국가데이터처의 2025년 기업생멸행정통계에서 새로 문을 연 기업의 1년 생존율은 63.9%였다.</p>
+<p>금리가 높을수록 이자 보전의 값은 커진다. 1억 원을 빌린 기업이 1%포인트를 보전받으면 한 해 이자 100만 원을 덜 낸다. 우수기업 선정이 기술 인증을 넘어 자금 비용의 문제로 이어지는 까닭이다.</p>
+<figure><img src="img/icsme01_02.jpg" alt="시상식장에서 참석자들이 손팻말을 들고 앉아 있다." loading="lazy"><figcaption>같은 날 시상식 참석자들이 「2028 G20 정상회의는 인천에서!」 손팻말을 들고 있다.</figcaption></figure>
+<p>김상길 인천시 미래산업본부장은 고금리와 대외 불확실성을 어려운 여건으로 꼽았다. 그는 &quot;끊임없는 기술 혁신과 경영 개선으로 지역 경제를 버팀목처럼 지탱해 준 기업인 여러분께 감사드린다&quot;고 말했다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>한국은행(2026). 2025년 연간 기업경영분석 결과(보도자료). 2026년 10월 21일. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288345" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288345</a></li>
+<li>한국은행(2026). 2026년 9월 금융기관 가중평균금리(보도자료). 2026년 10월 29일. <a href="https://www.bok.or.kr/portal/main/main.do" target="_blank" rel="noopener">https://www.bok.or.kr/portal/main/main.do</a></li>
+<li>국가데이터처(2026). 2025년 기업생멸행정통계(잠정) 결과(보도자료). 2026년 10월 22일. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288411" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288411</a></li>
+<li>경인지방데이터청(2026). 2026년 9월 인천광역시 고용동향. 2026년 10월 16일. 인천시 일자리플랫폼 게시. <a href="https://www.incheon.go.kr/jobs/main/pst/list.do?pst_id=m_job_trend" target="_blank" rel="noopener">https://www.incheon.go.kr/jobs/main/pst/list.do?pst_id=m_job_trend</a></li>
+<li>인천광역시 미래산업정책과(2026). 인천시, 지역경제 성장 이끈 기업인 6명·우수기업 73개사 선정 시상(보도자료). 2026년 11월 5일. <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015911388" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015911388</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진1·2] 인천광역시 보도자료 「인천시, 지역경제 성장 이끈 기업인 6명·우수기업 73개사 선정 시상」 붙임 현장사진3·현장사진2, 공공누리 출처표시, 2026.11.5., https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015911388</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="icgb01.html">인천시 &quot;국비 1306억 더&quot;…노동감독관 인건비·인천e음·M버스</a></li><li><a href="kgz01.html">강화남단 경제자유구역, 지정 요청 11개월째…2차 발전계획에 담는다</a></li><li><a href="ifb01.html">청라 영상단지 준공 2031년으로 4년 늦춰…IFEZ, 콘텐츠·바이오로 판 짠다</a></li><li><a href="gdlc01.html">검단 근로자복합문화센터 문 열어…월 1만원 강좌, 평일 밤 9시까지</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천중소기업인대상</span><span>#우수기업</span><span>#수성밸브공업</span><span>#중견성장사다리기업</span><span>#경영안정자금</span><span>#이자차액보전</span><span>#대출금리</span><span>#인천기업경영지원센터</span><span>#인천경제</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>

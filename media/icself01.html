@@ -1,0 +1,79 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그를 적지 않는다 — 바꿔 넣기가 주석 속 글자를 잡아 쪽이 하얗게 된 일(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>전국 자영업자 늘 때 인천은 2만6500명 줄었다 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="인천 9월 자영업자 1년 새 8.6% 감소">
+<link rel="canonical" href="https://weminai.com/media/icself01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="전국 자영업자 늘 때 인천은 2만6500명 줄었다">
+<meta property="og:description" content="인천 9월 자영업자 1년 새 8.6% 감소">
+<meta property="og:url" content="https://weminai.com/media/icself01.html">
+<meta property="og:image" content="https://weminai.com/media/img/icself01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">인천경제</div>
+ <h1>전국 자영업자 늘 때 인천은 2만6500명 줄었다</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.05</span><span class="dt">업데이트 2026.11.05 16:33</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>인천 9월 자영업자 1년 새 8.6% 감소</p><p>전국은 늘었지만 숙박·음식점은 줄어</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 국가데이터처가 4일 낸 8월 비임금근로 부가조사에서 전국 자영업자는 1년 전보다 10만9000명 늘었다. 같은 시기 인천 자영업자는 줄었다.</p>
+<p>경인지방데이터청의 9월 인천 고용동향을 보면 인천 자영업자는 28만2300명이다. 1년 전 30만8800명보다 2만6500명(8.6%) 줄었다.</p>
+<figure><img src="img/icself01_01.jpg" alt="시장 앞 보도에서 어깨띠를 두른 사람들이 쓰레기를 줍고 있다." loading="lazy"><figcaption>인천 삼산농산물도매시장 유통종사자와 관리사무소 직원들이 9월 17일 추석을 앞두고 시장 주변 환경정비를 하고 있다.</figcaption></figure>
+<p>두 통계는 조사 달과 범위가 다르다. 전국 값은 8월 부가조사이고, 인천 값은 9월 고용동향이다. 그래서 두 숫자를 한 줄에 놓고 빼거나 나누지 않는다. 다만 방향은 엇갈렸다.</p>
+<h2>전국은 고용주와 1인 자영업이 함께 늘었다</h2>
+<p>전국 비임금근로자는 662만5000명으로 7만1000명 늘었다. 비임금근로자는 자영업자와 무급가족종사자를 합한 말이다. 취업자 가운데 비중은 22.7%다.</p>
+<p>고용원이 있는 자영업자는 148만1000명으로 4만7000명 늘었다. 고용원이 없는 자영업자는 430만3000명으로 6만2000명 늘었다. 무급가족종사자 84만1000명은 줄었다.</p>
+<p>비임금근로자를 업종별로 보면 도·소매업이 7만5000명, 전문·과학·기술서비스업이 2만5000명 늘었다. 농림어업은 9만4000명, 숙박·음식점업은 4만7000명, 제조업은 3만8000명 줄었다.</p>
+<p>최근 1년 안에 사업을 시작한 사람의 70.8%는 자기 사업을 하고 싶어서라고 답했다. 21.7%는 임금근로자로 취업하기 어려워서라고 답했다.</p>
+<p>준비 기간은 짧아졌다. 1~3개월 미만 준비하고 문을 연 사람이 47.0%로 1년 전보다 2.2%포인트 늘었다. 준비 기간이 짧아진 흐름은 눈여겨볼 대목이다.</p>
+<h2>인천은 임금근로자가 늘고 자영업자가 줄었다</h2>
+<p>인천 9월 취업자는 175만9000명으로 6000명 늘었다. 임금근로자는 144만9600명으로 3만5400명 늘었다. 자영업자 감소 2만6500명이 늘어난 임금 일자리의 4분의 3가량을 상쇄했다.</p>
+<figure><img src="img/icself01_c1.png" alt="막대그래프. 임금근로자는 늘고 자영업자와 무급가족종사자는 줄었다." loading="lazy"><figcaption>인천 2026년 9월 종사상 지위별 취업자 증감(전년동월 대비).</figcaption></figure>
+<p>인천 실업률은 2.4%로 1년 전보다 0.3%포인트 올랐다. 15~64세 고용률은 70.1%로 0.6%포인트 내렸다. 산업별로는 도·소매·숙박·음식점업 취업자가 1만1000명(3.7%) 줄었다.</p>
+<h2>자영업자 감소가 인천 경제에 말하는 것</h2>
+<p>자영업자 수가 줄었다는 사실만으로 폐업이 늘었다고 말할 수는 없다. 자영업자가 임금 일자리로 옮겼을 수도 있다. 인천 상용근로자가 3만2700명 늘어난 점은 이 해석에 힘을 싣는다.</p>
+<p>그러나 골목 업종이 줄어든 흐름은 전국과 인천이 같다. 전국 숙박·음식점업 비임금근로자가 4만7000명, 인천 도·소매·숙박·음식점업 취업자가 1만1000명 줄었다. 외식과 동네 장사가 먼저 무거워진다.</p>
+<p>비용 쪽 압력도 겹친다. 한국은행에 따르면 9월 예금은행 신규 대출금리는 연 4.57%로 올랐다. 2025년 기업생멸행정통계에서 새로 문을 연 기업의 1년 생존율은 63.9%다.</p>
+<p>분배로 보면 자영업자 감소는 서민 소득의 감소이기도 하다. 자영업 소득이 줄면 그 돈이 돌던 동네 상권의 수요도 함께 준다. 골목의 매출과 고용이 함께 흔들린다.</p>
+<p>인천시는 4일 국회에 지역사랑상품권(인천e음) 국비 259억 원 증액을 요청했다. 동네 가게 매출로 바로 이어지는 돈이다. 자영업자 감소가 그 요청의 근거가 된다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>국가데이터처 고용통계과(2026). 2026년 8월 경제활동인구조사 비임금근로 부가조사 결과(보도자료). 2026년 11월 4일. <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787907" target="_blank" rel="noopener">https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787907</a></li>
+<li>경인지방데이터청(2026). 2026년 9월 인천광역시 고용동향. 2026년 10월 16일. 인천시 일자리플랫폼 게시. <a href="https://www.incheon.go.kr/jobs/main/pst/list.do?pst_id=m_job_trend" target="_blank" rel="noopener">https://www.incheon.go.kr/jobs/main/pst/list.do?pst_id=m_job_trend</a></li>
+<li>국가데이터처(2026). 2025년 기업생멸행정통계(잠정) 결과(보도자료). 2026년 10월 22일. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288411" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288411</a></li>
+<li>한국은행(2026). 2026년 9월 금융기관 가중평균금리(보도자료). 2026년 10월 29일. <a href="https://www.bok.or.kr/portal/main/main.do" target="_blank" rel="noopener">https://www.bok.or.kr/portal/main/main.do</a></li>
+<li>인천광역시 재정담당관(2026). 인천시, 2027년도 국비 확보 위해 국회 방문 총력 대응(보도자료). 2026년 11월 4일. <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015886684" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015886684</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진1] 인천광역시 보도자료 「인천시 삼산농산물도매시장, 추석 맞이 대대적 환경정비 실시」 붙임 사진, 공공누리 출처표시, 2026.9.17., https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015549722</li><li>[도표1] 경인지방데이터청 「2026년 9월 인천광역시 고용동향」 수치로 AI경제저널 작성</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="icgb01.html">인천시 &quot;국비 1306억 더&quot;…노동감독관 인건비·인천e음·M버스</a></li><li><a href="cpi01.html">[물가] 장바구니 재료값은 내리는데 차림값은 오른다</a></li><li><a href="gdlc01.html">검단 근로자복합문화센터 문 열어…월 1만원 강좌, 평일 밤 9시까지</a></li><li><a href="ledu01.html">노동교육 필요하다 71.6%…의무교육 빼면 받아 본 사람 8.8%</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천자영업자</span><span>#비임금근로</span><span>#자영업</span><span>#고용동향</span><span>#숙박음식점업</span><span>#골목상권</span><span>#실업률</span><span>#대출금리</span><span>#인천경제</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
