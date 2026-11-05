@@ -128,7 +128,7 @@
     if(!p) return;
     var hay=[p["묶음"],p["분야"],p["갈래"]].join(' ');   /* 제목 본문 속 낱말(보기: 칼럼 제목의 「보고서」)로 빼지 않는다 — 제목은 머리 꺾쇠 [○○ 브리핑]만 본다(2026-11-03 소장님 「소셜미디어 공유하기 없는 기사도 잇습니다」) */
     var head=(String(p["제목"]||'').match(/^\s*\[[^\]]*\]/)||[''])[0];
-    if(p["섹션"]==="기획연재" || /브리핑|보고서/.test(hay) || /브리핑|보고서/.test(head)) return;   /* 기획연재·브리핑·보고서(월간·분기·반기·연간)·연구보고서는 빼라 */
+    /* 2026-11-05 소장님 결정 「모든 글에 넣기」 — 기획연재·브리핑·보고서도 빼지 않고 모든 글 쪽에 공유 단추를 넣는다(11-03 「빼라」를 갈음). hay·head 는 기록으로 남긴다 */
     var go=function(){ build(p); };
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
   }).catch(function(){});
