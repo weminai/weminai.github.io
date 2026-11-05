@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그를 적지 않는다 — 바꿔 넣기가 주석 속 글자를 잡아 쪽이 하얗게 된 일(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[월간 보고서] 나라 소득은 18.8% 늘었는데 인천 자영업자는 2만6500명 줄었다 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="경세제민연구소 월간 보고서 2026년 10월호(첫 호) 요약">
+<link rel="canonical" href="https://weminai.com/media/rep02.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[월간 보고서] 나라 소득은 18.8% 늘었는데 인천 자영업자는 2만6500명 줄었다">
+<meta property="og:description" content="경세제민연구소 월간 보고서 2026년 10월호(첫 호) 요약">
+<meta property="og:url" content="https://weminai.com/media/rep02.html">
+<meta property="og:image" content="https://weminai.com/media/img/rep02_cover.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">월간 보고서</div>
+ <h1>[월간 보고서] 나라 소득은 18.8% 늘었는데 인천 자영업자는 2만6500명 줄었다</h1>
+ <div class="byl"><span class="nm">김갑봉 소장</span><span class="dt">입력 2026.11.05</span><span class="dt">업데이트 2026.11.05 18:41</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>경세제민연구소 월간 보고서 2026년 10월호(첫 호) 요약</p><p>자영업자 8.6%·비정규직 실질 월급 1.8% 감소, 가계대출 금리 4.96%</p></div>
+ <div class="body">
+<figure><img src="img/rep02_cover.jpg" alt="월간 보고서 2026년 10월호 표지" loading="lazy"><figcaption>경세제민연구소 월간 보고서 2026년 10월호 표지.</figcaption></figure>
+<h2>요약</h2>
+<p>경세제민 AI·경제 연구소가 월간 보고서 2026년 10월호를 냈다. 첫 호다. 9월 통계를 기준으로 시민 살림에 닿는 숫자를 여덟 꼭지로 읽고, 숫자마다 기관 원문과 세 번 맞췄다.</p>
+<p>2026년 9월 인천 자영업자는 28만2300명으로 1년 전보다 2만6500명(8.6%) 줄었다. 같은 달 국내 취업자는 11만3000명 늘고 실업률은 2.0%로 내렸으나, 인천 실업률은 2.4%로 올랐다.</p>
+<figure><img src="img/icmr01_c1.png" alt="2026년 9월 국내와 인천의 고용률·실업률과 인천 자영업자 증감률 막대그래프" loading="lazy"><figcaption>2026년 9월 고용 — 국내와 인천. 15~64세 고용률, 실업률, 인천 자영업자 증감률</figcaption></figure>
+<p>3분기 실질 국내총소득은 1년 전보다 18.8% 늘어 실질 국내총생산 증가율 3.4%를 크게 웃돌았다. 수출품 값이 수입품 값보다 크게 오른 몫이다. 그러나 같은 분기 민간소비는 전 분기보다 0.2% 줄었고, 6~8월 비정규직 실질 월급은 물가를 빼면 1.8% 줄었다(연구소 계산).</p>
+<figure><img src="img/icmr01_c4.png" alt="3분기 GDP와 GDI 증가율 막대그래프" loading="lazy"><figcaption>2026년 3분기 실질 국내총생산과 실질 국내총소득 증가율</figcaption></figure>
+<p>공장 문 앞 물가인 생산자물가는 9월 7.7%, 소비자물가는 2.9% 올라 그 틈이 4.8%포인트다. 인천 소비자물가 2.6%는 대구와 함께 16개 시·도 가운데 가장 낮았다.</p>
+<figure><img src="img/icmr01_c2.png" alt="9월 생산자물가 7.7%와 국내·인천 소비자물가 막대그래프" loading="lazy"><figcaption>생산자물가와 소비자물가(전년동월비). 틈 4.8%포인트는 연구소 계산</figcaption></figure>
+<p>9월 예금은행이 새로 내준 가계대출 금리는 연 4.96%로 한 달 새 0.20%포인트 올라, 새로 빌리는 사람은 1억원당 월 이자가 1만6667원 늘었다(연구소 계산). 예금금리 3.45%는 물가를 0.5%포인트 남짓 넘는 데 그쳤다.</p>
+<figure><img src="img/icmr01_c3.png" alt="소비자물가, 기준금리, 저축성수신금리, 대출금리, 가계대출금리 막대그래프" loading="lazy"><figcaption>금리와 물가. 9월 신규 가계대출 금리 4.96%</figcaption></figure>
+<p>인천 아파트 전셋값은 올해 10월 26일까지 4.60% 올라 매매가 0.76%를 크게 웃돌았고, 전세-매매 간격 3.84%포인트는 국내 1.10%포인트의 3.5배다. 10월 인천시가 연 도시계획 의견창 여덟 가운데 결정안을 연 것은 셋이었다.</p>
+<p>정부 2027년 예산안의 인천 국고보조금은 7조863억원이고, 인천시는 지역사랑상품권 259억원을 포함해 1306억원 증액을 국회에 건의했다. 인천시 2027년 예산안 15조9000억원에서 정부 이전재원은 12.4% 늘고 자체수입은 0.4% 느는 데 그쳤다.</p>
+<h2>제언</h2>
+<p>연구소의 제언은 세 가지다. 첫째, 인천시가 자영업자 증감을 업종과 군·구로 나눠 다달이 공개하기를 제안한다. 둘째, 지역사랑상품권 국비 증액 건의가 국회 심사에서 어떻게 결론 나는지 다음 호가 추적한다. 셋째, 정책금융의 만기 연장과 금리 감면은 담보 없는 자영업자에게 먼저 가야 한다.</p>
+<h2>이 보고서에 대하여</h2>
+<p>원문은 여덟 꼭지와 가공 지표 여덟(경세제민 살림지수), 해석 꼭지 「10월의 숫자가 경제에 말하는 것」, 제언 셋을 담았으며 회원께 드린다. 숫자는 모두 기관 원문으로 맞췄고 언론 보도는 근거로 쓰지 않았다. 다음 호는 11월 마지막 평일에 낸다.</p>
+<p>이해상충 고지 — 연구소는 인천시의회 「인천 택지지구 공간 재창조 연구회」의 정책연구용역을 수행하고 있으며, 원문의 도시계획 꼭지는 인천시가 공개한 원문만 썼다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>경인지방데이터청(2026.10.16). 「2026년 9월 인천광역시 고용동향」. 인천시 일자리플랫폼. <a href="https://www.incheon.go.kr/jobs/main/pst/list.do?pst_id=m_job_trend" target="_blank" rel="noopener">https://www.incheon.go.kr/jobs/main/pst/list.do?pst_id=m_job_trend</a></li>
+<li>국가데이터처(2026.10.21). 「2026년 8월 경제활동인구조사 근로형태별 부가조사 결과」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288340" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288340</a></li>
+<li>국가데이터처(2026.10.2). 「2026년 9월 소비자물가동향」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=287770" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=287770</a></li>
+<li>국가데이터처(2026.10.22). 「2025년 기업생멸행정통계(잠정) 결과」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288411" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288411</a></li>
+<li>한국은행(2026.10.27). 「2026년 3/4분기 실질 국내총생산(속보)」. <a href="https://www.bok.or.kr/portal/bbs/B0000501/view.do?nttId=11065944&amp;menuNo=201264" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/B0000501/view.do?nttId=11065944&amp;menuNo=201264</a></li>
+<li>한국은행(2026.10.16). 「2026년 9월 수출입물가지수 및 무역지수(잠정)」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288195" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288195</a></li>
+<li>한국은행(2026.10.21). 「2026년 9월 생산자물가지수(잠정)」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288362" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288362</a></li>
+<li>한국은행(2026.10.21). 「2025년 연간 기업경영분석 결과」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288345" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288345</a></li>
+<li>한국은행(2026.10.29). 「2026년 9월 금융기관 가중평균금리」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288715" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288715</a></li>
+<li>금융감독원(2026.10.23). 「&#x27;26.8월말 국내은행의 원화대출 연체율 현황(잠정)」. <a href="https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=243351&amp;menuNo=200218" target="_blank" rel="noopener">https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=243351&amp;menuNo=200218</a></li>
+<li>재정경제부·관세청(2026.10.15). 「2026년 9월 월간 수출입 현황(확정치)」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288151" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288151</a></li>
+<li>한국부동산원(2026.10.29). 「2026년 10월 4주 주간 아파트가격 동향」(10월 26일 기준). <a href="https://www.reb.or.kr/reb/na/ntt/selectNttInfo.do?mi=9565&amp;bbsId=1154&amp;nttSn=118012" target="_blank" rel="noopener">https://www.reb.or.kr/reb/na/ntt/selectNttInfo.do?mi=9565&amp;bbsId=1154&amp;nttSn=118012</a></li>
+<li>인천광역시 예산담당관(2026.11.5). 「인천시, 2027년 예산안 15조 9천억 원 편성, 민생 지키고 인천 제값 찾는다」. <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015900573" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015900573</a></li>
+<li>국토교통부. 국토교통 통계누리 「미분양주택현황보고」(2026년 9월). <a href="https://stat.molit.go.kr/portal/cate/statView.do?hRsId=32&amp;hFormId=2082" target="_blank" rel="noopener">https://stat.molit.go.kr/portal/cate/statView.do?hRsId=32&amp;hFormId=2082</a></li>
+<li>기획예산처(2026.10.15). 「월간 재정동향」 2026년 10월호. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288153" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288153</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[도표1~4] 경세제민 AI·경제 연구소(주) 작성. 자료 국가데이터처, 경인지방데이터청, 한국은행</li><li>[표지] 경세제민 AI·경제 연구소(주) 작성</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="icmr01.html">나라 소득 18.8% 늘 때 인천 자영업자 2만6500명 줄었다</a></li><li><a href="rep01.html">인천 지방정부는 무엇을 연구에 맡기는가</a></li><li><a href="cpi01.html">[물가] 장바구니 재료값은 내리는데 차림값은 오른다</a></li><li><a href="icself01.html">국내 자영업자 늘 때 인천은 2만6500명 줄었다</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#월간보고서</span><span>#경세제민살림지수</span><span>#인천경제</span><span>#자영업자</span><span>#비정규직</span><span>#실질임금</span><span>#소비자물가</span><span>#가계대출금리</span><span>#국내총소득</span><span>#인천전세</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
