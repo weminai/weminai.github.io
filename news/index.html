@@ -196,7 +196,7 @@ var VIEWS_URL = "";
    차례: 날짜·시각순, 같은 때는 섹션 중요도 순(메뉴 차례). 헤드라인 5(큰 1 + 작은 4 — 2026-11-01 소장님 「헤드라인에 5개가 있어야 하는데」) → 6(제목·부제) → 6(사진) → 10(이어서 읽기) → 10(더 읽을 기사). 등급 이름은 화면에 쓰지 않는다
    「갈래」가 「발표」인 글은 「맨위」 지정이 없으면 헤드라인에 들지 않는다. 헤드라인은 평균 3시간 — 「시각」 칸이 있으면 다섯이 모두 3시간을 넘기기 전에는 새 글이 들지 않는다
    한 칸 안에서 한 섹션은 두 편까지(헤드라인은 한 편) */
-fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
+fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){ list=(Array.isArray(list)?list:[]).filter(function(p){ return p["누리집"]!=="연구소"; }); /* 연구소 몫(보도자료·연구보고서)은 뉴스에 걸지 않는다 — 통합지침 쉰다섯 2항, 2026-11-06 소장님 승인 */
   if(!Array.isArray(list)||!list.length){ document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다.</div>'; return; }
   var pr=function(p){ return SEC.indexOf(secOf(p)); };
   var tm=function(p){ var m=String(p["날짜"]||"").match(/(\d{4})-(\d{2})-(\d{2})/); if(!m) return 0; var h=String(p["시각"]||"").match(/(\d{1,2}):(\d{2})/);

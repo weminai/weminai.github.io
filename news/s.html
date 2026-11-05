@@ -405,7 +405,7 @@ var qs=function(o){ var k=('k' in o)?o.k:K, q=('q' in o)?o.q:Q, sb=('sub' in o)?
 var subKw=function(k,name){ var hit=null; (SUBS[k]||[]).forEach(function(x){ if(x.k===name) hit=x.kw; (x.sub||[]).forEach(function(y){ if(y.k===name) hit=y.kw; }); }); return hit; };
 document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":(ALIAS[K]?(ALIAS[K][0]+(ALIAS[K][1]?' · '+ALIAS[K][1]:'')):K)); document.title=(Q?('검색 '+Q):K)+" — AI경제저널";
 (function(){var i=document.querySelector('.gnb .sch input'); if(i&&Q) i.value=Q;})();
-fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){
+fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){ list=(Array.isArray(list)?list:[]).filter(function(p){ return p["누리집"]!=="연구소"; }); /* 연구소 몫(보도자료·연구보고서)은 뉴스에 걸지 않는다 — 통합지침 쉰다섯 2항, 2026-11-06 소장님 승인 */
   list.sort(function(a,b){ return String(b["날짜"]||"").localeCompare(String(a["날짜"]||"")); });
   var W=Q?Q.split(/\s+/):[];
   var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:(K==="정책브리핑")?list.filter(isBrief):(K==="기획연재")?list.filter(function(p){ return p["섹션"]==="기획연재"; }):ALIAS[K]?list.filter(function(p){ return secOf(p)===ALIAS[K][0] && (!ALIAS[K][1] || hay(p).indexOf(ALIAS[K][1])>=0 || (ALIAS[K][1]==="물류"&&/물류|화물|컨테이너/.test(hay(p)))); }):list.filter(function(p){ return secOf(p)===K; }));

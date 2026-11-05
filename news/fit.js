@@ -123,7 +123,7 @@
       else if(s==='cp') copy('기사 주소를 복사했습니다.');
     });
   }
-  fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(list){
+  fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(list){ list=(Array.isArray(list)?list:[]).filter(function(p){ return p["누리집"]!=="연구소"; }); /* 연구소 몫(보도자료·연구보고서)은 뉴스에 걸지 않는다 — 통합지침 쉰다섯 2항, 2026-11-06 소장님 승인 */
     var p=null; for(var i=0;i<list.length;i++){ if(String(list[i]["파일"]||'').split('/').pop()===file){ p=list[i]; break; } }
     if(!p) return;
     var hay=[p["묶음"],p["분야"],p["갈래"]].join(' ');   /* 제목 본문 속 낱말(보기: 칼럼 제목의 「보고서」)로 빼지 않는다 — 제목은 머리 꺾쇠 [○○ 브리핑]만 본다(2026-11-03 소장님 「소셜미디어 공유하기 없는 기사도 잇습니다」) */
