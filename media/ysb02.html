@@ -1,0 +1,91 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[해운협정] 한중 해운회담 28차 합의, 인천·대산 서해 뱃길 셋 연다 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="인천-일조 컨테이너 4분기 취항 목표, 인천-천진 카페리 정상화">
+<link rel="canonical" href="https://weminai.com/media/ysb02.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[해운협정] 한중 해운회담 28차 합의, 인천·대산 서해 뱃길 셋 연다">
+<meta property="og:description" content="인천-일조 컨테이너 4분기 취항 목표, 인천-천진 카페리 정상화">
+<meta property="og:url" content="https://weminai.com/media/ysb02.html">
+<meta property="og:image" content="https://weminai.com/media/img/ysb02_02.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">해양</div>
+ <h1>[해운협정] 한중 해운회담 28차 합의, 인천·대산 서해 뱃길 셋 연다</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.05</span><span class="dt">업데이트 2026.11.05 16:55</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>인천-일조 컨테이너 4분기 취항 목표, 인천-천진 카페리 정상화</p><p>남북해운합의서 항로대는 2010년 5·24 조치로 폐쇄</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 한국과 중국 해운당국이 지난 6월 인천에서 연 제28차 해운회담에서 서해 뱃길 셋을 열거나 되살리기로 합의했다. 인천-일조 컨테이너 항로는 개설, 인천-천진 카페리 항로는 조기 정상화, 대산-석도 카페리 항로는 신규 개설이 합의 내용이다. 인천-천진 항로는 2020년 2월 운항이 멈춘 항로다.</p>
+<p>한중 사이 새 뱃길은 두 나라 정부가 회담에서 개설 여부를 정한다. 회담 결과에 인천항과 충남 서해안의 물동량과 카페리 여객이 걸려 있다. 인천 앞바다 북쪽에는 남북해운합의서가 정한 해상 항로대가 따로 있다.</p>
+<h2>1993년 협정, 해마다 한 번 여는 회담</h2>
+<figure><img src="img/ysb02_01.jpg" alt="아리랑 2호가 2015년 12월 10일 찍은 인천대교와 송도 일대. 제28차 한·중 해운회담은 송도에서 열렸다." loading="lazy"><figcaption>아리랑 2호가 2015년 12월 10일 찍은 인천대교와 송도 일대. 제28차 한·중 해운회담은 송도에서 열렸다.</figcaption></figure>
+<p>한중 해운회담의 근거는 1993년 5월 27일 서울에서 서명한 「해상운송에 관한 협정」이다. 협정은 같은 해 6월 26일 발효했다. 처음 3년 동안 유효하고, 그 뒤로는 1년씩 자동으로 연장된다.</p>
+<p>제10조는 양국 해운당국 대표가 해마다 한 번 모여 협정 이행에서 생기는 문제를 논의하도록 정한다. 한쪽이 요청하면 특별회의도 연다.</p>
+<p>제3조는 한쪽 나라 선박이 상대국의 개방 항구를 드나들며 두 나라 사이, 또는 제3국과의 여객·화물 운송에 종사할 수 있게 한다. 같은 조는 정기선 교역과 여객 운송에서 &quot;호혜평등의 원칙&quot;을 실현하도록 서로 협력한다고 적는다.</p>
+<p>협정 본문에는 항로를 몇 개 열지가 없다. 그 몫은 해마다 열리는 회담이 맡는다. 제28차 회담은 6월 4~5일 인천 송도에서 열렸다. 수석대표는 김혜정 해양수산부 해운물류국장과 중국 교통운수부 수운국 부국장이다. 대표단은 한국 13명, 중국 12명이다.</p>
+<h2>인천-일조 컨테이너, 4분기 취항 계획</h2>
+<p>해수부에 따르면 양국은 중국 측이 이미 신청한 인천-일조 컨테이너 항로 개설에 동의했다. 이후 신청되는 신규 항로는 기존 해운회담에서 합의한 원칙과 절차에 따라 개설 여부를 검토한다.</p>
+<figure><img src="img/ysb02_04.jpg" alt="제28차 한·중 해운회담 합의 다섯. 자료 해양수산부." loading="lazy"><figcaption>제28차 한·중 해운회담 합의 다섯. 자료 해양수산부.</figcaption></figure>
+<p>중국 산둥성 교통운수청은 7월 20일 이 항로가 두 나라 정부의 심사를 정식으로 통과했다고 발표했다. 운항은 산둥원양해운그룹이 맡고, 2026년 4분기 취항이 목표다. 일조는 산둥성 남동부의 항구도시로, 중국어 발음으로는 르자오다.</p>
+<p>한중 항로는 우리나라 카페리 운송의 중심이다. 이경한 한남대 교수와 한국해양수산개발원 이종필·고동훈 연구진의 2021년 논문에 그 비중이 나온다. 2018년 기준 한중 항로의 몫은 전국 카페리 여객의 약 77.5%, 화물의 약 84.6%다.</p>
+<p>연구진에 따르면 우리나라 카페리 항로는 1970년 한일 노선에서 출발해 21개로 늘었다. 늘어난 항로 가운데 10개가 인천·평택과 중국을 잇는다. 연구진이 꼽은 인천항 국제여객부두의 시급한 과제는 세관 인력 확충과 상시 통관, 카페리 화물 전용 배후단지다.</p>
+<h2>천인호 멈춘 지 6년, 인천-천진</h2>
+<figure><img src="img/ysb02_02.jpg" alt="2006년 8월 중국 천진항 여객터미널 앞에 정박한 여객선." loading="lazy"><figcaption>2006년 8월 중국 천진항 여객터미널 앞에 정박한 여객선.</figcaption></figure>
+<p>인천-천진 항로의 정기 운항은 2020년 2월 끊겼다. 진천국제객화항운의 천인호가 선령 30년에 이르러 운항을 멈췄다. 양국은 이번 회담에서 조기 정상화에 동의했다. 운항은 두 나라가 균등한 지분을 가진 위동항운이 맡는다.</p>
+<p>해수부는 이번 회담을 두고 &quot;인천-천진 항로 정상화 등 한·중 해운협력의 새로운 이정표를 세운 자리&quot;라고 밝혔다. 카페리 신규 항로에는 새로 지은 배를 넣는 것이 원칙이다. 신조를 전제로 임시 컨테이너선을 먼저 넣는 일은 허용하지 않는다.</p>
+<p>해수부는 임시 컨테이너선으로 이익만 챙긴 뒤 신조 투입을 번복하는 일을 막는 조치라고 설명한다. 승객은 늘고 있다. 인천항만공사 집계로 올해 1~9월 인천항 한중 카페리 여객은 36만7329명이다. 지난해 같은 기간보다 18.8% 많다.</p>
+<h2>대산-석도 개설, 하역료는 숙제</h2>
+<p>대산-석도 카페리 항로는 새 항로다. 해수부가 밝힌 개설 이유는 충청권에 국제 항로가 없다는 점이다. 운항 선사는 추후 선정한다. 중국 쪽 기항지 석도는 인천과 이미 카페리로 이어져 있다.</p>
+<p>김재철 등 인천대 연구진의 2022년 논문은 2017~2021년 한중·한일 카페리 16개 항로의 효율성을 비교한다. 기본 모형에서는 평택-일조, 인천-진황도, 인천-석도 항로의 효율이 가장 높다. 석도와 일조, 두 항구가 이번 회담 합의에 함께 들어 있다.</p>
+<p>분석 모형을 바꾸면 순위도 바뀐다. 투입과 산출의 여유분까지 따지는 모형에서는 인천-연운항, 인천-청도, 평택-일조 항로가 5년 내내 효율 1로 나온다. 평택-일조 항로는 두 모형 모두에서 상위에 든다.</p>
+<p>비용 문제도 의제다. 한국 측은 중국 주요 항만의 과도한 하역료 인상 문제를 제기했고, 중국 측에 적절한 조치와 관리를 요구했다. 하역료는 항만에서 화물을 배에 싣고 내리는 데 드는 요금이다.</p>
+<h2>남북해운합의서, 5·24로 닫힌 항로대</h2>
+<figure><img src="img/ysb02_03.jpg" alt="미국 항공우주국(NASA) 위성이 2012년 9월 24일 밤 찍은 한반도와 서해. 남쪽과 북쪽의 불빛이 크게 다르다." loading="lazy"><figcaption>미국 항공우주국(NASA) 위성이 2012년 9월 24일 밤 찍은 한반도와 서해. 남쪽과 북쪽의 불빛이 크게 다르다.</figcaption></figure>
+<p>남북 사이에도 해운 합의가 있다. 통일연구원 보고서에 따르면 남북해운합의서는 2004년 5월 28일 체결됐다. 합의서와 부속합의서는 2005년 8월 5일 효력을 냈다. 남북이 9개 경협합의서의 발효 문본을 교환한 날이다. 이 합의서는 남북 선박이 정해진 해상 항로대를 따라 상대 항구를 오가게 한다.</p>
+<p>2010년 5월 24일 정부는 북한 선박의 우리 해역 운항을 전면 불허한다고 밝혔다. 장광일 당시 국방부 정책실장은 남북해운합의서에 따른 해상 항로대를 폐쇄하는 방식이라고 설명했다.</p>
+<figure><img src="img/ysb02_05.jpg" alt="서해의 두 해운 합의. 자료 국가법령정보센터·통일연구원·국방부." loading="lazy"><figcaption>서해의 두 해운 합의. 자료 국가법령정보센터·통일연구원·국방부.</figcaption></figure>
+<p>한중 협정 제10조에 따라 두 나라 해운당국은 해마다 다시 만난다. 제28차 합의문에서 대산-석도 운항 선사는 추후 선정 몫이다. 산둥성이 내건 인천-일조 컨테이너 항로의 취항 목표는 올해 4분기다. 같은 서해에서 남북 항로대는 2010년 5·24 조치 때 폐쇄됐다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>김재철·김유나·최영서·김현진·여기태, 「코로나 19 전후 기간의 한중 및 한일카페리 항로 효율성 비교에 관한 연구- 카페리 화물을 중심으로」, 『해운물류연구』 38(3), 한국해운물류학회, 2022.9, 543-564쪽, <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11238767" target="_blank" rel="noopener">https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11238767</a></li><li>이경한·이종필·고동훈, 「인천항 국제여객부두 관리체계 개선에 관한 연구」, 『한국항만경제학회지』 37(3), 한국항만경제학회, 2021, 35-53쪽, <a href="https://doi.org/10.38121/kpea.2021.09.37.3.35" target="_blank" rel="noopener">https://doi.org/10.38121/kpea.2021.09.37.3.35</a></li><li>이철수 외, 『남북한 통합을 위한 법제도 인프라 확충방안』, 경제·인문사회연구회 협동연구총서 05-08-04, 통일연구원, 2005.12, <a href="https://repo.kinu.or.kr/bitstream/2015.oak/863/1/0000676021.pdf" target="_blank" rel="noopener">https://repo.kinu.or.kr/bitstream/2015.oak/863/1/0000676021.pdf</a></li><li>「대한민국 정부와 중화인민공화국 정부간의 해상운송에 관한 협정」, 조약 제1175호(1993.5.27 서명, 1993.6.26 발효), 국가법령정보센터, <a href="https://www.law.go.kr/LSW/trtyInfoR.do?trtySeq=1360" target="_blank" rel="noopener">https://www.law.go.kr/LSW/trtyInfoR.do?trtySeq=1360</a></li><li>&quot;제28차 한·중 해운회담, 컨테이너·카페리 항로 관리 방안 등 논의&quot;, 해양수산부, 2026.6.5, <a href="https://www.mof.go.kr/doc/ko/selectDoc.do?docSeq=66881&amp;bbsSeq=10&amp;menuSeq=971" target="_blank" rel="noopener">https://www.mof.go.kr/doc/ko/selectDoc.do?docSeq=66881&amp;bbsSeq=10&amp;menuSeq=971</a></li><li>&quot;남북해운합의서 발효됐다&quot;, 해양수산부 정책해설자료, 2005.8.9, <a href="https://epts.kdi.re.kr/archive/frwdHist/view2?EPIC_NUM=75508" target="_blank" rel="noopener">https://epts.kdi.re.kr/archive/frwdHist/view2?EPIC_NUM=75508</a></li><li>&quot;북한 선박 통행 제한 어떻게&quot;, 국방부, 정책브리핑, 2010.5.25, <a href="https://www.korea.kr/briefing/policyBriefingView.do?newsId=148694365" target="_blank" rel="noopener">https://www.korea.kr/briefing/policyBriefingView.do?newsId=148694365</a></li><li>&quot;우리나라 해운협정 체결현황&quot;, 외교부, 공공데이터포털, <a href="https://www.data.go.kr/data/15051156" target="_blank" rel="noopener">https://www.data.go.kr/data/15051156</a></li></ul><h4>[사진 출처]</h4><ul><li>[사진 1] 한국항공우주연구원, 위키미디어 공용(공공누리 제1유형)</li><li>[사진 2] Olegushka, 위키미디어 공용(CC0)</li><li>[사진 3] NASA 지구관측소, 위키미디어 공용(퍼블릭 도메인)</li><li>[도표 1·2] AI경제저널 작성. 자료 해양수산부, 국가법령정보센터, 통일연구원, 국방부</li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 AI 프로그램 클로드를 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="ysb01.html">[해양경계] 한중 해양경계 16차 회담, 서해5도 앞에서 멈춘 세 경계선</a></li><li><a href="crz01.html">인천항 크루즈 올해 113항차·내년 132항차…시, 지역축제·상권 연계 관광 강화</a></li><li><a href="sov15.html">[인천해양주권⑮] 인천항 투자 65% 줄 때 부산항은 84% 늘었다</a></li><li><a href="mai13.html">[해양 AI 융복합⑬] 2032년 1단계 9선석 진해신항, 2조원 장비와 단일 운영사로 짜는 피지컬 AI 항만</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#해운협정</span><span>#한중해운회담</span><span>#해상운송에관한협정</span><span>#인천천진카페리</span><span>#인천일조항로</span><span>#대산석도카페리</span><span>#위동항운</span><span>#하역료</span><span>#남북해운합의서</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
