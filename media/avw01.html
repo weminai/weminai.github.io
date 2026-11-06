@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그를 적지 않는다 — 바꿔 넣기가 주석 속 글자를 잡아 쪽이 하얗게 된 일(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[항공] 같은 강풍에 김포 9분·제주 4분…공항 장비가 지연 갈랐다 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="김포~제주 16년 운항 분석, 강풍은 김포·폭설은 제주에서 더 늦어">
+<link rel="canonical" href="https://weminai.com/media/avw01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[항공] 같은 강풍에 김포 9분·제주 4분…공항 장비가 지연 갈랐다">
+<meta property="og:description" content="김포~제주 16년 운항 분석, 강풍은 김포·폭설은 제주에서 더 늦어">
+<meta property="og:url" content="https://weminai.com/media/avw01.html">
+<meta property="og:image" content="https://weminai.com/media/img/avw01_06.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">항공</div>
+ <h1>[항공] 같은 강풍에 김포 9분·제주 4분…공항 장비가 지연 갈랐다</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.06 14:51</span><span class="dt">업데이트 2026.11.06 14:51</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>김포~제주 16년 운항 분석, 강풍은 김포·폭설은 제주에서 더 늦어</p><p>미국 대형공항은 비·눈이 최대 23분…폭염은 두 연구 모두 무효과</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 겨울철 제주행 비행기가 늦어지면 승객은 먼저 날씨를 탓한다. 그런데 같은 날씨라도 공항마다 늦어지는 시간이 다르다는 연구가 나왔다. 차이를 가른 것은 공항의 대비 장비였다.</p>
+<p>국제 학술지에 실린 연구 다섯 편을 나란히 놓았다. 날씨가 비행기를 늦춘다는 데는 모두 같다. 어떤 날씨가 얼마나 늦추는지는 공항마다, 나라마다 다르다.</p>
+<h2>세계에서 가장 붐비는 국내선</h2>
+<figure><img src="img/avw01_01.jpg" alt="야자수가 늘어선 제주국제공항 청사 앞. 2022년 6월 27일 촬영." loading="lazy"><figcaption>야자수가 늘어선 제주국제공항 청사 앞. 2022년 6월 27일 촬영.</figcaption></figure>
+<p>김포~제주는 2017년부터 세계에서 가장 붐비는 국내선 노선이다. 거리는 약 449km, 비행시간은 1시간 남짓이다. 2018년 제주공항에서는 한 해 7만9640편이 뜨고 내렸다. 8분에 한 편꼴이다.</p>
+<p>서울대 환경대학원 김선호·홍종호 연구진은 2007년 1월부터 2023년 5월까지 이 노선의 출발 기록 130만 건을 분석했다. 논문은 국제 학술지 『항공운송관리저널』 11월호(137권)에 실렸다.</p>
+<p>연구진이 이 노선을 고른 까닭은 셋이다. 중간 기착 없이 두 공항만 오가 지연을 두 공항 날씨로 곧장 돌릴 수 있다. 운항이 공항 용량에 가까워 작은 날씨 충격도 지연으로 드러난다. 갈아탈 교통수단도 마땅치 않다.</p>
+<p>국토교통부가 10월 25일부터 적용한 2026년 동계 운항 일정에서 국내선은 20개 노선, 최대 주 1735회다. 20개 노선 가운데 13개가 제주 노선이다.</p>
+<h2>강풍은 김포, 폭설은 제주</h2>
+<figure><img src="img/avw01_c1.png" alt="[도표] 공항별 극한기상 기준값(상위 5%). 강풍·폭설·호우. 자료 Kim·Hong(2026) 표 3, 경세제민 AI·경제 연구소 작성." loading="lazy"><figcaption>[도표] 공항별 극한기상 기준값(상위 5%). 강풍·폭설·호우. 자료 Kim·Hong(2026) 표 3, 경세제민 AI·경제 연구소 작성.</figcaption></figure>
+<p>연구진은 공항마다 날씨 값의 상위 5%를 극한기상으로 잡았다. 강풍은 김포 39.45노트, 제주 45.26노트다. 폭설은 김포 7.42cm, 제주 6.61cm다.</p>
+<p>지연은 예정 출발보다 1분만 늦어도 셌다. 국토교통부 통계는 30분을 넘어야 지연으로 본다고 연구진은 적었다. 평균 출발 지연은 김포 21.1분, 제주 23.6분이다.</p>
+<figure><img src="img/avw01_02.jpg" alt="경기 평택 오산 미 공군기지에서 활주로 제설 차량이 첫눈을 치우고 있다. 2016년 1월 13일 촬영." loading="lazy"><figcaption>경기 평택 오산 미 공군기지에서 활주로 제설 차량이 첫눈을 치우고 있다. 2016년 1월 13일 촬영.</figcaption></figure>
+<p>연구진은 같은 편명끼리 견주는 고정효과 모형을 최종 결과로 골랐다. 편마다 원래 잘 늦는 성향을 걸러 내기 위해서다. 모형이 자료에 맞는 정도를 재는 정보기준(AIC·BIC)도 이 모형이 더 낫다.</p>
+<p>김포에서는 강풍이 출발을 평균 8.94분 늦췄다. 호우 1.56분, 폭설 1.36분, 한파 0.82분이 뒤를 이었다. 제주에서는 강풍 3.54분, 폭설 3.39분, 호우 1.33분, 한파 1.13분이었다.</p>
+<figure><img src="img/avw01_c2.png" alt="[도표] 극한기상별 평균 추가 출발 지연(분, 고정효과 모형), 김포·제주. 자료 Kim·Hong(2026) 표 5, 경세제민 AI·경제 연구소 작성." loading="lazy"><figcaption>[도표] 극한기상별 평균 추가 출발 지연(분, 고정효과 모형), 김포·제주. 자료 Kim·Hong(2026) 표 5, 경세제민 AI·경제 연구소 작성.</figcaption></figure>
+<p>폭염은 두 공항 모두 통계적으로 의미가 없다. 편별 특성을 걸러 내지 않은 모형에서는 김포 강풍 지연이 64.81분까지 커진다. 연구진은 이 값이 날씨 영향을 부풀린다고 봤다.</p>
+<p>태풍처럼 비와 바람이 함께 몰아칠 때는 김포에서만 지연이 더 커졌다. 저비용항공사 편은 두 공항 모두 대형항공사보다 더 늦다. 여유 항공기가 적어 한 번 생긴 지연이 다음 편으로 번지기 쉽다는 설명이다.</p>
+<h2>바람 센 제주가 덜 늦은 까닭</h2>
+<figure><img src="img/avw01_03.jpg" alt="바람 방향과 세기를 알려 주는 풍향자루가 선 비행장으로 경비행기가 내려오고 있다. 뉴질랜드 파우아누이 비행장, 2011년 1월 촬영." loading="lazy"><figcaption>바람 방향과 세기를 알려 주는 풍향자루가 선 비행장으로 경비행기가 내려오고 있다. 뉴질랜드 파우아누이 비행장, 2011년 1월 촬영.</figcaption></figure>
+<p>바람은 제주가 더 센데 강풍 지연은 김포가 길다. 반올림하면 9분 대 4분이다. 연구진은 장비 차이를 짚었다. 제주공항은 2001년부터 원격 센서 11개로 저층 급변풍 경보장비(LLWAS)를 돌렸다.</p>
+<p>논문은 김포에 이 장비가 없었다고 적었고, 근거로 2009년 기상연구소 연구를 들었다. 항공기상청이 올해 9월 공공데이터포털에 낸 LLWAS 경보·센터필드 자료에는 김포공항이 들어 있다. 연구 자료는 2023년 5월에서 끝난다.</p>
+<p>눈은 거꾸로다. 김포는 제설 장비를 제주보다 많이 갖췄고, 폭설 지연은 김포 1분, 제주 3분이다. 같은 날씨라도 공항의 대비가 지연 시간을 갈랐다는 게 연구진의 해석이다.</p>
+<p>활주로 방향도 변수다. 김포 활주로는 북서~남동, 제주는 동~서로 놓였다. 연구진은 두 공항 모두 우세풍이 활주로를 비스듬히 가로질러 측풍에 약하다고 짚었다.</p>
+<p>같은 두 공항의 2019년 지상 활주시간을 분석한 Park·Kim(2023) 연구도 풍향과 강수를 유의한 요인으로 냈다. 제주의 활주시간이 김포보다 길다.</p>
+<h2>미국 대형공항 10곳은 비·눈이 더 컸다</h2>
+<figure><img src="img/avw01_04.jpg" alt="미국 콜로라도주 그랜드정크션 지역공항 탑승 수속대 앞의 승객들. 2025년 5월 촬영." loading="lazy"><figcaption>미국 콜로라도주 그랜드정크션 지역공항 탑승 수속대 앞의 승객들. 2025년 5월 촬영.</figcaption></figure>
+<p>미국 대형공항 10곳의 출발 214만 편을 분석한 보르스키·운터베르거(2019)는 결과가 달랐다. 비와 눈은 강도에 따라 출발을 10~23분 늦췄다. 바람은 1~3분에 그쳤고, 영하 기온은 약 2분이었다.</p>
+<figure><img src="img/avw01_c3.png" alt="[도표] 날씨별 추가 출발 지연, 김포~제주(Kim·Hong 2026 고정효과)와 미국 대형공항 10곳(Borsky·Unterberger 2019). 경세제민 AI·경제 연구소 작성." loading="lazy"><figcaption>[도표] 날씨별 추가 출발 지연, 김포~제주(Kim·Hong 2026 고정효과)와 미국 대형공항 10곳(Borsky·Unterberger 2019). 경세제민 AI·경제 연구소 작성.</figcaption></figure>
+<p>바람과 비의 크기가 두 연구에서 뒤집힌 셈이다. 폭염이 지연을 늘리지 않는다는 결과는 같다. 미국 연구진은 바람이 비보다 23배 자주 불어 누적 영향은 클 수 있다고 덧붙였다.</p>
+<p>미국 연구진은 승객이 지연 1분을 약 1.5달러로 여긴다는 선행 연구를 들어 비용도 따졌다. 2017년 기상 지연이 모두 비·눈 때문이었다고 보면 비용은 6억7000만~15억4000만 달러다.</p>
+<h2>시간당 1만 달러, 공항별 기준이 필요하다</h2>
+<figure><img src="img/avw01_05.jpg" alt="인천국제공항 도착장에서 승객들이 안내판을 보며 오가고 있다. 2007년 11월 26일 촬영." loading="lazy"><figcaption>인천국제공항 도착장에서 승객들이 안내판을 보며 오가고 있다. 2007년 11월 26일 촬영.</figcaption></figure>
+<p>연구진은 승객의 시간가치를 시간당 57.07달러로 잡았다. 업무 승객 10%, 여가 승객 90%로 나눈 값이다. 시간당 승객 1240명을 곱하면 김포 강풍 한 시간의 사회적 비용은 1만615달러다. 제주는 폭설과 강풍이 각각 4246달러다.</p>
+<figure><img src="img/avw01_c4.png" alt="[도표] 극한기상 지연 한 시간의 사회적 비용(달러), 김포·제주. 자료 Kim·Hong(2026) 표 7·8, 경세제민 AI·경제 연구소 작성." loading="lazy"><figcaption>[도표] 극한기상 지연 한 시간의 사회적 비용(달러), 김포·제주. 자료 Kim·Hong(2026) 표 7·8, 경세제민 AI·경제 연구소 작성.</figcaption></figure>
+<p>비용을 재는 길은 하나가 아니다. 레스구르그·말라볼티(2023)는 유럽 국내선 수익관리 자료로 출발편 승객, 짧게 머무는 승객, 첨두시간 승객의 지연 비용이 더 크다고 밝혔다. 같은 시간가치를 모두에게 매기면 실제 비용과 어긋날 수 있다.</p>
+<p>논문이 정리한 항공기상 특보 기준은 최대풍속 35노트, 적설 3cm, 3시간 강수 50mm다. 연구진은 전국에 한 가지로 적용하는 기준 대신 공항별 기준을 세우라고 제안했다. 제설과 기상관측 투자의 편익 근거로 이 비용을 쓰라고도 했다.</p>
+<figure><img src="img/avw01_06.jpg" alt="경기 평택 오산 미 공군기지 여객터미널 뒤편에서 여객 담당 병사 두 명이 첫눈을 치우고 있다. 2016년 1월 13일 촬영." loading="lazy"><figcaption>경기 평택 오산 미 공군기지 여객터미널 뒤편에서 여객 담당 병사 두 명이 첫눈을 치우고 있다. 2016년 1월 13일 촬영.</figcaption></figure>
+<p>보스카키 외(2023)는 공항 기반시설이 과거 기후 기준으로 설계돼 기후변화에 더 취약해진다고 정리했다. 결항으로 번진 경우는 김포~제주 연구에 들어 있지 않다. 연구진도 장시간 지연과 결항을 함께 다루는 후속 연구가 필요하다고 적었다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>Kim, S. H., Hong, J. H. (2026). Flight delays and social costs from extreme weather on the Gimpo-Jeju air route of South Korea. Journal of Air Transport Management, 137, 103080. <a href="https://doi.org/10.1016/j.jairtraman.2026.103080" target="_blank" rel="noopener">https://doi.org/10.1016/j.jairtraman.2026.103080</a></li>
+<li>Borsky, S., Unterberger, C. (2019). Bad weather and flight delays: The impact of sudden and slow onset weather events. Economics of Transportation, 18, 10-26. <a href="https://doi.org/10.1016/j.ecotra.2019.02.002" target="_blank" rel="noopener">https://doi.org/10.1016/j.ecotra.2019.02.002</a></li>
+<li>Lesgourgues, A., Malavolti, E. (2023). Social cost of airline delays: Assessment by the use of revenue management data. Transportation Research Part A: Policy and Practice, 170, 103613. <a href="https://doi.org/10.1016/j.tra.2023.103613" target="_blank" rel="noopener">https://doi.org/10.1016/j.tra.2023.103613</a></li>
+<li>Park, D. K., Kim, J. K. (2023). Influential factors to aircraft taxi time in airport. Journal of Air Transport Management, 106, 102321. <a href="https://doi.org/10.1016/j.jairtraman.2022.102321" target="_blank" rel="noopener">https://doi.org/10.1016/j.jairtraman.2022.102321</a></li>
+<li>Voskaki, A., Budd, T., Mason, K. (2023). The impact of climate hazards to airport systems: a synthesis of the implications and risk mitigation trends. Transport Reviews, 43(4), 652-675. <a href="https://doi.org/10.1080/01441647.2022.2163319" target="_blank" rel="noopener">https://doi.org/10.1080/01441647.2022.2163319</a></li>
+<li>국토교통부 국제항공과(2026.10.25). 「’26년 동계 정기 항공편 일정 확정」. <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288494" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288494</a></li>
+<li>기상청 항공기상청(2026.9.29). 「기상청 항공기상청_LLWAS 경보」·「LLWAS 센터필드정보」, 공공데이터포털. <a href="https://www.data.go.kr/biz/dcat/metadata/15150323.do" target="_blank" rel="noopener">https://www.data.go.kr/biz/dcat/metadata/15150323.do</a> <a href="https://www.data.go.kr/biz/dcat/metadata/15150325.do" target="_blank" rel="noopener">https://www.data.go.kr/biz/dcat/metadata/15150325.do</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진1] Jeong seolah, 「Jeju airport.jpg」, 위키미디어 공용, CC0, 2022.6.27.</li><li>[사진2] Tech. Sgt. Travis Edwards(미 공군), 「Winter time at Osan AB -- They see me rollin&#x27; 160113-F-LU738-148.jpg」, 위키미디어 공용, 퍼블릭 도메인(미 연방정부 저작물), 2016.1.13.</li><li>[사진3] Ingolfson, 「Pauanui Airfield Right Within The Village 02.jpg」, 위키미디어 공용, 퍼블릭 도메인, 2011.1.</li><li>[사진4] Designism, 「Grand Junction Regional Airport check-in counter.jpg」, 위키미디어 공용, CC0, 2025.5.8.</li><li>[사진5] Rintojiang, 「Incheon Airport-1.JPG」, 위키미디어 공용, 퍼블릭 도메인, 2007.11.26.</li><li>[사진6] Tech. Sgt. Travis Edwards(미 공군), 「Winter time at Osan AB -- Clearing first snowfall of the year 160113-F-LU738-076.jpg」, 위키미디어 공용, 퍼블릭 도메인(미 연방정부 저작물), 2016.1.13.</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="icng17.html">[글로벌 인천공항⑰] 인천공항 배당 3194억원, 2011년 매각대금 상임위 삭감</a></li><li><a href="dal01.html">델타항공, 태평양 노선 기내 와이파이 무료…&#x27;플라이 델타&#x27; 앱 국내 서비스 재개</a></li><li><a href="apr01.html">에어프레미아, 좌석 18석 줄여 이코노미 앞뒤 간격 33인치로</a></li><li><a href="uamc01.html">서산에 UAM 핵심부품 시험평가센터 완공…2027년부터 기업 지원</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#항공지연</span><span>#극한기상</span><span>#김포공항</span><span>#제주공항</span><span>#김포제주노선</span><span>#윈드시어</span><span>#제설</span><span>#기후적응</span><span>#사회적비용</span><span>#항공운송관리저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
