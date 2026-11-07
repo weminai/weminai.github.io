@@ -135,3 +135,7 @@
 })();
 /* 2026-11-03 외국어 자동 번역 국기 띠(news/lang.js)를 부른다 — 소장님 「내 지시다」. fit.js 를 쓰는 1면·섹션·기사 쪽 모두에 제호 위로 들어간다 */
 (function(){ if(document.querySelector('script[src*="/news/lang.js"]')) return; var s=document.createElement('script'); s.src='/news/lang.js?v=261103'; s.defer=true; (document.head||document.documentElement).appendChild(s); })();
+
+/* 2026-11-08 소장님 「이 기사는 사회면에 넣으라」 「상단에 넣으라」 — 상단 메뉴에 「사회」를 지방자치 다음에 넣는다. 메뉴가 쪽마다 박혀 있어 fit.js 를 쓰는 1면·섹션·기사 쪽 모두에 여기서 한 번에 더한다 */
+(function(){ function add(){ var w=document.querySelector('.gnb .wrap'); if(!w || w.querySelector('a[href*="k=%EC%82%AC%ED%9A%8C"],a[href$="k=사회"]')) return; var ref=null, as=w.querySelectorAll('a'); for(var i=0;i<as.length;i++){ if(as[i].textContent.trim()==='지방자치'){ ref=as[i]; break; } } var a=document.createElement('a'); a.href='/news/s.html?k='+encodeURIComponent('사회'); a.textContent='사회'; if(/k=%EC%82%AC%ED%9A%8C|k=사회/.test(location.search)) a.className='on'; if(ref) ref.insertAdjacentElement('afterend',a); else { var t=w.querySelector('.tools'); if(t) w.insertBefore(a,t); else w.appendChild(a); } }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',add); else add(); })();
