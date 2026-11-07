@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>버스 1km 원가, 회사 크기보다 달리는 속도가 갈랐다 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="이탈리아 45개사 논문, 시속 1km에 0.58유로">
+<link rel="canonical" href="https://weminai.com/media/bus02.html">
+<meta property="og:type" content="article"><meta property="og:title" content="버스 1km 원가, 회사 크기보다 달리는 속도가 갈랐다">
+<meta property="og:description" content="이탈리아 45개사 논문, 시속 1km에 0.58유로">
+<meta property="og:url" content="https://news.weminai.com/media/bus02.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/bus02_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">경제</div>
+ <h1>버스 1km 원가, 회사 크기보다 달리는 속도가 갈랐다</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.07</span><span class="dt">업데이트 2026.11.07 20:30</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>이탈리아 45개사 논문, 시속 1km에 0.58유로</p><p>부산 표준원가는 항목별 단가 합산</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 이탈리아 연구진이 버스 1km 원가를 가장 크게 좌우하는 요인은 운행 속도라고 국제학술지 『교통정책(Transport Policy)』에 밝혔다.</p>
+<p>회사 규모에 따른 원가 절감은 작은 회사에서만 나타났다.</p>
+<p>국내 시내버스 준공영제는 버스 1대가 하루 달리는 원가를 항목별로 정해 보전한다. 해외 연구가 원가를 무엇으로 쟀는지, 국내 원가는 어떻게 정하는지 견줘 봤다.</p>
+<figure><img src="img/bus02_01.jpg" alt="서울 간선버스 506번이 도로를 달리고 있다(2026년 6월 26일)." loading="lazy"><figcaption>서울 간선버스 506번이 도로를 달리고 있다(2026년 6월 26일).</figcaption></figure>
+<h2>이탈리아, 표준원가를 회귀식으로 정했다</h2>
+<p>아베날리(Avenali) 등 연구진 5명은 2016년 『교통정책』 52권에 이 논문을 실었다. 이탈리아 13개 주에서 버스를 운행하는 45개사가 2011년 설문으로 낸 자료를 썼다.</p>
+<p>45개사 가운데 민간은 20개, 공영은 25개다. 분석 단위는 원가를 함께 재는 계약 묶음 54개다. 운행 거리 합계는 5억 버스km가 넘는다.</p>
+<p>버스km당 평균 원가는 3.612유로(약 5479원)였다. 원화는 유럽중앙은행 2026년 11월 6일 기준환율(1유로=1517.02원)로 환산한 AI경제저널 계산이다. 묶음 54개 가운데 연간 운행 1000만km가 넘는 대형은 13개, 400만km 아래 소형은 26개였다.</p>
+<p>이탈리아는 2013년 예산법(법률 147/2013)에서 표준원가를 지역 대중교통 보상의 잣대로 정했다. 연구진은 실제 원가가 아니라 평균 효율 사업자의 원가를 보상하는 방식이라고 설명했다.</p>
+<h2>속도 1km/h 오르면 0.58유로 줄었다</h2>
+<p>연구진은 원가를 세 변수로 설명했다. 표정속도(정차 시간을 넣은 평균 운행 속도), 운행 규모, 차량 갱신비다. 세 변수가 원가 차이의 84%를 설명했다.</p>
+<p>표정속도가 시속 17km 아래인 구간에서 속도가 1km/h 오르면 버스km당 원가가 0.58유로(약 880원) 줄었다. 속도가 빠른 구간으로 갈수록 줄어드는 폭은 작아졌다.</p>
+<p>규모 효과는 연간 운행 400만km까지만 나타났다. 그보다 큰 묶음은 규모가 커질수록 원가가 올랐다. 운전원 수나 민간·공영 소유를 넣은 모형은 통계적으로 유의하지 않았다.</p>
+<p>연구진은 버스전용차로처럼 표정속도를 높이는 정책이 단위원가를 크게 낮출 수 있다고 분석했다. 도심 경사와 역사지구 같은 조건도 함께 따져야 한다고 덧붙였다.</p>
+<h2>타이완·영국 연구는 규모와 밀도를 따로 봤다</h2>
+<p>정(Chung)·치우(Chiou)는 2024년 『트랜스포메트리카 A』에 타이완 시내버스 연구를 실었다. 58개사의 2013~2019년 자료로 비용함수를 추정했다.</p>
+<p>이 모형은 인건비·연료비·차량비 같은 투입 가격을 함께 넣었다. 장기 총비용의 산출 탄력성은 0.569다. 운행 거리가 1% 늘면 총비용은 0.569%만 는다.</p>
+<p>연구진은 대부분 회사에서 규모의 경제가 나타났다고 밝혔다.</p>
+<p>다만 노선망 길이는 넣지 않았다. 회사가 망을 넓혀서 싸진 것인지, 같은 망을 촘촘히 달려서 싸진 것인지는 가르지 않았다.</p>
+<p>휘트(Wheat)·스미스(Smith)는 2015년 영국 철도 운영사 28개사를 분석하며 노선 길이를 따로 넣었다. 표본 평균 규모수익은 0.891, 밀도수익은 1.209였다.</p>
+<p>같은 망에서 운행을 늘리면 단위원가가 내려가고, 망을 넓히면 오히려 올라간다는 결과다. 연구진은 운영사가 정해진 망에서 운행을 늘려 단위원가를 낮출 수 있다고 분석했다.</p>
+<h2>국내 연구, 서울 81개사와 16개 시도</h2>
+<p>김성수·김민정(서울대 환경대학원)은 2001년 『대한교통학회지』에 서울 시내버스 81개사의 1996년 자료로 비용함수를 추정했다. 도시형·좌석·지역순환 버스 운행 거리를 산출로 따로 넣었다.</p>
+<p>전반적인 규모의 경제는 작았다. 최소효율규모는 버스 265대 안팎으로 추정됐다. 연구진은 버스를 200대 이상 보유한 업체가 81개사 가운데 3개뿐이어서 대형화가 비용 최소화에 맞다고 판단했다.</p>
+<p>최승현·조규석·유연승·도명식은 2024년 같은 학술지에 준공영제 연구를 실었다. 16개 시도의 2017~2021년 시내버스 운영효율성을 자료포락분석(DEA)으로 견줬다.</p>
+<p>준공영제 7개 시도의 평균 기술효율성은 0.94~0.99, 민영제 9개 시도는 0.77~0.83이었다. 연구진은 효율성 차이가 운송 기술보다 규모 차이에서 생긴 것으로 판단했다.</p>
+<p>서울·부산·인천은 5년 내내 규모수익불변 상태였다. 이 연구는 시도 합계를 버스 1대당으로 나눈 값을 써서 회사 단위 규모의 경제는 다루지 않았다.</p>
+<h2>부산 표준운송원가는 항목별 단가를 더한다</h2>
+<p>부산광역시가 지난 5월 받은 「2025년 시내버스 및 마을버스 표준운송원가 산정 용역」 최종보고서를 보면, 부산 시내버스 업체는 33개사다. 준공영제 대상 차량은 2511대다.</p>
+<p>부산은 조례에 따라 3년마다 표준운송원가를 다시 정한다. 연료비는 표준단가에 실제 사용량을 곱한다. 운전직 인건비는 표준인원과 임금협정 임률로 정한다. 항목마다 1일 대당 단가를 매겨 더하는 방식이다.</p>
+<p>일반 CNG버스 1대의 1일 표준운송원가는 2022년 1월 80만2750원에서 2024년 87만4469원으로 연평균 4.37% 늘었다. 보고서는 총액의 64% 넘게 차지하는 운전직 인건비가 연평균 6.40% 늘어난 것을 주된 원인으로 꼽았다.</p>
+<p>2022~2024년 표준원가 합계는 2조59억2300만원, 실제원가는 1조9824억600만원이었다. 표준이 235억1700만원 많았다.</p>
+<figure><img src="img/bus02_c1.png" alt="[도표 1] 부산 시내버스 표준원가와 실제원가(2022~2024)." loading="lazy"><figcaption>[도표 1] 부산 시내버스 표준원가와 실제원가(2022~2024).</figcaption></figure>
+<p>보고서는 연료비와 운전직 인건비에 최소한의 절감 유인을 도입하는 재산정 방향을 제시했다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>Avenali, A., Boitani, A., Catalano, G., D&#x27;Alfonso, T., Matteucci, G.(2016). &quot;Assessing standard costs in local public bus transport: Evidence from Italy&quot;. Transport Policy 52, 164–174. https://doi.org/10.1016/j.tranpol.2016.06.007</li><li>Chung, Y.-S., Chiou, Y.-C.(2024). &quot;Economic characteristics of city bus operation with a mixed fleet: the influence of electric buses&quot;. Transportmetrica A 20(3), 2192308. https://doi.org/10.1080/23249935.2023.2192308</li><li>Wheat, P., Smith, A.(2015). &quot;Do the Usual Results of Railway Returns to Scale and Density Hold in the Case of Heterogeneity in Outputs? A Hedonic Cost Function Approach&quot;. Journal of Transport Economics and Policy 49(1), 35–47</li><li>김성수·김민정(2001). 「서울 시내버스운송업의 규모 및 범위의 경제성 분석」. 『대한교통학회지』 19(6), 89–102</li><li>최승현·조규석·유연승·도명식(2024). 「시내버스 운송업의 운영효율성 분석: 준공영제와 민영제 비교를 중심으로」. 『대한교통학회지』 42(1), 94–106. https://doi.org/10.7470/jkst.2024.42.1.094</li><li>부산광역시(2026). 「2025년 시내버스 및 마을버스 표준운송원가 산정 용역」 최종보고서(안경회계법인). 정책연구관리시스템(프리즘) 공개, 공공누리 제1유형</li></ul><h4>[사진·도표 출처]</h4><ul><li>[사진 1] Striker9498, 「20260626 서울특별시의 간선버스 506」, 위키미디어 공용, CC0</li><li>[도표 1] 경세제민 AI·경제 연구소 작성(자료 부산광역시 「2025년 시내버스 및 마을버스 표준운송원가 산정 용역」 최종보고서)</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="lab05.html">노동 몫 줄어든 원천, 기계값·이윤 폭·집값 셋으로 갈린다</a></li><li><a href="avw01.html">[항공] 같은 강풍에 김포 9분·제주 4분…공항 장비가 지연 갈랐다</a></li><li><a href="lab04.html">[경제] 최저임금 16.4% 오른 해, 고령 노동자 인지점수 떨어졌다</a></li><li><a href="care01.html">[돌봄] 시급은 최저임금 넘는데 월급 108만8000원…요양보호사 임금이 돌봄의 질 가른다</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#버스표준운송원가</span><span>#준공영제</span><span>#표정속도</span><span>#규모의경제</span><span>#밀도의경제</span><span>#최소효율규모</span><span>#버스비용함수</span><span>#부산시내버스</span><span>#버스전용차로</span><span>#국제논문해설</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
