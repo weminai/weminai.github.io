@@ -225,7 +225,8 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var topP=slots.filter(top)[0]; if(topP){ slots.splice(slots.indexOf(topP),1); slots.unshift(topP); }
   slots.forEach(use);
   var t=slots[0];
-  document.getElementById('lead').innerHTML='<a href="'+href(t["파일"])+'">'+img(t)+K2(t)+'<h2>'+ttl(t)+'</h2></a>'+   /* 2026-11-03 소장님 「헤드라인 기사에서 기자명 삭제하라」 「부제목도 필요 없다」 */
+  document.getElementById('lead').innerHTML='<a href="'+href(t["파일"])+'">'+img(t)+K2(t)+'<h2>'+(t["톱제목"]?esc(t["톱제목"]):ttl(t))+'</h2></a>'+   /* 2026-11-08 소장님 「헤드라인 톱기사의 제목은 무조건 한 줄이다」 「간결하고 임팩트 있게」 「편집지침」 — posts.json 「톱제목」이 있으면 1면 톱에는 그것을 쓴다(기사 제목은 그대로) */
+       /* 2026-11-03 소장님 「헤드라인 기사에서 기자명 삭제하라」 「부제목도 필요 없다」 */
     (t["근거"]?'<div class="basis"><b>이 기사의 근거</b> — '+esc(t["근거"])+'</div>':'');
   document.getElementById('h3').innerHTML=slots.slice(1).map(function(p){ return '<a href="'+href(p["파일"])+'"><div>'+K2(p)+'<h3>'+ttl(p)+'</h3></div>'+img(p)+'</a>'; }).join('');
   // 다음 칸들 — 시간 차례, 한 칸에 한 섹션 두 편까지
