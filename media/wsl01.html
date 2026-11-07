@@ -1,0 +1,98 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[복합물류 브리핑] 서해선 연장 뒤 철도 접근성, 부천·시흥·인천 서부로 번졌다 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="GTFS 운행표로 본 대곡~소사 개통 효과, 새 구간 30분 안 지역이 가장 크게 올랐다">
+<link rel="canonical" href="https://weminai.com/media/wsl01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[복합물류 브리핑] 서해선 연장 뒤 철도 접근성, 부천·시흥·인천 서부로 번졌다">
+<meta property="og:description" content="GTFS 운행표로 본 대곡~소사 개통 효과, 새 구간 30분 안 지역이 가장 크게 올랐다">
+<meta property="og:url" content="https://news.weminai.com/media/wsl01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/wsl01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">복합물류</div>
+ <h1>[복합물류 브리핑] 서해선 연장 뒤 철도 접근성, 부천·시흥·인천 서부로 번졌다</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.07</span><span class="dt">업데이트 2026.11.07 20:45</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>GTFS 운행표로 본 대곡~소사 개통 효과, 새 구간 30분 안 지역이 가장 크게 올랐다</p><p>지역 간 고속·시외버스는 2019년보다 노선 35.7% 줄어</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 서해선 대곡~소사 구간은 2023년 7월 1일 전 구간이 개통했다. 이 구간이 수도권 서부의 철도 접근성을 개통역 밖까지 끌어올렸다는 실증 연구가 나왔다.</p>
+<p>접근성이 가장 크게 오른 역은 부천과 시흥의 소새울역, 소사역, 시흥대야역이었다.</p>
+<p>같은 시기 국내 지역 간 고속·시외버스는 노선과 운행 횟수가 팬데믹 이전 수준을 회복하지 못했다. 한국교통연구원 연구진이 같은 학술지 같은 호에 밝힌 분석이다.</p>
+<figure><img src="img/wsl01_01.jpg" alt="서해선 부천종합운동장역 승강장(2026년 8월 22일). 이 역은 서해선 개통으로 7호선과 갈아타는 역이 됐다." loading="lazy"><figcaption>서해선 부천종합운동장역 승강장(2026년 8월 22일). 이 역은 서해선 개통으로 7호선과 갈아타는 역이 됐다.</figcaption></figure>
+<h2>서해선 대곡~소사, 18.36km가 서쪽 고리를 이었다</h2>
+<p>장승화·김태우·김새힘·고준호(한양대 도시대학원)는 『대한교통학회지』 44권 3호(2026년 6월)에 이 논문을 실었다.</p>
+<p>논문을 보면 대곡~소사 구간은 고양시 대곡역과 부천시 소사역을 잇는 18.36km 복선전철이다. 임대형 민자사업(BTL)으로 추진했다. 연구진은 이 구간이 수도권 순환철도망의 서쪽 끊긴 고리를 메웠다고 설명했다.</p>
+<p>국토교통부는 2023년 6월 30일 보도참고자료에서 이 사업에 총사업비 1조5557억원(민자 1조3376억원)이 들었다고 밝혔다. 고양에서 부천까지 이동시간은 67분에서 19분으로 48분 줄어든다고 설명했다.</p>
+<p>김포공항역은 기존 4개 노선에 서해선이 더해져 5개 노선이 만나는 환승역이 됐다. 부천종합운동장역(7호선), 소사역(1호선), 대곡역(3호선·경의중앙선)도 동서축과 남북축이 만나는 자리가 됐다.</p>
+<figure><img src="img/wsl01_02.jpg" alt="서해선 김포공항역 승강장(2026년 8월 15일)." loading="lazy"><figcaption>서해선 김포공항역 승강장(2026년 8월 15일).</figcaption></figure>
+<figure><img src="img/wsl01_06.jpg" alt="대곡역 서해선·경의중앙선 환승통로(2026년 4월 29일)." loading="lazy"><figcaption>대곡역 서해선·경의중앙선 환승통로(2026년 4월 29일).</figcaption></figure>
+<h2>운행표로 잰 60분 접근성</h2>
+<p>연구진은 국제 대중교통 운행표 표준(GTFS)의 실제 운행 정보로 개통 전후 철도망을 만들었다. 분석 범위는 서울·인천·부천·김포·시흥 등 14개 지방자치단체, 역 500개다.</p>
+<p>역마다 오전 첨두시 5분 간격 24개 시점에서 60분 안에 닿는 범위를 구했다. 24개 시점 가운데 절반 넘게 닿는 곳만 접근 가능 지역으로 셌다. 여기에 2023년 11월 주민등록인구를 집계구 단위로 맞춰 접근 가능 인구를 냈다.</p>
+<p>이 방식은 배차 간격을 반영한다. 노선이 생겨도 열차가 드물면 접근성은 덜 오른다.</p>
+<p>뤄(Luo) 등(2023)은 중국 고속철도 접근성에 운행 빈도를 넣었다. 그 결과 최고 수준 접근성이 소수 도시에 몰리는 강한 양극화가 나타났다고 밝혔다.</p>
+<h2>새 구간 30분 안 지역이 가장 크게 올랐다</h2>
+<p>분석 결과 접근성 변화는 새 구간과 서해선을 따라 크게 나타났다. 상위 3개 역은 소새울역, 소사역, 시흥대야역이었다. 연구진은 이 역들이 기존 서해선의 끝점이어서 연장 효과가 컸다고 분석했다.</p>
+<figure><img src="img/wsl01_04.jpg" alt="서해선 소사역 승강장(2026년 7월 3일). 소사역은 접근성 변화 상위 3개 역 가운데 하나다." loading="lazy"><figcaption>서해선 소사역 승강장(2026년 7월 3일). 소사역은 접근성 변화 상위 3개 역 가운데 하나다.</figcaption></figure>
+<figure><img src="img/wsl01_05.jpg" alt="소사역 개찰구(2026년 7월 3일)." loading="lazy"><figcaption>소사역 개찰구(2026년 7월 3일).</figcaption></figure>
+<p>향상은 연계 노선을 따라 번졌다. 1호선, 7호선, 공항철도가 접근성 변화에 큰 영향을 줬다. 연구진은 부천, 인천, 강서, 고양 일대의 향상이 크게 나타났다고 밝혔다.</p>
+<p>공간회귀모형에서 영향력이 가장 큰 변수는 「새 구간까지 30분 안에 닿는 지역」이었다. 이 변수는 모든 모형에서 유의했다. 역의 연결·중개 기능을 뜻하는 매개중심성 변화량도 유의했다.</p>
+<p>연구진은 이 효과가 이웃 지역으로 번지는 공간 파급을 보였다고 밝혔다.</p>
+<p>오전 첨두 버스 운행 빈도도 접근성을 유의하게 높였다. 연구진은 철도망 혜택이 실제 이동성으로 이어지려면 지선 버스 공급이 받쳐야 한다고 분석했다.</p>
+<h2>지역 간 버스는 줄었다</h2>
+<p>장동익(한국교통연구원)·홍다희(서울시립대)는 같은 호에 2019~2024년 지역 간 대중교통 이동성 변화를 분석했다. 국내 고속·시외버스 노선은 2019년 4859개에서 2024년 3125개로 35.7% 줄었다.</p>
+<figure><img src="img/wsl01_c1.png" alt="[도표 1] 국내 고속·시외버스 노선 수(2019~2024)." loading="lazy"><figcaption>[도표 1] 국내 고속·시외버스 노선 수(2019~2024).</figcaption></figure>
+<figure><img src="img/wsl01_c2.png" alt="[도표 2] 국내 고속·시외버스 운행 횟수(2019~2024)." loading="lazy"><figcaption>[도표 2] 국내 고속·시외버스 운행 횟수(2019~2024).</figcaption></figure>
+<p>같은 기간 운행 횟수는 3만5627회에서 2만6785회로 24.8% 줄었다. 정류장은 2030개에서 1663개로 18.1% 줄었다. 연구진은 철도를 뺀 가상 상황에서 도달 가능 인구 비율이 해마다 평균 0.889%포인트씩 줄었다고 밝혔다.</p>
+<p>2024년 모든 수단을 쓸 때 6.5시간 안에 닿는 인구 비율의 나라 전체 중앙값은 80.9%였다. 철도를 빼면 65.8%로 낮아졌다.</p>
+<p>고속·시외버스를 빼면 인구감소지역 중앙값이 16.8%로 떨어졌다. 비인구감소지역은 83.1%였다. 연구진은 철도역 접근이 어려운 인구감소지역에서 고속·시외버스가 사실상 핵심 연결 수단이라고 분석했다.</p>
+<figure><img src="img/wsl01_c3.png" alt="[도표 3] 6.5시간 도달 인구 비율 나라 전체 중앙값(2024)." loading="lazy"><figcaption>[도표 3] 6.5시간 도달 인구 비율 나라 전체 중앙값(2024).</figcaption></figure>
+<figure><img src="img/wsl01_c4.png" alt="[도표 4] 고속·시외버스 제외 시 지역 유형별 중앙값(2024)." loading="lazy"><figcaption>[도표 4] 고속·시외버스 제외 시 지역 유형별 중앙값(2024).</figcaption></figure>
+<figure><img src="img/wsl01_03.jpg" alt="서해선 초지역 승강장(2026년 7월 27일)." loading="lazy"><figcaption>서해선 초지역 승강장(2026년 7월 27일).</figcaption></figure>
+<p>김(Kim)·술타나(Sultana)는 2015년 국제학술지 『교통지리학회지』에 한국 고속철도 연구를 실었다. 연장 단계마다 접근성 효과가 달랐다고 분석했다. 2010·2011년 연장 때는 수도권에 가까운 간선 축 도시에 향상이 몰려 공간 형평성이 나빠졌다고 밝혔다.</p>
+<h2>생활권에 남는 물음</h2>
+<p>서해선 연구진은 개통 직후 잠재 접근성을 비교했다고 밝혔다. 실제 환승 저항, 통행 비용, 장기 토지이용 변화는 이 연구가 다루지 않았다.</p>
+<p>연구진은 교통카드 기점·종점(OD) 자료로 실제 통행 증가를 확인하는 후속 연구를 제안했다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>장승화·김태우·김새힘·고준호(2026). 「서해선(대곡~소사) 개통 전후 접근성 변화량의 결정요인 분석: 네트워크 중심성 및 공간회귀 활용」. 『대한교통학회지』 44(3), 457–481. https://doi.org/10.7470/jkst.2026.44.3.457</li><li>장동익·홍다희(2026). 「GTFS 기반 지역간 대중교통 이동성 기반 접근성의 변화와 공간적 불균등성: 지역간 수단 가상제거 분석(2019–2024)」. 『대한교통학회지』 44(3), 482–496</li><li>Kim, H., Sultana, S.(2015). &quot;The impacts of high-speed rail extensions on accessibility and spatial equity changes in South Korea from 2004 to 2018&quot;. Journal of Transport Geography 45, 48–61</li><li>Luo, H., Zhao, S., Cui, M., Zhong, S., Ma, J.(2023). &quot;The evolution of spatial equity of high-speed rail accessibility in China: An operation frequency based approach&quot;. International Journal of Sustainable Transportation 17(12), 1265–1277</li><li>국토교통부(2023). 「대곡～소사 복선전철 7월 1일 개통」 보도참고자료, 2023년 6월 30일, 철도국 철도투자개발과. https://www.molit.go.kr</li></ul><h4>[사진·도표 출처]</h4><ul><li>[사진 1] Striker9498, 「20260822 서해선 부천종합운동장역 승강장.jpg」, 위키미디어 공용, CC0, https://commons.wikimedia.org/wiki/File:20260822_서해선_부천종합운동장역_승강장.jpg</li><li>[사진 2] Striker9498, 「20260815 서해선 김포공항역 승강장.jpg」, 위키미디어 공용, CC0, https://commons.wikimedia.org/wiki/File:20260815_서해선_김포공항역_승강장.jpg</li><li>[사진 3] Striker9498, 「20260429 대곡역 서해선 경의중앙선 환승통로.jpg」, 위키미디어 공용, CC0, https://commons.wikimedia.org/wiki/File:20260429_대곡역_서해선_경의중앙선_환승통로.jpg</li><li>[사진 4] Striker9498, 「20260703 서해선 소사역 승강장.jpg」, 위키미디어 공용, CC0, https://commons.wikimedia.org/wiki/File:20260703_서해선_소사역_승강장.jpg</li><li>[사진 5] Striker9498, 「20260703 소사역 개찰구.jpg」, 위키미디어 공용, CC0, https://commons.wikimedia.org/wiki/File:20260703_소사역_개찰구.jpg</li><li>[사진 6] Striker9498, 「20260727 서해선 초지역 승강장.jpg」, 위키미디어 공용, CC0, https://commons.wikimedia.org/wiki/File:20260727_서해선_초지역_승강장.jpg</li><li>[도표 1~4] 경세제민 AI·경제 연구소 작성(자료 장동익·홍다희 2026, 『대한교통학회지』 44(3))</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="logi03.html">[인천항 복합물류③] 운송인은 하나인데 배상 잣대는 구간마다, 18년째 발효 못 한 로테르담 규칙</a></li><li><a href="logi02.html">[인천항 복합물류②] 인천항을 나서는 화물은 모두 트럭에 오른다</a></li><li><a href="logi01.html">[인천항 복합물류①] 서류 한 장이 배와 철도와 트럭을 묶는다</a></li><li><a href="bus02.html">버스 1km 원가, 회사 크기보다 달리는 속도가 갈랐다</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#서해선</span><span>#대곡소사</span><span>#철도접근성</span><span>#부천</span><span>#시흥</span><span>#김포공항역</span><span>#GTFS</span><span>#시외버스</span><span>#지역격차</span><span>#복합물류브리핑</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
