@@ -1161,7 +1161,8 @@
   "분야": "경제",
   "섹션": "인천경제",
   "파일": "media/icexp01.html",
-  "대표그림": "media/img/icexp01_01.jpg"
+  "대표그림": "media/img/icexp01_01.jpg",
+  "갈래": "발표"
  },
  {
   "id": "insb01",
@@ -1187,7 +1188,8 @@
   "분야": "경제",
   "섹션": "지방자치",
   "파일": "media/phl01.html",
-  "대표그림": "media/img/phl01_01.jpg"
+  "대표그림": "media/img/phl01_01.jpg",
+  "갈래": "발표"
  },
  {
   "id": "g20tx01",
