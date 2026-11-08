@@ -266,7 +266,8 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   box.addEventListener('mouseenter',function(){ hold=true; }); box.addEventListener('mouseleave',function(){ hold=false; });
   setInterval(function(){ if(!hold && !document.hidden) show(1-cur); },10000);
   // 편집국 추천(소장님 「편집국 추천 이라고만 쓰라」) — 번호 없이, 섹션 이름과 작은 사진. 섹션마다 하나
-  var ps={}, pick=list.filter(function(p){ var k=kind(p); if(p["분야"]==="연구보고서"||!free(p)||!pic(p)||(ps[secOf(p)]||0)>=2||!/분석|해설|서평|칼럼|연구보고서/.test(k)) return false; ps[secOf(p)]=(ps[secOf(p)]||0)+1; return true; }).slice(0,10).map(use);
+  // 2026-11-08 밤 소장님 「여기엔 정말 추천할 만한 기사를 넣으라」 「단순 보도자료 기사 넣지 말라」 — posts.json 갈래 「발표」(보도자료 기사)는 넣지 않는다
+  var ps={}, pick=list.filter(function(p){ var k=kind(p); if(p["분야"]==="연구보고서"||p["갈래"]==="발표"||!free(p)||!pic(p)||(ps[secOf(p)]||0)>=2||!/분석|해설|서평|칼럼|연구보고서/.test(k)) return false; ps[secOf(p)]=(ps[secOf(p)]||0)+1; return true; }).slice(0,10).map(use);
   document.getElementById('pick').innerHTML=pick.map(function(p){ return '<a href="'+href(p["파일"])+'"><div><div class="k"><span class="s">'+esc(secOf(p))+'</span></div><span class="t">'+ttl(p)+'</span></div>'+img(p,1)+'</a>'; }).join('');
   var rep=list.filter(function(p){ return p["분야"]==="연구보고서"; })[0]; if(rep) use(rep);
   document.getElementById('repCard').innerHTML='<span class="cl">연구보고서</span>'+(rep?'<h5><a href="'+href(rep["파일"])+'">'+esc(rep["제목"])+'</a></h5><p>'+esc(rep["부제"]||"")+'</p>':'<h5>준비 중입니다</h5>');
