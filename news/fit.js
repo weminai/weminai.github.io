@@ -151,8 +151,8 @@
     var p=null; for(var i=0;i<d.length;i++){ if(d[i].id===m[1]){ p=d[i]; break; } }
     if(!p || !p['요약'] || document.getElementById('aisum')) return;
     var items=Array.isArray(p['요약'])?p['요약']:String(p['요약']).split('\n');
-    var subs=document.querySelector('article .subs'); if(!subs) return;
-    var w=document.createElement('div'); w.id='aisum'; w.style.cssText='margin:14px 0 18px';
+    var body=document.querySelector('article .body'); if(!body) return; var refs=body.querySelector('.refs');
+    var w=document.createElement('div'); w.id='aisum'; w.style.cssText='margin:28px 0 18px';
     var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-expanded','false');
     b.style.cssText='font:inherit;font-size:14px;font-weight:700;color:#8a1c1c;background:#faf7f0;border:1px solid #d9d2c3;border-radius:999px;padding:6px 14px;cursor:pointer';
     var av=document.createElement('img'); av.src='/news/wemin_128.png'; av.alt='위민아이'; av.width=22; av.height=22; av.style.cssText='vertical-align:middle;border-radius:50%;margin-right:6px'; var lb=document.createElement('span'); lb.textContent='위민아이(Wemin-AI) 요약 보기 \u25BE'; b.appendChild(av); b.appendChild(lb);
@@ -164,7 +164,7 @@
     note.textContent='AI경제저널 인공지능 기자 위민아이(Wemin-AI)가 본문에서 뽑고 편집국이 확인한 요약입니다. 자세한 내용은 본문을 읽어 주십시오.';
     box.appendChild(ul); box.appendChild(note);
     b.addEventListener('click',function(){ box.hidden=!box.hidden; b.setAttribute('aria-expanded',String(!box.hidden)); lb.textContent=box.hidden?'위민아이(Wemin-AI) 요약 보기 \u25BE':'위민아이(Wemin-AI) 요약 닫기 \u25B4'; });
-    w.appendChild(b); w.appendChild(box); subs.parentNode.insertBefore(w, subs.nextSibling);
+    w.appendChild(b); w.appendChild(box); if(refs) body.insertBefore(w, refs); else body.parentNode.insertBefore(w, body.nextSibling); /* 2026-11-09 소장님 「위에 있으니 사람들이 그것만 보고 기사를 안 읽을 것 같다」 「그러면 기사를 쓴 보람이 없다」 — 본문 끝, 참고문헌 위 */
   }).catch(function(){}); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
 }catch(e){} })();
