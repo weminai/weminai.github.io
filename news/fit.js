@@ -164,7 +164,7 @@
     note.textContent='AI경제저널 인공지능 기자 위민아이(Wemin-AI)가 본문에서 뽑고 편집국이 확인한 요약입니다. 자세한 내용은 본문을 읽어 주십시오.';
     box.appendChild(ul); if(meanEl) box.appendChild(meanEl); box.appendChild(note);
     b.addEventListener('click',function(){ box.hidden=!box.hidden; b.setAttribute('aria-expanded',String(!box.hidden)); lb.textContent=box.hidden?'위민아이(Wemin-AI) 요약 보기 \u25BE':'위민아이(Wemin-AI) 요약 닫기 \u25B4'; });
-    w.appendChild(b); w.appendChild(box); if(refs) body.insertBefore(w, refs); else body.parentNode.insertBefore(w, body.nextSibling); /* 2026-11-09 소장님 「위에 있으니 사람들이 그것만 보고 기사를 안 읽을 것 같다」 「그러면 기사를 쓴 보람이 없다」 — 본문 끝, 참고문헌 위 */
+    var free=document.createElement('span'); free.textContent='2027년 4월 정식 창간 전까지 무료로 운영합니다'; free.style.cssText='margin-left:10px;font-size:12px;color:#777;vertical-align:middle'; w.appendChild(b); w.appendChild(free); w.appendChild(box); /* 2026-11-09 소장님 「이 서비스는 내년 4월 창간 전까지 무료로 운영된다고 밝힙시다」 */ if(refs) body.insertBefore(w, refs); else body.parentNode.insertBefore(w, body.nextSibling); /* 2026-11-09 소장님 「위에 있으니 사람들이 그것만 보고 기사를 안 읽을 것 같다」 「그러면 기사를 쓴 보람이 없다」 — 본문 끝, 참고문헌 위 */
   }).catch(function(){}); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
 }catch(e){} })();
