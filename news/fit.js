@@ -159,10 +159,10 @@
     var box=document.createElement('div'); box.hidden=true;
     box.style.cssText='margin-top:10px;padding:14px 18px;border:1px solid #d9d2c3;border-left:4px solid #8a1c1c;background:#faf7f0;border-radius:4px;font-size:16px;line-height:1.7';
     var ul=document.createElement('ul'); ul.style.cssText='margin:0;padding-left:1.1em';
-    items.forEach(function(t){ t=String(t).trim(); if(!t) return; var li=document.createElement('li'); li.textContent=t; ul.appendChild(li); });
+    var meanEl=null; items.forEach(function(it){ var t=(it&&typeof it==='object')?String(it.t||''):String(it); t=t.trim(); if(!t) return; var li=document.createElement('li'); li.appendChild(document.createTextNode(t+' ')); var hh=(it&&typeof it==='object')?it.h:''; if(hh){ var hs=[].slice.call(document.querySelectorAll('article .body h2, article .body h3')); var tg=null; for(var j=0;j<hs.length;j++){ if(hs[j].textContent.trim()===String(hh).trim()){ tg=hs[j]; break; } } if(tg){ var go=document.createElement('a'); go.href='#'; go.textContent='자세히 \u25B6'; go.style.cssText='font-size:13px;font-weight:700;color:#1A6DFF;text-decoration:none;white-space:nowrap'; go.addEventListener('click',function(e){ e.preventDefault(); tg.scrollIntoView({behavior:'smooth',block:'start'}); }); li.appendChild(go); } } ul.appendChild(li); }); if(p['요약뜻']){ meanEl=document.createElement('div'); meanEl.style.cssText='margin-top:10px;padding-top:10px;border-top:1px dashed #d9d2c3;font-size:15px'; var mb=document.createElement('b'); mb.textContent='이 기사가 나에게 뜻하는 것 '; mb.style.color='#17428F'; meanEl.appendChild(mb); meanEl.appendChild(document.createTextNode(String(p['요약뜻']))); }
     var note=document.createElement('div'); note.style.cssText='margin-top:8px;font-size:12px;color:#777';
     note.textContent='AI경제저널 인공지능 기자 위민아이(Wemin-AI)가 본문에서 뽑고 편집국이 확인한 요약입니다. 자세한 내용은 본문을 읽어 주십시오.';
-    box.appendChild(ul); box.appendChild(note);
+    box.appendChild(ul); if(meanEl) box.appendChild(meanEl); box.appendChild(note);
     b.addEventListener('click',function(){ box.hidden=!box.hidden; b.setAttribute('aria-expanded',String(!box.hidden)); lb.textContent=box.hidden?'위민아이(Wemin-AI) 요약 보기 \u25BE':'위민아이(Wemin-AI) 요약 닫기 \u25B4'; });
     w.appendChild(b); w.appendChild(box); if(refs) body.insertBefore(w, refs); else body.parentNode.insertBefore(w, body.nextSibling); /* 2026-11-09 소장님 「위에 있으니 사람들이 그것만 보고 기사를 안 읽을 것 같다」 「그러면 기사를 쓴 보람이 없다」 — 본문 끝, 참고문헌 위 */
   }).catch(function(){}); }
