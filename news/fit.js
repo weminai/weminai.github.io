@@ -155,7 +155,7 @@
     var w=document.createElement('div'); w.id='aisum'; w.style.cssText='margin:14px 0 18px';
     var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-expanded','false');
     b.style.cssText='font:inherit;font-size:14px;font-weight:700;color:#8a1c1c;background:#faf7f0;border:1px solid #d9d2c3;border-radius:999px;padding:6px 14px;cursor:pointer';
-    b.textContent='위민아이(Wemin-AI) 요약 보기 \u25BE';
+    var av=document.createElement('img'); av.src='/news/wemin_128.png'; av.alt='위민아이'; av.width=22; av.height=22; av.style.cssText='vertical-align:middle;border-radius:50%;margin-right:6px'; var lb=document.createElement('span'); lb.textContent='위민아이(Wemin-AI) 요약 보기 \u25BE'; b.appendChild(av); b.appendChild(lb);
     var box=document.createElement('div'); box.hidden=true;
     box.style.cssText='margin-top:10px;padding:14px 18px;border:1px solid #d9d2c3;border-left:4px solid #8a1c1c;background:#faf7f0;border-radius:4px;font-size:16px;line-height:1.7';
     var ul=document.createElement('ul'); ul.style.cssText='margin:0;padding-left:1.1em';
@@ -163,7 +163,7 @@
     var note=document.createElement('div'); note.style.cssText='margin-top:8px;font-size:12px;color:#777';
     note.textContent='AI경제저널 인공지능 기자 위민아이(Wemin-AI)가 본문에서 뽑고 편집국이 확인한 요약입니다. 자세한 내용은 본문을 읽어 주십시오.';
     box.appendChild(ul); box.appendChild(note);
-    b.addEventListener('click',function(){ box.hidden=!box.hidden; b.setAttribute('aria-expanded',String(!box.hidden)); b.textContent=box.hidden?'위민아이(Wemin-AI) 요약 보기 \u25BE':'위민아이(Wemin-AI) 요약 닫기 \u25B4'; });
+    b.addEventListener('click',function(){ box.hidden=!box.hidden; b.setAttribute('aria-expanded',String(!box.hidden)); lb.textContent=box.hidden?'위민아이(Wemin-AI) 요약 보기 \u25BE':'위민아이(Wemin-AI) 요약 닫기 \u25B4'; });
     w.appendChild(b); w.appendChild(box); subs.parentNode.insertBefore(w, subs.nextSibling);
   }).catch(function(){}); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
