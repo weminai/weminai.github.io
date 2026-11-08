@@ -144,7 +144,7 @@
     M.forEach(function(n){ var a=document.createElement('a'); a.href='/news/s.html?k='+encodeURIComponent(n); a.textContent=n; if(cur===n) a.className='on'; if(t) w.insertBefore(a,t); else w.appendChild(a); }); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',nav); else nav(); })();
 
-/* 2026-11-09 AI 요약 — 소장님 「AI요약은 클릭했을 때 보여주는 방식으로 하라」. 기사 쪽(/media/아이디.html)에서 posts.json 그 글의 「요약」(배열 또는 줄바꿈 글)이 있으면 부제 아래 「AI 요약 보기」 단추를 두고, 누르면 펼친다. 요약은 편집국이 본문 사실로 확인한 것만 넣는다 */
+/* 2026-11-09 위민아이(Wemin-AI) 요약(소장님 「위민아이(Wemin-AI) 요약」 「우리의 인공지능 기자다」) — 소장님 「AI요약은 클릭했을 때 보여주는 방식으로 하라」. 기사 쪽(/media/아이디.html)에서 posts.json 그 글의 「요약」(배열 또는 줄바꿈 글)이 있으면 부제 아래 「AI 요약 보기」 단추를 두고, 누르면 펼친다. 요약은 편집국이 본문 사실로 확인한 것만 넣는다 */
 ;(function(){ try{
   var m=location.pathname.match(/\/media\/([A-Za-z0-9_-]+)\.html$/); if(!m) return;
   function go(){ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(d){
@@ -155,15 +155,15 @@
     var w=document.createElement('div'); w.id='aisum'; w.style.cssText='margin:14px 0 18px';
     var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-expanded','false');
     b.style.cssText='font:inherit;font-size:14px;font-weight:700;color:#8a1c1c;background:#faf7f0;border:1px solid #d9d2c3;border-radius:999px;padding:6px 14px;cursor:pointer';
-    b.textContent='AI 요약 보기 \u25BE';
+    b.textContent='위민아이(Wemin-AI) 요약 보기 \u25BE';
     var box=document.createElement('div'); box.hidden=true;
     box.style.cssText='margin-top:10px;padding:14px 18px;border:1px solid #d9d2c3;border-left:4px solid #8a1c1c;background:#faf7f0;border-radius:4px;font-size:16px;line-height:1.7';
     var ul=document.createElement('ul'); ul.style.cssText='margin:0;padding-left:1.1em';
     items.forEach(function(t){ t=String(t).trim(); if(!t) return; var li=document.createElement('li'); li.textContent=t; ul.appendChild(li); });
     var note=document.createElement('div'); note.style.cssText='margin-top:8px;font-size:12px;color:#777';
-    note.textContent='AI가 본문에서 뽑고 편집국이 확인한 요약입니다. 자세한 내용은 본문을 읽어 주십시오.';
+    note.textContent='AI경제저널 인공지능 기자 위민아이(Wemin-AI)가 본문에서 뽑고 편집국이 확인한 요약입니다. 자세한 내용은 본문을 읽어 주십시오.';
     box.appendChild(ul); box.appendChild(note);
-    b.addEventListener('click',function(){ box.hidden=!box.hidden; b.setAttribute('aria-expanded',String(!box.hidden)); b.textContent=box.hidden?'AI 요약 보기 \u25BE':'AI 요약 닫기 \u25B4'; });
+    b.addEventListener('click',function(){ box.hidden=!box.hidden; b.setAttribute('aria-expanded',String(!box.hidden)); b.textContent=box.hidden?'위민아이(Wemin-AI) 요약 보기 \u25BE':'위민아이(Wemin-AI) 요약 닫기 \u25B4'; });
     w.appendChild(b); w.appendChild(box); subs.parentNode.insertBefore(w, subs.nextSibling);
   }).catch(function(){}); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
