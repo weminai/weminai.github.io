@@ -234,7 +234,7 @@ footer .copy{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);c
   <div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div>
 </div></header>
 
-<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
+<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=정치행정">정치행정</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=사회">사회</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=기후에너지">기후에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=해양항공">해양항공</a><a href="/news/s.html?k=교통물류">교통물류</a><a href="/news/s.html?k=오피니언">오피니언</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
 <main><div class="wrap">
   <div class="pghd"><h2 id="pgT">지면</h2><span id="pgN"></span></div>
   <div class="subs" id="pgS"></div>
@@ -326,11 +326,11 @@ var FIELD={"정책브리핑":"정책브리핑","해양":"해양","항공":"항�
  "국제":"국제","인천경제":"인천경제"};
 
 var MENU=SECS;
-var SUBS={"지방자치":[   // 2026-11-04 소장님 「지방자치아래에 그러면 여의도14명 꼭지를 넣으세요」 — 여의도 14명은 인천 지역구 국회의원 14명 활동. 글은 posts.json 「섹션」:「지방자치」, 「하위」:「여의도 14명」
-  {k:"지방정부", kw:/지방정부|인천시|군·구|군구|시장|구청장|군수|자치단체|지방분권|개헌|행정체제|신설구|인구감소|섬/},
-  {k:"지방의회", kw:/지방의회|시의회|구의회|군의회|시의원|구의원|군의원/},
-  {k:"지방재정", kw:/지방재정|재정|예산|국비|교부세|세수|정책연구/},
-  {k:"여의도 14명", kw:/여의도 14명|여의도14명|인천 국회의원|인천지역 국회의원|인천 지역구 국회의원/}
+var SUBS={"정치행정":[   // 2026-11-08 소장님 「정책브리핑 지방자치 정치행정 여의도」 — 여의도는 주로 국회 소식, 정치행정은 주로 청와대와 정부 소식, 지방자치는 지방정부·지방의회·지방재정. hay의 §섹션 표지로 가른다
+  {k:"정책브리핑", kw:/§정책브리핑 /},
+  {k:"지방자치", kw:/^(?!.*(여의도 14명|여의도14명|인천 국회의원|인천지역 국회의원|인천 지역구 국회의원)).*§지방자치 /},
+  {k:"정치행정", kw:/청와대|대통령실|대통령|국무회의|국무총리|총리|장관|정부 부처|중앙정부|행정안전부|기획재정부/},
+  {k:"여의도", kw:/여의도|국회|국회의원|국정감사|국감|의원실|여의도 14명|여의도14명|인천 국회의원|인천지역 국회의원|인천 지역구 국회의원/}
 ],"국제":[
   {k:"동북아", kw:/동북아|한중수교|한일수교|한중|한일|중국|일본|북한|조선|남북|평양|시진핑|베이징|상하이|다카이치|도쿄|야스쿠니|자민당|니케이|희토류|한한령|대만|몽골|극동/,
    sub:[{k:"북한(조선)", kw:/남북|북한|조선|평양|개성|통일|신의주|압록강|김정은/},
@@ -344,7 +344,7 @@ var SUBS={"지방자치":[   // 2026-11-04 소장님 「지방자치아래에 �
   {k:"미주", kw:/미주|북미|남미|중남미|미국|워싱턴|캐나다|멕시코|트럼프|브라질|아르헨티나|칠레|페루|콜롬비아/,
    sub:[{k:"북미", kw:/북미|미국|워싱턴|캐나다|멕시코|트럼프/},
         {k:"남미", kw:/남미|중남미|브라질|아르헨티나|칠레|페루|콜롬비아/}]}
-],"교통경제":[
+],"교통물류":[
   {k:"철도", kw:/철도|KTX|SRT|GTX|고속철|열차|노선|역사|전철/},
   {k:"도로", kw:/도로|고속도로|교량|터널|IC|나들목/},
   {k:"대중교통", kw:/대중교통|버스|지하철|광역교통|환승/},
@@ -354,17 +354,23 @@ var SUBS={"지방자치":[   // 2026-11-04 소장님 「지방자치아래에 �
   {k:"금융·증시", kw:/금융|증시|코스피|주식|금리|채권|레버리지|대출|은행/},
   {k:"산업·노동", kw:/산업|반도체|방산|노동|임금|일자리|고용|최저임금/},
   {k:"민생·복지", kw:/복지|연금|가계|자영업|불평등|민생|빚/},
-  {k:"사회연대경제", kw:/사회연대경제/}   // 2026-11-06 소장님 「경제 섹션에 사회연대경제 섹션 추가해주시오」
-],"해양":[
-  {k:"해양경계", kw:/해양경계|경계획정|북방한계선|NLL|잠정조치수역|배타적경제수역/},
-  {k:"해운·항만", kw:/해운|항만|인천항|부산항|신항|부두|선박|컨테이너/},
-  {k:"수산업", kw:/수산|어업|어민|어선|어촌/},
-  {k:"섬", kw:/섬|도서|연안여객|백령|연평|덕적|영흥/}
-],"도시·부동산":[
-  {k:"도시계획", kw:/도시계획|지구단위|용도지역|도시기본계획|공간계획/},
-  {k:"도시재생", kw:/도시재생|원도심|쇠퇴|마을만들기/},
-  {k:"도시정비", kw:/재개발|재건축|정비사업|노후계획도시|선도지구|주거환경|리모델링/},
-  {k:"부동산",   kw:/부동산|아파트|주택|분양|집값|전세|월세|주담대|주택담보/}
+  {k:"사회연대경제", kw:/사회연대경제/},   // 2026-11-06 소장님 「경제 섹션에 사회연대경제 섹션 추가해주시오」
+  {k:"도시·부동산", kw:/§도시·부동산 /,   // 2026-11-08 소장님 「도시부동산 경제로」
+   sub:[{k:"도시계획", kw:/도시계획|지구단위|용도지역|도시기본계획|공간계획/},
+        {k:"도시재생", kw:/도시재생|원도심|쇠퇴|마을만들기/},
+        {k:"도시정비", kw:/재개발|재건축|정비사업|노후계획도시|선도지구|주거환경|리모델링/},
+        {k:"부동산", kw:/부동산|아파트|주택|분양|집값|전세|월세|주담대|주택담보/}]}
+],"해양항공":[   // 2026-11-08 소장님 「해양항공 합치라」
+  {k:"해양", kw:/§해양 /,
+   sub:[{k:"해양경계", kw:/해양경계|경계획정|북방한계선|NLL|잠정조치수역|배타적경제수역/},
+        {k:"해운·항만", kw:/해운|항만|인천항|부산항|신항|부두|선박|컨테이너/},
+        {k:"수산업", kw:/수산|어업|어민|어선|어촌/},
+        {k:"섬", kw:/섬|도서|연안여객|백령|연평|덕적|영흥/}]},
+  {k:"항공", kw:/§항공 /}
+],"오피니언":[   // 2026-11-08 소장님 「오피니언에 경세제민의 눈」 「경제밥상」 「정치밥상도」 — 글의 posts.json 「하위」 값으로 가른다
+  {k:"경세제민의 눈", kw:/경세제민의 눈/},
+  {k:"경제밥상", kw:/경제밥상/},
+  {k:"정치밥상", kw:/정치밥상/}
 ]};
 var subHtml=function(arr,k,cls){
   if(!SUBS[k]) return '';
@@ -383,15 +389,16 @@ var subHtml=function(arr,k,cls){
   return '<div class="'+cls+'">'+h+'</div>';
 };
 // 2026-10-28 소장님 「모든 기사는 섹션이 지정돼 있다」 「지정이 안 돼 있으면 지정해야 한다」 — posts.json 「섹션」 값이 먼저다. 값이 없거나 틀릴 때만 표로 짐작한다
-var SECS=["인천경제","경제","교통경제","해양","항공","도시·부동산","지방자치","사회","기후·에너지","AI","국제","학술","기획연재"];   // 2026-11-02 지방자치 더함, 섹션 열둘   // 2026-10-31 섹션 열하나, 인천경제 맨 앞
-var OLDSEC={"철도":"교통경제","복합물류":"교통경제","금융·증시":"경제","기후위기":"기후·에너지"};
-var secOf=function(p){ var s=p["섹션"]||""; s=OLDSEC[s]||s; if(s && SECS.indexOf(s)>=0) return s; s=MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; return OLDSEC[s]||s; };
+var SECS=["경제","정치행정","인천경제","사회","국제","기후에너지","AI","해양항공","교통물류","오피니언","학술","기획연재"];   // 2026-11-08 소장님 섹션 열둘로 개편   // 2026-11-02 지방자치 더함, 섹션 열둘   // 2026-10-31 섹션 열하나, 인천경제 맨 앞
+var OLDSEC={"철도":"교통물류","복합물류":"교통물류","교통경제":"교통물류","금융·증시":"경제","기후위기":"기후에너지","기후·에너지":"기후에너지","해양":"해양항공","항공":"해양항공","도시·부동산":"경제","지방자치":"정치행정","정책브리핑":"정치행정","칼럼":"오피니언"};
+var isPB=function(p){ return p["분야"]==="정책브리핑"||p["묶음"]==="정책브리핑"; };
+var secOf=function(p){ if(isPB(p)) return "정치행정"; var s=p["섹션"]||""; s=OLDSEC[s]||s; if(s && SECS.indexOf(s)>=0) return s; s=MAP[p["묶음"]] || FIELD[p["분야"]] || "경제"; return OLDSEC[s]||s; };
 // 2026-11-02 소장님 「기획연재 섹션에 왜 기획연재에 해당하지 않는 기사들이 있지?」 「기획연재에 해당하지 않는 기사는 모두 해당 섹션으로 이관하라」 — 기획연재 쪽은 posts.json 섹션 값 「기획연재」 글만. 연재 번호(①…)가 붙어도 섹션이 다르면 그 섹션 쪽에 나온다
 var isSer=function(p){ return /[①-⑳㉑-㉟]/.test(String(p["제목"]||"")); };
 // 옛 주소(기사 쪽에 남은 s.html?k=철도 같은 것)는 새 섹션의 하위로 보낸다
-var ALIAS={"철도":["교통경제","철도"],"복합물류":["교통경제","물류"],"금융·증시":["경제","금융·증시"],"기후위기":["기후·에너지",""]};
+var ALIAS={"철도":["교통물류","철도"],"복합물류":["교통물류","물류"],"금융·증시":["경제","금융·증시"],"기후위기":["기후에너지",""],"기후·에너지":["기후에너지",""],"교통경제":["교통물류",""],"해양":["해양항공","해양"],"항공":["해양항공","항공"],"도시·부동산":["경제","도시·부동산"],"지방자치":["정치행정","지방자치"],"정책브리핑":["정치행정","정책브리핑"],"칼럼":["오피니언",""]};
 var isBrief=function(p){ return /브리핑/.test(String(p["묶음"]||"")) || String(p["분야"]||"")==="정책브리핑"; };
-var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||"")+" "+String(p["하위"]||""); };
+var hay=function(p){ return String(p["제목"]||"")+" "+String(p["부제"]||"")+" "+String(p["묶음"]||"")+" "+String(p["하위"]||"")+" §"+String(p["섹션"]||MAP[p["묶음"]]||FIELD[p["분야"]]||"")+" "+(isPB(p)?" §정책브리핑 ":""); };
 var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");};
 var href=function(p){ p=String(p||""); return p.charAt(0)==="/" ? p : "/"+p; };
 var dstr=function(s){ s=String(s||""); var m=s.match(/(\d{4})-(\d{2})-(\d{2})/); return m? (m[2].replace(/^0/,"")+"."+m[3]) : ""; };
@@ -404,6 +411,8 @@ var PG=Math.max(1,parseInt((location.search.match(/[?&]p=(\d+)/)||[])[1]||"1",10
 var qs=function(o){ var k=('k' in o)?o.k:K, q=('q' in o)?o.q:Q, sb=('sub' in o)?o.sub:SUB, pg=('p' in o)?o.p:PG; var a=[];
   if(q) a.push('q='+encodeURIComponent(q)); else a.push('k='+encodeURIComponent(k)); if(sb) a.push('sub='+encodeURIComponent(sb)); if(pg>1) a.push('p='+pg); return '?'+a.join('&'); };
 var subKw=function(k,name){ var hit=null; (SUBS[k]||[]).forEach(function(x){ if(x.k===name) hit=x.kw; (x.sub||[]).forEach(function(y){ if(y.k===name) hit=y.kw; }); }); return hit; };
+// 2026-11-08 섹션 열둘 개편 — 옛 섹션 주소는 새 섹션과 하위 꼭지 주소로 넘긴다
+if(!Q && ALIAS[K]){ location.replace(location.pathname+'?k='+encodeURIComponent(ALIAS[K][0])+(ALIAS[K][1]?'&sub='+encodeURIComponent(ALIAS[K][1]):'')); }
 document.getElementById('pgT').textContent=Q?('검색 「'+Q+'」'):(K==="전체"?"전체기사":(ALIAS[K]?(ALIAS[K][0]+(ALIAS[K][1]?' · '+ALIAS[K][1]:'')):K)); document.title=(Q?('검색 '+Q):K)+" — AI경제저널";
 (function(){var i=document.querySelector('.gnb .sch input'); if(i&&Q) i.value=Q;})();
 fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(list){ list=(Array.isArray(list)?list:[]).filter(function(p){ return p["누리집"]!=="연구소"; }); /* 연구소 몫(보도자료·연구보고서)은 뉴스에 걸지 않는다 — 통합지침 쉰다섯 2항, 2026-11-06 소장님 승인 */

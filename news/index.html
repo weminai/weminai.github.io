@@ -123,7 +123,7 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
   <div class="slo rot"><b class="ko">일하는 사람들의 전문지</b><span class="en">AI ECONOMY JOURNAL</span></div>
   <!-- 등록이 끝나면 「인터넷신문 등록번호 인천 아00000」을 바닥글에 넣는다. 등록 전에는 적지 않는다 -->
 </div></header>
-<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
+<nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=정치행정">정치행정</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=사회">사회</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=기후에너지">기후에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=해양항공">해양항공</a><a href="/news/s.html?k=교통물류">교통물류</a><a href="/news/s.html?k=오피니언">오피니언</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav>
 <div class="wrap"><div class="ad ad-top" id="adTop"></div></div>
 <div class="numbar" id="numbar" hidden><div class="wrap"><div class="ttl">숫자로 읽는<br>이번 주</div><span id="nums" style="display:contents"></span></div></div>
 <main><div class="wrap">
@@ -167,12 +167,12 @@ var AD={ top:null, side:null, mid:null, foot:null };
 
 // 섹션 열하나(2026-10-31). posts.json 「섹션」 값이 먼저다. 기획연재는 제목에 연재 번호(①…)가 붙은 글, 학술은 섹션 값 「학술」
 // 2026-11-02 소장님 「여기를 지방자치로 바꾸라」 → 섹션 열둘. 지방자치를 도시·부동산 다음에 둔다
-var SEC=["인천경제","경제","교통경제","해양","항공","도시·부동산","지방자치","사회","기후·에너지","AI","국제","학술","기획연재"];
-var SUBT={"인천경제":"지역경제","지방자치":"지방정부 · 지방의회 · 지방재정 · 여의도 14명","경제":"거시·정책 · 금융·증시 · 산업·노동 · 민생·복지 · 사회연대경제","교통경제":"철도 · 도로 · 대중교통 · 물류",
- "해양":"해양경계 · 해운·항만 · 수산업 · 섬","항공":"공항 · 항공산업","도시·부동산":"도시계획 · 도시개발 · 도시정비 · 부동산","기후·에너지":"기후 · 에너지 전환",
- "AI":"AI 산업 · AI 칼럼","국제":"국제정세 · 외교 · 군사 · 안보","학술":"인천 지역 대학·연구기관 논문, 세계 과학 논문","기획연재":"숫자와 원문으로 끝까지"};
-var OLD={"철도":"교통경제","복합물류":"교통경제","금융·증시":"경제","기후위기":"기후·에너지"};
-var secOf=function(p){ var s=p["섹션"]||""; s=OLD[s]||s; return SEC.indexOf(s)>=0?s:"경제"; };
+var SEC=["경제","정치행정","인천경제","사회","국제","기후에너지","AI","해양항공","교통물류","오피니언","학술","기획연재"];   // 2026-11-08 소장님 섹션 열둘로 개편(해양항공·교통물류·정치행정·오피니언, 도시·부동산은 경제로, 지방자치는 정치행정으로)
+var SUBT={"경제":"거시·정책 · 금융·증시 · 산업·노동 · 민생·복지 · 사회연대경제 · 도시·부동산","정치행정":"정책브리핑 · 지방자치 · 정치행정 · 여의도","인천경제":"지역경제","사회":"",
+ "국제":"국제정세 · 외교 · 군사 · 안보","기후에너지":"기후 · 에너지 전환","AI":"AI 산업 · AI 칼럼","해양항공":"해양 · 항공","교통물류":"철도 · 도로 · 대중교통 · 물류",
+ "오피니언":"경세제민의 눈 · 경제밥상 · 정치밥상","학술":"인천 지역 대학·연구기관 논문, 세계 과학 논문","기획연재":"숫자와 원문으로 끝까지"};
+var OLD={"철도":"교통물류","복합물류":"교통물류","교통경제":"교통물류","금융·증시":"경제","기후위기":"기후에너지","기후·에너지":"기후에너지","해양":"해양항공","항공":"해양항공","도시·부동산":"경제","지방자치":"정치행정","정책브리핑":"정치행정","칼럼":"오피니언"};
+var secOf=function(p){ if(p["분야"]==="정책브리핑"||p["묶음"]==="정책브리핑") return "정치행정"; var s=p["섹션"]||""; s=OLD[s]||s; return SEC.indexOf(s)>=0?s:"경제"; };
 var isSer=function(p){ return /[①-⑳㉑-㉟]/.test(String(p["제목"]||"")); };
 var kind=function(p){ var b=String(p["묶음"]||""), f=String(p["분야"]||"");
   if(f==="연구보고서") return "연구보고서"; if(/논문/.test(b)) return "논문 해설"; if(/서평/.test(b)) return "서평"; if(/칼럼/.test(b)) return "칼럼";
@@ -236,7 +236,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   // 칸마다 그 섹션에서 아직 1면에 안 걸린 가장 새 글 한 편. 그 섹션에 걸 글이 없으면 다른 섹션 글로 메우지 않고 「준비 중」 칸을 둔다(칸과 상단 섹션이 늘 일치)
   // 기획연재 글은 아래 「기획연재」 칸에만 건다 — 먼저 떼어 둔다(2026-11-02 소장님 「연재는 기획연재 칸에만」, 「내 지시다」 경세제민연구소 홈페이지 관리 회차). 위 칸의 기획연재 자리는 안내만
   var deep=list.filter(function(p){ return p["섹션"]==="기획연재"; }).map(use), sbx={}; deep=deep.filter(function(p){ if(sbx[p["묶음"]]) return false; sbx[p["묶음"]]=1; return true; });
-  var FIX=["인천경제","경제","교통경제","해양","항공","도시·부동산","지방자치","기후·에너지","AI","국제","학술","기획연재"];   // 아래 여섯 첫 칸 인천경제 → 지방자치(2026-11-02 소장님)
+  var FIX=["인천경제","경제","정치행정","교통물류","해양항공","사회","국제","기후에너지","AI","오피니언","학술","기획연재"];   // 2026-11-08 섹션 열둘 개편   // 아래 여섯 첫 칸 인천경제 → 지방자치(2026-11-02 소장님)
   // 기획연재 자리는 아래 기획연재 칸과 겹쳐도 가장 새 기획연재 글을 건다(2026-11-02 소장님 「기획연재는 최신 기획연재 기사를 넣으라」). 열두 칸과 B판이 같은 글을 두 번 걸지 않게 따로 센다
   var serUsed={};
   var bySec=function(s,needPic){ if(s==="기획연재"){ var q=list.filter(function(p){ return p["섹션"]==="기획연재" && !serUsed[p.id] && (!needPic||pic(p)); })[0]; if(q) serUsed[q.id]=1; return q; }
@@ -253,7 +253,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   // A판 — 인천경제·경제·교통경제·해양·항공·도시·부동산 / B판 — 인천경제·기후·에너지·AI·국제·학술·기획연재(위 열두 칸과 같은 짜임). 섹션마다 아직 1면에 안 걸린 가장 새 글 한 편. 두 판이 번갈아 바뀐다(10초, 마우스를 올리면 멈춤, 단추로 고름)
   // 2026-11-02 소장님 「여기도 학술은 지방자치로」 「기획연재는 기획연재로」 「채우라」 → 기획연재 자리는 기획연재 글(위 열두 칸과 다른 글)
   // 2026-11-02 소장님 「상위 두개는 고정하라」 「맨위는 인천경제 그아래는 지방자치」 「A판과 B판 모두」
-  var pg=[["인천경제","지방자치","경제","교통경제","해양","항공","도시·부동산"],["인천경제","지방자치","기후·에너지","AI","국제","기획연재"]].map(function(g){ return g.map(function(s){ var p=bySec(s,0);
+  var pg=[["인천경제","정치행정","경제","교통물류","해양항공","사회","오피니언"],["인천경제","정치행정","기후에너지","AI","국제","기획연재"]].map(function(g){ return g.map(function(s){ var p=bySec(s,0);
     // 글이 없는 섹션 자리는 기획연재가 아닌 다른 새 뉴스로 채운다(2026-11-02 소장님 「여기도 기획연재가 아닌 다른 뉴스로 채우라」). 칸 이름은 그 글의 섹션
     if(!p){ p=list.filter(function(q){ return free(q) && q["섹션"]!=="기획연재" && secOf(q)!=="기획연재"; })[0]; if(p) s=secOf(p); }
     if(p) use(p); return [s,p]; }); });
@@ -288,7 +288,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     // 기획연재 칸은 위에 걸렸어도 기획연재 글을 새것부터 차례로 건다. 10초마다 한 칸씩 아래로 내려가고 맨 아래 글이 맨 위로 온다(2026-11-02 소장님 「여기 기획연재는 왜 빼지?」 「기획연재가 순서대로 내려가게 하라」)
     if(s==="기획연재"){ var sl=list.filter(function(p){ return p["섹션"]==="기획연재"; }); if(!sl.length) return h+'<div class="em">'+esc(MSG[s])+'</div></div>'; return h+'<div id="serBox"></div></div>'; }
     // 지방자치 칸은 위에 걸린 글이라도 지방자치 글로 채운다 — 안 걸린 글 먼저, 모자라면 걸린 글(2026-11-03 소장님 「지방자치에는 지방자치 글이 올라가게 하세요」)
-    var arr=(s==="지방자치")?list.filter(function(p){ return free(p) && secOf(p)===s; }).concat(list.filter(function(p){ return !free(p) && secOf(p)===s; })):list.filter(function(p){ return free(p) && secOf(p)===s; }); var tp=arr.filter(pic)[0];
+    var arr=(s==="정치행정")?list.filter(function(p){ return free(p) && secOf(p)===s; }).concat(list.filter(function(p){ return !free(p) && secOf(p)===s; })):list.filter(function(p){ return free(p) && secOf(p)===s; }); var tp=arr.filter(pic)[0];
     if(!tp) return h+'<div class="em">'+esc(MSG[s]||"첫 기사를 준비하고 있습니다.")+'</div></div>';
     use(tp); var rest=arr.filter(function(p){ return p!==tp; }).slice(0,2).map(use);
     return h+'<a href="'+href(tp["파일"])+'">'+img(tp,1)+'<h4>'+ttl(tp)+'</h4></a><ul>'+rest.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join('')+'</ul></div>';
