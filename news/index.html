@@ -60,8 +60,14 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
 .blk{border-top:3px solid var(--ink);margin-top:26px}.bh{font-weight:900;font-size:15px;padding:10px 0 6px;letter-spacing:.03em}.bh a:hover{color:var(--acc)}
 .bg{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;padding-bottom:18px}.bg .lead .ph{aspect-ratio:3/2;object-position:50% 22%}
 .bg .lead h3{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:23px;line-height:1.38;margin:2px 0 6px}.bg .lead p{font-size:14.5px;color:var(--sub);margin:0}
-.li{display:grid;grid-template-columns:minmax(0,1fr) 104px;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}.li:first-child{padding-top:2px}
-.li .t{display:block;font-size:15.3px;line-height:1.45;font-weight:700}.li .ph{aspect-ratio:4/3;object-position:50% 22%}
+.li{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:14px;padding:7px 0;align-items:center;border-bottom:1px solid var(--line)}/* 2026-11-09 소장님 「세로 간격이 너무 길다」 「폭을 줄이라」 — 이어서 읽기 줄 높이를 줄인다 */.li:first-child{padding-top:2px}
+/* 2026-11-09 소장님 「AB판을 나란히 보이게하라」(참고: 두 줄 「중요뉴스」) — 이어서 읽기 A판·B판을 두 단으로 나란히, 판 바꾸기 단추는 숨김. 좁은 화면은 한 단 */
+#t10a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
+#t10a>.abp,#t10a>.abp[hidden]{display:block}
+#abt{display:none}
+@media(max-width:760px){#t10a{grid-template-columns:minmax(0,1fr)}}
+
+.li .t{display:block;font-size:15.3px;line-height:1.45;font-weight:700}.li .ph{aspect-ratio:16/10;object-position:50% 22%}
 .side .box{border-top:3px solid var(--ink);margin-top:26px}.side ol{list-style:none;margin:0;padding:0;counter-reset:n}
 .side ol li a{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.45;font-weight:600}
 .side ol li a:before{counter-increment:n;content:counter(n);color:var(--red);font-weight:900;font-size:17px;min-width:14px}
@@ -90,7 +96,7 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
 @media(max-width:640px){.wrap{padding:0 16px}.top{display:none}.mast{padding:10px 0 6px}.mast h1 a{width:164px;height:44px}.mast .slo{font-size:12px;margin-top:4px}.mast .slo span{display:none}
  .gnb .sch{display:none}.hero{padding:16px 0}.hero h2{font-size:25px}.g4{gap:14px}.g4 h3{font-size:14px}
  .numbar .wrap{display:flex;overflow-x:auto;padding:0 16px;scrollbar-width:none}.numbar .ttl{flex:0 0 auto;padding:10px 12px 0 0;border:0}.numbar a{flex:0 0 150px;padding:9px 12px}.numbar b{font-size:16px}
- .li{grid-template-columns:minmax(0,1fr) 88px}.row4 .g{gap:14px}.row4 h4{font-size:15px}.row4 p{display:none}.pr{margin-left:-16px;margin-right:-16px;padding:14px 16px}
+ .li{grid-template-columns:minmax(0,1fr) 80px}.row4 .g{gap:14px}.row4 h4{font-size:15px}.row4 p{display:none}.pr{margin-left:-16px;margin-right:-16px;padding:14px 16px}
  .sg{gap:20px 14px}.sc .em,.sc .sp{aspect-ratio:auto;min-height:110px}}
 
 @media(min-width:1001px){.hero{grid-template-columns:1.6fr 1fr}}
