@@ -185,8 +185,8 @@ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded'
   (document.head||document.documentElement).appendChild(s); })();
 /* 2026-11-09 웹앱(홈 화면에 추가) — 소장님 「권고안대로 합니다」. 앱 정보 파일과 아이콘을 붙이고, 설치 안내 신호를 받아 둔다(내 정보 「홈 화면에 추가」 단추가 씀) */
 (function(){ try{ var h=document.head; function add(t,a){ var e=document.createElement(t); for(var k in a) e.setAttribute(k,a[k]); h.appendChild(e); }
-if(!document.querySelector('link[rel="manifest"]')) add('link',{rel:'manifest',href:'/news/app/manifest.webmanifest'});
-add('link',{rel:'apple-touch-icon',href:'/news/app/apple-touch-180.png'});
+if(!document.querySelector('link[rel="manifest"]')) add('link',{rel:'manifest',href:'/news/app.webmanifest'});
+add('link',{rel:'apple-touch-icon',href:'/news/app-apple-180.png'});
 if(!document.querySelector('meta[name="theme-color"]')) add('meta',{name:'theme-color',content:'#17428F'});
 add('meta',{name:'apple-mobile-web-app-title',content:'AI경제저널'});
 window.addEventListener('beforeinstallprompt',function(e){ e.preventDefault(); window.__wmInstall=e; });
