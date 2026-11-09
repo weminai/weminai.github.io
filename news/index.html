@@ -62,11 +62,13 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
 .bg .lead h3{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:23px;line-height:1.38;margin:2px 0 6px}.bg .lead p{font-size:14.5px;color:var(--sub);margin:0}
 .li{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:14px;padding:7px 0;align-items:center;border-bottom:1px solid var(--line)}/* 2026-11-09 소장님 「세로 간격이 너무 길다」 「폭을 줄이라」 — 이어서 읽기 줄 높이를 줄인다 */.li:first-child{padding-top:2px}
 /* 2026-11-09 소장님 「AB판을 나란히 보이게하라」(참고: 두 줄 「중요뉴스」) — 이어서 읽기 A판·B판을 두 단으로 나란히, 판 바꾸기 단추는 숨김. 좁은 화면은 한 단 */
-#t10a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
-#t10a>.abp,#t10a>.abp[hidden]{display:block}
+/* 「우측 빈곳은 뭐지?」 — A판·B판·더 보기를 한 판으로 엮어 두 단에 차례로 채운다(줄마다 좌우 높이가 맞고 빈 곳이 안 생긴다). 모자란 한 칸은 아래 스크립트가 맨 끝 한 편을 숨겨 짝을 맞춘다 */
+section.blk:has(#t10a){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:stretch}
+section.blk:has(#t10a)>.bh{grid-column:1/-1}
+#t10a,#t10a>.abp,#t10a>.abp[hidden],#t10a+.more{display:contents}
+section.blk:has(#t10a) .li{padding-top:7px}
 #abt{display:none}
-#t10a+.more{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
-@media(max-width:760px){#t10a,#t10a+.more{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){section.blk:has(#t10a){grid-template-columns:minmax(0,1fr)}}
 
 .li .t{display:block;font-size:15.3px;line-height:1.45;font-weight:700}.li .ph{aspect-ratio:16/10;object-position:50% 22%}
 .side .box{border-top:3px solid var(--ink);margin-top:26px}.side ol{list-style:none;margin:0;padding:0;counter-reset:n}
@@ -320,4 +322,17 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     if(tp.length){ document.getElementById('most').innerHTML=tp.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join(''); document.getElementById('mostBox').hidden=false; } }).catch(function(){}); }
 }).catch(function(){ document.getElementById('lead').innerHTML='<div class="empty">기사를 불러오지 못했습니다. 잠시 뒤에 다시 열어 주십시오.</div>'; });
 </script>
+<script>/* 2026-11-09 이어서 읽기 두 단 짝 맞추기 + 소장님 「이 공백은 어떻게 처리할 건데?」 — 오른쪽 날개(aside.side)보다 왼쪽 목록이 짧으면 1면에 안 걸린 새 글을 두 편씩 더 달아 바닥을 맞춘다 */
+(function(){ var P=null, busy=false;
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function hr(p){ p=String(p||''); return p.charAt(0)==='/'?p:'/'+p; }
+  function items(){ return [].slice.call(document.querySelectorAll('#t10a .li, #t10a+.more .li')); }
+  function fill(){ var sec=document.getElementById('t10a'); if(!sec) return; sec=sec.closest('section'); var more=document.querySelector('#t10a+.more'), side=document.querySelector('aside.side'); var L=items(); L.forEach(function(x){ if(x.getAttribute('data-pair')) x.style.display=''; });
+    if(window.innerWidth>760 && side && more && P){ var used={}; [].forEach.call(document.querySelectorAll('a[href]'),function(a){ used[a.getAttribute('href')]=1; });
+      var pool=P.filter(function(p){ return p['대표그림'] && p['파일'] && !used[hr(p['파일'])]; }); var rowH=(L[0]&&L[0].getBoundingClientRect().height)||85; var gap=side.getBoundingClientRect().bottom-sec.getBoundingClientRect().bottom; var n=Math.max(0,Math.floor(gap/rowH))*2; if(L.length%2) n+=1;
+      pool.slice(0,n).forEach(function(p){ var a=document.createElement('a'); a.className='li'; a.href=hr(p['파일']); a.innerHTML='<div><span class="t">'+esc(p['제목'])+'</span></div><img class="ph" src="'+hr(p['대표그림'])+'" alt="" loading="lazy">'; more.appendChild(a); }); }
+    L=items(); if(L.length%2 && window.innerWidth>760) L[L.length-1].style.display='none', L[L.length-1].setAttribute('data-pair','1'); }
+  function go(){ if(busy) return; busy=true; fetch('/data/posts.json').then(function(r){ return r.json(); }).then(function(d){ P=d; }).catch(function(){}).then(function(){ fill(); setTimeout(fill,1500); }); }
+  window.addEventListener('load',go);
+})();</script>
 </body></html>
