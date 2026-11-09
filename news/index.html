@@ -65,7 +65,8 @@ a:hover h2,a:hover h3,a:hover h4,a:hover .t{color:var(--acc)}
 #t10a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
 #t10a>.abp,#t10a>.abp[hidden]{display:block}
 #abt{display:none}
-@media(max-width:760px){#t10a{grid-template-columns:minmax(0,1fr)}}
+#t10a+.more{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
+@media(max-width:760px){#t10a,#t10a+.more{grid-template-columns:minmax(0,1fr)}}
 
 .li .t{display:block;font-size:15.3px;line-height:1.45;font-weight:700}.li .ph{aspect-ratio:16/10;object-position:50% 22%}
 .side .box{border-top:3px solid var(--ink);margin-top:26px}.side ol{list-style:none;margin:0;padding:0;counter-reset:n}
