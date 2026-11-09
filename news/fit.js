@@ -175,3 +175,12 @@
 /* 2026-11-09 바닥글 「이용약관 · 개인정보 처리방침」 — 이용약관(news/terms.html)을 개인정보 처리방침 앞에 넣는다. 기사 쪽마다 고치지 않고 여기서 넣는다(소장님 「바로 그 메뉴에 알리면 될 것을」) */
 ;(function(){ function add(){ if(document.querySelector('.nff a[href="/news/terms.html"]')) return; var p=document.querySelector('.nff a[href="/news/privacy.html"]'); if(!p) return; var a=document.createElement('a'); a.href='/news/terms.html'; a.textContent='이용약관'; p.parentNode.insertBefore(a,p); }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',add); else add(); })();
+
+/* 2026-11-09 소장님 「가운데 정렬하세요 이게 뭡니까?」 「모바일 버전은」 「여기도 가운데 정렬하고」 「맨 하단의 글은 불필요하다」
+   — 기사 쪽 아래 공유 줄·관련기사·기자·태그(.share, .af)가 본문 틀(.wrap) 밖에 있는 옛 기사도 본문과 같은 폭(780px)으로 가운데에 둔다. 모바일도 같은 좌우 여백.
+   — 바닥글 밑에 덧붙던 연구소 저작권 한 줄(footer::after)을 없앤다. 바닥글 안의 AI경제저널 저작권 줄은 그대로 둔다 */
+(function(){ var s=document.createElement('style'); s.textContent=
+  'article.art>.share,article.art>.af{max-width:780px;margin-left:auto!important;margin-right:auto!important;padding-left:24px;padding-right:24px;box-sizing:border-box}'+
+  '@media(max-width:600px){article.art>.share,article.art>.af{padding-left:16px;padding-right:16px}}'+
+  'footer::after,footer.nff::after{content:none!important;display:none!important}';
+  (document.head||document.documentElement).appendChild(s); })();
