@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>회원 집계 — AI경제저널 편집국</title>
+<style>
+body{margin:0;font-family:-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;background:#f5f6f8;color:#111}
+.w{max-width:960px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:22px;color:#17428F;margin:0 0 4px}.sub{color:#666;font-size:14px;margin-bottom:18px}
+.card{background:#fff;border:1px solid #dde2ea;border-radius:8px;padding:16px;margin:0 0 14px}
+.big{font-size:34px;font-weight:800;color:#17428F}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.bar{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:14px}.bar .l{width:9em;flex:none}.bar .b{height:12px;background:#17428F;border-radius:2px;min-width:2px}.bar .n{color:#444}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid #eee;padding:6px 4px;text-align:left;vertical-align:top}th{background:#f0f3f8}
+button{font:inherit;font-weight:700;border-radius:6px;padding:6px 12px;cursor:pointer;border:1px solid #17428F;background:#17428F;color:#fff}
+button.dan{background:#fff;color:#c0392b;border-color:#c0392b;padding:3px 8px;font-size:12px}
+.msg{color:#c0392b;font-weight:700}
+</style></head><body><div class="w">
+<h1>회원 집계</h1><div class="sub">AI경제저널 편집국 전용. 연구소 계정(weminaimax@weminai.com)으로 로그인해야 열립니다. 이 쪽은 검색에 걸리지 않고 메뉴에도 없습니다.</div>
+<div id="gate" class="card">연구소 계정으로 로그인해 주십시오. <button type="button" id="in">구글로 로그인</button> <span id="who" class="sub"></span><div id="msg" class="msg"></div></div>
+<div id="out" hidden>
+<div class="grid"><div class="card"><div>회원 수</div><div class="big" id="cnt">0</div><div class="sub" id="cnt2"></div></div><div class="card"><div>소식 받기 동의</div><div class="big" id="news">0</div></div></div>
+<div class="grid"><div class="card"><b>사는 곳</b><div id="g-reg"></div></div><div class="card"><b>하는 일</b><div id="g-job"></div></div><div class="card"><b>관심 섹션</b><div id="g-sec"></div></div></div>
+<div class="card"><b>명단</b> <span class="sub">(해지는 약관 위반 신고가 확인됐을 때만. 해지하면 회원 명단과 별칭이 지워지고, 그 사람은 다시 로그인하면 가입 신청서를 보게 됩니다)</span>
+<div style="overflow-x:auto"><table><thead><tr><th>번호</th><th>이름·별칭</th><th>전자우편</th><th>사는 곳</th><th>하는 일</th><th>관심 섹션</th><th>소식</th><th>가입</th><th>마지막 로그인</th><th></th></tr></thead><tbody id="tb"></tbody></table></div></div>
+</div>
+<script>
+/* 2026-11-09 소장님 「남은 일 하세요」 — 회원 설계안 08시08분 결정 3항: 승인 관리 대신 회원 수·사는 곳·하는 일·관심 섹션 집계와 해지 단추만 */
+(function(){
+var CFG={apiKey:"AIzaSyDAmnIKsRZ9UbU4i_l15VvNYHCpxGlD-sc",authDomain:"ai-economy-journal.firebaseapp.com",projectId:"ai-economy-journal",appId:"1:1018126089787:web:859852a1d25ebe499f661e"};
+var V='10.12.2', ADMIN='weminaimax@weminai.com';
+function load(s){ return new Promise(function(r,j){ var e=document.createElement('script'); e.src=s; e.onload=r; e.onerror=j; document.head.appendChild(e); }); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function d(t){ try{ var x=t.toDate(); return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0'); }catch(e){ return ''; } }
+function bars(el,map){ var ks=Object.keys(map).sort(function(a,b){ return map[b]-map[a]; }), mx=Math.max.apply(null,ks.map(function(k){ return map[k]; }).concat([1]));
+document.getElementById(el).innerHTML=ks.length?ks.map(function(k){ return '<div class="bar"><span class="l">'+esc(k)+'</span><span class="b" style="width:'+Math.round(map[k]/mx*160)+'px"></span><span class="n">'+map[k]+'</span></div>'; }).join(''):'<div class="sub">아직 없음</div>'; }
+load('https://www.gstatic.com/firebasejs/'+V+'/firebase-app-compat.js').then(function(){ return load('https://www.gstatic.com/firebasejs/'+V+'/firebase-auth-compat.js'); }).then(function(){ return load('https://www.gstatic.com/firebasejs/'+V+'/firebase-firestore-compat.js'); }).then(function(){
+if(!firebase.apps.length) firebase.initializeApp(CFG);
+var auth=firebase.auth(), db=firebase.firestore();
+document.getElementById('in').onclick=function(){ var p=new firebase.auth.GoogleAuthProvider(); p.setCustomParameters({prompt:'select_account',login_hint:ADMIN}); auth.signInWithPopup(p).catch(function(e){ document.getElementById('msg').textContent='로그인하지 못했습니다: '+(e&&e.code||''); }); };
+auth.onAuthStateChanged(function(u){
+var who=document.getElementById('who'), msg=document.getElementById('msg'); msg.textContent='';
+if(!u){ who.textContent=''; document.getElementById('out').hidden=true; return; }
+who.textContent='로그인: '+u.email;
+if(u.email!==ADMIN){ msg.textContent='연구소 계정이 아닙니다. 이 계정으로는 명단을 볼 수 없습니다.'; return; }
+show(db);
+});
+}).catch(function(){ document.getElementById('msg').textContent='불러오지 못했습니다.'; });
+function show(db){
+db.collection('members').get().then(function(qs){
+var rows=[], reg={}, job={}, sec={}, news=0;
+qs.forEach(function(s){ var m=s.data(); m._id=s.id; rows.push(m); reg[m.region]=(reg[m.region]||0)+1; job[m.job]=(job[m.job]||0)+1; (m.sections||[]).forEach(function(x){ sec[x]=(sec[x]||0)+1; }); if(m.consents&&m.consents.news) news++; });
+rows.sort(function(a,b){ return (b.no||0)-(a.no||0); });
+document.getElementById('cnt').textContent=rows.length; document.getElementById('news').textContent=news;
+document.getElementById('cnt2').textContent='불러온 때 '+new Date().toLocaleString('ko-KR');
+bars('g-reg',reg); bars('g-job',job); bars('g-sec',sec);
+var tb=document.getElementById('tb'); tb.innerHTML=rows.map(function(m){ return '<tr><td>'+esc(m.no)+'</td><td>'+esc(m.nick)+'</td><td>'+esc(m.email)+'</td><td>'+esc(m.region)+'</td><td>'+esc(m.job)+'</td><td>'+esc((m.sections||[]).join(', '))+'</td><td>'+(m.consents&&m.consents.news?'예':'')+'</td><td>'+d(m.createdAt)+'</td><td>'+d(m.lastLogin)+'</td><td><button type="button" class="dan" data-id="'+esc(m._id)+'" data-nick="'+esc(m.nick)+'">해지</button></td></tr>'; }).join('');
+document.getElementById('out').hidden=false;
+tb.onclick=function(e){ var b=e.target.closest('button.dan'); if(!b) return; var nick=b.getAttribute('data-nick'), id=b.getAttribute('data-id');
+if(!confirm('「'+nick+'」 회원을 해지하시겠습니까? 회원 명단과 별칭이 바로 지워집니다.')) return;
+var bt=db.batch(); bt.delete(db.collection('members').doc(id)); if(nick) bt.delete(db.collection('nicks').doc(nick));
+bt.commit().then(function(){ show(db); }).catch(function(){ alert('해지하지 못했습니다.'); }); };
+}).catch(function(e){ document.getElementById('msg').textContent='명단을 읽지 못했습니다(권한): '+(e&&e.code||''); });
+}
+})();
+</script></div></body></html>
