@@ -18,7 +18,7 @@ button.dan{background:#fff;color:#c0392b;border-color:#c0392b;padding:3px 8px;fo
 <h1>회원 집계</h1><div class="sub">AI경제저널 편집국 전용. 연구소 계정(weminaimax@weminai.com)으로 로그인해야 열립니다. 이 쪽은 검색에 걸리지 않고 메뉴에도 없습니다.</div>
 <div id="gate" class="card">연구소 계정으로 로그인해 주십시오. <button type="button" id="in">구글로 로그인</button> <span id="who" class="sub"></span><div id="msg" class="msg"></div></div>
 <div id="out" hidden>
-<div class="grid"><div class="card"><div>회원 수</div><div class="big" id="cnt">0</div><div class="sub" id="cnt2"></div></div><div class="card"><div>소식 받기 동의</div><div class="big" id="news">0</div></div></div>
+<div class="grid"><div class="card"><div>회원 수</div><div class="big" id="cnt">0</div><div class="sub" id="cnt2"></div></div><div class="card"><div>소식 받기 동의</div><div class="big" id="news">0</div></div><div class="card"><div>앱 쓰겠다</div><div class="big" id="app">0</div></div><div class="card"><div>카톡 채널 추가하겠다</div><div class="big" id="kakao">0</div></div></div>
 <div class="grid"><div class="card"><b>사는 곳</b><div id="g-reg"></div></div><div class="card"><b>하는 일</b><div id="g-job"></div></div><div class="card"><b>관심 섹션</b><div id="g-sec"></div></div></div>
 <div class="card"><b>명단</b> <span class="sub">(해지는 약관 위반 신고가 확인됐을 때만. 해지하면 회원 명단과 별칭이 지워지고, 그 사람은 다시 로그인하면 가입 신청서를 보게 됩니다)</span>
 <div style="overflow-x:auto"><table><thead><tr><th>번호</th><th>이름·별칭</th><th>전자우편</th><th>사는 곳</th><th>하는 일</th><th>관심 섹션</th><th>소식</th><th>가입</th><th>마지막 로그인</th><th></th></tr></thead><tbody id="tb"></tbody></table></div></div>
@@ -47,10 +47,10 @@ show(db);
 }).catch(function(){ document.getElementById('msg').textContent='불러오지 못했습니다.'; });
 function show(db){
 db.collection('members').get().then(function(qs){
-var rows=[], reg={}, job={}, sec={}, news=0;
-qs.forEach(function(s){ var m=s.data(); m._id=s.id; rows.push(m); reg[m.region]=(reg[m.region]||0)+1; job[m.job]=(job[m.job]||0)+1; (m.sections||[]).forEach(function(x){ sec[x]=(sec[x]||0)+1; }); if(m.consents&&m.consents.news) news++; });
+var rows=[], reg={}, job={}, sec={}, news=0, app=0, kakao=0;
+qs.forEach(function(s){ var m=s.data(); m._id=s.id; rows.push(m); reg[m.region]=(reg[m.region]||0)+1; job[m.job]=(job[m.job]||0)+1; (m.sections||[]).forEach(function(x){ sec[x]=(sec[x]||0)+1; }); if(m.consents&&m.consents.news) news++; if(m.consents&&m.consents.app) app++; if(m.consents&&m.consents.kakao) kakao++; });
 rows.sort(function(a,b){ var ta=a.createdAt&&a.createdAt.toMillis?a.createdAt.toMillis():0, tb=b.createdAt&&b.createdAt.toMillis?b.createdAt.toMillis():0; return tb-ta; });
-document.getElementById('cnt').textContent=rows.length; document.getElementById('news').textContent=news;
+document.getElementById('cnt').textContent=rows.length; document.getElementById('news').textContent=news; document.getElementById('app').textContent=app; document.getElementById('kakao').textContent=kakao;
 document.getElementById('cnt2').textContent='불러온 때 '+new Date().toLocaleString('ko-KR');
 bars('g-reg',reg); bars('g-job',job); bars('g-sec',sec);
 var tb=document.getElementById('tb'); tb.innerHTML=rows.map(function(m){ return '<tr><td>w'+String(m.yy!=null?m.yy:((m.createdAt&&m.createdAt.toDate?m.createdAt.toDate().getFullYear():new Date().getFullYear())%100)).padStart(2,'0')+'-'+String(m.no||0).padStart(3,'0')+'</td><td>'+esc(m.nick)+'</td><td>'+esc(m.email)+'</td><td>'+esc(m.region)+'</td><td>'+esc(m.job)+'</td><td>'+esc((m.sections||[]).join(', '))+'</td><td>'+(m.consents&&m.consents.news?'예':'')+'</td><td>'+d(m.createdAt)+'</td><td>'+d(m.lastLogin)+'</td><td><button type="button" class="dan" data-id="'+esc(m._id)+'" data-nick="'+esc(m.nick)+'">해지</button></td></tr>'; }).join('');
