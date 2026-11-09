@@ -121,6 +121,7 @@ var bg=modal('<h2>내 정보</h2><table>'+
 '<tr><td>관심 섹션</td><td>'+chips(SEC,'wm-sec')+'</td></tr>'+
 '<tr><td>소식 받기</td><td><label><input type="checkbox" id="wm-c4"> 전자우편으로 받기</label></td></tr>'+
 '<tr><td>앞으로 쓸 것</td><td><label><input type="checkbox" id="wm-c5"> 앱이 나오면 쓰겠습니다</label><br><label><input type="checkbox" id="wm-c6"> 카카오톡 채널이 열리면 추가하겠습니다</label></td></tr>'+
+'<tr><td>앱</td><td><button type="button" class="sec" id="wm-app">홈 화면에 추가</button> <span id="wm-apptx" style="font-size:13px;color:#666"></span></td></tr>'+
 '<tr><td>가입한 날</td><td>'+esc(fmt(m.createdAt))+'</td></tr></table>'+
 '<p style="font-size:13px;color:#666">이름 또는 별칭은 바꿀 수 없습니다. 바꾸시려면 탈퇴 뒤 다시 가입해 주십시오. <a href="/news/terms.html" target="_blank">이용약관</a> · <a href="/news/privacy.html" target="_blank">개인정보 처리방침</a></p>'+
 '<div class="err" id="wm-err"></div>'+
@@ -128,7 +129,7 @@ var bg=modal('<h2>내 정보</h2><table>'+
 var $=function(s){ return bg.querySelector(s); };
 $('#wm-reg').value=m.region||''; $('#wm-job').value=m.job||''; $('#wm-c4').checked=!!(m.consents&&m.consents.news); $('#wm-c5').checked=!!(m.consents&&m.consents.app); $('#wm-c6').checked=!!(m.consents&&m.consents.kakao);
 [].slice.call(bg.querySelectorAll('input[name="wm-sec"]')).forEach(function(x){ x.checked=(m.sections||[]).indexOf(x.value)>=0; });
-$('#wm-x').onclick=closeAll; $('#wm-out').onclick=function(){ W.signOut(); };
+$('#wm-x').onclick=closeAll; $('#wm-app').onclick=function(){ var p=window.__wmInstall, tx=$('#wm-apptx'); if(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches){ tx.textContent='이미 앱으로 쓰고 계십니다.'; return; } if(p){ p.prompt(); p.userChoice.then(function(r){ tx.textContent=(r&&r.outcome==='accepted')?'홈 화면에 추가했습니다.':''; window.__wmInstall=null; }); return; } tx.textContent=/iphone|ipad|ipod/i.test(navigator.userAgent)?'사파리 아래 공유 단추(네모에 위 화살표)를 누르고 「홈 화면에 추가」를 고르십시오.':'브라우저 메뉴(⋮)에서 「홈 화면에 추가」 또는 「앱 설치」를 고르십시오.'; }; $('#wm-out').onclick=function(){ W.signOut(); };
 $('#wm-save').onclick=function(){ var sec=[].slice.call(bg.querySelectorAll('input[name="wm-sec"]:checked')).map(function(x){ return x.value; });
 if(!$('#wm-reg').value||!$('#wm-job').value||!sec.length){ $('#wm-err').textContent='사는 곳, 하는 일, 관심 섹션을 모두 골라 주십시오.'; return; }
 var c=m.consents||{}; var nc={terms:true,privacy:true,age14:true,news:$('#wm-c4').checked,app:$('#wm-c5').checked,kakao:$('#wm-c6').checked};
