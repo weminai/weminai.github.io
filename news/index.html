@@ -289,7 +289,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     // 기획연재 칸은 위에 걸렸어도 기획연재 글을 새것부터 차례로 건다. 10초마다 한 칸씩 아래로 내려가고 맨 아래 글이 맨 위로 온다(2026-11-02 소장님 「여기 기획연재는 왜 빼지?」 「기획연재가 순서대로 내려가게 하라」)
     if(s==="기획연재"){ var sl=list.filter(function(p){ return p["섹션"]==="기획연재"; }); if(!sl.length) return h+'<div class="em">'+esc(MSG[s])+'</div></div>'; return h+'<div id="serBox"></div></div>'; }
     // 지방자치 칸은 위에 걸린 글이라도 지방자치 글로 채운다 — 안 걸린 글 먼저, 모자라면 걸린 글(2026-11-03 소장님 「지방자치에는 지방자치 글이 올라가게 하세요」)
-    var arr=(s==="정치행정")?list.filter(function(p){ return free(p) && secOf(p)===s; }).concat(list.filter(function(p){ return !free(p) && secOf(p)===s; })):list.filter(function(p){ return free(p) && secOf(p)===s; }); var tp=arr.filter(pic)[0];
+    /* 2026-11-09 소장님 「빈자리 채우고 빈공백 채우라」 — 모든 섹션 칸을 정치행정 칸처럼: 위에 안 걸린 글 먼저, 없으면 위에 걸린 그 섹션 글로 채워 「준비 중」 칸을 없앤다 */ var arr=true?list.filter(function(p){ return free(p) && secOf(p)===s; }).concat(list.filter(function(p){ return !free(p) && secOf(p)===s; })):list.filter(function(p){ return free(p) && secOf(p)===s; }); var tp=arr.filter(pic)[0];
     if(!tp) return h+'<div class="em">'+esc(MSG[s]||"첫 기사를 준비하고 있습니다.")+'</div></div>';
     use(tp); var rest=arr.filter(function(p){ return p!==tp; }).slice(0,2).map(use);
     return h+'<a href="'+href(tp["파일"])+'">'+img(tp,1)+'<h4>'+ttl(tp)+'</h4></a><ul>'+rest.map(function(p){ return '<li><a href="'+href(p["파일"])+'">'+ttl(p)+'</a></li>'; }).join('')+'</ul></div>';
