@@ -63,7 +63,9 @@ var bg=modal('<h2>AI경제저널 회원 가입 신청</h2>'+
 '<label><input type="checkbox" id="wm-c1"> (필수) <a href="/news/terms.html" target="_blank">이용약관</a>에 동의합니다</label>'+
 '<label><input type="checkbox" id="wm-c2"> (필수) <a href="/news/privacy.html" target="_blank">개인정보 수집·이용</a>에 동의합니다</label>'+
 '<label><input type="checkbox" id="wm-c3"> (필수) 만 14세 이상입니다</label>'+
-'<label><input type="checkbox" id="wm-c4"> (선택) AI경제저널 소식을 전자우편으로 받겠습니다</label></div>'+
+'<label><input type="checkbox" id="wm-c4"> (선택) AI경제저널 소식을 전자우편으로 받겠습니다</label>'+
+'<label><input type="checkbox" id="wm-c5"> (선택) AI경제저널 앱이 나오면 쓰겠습니다</label>'+
+'<label><input type="checkbox" id="wm-c6"> (선택) AI경제저널 카카오톡 채널이 열리면 추가하겠습니다</label></div>'+
 '<div class="err" id="wm-err"></div>'+
 '<div class="row"><button type="button" class="sec" id="wm-later">나중에 하기(로그아웃)</button><button type="button" class="pri" id="wm-go">가입 신청</button></div>');
 bg.querySelector('#wm-later').onclick=function(){ W.signOut(); };
@@ -86,7 +88,7 @@ return Promise.all([tx.get(cref),tx.get(nref),tx.get(mref)]).then(function(r){
 if(r[2].exists) throw {code:'already'};
 if(r[1].exists) throw {code:'nick'};
 var n=(r[0].exists?(r[0].data().n||0):0)+1;
-var data={no:n,yy:YY,nick:nick,region:reg,job:job,sections:sec,consents:{terms:true,privacy:true,age14:true,news:!!$('#wm-c4').checked,at:null},email:u.email,createdAt:FV.serverTimestamp(),lastLogin:FV.serverTimestamp()};
+var data={no:n,yy:YY,nick:nick,region:reg,job:job,sections:sec,consents:{terms:true,privacy:true,age14:true,news:!!$('#wm-c4').checked,app:!!$('#wm-c5').checked,kakao:!!$('#wm-c6').checked,at:null},email:u.email,createdAt:FV.serverTimestamp(),lastLogin:FV.serverTimestamp()};
 delete data.consents.at;
 tx.set(cref,{n:n}); tx.set(mref,data); tx.set(nref,{uid:u.uid});
 return n;
@@ -118,17 +120,18 @@ var bg=modal('<h2>내 정보</h2><table>'+
 '<tr><td>하는 일</td><td><select id="wm-job">'+opts(JOB)+'</select></td></tr>'+
 '<tr><td>관심 섹션</td><td>'+chips(SEC,'wm-sec')+'</td></tr>'+
 '<tr><td>소식 받기</td><td><label><input type="checkbox" id="wm-c4"> 전자우편으로 받기</label></td></tr>'+
+'<tr><td>앞으로 쓸 것</td><td><label><input type="checkbox" id="wm-c5"> 앱이 나오면 쓰겠습니다</label><br><label><input type="checkbox" id="wm-c6"> 카카오톡 채널이 열리면 추가하겠습니다</label></td></tr>'+
 '<tr><td>가입한 날</td><td>'+esc(fmt(m.createdAt))+'</td></tr></table>'+
 '<p style="font-size:13px;color:#666">이름 또는 별칭은 바꿀 수 없습니다. 바꾸시려면 탈퇴 뒤 다시 가입해 주십시오. <a href="/news/terms.html" target="_blank">이용약관</a> · <a href="/news/privacy.html" target="_blank">개인정보 처리방침</a></p>'+
 '<div class="err" id="wm-err"></div>'+
 '<div class="row"><button type="button" class="dan" id="wm-leave">탈퇴</button><button type="button" class="sec" id="wm-out">로그아웃</button><button type="button" class="sec" id="wm-x">닫기</button><button type="button" class="pri" id="wm-save">고친 것 저장</button></div>');
 var $=function(s){ return bg.querySelector(s); };
-$('#wm-reg').value=m.region||''; $('#wm-job').value=m.job||''; $('#wm-c4').checked=!!(m.consents&&m.consents.news);
+$('#wm-reg').value=m.region||''; $('#wm-job').value=m.job||''; $('#wm-c4').checked=!!(m.consents&&m.consents.news); $('#wm-c5').checked=!!(m.consents&&m.consents.app); $('#wm-c6').checked=!!(m.consents&&m.consents.kakao);
 [].slice.call(bg.querySelectorAll('input[name="wm-sec"]')).forEach(function(x){ x.checked=(m.sections||[]).indexOf(x.value)>=0; });
 $('#wm-x').onclick=closeAll; $('#wm-out').onclick=function(){ W.signOut(); };
 $('#wm-save').onclick=function(){ var sec=[].slice.call(bg.querySelectorAll('input[name="wm-sec"]:checked')).map(function(x){ return x.value; });
 if(!$('#wm-reg').value||!$('#wm-job').value||!sec.length){ $('#wm-err').textContent='사는 곳, 하는 일, 관심 섹션을 모두 골라 주십시오.'; return; }
-var c=m.consents||{}; var nc={terms:true,privacy:true,age14:true,news:$('#wm-c4').checked};
+var c=m.consents||{}; var nc={terms:true,privacy:true,age14:true,news:$('#wm-c4').checked,app:$('#wm-c5').checked,kakao:$('#wm-c6').checked};
 db.collection('members').doc(u.uid).update({region:$('#wm-reg').value,job:$('#wm-job').value,sections:sec,consents:nc}).then(function(){ return db.collection('members').doc(u.uid).get(); }).then(function(s){ W.member=s.data(); $('#wm-err').style.color='#1e7d32'; $('#wm-err').textContent='저장했습니다.'; }).catch(function(){ $('#wm-err').textContent='저장하지 못했습니다. 잠시 뒤 다시 해 주십시오.'; }); };
 $('#wm-leave').onclick=function(){ leave(); };
 }
