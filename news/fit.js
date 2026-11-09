@@ -170,7 +170,7 @@
 }catch(e){} })();
 
 /* 2026-11-09 구글 로그인 — news/login.js 를 모든 쪽에서 부른다 */
-;(function(){ try{ /* 2026-11-09 소장님 「하세요」 — 로그인 다시 엶(가입 신청서·내 정보·탈퇴) */ if(document.getElementById('wemin-login-js')) return; var s=document.createElement('script'); s.id='wemin-login-js'; s.src='/news/login.js?v=261109c'; s.async=true; (document.head||document.documentElement).appendChild(s); }catch(e){} })();
+;(function(){ try{ /* 2026-11-09 소장님 「하세요」 — 로그인 다시 엶(가입 신청서·내 정보·탈퇴) */ if(document.getElementById('wemin-login-js')) return; var s=document.createElement('script'); s.id='wemin-login-js'; s.src='/news/login.js?v=261109d'; s.async=true; (document.head||document.documentElement).appendChild(s); }catch(e){} })();
 
 /* 2026-11-09 바닥글 「이용약관 · 개인정보 처리방침」 — 이용약관(news/terms.html)을 개인정보 처리방침 앞에 넣는다. 기사 쪽마다 고치지 않고 여기서 넣는다(소장님 「바로 그 메뉴에 알리면 될 것을」) */
 ;(function(){ function add(){ if(document.querySelector('.nff a[href="/news/terms.html"]')) return; var p=document.querySelector('.nff a[href="/news/privacy.html"]'); if(!p) return; var a=document.createElement('a'); a.href='/news/terms.html'; a.textContent='이용약관'; p.parentNode.insertBefore(a,p); }
@@ -183,3 +183,12 @@ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded'
   'article.art>.share,article.art>.af{max-width:780px;margin-left:auto!important;margin-right:auto!important;padding-left:24px;padding-right:24px;box-sizing:border-box}'+
   'footer::after,footer.nff::after{content:none!important;display:none!important}';
   (document.head||document.documentElement).appendChild(s); })();
+/* 2026-11-09 웹앱(홈 화면에 추가) — 소장님 「권고안대로 합니다」. 앱 정보 파일과 아이콘을 붙이고, 설치 안내 신호를 받아 둔다(내 정보 「홈 화면에 추가」 단추가 씀) */
+(function(){ try{ var h=document.head; function add(t,a){ var e=document.createElement(t); for(var k in a) e.setAttribute(k,a[k]); h.appendChild(e); }
+if(!document.querySelector('link[rel="manifest"]')) add('link',{rel:'manifest',href:'/news/app/manifest.webmanifest'});
+add('link',{rel:'apple-touch-icon',href:'/news/app/apple-touch-180.png'});
+if(!document.querySelector('meta[name="theme-color"]')) add('meta',{name:'theme-color',content:'#17428F'});
+add('meta',{name:'apple-mobile-web-app-title',content:'AI경제저널'});
+window.addEventListener('beforeinstallprompt',function(e){ e.preventDefault(); window.__wmInstall=e; });
+window.addEventListener('appinstalled',function(){ window.__wmInstall=null; });
+}catch(e){} })();
