@@ -49,11 +49,11 @@ function show(db){
 db.collection('members').get().then(function(qs){
 var rows=[], reg={}, job={}, sec={}, news=0;
 qs.forEach(function(s){ var m=s.data(); m._id=s.id; rows.push(m); reg[m.region]=(reg[m.region]||0)+1; job[m.job]=(job[m.job]||0)+1; (m.sections||[]).forEach(function(x){ sec[x]=(sec[x]||0)+1; }); if(m.consents&&m.consents.news) news++; });
-rows.sort(function(a,b){ return (b.no||0)-(a.no||0); });
+rows.sort(function(a,b){ var ta=a.createdAt&&a.createdAt.toMillis?a.createdAt.toMillis():0, tb=b.createdAt&&b.createdAt.toMillis?b.createdAt.toMillis():0; return tb-ta; });
 document.getElementById('cnt').textContent=rows.length; document.getElementById('news').textContent=news;
 document.getElementById('cnt2').textContent='불러온 때 '+new Date().toLocaleString('ko-KR');
 bars('g-reg',reg); bars('g-job',job); bars('g-sec',sec);
-var tb=document.getElementById('tb'); tb.innerHTML=rows.map(function(m){ return '<tr><td>'+esc(m.no)+'</td><td>'+esc(m.nick)+'</td><td>'+esc(m.email)+'</td><td>'+esc(m.region)+'</td><td>'+esc(m.job)+'</td><td>'+esc((m.sections||[]).join(', '))+'</td><td>'+(m.consents&&m.consents.news?'예':'')+'</td><td>'+d(m.createdAt)+'</td><td>'+d(m.lastLogin)+'</td><td><button type="button" class="dan" data-id="'+esc(m._id)+'" data-nick="'+esc(m.nick)+'">해지</button></td></tr>'; }).join('');
+var tb=document.getElementById('tb'); tb.innerHTML=rows.map(function(m){ return '<tr><td>w'+String(m.yy!=null?m.yy:((m.createdAt&&m.createdAt.toDate?m.createdAt.toDate().getFullYear():new Date().getFullYear())%100)).padStart(2,'0')+'-'+String(m.no||0).padStart(3,'0')+'</td><td>'+esc(m.nick)+'</td><td>'+esc(m.email)+'</td><td>'+esc(m.region)+'</td><td>'+esc(m.job)+'</td><td>'+esc((m.sections||[]).join(', '))+'</td><td>'+(m.consents&&m.consents.news?'예':'')+'</td><td>'+d(m.createdAt)+'</td><td>'+d(m.lastLogin)+'</td><td><button type="button" class="dan" data-id="'+esc(m._id)+'" data-nick="'+esc(m.nick)+'">해지</button></td></tr>'; }).join('');
 document.getElementById('out').hidden=false;
 tb.onclick=function(e){ var b=e.target.closest('button.dan'); if(!b) return; var nick=b.getAttribute('data-nick'), id=b.getAttribute('data-id');
 if(!confirm('「'+nick+'」 회원을 해지하시겠습니까? 회원 명단과 별칭이 바로 지워집니다.')) return;

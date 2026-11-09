@@ -79,14 +79,14 @@ if(!reg){ err.textContent='사는 곳을 골라 주십시오.'; return; }
 if(!job){ err.textContent='하는 일을 골라 주십시오.'; return; }
 if(!sec.length){ err.textContent='관심 섹션을 하나 이상 골라 주십시오.'; return; }
 if(!$('#wm-c1').checked||!$('#wm-c2').checked||!$('#wm-c3').checked){ err.textContent='필수 동의 세 가지에 모두 표시해 주십시오.'; return; }
-var u=W.user, FV=firebase.firestore.FieldValue, mref=db.collection('members').doc(u.uid), nref=db.collection('nicks').doc(nick), cref=db.collection('meta').doc('counter');
+var u=W.user, FV=firebase.firestore.FieldValue, mref=db.collection('members').doc(u.uid), nref=db.collection('nicks').doc(nick), YY=new Date().getUTCFullYear()%100, cref=db.collection('meta').doc(YY===26?'counter':'c'+YY); /* 해마다 순번 문서 따로(2026년은 처음 만든 counter). 서버 시각(UTC) 해와 맞춘다 */
 btn.disabled=true; btn.textContent='신청하는 중…';
 db.runTransaction(function(tx){
 return Promise.all([tx.get(cref),tx.get(nref),tx.get(mref)]).then(function(r){
 if(r[2].exists) throw {code:'already'};
 if(r[1].exists) throw {code:'nick'};
 var n=(r[0].exists?(r[0].data().n||0):0)+1;
-var data={no:n,nick:nick,region:reg,job:job,sections:sec,consents:{terms:true,privacy:true,age14:true,news:!!$('#wm-c4').checked,at:null},email:u.email,createdAt:FV.serverTimestamp(),lastLogin:FV.serverTimestamp()};
+var data={no:n,yy:YY,nick:nick,region:reg,job:job,sections:sec,consents:{terms:true,privacy:true,age14:true,news:!!$('#wm-c4').checked,at:null},email:u.email,createdAt:FV.serverTimestamp(),lastLogin:FV.serverTimestamp()};
 delete data.consents.at;
 tx.set(cref,{n:n}); tx.set(mref,data); tx.set(nref,{uid:u.uid});
 return n;
@@ -101,16 +101,17 @@ else err.textContent='신청이 되지 않았습니다. 잠시 뒤 다시 해 �
 });
 }
 function done(n){ var m=W.member||{};
-var bg=modal('<h2>회원이 되셨습니다</h2><p>'+esc(m.nick)+' 님, 반갑습니다. 회원번호는 <b>'+n+'</b>번입니다.</p>'+
+var bg=modal('<h2>회원이 되셨습니다</h2><p>'+esc(m.nick)+' 님, 반갑습니다. 회원번호는 <b>'+no(m)+'</b>입니다.</p>'+
 '<p>이제 기사 끝 「위민아이(Wemin-AI) 요약 보기」를 누르시면 핵심 다섯 줄을 보실 수 있습니다.</p>'+
-'<p style="font-size:14px;color:#555">후원해 주실 분은 거래 은행 앱에서 직접 자동이체를 걸어 주시고, 받는 분 통장 표시에 이름과 회원번호('+n+')를 함께 적어 주십시오. <a href="/news/member.html">후원 안내</a></p>'+
+'<p style="font-size:14px;color:#555">후원해 주실 분은 거래 은행 앱에서 직접 자동이체를 걸어 주시고, 받는 분 통장 표시에 이름과 회원번호를 붙여(보기: '+esc(m.nick)+' '+no(m)+') 함께 적어 주십시오. <a href="/news/member.html">후원 안내</a></p>'+
 '<div class="row"><button type="button" class="pri" id="wm-ok">확인</button></div>');
 bg.querySelector('#wm-ok').onclick=closeAll;
 }
+function no(m){ m=m||{}; var y=m.yy; if(y==null){ y=new Date().getFullYear()%100; try{ if(m.createdAt) y=m.createdAt.toDate().getFullYear()%100; }catch(e){} } return 'w'+String(y).padStart(2,'0')+'-'+String(m.no||0).padStart(3,'0'); } /* 2026-11-09 소장님 「w26-001」 「내년엔 w27-001」 — 회원번호는 w+가입한 해 두 자리+붙임표+그해 순번 세 자리. 해마다 001부터 */
 function fmt(t){ try{ var d=t.toDate(); return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'; }catch(e){ return ''; } }
 function openMine(){ var m=W.member, u=W.user; if(!u) return; if(!m){ openForm(); return; }
 var bg=modal('<h2>내 정보</h2><table>'+
-'<tr><td>회원번호</td><td>'+esc(m.no)+'</td></tr>'+
+'<tr><td>회원번호</td><td>'+no(m)+'</td></tr>'+
 '<tr><td>이름·별칭</td><td>'+esc(m.nick)+'</td></tr>'+
 '<tr><td>전자우편</td><td>'+esc(m.email)+'</td></tr>'+
 '<tr><td>사는 곳</td><td><select id="wm-reg">'+opts(REG)+'</select></td></tr>'+
@@ -132,7 +133,7 @@ db.collection('members').doc(u.uid).update({region:$('#wm-reg').value,job:$('#wm
 $('#wm-leave').onclick=function(){ leave(); };
 }
 function leave(){ var u=W.user, m=W.member||{};
-if(!window.confirm('탈퇴하시겠습니까?\n\n회원 명단의 정보(회원번호 '+(m.no||'')+', '+(m.nick||'')+')와 로그인 계정이 바로 지워지며 되살릴 수 없습니다.\n후원 자동이체를 걸어 두셨다면 쓰시는 은행 앱에서 직접 해지해 주십시오.')) return;
+if(!window.confirm('탈퇴하시겠습니까?\n\n회원 명단의 정보(회원번호 '+no(m)+', '+(m.nick||'')+')와 로그인 계정이 바로 지워지며 되살릴 수 없습니다.\n후원 자동이체를 걸어 두셨다면 쓰시는 은행 앱에서 직접 해지해 주십시오.')) return;
 var b=db.batch(); b.delete(db.collection('members').doc(u.uid)); if(m.nick) b.delete(db.collection('nicks').doc(m.nick));
 b.commit().then(function(){ return u.delete().catch(function(e){ if(e&&e.code==='auth/requires-recent-login'){ var p=new firebase.auth.GoogleAuthProvider(); return u.reauthenticateWithPopup(p).then(function(){ return u.delete(); }); } throw e; }); })
 .then(function(){ W.member=null; closeAll(); alert('탈퇴했습니다. 그동안 함께해 주셔서 고맙습니다.'); })
@@ -148,7 +149,7 @@ var el=document.getElementById('wemin-login');
 if(!el){ el=document.createElement('span'); el.id='wemin-login'; if(host&&host.parentNode) host.parentNode.insertBefore(el,host); else { el.style.cssText='position:fixed;top:8px;right:8px;z-index:50'; document.body.appendChild(el); } }
 el.innerHTML='';
 var u=W.user, b=document.createElement('button'); b.type='button'; b.style.cssText=btnCss();
-if(u && W.member){ b.textContent='내 정보'; b.title=(W.member.nick||'')+' (회원번호 '+(W.member.no||'')+')'; b.onclick=openMine; }
+if(u && W.member){ b.textContent='내 정보'; b.title=(W.member.nick||'')+' (회원번호 '+no(W.member)+')'; b.onclick=openMine; }
 else if(u){ b.textContent='가입 신청'; b.title='가입 신청서를 내시면 바로 회원이 됩니다'; b.onclick=openForm; }
 else { b.textContent='로그인'; b.title='구글 계정으로 로그인'; b.onclick=function(){ W.signIn(); }; }
 el.appendChild(b);
