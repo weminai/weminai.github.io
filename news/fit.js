@@ -181,6 +181,5 @@ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded'
    — 바닥글 밑에 덧붙던 연구소 저작권 한 줄(footer::after)을 없앤다. 바닥글 안의 AI경제저널 저작권 줄은 그대로 둔다 */
 (function(){ var s=document.createElement('style'); s.textContent=
   'article.art>.share,article.art>.af{max-width:780px;margin-left:auto!important;margin-right:auto!important;padding-left:24px;padding-right:24px;box-sizing:border-box}'+
-  '@media(max-width:600px){article.art>.share,article.art>.af{padding-left:16px;padding-right:16px}}'+
   'footer::after,footer.nff::after{content:none!important;display:none!important}';
   (document.head||document.documentElement).appendChild(s); })();
