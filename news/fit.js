@@ -170,7 +170,7 @@
 }catch(e){} })();
 
 /* 2026-11-09 구글 로그인 — news/login.js 를 모든 쪽에서 부른다 */
-;(function(){ try{ /* 2026-11-09 소장님 「하세요」 — 로그인 다시 엶(가입 신청서·내 정보·탈퇴) */ if(document.getElementById('wemin-login-js')) return; var s=document.createElement('script'); s.id='wemin-login-js'; s.src='/news/login.js?v=261109b'; s.async=true; (document.head||document.documentElement).appendChild(s); }catch(e){} })();
+;(function(){ try{ /* 2026-11-09 소장님 「하세요」 — 로그인 다시 엶(가입 신청서·내 정보·탈퇴) */ if(document.getElementById('wemin-login-js')) return; var s=document.createElement('script'); s.id='wemin-login-js'; s.src='/news/login.js?v=261109c'; s.async=true; (document.head||document.documentElement).appendChild(s); }catch(e){} })();
 
 /* 2026-11-09 바닥글 「이용약관 · 개인정보 처리방침」 — 이용약관(news/terms.html)을 개인정보 처리방침 앞에 넣는다. 기사 쪽마다 고치지 않고 여기서 넣는다(소장님 「바로 그 메뉴에 알리면 될 것을」) */
 ;(function(){ function add(){ if(document.querySelector('.nff a[href="/news/terms.html"]')) return; var p=document.querySelector('.nff a[href="/news/privacy.html"]'); if(!p) return; var a=document.createElement('a'); a.href='/news/terms.html'; a.textContent='이용약관'; p.parentNode.insertBefore(a,p); }
