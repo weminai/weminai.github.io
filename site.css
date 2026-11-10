@@ -479,19 +479,22 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 .top .cta.ask{margin-left:6px;padding:10px 18px;font-size:15.5px;font-weight:700;border-radius:22px;white-space:nowrap}
 @media(max-width:960px){.top .wrap{gap:10px}.top .cta.ask{display:block;margin-left:auto;padding:6px 11px;font-size:13px}}
 @media(max-width:480px){.top .wrap{gap:8px}.top .cta.ask{padding:6px 10px;font-size:12.5px}.top .cta.ask .hk{display:none}}
-/* 25차(2026-10-28): 머리줄 「일하는 사람들의 전문지 AI경제저널」(2026-10-29 제호 바뀜, 옛 이름 AI경세제민) 바로가기 — 소장님 「연구소 홈페이지에선 뉴스홈페이지 바로가기」 「뉴스는 AI경세제민 로고 사용해서 바로가기」 「연구소 누리집엔 일하는 사람들의 전문지 AI경세제민 바로가기」 */
-.gnb a.newsgo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding-top:0;padding-bottom:0;border-bottom-color:transparent!important}
-.gnb a.newsgo small{font-size:11.5px;font-weight:500;color:var(--s);letter-spacing:-.2px;line-height:1;white-space:nowrap}
-.gnb a.newsgo img{display:block;height:22px;width:auto}
-.smap a.newsgo{display:inline-flex;flex-direction:column;gap:3px}
-.smap a.newsgo small{font-size:12px;color:var(--s)}
-.smap a.newsgo img{display:block;height:20px;width:auto}
 /* 2026-11-02 좁은 화면 — 연구소 소개 연구진 카드가 폭 390에서 399로 넘치던 것 바로잡음(소장님 「승인」) */
 .person{grid-template-columns:88px minmax(0,1fr)}.person>div{min-width:0}.person li{overflow-wrap:anywhere}
 @media(max-width:480px){.person{grid-template-columns:64px minmax(0,1fr);gap:12px}.person .ph0{width:64px;height:64px;font-size:24px}}
 /* 2026-11-03 위 메뉴에 「언론보도」를 더해 961~1240 폭에서 넘치지 않게 메뉴 사이를 좁힘(소장님 「언론보도 메뉴를 신설」 「승인」) */
 @media(min-width:961px) and (max-width:1240px){.gnb{gap:22px}.gnb a{font-size:16px}}
-@media(min-width:961px) and (max-width:1060px){.gnb{gap:16px}.gnb a{font-size:15px}.gnb a.newsgo small{font-size:10.5px}}
+@media(min-width:961px) and (max-width:1060px){.gnb{gap:16px}.gnb a{font-size:15px}}
 /* 2026-11-03 좁은 화면 — 폭 360 이하에서 머리 줄(로고·의뢰·검색·전체 메뉴)이 1~3px 넘쳐 가로로 흔들리던 것 바로잡음(홈페이지 관리 점검) */
 @media(max-width:380px){.top .wrap{padding-left:16px;padding-right:16px}.top .brand img{height:52px}.mall{flex:none;margin-left:2px}}
 @media(max-width:340px){.top .brand img{height:40px}}
+/* 2026-11-11 바닥글을 줄임 — 회사 이름 한 줄과 단추 둘(문의, 오시는 길·연락처). 주소·전화는 단추를 누르면 뜬다(소장님 「삼성글로벌리서치 홈페이지를 보면」 「주소나 이런 게 없다」 「사업자 번호도 없다」 「매우 간단하다」 「우리도 그렇게 합니다」) */
+.foot .fsim{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot .fcp{margin:0;font-size:13px;color:#AAB6C6}.foot .fcp a{color:#fff}
+.foot .fbt{display:flex;gap:10px;position:relative}
+.foot .fb{width:44px;height:44px;border-radius:50%;background:#1F6FEB;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;list-style:none}
+.foot .fb::-webkit-details-marker{display:none}.foot .fb::marker{content:''}
+.foot .floc{position:static}
+.foot .fpop{position:absolute;right:0;bottom:54px;width:300px;max-width:calc(100vw - 32px);background:#fff;color:#1B2433;border-radius:10px;padding:14px 16px;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:14px;line-height:1.6;z-index:20}
+.foot .fpop b{display:block;margin-bottom:6px}.foot .fpop p{margin:0;display:block!important}
+@media(max-width:600px){.foot .fsim{flex-direction:column;align-items:flex-start}.foot .fpop{left:0;right:auto}}

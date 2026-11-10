@@ -93,7 +93,7 @@
       var div=document.createElement('div'); for(var i=0;i<s.rangeCount;i++){ div.appendChild(s.getRangeAt(i).cloneContents()); }
       [].forEach.call(div.querySelectorAll(SKIP),function(x){ x.parentNode.removeChild(x); });
       div.style.cssText='position:fixed;left:-9999px;top:0;white-space:pre-wrap'; document.body.appendChild(div); var txt=div.innerText.replace(/[ \t\u00a0]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim(); document.body.removeChild(div); div.removeAttribute('style');
-      var line='출처: AI경제저널 「'+o.t+'」';
+      var line='출처: '+(/^news\./.test(location.hostname)?'AI경제저널':'경세제민 AI·경제 연구소')+' 「'+o.t+'」';
       e.clipboardData.setData('text/plain', txt+'\n\n'+line+'\n'+o.u);
       e.clipboardData.setData('text/html', div.innerHTML+'<p>'+esc(line)+'<br><a href="'+esc(o.u)+'">'+esc(o.u)+'</a></p>');
       e.preventDefault();
