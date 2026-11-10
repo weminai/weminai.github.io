@@ -218,7 +218,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var K2=function(p){ return '<div class="k"><span class="s">'+esc(secOf(p))+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
   var today=new Date(); var top=function(p){ var m=String(p["맨위"]||"").match(/(\d{4})-(\d{2})-(\d{2})/); return m && Date.UTC(+m[1],m[2]-1,+m[3])>=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate())-864e5; };
   // 헤드라인 넷 — 시간 차례로 흘려 보내며 자리 넷을 채운다(3시간 규칙)
-  var cand=list.filter(function(p){ return pic(p) && p["섹션"]!=="기획연재" && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse();
+  var cand=list.filter(function(p){ return pic(p) && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림" && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse(); /* 2026-11-11 소장님 「이 기사 헤드라인에서 내리라」 — posts.json 「헤드라인」:「내림」인 글은 헤드라인 후보에서 뺀다(편집&관리) */
   var slots=[];
   cand.forEach(function(p){
     var s=secOf(p); var same=slots.filter(function(x){ return secOf(x)===s; });
