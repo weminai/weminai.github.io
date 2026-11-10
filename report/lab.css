@@ -1,0 +1,8 @@
+/* 연구소 판 쪽(report/) — 연구소 머리·바닥 아래 기사·보고서 본문 (2026-11-11) */
+body.labart{background:#fff}
+body.labart main{padding:36px 0 56px}
+body.labart .art .af{border-top:1px solid #E3E8F0;margin-top:30px;padding-top:16px}
+body.labart .art .af .copy{color:#6B7380;font-size:14px}
+body.labart .top{position:sticky}
+body.labart .art .refs,body.labart .art .refs *{overflow-wrap:anywhere;word-break:break-word}body.labart .art .body{overflow-wrap:anywhere}body.labart{overflow-x:hidden}
+body.labart .art .ref,body.labart .art .ref *{overflow-wrap:anywhere;word-break:break-word}
