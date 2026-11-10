@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 끝 .af 의 tags 칸에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>인천바이오과학기술원 준비위 국회서 출범…수정 법안 민주당 지도부에 전달 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="의약품 수출 61.3% 내는 인천, 연구인력 키울 기관은 아직 없어">
+<link rel="canonical" href="https://weminai.com/media/ibist01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="인천바이오과학기술원 준비위 국회서 출범…수정 법안 민주당 지도부에 전달">
+<meta property="og:description" content="의약품 수출 61.3% 내는 인천, 연구인력 키울 기관은 아직 없어">
+<meta property="og:url" content="https://news.weminai.com/media/ibist01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/ibist01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">인천경제</div>
+ <h1>인천바이오과학기술원 준비위 국회서 출범…수정 법안 민주당 지도부에 전달</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.10</span><span class="dt">업데이트 2026.11.10 23:01</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>의약품 수출 61.3% 내는 인천, 연구인력 키울 기관은 아직 없어</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 인천시가 인천바이오과학기술원(IBIST) 설립 추진준비위원회를 국회에서 띄웠다. 시는 10일 국회의원회관에서 발족식과 정책토론회를 열었다. 이 자리에서 설립 근거법의 수정안을 더불어민주당 지도부에 건넸다.</p>
+<figure><img src="img/ibist01_01.jpg" alt="인천바이오과학기술원 추진준비위원회 발족식 현수막 앞에서 다섯 사람이 법안 문서를 들고 박수 치는 모습" loading="lazy"><figcaption>박찬대 인천시장이 10일 국회의원회관에서 열린 인천바이오과학기술원 설립 추진준비위원회 발족식에서 수정발의 법안을 전달하고 있다. 사진=인천시 제공</figcaption></figure>
+<h2>공동위원장 넷, 위원 24명</h2>
+<p>행사는 인천시와 이훈기 국회의원(인천 남동을)이 함께 열었다. 한병도 원내대표와 권칠승 정책위의장 등 민주당 지도부와 인천 지역 국회의원들이 자리했다.</p>
+<p>시에 따르면 대학·병원·바이오기업 관계자 등 100여 명이 모였다. 과학기술정보통신부 관계자도 나와 지역 의견을 들었다.</p>
+<p>추진준비위원회는 24명이다. 공동준비위원장은 박찬대 시장, 최기영 인하대 총장, 이길여 가천대 총장, 서진석 셀트리온 대표이사다. 삼성바이오로직스·SK바이오사이언스 대표와 박종혁 시의회 의장도 위원이다.</p>
+<p>근거법은 「인천바이오과학기술원법」이다. 박 시장이 국회의원이던 지난 4월 대표발의한 법이다. 시가 이날 건넨 수정안에는 수도권 규제 특례와 특정연구기관 지위 부여 조문이 있다.</p>
+<p>수정안은 국가의 책무와 비수도권과의 상생 협력 조문도 담고 있다. 이 의원은 "필요하다면 신속처리안건 지정 등 가능한 국회 절차를 적극 검토해 입법에 속도를 내겠다"고 말했다.</p>
+<h2>IBIST가 인천에 말하는 것</h2>
+<p>첫째, 생산과 연구의 간극이다. 시에 따르면 송도의 바이오의약품 생산능력은 116만 리터다. 지난해 우리나라 의약품 수출의 61.3%인 65억 8천만 달러가 인천에서 나왔다.</p>
+<p>그러나 신약 원천기술과 석·박사급 연구인력을 길러 낼 전문 기관은 인천에 아직 없다. 시가 연구 기반에 힘을 모으는 까닭이 여기에 있다고 시는 설명한다.</p>
+<p>둘째, 수도권 규제다. 시는 송도가 수도권 규제로 대학 신설이 엄격히 제한된다고 본다. 그래서 개별 특별법으로 과학기술원을 세우는 것이 사실상 유일한 해법이라는 것이 시의 판단이다.</p>
+<p>시가 본보기로 든 KAIST·GIST·DGIST·UNIST는 「한국과학기술원법」처럼 각각 제 이름의 법을 근거로 둔다. 4월 국회 과학기술정보방송통신위원회 회의 안건에도 광주·대구경북·울산과학기술원법 개정안이 따로 올랐다. 네 곳은 모두 비수도권에 있다.</p>
+<p>셋째, 법안이 넘어야 할 문턱이다. 김상길 시 미래산업본부장은 토론회에서 5대 과제와 대응 조문을 내놨다. 수도권 규제 특례, 특정연구기관 지위 확보, 국가 재정지원 경로 등이다.</p>
+<p>넷째, 일터의 수요다. 고유상 삼성바이오에피스 부사장은 지정토론에서 산업 현장의 인재 수요를 짚었다. 위원들은 "법이 한 해 늦어지면 첫 졸업생도 한 해 늦어진다"며 입법을 서둘러 달라고 했다.</p>
+<p>참석자들은 IBIST가 기존 대학과 경쟁하는 기관이 아니라고 했다. 공동학위·공동연구로 함께 크는 대학원 중심 연구기관이어야 한다는 데 뜻을 모았다.</p>
+<p>다섯째, 발표에 없는 것이다. 설립에 드는 돈과 학생 정원, 문을 여는 해는 이날 자료에 없다. 수정안을 언제 다시 발의할지도 자료에 담기지 않았다.</p>
+<p>시는 특별법 제정과 국비 확보에 속도를 내고, 내년 1월 범시민추진위원회를 정식 출범시킬 계획이다. 송도의 생산기반, 남동의 소재·부품·장비 산업, 영종의 바이오산업 기반을 잇겠다는 것이 시의 방침이다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>인천광역시 바이오과(2026). 인천시,‘인천바이오과학기술원(IBIST)’설립 국회서 첫발(보도자료). 2026년 11월 10일. <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015941325" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015941325</a></li>
+<li>국회사무처(2026). 과학기술정보방송통신위원회 회의록 제434회 제3차(2026년 4월 9일). 국회도서관 <a href="https://dl.nanet.go.kr/detail/PROC2026N054161" target="_blank" rel="noopener">https://dl.nanet.go.kr/detail/PROC2026N054161</a></li>
+<li>국가법령정보센터. 한국과학기술원법. <a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=195336" target="_blank" rel="noopener">https://www.law.go.kr/lsInfoP.do?lsiSeq=195336</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진1] 인천시 인천인터넷방송 포토시정 「인천바이오과학기술원(IBIST) 설립 추진준비위원회 발족식 및 국회 정책토론회」(2026.11.10) https://www.incheon.go.kr/intv/TV010201/3094359</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="ieh03.html">[인천경제&amp;경제사③] 관세는 빚 담보로, 쌀은 인천 부두로… 개항기 인천의 두 길</a></li><li><a href="icrent01.html">인천 전셋값 올해 4.71% 상승, 집값의 여섯 배</a></li><li><a href="ieh02.html">[인천경제&amp;경제사②] 1883년 인천 개항장, 관세권은 일부 회복, 조계 땅은 「영구히」 조차</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천바이오과학기술원</span><span>#IBIST</span><span>#바이오</span><span>#송도</span><span>#과학기술원</span><span>#수도권규제</span><span>#특별법</span><span>#인천시</span><span>#인천경제</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
