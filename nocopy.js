@@ -39,7 +39,8 @@
     /* 연구보고서 — 머리와 요약 */
     mark(document.querySelector('.rp .rph')); mark(document.querySelector('.rp .sum'));
     /* 분야 꼬리표 → 분야 지면 */
-    var k=document.querySelector('.art .kick');
+    var LAB=/^\/report\//.test(location.pathname); /* 2026-11-11 연구소 판 쪽(report/)은 뉴스 지면 링크·후원 상자를 달지 않는다 */
+    var k=LAB?null:document.querySelector('.art .kick');
     if(k && !k.querySelector('a')){ var t=k.textContent.trim(), s=SEC[t];
       if(s){ var a=document.createElement('a'); a.href='/news/s.html?k='+encodeURIComponent(s); a.textContent=t; a.style.color='inherit'; a.style.textDecoration='none'; a.setAttribute('draggable','false');
         k.textContent=''; k.appendChild(a); } }
@@ -48,7 +49,7 @@
       var t=a.textContent.trim(); if(t==='회원가입') a.textContent='후원하기'; else if(t==='회원 안내') a.textContent='후원회원 안내'; });
     /* 글 끝 후원 상자 — 기사 본문 뒤, 연구보고서 끝 */
     var end=document.querySelector('.art .body')||document.querySelector('article.rp');
-    if(end && !document.querySelector('.give-box')){
+    if(end && !LAB && !document.querySelector('.give-box')){
       var id=(location.pathname.split('/').pop()||'').replace(/\.html$/,'');
       var g=document.createElement('div'); g.className='give-box';
       g.style.cssText='margin:28px 0 8px;padding:16px 18px;border:1px solid #D9E2F2;border-left:4px solid #1A6DFF;background:#F4F8FE;font-size:15px;line-height:1.7;color:#222';

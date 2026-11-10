@@ -12,7 +12,7 @@
   P.sort(function(a,b){return rep(a)===rep(b)?0:rep(a)?-1:1;});
   if(!P.length)return;
   function card(p){var lab=rep(p)?'연구보고서':(p.묶음||'정책브리핑'); var ti=String(p.제목).replace(/^\s*\[[^\]]*\]\s*/,'');
-   return '<a class="rc" href="'+e(p.파일)+'"><span class="im"'+(p.대표그림?' style="background-image:url('+e(p.대표그림)+')"':'')+'></span><span class="m">'+e(lab)+'</span><b>'+e(ti)+'</b><span class="dt">'+d(p.날짜)+'</span></a>';}
+   return '<a class="rc" href="'+e(String(p.파일).replace(/^media\//,'report/'))+'"><span class="im"'+(p.대표그림?' style="background-image:url('+e(p.대표그림)+')"':'')+'></span><span class="m">'+e(lab)+'</span><b>'+e(ti)+'</b><span class="dt">'+d(p.날짜)+'</span></a>';}
   var html=P.map(card).join(''); box.innerHTML=html+html;
   var n=P.length,i=0,stop=false;
   function w(){var c=box.querySelector('.rc');return c?c.getBoundingClientRect().width+20:320;}
@@ -25,7 +25,7 @@
   setInterval(function(){if(!stop&&!document.hidden)go(i+1);},3500);
  }).catch(function(){});
 })();
-/* 자료검색 — 연구소 안내 쪽과 연구소 자료(브리핑·연구보고서·보도자료)를 찾는다. 기사·연재는 AI경제저널에서 찾는다(2026-11-02 소장님 「브리핑이 아닌 뉴스는 다 빼시오」). 옛 누리집 검색 기능을 살린다(2026-10-23 소장님 「기존 기능은 다 살아 있어야」) */
+/* 자료검색 — 연구소 안내 쪽과 연구소 자료(브리핑·연구보고서)를 찾는다. 결과는 연구소 판 쪽(report/)으로 간다(2026-11-11). 기사·연재는 AI경제저널에서 찾는다(2026-11-02 소장님 「브리핑이 아닌 뉴스는 다 빼시오」). 옛 누리집 검색 기능을 살린다(2026-10-23 소장님 「기존 기능은 다 살아 있어야」) */
 (function(){
  var u=document.getElementById('qlist'); if(!u||!window.fetch)return;
  var q=(new URLSearchParams(location.search).get('q')||'').trim(); var box=document.querySelector('.qbar input'); if(box)box.value=q;
@@ -42,9 +42,9 @@
   document.getElementById('qn').textContent=R.length?R.length+'건을 찾았습니다.':'찾은 것이 없습니다. 다른 말로 찾아보시거나 032-777-0421로 물어 주십시오.';
   u.innerHTML=R.slice(0,80).map(function(x){return '<li><a href="'+e(x.f)+'"><span class="g">'+e(x.g)+'</span><span class="t">'+e(x.t)+'</span><span class="d">'+x.dt+'</span></a></li>';}).join('');
   };
-  fetch('data/posts.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():[];}).then(function(ps){
-   (Array.isArray(ps)?ps:[]).filter(function(p){return p&&p.파일&&p.제목&&p.공개!=='보류'&&(p.분야==='정책브리핑'||p.분야==='보도자료'||/브리핑|연구보고서/.test(String(p.묶음||'')+String(p.분야||'')))&&hit([p.제목,p.부제,p.묶음,p.분야,p.리드].join(' '));})
-    .sort(function(a,b){return (a.날짜||'')<(b.날짜||'')?1:-1;}).forEach(function(p){R.push({f:p.파일,g:p.묶음||p.분야||'',t:String(p.제목).replace(/^\s*\[[^\]]*\]\s*/,''),dt:d(p.날짜)});});
+  fetch('report/list.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():[];}).catch(function(){return [];}).then(function(l){window.__LAB={};(l||[]).forEach(function(i){window.__LAB[i]=1;});return fetch('data/posts.json',{cache:'no-cache'});}).then(function(r){return r.ok?r.json():[];}).then(function(ps){
+   (Array.isArray(ps)?ps:[]).filter(function(p){return p&&p.파일&&p.제목&&p.공개!=='보류'&&p.분야!=='보도자료'&&p.묶음!=='보도자료'&&(p.분야==='정책브리핑'||p.id==='sse01'||/브리핑|연구보고서/.test(String(p.묶음||'')+String(p.분야||'')))&&hit([p.제목,p.부제,p.묶음,p.분야,p.리드].join(' '));})
+    .sort(function(a,b){return (a.날짜||'')<(b.날짜||'')?1:-1;}).forEach(function(p){R.push({f:(window.__LAB&&window.__LAB[String(p.파일).replace(/^media\//,'').replace(/\.html$/,'')])?String(p.파일).replace(/^media\//,'report/'):p.파일,g:p.묶음||p.분야||'',t:String(p.제목).replace(/^\s*\[[^\]]*\]\s*/,''),dt:d(p.날짜)});});
    done();
   }).catch(done);
  
