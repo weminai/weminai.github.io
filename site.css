@@ -498,3 +498,30 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 .foot .fpop{position:absolute;right:0;bottom:54px;width:300px;max-width:calc(100vw - 32px);background:#fff;color:#1B2433;border-radius:10px;padding:14px 16px;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:14px;line-height:1.6;z-index:20}
 .foot .fpop b{display:block;margin-bottom:6px}.foot .fpop p{margin:0;display:block!important}
 @media(max-width:600px){.foot .fsim{flex-direction:column;align-items:flex-start}.foot .fpop{left:0;right:auto}}
+/* 2026-11-11 1면을 삼성글로벌리서치 첫 화면처럼 — 한 화면 가득 사진, 머리줄은 사진 위 반투명 띠, 큰 제목과 한 줄 풀이, 오른쪽 사업 카드 셋, 가운데 아래 자료검색, 맨 아래 바닥 한 줄과 단추 둘(소장님 「삼성같은 홈페이지를 연출하라」) */
+.home3 .top{position:absolute;left:0;right:0;top:0;background:rgba(14,38,82,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:0}
+.home3 .top::before{display:none}
+.home3 .top .brand img{background:#fff;border-radius:40px;padding:3px 14px;height:66px;box-sizing:border-box}
+.home3 .gnb a{color:#fff}.home3 .gnb a:hover,.home3 .gnb a.on{color:#fff;border-bottom-color:#fff}
+.home3 .sicon{color:#fff;border-color:rgba(255,255,255,.6);background:transparent}.home3 .sicon:hover{color:#fff;background:rgba(255,255,255,.15)}
+.home3 .mall{background:transparent;border-color:rgba(255,255,255,.6)}.home3 .mall i{background:#fff}
+.home3 .sx{min-height:100vh;min-height:100svh;display:flex}
+.home3 .sxw{flex:1;min-height:0;padding:150px 40px 190px;width:100%}
+.home3 .sx::before{background:linear-gradient(90deg,rgba(10,25,50,.42),rgba(10,25,50,.08) 60%)}
+.home3 .sx h1{font-size:66px}
+.home3 .sxs{margin:22px 0 0;font-size:20px;letter-spacing:.02em;opacity:.95;text-shadow:0 1px 10px rgba(0,30,90,.35)}
+.home3 .sp a{position:relative;padding-left:44px}
+.home3 .sp a::before{content:"";position:absolute;left:24px;top:33px;width:8px;height:8px;border-radius:50%;background:#fff}
+.home3 .ss{bottom:96px}
+.home3 .foot{position:absolute;left:0;right:0;bottom:0;background:transparent;border-top:0;padding:18px 0 22px}
+.home3 .foot .fsim{justify-content:center;gap:22px}
+.home3 .foot .fcp{color:rgba(255,255,255,.9);text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.home3 .foot .fpop{right:auto;left:50%;transform:translateX(-50%)}
+@media(max-width:960px){
+ .home3 .top{position:sticky;background:rgba(14,38,82,.92)}
+ .home3 .top .brand img{height:44px;padding:4px 10px}
+ .home3 .sx{min-height:0}.home3 .sxw{padding:40px 20px 110px}.home3 .sx h1{font-size:38px}.home3 .sxs{font-size:15px;margin-top:12px}
+ .home3 .ss{bottom:34px}
+ .home3 .foot{position:static;background:#0F1825;padding:22px 0 26px}.home3 .foot .fsim{justify-content:space-between}.home3 .foot .fpop{left:0;transform:none}
+}
+@media(min-width:961px) and (max-height:800px){.home3 .sxw{padding:120px 40px 150px}.home3 .sx h1{font-size:56px}.home3 .sp a{padding-top:18px;padding-bottom:18px}.home3 .sp a::before{top:27px}.home3 .ss{bottom:70px}.home3 .foot{padding:12px 0 14px}}
