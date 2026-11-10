@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 끝 .af 의 tags 칸에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>3분기 소득 18.8% 늘 때 가계소비 0.2% 감소 · 경세제민 AI·경제 연구소</title>
+<meta name="description" content="성장 1.0% 가운데 정부 기여 0.8%p 설비투자 4.1%·수출 2.3% 증가 도소매·숙박음식업 생산 0.4% 감소">
+<link rel="canonical" href="https://weminai.com/media/gdp01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="3분기 소득 18.8% 늘 때 가계소비 0.2% 감소">
+<meta property="og:description" content="성장 1.0% 가운데 정부 기여 0.8%p 설비투자 4.1%·수출 2.3% 증가 도소매·숙박음식업 생산 0.4% 감소">
+<meta property="og:url" content="https://news.weminai.com/media/gdp01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/gdp01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">경제</div>
+ <h1>3분기 소득 18.8% 늘 때 가계소비 0.2% 감소</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.11</span><span class="dt">업데이트 2026.11.11 05:55</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>성장 1.0% 가운데 정부 기여 0.8%p</p><p>설비투자 4.1%·수출 2.3% 증가</p><p>도소매·숙박음식업 생산 0.4% 감소</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 한국은행은 올해 3분기 실질 국내총생산(GDP)이 2분기보다 1.0% 성장했다고 지난달 27일 밝혔다. 1년 전과 견주면 3.4% 성장이다.</p>
+<p>실질 국내총소득(GDI)은 1년 전보다 18.8% 늘어 생산 증가율의 다섯 배를 넘었다(AI경제저널 계산). 같은 석 달 동안 가계의 소비는 2분기보다 0.2% 줄었다. 성장은 정부 지출과 반도체 투자·수출이 채웠다.</p>
+<figure><img src="img/gdp01_01.jpg" alt="전시장 통로 양쪽 기업 부스에서 참관객들이 제품을 둘러보는 모습" loading="lazy"><figcaption>지난 9월 28일 인천 송도컨벤시아에서 세계한상대회 기업전시회가 열리고 있다. 사진=인천시 제공</figcaption></figure>
+<h2>성장 1.0%를 채운 곳</h2>
+<p>한국은행 속보의 주체별 성장기여도를 보면 3분기 성장 1.0% 가운데 정부가 0.8%p, 민간이 0.2%p다. 2분기에는 민간 1.1%p, 정부 −0.5%p였다. 석 달 사이 두 주체의 몫이 뒤바뀌었다.</p>
+<p>정부소비는 물건비와 건강보험급여비 지출이 함께 늘어 1.9% 증가했다. 정부 부문 투자의 성장기여도는 0.5%p다. 민간 부문 투자의 기여도는 0.1%p에 그쳤다.</p>
+<p>지출 쪽으로 나누면 내수의 기여도가 0.9%p, 순수출이 0.1%p다. 수출은 1.1%p를 더했고 수입이 1.0%p를 덜었다. 통계상 불일치는 −0.1%p다.</p>
+<figure><img src="img/gdp01_02.jpg" alt="2025년 1분기부터 2026년 3분기까지 민간·정부 성장기여도 막대와 GDP 성장률 꺾은선" loading="lazy"><figcaption>GDP 성장률과 주체별 성장기여도(계절조정, 전기대비). 자료 한국은행, 그림 AI경제저널</figcaption></figure>
+<h2>2분기보다 줄어든 가계 소비</h2>
+<p>민간소비는 재화와 서비스가 모두 줄어 0.2% 감소했다. 재화에서는 승용차와 가전제품, 서비스에서는 금융과 음식이 줄었다고 한국은행은 밝혔다. 1년 전보다는 1.1% 많다.</p>
+<p>민간소비 증가율은 지난해 3분기 1.1%, 4분기 0.4%, 올해 1분기 0.6%, 2분기 0.4%였다. 속보 표에 실린 2024년 1분기부터 11개 분기 가운데 감소는 이번이 처음이다.</p>
+<p>생산 쪽에서는 도소매·숙박음식업이 0.4% 줄었다. 금융·보험업은 4.3% 감소했다. 서비스업 전체는 0.2% 늘어 2분기 1.0%보다 낮았다.</p>
+<h2>반도체 기계와 수출</h2>
+<p>설비투자는 반도체제조용기계를 비롯한 기계류가 늘어 4.1% 증가했다. 1년 전보다는 9.4% 많다. 지식재산생산물투자는 연구개발과 소프트웨어가 늘어 2.3% 증가했다.</p>
+<p>수출은 반도체와 기계·전기장비를 중심으로 2.3% 늘었다. 수입은 원유와 반도체제조용기계가 늘어 2.4% 증가했다. 1년 전보다 수출은 8.6%, 수입은 7.0% 많다.</p>
+<p>제조업 생산은 컴퓨터·전자·광학기기와 기계·장비가 늘어 2.0% 증가했다. 건설투자는 토목건설이 늘어 0.7% 증가했지만 1년 전보다는 0.7% 적다.</p>
+<h2>생산보다 빨리 늘어난 소득</h2>
+<p>실질 GDI는 2분기보다 3.4%, 1년 전보다 18.8% 늘었다. 1년 전 대비 증가율은 1분기 13.2%, 2분기 15.7%에 이어 세 분기째 두 자릿수다. 같은 기간 GDP 증가율은 3.8%, 3.7%, 3.4%다.</p>
+<p>한국은행은 7월 19일 이슈노트에서 반도체 가격 강세에 따른 수출물가 상승이 교역조건 개선을 이끈다고 분석했다. 2000년대 이후 앞선 세 차례 개선기는 유가 같은 수입물가 하락이 주된 요인이었다고 짚었다.</p>
+<p>교역조건이 나빠지던 때는 거꾸로였다. 한진희·류성현은 2010년 한국개발연구 논문에서 1996~2006년 GDI 증가율이 3.0%로 GDP 4.6%를 밑돌았다고 밝혔다.</p>
+<p>두 연구자는 교역조건 하락이 대부분 공산품보다 연료 값이 더 오른 데서 왔다고 분석했다. 값이 오른 쪽이 수입품이냐 수출품이냐에 따라 소득이 생산보다 느리게도, 빠르게도 는다.</p>
+<p>지난 6일 긴급 시장상황점검회의에는 재정경제부·금융위원회·금융감독원·한국은행이 모였다. 참석자들은 올해 3% 중반 성장과 수출 1조달러 달성 전망을 들어 경제의 기초체력이 견조하다고 봤다.</p>
+<h2>늘어난 소득은 누구에게</h2>
+<p>한국은행은 같은 이슈노트에서 GDI 증가가 가계 구매력을 넓혀 내수 회복을 뒷받침할 것으로 내다봤다. 동시에 임금 상승과 자본이득이 고소득·고자산층에 쏠려 있다고 짚었다.</p>
+<p>이 계층은 늘어난 소득 가운데 소비에 쓰는 몫이 상대적으로 낮다고 한국은행은 설명했다. 반도체 산업의 생산·고용유발효과가 낮은 점도 내수 파급을 제약하는 요인으로 들었다.</p>
+<p>한국은행의 8월 31일 이슈노트는 이천·화성·청주처럼 반도체 종사자가 많이 사는 지역을 분석했다. 두 반도체 기업의 성과급이 지급된 뒤 이 지역 소비는 다른 지역보다 최대 4% 높았다.</p>
+<p>한국은행은 이 지역의 누적 소비 증가액을 지난해부터 올해 말까지 약 1조7000억원으로 추정했다. 연평균 8000억원으로 지난해 민간소비 증가액의 2% 수준이다.</p>
+<p>고용노동부의 10월 고용행정 통계를 보면 고용보험 가입자는 1년 새 28만6000명 늘었다. 이 가운데 제조업은 1만4000명이다.</p>
+<p>건설업 가입자는 5000명 줄어 39개월째 감소했다. 29세 이하 가입자는 5만4000명 줄었고 60세 이상은 20만4000명 늘었다. 3분기 GDP 속보치는 분기 마지막 달 실적을 다 담지 못해 잠정치에서 바뀔 수 있다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>한진희·류성현, 「1990년대 중반 이후 교역조건 하락추세의 원인분석」, 『한국개발연구』 32권 3호(통권 108호), 한국개발연구원, 2010, 35쪽~, <a href="https://koreascience.kr/article/JAKO201024236535424.pdf" target="_blank" rel="noopener">https://koreascience.kr/article/JAKO201024236535424.pdf</a></li>
+<li>한국은행 조사총괄팀, 「이번 교역조건 개선은 왜 다른가: 반도체 경기 호조의 실물경제 파급영향」, BOK 이슈노트 제2026-16호, 2026.7.19, <a href="https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=11062977&amp;amp;menuNo=200433" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=11062977&amp;amp;menuNo=200433</a></li>
+<li>한국은행 조사총괄팀, 「반도체 수혜지역의 소비는 어떻게 될까: 지역 미시데이터로 살펴본 파급효과」, BOK 이슈노트 제2026-20호, 2026.8.31, <a href="https://www.bok.or.kr/portal/bbs/P0002353/view.do?menuNo=200433&amp;amp;nttId=11064279" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/P0002353/view.do?menuNo=200433&amp;amp;nttId=11064279</a></li>
+<li>한국은행 경제통계2국, 「2026년 3/4분기 실질 국내총생산(속보)」, 공보 2026-10-22호, 2026.10.27, <a href="https://www.bok.or.kr/portal/bbs/B0000501/view.do?nttId=11065944&amp;amp;menuNo=201264" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/B0000501/view.do?nttId=11065944&amp;amp;menuNo=201264</a></li>
+<li>고용노동부, 「2026년 10월 고용행정 통계로 본 노동시장 동향」 보도자료, 2026.11.9, <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788397" target="_blank" rel="noopener">https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788397</a></li>
+<li>관계부처 합동, 「국내외 주식시장 변동성 확대로 단계별 대응조치 가동」 보도참고자료, 2026.11.6, <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788244" target="_blank" rel="noopener">https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788244</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진1] 인천광역시 인천인터넷방송 포토시정 「세계한상대회 기업전시회」(2026.9.28) https://www.incheon.go.kr/intv/TV010201/3089316 / [도표1] 한국은행 「2026년 3/4분기 실질 국내총생산(속보)」 참고지표 1로 AI경제저널 작성</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="macro01.html">[거시경제] 이윤은 18.5% 늘고 임금은 1.9% 늘었다</a></li><li><a href="wage01.html">[일자리·임금] 가계소득 늘어난 몫의 69%는 나랏돈이었다</a></li><li><a href="smb01.html">[소상공인] 매출 다섯 분기 만에 전년 대비 감소, 대출 연체 16조4000억원</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#국내총생산</span><span>#국내총소득</span><span>#민간소비</span><span>#가계소비</span><span>#정부소비</span><span>#반도체</span><span>#교역조건</span><span>#소득분배</span><span>#고용보험</span><span>#한국은행</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
