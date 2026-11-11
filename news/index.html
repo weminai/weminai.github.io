@@ -75,6 +75,7 @@ section.blk:has(#t10a) .li{padding-top:7px}
 .side ol li a{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.45;font-weight:600}
 .side ol li a:before{counter-increment:n;content:counter(n);color:var(--red);font-weight:900;font-size:17px;min-width:14px}
 .card{background:#fff;border:1px solid var(--line);padding:14px;margin-top:18px}.card.rep{border-top:3px solid var(--cob)}
+.card .cimg{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 30%;margin:8px 0 2px;background:#eee}.card.col a{display:block;color:inherit;text-decoration:none}.card.col .ci{transition:opacity .5s}.card.col .ci.fade{opacity:0}.card.col .dots{margin-top:8px;display:flex;gap:5px}.card.col .dots i{width:6px;height:6px;border-radius:50%;background:#ccc}.card.col .dots i.on{background:var(--acc)}
 .card .cl{font-size:12px;font-weight:900;letter-spacing:1px;color:var(--acc)}.card.rep .cl{color:var(--cob)}
 .card h5{font-family:"Noto Serif KR","Noto Serif CJK KR",serif;font-size:16px;margin:6px 0;line-height:1.4}.card p{font-size:12.5px;color:var(--sub);margin:0}.card .who{margin-top:8px;font-size:12px;color:var(--mute);font-weight:700}
 .tipbox{background:var(--deep);color:#fff;padding:16px;margin-top:18px;font-size:13.5px;line-height:1.55}.tipbox b{color:#F4C95D}
@@ -146,7 +147,7 @@ section.blk:has(#t10a) .li{padding-top:7px}
       <div class="box pk"><div class="bh">편집국 추천</div><div id="pick"></div></div>
       <div class="card rep" id="repCard"></div>
       <div class="card" id="acadCard"></div>
-      <a class="card" href="/media/dongji01.html" style="display:block;color:inherit;text-decoration:none"><span class="cl">경세제민의 눈</span><h5>[동지 사냥의 역사·철학①] 노선 차이에 '배신자' 딱지, 동지를 적으로 모는 권력투쟁</h5><p>문사철과 동양의 학에서 양심·뜻·원칙·사상·노선·전술까지, 차이의 층위</p><div class="who">김갑봉</div></a>
+      <div class="card col" id="colCard"></div>
       <div class="tipbox"><b>제보와 후원</b><br>권력을 감시하는 기사는 독자의 제보에서 시작합니다.<div class="row"><a class="j" href="/news/member.html">후원하기</a><a class="t2" href="/news/tip.html">제보</a></div></div>
     </aside>
   </div>
@@ -282,7 +283,15 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var rep=list.filter(function(p){ return p["분야"]==="연구보고서"; })[0]; if(rep) use(rep);
   document.getElementById('repCard').innerHTML='<span class="cl">연구보고서</span>'+(rep?'<h5><a href="'+href(rep["파일"])+'">'+esc(rep["제목"])+'</a></h5><p>'+esc(rep["부제"]||"")+'</p>':'<h5>준비 중입니다</h5>');
   var ac=list.filter(function(p){ return p["섹션"]==="학술"; })[0];   // 인문·학술 합친 뒤에도 논문 카드는 섹션 값 「학술」 글만
-  document.getElementById('acadCard').innerHTML='<span class="cl">학술 · 이주의 논문</span>'+(ac?'<h5><a href="'+href(ac["파일"])+'">'+esc(ac["제목"])+'</a></h5><p>'+esc(ac["부제"]||"")+'</p>':'<h5>첫 회를 준비하고 있습니다</h5><p>인천 지역 대학·연구기관의 논문, 세계 과학 논문을 주 1편 원문을 읽고 쉽게 풉니다.</p>');
+  document.getElementById('acadCard').innerHTML='<span class="cl">학술 · 이주의 논문</span>'+(ac?(ac["대표그림"]?'<a href="'+href(ac["파일"])+'"><img class="cimg" src="'+href(ac["대표그림"])+'" alt="" loading="lazy"></a>':'')+'<h5><a href="'+href(ac["파일"])+'">'+esc(ac["제목"])+'</a></h5><p>'+esc(ac["부제"]||"")+'</p>':'<h5>첫 회를 준비하고 있습니다</h5><p>인천 지역 대학·연구기관의 논문, 세계 과학 논문을 주 1편 원문을 읽고 쉽게 풉니다.</p>');
+  // 칼럼 칸 — 오피니언 연재(경세제민의 눈·정치밥상·경제밥상·경세사초) 가운데 가장 새 칼럼 두 편을 그림과 함께 8초마다 번갈아 보인다(2026-11-12 소장님 「여기도 이미지를 넣으세요」 「제목과 이미지가 어울리게」 「순환」 「최근 칼럼 2개만 순환하면 됩니다」). 헤드라인 내림 글도 칼럼 칸에는 선다
+  var cols=list.filter(function(p){ return p["섹션"]==="오피니언" && /경세제민의 눈|정치밥상|경제밥상|경세사초/.test(String(p["하위"]||"")+" "+String(p["묶음"]||"")); }).slice(0,2);
+  var cBox=document.getElementById('colCard'), c0=0, cHold=false;
+  var ccard=function(p){ var cl=/경세제민의 눈|정치밥상|경제밥상|경세사초/.exec(String(p["하위"]||"")+" "+String(p["묶음"]||""))[0];
+    return '<a class="ci" href="'+href(p["파일"])+'"><span class="cl">'+esc(cl)+'</span>'+(p["대표그림"]?'<img class="cimg" src="'+href(p["대표그림"])+'" alt="" loading="lazy">':'')+'<h5>'+esc(p["제목"])+'</h5>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'<div class="who">'+esc(String(p["바이라인"]||"김갑봉").replace(/\s*기자$/,''))+'</div></a>'; };
+  var cShow=function(){ if(!cols.length){ cBox.innerHTML='<span class="cl">칼럼</span><h5>준비 중입니다</h5>'; return; } cBox.innerHTML=ccard(cols[c0%cols.length])+(cols.length>1?'<div class="dots">'+cols.map(function(_,t){ return '<i class="'+(t===c0%cols.length?'on':'')+'"></i>'; }).join('')+'</div>':''); };
+  cShow(); cBox.addEventListener('mouseenter',function(){ cHold=true; }); cBox.addEventListener('mouseleave',function(){ cHold=false; });
+  if(cols.length>1) setInterval(function(){ if(cHold) return; var a=cBox.querySelector('.ci'); if(a) a.classList.add('fade'); setTimeout(function(){ c0++; cShow(); },500); },8000);
   // 기획연재 칸 — 섹션 「기획연재」 글만, 연재(묶음)마다 가장 새 글 한 편, 10초마다 한 칸씩 돌아간다(2026-11-02 소장님 「여기는 기획연재만 넣으라」 「기획연재 각 시리즈가 순환하게」 「심층을 빼고」)
   var dcard=function(p){ return '<a href="'+href(p["파일"])+'">'+img(p,1)+'<div class="k"><span class="s">'+esc(p["묶음"])+'</span></div><h4>'+esc(String(p["제목"]).replace(/^\[[^\]]+\]\s*/,''))+'</h4>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'</a>'; };
   var dG=document.getElementById('deepG'), d0=0, dHold=false;
