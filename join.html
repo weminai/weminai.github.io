@@ -11,7 +11,7 @@
 font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
 .wrap{max-width:1020px;margin:0 auto;padding:0 18px}
 main{padding:24px 0 40px}
-.cols{display:grid;grid-template-columns:1fr 300px;gap:34px}
+.askcols{display:grid;grid-template-columns:1fr 300px;gap:34px}
 form{display:block}
 fieldset{border:0;padding:0;margin:0 0 22px}
 legend{font-size:17px;font-weight:800;padding:0 0 8px;border-bottom:2px solid var(--ink);width:100%;margin-bottom:12px}
@@ -43,7 +43,7 @@ aside p{margin:0 0 12px;color:var(--sub);line-height:1.7}
 aside b{color:var(--ink)}
 aside .src{font-size:12px;color:var(--mute)}
 .box{background:var(--soft);border:1px solid var(--line);padding:13px 14px;margin-bottom:14px}
-@media(max-width:860px){.cols{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row>label{padding-top:0}}
+@media(max-width:860px){.askcols{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row>label{padding-top:0}}
 .grid4{display:grid;grid-template-columns:1.1fr 1.4fr 1.2fr .8fr;gap:6px;margin-bottom:6px}
 .grid4 input{font-size:13.5px;padding:7px 9px}
 .gh4{display:grid;grid-template-columns:1.1fr 1.4fr 1.2fr .8fr;gap:6px;font-size:12px;color:var(--mute);font-weight:700;margin-bottom:4px}
@@ -55,11 +55,8 @@ aside .src{font-size:12px;color:var(--mute)}
 input,textarea,select{-webkit-user-select:text;user-select:text}
 img{-webkit-user-drag:none;pointer-events:none}
 .wrap{max-width:1160px}
-</style><style>body{font-family:"맑은 고딕",Malgun Gothic,sans-serif;font-size:11pt;line-height:1.7}'
-   +'h1{font-size:16pt;border-bottom:2px solid #000;padding-bottom:6pt}h2{font-size:12.5pt;margin:16pt 0 6pt;border-bottom:1px solid #999;padding-bottom:3pt}h3{font-size:11pt;margin:10pt 0 3pt}'
-   +'table{border-collapse:collapse;width:100%}th{width:120pt;text-align:left;vertical-align:top;padding:5pt 8pt 5pt 0}td{vertical-align:top;padding:5pt 0;border-bottom:1px solid #E0E0E0}'
-   +'table.g th{width:auto;border-bottom:1px solid #000;padding:4pt}table.g td{padding:4pt}.foot{margin-top:18pt;font-size:9.5pt;color:#555;border-top:1px solid #999;padding-top:6pt}</style>
-<link rel="stylesheet" href="site.css?v=261111">
+</style>
+<link rel="stylesheet" href="site.css?v=261112">
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="index.html"><img src="logo.png" alt="경세제민 AI·경제 연구소"></a>
@@ -71,7 +68,7 @@ img{-webkit-user-drag:none;pointer-events:none}
 <div class="allm" id="allm" hidden><div class="wrap"><button class="allx" type="button" onclick="document.getElementById('allm').hidden=true" aria-label="닫기">×</button><b class="allt">전체 메뉴</b><nav class="smap"><div class="smc"><a class="smh" href="reports.html">연구보고서</a></div><div class="smc"><a class="smh" href="briefs.html">정책브리핑</a></div><div class="smc"><a class="smh" href="research.html">사업</a><a href="sa11.html">연구용역</a><a href="sa13.html">조사·컨설팅</a><a href="sa15.html">AI 교육</a></div><div class="smc"><a class="smh" href="about.html">연구소</a><a href="about.html#news">연구소 소식</a><a href="coverage.html">언론보도</a></div><div class="smc"><a class="smh" href="ask.html">의뢰·신청하기</a><a href="join.html">객원연구원 신청</a><a href="member.html">후원회원 안내</a></div></nav></div></div>
 <section class="ph"><div class="wrap"><span class="k">연구소</span><h1>객원연구원 신청</h1><p>연구소 사업에 함께하실 객원연구원을 등록받습니다. 아래 이력서와 자기소개서 표준양식을 채워
 「신청서 보내기」를 누르시면 바로 접수됩니다. 문의 032-777-0421</p></div></section>
-<main><div class="wrap"><div class="cols">
+<main><div class="wrap"><div class="askcols">
 <form id="f" onsubmit="return false">
   <fieldset><legend>1. 인적사항</legend>
     <div class="row"><label class="req" for="name">성명</label><input type="text" id="name"></div>

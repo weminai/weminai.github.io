@@ -323,10 +323,10 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 .tr p.em{color:#5A6676;font-size:18px;margin:0;letter-spacing:0}
 .tr p.em::before{content:"";display:block;width:48px;height:3px;background:#1A6DFF;margin:0 0 20px}
 .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:0}
-.b1{width:520px;height:520px;background:#1A6DFF;right:4%;top:-120px}
-.b2{width:360px;height:360px;background:#22D06A;right:26%;bottom:-140px;opacity:.38}
-.b3{width:300px;height:300px;background:#FFD21E;right:-60px;bottom:40px;opacity:.5}
-.b4{width:220px;height:220px;background:#FF9A33;right:20%;top:90px;opacity:.35}
+.blob.b1{width:520px;height:520px;background:#1A6DFF;right:4%;top:-120px}
+.blob.b2{width:360px;height:360px;background:#22D06A;right:26%;bottom:-140px;opacity:.38}
+.blob.b3{width:300px;height:300px;background:#FFD21E;right:-60px;bottom:40px;opacity:.5}
+.blob.b4{width:220px;height:220px;background:#FF9A33;right:20%;top:90px;opacity:.35}
 .hpub{border-top:0;padding:0;background:#fff}.hpub .wrap{max-width:var(--w);padding:0 20px}
 .svc{gap:0}
 .svc a{min-height:0;padding:44px 28px 48px;background:#fff!important;color:var(--t)!important;border:0;border-left:1px solid var(--l);display:flex;flex-direction:column;justify-content:flex-start;position:relative}
@@ -337,7 +337,7 @@ a.card:hover{border-color:var(--c);color:inherit}a.card:hover h3{color:var(--c)}
 .svc span{margin-top:22px;color:#9AA4B2;font-size:18px;transition:transform .2s}
 .svc a:hover{filter:none}.svc a:hover b{color:#1A6DFF}.svc a:hover span{color:#1A6DFF;transform:translateX(6px)}
 .foot{border-top:0}
-@media(max-width:860px){.tr .wrap{min-height:380px}.tr h1{font-size:38px}.b1{width:300px;height:300px;right:-80px}.b2,.b4{display:none}
+@media(max-width:860px){.tr .wrap{min-height:380px}.tr h1{font-size:38px}.blob.b1{width:300px;height:300px;right:-80px}.blob.b2,.blob.b4{display:none}
  .svc a{padding:26px 16px;min-height:0}.svc a:nth-child(odd){border-left:0;padding-left:0}.svc a:nth-child(n+3){border-top:1px solid var(--l)}.svc b{font-size:20px}}
 
 .sicon{display:inline-flex;align-items:center;justify-content:center;color:var(--t)}.sicon:hover{color:#1A6DFF}

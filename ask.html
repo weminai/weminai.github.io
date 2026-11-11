@@ -11,7 +11,7 @@
 font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
 .wrap{max-width:1020px;margin:0 auto;padding:0 18px}
 main{padding:24px 0 40px}
-.cols{display:grid;grid-template-columns:1fr 300px;gap:34px}
+.askcols{display:grid;grid-template-columns:1fr 300px;gap:34px}
 form{display:block}
 fieldset{border:0;padding:0;margin:0 0 22px}
 legend{font-size:17px;font-weight:800;padding:0 0 8px;border-bottom:2px solid var(--ink);width:100%;margin-bottom:12px}
@@ -43,19 +43,13 @@ aside p{margin:0 0 12px;color:var(--sub);line-height:1.7}
 aside b{color:var(--ink)}
 aside .src{font-size:12px;color:var(--mute)}
 .box{background:var(--soft);border:1px solid var(--line);padding:13px 14px;margin-bottom:14px}
-@media(max-width:860px){.cols{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row>label{padding-top:0}}
+@media(max-width:860px){.askcols{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row>label{padding-top:0}}
 
 input,textarea,select{-webkit-user-select:text;user-select:text}
 img{-webkit-user-drag:none;pointer-events:none}
 .wrap{max-width:1160px}
-</style><style>body{font-family:"맑은 고딕",Malgun Gothic,sans-serif;font-size:11pt;line-height:1.7}'
-   +'h1{font-size:16pt;border-bottom:2px solid #000;padding-bottom:6pt}'
-   +'h2{font-size:12.5pt;margin:16pt 0 6pt;border-bottom:1px solid #999;padding-bottom:3pt}'
-   +'table{border-collapse:collapse;width:100%}'
-   +'th{width:120pt;text-align:left;vertical-align:top;padding:5pt 8pt 5pt 0;font-weight:700}'
-   +'td{vertical-align:top;padding:5pt 0;border-bottom:1px solid #E0E0E0}'
-   +'.foot{margin-top:18pt;font-size:9.5pt;color:#555;border-top:1px solid #999;padding-top:6pt}</style>
-<link rel="stylesheet" href="site.css?v=261111">
+</style>
+<link rel="stylesheet" href="site.css?v=261112">
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="index.html"><img src="logo.png" alt="경세제민 AI·경제 연구소"></a>
@@ -68,7 +62,7 @@ img{-webkit-user-drag:none;pointer-events:none}
 <section class="ph"><div class="wrap"><span class="k">연구소</span><h1>의뢰·신청하기</h1><p>연구소가 하는 일은 모두 이 양식 하나로 신청하실 수 있습니다. 갈래를 고르고 내용을 적어
 메일로 보내시거나 워드 파일로 내려받아 보내 주십시오. 전화로 먼저 물으셔도 됩니다. 032-777-0421
 객원연구원 신청은 <a href="join.html" style="text-decoration:underline">따로 받습니다</a>.</p></div></section>
-<main><div class="wrap"><div class="cols">
+<main><div class="wrap"><div class="askcols">
 <form id="f" onsubmit="return false">
   <fieldset><legend>신청하는 분</legend>
     <div class="row"><label class="req" for="org">기관·회사</label><input type="text" id="org" placeholder="예) 인천광역시 ○○과, ○○주식회사, 개인은 「개인」"></div>
