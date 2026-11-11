@@ -1,7 +1,4 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><script>/* 2026-11-12 소장님 「사람 얼굴이 정확하게 드러나게 편집하라」 「지침이다」 — 1면 잘린 사진 칸(.ph·.cimg)에서 세로 사진은 머리가 잘리지 않게 위쪽을 보인다. 「그림초점」을 준 사진은 그대로 */
-document.addEventListener('load',function(e){ var i=e.target; if(!i||i.tagName!=='IMG'||!/(^|\s)(ph|cimg)(\s|$)/.test(i.className)||i.getAttribute('data-fp')) return;
-  if(i.naturalHeight>i.naturalWidth*1.05) i.style.objectPosition='50% 4%'; else if(i.naturalHeight>i.naturalWidth*0.8) i.style.objectPosition='50% 20%'; },true);</script>
-<script>if(/^(www\.)?weminai\.com$/.test(location.hostname))location.replace("https://news.weminai.com"+location.pathname+location.search+location.hash);</script><meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><script>if(/^(www\.)?weminai\.com$/.test(location.hostname))location.replace("https://news.weminai.com"+location.pathname+location.search+location.hash);</script><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI경제저널 — 일하는 사람들의 전문지</title>
 <meta name="description" content="AI경제저널. 인천의 교통과 물류, 항만과 공항, 도시와 지역경제를 숫자로 읽는 전문지. 경세제민 AI·경제연구소(주) 발행.">
 <meta property="og:site_name" content="AI경제저널"><meta property="og:type" content="website"><meta property="og:title" content="AI경제저널 — 일하는 사람들의 전문지"><meta property="og:description" content="인천의 교통과 물류, 항만과 공항, 도시와 지역경제를 숫자로 읽는 전문지. 경세제민 AI·경제연구소(주) 발행."><meta property="og:url" content="https://news.weminai.com/"><meta property="og:image" content="https://news.weminai.com/news/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://news.weminai.com/news/og.png">
@@ -217,7 +214,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     return Date.UTC(+m[1],m[2]-1,+m[3], h?+h[1]:12, h?+h[2]:0); };
   list.sort(function(a,b){ return (tm(b)-tm(a)) || (pr(a)-pr(b)); });
   var used={}, free=function(p){ return !used[p.id]; }, use=function(p){ used[p.id]=1; return p; }, pic=function(p){ return !!p["대표그림"]; };
-  var fp=function(p){ return p["그림초점"]?' style="object-position:'+esc(p["그림초점"])+'" data-fp="1"':''; }; /* 2026-11-12 소장님 「사람 얼굴이 정확하게 드러나게 편집하라」 「지침이다」 — posts.json 「그림초점」(보기 "50% 10%")이 있으면 그 자리를 보인다 */
+  var fp=function(p){ return p["그림초점"]?' style="object-position:'+esc(p["그림초점"])+'" data-fp="1"':''; }; /* 2026-11-12 소장님 「사람 얼굴이 정확하게 드러나게 편집하라」 「지침이다」 — posts.json 「그림초점」(보기 "50% 10%")이 있으면 그 자리를 보인다. 세로 사진을 자동으로 위쪽부터 자르던 규칙은 같은 날 07시 거둠(소장님 「탑기사 이미지가 저게 뭡니까?」 — rnet01 세로 사진이 하늘만 보임). 인물은 글 올리는 작업이 「그림초점」을 적는다 */
   var img=function(p,lazy){ return p["대표그림"]?'<img class="ph" src="'+href(p["대표그림"])+'" alt=""'+fp(p)+(lazy?' loading="lazy"':'')+'>':''; };
   var ttl=function(p){ return esc(p["제목"]); };
   var K2=function(p){ return '<div class="k"><span class="s">'+esc(secOf(p))+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
