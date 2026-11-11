@@ -44,7 +44,7 @@
   };
   fetch('report/list.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():[];}).catch(function(){return [];}).then(function(l){window.__LAB={};(l||[]).forEach(function(i){window.__LAB[i]=1;});return fetch('data/posts.json',{cache:'no-cache'});}).then(function(r){return r.ok?r.json():[];}).then(function(ps){
    (Array.isArray(ps)?ps:[]).filter(function(p){return p&&p.파일&&p.제목&&p.공개!=='보류'&&p.분야!=='보도자료'&&p.묶음!=='보도자료'&&(p.분야==='정책브리핑'||p.id==='sse01'||/브리핑|연구보고서/.test(String(p.묶음||'')+String(p.분야||'')))&&hit([p.제목,p.부제,p.묶음,p.분야,p.리드].join(' '));})
-    .sort(function(a,b){return (a.날짜||'')<(b.날짜||'')?1:-1;}).forEach(function(p){R.push({f:(window.__LAB&&window.__LAB[String(p.파일).replace(/^media\//,'').replace(/\.html$/,'')])?String(p.파일).replace(/^media\//,'report/'):p.파일,g:p.묶음||p.분야||'',t:String(p.제목).replace(/^\s*\[[^\]]*\]\s*/,''),dt:d(p.날짜)});});
+    .sort(function(a,b){return (a.날짜||'')<(b.날짜||'')?1:-1;}).forEach(function(p){R.push({g:(/연구보고서/.test(String(p.묶음||'')+String(p.분야||''))?'연구보고서':'정책브리핑'),f:(window.__LAB&&window.__LAB[String(p.파일).replace(/^media\//,'').replace(/\.html$/,'')])?String(p.파일).replace(/^media\//,'report/'):p.파일,t:String(p.제목).replace(/^\s*\[[^\]]*\]\s*/,''),dt:d(p.날짜)});});
    done();
   }).catch(done);
  
