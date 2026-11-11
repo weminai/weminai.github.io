@@ -6,3 +6,4 @@ body.labart .art .af .copy{color:#6B7380;font-size:14px}
 body.labart .top{position:sticky}
 body.labart .art .refs,body.labart .art .refs *{overflow-wrap:anywhere;word-break:break-word}body.labart .art .body{overflow-wrap:anywhere}body.labart{overflow-x:hidden}
 body.labart .art .ref,body.labart .art .ref *{overflow-wrap:anywhere;word-break:break-word}
+body.labart footer::after{content:none!important;display:none!important}
