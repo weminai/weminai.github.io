@@ -1,0 +1,86 @@
+{
+ "갈래": [
+  {
+   "k": "econ",
+   "이름": "경제·금융"
+  },
+  {
+   "k": "labor",
+   "이름": "노동·복지·인구"
+  },
+  {
+   "k": "urban",
+   "이름": "도시·부동산·지역"
+  },
+  {
+   "k": "trans",
+   "이름": "교통·물류·해양"
+  },
+  {
+   "k": "climate",
+   "이름": "기후·에너지·식량"
+  }
+ ],
+ "글": {
+  "brief01": "urban",
+  "care01": "labor",
+  "cpi01": "econ",
+  "debt01": "econ",
+  "debt02": "labor",
+  "ets01": "climate",
+  "fin02": "econ",
+  "fin03": "econ",
+  "fis01": "urban",
+  "fis02": "econ",
+  "gap01": "labor",
+  "gap02": "labor",
+  "gap03": "urban",
+  "hdb01": "econ",
+  "hou01": "urban",
+  "hou02": "urban",
+  "hsg01": "urban",
+  "ind01": "econ",
+  "ind02": "climate",
+  "ind03": "climate",
+  "ind04": "econ",
+  "inf01": "climate",
+  "inf02": "trans",
+  "inf03": "econ",
+  "infert01": "labor",
+  "jtr01": "climate",
+  "kos01": "econ",
+  "kos02": "econ",
+  "kos03": "econ",
+  "kos04": "econ",
+  "kos05": "econ",
+  "lab01": "labor",
+  "lab02": "labor",
+  "lab03": "labor",
+  "lev01": "econ",
+  "macro01": "econ",
+  "mkt01": "econ",
+  "pop01": "labor",
+  "pop02": "labor",
+  "rice01": "climate",
+  "sse01": "labor",
+  "tax01": "econ",
+  "tax02": "econ",
+  "tax03": "econ",
+  "trade01": "econ",
+  "urb01": "urban",
+  "urb02": "urban",
+  "urb03": "urban",
+  "urb04": "urban",
+  "urb05": "urban",
+  "urb06": "urban",
+  "usi01": "econ",
+  "wage01": "labor",
+  "wel01": "labor",
+  "wel02": "labor",
+  "wel03": "labor",
+  "wel04": "labor",
+  "wel05": "labor",
+  "wkb01": "econ",
+  "wsl01": "trans"
+ }
+}
