@@ -1,0 +1,78 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 끝 .af 의 tags 칸에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>인천 제설 취약구간 1년 새 118곳에서 252곳, 행정개편 뒤 첫 겨울 · AI경제저널</title>
+<meta name="description" content="제설제 2만6165톤·한파쉼터 931곳, 15일부터 넉 달 대책기간">
+<link rel="canonical" href="https://weminai.com/media/snow01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="인천 제설 취약구간 1년 새 118곳에서 252곳, 행정개편 뒤 첫 겨울">
+<meta property="og:description" content="제설제 2만6165톤·한파쉼터 931곳, 15일부터 넉 달 대책기간">
+<meta property="og:url" content="https://news.weminai.com/media/snow01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/snow01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">발행 경세제민 AI·경제 연구소(주)<br>창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">사회</div>
+ <h1>인천 제설 취약구간 1년 새 118곳에서 252곳, 행정개편 뒤 첫 겨울</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.12</span><span class="dt">업데이트 2026.11.12 09:30</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>제설제 2만6165톤·한파쉼터 931곳, 15일부터 넉 달 대책기간</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 인천시(시장 박찬대)가 오는 15일부터 내년 3월 15일까지 넉 달을 겨울철 자연재난 대책기간으로 정했다고 지난 11일 밝혔다. 한파특보가 나오면 밤과 주말, 휴일에도 24시간 여는 한파 응급대피소 19곳을 운영한다. 군·구가 10곳에서 11곳으로 바뀐 뒤 맞는 첫 겨울이다.</p>
+<figure><img src="img/snow01_01.jpg" alt="노란 민방위복을 입은 참석자들이 긴 회의 탁자에 둘러앉아 2026년 겨울철 대비 합동 방재대책 회의를 하는 모습" loading="lazy"><figcaption>합동 방재대책회의 참석자가 지난 11일 인천시 재난안전상황실에서 겨울철 대설·한파 대책을 논의하고 있다. 사진=인천시 제공</figcaption></figure>
+<h2>제설제 2만6165톤과 응급대피소 19곳</h2>
+<p>시는 지난 11일 시 재난안전상황실에서 민·관·군·경 합동 방재대책회의를 열었다. 회의에는 기관 24곳이 참석했다. 시와 군·구 11곳, 인천시교육청, 인천경찰청, 육군 제17보병사단, 인천교통공사, 인천시설공단 등이다.</p>
+<p>시는 제설제 2만6165톤을 확보했다. 지난해보다 715톤 많다. 제설장비 869대와 제설인력 1227명도 갖췄다. 눈 예보가 나오면 제설제를 미리 뿌린다.</p>
+<p>제설 취약구간 252곳에는 장비와 인력을 미리 둔다. 결빙 취약구간 113곳과 적설 취약 시설물 91곳도 따로 관리한다.</p>
+<p>한파쉼터는 931곳, 안심숙소는 20곳이다. 방풍시설과 온열의자 같은 한파 저감시설은 1874곳이다. 쉼터 위치는 국민재난안전포털·안전디딤돌·네이버 지도에 더해 카카오 지도와 티맵에서도 안내한다.</p>
+<p>생활지원사 1023명이 취약노인 1만6262명과 독거노인 9370명의 안부를 확인한다. 거리 노숙인이 모이는 곳은 현장에서 보호하고, 쪽방 주민은 건강을 점검한다.</p>
+<p>시는 기상청 전망을 근거로 들었다. 기상청이 지난 10월 23일 낸 3개월 전망에서 11월 강수량이 평년보다 많을 확률은 50%, 12월은 40%다. 기상청은 강한 엘니뇨가 이어질 가능성이 높고 12월에 최성기가 온다고 봤다.</p>
+<p>김성중 행정부시장은 "올겨울은 강수가 많아 기온이 떨어지면 언제든 대설로 이어질 수 있는 만큼 방심 없이 선제 제설에 나서달라"고 당부했다.</p>
+<h2>올해 겨울 대책이 군·구와 주민에게 말하는 것</h2>
+<p>지난해 같은 대책과 견주면 세 가지가 달라졌다.</p>
+<p>제설 취약구간은 시가 지난해 11월 12일 낸 대책에서 118곳이었다. 올해는 252곳으로 2.1배다(AI경제저널 계산). 2024년 대책의 「제설 취약 지역」은 97곳이었다. 시 발표에는 제설 취약구간이 늘어난 까닭이 없다.</p>
+<p>적설 취약 시설물은 84곳에서 91곳으로 늘었고, 결빙 취약구간은 113곳으로 같다. 한파쉼터는 2024년 825곳, 지난해 890곳, 올해 931곳이다.</p>
+<p>인천 행정체제는 지난 7월 1일 2군 8구에서 2군 9구로 바뀌었다. 제물포구·영종구·서해구·검단구가 새로 출범했다. 시는 주요관리구간 301곳에 책임담당자를 정했다. 도로 경계구간은 맞닿은 기관이 함께 제설한다.</p>
+<p>김 부시장은 "행정체제 개편에 따른 경계구간 제설 공백을 차단하고 취약계층 한파 보호에도 세심한 주의를 기울여야 한다"고 말했다.</p>
+<p>「재난정보학회지」에 실린 Heejae Kim 등의 2017년 논문은 지자체 229곳의 도로 제설 시나리오를 분석했다. 논문은 "대부분의 지자체에서는 예측 소요량에 비해 실제 보유량이 적은 것으로 나타났다"고 밝혔다.</p>
+<p>연구진은 지자체마다 최소 자체 보유량을 정하자고 제안했다. 나머지는 민간 계약이나 지역별 제설 거점 창고로 채우는 방식이다. 시는 12월부터 내년 2월까지 군·구 보건소 11곳, 응급의료기관 23곳과 한랭질환 감시체계를 운영한다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>"인천시, 겨울철 대설·한파 대비 총력…'시민 안전 최우선'", 인천광역시 자연재난과, 2026.11.11, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015948626" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015948626</a></li>
+<li>"인천시, 겨울철 대설·한파 재난대비 총력'시민 안전 최우선'", 인천광역시 자연재난과, 2025.11.12, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000013511550" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000013511550</a></li>
+<li>"인천시, 겨울철 대설·한파 재난대비 총력 ...현장 중심 사전대비 체계 구축으로 시민불편 최소화", 인천광역시 자연재난과, 2024.11.13, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000011133371" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000011133371</a></li>
+<li>"3개월 전망(2026년 11월~2027년 1월)", 기상청, 2026.10.23, <a href="https://www.weather.go.kr/w/repositary/xml/fct/mon/fct_mon3_108_20261023.pdf" target="_blank" rel="noopener">https://www.weather.go.kr/w/repositary/xml/fct/mon/fct_mon3_108_20261023.pdf</a></li>
+<li>"31년 만의 인천 행정체제 개편, 시민과 함께 출발", 인천광역시 기획총괄과, 2026.06.08, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000014871020" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000014871020</a></li>
+<li>"도로 제설 시나리오별 소요 제설장비 및 차량 추정에 관한 연구", Heejae Kim·Sunyoung Kim·Geunyoung Kim, 「재난정보학회지」 13권 2호 199~212쪽, 2017, <a href="https://doi.org/10.15683/kosdi.2017.06.30.199" target="_blank" rel="noopener">https://doi.org/10.15683/kosdi.2017.06.30.199</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진1] 인천광역시 보도자료 「인천시, 겨울철 대설·한파 대비 총력…'시민 안전 최우선'」(2026.11.11) 붙임 현장사진 https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015948626</li></ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="inha02.html">인하대, 이승만 동상 복원위 출범식·김문수 워크숍 모두 &#x27;불허&#x27;</a></li><li><a href="inha01.html">12·3내란 옹호 김문수 인하대 특강 &#x27;발칵&#x27;…&quot;극우 행사 반대&quot;</a></li><li><a href="hdb01.html">[가계부채] 다시 늘어난 빚 6조4,000억원과 0.61%포인트 오른 대출 이자</a></li><li><a href="hhl01.html">가계대출 한 달 새 6조4000억원 증가, 신용대출 다시 늘어</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#대설</span><span>#한파</span><span>#제설</span><span>#한파쉼터</span><span>#응급대피소</span><span>#겨울철자연재난</span><span>#행정체제개편</span><span>#취약노인</span><span>#인천시</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">발행 경세제민 AI·경제 연구소(주) (Gyeongsejemin AI &amp; Economic Research Institute Co., Ltd.) · 발행인 김효진 · 편집인 김효진<br>(22180) 인천광역시 미추홀구 수봉남로24번길 74 · 사업자등록번호 170-86-04032 · 032-777-0421 · weminaimax@weminai.com<br>청소년보호책임자 김갑봉 · 032-777-0421 · weminaimax@weminai.com</div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">자료의 글과 그림은 연구소의 지적재산입니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
