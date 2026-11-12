@@ -289,7 +289,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var cols=list.filter(function(p){ return p["섹션"]==="오피니언" && /경세제민의 눈|정치밥상|경제밥상|경세사초/.test(String(p["하위"]||"")+" "+String(p["묶음"]||"")); }).slice(0,2);
   var cBox=document.getElementById('colCard'), c0=0, cHold=false;
   var ccard=function(p){ var cl=/경세제민의 눈|정치밥상|경제밥상|경세사초/.exec(String(p["하위"]||"")+" "+String(p["묶음"]||""))[0];
-    return '<a class="ci" href="'+href(p["파일"])+'"><span class="cl">'+esc(cl)+'</span>'+(p["대표그림"]?'<img class="cimg" src="'+href(p["대표그림"])+'" alt=""'+fp(p)+' loading="lazy">':'')+'<h5>'+esc(p["제목"])+'</h5>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')+'<div class="who">'+esc(String(p["바이라인"]||"김갑봉").replace(/\s*기자$/,''))+'</div></a>'; };
+    return '<a class="ci" href="'+href(p["파일"])+'"><span class="cl">'+esc(cl)+'</span>'+(p["대표그림"]?'<img class="cimg" src="'+href(p["대표그림"])+'" alt=""'+fp(p)+' loading="lazy">':'')+'<h5>'+esc(p["제목"])+'</h5>'+(p["부제"]?'<p>'+esc(p["부제"])+'</p>':'')</a>'; };
   var cShow=function(){ if(!cols.length){ cBox.innerHTML='<span class="cl">칼럼</span><h5>준비 중입니다</h5>'; return; } cBox.innerHTML=ccard(cols[c0%cols.length])+(cols.length>1?'<div class="dots">'+cols.map(function(_,t){ return '<i class="'+(t===c0%cols.length?'on':'')+'"></i>'; }).join('')+'</div>':''); };
   cShow(); cBox.addEventListener('mouseenter',function(){ cHold=true; }); cBox.addEventListener('mouseleave',function(){ cHold=false; });
   if(cols.length>1) setInterval(function(){ if(cHold) return; var a=cBox.querySelector('.ci'); if(a) a.classList.add('fade'); setTimeout(function(){ c0++; cShow(); },500); },8000);
