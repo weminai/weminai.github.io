@@ -219,9 +219,11 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var ttl=function(p){ return esc(p["제목"]); };
   var K2=function(p){ return '<div class="k"><span class="s">'+esc(secOf(p))+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
   var today=new Date(); var top=function(p){ var m=String(p["맨위"]||"").match(/(\d{4})-(\d{2})-(\d{2})/); return m && Date.UTC(+m[1],m[2]-1,+m[3])>=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate())-864e5; };
+  /* 2026-11-14 소장님 「오피니언은 오피니언에만 있으면 될 듯요」 → 권고안 「승인」 — 오피니언 글은 1면 일반 기사 자리(헤드라인·열두 칸·이어서 읽기·사진·추천)에 걸지 않는다. 오른쪽 칼럼 칸과 맨 아래 섹션 묶음의 오피니언 칸에만 선다(그 둘은 free 를 따지지 않거나 걸린 글로도 채운다) */
+  list.forEach(function(p){ if(secOf(p)==="오피니언") used[p.id]=1; });
   // 헤드라인 넷 — 시간 차례로 흘려 보내며 자리 넷을 채운다(3시간 규칙)
   var NEWT=tm(list[0]), rec=function(p){ return NEWT-tm(p)<24*36e5; }; /* 2026-11-14 소장님 「헤드라인은 항상 최신 기사 중 비중이 높은 것만 올리라」 「12일자 기사가 왜 아직도」 — 헤드라인 후보는 가장 새 글 기준 24시간 안의 글 */
-  var cand=list.filter(function(p){ return rec(p) && pic(p) && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림" && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse(); /* 2026-11-11 소장님 「이 기사 헤드라인에서 내리라」 — posts.json 「헤드라인」:「내림」인 글은 헤드라인 후보에서 뺀다(편집&관리) */
+  var cand=list.filter(function(p){ return rec(p) && pic(p) && secOf(p)!=="오피니언" && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림" && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse(); /* 2026-11-11 소장님 「이 기사 헤드라인에서 내리라」 — posts.json 「헤드라인」:「내림」인 글은 헤드라인 후보에서 뺀다(편집&관리) */
   var slots=[];
   cand.forEach(function(p){
     var s=secOf(p); var same=slots.filter(function(x){ return secOf(x)===s; });
@@ -230,7 +232,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     if(tm(p)-tm(old)>=3*36e5){ var rep=same.length?same[0]:old; if(same.length && tm(p)-tm(rep)<3*36e5) return; slots.splice(slots.indexOf(rep),1); slots.push(p); }
   });
   /* 2026-11-14 — 자리가 비면 24시간 안 「발표」 글로 채운다(아직 안 쓴 섹션 먼저). 옛 글은 그래도 빌 때만 */
-  var hlOk=function(p){ return slots.length<5 && slots.indexOf(p)<0 && pic(p) && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림"; }, usedSec=function(p){ return slots.some(function(x){ return secOf(x)===secOf(p); }); };
+  var hlOk=function(p){ return slots.length<5 && slots.indexOf(p)<0 && pic(p) && secOf(p)!=="오피니언" && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림"; }, usedSec=function(p){ return slots.some(function(x){ return secOf(x)===secOf(p); }); };
   [function(p){ return rec(p) && !usedSec(p); }, function(p){ return rec(p); }, function(p){ return !usedSec(p); }, function(){ return true; }].forEach(function(f){ list.forEach(function(p){ if(hlOk(p) && f(p)) slots.push(p); }); });
   list.filter(function(p){ return top(p); }).forEach(function(p){ if(slots.indexOf(p)<0){ slots.sort(function(a,b){ return tm(a)-tm(b); }); slots.shift(); slots.push(p);} });
   // 헤드라인 가운데 하나는 반드시 인천경제(2026-11-01 소장님 「헤드라인 중 1개는 반드시 인천경제 기사가 들어가게 하라」)
@@ -252,7 +254,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   // 칸마다 그 섹션에서 아직 1면에 안 걸린 가장 새 글 한 편. 그 섹션에 걸 글이 없으면 다른 섹션 글로 메우지 않고 「준비 중」 칸을 둔다(칸과 상단 섹션이 늘 일치)
   // 기획연재 글은 아래 「기획연재」 칸에만 건다 — 먼저 떼어 둔다(2026-11-02 소장님 「연재는 기획연재 칸에만」, 「내 지시다」 경세제민연구소 홈페이지 관리 회차). 위 칸의 기획연재 자리는 안내만
   var deepAll=list.filter(function(p){ return p["섹션"]==="기획연재"; }), sbx={}; var deep=deepAll.filter(function(p){ if(sbx[p["묶음"]]) return false; sbx[p["묶음"]]=1; return true; }); deepAll.forEach(function(p){ if(deep.length<4 && deep.indexOf(p)<0) deep.push(p); }); deep=deep.map(use);   // 2026-11-08 밤 소장님 「여기 기획연재 빈공간 채우라 기획연재로」 — 연재마다 한 편을 먼저 걸고, 네 칸이 안 차면 기획연재의 다음 새 글로 채운다
-  var FIX=["인천경제","경제","정치행정","교통물류","사회","국제","기후에너지","AI","오피니언","인문·학술","기획연재","경제"];   // 2026-11-08 밤 소장님 「학술과 인문학을 합치라」 「인문(점)학술」 「인문학은 학술 앞에」 — 섹션 열하나, 열두 칸 끝은 경제 한 편 더   // 2026-11-08 밤 소장님 「인문학을 추가해주세요」 「해양항공은 교통물류에 넣어 버립시다」 「최대한 섹션은 폭 넓게」   // 2026-11-08 섹션 열둘 개편   // 아래 여섯 첫 칸 인천경제 → 지방자치(2026-11-02 소장님)
+  var FIX=["인천경제","경제","정치행정","교통물류","사회","국제","기후에너지","AI","인천경제","인문·학술","기획연재","경제"]; // 2026-11-14 소장님 승인 — 아홉째 칸 오피니언 → 인천경제   // 2026-11-08 밤 소장님 「학술과 인문학을 합치라」 「인문(점)학술」 「인문학은 학술 앞에」 — 섹션 열하나, 열두 칸 끝은 경제 한 편 더   // 2026-11-08 밤 소장님 「인문학을 추가해주세요」 「해양항공은 교통물류에 넣어 버립시다」 「최대한 섹션은 폭 넓게」   // 2026-11-08 섹션 열둘 개편   // 아래 여섯 첫 칸 인천경제 → 지방자치(2026-11-02 소장님)
   // 기획연재 자리는 아래 기획연재 칸과 겹쳐도 가장 새 기획연재 글을 건다(2026-11-02 소장님 「기획연재는 최신 기획연재 기사를 넣으라」). 열두 칸과 B판이 같은 글을 두 번 걸지 않게 따로 센다
   var serUsed={};
   var bySec=function(s,needPic){ if(s==="기획연재"){ var q=list.filter(function(p){ return p["섹션"]==="기획연재" && !serUsed[p.id] && (!needPic||pic(p)); })[0]; if(q) serUsed[q.id]=1; return q; }
@@ -269,7 +271,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   // A판 — 인천경제·경제·교통경제·해양·항공·도시·부동산 / B판 — 인천경제·기후·에너지·AI·국제·학술·기획연재(위 열두 칸과 같은 짜임). 섹션마다 아직 1면에 안 걸린 가장 새 글 한 편. 두 판이 번갈아 바뀐다(10초, 마우스를 올리면 멈춤, 단추로 고름)
   // 2026-11-02 소장님 「여기도 학술은 지방자치로」 「기획연재는 기획연재로」 「채우라」 → 기획연재 자리는 기획연재 글(위 열두 칸과 다른 글)
   // 2026-11-02 소장님 「상위 두개는 고정하라」 「맨위는 인천경제 그아래는 지방자치」 「A판과 B판 모두」
-  var pg=[["인천경제","정치행정","경제","교통물류","사회","오피니언","인문·학술"],["인천경제","정치행정","기후에너지","AI","국제","기획연재"]].map(function(g){ return g.map(function(s){ var p=bySec(s,0);
+  var pg=[["인천경제","정치행정","경제","교통물류","사회","국제","인문·학술"],["인천경제","정치행정","기후에너지","AI","국제","기획연재"]].map(function(g){ return g.map(function(s){ var p=bySec(s,0);
     // 글이 없는 섹션 자리는 기획연재가 아닌 다른 새 뉴스로 채운다(2026-11-02 소장님 「여기도 기획연재가 아닌 다른 뉴스로 채우라」). 칸 이름은 그 글의 섹션
     if(!p){ p=list.filter(function(q){ return free(q) && q["섹션"]!=="기획연재" && secOf(q)!=="기획연재"; })[0]; if(p) s=secOf(p); }
     if(p) use(p); return [s,p]; }); });
