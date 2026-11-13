@@ -220,7 +220,8 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var K2=function(p){ return '<div class="k"><span class="s">'+esc(secOf(p))+'</span><span class="d">'+esc(dstr(p["날짜"]))+'</span></div>'; };
   var today=new Date(); var top=function(p){ var m=String(p["맨위"]||"").match(/(\d{4})-(\d{2})-(\d{2})/); return m && Date.UTC(+m[1],m[2]-1,+m[3])>=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate())-864e5; };
   // 헤드라인 넷 — 시간 차례로 흘려 보내며 자리 넷을 채운다(3시간 규칙)
-  var cand=list.filter(function(p){ return pic(p) && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림" && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse(); /* 2026-11-11 소장님 「이 기사 헤드라인에서 내리라」 — posts.json 「헤드라인」:「내림」인 글은 헤드라인 후보에서 뺀다(편집&관리) */
+  var NEWT=tm(list[0]), rec=function(p){ return NEWT-tm(p)<24*36e5; }; /* 2026-11-14 소장님 「헤드라인은 항상 최신 기사 중 비중이 높은 것만 올리라」 「12일자 기사가 왜 아직도」 — 헤드라인 후보는 가장 새 글 기준 24시간 안의 글 */
+  var cand=list.filter(function(p){ return rec(p) && pic(p) && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림" && (p["갈래"]!=="발표" || top(p)); }).slice(0,60).reverse(); /* 2026-11-11 소장님 「이 기사 헤드라인에서 내리라」 — posts.json 「헤드라인」:「내림」인 글은 헤드라인 후보에서 뺀다(편집&관리) */
   var slots=[];
   cand.forEach(function(p){
     var s=secOf(p); var same=slots.filter(function(x){ return secOf(x)===s; });
@@ -228,6 +229,9 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     var old=slots.slice().sort(function(a,b){ return tm(a)-tm(b); })[0];
     if(tm(p)-tm(old)>=3*36e5){ var rep=same.length?same[0]:old; if(same.length && tm(p)-tm(rep)<3*36e5) return; slots.splice(slots.indexOf(rep),1); slots.push(p); }
   });
+  /* 2026-11-14 — 자리가 비면 24시간 안 「발표」 글로 채운다(아직 안 쓴 섹션 먼저). 옛 글은 그래도 빌 때만 */
+  var hlOk=function(p){ return slots.length<5 && slots.indexOf(p)<0 && pic(p) && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림"; }, usedSec=function(p){ return slots.some(function(x){ return secOf(x)===secOf(p); }); };
+  [function(p){ return rec(p) && !usedSec(p); }, function(p){ return rec(p); }, function(p){ return !usedSec(p); }, function(){ return true; }].forEach(function(f){ list.forEach(function(p){ if(hlOk(p) && f(p)) slots.push(p); }); });
   list.filter(function(p){ return top(p); }).forEach(function(p){ if(slots.indexOf(p)<0){ slots.sort(function(a,b){ return tm(a)-tm(b); }); slots.shift(); slots.push(p);} });
   // 헤드라인 가운데 하나는 반드시 인천경제(2026-11-01 소장님 「헤드라인 중 1개는 반드시 인천경제 기사가 들어가게 하라」)
   if(!slots.some(function(p){ return secOf(p)==="인천경제"; })){ var ic=list.filter(function(p){ return secOf(p)==="인천경제" && pic(p); })[0]||list.filter(function(p){ return secOf(p)==="인천경제"; })[0];
