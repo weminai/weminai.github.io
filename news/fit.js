@@ -137,7 +137,7 @@
 (function(){ if(document.querySelector('script[src*="/news/lang.js"]')) return; var s=document.createElement('script'); s.src='/news/lang.js?v=261103'; s.defer=true; (document.head||document.documentElement).appendChild(s); })();
 
 /* 2026-11-08 소장님 「전체기사 빼고 12개 섹션으로」 「해양항공 합치라」 「도시부동산 경제로」 — 상단 메뉴 열둘을 기사 쪽·안내 쪽 모두에 여기서 한 번에 다시 그린다(기사 쪽 HTML에 박힌 옛 메뉴를 덮는다) */
-(function(){ /* 2026-11-09 소장님 「하단에만 해양항공을 넣을 순 없어요?」 「네」 — 위쪽 메뉴는 열하나 그대로, 해양항공은 1면 아래 섹션 칸에만 */ var M=["경제","정치행정","인천경제","사회","국제","기후에너지","AI","교통물류","오피니언","인문·학술","기획연재"];   /* 2026-11-08 밤 소장님 「학술과 인문학을 합치라」 「인문(점)학술」 「인문학은 학술 앞에」 */   /* 2026-11-08 밤 소장님 「인문학을 추가해주세요」 「해양항공은 교통물류에 넣어 버립시다」 「최대한 섹션은 폭 넓게」 */
+(function(){ /* 2026-11-09 소장님 「하단에만 해양항공을 넣을 순 없어요?」 「네」 — 위쪽 메뉴는 열하나 그대로, 해양항공은 1면 아래 섹션 칸에만 */ var M=["경제","정치행정","인천경제","사회","국제","기후에너지","AI","교통물류","해양항공","오피니언","인문·학술","기획연재"];   /* 2026-11-14 소장님 「네네 넣으세요」 — 위쪽 메뉴에 해양항공을 교통물류 다음에 다시 넣는다(11-09 「하단에만」 갈음) */   /* 2026-11-08 밤 소장님 「학술과 인문학을 합치라」 「인문(점)학술」 「인문학은 학술 앞에」 */   /* 2026-11-08 밤 소장님 「인문학을 추가해주세요」 「해양항공은 교통물류에 넣어 버립시다」 「최대한 섹션은 폭 넓게」 */
   function nav(){ var w=document.querySelector('.gnb .wrap'); if(!w) return; var all=w.querySelector('a.all'), t=w.querySelector('.tools');
     var as=w.querySelectorAll('a'); for(var i=0;i<as.length;i++){ if(as[i]!==all && !(t&&t.contains(as[i]))) as[i].parentNode.removeChild(as[i]); }
     var cur=decodeURIComponent((location.search.match(/[?&]k=([^&]*)/)||[])[1]||"");
