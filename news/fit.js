@@ -165,8 +165,8 @@
     (document.head||document.documentElement).appendChild(st); }
   function build(ser){
     var r1=NEWS.map(function(n){ var k=n[2]||n[0]; return col(n[0],u(k),n[1].map(function(s){ return [s,u(k,s)]; })); }).join('');
-    var gs=[["기획연재",u("기획·학술","기획연재")],["인문·학술",u("기획·학술","인문·학술")]].concat(ser.map(function(s){ return [s,u("기획·학술",s)]; }));
-    var r2=col("기획·학술",u("기획·학술"),gs.slice(0,10))+col("오피니언",u("오피니언"),[["경세제민의 눈",u("오피니언","경세제민의 눈")],["경제밥상",u("오피니언","경제밥상")],["정치밥상",u("오피니언","정치밥상")]]); /* 2026-11-14 소장님 「신문 안내·함께 만들기는 하단에 있으면 된다」 — 전체메뉴에서 뺀다(바닥글에 있음) */
+    var gs=[]; [["기획연재","A"],["인문","B"],["학술","C"]].forEach(function(g){ gs.push([g[0],u("기획·학술",g[0])]); ser.filter(function(s){ return s[1]===g[1]; }).forEach(function(s){ KID[s[0]]=1; gs.push([s[0],u("기획·학술",s[0])]); }); });   /* 2026-11-14 소장님 「주간논문 국제논문 경제학상 모두 학술에 해당한다」 */
+    var r2=col("기획·학술",u("기획·학술"),gs.slice(0,16))+col("오피니언",u("오피니언"),[["경세제민의 눈",u("오피니언","경세제민의 눈")],["경제밥상",u("오피니언","경제밥상")],["정치밥상",u("오피니언","정치밥상")]]); /* 2026-11-14 소장님 「신문 안내·함께 만들기는 하단에 있으면 된다」 — 전체메뉴에서 뺀다(바닥글에 있음) */
     return '<div class="mm-w"><p class="mm-t">뉴스</p><div class="mm-r">'+r1+'</div><div class="mm-r2w"><p class="mm-t">기획 · 오피니언</p><div class="mm-r mm-r2">'+r2+'</div></div></div>'; }
   function go(){ var g=document.querySelector('.gnb'), w=g&&g.querySelector('.wrap'); if(!w||document.getElementById('mmP')) return; css();
     var b=document.createElement('button'); b.type='button'; b.className='mm-b'; b.setAttribute('aria-expanded','false'); b.setAttribute('aria-controls','mmP'); b.textContent='☰ 전체메뉴'; w.insertBefore(b,w.firstChild);
@@ -174,7 +174,7 @@
     b.addEventListener('click',function(){ var on=p.classList.toggle('on'); b.setAttribute('aria-expanded',on?'true':'false'); b.textContent=on?'✕ 닫기':'☰ 전체메뉴'; });
     document.addEventListener('keydown',function(ev){ if(ev.key==='Escape'&&p.classList.contains('on')) b.click(); });
     fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(d){ var seen={}, ser=[];
-      (Array.isArray(d)?d:[]).slice().sort(function(a,c){ return String(c["날짜"]||"").localeCompare(String(a["날짜"]||"")); }).forEach(function(x){ if(x["누리집"]==="연구소") return; if(x["섹션"]!=="기획연재"&&x["섹션"]!=="인문·학술") return; var m=String(x["묶음"]||"").trim(); if(m&&!seen[m]){ seen[m]=1; ser.push(m); } });
+      (Array.isArray(d)?d:[]).slice().sort(function(a,c){ return String(c["날짜"]||"").localeCompare(String(a["날짜"]||"")); }).forEach(function(x){ if(x["누리집"]==="연구소") return; if(x["섹션"]!=="기획연재"&&x["섹션"]!=="인문·학술"&&x["섹션"]!=="학술") return; var m=String(x["묶음"]||"").trim(); if(m&&!seen[m]){ seen[m]=1; ser.push([m, /SSCI|논문 해설|주간논문|노벨/.test(m)||x["섹션"]==="학술"?"C":(x["섹션"]==="기획연재"?"A":"B")]); } });
       p.innerHTML=build(ser); }).catch(function(){}); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
 })();
