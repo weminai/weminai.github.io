@@ -143,6 +143,41 @@
     var cur=decodeURIComponent((location.search.match(/[?&]k=([^&]*)/)||[])[1]||"");
     M.forEach(function(n){ var a=document.createElement('a'); a.href='/news/s.html?k='+encodeURIComponent(n); a.textContent=n; if(cur===n) a.className='on'; if(t) w.insertBefore(a,t); else w.appendChild(a); }); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',nav); else nav(); })();
+/* 2026-11-14 소장님 「뉴스와 비뉴스」 (한겨레 전체메뉴를 보이시며) → 권고안 「네」 — 「☰ 전체메뉴」 단추를 누르면 위 단 뉴스 여섯(하위 꼭지 세로), 아래 단 비뉴스(기획·학술 연재 이름, 오피니언, 신문 안내)가 펼쳐진다. 1면·섹션·기사 쪽 모두 */
+(function(){
+  var S='/news/s.html?k=';
+  var NEWS=[["최신기사",[],"전체"],["인천경제",["지역경제"]],["경제",["거시·정책","금융·증시","산업·노동","민생·복지","사회연대경제","도시·부동산","기후·에너지"]],["정치사회",["정책브리핑","지방자치","정치행정","여의도","사회"]],["국제",["동북아","북한(조선)","중국","일본","동남아","중동","서아시아","유럽","미주"]],["AI",[]],["교통물류",["철도","해양","해양경계","해운·항만","수산업","섬","항공","도로","대중교통","물류"]]];
+  var ETC=[["매체소개","/news/about.html"],["윤리강령","/news/ethics.html"],["편집규약","/news/code.html"],["독자권익위원회","/news/committee.html"],["정정·반론","/news/corrections.html"],["독자참여","/news/reader.html"],["제보하기","/news/tip.html"],["후원하기","/news/member.html"]];
+  var e=function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); };
+  var u=function(k,sub){ return S+encodeURIComponent(k)+(sub?'&sub='+encodeURIComponent(sub):''); };
+  var KID={"북한(조선)":1,"중국":1,"일본":1,"해양경계":1,"해운·항만":1,"수산업":1,"섬":1};
+  var col=function(h,href,items){ return '<div class="mm-c"><a class="mm-h" href="'+href+'">'+e(h)+'</a>'+items.map(function(x){ return '<a'+(KID[x[0]]?' class="mm-k"':'')+' href="'+x[1]+'">'+e(x[0])+'</a>'; }).join('')+'</div>'; };
+  function css(){ if(document.getElementById('mmcss')) return; var st=document.createElement('style'); st.id='mmcss';
+    st.textContent='.gnb .mm-b{flex:0 0 auto;border:0;background:none;font:inherit;font-weight:900;font-size:15px;cursor:pointer;padding:10px 12px 8px 0;margin-right:4px;color:#111;white-space:nowrap}'+
+    '.gnb .mm-b:hover{color:#C8102E}#mmP{display:none;background:#fff;border-bottom:2px solid #111;box-shadow:0 8px 18px rgba(0,0,0,.08)}#mmP.on{display:block}'+
+    '#mmP .mm-w{max-width:1180px;margin:0 auto;padding:22px 18px 26px}#mmP .mm-r{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:18px 20px}'+
+    '#mmP .mm-r2w{margin-top:22px;padding-top:20px;border-top:1px solid #D8D8D4}#mmP .mm-r2{grid-template-columns:repeat(4,minmax(0,1fr))}'+
+    '#mmP .mm-c{display:flex;flex-direction:column;gap:9px;min-width:0}#mmP .mm-c a{color:#555;font-size:14px;font-weight:500;line-height:1.3}#mmP .mm-c a:hover{color:#C8102E}'+
+    '#mmP .mm-c a.mm-k{padding-left:12px;font-size:13px;color:#777}#mmP .mm-c a.mm-k:before{content:"· "}'+
+    '#mmP .mm-c a.mm-h{color:#111;font-size:16px;font-weight:900;margin-bottom:4px}#mmP .mm-t{font-size:12px;color:#6B6B68;font-weight:800;letter-spacing:.08em;margin:0 0 12px}'+
+    '@media (max-width:900px){#mmP .mm-r{grid-template-columns:repeat(3,minmax(0,1fr))}#mmP .mm-r2{grid-template-columns:repeat(2,minmax(0,1fr))}}'+
+    '@media (max-width:560px){#mmP .mm-r,#mmP .mm-r2{grid-template-columns:repeat(2,minmax(0,1fr))}}';
+    (document.head||document.documentElement).appendChild(st); }
+  function build(ser){
+    var r1=NEWS.map(function(n){ var k=n[2]||n[0]; return col(n[0],u(k),n[1].map(function(s){ return [s,u(k,s)]; })); }).join('');
+    var gs=[["기획연재",u("기획·학술","기획연재")],["인문·학술",u("기획·학술","인문·학술")]].concat(ser.map(function(s){ return [s,u("기획·학술",s)]; }));
+    var r2=col("기획·학술",u("기획·학술"),gs.slice(0,10))+col("오피니언",u("오피니언"),[["경세제민의 눈",u("오피니언","경세제민의 눈")],["경제밥상",u("오피니언","경제밥상")],["정치밥상",u("오피니언","정치밥상")]])+col("신문 안내","/news/about.html",ETC.slice(0,5))+col("함께 만들기","/news/reader.html",ETC.slice(5));
+    return '<div class="mm-w"><p class="mm-t">뉴스</p><div class="mm-r">'+r1+'</div><div class="mm-r2w"><p class="mm-t">기획 · 오피니언 · 신문 안내</p><div class="mm-r mm-r2">'+r2+'</div></div></div>'; }
+  function go(){ var g=document.querySelector('.gnb'), w=g&&g.querySelector('.wrap'); if(!w||document.getElementById('mmP')) return; css();
+    var b=document.createElement('button'); b.type='button'; b.className='mm-b'; b.setAttribute('aria-expanded','false'); b.setAttribute('aria-controls','mmP'); b.textContent='☰ 전체메뉴'; w.insertBefore(b,w.firstChild);
+    var p=document.createElement('div'); p.id='mmP'; p.innerHTML=build([]); g.parentNode.insertBefore(p,g.nextSibling);
+    b.addEventListener('click',function(){ var on=p.classList.toggle('on'); b.setAttribute('aria-expanded',on?'true':'false'); b.textContent=on?'✕ 닫기':'☰ 전체메뉴'; });
+    document.addEventListener('keydown',function(ev){ if(ev.key==='Escape'&&p.classList.contains('on')) b.click(); });
+    fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(d){ var seen={}, ser=[];
+      (Array.isArray(d)?d:[]).slice().sort(function(a,c){ return String(c["날짜"]||"").localeCompare(String(a["날짜"]||"")); }).forEach(function(x){ if(x["누리집"]==="연구소") return; if(x["섹션"]!=="기획연재"&&x["섹션"]!=="인문·학술") return; var m=String(x["묶음"]||"").trim(); if(m&&!seen[m]){ seen[m]=1; ser.push(m); } });
+      p.innerHTML=build(ser); }).catch(function(){}); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
+})();
 
 /* 2026-11-09 위민아이(Wemin-AI) 요약(소장님 「위민아이(Wemin-AI) 요약」 「우리의 인공지능 기자다」) — 소장님 「AI요약은 클릭했을 때 보여주는 방식으로 하라」. 기사 쪽(/media/아이디.html)에서 posts.json 그 글의 「요약」(배열 또는 줄바꿈 글)이 있으면 부제 아래 「AI 요약 보기」 단추를 두고, 누르면 펼친다. 요약은 편집국이 본문 사실로 확인한 것만 넣는다 */
 ;(function(){ try{

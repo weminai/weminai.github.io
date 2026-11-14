@@ -426,7 +426,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var arr=Q?list.filter(function(p){ var h=hay(p); return W.every(function(w){ return h.indexOf(w)>=0; }); }):((K==="전체")?list:(K==="정책브리핑")?list.filter(isBrief):(K==="기획연재")?list.filter(function(p){ return p["섹션"]==="기획연재"; }):ALIAS[K]?list.filter(function(p){ return secOf(p)===ALIAS[K][0] && (!ALIAS[K][1] || hay(p).indexOf(ALIAS[K][1])>=0 || (ALIAS[K][1]==="물류"&&/물류|화물|컨테이너/.test(hay(p)))); }):list.filter(function(p){ return secOf(p)===K; }));
   var sb=document.getElementById('pgS');
   // 2026-11-08 소장님 「기획연재 섹션 옆으로 각 기획연재명 꼭지를 배열하세요」 「해당 꼭지를 클릭하면 해당 연재만 보일 수 있게」 — 기획연재 글의 「묶음」 이름을 새 글 차례로 꼭지로 건다(새 연재가 오르면 저절로 꼭지가 는다)
-  if((K==="기획연재"||K==="인문·학술") && !Q){ var srs=(K==="인문·학술")?[{k:"학술", kw:/§학술 /}]:[], seen={}; arr.forEach(function(p){ var b=String(p["묶음"]||"").trim(); if(K==="인문·학술" && p["섹션"]!=="인문·학술") return; if(b && !seen[b]){ seen[b]=1; srs.push({k:b, kw:new RegExp(b.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'))}); } }); SUBS[K]=srs; }   // 인문학도 연재 이름 꼭지(2026-11-08 밤 소장님 「인문학 아래는 인문학분야 연재를 다룹시다」)
+  if((K==="기획연재"||K==="인문·학술"||K==="기획·학술") && !Q){ var srs=(K==="기획·학술")?SUBS["기획·학술"].slice():(K==="인문·학술")?[{k:"학술", kw:/§학술 /}]:[], seen={}; arr.forEach(function(p){ var b=String(p["묶음"]||"").trim(); if(K==="인문·학술" && p["섹션"]!=="인문·학술") return; if(b && !seen[b]){ seen[b]=1; srs.push({k:b, kw:new RegExp(b.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'))}); } }); SUBS[K]=srs; }   // 인문학도 연재 이름 꼭지(2026-11-08 밤 소장님 「인문학 아래는 인문학분야 연재를 다룹시다」)
   sb.innerHTML=Q?'':subHtml(arr,K,'subsin');
   if(SUB && sb.firstChild) sb.firstChild.insertAdjacentHTML('afterbegin','<span><a href="'+qs({sub:'',p:1})+'">전체</a></span>');
   // 하위 섹션을 고르면 그 하위 글만(2026-11-03)
