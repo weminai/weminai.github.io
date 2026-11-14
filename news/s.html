@@ -431,7 +431,7 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
     var isAc=function(h){ return /SSCI|논문 해설|주간논문|노벨|§학술 /.test(h); };
     var G={"기획연재":[],"인문":[],"학술":[]}, sn={};
     arr.forEach(function(p){ var b=String(p["묶음"]||"").trim(); if(!b||sn[b]) return; sn[b]=1; var h=hay(p); var g=isAc(h)?"학술":(p["섹션"]==="기획연재"?"기획연재":"인문"); G[g].push({k:b, kw:new RegExp(b.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'))}); });
-    SUBS[K]=[{k:"기획연재", kw:/§기획연재 /, sub:G["기획연재"]}, {k:"인문·학술", kw:{test:function(h){ return /§인문·학술 |§인문학 |§학술 /.test(h) || isAc(h); }}, sub:G["인문"].concat(G["학술"])}]; }   /* 2026-11-14 소장님 「기획연재와 인문·학술로 구분하라」 — 인문 연재와 학술(주간논문·국제논문·노벨상)은 인문·학술 아래 */
+    SUBS[K]=[{k:"기획연재", kw:/§기획연재 /, sub:G["기획연재"]}, {k:"인문·학술", kw:{test:function(h){ return /§인문·학술 |§인문학 |§학술 /.test(h) || isAc(h); }}, sub:G["인문"]}]; }   /* 2026-11-14 소장님 「SSCI 주간논문, 2026 노벨상, 국제논문 해설 그냥 이게 다 학술」 「별도로 하위 섹션 두지 말라」 — 학술 글은 인문·학술 칸에 그대로, 따로 꼭지를 두지 않는다 */   /* 2026-11-14 소장님 「기획연재와 인문·학술로 구분하라」 — 인문 연재와 학술(주간논문·국제논문·노벨상)은 인문·학술 아래 */
   if((K==="기획연재"||K==="인문·학술") && !Q){ var srs=(K==="인문·학술")?[{k:"학술", kw:/§학술 /}]:[], seen={}; arr.forEach(function(p){ var b=String(p["묶음"]||"").trim(); if(K==="인문·학술" && p["섹션"]!=="인문·학술") return; if(b && !seen[b]){ seen[b]=1; srs.push({k:b, kw:new RegExp(b.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'))}); } }); SUBS[K]=srs; }   // 인문학도 연재 이름 꼭지(2026-11-08 밤 소장님 「인문학 아래는 인문학분야 연재를 다룹시다」)
   sb.innerHTML=Q?'':subHtml(arr,K,'subsin');
   if(SUB && sb.firstChild) sb.firstChild.insertAdjacentHTML('afterbegin','<span><a href="'+qs({sub:'',p:1})+'">전체</a></span>');

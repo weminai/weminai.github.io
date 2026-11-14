@@ -165,7 +165,7 @@
     (document.head||document.documentElement).appendChild(st); }
   function build(ser){
     var r1=NEWS.map(function(n){ var k=n[2]||n[0]; return col(n[0],u(k),n[1].map(function(s){ return [s,u(k,s)]; })); }).join('');
-    var gs=[]; [["기획연재","A"],["인문·학술","BC"]].forEach(function(g){ gs.push([g[0],u("기획·학술",g[0])]); ser.filter(function(s){ return g[1].indexOf(s[1])>=0; }).forEach(function(s){ KID[s[0]]=1; gs.push([s[0],u("기획·학술",s[0])]); }); });   /* 2026-11-14 소장님 「주간논문 국제논문 경제학상 모두 학술에 해당한다」 */
+    var gs=[]; [["기획연재","A"],["인문·학술","BC"]].forEach(function(g){ gs.push([g[0],u("기획·학술",g[0])]); ser.filter(function(s){ return g[1].indexOf(s[1])>=0 && s[1]!=="C"; }).forEach(function(s){ KID[s[0]]=1; gs.push([s[0],u("기획·학술",s[0])]); }); });   /* 2026-11-14 소장님 「주간논문 국제논문 경제학상 모두 학술에 해당한다」 */
     var r2=col("기획·학술",u("기획·학술"),gs.slice(0,16))+col("오피니언",u("오피니언"),[["경세제민의 눈",u("오피니언","경세제민의 눈")],["경제밥상",u("오피니언","경제밥상")],["정치밥상",u("오피니언","정치밥상")]]); /* 2026-11-14 소장님 「신문 안내·함께 만들기는 하단에 있으면 된다」 — 전체메뉴에서 뺀다(바닥글에 있음) */
     return '<div class="mm-w"><p class="mm-t">뉴스</p><div class="mm-r">'+r1+'</div><div class="mm-r2w"><p class="mm-t">기획 · 오피니언</p><div class="mm-r mm-r2">'+r2+'</div></div></div>'; }
   function go(){ var g=document.querySelector('.gnb'), w=g&&g.querySelector('.wrap'); if(!w||document.getElementById('mmP')) return; css();
