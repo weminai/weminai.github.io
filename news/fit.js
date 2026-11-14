@@ -137,7 +137,7 @@
 (function(){ if(document.querySelector('script[src*="/news/lang.js"]')) return; var s=document.createElement('script'); s.src='/news/lang.js?v=261103'; s.defer=true; (document.head||document.documentElement).appendChild(s); })();
 
 /* 2026-11-08 소장님 「전체기사 빼고 12개 섹션으로」 「해양항공 합치라」 「도시부동산 경제로」 — 상단 메뉴 열둘을 기사 쪽·안내 쪽 모두에 여기서 한 번에 다시 그린다(기사 쪽 HTML에 박힌 옛 메뉴를 덮는다) */
-(function(){ /* 2026-11-09 소장님 「하단에만 해양항공을 넣을 순 없어요?」 「네」 — 위쪽 메뉴는 열하나 그대로, 해양항공은 1면 아래 섹션 칸에만 */ var M=["인천경제","경제","정치사회","국제","AI","교통물류","기획·학술","오피니언"]; /* 2026-11-14 소장님 「상위섹션을 최소화 합시다」 「최적화하고」 「더 줄입시다」 「8개로」 「철도해양항공이 다 물류에요」 — 섹션 여덟: 기후에너지→경제, 정치행정+사회→정치사회, 해양항공→교통물류, 인문·학술+기획연재→기획·학술 */   /* 2026-11-14 소장님 「네네 넣으세요」 — 위쪽 메뉴에 해양항공을 교통물류 다음에 다시 넣는다(11-09 「하단에만」 갈음) */   /* 2026-11-08 밤 소장님 「학술과 인문학을 합치라」 「인문(점)학술」 「인문학은 학술 앞에」 */   /* 2026-11-08 밤 소장님 「인문학을 추가해주세요」 「해양항공은 교통물류에 넣어 버립시다」 「최대한 섹션은 폭 넓게」 */
+(function(){ /* 2026-11-09 소장님 「하단에만 해양항공을 넣을 순 없어요?」 「네」 — 위쪽 메뉴는 열하나 그대로, 해양항공은 1면 아래 섹션 칸에만 */ var M=["인천경제","경제","정치·국제","사회","AI","교통물류","기획·학술","오피니언"]; /* 2026-11-14 소장님 「사회를 떼라」 — 사회를 정치·국제에서 떼어 따로 둔다 */  /* 2026-11-14 소장님 「정치와 국제를 묶으라」 — 섹션 일곱: 정치사회+국제 → 정치·국제 */  /* 2026-11-14 소장님 「상위섹션을 최소화 합시다」 「최적화하고」 「더 줄입시다」 「8개로」 「철도해양항공이 다 물류에요」 — 섹션 여덟: 기후에너지→경제, 정치행정+사회→정치사회, 해양항공→교통물류, 인문·학술+기획연재→기획·학술 */   /* 2026-11-14 소장님 「네네 넣으세요」 — 위쪽 메뉴에 해양항공을 교통물류 다음에 다시 넣는다(11-09 「하단에만」 갈음) */   /* 2026-11-08 밤 소장님 「학술과 인문학을 합치라」 「인문(점)학술」 「인문학은 학술 앞에」 */   /* 2026-11-08 밤 소장님 「인문학을 추가해주세요」 「해양항공은 교통물류에 넣어 버립시다」 「최대한 섹션은 폭 넓게」 */
   function nav(){ var w=document.querySelector('.gnb .wrap'); if(!w) return; var all=w.querySelector('a.all'), t=w.querySelector('.tools');
     var as=w.querySelectorAll('a'); for(var i=0;i<as.length;i++){ if(as[i]!==all && !(t&&t.contains(as[i]))) as[i].parentNode.removeChild(as[i]); }
     var cur=decodeURIComponent((location.search.match(/[?&]k=([^&]*)/)||[])[1]||"");
@@ -146,11 +146,11 @@
 /* 2026-11-14 소장님 「뉴스와 비뉴스」 (한겨레 전체메뉴를 보이시며) → 권고안 「네」 — 「☰ 전체메뉴」 단추를 누르면 위 단 뉴스 여섯(하위 꼭지 세로), 아래 단 비뉴스(기획·학술 연재 이름, 오피니언, 신문 안내)가 펼쳐진다. 1면·섹션·기사 쪽 모두 */
 (function(){
   var S='/news/s.html?k=';
-  var NEWS=[["최신기사",[],"전체"],["인천경제",["지역경제"]],["경제",["거시·정책","금융·증시","산업·노동","민생·복지","사회연대경제","도시·부동산","기후·에너지"]],["정치사회",["정책브리핑","지방자치","정치행정","여의도","사회"]],["국제",["동북아","북한(조선)","중국","일본","동남아","중동","서아시아","유럽","미주"]],["AI",[]],["교통물류",["철도","해양","해양경계","해운·항만","수산업","섬","항공","도로","대중교통","물류"]]];
+  var NEWS=[["최신기사",[],"전체"],["인천경제",["지역경제"]],["경제",["거시·정책","금융·증시","산업·노동","민생·복지","사회연대경제","도시·부동산","기후·에너지"]],["정치·국제",["정책브리핑","지방자치","정치행정","여의도","국제","동북아","북한(조선)","중국","일본","동남아","중동","서아시아","유럽","미주"]],["사회",[]],["AI",[]],["교통물류",["철도","해양","해양경계","해운·항만","수산업","섬","항공","도로","대중교통","물류"]]];
   var ETC=[["매체소개","/news/about.html"],["윤리강령","/news/ethics.html"],["편집규약","/news/code.html"],["독자권익위원회","/news/committee.html"],["정정·반론","/news/corrections.html"],["독자참여","/news/reader.html"],["제보하기","/news/tip.html"],["후원하기","/news/member.html"]];
   var e=function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); };
   var u=function(k,sub){ return S+encodeURIComponent(k)+(sub?'&sub='+encodeURIComponent(sub):''); };
-  var KID={"북한(조선)":1,"중국":1,"일본":1,"해양경계":1,"해운·항만":1,"수산업":1,"섬":1};
+  var KID={"동북아":1,"동남아":1,"중동":1,"서아시아":1,"유럽":1,"미주":1,"북한(조선)":1,"중국":1,"일본":1,"해양경계":1,"해운·항만":1,"수산업":1,"섬":1};
   var col=function(h,href,items){ return '<div class="mm-c"><a class="mm-h" href="'+href+'">'+e(h)+'</a>'+items.map(function(x){ return '<a'+(KID[x[0]]?' class="mm-k"':'')+' href="'+x[1]+'">'+e(x[0])+'</a>'; }).join('')+'</div>'; };
   function css(){ if(document.getElementById('mmcss')) return; var st=document.createElement('style'); st.id='mmcss';
     st.textContent='.gnb .mm-b{flex:0 0 auto;border:0;background:none;font:inherit;font-weight:900;font-size:15px;cursor:pointer;padding:10px 12px 8px 0;margin-right:4px;color:#111;white-space:nowrap}'+
@@ -166,8 +166,8 @@
   function build(ser){
     var r1=NEWS.map(function(n){ var k=n[2]||n[0]; return col(n[0],u(k),n[1].map(function(s){ return [s,u(k,s)]; })); }).join('');
     var gs=[["기획연재",u("기획·학술","기획연재")],["인문·학술",u("기획·학술","인문·학술")]].concat(ser.map(function(s){ return [s,u("기획·학술",s)]; }));
-    var r2=col("기획·학술",u("기획·학술"),gs.slice(0,10))+col("오피니언",u("오피니언"),[["경세제민의 눈",u("오피니언","경세제민의 눈")],["경제밥상",u("오피니언","경제밥상")],["정치밥상",u("오피니언","정치밥상")]])+col("신문 안내","/news/about.html",ETC.slice(0,5))+col("함께 만들기","/news/reader.html",ETC.slice(5));
-    return '<div class="mm-w"><p class="mm-t">뉴스</p><div class="mm-r">'+r1+'</div><div class="mm-r2w"><p class="mm-t">기획 · 오피니언 · 신문 안내</p><div class="mm-r mm-r2">'+r2+'</div></div></div>'; }
+    var r2=col("기획·학술",u("기획·학술"),gs.slice(0,10))+col("오피니언",u("오피니언"),[["경세제민의 눈",u("오피니언","경세제민의 눈")],["경제밥상",u("오피니언","경제밥상")],["정치밥상",u("오피니언","정치밥상")]]); /* 2026-11-14 소장님 「신문 안내·함께 만들기는 하단에 있으면 된다」 — 전체메뉴에서 뺀다(바닥글에 있음) */
+    return '<div class="mm-w"><p class="mm-t">뉴스</p><div class="mm-r">'+r1+'</div><div class="mm-r2w"><p class="mm-t">기획 · 오피니언</p><div class="mm-r mm-r2">'+r2+'</div></div></div>'; }
   function go(){ var g=document.querySelector('.gnb'), w=g&&g.querySelector('.wrap'); if(!w||document.getElementById('mmP')) return; css();
     var b=document.createElement('button'); b.type='button'; b.className='mm-b'; b.setAttribute('aria-expanded','false'); b.setAttribute('aria-controls','mmP'); b.textContent='☰ 전체메뉴'; w.insertBefore(b,w.firstChild);
     var p=document.createElement('div'); p.id='mmP'; p.innerHTML=build([]); g.parentNode.insertBefore(p,g.nextSibling);
