@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>중국 281개 도시의 지하철망 확장과 버스 승객 감소 · AI경제저널</title>
+<meta name="description" content="전체 대중교통 승객 증가는 10% 수준 유의">
+<link rel="canonical" href="https://weminai.com/media/bus03.html">
+<meta property="og:type" content="article"><meta property="og:title" content="중국 281개 도시의 지하철망 확장과 버스 승객 감소">
+<meta property="og:description" content="전체 대중교통 승객 증가는 10% 수준 유의">
+<meta property="og:url" content="https://news.weminai.com/media/bus03.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/bus03_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">경제</div>
+ <h1>중국 281개 도시의 지하철망 확장과 버스 승객 감소</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.17</span><span class="dt">업데이트 2026.11.17 00:44</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>전체 대중교통 승객 증가는 10% 수준 유의</p><p>대구 3호선 개통 뒤 버스 승객의 철도 전환</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> Liu 외 연구진 8명이 2026년 8월 국제학술지 『Transportation Research Part A』 212권에 논문을 실었다. 중국 도시의 지하철망 확장과 시내버스 승객의 관계를 다룬 논문이다.</p>
+<p>연구진은 지하철망 밀도가 1% 오르면 버스 승객은 2.3% 줄고, 버스와 지하철을 합한 전체 승객은 1.4% 는다고 해석했다.</p>
+<p>국내 연구에서도 버스 승객이 철도로 옮겨 간 흐름이 나타났다. 대구 도시철도 3호선 개통 뒤 늘어난 철도 승객은 대부분 버스에서 넘어왔고, 전체 대중교통 통행은 늘지 않았다. 준공영제 시도와 민영제 시도의 시내버스 효율도 갈렸다.</p>
+<h2>281개 도시 13년 패널</h2>
+<p>연구진은 2010~2022년 중국 281개 도시 자료를 썼다. 지하철망 밀도는 노선 총연장을 도시 시가지 면적으로 나눈 값이다. 연구진은 지하철망 밀도를 연속형 처치 변수로 쓴 이중차분법으로 도시와 연도의 차이를 걸러 냈다.</p>
+<p>지하철망 밀도의 계수는 버스 승객에 −0.023으로 1% 수준에서 유의했다. 전체 승객에는 0.014로 10% 수준에서만 유의했다. 개통 여부만 따진 분석에서도 버스 승객 감소(−0.085)는 유의했고, 전체 승객 증가는 유의하지 않았다.</p>
+<p>이웃 도시로 번지는 효과를 걸러 낸 점검에서도 버스 쪽 결과는 같았다. 지하철 도시와 맞닿은 비교 도시를 빼고 1911개 관측으로 다시 추정하자 버스 승객 계수는 −0.022로 1% 수준에서 유의했다. 전체 승객 계수는 유의하지 않았다.</p>
+<figure><img src="img/bus03_c1.png" alt="[도표] 지하철망 밀도가 버스 승객과 전체 대중교통 승객에 미친 효과(연속형 이중차분 계수, 통제변수 포함, 막대는 90% 신뢰구간). 자료 Liu 외(2026) 표 7·9, AI경제저널 작성" loading="lazy"><figcaption>[도표] 지하철망 밀도가 버스 승객과 전체 대중교통 승객에 미친 효과(연속형 이중차분 계수, 통제변수 포함, 막대는 90% 신뢰구간). 자료 Liu 외(2026) 표 7·9, AI경제저널 작성</figcaption></figure>
+<p>전체 승객이 느는 효과는 개통 4년 뒤에야 뚜렷해졌다. 중국 버스 승객은 연인원으로 2014년 660억명에서 2019년 570억명으로 줄었다.</p>
+<h2>17개 대도시의 운영 효율</h2>
+<p>이 논문의 본 분석은 17개 대도시의 운영 효율이다. 연구진은 2019년 지하철이 있던 중국 37개 도시 가운데 자료가 갖춰진 베이징, 상하이 등 17곳의 2014~2019년 자료를 썼다. 281개 도시 분석은 결과를 넓히려고 덧붙인 추가 분석이다.</p>
+<p>효율은 직원·노선·차량을 투입으로, 승객을 산출로 놓은 동적 네트워크 자료포락분석으로 쟀다. 밀도가 높은 도시의 기준은 상위 4분의 1로, 지하철망 0.31㎞/㎢, 버스망 22.86㎞/㎢였다.</p>
+<p>지하철망 밀도가 높은 도시와 낮은 도시의 버스 운영 효율 차이는 유의하지 않았다. 버스망 밀도가 높은 도시는 지하철 운영 효율 점수가 0.217 낮았다. 연구진은 해안 도시 여부를 도구변수로 쓴 2단계 최소제곱 추정으로 이 결과를 다시 점검했다.</p>
+<p>연구진은 지하철 확장과 버스 노선 정비를 함께 추진하라고 제언했다. 표본이 17개 도시와 6년에 그친 점은 한계로 밝혔다. 도시마다 발전 단계와 보조금 방식이 달라 효율 값은 조심해 읽어야 한다고도 덧붙였다.</p>
+<h2>대구 3호선 개통 전후 교통카드</h2>
+<p>황정훈·정연식(2022)은 『대한토목학회논문집』 42권 3호에 대구 3호선 개통 전후의 대중교통 통행을 비교했다. 자료는 2015년 4월 6~10일, 2016년 4월 4~8일, 2019년 4월 8~12일 평일 닷새의 대구·경산 교통카드다.</p>
+<figure><img src="img/bus03_02.jpg" alt="대구 청라언덕역 앞을 지나는 도시철도 3호선 고가 선로. 2025년 10월 27일 촬영." loading="lazy"><figcaption>대구 청라언덕역 앞을 지나는 도시철도 3호선 고가 선로. 2025년 10월 27일 촬영.</figcaption></figure>
+<p>경산 버스 이용 수요의 절반 이상은 대구 방면이다. 도시철도 2호선도 경산 영남대까지 이어져 연구진은 두 도시 자료를 묶었다.</p>
+<p>하루 평균 대중교통 통행은 2015년 125만5607건, 2016년 125만5894건, 2019년 120만4111건이었다. 도시철도는 연평균 6.1% 늘고 대구 버스는 4.8% 줄었다. 3호선 통행 약 6.6만건은 버스 감소 폭과 비슷했다.</p>
+<p>대구시는 2015년 8월 버스 40대를 줄이고 노선 17개를 새로 만들고 28개를 바꾸고 17개를 없앴다. 운행 대수는 1561대에서 1521대가 됐고, 2019년 하반기에 10대를 다시 늘렸다.</p>
+<p>연구진은 노선 조정이 버스 수요를 얼마나 줄였는지는 자료 한계로 따지지 못했다고 밝혔다. 대구 안 환승 통행은 연평균 3.3% 줄었다.</p>
+<p>대구교통공사 운영 통계로 보면 3호선 하루 평균 승차 인원은 2019년 7만7204명, 2020년 5만3974명, 2025년 7만600명이다. 2025년 1~3호선 전체는 하루 평균 40만1944명이었다.</p>
+<h2>한국 시내버스 효율 비교</h2>
+<figure><img src="img/bus03_01.jpg" alt="인천 시내버스 노사가 지난 8월 25일 인천지방노동위원회 조정회의에서 임금·단체협상을 타결했다. 노사는 기본시급을 4.5% 올리기로 했다." loading="lazy"><figcaption>인천 시내버스 노사가 지난 8월 25일 인천지방노동위원회 조정회의에서 임금·단체협상을 타결했다. 노사는 기본시급을 4.5% 올리기로 했다.</figcaption></figure>
+<p>최승현 외(2024)는 『대한교통학회지』 42권 1호에 2017~2021년 16개 시도의 시내버스 효율을 자료포락분석으로 비교했다. 2021년 기준 준공영제 7개 시도(서울·부산·대구·인천·광주·대전·제주)와 민영제 9개 시도다.</p>
+<p>같은 해 전국 시내버스 업체는 370곳이었다. 운영 방식별로 준공영제가 60.0%, 민영제가 38.8%, 공영제가 1.2%를 차지했다.</p>
+<p>기술효율은 준공영제 시도가 0.94~0.99, 민영제 시도가 0.77~0.83이었다. 규모의 비효율을 걷어 낸 순수기술효율은 2017년 준공영제 1.00, 민영제 0.96으로 차이가 좁았다.</p>
+<p>세 연구 모두 도시나 시도 합계로 분석했다. 최승현 외(2024)는 업체·노선 단위 분석을 다음 과제로 남겼다. Liu 외 연구진은 더 많은 도시를 담은 후속 연구가 가능해질 것이라고 밝혔다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>Liu, M., Jin, S., Zhang, C., Gao, K., Yang, C., Bai, C., Gao, X., Xu, W.(2026). &quot;Metro prosperity and bus decline: A causal relationship? A quasi-experimental study of 17 key cities in China&quot;. Transportation Research Part A: Policy and Practice 212, 105182, <a href="https://doi.org/10.1016/j.tra.2026.105182" target="_blank" rel="noopener">https://doi.org/10.1016/j.tra.2026.105182</a></li><li>황정훈·정연식(2022). 「도시철도 개통에 따른 대중교통 통행량 변화 분석: 대구도시철도 3호선 개통을 대상으로」. 『대한토목학회논문집』 42(3), 371–377, <a href="https://doi.org/10.12652/Ksce.2022.42.3.0371" target="_blank" rel="noopener">https://doi.org/10.12652/Ksce.2022.42.3.0371</a></li><li>최승현·조규석·유연승·도명식(2024). 「시내버스 운송업의 운영효율성 분석: 준공영제와 민영제 비교를 중심으로」. 『대한교통학회지』 42(1), 94–106, <a href="https://doi.org/10.7470/jkst.2024.42.1.094" target="_blank" rel="noopener">https://doi.org/10.7470/jkst.2024.42.1.094</a></li><li>대구교통공사, 「운영현황 — 수송 및 수입현황」, 누리집(최근 수정 2026년 7월 27일), <a href="https://www.dtro.or.kr/index.do?menu_id=00000420" target="_blank" rel="noopener">https://www.dtro.or.kr/index.do?menu_id=00000420</a></li><li>인천광역시, 「인천 시내버스 멈추지 않았다 노‧사 임금‧단체 협상 최종타결」 보도자료, 버스정책과, 2026년 8월 26일, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015403650" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015403650</a></li></ul><h4>[사진 출처]</h4><ul><li>[사진 1] 인천광역시 버스정책과, 「인천 시내버스 멈추지 않았다 노‧사 임금‧단체 협상 최종타결」 보도자료(2026년 8월 26일) 붙임 사진, 공공누리 출처표시, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015403650" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015403650</a></li><li>[사진 2] Packer25, 「2025-10-27 17.43.02 daegu cheongnahillstation.jpg」, 위키미디어 공용, CC0, <a href="https://commons.wikimedia.org/wiki/File:2025-10-27_17.43.02_daegu_cheongnahillstation.jpg" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:2025-10-27_17.43.02_daegu_cheongnahillstation.jpg</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 AI 프로그램 클로드를 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="bus02.html">버스 1km 원가, 회사 크기보다 달리는 속도가 갈랐다</a></li><li><a href="avw01.html">[항공] 같은 강풍에 김포 9분·제주 4분…공항 장비가 지연 갈랐다</a></li><li><a href="owsc01.html">해상풍력과 어업의 공존 조건, 보상·안전 같은 위험 규칙</a></li><li><a href="robo01.html">로봇과 일자리·노동 몫, 한국·미국·유럽·중국 실증논문 네 편 비교</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#지하철</span><span>#시내버스</span><span>#대중교통</span><span>#이중차분</span><span>#중국도시</span><span>#대구도시철도</span><span>#교통카드</span><span>#준공영제</span><span>#자료포락분석</span><span>#학술</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
