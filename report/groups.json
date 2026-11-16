@@ -27,6 +27,7 @@
   "cpi01": "econ",
   "debt01": "econ",
   "debt02": "labor",
+  "debt03": "econ",
   "ets01": "climate",
   "fin02": "econ",
   "fin03": "econ",
@@ -83,6 +84,7 @@
   "wel05": "labor",
   "wkb01": "econ",
   "wkb02": "econ",
-  "wsl01": "trans"
+  "wsl01": "trans",
+  "yth01": "labor"
  }
 }
