@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 끝 .af 의 tags 칸에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[경제밥상] 배당 48조원 시대의 밥상, 상위 1%에 몰린 숟가락 · AI경제저널</title>
+<meta name="description" content="배당성향은 미국·일본을 넘었는데 주가순자산비율은 1.6배 배당소득 67.5%는 상위 1% 몫, 분리과세 최고세율은 30%">
+<link rel="canonical" href="https://weminai.com/media/ebap01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[경제밥상] 배당 48조원 시대의 밥상, 상위 1%에 몰린 숟가락">
+<meta property="og:description" content="배당성향은 미국·일본을 넘었는데 주가순자산비율은 1.6배 배당소득 67.5%는 상위 1% 몫, 분리과세 최고세율은 30%">
+<meta property="og:url" content="https://news.weminai.com/media/ebap01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/ebap01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">오피니언</div>
+ <h1>[경제밥상] 배당 48조원 시대의 밥상, 상위 1%에 몰린 숟가락</h1>
+ <div class="byl"><span class="nm">김갑봉 편집국장</span><span class="dt">입력 2026.11.17</span><span class="dt">업데이트 2026.11.17 19:33</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>배당성향은 미국·일본을 넘었는데 주가순자산비율은 1.6배</p><p>배당소득 67.5%는 상위 1% 몫, 분리과세 최고세율은 30%</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 편집국장 |</span> 2026년 3월 6일 개정 상법이 공포와 함께 시행됐다. 회사가 사들인 자기주식은 1년 안에 소각하는 것이 원칙이 됐다. 이미 쥐고 있던 자사주에는 1년 6개월의 말미가 주어졌다. 자사주를 금고에 쌓아 두기 어려워졌다.</p>
+<figure><img src="img/ebap01_01.jpg" alt="한국거래소 컨퍼런스홀 단상에서 금융위원장이 축사하고 청중이 노트북을 펴고 듣는 공청회 장면" loading="lazy"><figcaption>이억원 금융위원장이 6월 8일 서울 여의도 한국거래소 컨퍼런스홀에서 열린 「자본시장의 발전을 위한 한국 스튜어드십 코드 개정 공청회」에서 축사하고 있다.</figcaption></figure>
+<h2>미국을 넘은 배당성향, 일본에 못 미친 주가순자산비율</h2>
+<p>숫자는 이미 크게 바뀌었다. 한국거래소가 5월 펴낸 『2026 한국거래소 기업가치 제고 프로그램 백서』를 보면 2025년 유가증권시장 현금배당 총액은 48조7000억원이다.</p>
+<p>같은 해 자기주식 소각액은 21조4000억원이다. 새로 사들인 20조1000억원보다 많았다. 사들인 것보다 더 태웠다.</p>
+<p>배당성향도 올랐다. 백서의 나라별 비교표(MSCI 지수 기준)를 보면 2025년 말 한국 배당성향은 38.5%다. 미국 32.9%, 일본 36.2%보다 높다. 대만은 48.5%다.</p>
+<p>그런데 같은 표의 주가순자산비율(PBR)은 다른 말을 한다. 한국은 2024년 말 0.9배에서 한 해 만에 1.6배로 올랐다. 그래도 일본 1.9배, 신흥시장 평균 2.1배에 못 미친다. 미국은 5.6배다.</p>
+<figure><img src="img/ebap01_02.png" alt="2025년 말 배당성향은 한국 38.5, 일본 36.2, 미국 32.9, 대만 48.5%. 주가순자산비율은 한국 1.6, 일본 1.9, 미국 5.6, 대만 3.9배를 나란히 보인 막대그래프" loading="lazy"><figcaption>2025년 말 나라별 배당성향과 주가순자산비율. 자료=한국거래소 『2026 한국거래소 기업가치 제고 프로그램 백서』(MSCI 지수 기준) 그래프=AI경제저널</figcaption></figure>
+<p>배당은 미국보다 많이 준다. 그런데도 값은 신흥시장 평균 아래다.</p>
+<h2>할인의 뿌리, 버는 힘과 주주를 가르는 지배구조</h2>
+<p>할인은 오래됐다. 자본시장연구원은 2025년 9월 보고서에서 2006~2024년 한국 증시 평균 PBR을 1.2배로 셌다. 선진국은 1.9배다. 같은 기간 주식시장 할인율은 한국 11.5%, 선진국 8.9%였다.</p>
+<p>같은 연구원의 2023년 보고서는 2012~2021년 한국 상장사 주주환원율이 45개국 가운데 하위권이라고 분석했다. 할인을 가장 많이 설명한 것은 낮은 주주환원이었고, 수익성과 성장성 같은 재무 특성이 거의 같은 무게였다. 보고서는 취약한 지배구조도 원인으로 꼽았다.</p>
+<p>한국은행은 2025년 3월 BOK 이슈노트에서 까닭을 짚었다. 지배구조와 규제가 주주 이익을 지키는 정도가 약하고, 유동주식 비중이 미국·영국보다 낮다는 것이다. 주주 보호가 약한 기업일수록 주주환원이 기업가치를 끌어올리는 힘이 컸다.</p>
+<p>배당은 이제 미국과 일본만큼 준다. 그래도 값이 따라오지 않는다면 남은 숙제는 버는 힘과 지배구조다. 회사 돈의 쓰임을 정하는 자리에 소액주주는 없었다.</p>
+<p>2025년 7월 22일 공포된 개정 상법이 이사의 충실의무 대상을 회사에서 회사와 주주로 넓힌 까닭이 여기 있다. 그 뒤를 이은 세 번째 개정이 자사주 소각 의무다.</p>
+<h2>상위 1%에 몰린 배당 몫</h2>
+<p>경제밥상은 몫을 묻는다. 늘어난 배당은 누구 밥상에 오르나. 차규근 국회의원은 2025년 7월 17일 국회 기자회견에서 2023년 귀속 주식 배당소득의 45.9%를 상위 0.1%가 받았다고 밝혔다.</p>
+<p>참여연대 조세재정개혁센터가 2025년 11월 17일 낸 기자회견문을 보면 상위 1%로 넓힐 때 67.5%다. 배당 열 가운데 일곱 가까이가 1%의 몫이다.</p>
+<p>배당세도 바뀌었다. 국회는 2025년 12월 2일 본회의에서 고배당기업 배당소득을 종합소득과 떼어 따로 과세하는 특례를 의결했다. 세율은 2000만원 이하 14%, 3억원 이하 20%, 50억원 이하 25%, 50억원 초과 30%다.</p>
+<p>종합과세 최고세율은 45%다. 배당을 많이 받는 사람일수록 줄어드는 세금도 크다.</p>
+<p>배당을 늘리라는 정책과 배당에 세금을 덜 매기는 정책이 한꺼번에 왔다. 두 정책이 만나는 자리에 상위 1%의 숟가락이 놓여 있다.</p>
+<h2>투자와 일하는 사람 몫까지 차린 밥상</h2>
+<p>한국은행 이슈노트는 경고도 달았다. 주주환원 확대가 생산적 투자를 위축시키지 않도록 해야 한다는 것이다. 빠르게 크는 산업에서는 투자로 수익성과 성장성을 높이는 편이 기업가치에 더 낫다고 했다.</p>
+<p>설비투자 같은 자본적 지출은 주주 보호 수준과 상관없이 기업가치를 높였다. 밥상의 크기를 키우는 것은 배당이 아니라 투자라는 뜻이다.</p>
+<p>주주환원은 옳은 방향이다. 지배주주와 소액주주가 같은 값을 받는 시장은 공정하다. 다만 밥상을 주주끼리만 나눌 일은 아니다.</p>
+<p>배당세 혜택은 연금과 장기투자 계좌의 개미에게 먼저 가야 한다. 이익의 한 몫은 설비와 그 설비를 돌리는 사람의 임금으로 돌아가야 한다.</p>
+<p>코스피 할인을 푸는 열쇠는 배당 총액이 아니다. 열매가 고루 돌아간다는 믿음이다. 그래야 지배주주와 소액주주, 일하는 사람이 같은 밥상에 앉는다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>한국거래소, 『2026 한국거래소 기업가치 제고 프로그램 백서』, 2026.5. <a href="https://kind.krx.co.kr/external/dst/valueupReference/11780/2026%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%B0%EC%97%85%EA%B0%80%EC%B9%98%20%EC%A0%9C%EA%B3%A0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EB%B0%B1%EC%84%9C.pdf" target="_blank" rel="noopener">https://kind.krx.co.kr/external/dst/valueupReference/11780/2026%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%B0%EC%97%85%EA%B0%80%EC%B9%98%20%EC%A0%9C%EA%B3%A0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EB%B0%B1%EC%84%9C.pdf</a></li>
+<li>김선임·손달호, 「주주환원 정책이 기업가치에 미치는 영향」, BOK 이슈노트 제2025-5호, 한국은행, 2025.3.17. <a href="https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=10090322&amp;menuNo=200433" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=10090322&amp;menuNo=200433</a></li>
+<li>자본시장연구원, 「주식시장 할인율 국제 비교와 코리아 프리미엄 과제」, 이슈보고서 25-14, 2025.9. <a href="https://www.kcmi.re.kr/report/report_view?report_no=2170" target="_blank" rel="noopener">https://www.kcmi.re.kr/report/report_view?report_no=2170</a></li>
+<li>김준석·강소현, 「코리아 디스카운트 원인 분석」, 자본시장연구원 이슈보고서 23-05, 2023.2. <a href="https://www.kcmi.re.kr/report/report_view?report_no=1522" target="_blank" rel="noopener">https://www.kcmi.re.kr/report/report_view?report_no=1522</a></li>
+<li>국회예산정책처, 「2025년 개정세법 심의 결과 및 주요 내용」, 나보포커스 제129호, 2025.12.4. <a href="https://www.nabo.go.kr/board/file/down.do?fid=33318969" target="_blank" rel="noopener">https://www.nabo.go.kr/board/file/down.do?fid=33318969</a></li>
+<li>국가법령정보센터, 상법 제·개정이유(법률 제21448호 2026.3.6. 공포·시행, 법률 제20991호 2025.7.22. 공포). <a href="https://www.law.go.kr/LSW/lsRvsRsnListP.do?lsId=001702&amp;chrClsCd=010202&amp;lsRvsGubun=all" target="_blank" rel="noopener">https://www.law.go.kr/LSW/lsRvsRsnListP.do?lsId=001702&amp;chrClsCd=010202&amp;lsRvsGubun=all</a></li>
+<li>금융위원회, 「3차 상법 개정 취지에 맞추어 자기주식 보유·처분 공시도 강화됩니다」 보도자료, 2026.3.30. <a href="https://www.fsc.go.kr/no010101/86581" target="_blank" rel="noopener">https://www.fsc.go.kr/no010101/86581</a></li>
+<li>민주사회를 위한 변호사모임 등, 「야4당·노동시민사회, 배당소득 분리과세 법안 철회 촉구 기자회견」 공동보도자료, 2025.7.17. <a href="https://www.minbyun.or.kr/?p=64465" target="_blank" rel="noopener">https://www.minbyun.or.kr/?p=64465</a></li>
+<li>참여연대 조세재정개혁센터, 「국회는 상위 0.1%를 위한 「배당소득 분리과세」 도입 중단하라!」 기자회견문, 2025.11.17. <a href="https://peoplepower21.org/tax/2004490" target="_blank" rel="noopener">https://peoplepower21.org/tax/2004490</a></li>
+</ul><h4>[사진 출처]</h4><ul>
+<li>사진 「자본시장의 발전을 위한 한국 스튜어드십 코드 개정 공청회 개최」(2026.6.9), 금융위원회 사진뉴스. 금융위원회 저작물(저작권법 제24조의2 자유이용, 출처 금융위원회). <a href="https://www.fsc.go.kr/no010106/87065" target="_blank" rel="noopener">https://www.fsc.go.kr/no010106/87065</a></li>
+</ul></div>
+</div>
+ <div class="af">
+<h3>관련기사</h3><ul class="rel"><li><a href="pbap01.html">[정치밥상] 분열주의자들이 차린 밥상, 누구 몫이 올라가나</a></li><li><a href="hdb01.html">[가계부채] 다시 늘어난 빚 6조4000억원과 0.61%포인트 오른 대출 이자</a></li><li><a href="insb02.html">인천 경영안정자금 보증 3년 7849억원, 생산유발 1조4930억원 추정</a></li><li><a href="fis02.html">[재정 브리핑②] 국세 8월까지 69조원 더 걷혀, 내년 예산은 법인세 216조원에 기대</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 편집국장</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#경제밥상</span><span>#주주환원</span><span>#배당</span><span>#코스피</span><span>#코리아디스카운트</span><span>#자사주소각</span><span>#상법개정</span><span>#배당소득분리과세</span><span>#지배구조</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
