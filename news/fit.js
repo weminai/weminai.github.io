@@ -208,7 +208,7 @@
 ;(function(){ try{ /* 2026-11-09 소장님 「하세요」 — 로그인 다시 엶(가입 신청서·내 정보·탈퇴) */ if(document.getElementById('wemin-login-js')) return; var s=document.createElement('script'); s.id='wemin-login-js'; s.src='/news/login.js?v=261109d'; s.async=true; (document.head||document.documentElement).appendChild(s); }catch(e){} })();
 
 /* 2026-11-09 바닥글 「이용약관 · 개인정보 처리방침」 — 이용약관(news/terms.html)을 개인정보 처리방침 앞에 넣는다. 기사 쪽마다 고치지 않고 여기서 넣는다(소장님 「바로 그 메뉴에 알리면 될 것을」) */
-;(function(){ function add(){ if(document.querySelector('.nff a[href="/news/terms.html"]')) return; var p=document.querySelector('.nff a[href="/news/privacy.html"]'); if(!p) return; var a=document.createElement('a'); a.href='/news/terms.html'; a.textContent='이용약관'; p.parentNode.insertBefore(a,p); }
+;(function(){ function add(){ return; /* 2026-11-18 밤 소장님 기사면·1면 하단 두 화면을 보이며 「이게 바른 것이고」 「이게 잘못된 것이다」 — 하단에 이용약관을 끼워 넣지 않는다. 1면 하단과 같은 꼴(…정정·반론 · 제보하기 · 후원하기 · 개인정보 처리방침). 11-09 넣기를 거둠 */ if(document.querySelector('.nff a[href="/news/terms.html"]')) return; var p=document.querySelector('.nff a[href="/news/privacy.html"]'); if(!p) return; var a=document.createElement('a'); a.href='/news/terms.html'; a.textContent='이용약관'; p.parentNode.insertBefore(a,p); }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',add); else add(); })();
 
 /* 2026-11-09 소장님 「가운데 정렬하세요 이게 뭡니까?」 「모바일 버전은」 「여기도 가운데 정렬하고」 「맨 하단의 글은 불필요하다」
