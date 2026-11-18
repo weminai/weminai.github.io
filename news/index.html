@@ -225,20 +225,23 @@ fetch('/data/posts.json',{cache:'no-cache'}).then(function(r){return r.json();})
   var slots=[];
   cand.forEach(function(p){
     var s=secOf(p); var same=slots.filter(function(x){ return secOf(x)===s; });
-    if(slots.length<5){ if(same.length){ if(tm(p)-tm(same[0])>=3*36e5){ slots.splice(slots.indexOf(same[0]),1); slots.push(p);} } else slots.push(p); return; }
+    /* 2026-11-18 밤 소장님 「최신기사가 상단에 있어야 하는 거 아닙니까」 「스스로 기준을 정하라」 「승인」 — 같은 섹션은 새 글이 옛 글을 곧바로 갈음한다(3시간 기다리지 않음). 다른 섹션 사이 3시간 규칙은 그대로 */
+    if(same.length){ if(tm(p)>tm(same[0])){ slots.splice(slots.indexOf(same[0]),1); slots.push(p);} return; }
+    if(slots.length<5){ slots.push(p); return; }
     var old=slots.slice().sort(function(a,b){ return tm(a)-tm(b); })[0];
-    if(tm(p)-tm(old)>=3*36e5){ var rep=same.length?same[0]:old; if(same.length && tm(p)-tm(rep)<3*36e5) return; slots.splice(slots.indexOf(rep),1); slots.push(p); }
+    if(tm(p)-tm(old)>=3*36e5){ slots.splice(slots.indexOf(old),1); slots.push(p); }
   });
   /* 2026-11-14 — 자리가 비면 24시간 안 「발표」 글로 채운다(아직 안 쓴 섹션 먼저). 옛 글은 그래도 빌 때만 */
   var hlOk=function(p){ return slots.length<5 && slots.indexOf(p)<0 && pic(p) && secOf(p)!=="오피니언" && p["섹션"]!=="기획연재" && p["헤드라인"]!=="내림"; }, usedSec=function(p){ return slots.some(function(x){ return secOf(x)===secOf(p); }); };
   [function(p){ return rec(p) && !usedSec(p); }, function(p){ return rec(p); }, function(p){ return !usedSec(p); }, function(){ return true; }].forEach(function(f){ list.forEach(function(p){ if(hlOk(p) && f(p)) slots.push(p); }); });
-  list.filter(function(p){ return top(p); }).forEach(function(p){ if(slots.indexOf(p)<0){ slots.sort(function(a,b){ return tm(a)-tm(b); }); slots.shift(); slots.push(p);} });
+  list.filter(function(p){ return top(p); }).forEach(function(p){ if(slots.indexOf(p)<0 && NEWT-tm(p)<3*36e5){ /* 2026-11-18 밤 — 3시간 넘은 「맨위」 글은 헤드라인에 억지로 넣지 않는다 */ slots.sort(function(a,b){ return tm(a)-tm(b); }); slots.shift(); slots.push(p);} });
   // 헤드라인 가운데 하나는 반드시 인천경제(2026-11-01 소장님 「헤드라인 중 1개는 반드시 인천경제 기사가 들어가게 하라」)
   if(!slots.some(function(p){ return secOf(p)==="인천경제"; })){ var ic=list.filter(function(p){ return secOf(p)==="인천경제" && pic(p); })[0]||list.filter(function(p){ return secOf(p)==="인천경제"; })[0];
     if(ic){ slots.sort(function(a,b){ return tm(a)-tm(b); }); if(slots.length>=5) slots.shift(); slots.push(ic); } }
   slots.sort(function(a,b){ return (tm(b)-tm(a)) || (pr(a)-pr(b)); });
   // 톱은 편집국 판단 — posts.json 「맨위」 글을 톱 자리(가장 큰 헤드라인)에 세운다(2026-11-03 소장님 「이 뉴스를 탑 헤드라인으로」 「뉴스 가치를 판단하는 안목을 키우라」)
-  var topP=slots.filter(top)[0]; if(topP){ slots.splice(slots.indexOf(topP),1); slots.unshift(topP); }
+  /* 2026-11-18 밤 소장님 「최신기사가 상단에 있어야 하는 거 아닙니까」 「승인」 — 「맨위」 글도 헤드라인 가장 새 글보다 3시간 넘게 오래되면 톱에서 내린다. 그때는 가장 새 글이 톱이다 */
+  var topP=slots.filter(top)[0]; if(topP && tm(slots[0])-tm(topP)<3*36e5){ slots.splice(slots.indexOf(topP),1); slots.unshift(topP); }
   slots.forEach(use);
   var t=slots[0];
   document.getElementById('lead').innerHTML='<a href="'+href(t["파일"])+'">'+img(t)+K2(t)+'<h2>'+(t["톱제목"]?esc(t["톱제목"]):ttl(t))+'</h2></a>'+   /* 2026-11-08 소장님 「헤드라인 톱기사의 제목은 무조건 한 줄이다」 「간결하고 임팩트 있게」 「편집지침」 — posts.json 「톱제목」이 있으면 1면 톱에는 그것을 쓴다(기사 제목은 그대로) */
