@@ -227,3 +227,6 @@ add('meta',{name:'apple-mobile-web-app-title',content:'AI경제저널'});
 window.addEventListener('beforeinstallprompt',function(e){ e.preventDefault(); window.__wmInstall=e; });
 window.addEventListener('appinstalled',function(){ window.__wmInstall=null; });
 }catch(e){} })();
+
+/* kick-link 2026-11-22 소장님 「기사 쉽 위 파란 섬션 라벨을 누르면 그 섬션이 다 보여야 한다」 — 기사 쪽 라벨(.kick)을 섬션 쪽(s.html)으로 잇는다 */
+(function(){ function g(){ var k=document.querySelector('.art .kick'); if(!k||k.querySelector('a')) return; var t=(k.textContent||'').trim(); if(!t) return; var a=document.createElement('a'); a.href='/news/s.html?k='+encodeURIComponent(t); a.textContent=t; a.style.cssText='color:inherit;text-decoration:none'; k.textContent=''; k.appendChild(a); } if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',g); else g(); })();
