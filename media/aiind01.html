@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[AI 융복합 산업 사례①] 슈나이더 우한 공장, AI 들이고 기술자 이직률 48%에서 6%로 · AI경제저널</title>
+<meta name="description" content="자동화 55% 늘자 일손 부족, AI 맞춤 교육과 생성형 AI 수리 안내">
+<link rel="canonical" href="https://weminai.com/media/aiind01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[AI 융복합 산업 사례①] 슈나이더 우한 공장, AI 들이고 기술자 이직률 48%에서 6%로">
+<meta property="og:description" content="자동화 55% 늘자 일손 부족, AI 맞춤 교육과 생성형 AI 수리 안내">
+<meta property="og:url" content="https://news.weminai.com/media/aiind01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/aiind01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">AI</div>
+ <h1>[AI 융복합 산업 사례①] 슈나이더 우한 공장, AI 들이고 기술자 이직률 48%에서 6%로</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.22</span><span class="dt">업데이트 2026.11.22 01:07</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>자동화 55% 늘자 일손 부족, AI 맞춤 교육과 생성형 AI 수리 안내</p><p>신입 적응 75일에서 15일로, 한국노동연구원은 생산직 AI 교육 부족 진단</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 중국 우한 슈나이더 일렉트릭 공장이 인공지능(AI)을 들여 기술자 이직률을 48%에서 6%로 낮췄다고 회사가 밝혔다(2026년 1월 발표). 세계경제포럼(WEF)은 2026년 1월 15일 이 공장을 등대공장 인재 부문에 올렸다.</p>
+<p>등대공장은 세계경제포럼이 컨설팅 회사 맥킨지와 함께 만든 모범 공장 모임이다. 이번에 23곳이 새로 뽑혔다. 세계경제포럼은 고객 중심, 생산성, 공급망 회복력, 지속가능성, 인재 다섯 부문으로 나눠 뛰어난 점을 가렸다. 슈나이더 일렉트릭 코리아는 인재 부문이 이번에 새로 생겼다고 밝혔다.</p>
+<p>슈나이더 일렉트릭(Schneider Electric)은 전기화·자동화·디지털화 기술을 파는 에너지 기술 기업이다. 100여 개국에 직원 16만 명을 둔다(2026년 1월 기준). 회사는 이번 선정으로 등대공장이 9곳이 됐다고 밝혔다(2026년 1월 기준). 이 가운데 5곳은 지속가능성 부문이다.</p>
+<h2>자동화가 부른 일손 부족</h2>
+<p>우한 공장은 자동화 수준을 55% 끌어올리고 제품 가짓수를 239% 늘렸다(2026년 1월 발표). 세계경제포럼은 이 변화가 큰 인력 문제를 낳았다고 적었다.</p>
+<p>처음에는 직원 가운데 자동화 기술을 갖춘 사람이 20%뿐이었다. 신입 직원이 일을 익히는 데 75일이 걸렸다. 기술자 이직률은 48%에 이르렀다.</p>
+<p>공장은 세 갈래로 대응했다. 첫째는 사람을 길러 내는 통로다. 직업학교 11곳과 손잡고 디지털 견습 과정과 AI 실습실, 장학금을 마련했다. 회사는 이를 미래 기술 인력이 끊이지 않고 들어오는 길이라고 설명했다.</p>
+<h2>AI가 짜는 맞춤 교육</h2>
+<p>둘째는 AI 역량 관리다. 스스로 판단해 일을 처리하는 AI가 직원마다 모자란 기술을 찾아 기록한다. 그리고 그 사람에게 맞는 교육을 골라 배정한다.</p>
+<p>익힌 기술 수준에 따라 보상을 주는 제도도 이 AI가 맡는다. 회사는 직원 업무 역량 수준이 20%에서 76%로 올랐다고 밝혔다.</p>
+<p>세계경제포럼은 세 갈래 대응을 묶은 성과로 직원 56%가 새 기술 교육을 받았다고 적었다(2026년 1월 발표). 신입 직원이 일을 익히는 기간도 75일에서 15일로 줄었다.</p>
+<h2>생성형 AI 정비 도우미</h2>
+<p>셋째는 사람 말을 알아듣고 글로 답하는 생성형 AI를 쓴 정비 도우미다. 기술자에게 수리 방법을 안내하고 조언하는 멘토 노릇을 한다.</p>
+<p>회사는 이 도우미로 수리 시간을 줄였다고 밝혔다. 얼마나 줄었는지는 발표 자료에 없다.</p>
+<p>되풀이하는 작업도 AI에 맡겼다. 회사는 엔지니어가 더 값진 일에 시간을 쓰게 됐다고 설명했다. 회사 발표로 신제품을 내놓는 데 걸리는 기간은 36개월에서 12개월로 줄었다.</p>
+<p>일감을 고루 나눠 초과근무를 줄였고 배송 성과도 나아졌다고 회사는 밝혔다. 초과근무가 얼마나 줄었는지는 공개하지 않았다.</p>
+<h2>이직률 48%에서 6%로</h2>
+<p>회사는 생성형 AI 정비 도우미를 소개하며 기술자 이직률이 48%에서 6%로 떨어졌다고 밝혔다. 세계경제포럼은 세 갈래 대응을 묶은 성과로 5년에 걸쳐 기술자 이직률을 42% 줄였다고 적었다. 회사 수치로 따지면 42%포인트 차이다.</p>
+<p>무라드 타무드(Mourad Tamoud) 슈나이더 일렉트릭 최고공급망책임자는 우한 공장 사례를 들었다. AI와 사람이 힘을 합칠 때 기업이 더 탄력 있는 인력을 키울 수 있음을 증명했다고 했다.</p>
+<p>키바 올굿(Kiva Allgood) 세계경제포럼 매니징 디렉터는 올해 선정 공장들을 두고 오늘날 경쟁력이 효율만으로 정해지지 않는다고 말했다. 빠르게 알아채고 적응해 대응하는 능력을 함께 꼽았다.</p>
+<p>같은 인재 부문에는 AUO 쑤저우 공장도 올랐다. 직원이 1만 명 가까이 되는 이 공장은 AI 면접과 디지털 교육, 근무표 자동 편성을 들였다. 세계경제포럼은 이 공장 이직이 70% 가까이 줄고 생산은 29% 늘었다고 적었다(2026년 1월 발표).</p>
+<p>이 수치는 회사와 세계경제포럼이 발표했다. 슈나이더 일렉트릭은 등대공장 네트워크 자문위원회 회원사다. 우한 공장 전체 직원 수와 교육에 든 비용은 발표 자료에 없다. 이 공장이 무엇을 만드는지도 두 기관 발표 자료에 적혀 있지 않다.</p>
+<h2>한국 제조 현장과 교육</h2>
+<p>산업통상부는 2026년 11월 3일 서울 한국프레스센터에서 「AI 팩토리 확산전략」을 내놓았다. 그동안 국내 245개 기업 공장 AI 전환을 지원했다고 이날 밝혔다.</p>
+<figure><img src="img/aiind01_01.jpg" alt="김정관 산업통상부 장관이 2026년 11월 3일 AI 팩토리 전략회의에서 인사말을 하고 있다(산업통상부)" loading="lazy"><figcaption>김정관 산업통상부 장관이 2026년 11월 3일 AI 팩토리 전략회의에서 인사말을 하고 있다(산업통상부)</figcaption></figure>
+<p>같은 날 산업통상부 집계로 38개 우수사례에서 생산성은 30.1% 오르고 불량률은 15.5% 내렸다. 2027년 정부안에는 「지역산단 기반 M.AX 아카데미 구축」 예산 47억2000만원이 들어 있다. 2027~2030년 사업이다.</p>
+<p>한국노동연구원은 2026년 1월 30일 정책연구 보고서 「AI기반 제조업 혁신과 고용」을 냈다. 생산직 노동자 대상 디지털·AI 교육이 매우 부족하고 업종 사이 격차도 크다고 분석했다.</p>
+<p>이 진단은 매출 200대 제조기업 가운데 공정에 AI를 쓰는 사업장 102곳 설문과 7개 회사 면접에서 나왔다(2025년 11~12월).</p>
+<p>보고서는 AI가 대신하는 과업을 약 10%로 추정했다. 인력이 줄어든 경우에도 많은 기업이 해고 대신 부서 전환으로 고용을 지키고, 신규 채용을 줄이는 방식으로 대응한다고 분석했다.</p>
+<p>연구진은 고용보험 자료로 AI 도입 기업과 미도입 기업 고용을 견줬다. AI 도입 기업 고용이 더 빨리 늘었지만, 이를 AI 효과로 단정할 수 없다고 한계를 밝혔다.</p>
+<figure><img src="img/aiind01_02.jpg" alt="AI 팩토리 전략회의에 산학연 관계자와 AI 전문가 200여 명이 참석했다(산업통상부)" loading="lazy"><figcaption>AI 팩토리 전략회의에 산학연 관계자와 AI 전문가 200여 명이 참석했다(산업통상부)</figcaption></figure>
+<p>보고서는 AI·스마트공장·디지털 전환 지원 사업에 참여하는 기업이 전환훈련 계획과 전환배치 계획을 의무로 내게 하는 방안을 제안했다. 산업통상부는 M.AX 아카데미로 재직자 현장 AI 전환 역량을 키우고 청년 제조 AI 인력도 기르겠다고 밝혔다.</p>
+<p>세계경제포럼은 2026년 6월 22일 새 등대공장 상 16개를 발표했다. 이 가운데 슈나이더 일렉트릭 공장은 미국 엘패소와 중국 베이징 두 곳이다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>노세리·장지연·조성재, 『AI기반 제조업 혁신과 고용』(정책연구 2025-16), 한국노동연구원, 2026년 1월 30일, <a href="https://repository.kli.re.kr/handle/2021.oak/12049" target="_blank" rel="noopener">https://repository.kli.re.kr/handle/2021.oak/12049</a></li><li>세계경제포럼(World Economic Forum), &quot;Global Lighthouse Network Recognizes 23 New Sites, Launches AI Platform for Industrial Transformation&quot;, 2026년 1월 15일, <a href="https://www.weforum.org/media/global-lighthouse-network-recognizes-23-new-sites-launches-ai-platform-for-industrial-transformation" target="_blank" rel="noopener">https://www.weforum.org/media/global-lighthouse-network-recognizes-23-new-sites-launches-ai-platform-for-industrial-transformation</a></li><li>세계경제포럼(World Economic Forum), &quot;New Global Lighthouse Sites Demonstrate How AI Is Rewiring Manufacturing and Supply Chains&quot;, 2026년 6월 22일, <a href="https://www.weforum.org/press/2026/06/new-global-lighthouse-sites-demonstrate-how-ai-is-rewiring-manufacturing-and-supply-chains/" target="_blank" rel="noopener">https://www.weforum.org/press/2026/06/new-global-lighthouse-sites-demonstrate-how-ai-is-rewiring-manufacturing-and-supply-chains/</a></li><li>산업통상부 산업인공지능정책과, &quot;대한민국 제조업 판 바꾼다... 산업부, 제조AI 4단계 확산전략 가동&quot;, 2026년 11월 3일, <a href="https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172373/view" target="_blank" rel="noopener">https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172373/view</a></li><li>슈나이더 일렉트릭 코리아, &quot;슈나이더 일렉트릭 중국 우한 공장, 세계경제포럼 &#x27;인재혁신 등대공장&#x27; 3곳 중 하나로 선정&quot;(뉴스와이어 배포), 2026년 1월 27일, <a href="https://www.newswire.co.kr/newsRead.php?no=1027621" target="_blank" rel="noopener">https://www.newswire.co.kr/newsRead.php?no=1027621</a></li></ul><h4>[사진 출처]</h4><ul><li>사진1·2 산업통상부, &quot;AI 팩토리 전략회의 개최&quot;(포토뉴스), 2026년 11월 3일, <a href="https://www.motir.go.kr/kor/article/ATCLb41cda0c5/29331/view" target="_blank" rel="noopener">https://www.motir.go.kr/kor/article/ATCLb41cda0c5/29331/view</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="ailab01.html">[AI 노동시장①] AI 노출 업종에서 좁아진 청년 첫 일자리</a></li><li><a href="un03.html">UN AI 허브, 인천 제조업 25만에 &#x27;국제 노동기준&#x27; 연다</a></li><li><a href="k5k02.html">[코스피 5000의 이면②] 아틀라스는 2028년 공장에 들어온다, 로봇은 소비하지 않는다</a></li><li><a href="trade01.html">수출 1209억달러 역대 최대, 제조업 고용보험 가입자는 외국인 빼면 4000명 줄어</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#AI융복합산업사례</span><span>#제조업AI</span><span>#슈나이더일렉트릭</span><span>#등대공장</span><span>#세계경제포럼</span><span>#생성형AI</span><span>#이직률</span><span>#AI팩토리</span><span>#한국노동연구원</span><span>#노동전환</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>

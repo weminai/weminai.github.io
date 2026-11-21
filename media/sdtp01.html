@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[부영 송도테마파크] 부영 새 제안 거절한 인천시, 종전 인가대로 추진 · AI경제저널</title>
+<meta name="description" content="시의원 제안, 5블록 순환이주 연계">
+<link rel="canonical" href="https://weminai.com/media/sdtp01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[부영 송도테마파크] 부영 새 제안 거절한 인천시, 종전 인가대로 추진">
+<meta property="og:description" content="시의원 제안, 5블록 순환이주 연계">
+<meta property="og:url" content="https://news.weminai.com/media/sdtp01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/sdtp01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">도시·부동산</div>
+ <h1>[부영 송도테마파크] 부영 새 제안 거절한 인천시, 종전 인가대로 추진</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.22</span><span class="dt">업데이트 2026.11.22 01:07</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>시의원 제안, 5블록 순환이주 연계</p><p>연수구 정화명령 4차, 기한 2027년 3월</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 2026년 11월 10일 인천시의회 도시건설위원회가 도시계획국 행정사무감사를 열었다. 이날 송도유원지 부영 부지 문제가 다뤄졌다. 이원주 인천시 도시계획국장은 ㈜부영주택이 낸 새 사업 제안에 응할 계획이 없다고 답했다.</p>
+<p>이 국장은 부영이 최근 종전 협상안보다 사업성을 높인 계획을 냈다고 설명했다. 협상이 최종 결렬됐다고 부영에 알렸고, 종전 실시계획 인가대로 사업을 추진하라고 통보했다고 밝혔다.</p>
+<p>부영주택은 2015년 옛 대우자동차판매 부지를 사들였다. 송도유원지 5블록에서 도시개발사업을, 6블록에서 테마파크사업을 추진해 왔다. 부영주택은 2018년 테마파크 부지 토양 정화명령을 처음 받았다.</p>
+<figure><img src="img/sdtp01_01.jpg" alt="2026년 11월 10일 인천시의회 도시건설위원회 도시계획국 행정사무감사에서 김우성 의원이 송도유원지 현황도를 들고 질의하고 있다(출처 인천시의회, 공공누리 제1유형)" loading="lazy"><figcaption>2026년 11월 10일 인천시의회 도시건설위원회 도시계획국 행정사무감사에서 김우성 의원이 송도유원지 현황도를 들고 질의하고 있다(출처 인천시의회, 공공누리 제1유형)</figcaption></figure>
+<h2>부영 부지 해법과 순환이주안</h2>
+<p>김우성 시의원(더불어민주당, 연수구2)은 이날 송도유원지 르네상스 사업 추진 현황을 점검했다. 김 의원은 부영 부지가 송도유원지 전체 부지 약 42%를 차지한다고 주장했다.</p>
+<p>김 의원은 부영 부지와 협의가 없으면 르네상스 계획은 반쪽에 그친다고 말했다. 부영 부지를 뺀 채 발표한 마스터플랜은 핵심이 빠진 계획이라고 지적했다.</p>
+<p>김 의원은 5블록 도시개발사업 부지를 연수·선학지구 노후계획도시 정비와 잇자고 제안했다. 정비 기간 집을 비우는 주민이 머물 순환이주 주택으로 쓰자는 안이다. 시나 인천도시공사가 주택 일부를 확보하겠다고 확약하는 방식이다.</p>
+<p>김 의원은 연수구에 정비로 집을 비울 5500가구가 들어갈 임대주택이 필요하다고 했다. 공공 이주 수요와 이으면 부영은 사업성을, 인천시는 이주대책을 얻을 수 있다고 설명했다.</p>
+<p>토양정화는 사업성과 별개로 반드시 해야 할 의무라고 김 의원은 말했다. 민선 9기 인천시가 전담조직(TF)까지 꾸린 만큼 실행으로 성과를 증명하라고 요구했다.</p>
+<h2>사업 분리안과 협상 종료</h2>
+<p>인천시는 2024년 5월 부영에 사업 분리안을 냈다. 현 테마파크 부지에서 사전협상제도로 도시개발사업을 하는 안이다. 사전협상에 따른 공공기여로 현 도시개발 부지는 시에 내놓는다. 시는 그 땅을 복합문화관광 중심지로 만들 계획이었다.</p>
+<p>인천시는 같은 해 12월 19일 &#x27;송도유원지 르네상스&#x27; 마스터플랜을 발표했다. 송도유원지 일원 80만 평을 8개 블록으로 나눠 개발하는 계획이다.</p>
+<p>부영은 인천시 공공기여 요구가 과도하다고 주장하며 분리안을 받아들이지 않았다. 인천시는 2025년 10월 2일 부영에 협상 종료를 공식 통보했다.</p>
+<p>인천시는 같은 달 30일 부영이 추진하는 2개 블록 약 30만 평은 기존 인가 계획대로 진행한다고 밝혔다. 나머지 6개 블록 약 50만 평은 르네상스 종합계획에 따라 추진한다.</p>
+<h2>세 차례 명령 불이행과 대법원 벌금</h2>
+<p>2018년 토양정밀조사 결과 테마파크 부지에서 석유계총탄화수소와 벤젠, 납, 비소, 아연, 불소 6개 항목이 토양오염우려기준을 넘었다. 오염 면적은 테마파크 부지 77%인 38만6449㎡다.</p>
+<p>연수구는 2018년 12월 24일 1차 정화조치명령을 내렸다. 정화 기한은 2020년 12월 23일이었다. 부영주택이 이행하지 않자 구는 토양환경보전법 위반 혐의로 고발했다.</p>
+<p>1심 재판부는 법인과 대표자에게 각각 벌금 1000만원을 선고했다. 부영은 불복했다. 연수구는 대법원이 2024년 10월 25일 이 벌금형을 확정했다고 밝혔다.</p>
+<p>부영은 2차 명령(2021년 1월 5일~2023년 1월 4일)도 이행하지 않았다. 연수구는 2023년 1월 다시 고발했다. 연수구는 2025년 1월 이 사건이 1차 사건 항소심을 이유로 기소중지된 상태라고 밝혔다.</p>
+<p>부영은 3차 명령(2023년 1월 5일~2025년 1월 6일)도 이행하지 않았다. 기한 직전인 2024년 12월 30일 기한 연장을 요청했다. 연수구는 받아들이지 않고 2025년 1월 15일 다시 고발했다.</p>
+<h2>불소 기준 완화와 4차 명령</h2>
+<p>부영은 불소 기준을 완화한 토양환경보전법 시행규칙 개정을 연장 근거로 들었다. 연수구는 2025년 3월 12일 4차 명령을 내리면서 2024년 12월 12일 개정된 불소 기준을 적용했다.</p>
+<p>연수구는 기준 완화로 부영이 정화할 오염토양이 상당 부분 줄었다고 밝혔다. 구는 환경부 유권해석과 법률 자문, 환경정책자문단 의견 수렴을 거쳐 새 기준을 적용했다.</p>
+<p>연수구는 2026년 3월 4일 환경정책자문단 회의를 열었다. 전찬기 자문단장(인천대 명예교수)과 위원들은 부영 행태를 &#x27;기업의 사회적 책무를 저버린 시간 끌기&#x27;로 규정했다.</p>
+<p>연수구는 부영이 그때까지 정화계획서조차 내지 않았다고 밝혔다. 이재호 연수구청장은 인천시와 협력해 부영이 정화 의무를 이행할 때까지 모든 행정적 수단을 동원하겠다고 말했다.</p>
+<figure><img src="img/sdtp01_02.jpg" alt="2026년 3월 4일 인천 연수구청 영상회의실에서 송도테마파크 오염토양 정화를 촉구하는 연수구 환경정책자문단 회의가 열리고 있다(출처 연수구, 공공누리 제3유형)" loading="lazy"><figcaption>2026년 3월 4일 인천 연수구청 영상회의실에서 송도테마파크 오염토양 정화를 촉구하는 연수구 환경정책자문단 회의가 열리고 있다(출처 연수구, 공공누리 제3유형)</figcaption></figure>
+<h2>이행강제금 개정안 국회 계류</h2>
+<p>황상일 한국환경연구원 선임연구위원은 2023년 보고서에서 토양환경보전법 변천을 정리했다. 2004년 개정으로 시장·군수·구청장이 우려기준을 넘은 토양오염에 정화명령을 내리는 권한을 얻었다고 적었다.</p>
+<p>박찬대 당시 국회의원(현 인천시장) 등 10명은 2025년 4월 25일 토양환경보전법 일부개정법률안을 냈다. 정화조치를 이행하지 않은 정화책임자에게 이행강제금을 물릴 수 있게 하는 안이다.</p>
+<p>현행법은 정화조치 명령을 어기면 2년 이하 징역이나 2000만원 이하 벌금에 처한다. 개정안은 이 처벌이 정화 비용보다 현저히 낮아 벌금을 내고 정화를 피하는 사례가 있다고 제안 이유를 적었다.</p>
+<p>국회 환경노동위원회는 2025년 7월 18일 개정안을 상정해 소위원회에 넘겼다. 개정안은 2026년 11월 현재 소관 위원회 심사 단계다. 연수구는 2026년 3월 지난해 발의된 개정안 통과를 지원하겠다고 밝혔다.</p>
+<p>부영이 받은 4차 명령 정화 기한은 2027년 3월 11일이다. 이 기한까지 넉 달이 채 남지 않았다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>인천광역시의회 도시건설위원회, 「인천시의회 김우성 의원, 송도유원지 르네상스 마스터플랜 정상화 촉구」, 보도자료, 2026년 11월 10일, <a href="https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4330&amp;bgcd=council&amp;bcd=report" target="_blank" rel="noopener">https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4330&amp;bgcd=council&amp;bcd=report</a></li><li>인천광역시 도시계획과, 「인천시, 송도유원지 르네상스 사업 본격 추진으로 미래형 도시공간 재도약」, 보도자료, 2025년 10월 30일, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000013417166" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000013417166</a></li><li>인천광역시 도시계획과, 「인천시, 송도유원지 르네상스 마스터플랜 발표 …인천의 새로운 도시공간 혁신 시작」, 보도자료, 2024년 12월 19일, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000011441053" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000011441053</a></li><li>인천 연수구 환경보전과, 「7년째 묵묵부답 부영…연수구, 고강도 대응책 모색」, 보도자료, 2026년 3월 5일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=28750" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=28750</a></li><li>인천 연수구 환경보전과, 「연수구, ㈜부영주택에 오염토양 정화 조치 4차 명령」, 보도자료, 2025년 3월 14일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=27433" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=27433</a></li><li>인천 연수구 환경보전과, 「연수구, 오염 토양정화 미이행 &#x27;부영주택&#x27; 경찰에 고발」, 보도자료, 2025년 1월 7일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=27229" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=27229</a></li><li>인천 연수구 환경보전과, 「연수구, 2차 오염토양 정화명령&#x27; 불이행 ㈜부영주택 고발」, 보도자료, 2023년 1월 5일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=24512" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=24512</a></li><li>박찬대 의원 등 10인, 「토양환경보전법 일부개정법률안」 제2210138호, 2025년 4월 25일, 법제처 국민참여입법센터 국회입법현황, <a href="https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2210138/detailRP" target="_blank" rel="noopener">https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2210138/detailRP</a></li><li>「토양환경보전법 일부개정법률안(박찬대의원 등 10인)」 처리 결과 소관위심사, 열려라국회(참여연대) 의안 정보, 2026년 11월 21일 확인, <a href="https://watch.peoplepower21.org/BillDetail/2210138" target="_blank" rel="noopener">https://watch.peoplepower21.org/BillDetail/2210138</a></li><li>황상일, 「토양정책의 역사적 변동, 전망과 과제」, 한국환경연구원 Working Paper 2023-07, 2023년 12월 16일, <a href="https://library.kei.re.kr/pyxis-api/1/digital-files/51f75309-0fb6-4b39-a640-45f327605cc5" target="_blank" rel="noopener">https://library.kei.re.kr/pyxis-api/1/digital-files/51f75309-0fb6-4b39-a640-45f327605cc5</a></li><li>김갑봉, 「부영 송도테마파크 조성 대신 토지 &#x27;기부채납&#x27; 카드 왜 특혜인가」, 인천투데이, 2024년 12월 20일, <a href="https://www.incheontoday.com/news/articleView.html?idxno=259506" target="_blank" rel="noopener">https://www.incheontoday.com/news/articleView.html?idxno=259506</a></li></ul><h4>[사진 출처]</h4><ul><li>[사진1] 인천광역시의회, &quot;(사진)김우성_의원_의정활동_모습.jpg&quot;, 인천시의회 보도자료, 공공누리 제1유형, 2026년 11월 10일, <a href="https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4330&amp;bgcd=council&amp;bcd=report" target="_blank" rel="noopener">https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4330&amp;bgcd=council&amp;bcd=report</a></li><li>[사진2] 인천 연수구, 「7년째 묵묵부답 부영…연수구, 고강도 대응책 모색」 보도자료 게재 사진, 공공누리 제3유형(출처표시+변경금지), 2026년 3월 5일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=28750" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=28750</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="ifez02.html">인천경제청 &quot;송도 에디슨 박물관 빼지 않는다…C1블록 도서관과 함께 검토&quot;</a></li><li><a href="stram01.html">송도트램 사업비 68% 불어난 채…2027년 예타 재도전</a></li><li><a href="urb05.html">[도시계획·부동산] 인천 아홉 구를 같은 16주로 다시 셌다, 세입자 부담은 영종·계양·연수</a></li><li><a href="icrent04.html">인천 도시재생지원센터 운영방식 검토 7년</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#부영주택</span><span>#송도테마파크</span><span>#송도유원지르네상스</span><span>#인천시의회</span><span>#도시건설위원회</span><span>#김우성</span><span>#토양오염</span><span>#정화명령</span><span>#이행강제금</span><span>#순환이주</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
