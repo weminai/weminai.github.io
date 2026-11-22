@@ -84,3 +84,6 @@ Disallow: /
 # 3. 그 밖은 모두 받는다
 User-agent: *
 Allow: /
+
+# 4. 사이트맵 (2026-11-23 추가, 구글 서치 콘솔 등록)
+Sitemap: https://news.weminai.com/sitemap.xml
