@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[인천해양주권⑰] 두 곳으로 나눈 해사법원, 한 곳으로 묶는 항만공사 · AI경제저널</title>
+<meta name="description" content="항만공사 통합 용역 재공고, 27일 마감">
+<link rel="canonical" href="https://weminai.com/media/sov17.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[인천해양주권⑰] 두 곳으로 나눈 해사법원, 한 곳으로 묶는 항만공사">
+<meta property="og:description" content="항만공사 통합 용역 재공고, 27일 마감">
+<meta property="og:url" content="https://news.weminai.com/media/sov17.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/sov17_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">해양</div>
+ <h1>[인천해양주권⑰] 두 곳으로 나눈 해사법원, 한 곳으로 묶는 항만공사</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.25</span><span class="dt">업데이트 2026.11.25 22:51</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>항만공사 통합 용역 재공고, 27일 마감</p><p>해사법원은 인천·부산에 권역 나눠 설치</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 4개 항만 지역 시민사회단체와 항만공사 노동조합이 지난 24일 국회 소통관에서 기자회견을 열었다. 부산·인천·울산·여수광양에서 모인 단체들은 통합을 전제로 한 연구용역을 즉각 중단하라고 요구했다. 인천경실련이 낸 공동 보도자료 내용이다.</p>
+<figure><img src="img/sov17_01.jpg" alt="4개 항만 지역 시민사회단체와 항만공사 노동조합이 지난 24일 국회 소통관에서 항만공사 통합 연구용역 철회를 요구하는 기자회견을 열고 있다." loading="lazy"><figcaption>4개 항만 지역 시민사회단체와 항만공사 노동조합이 지난 24일 국회 소통관에서 항만공사 통합 연구용역 철회를 요구하는 기자회견을 열고 있다.</figcaption></figure>
+<p>보도자료를 보면 해양수산부는 11월 5일 4억원 규모 긴급용역을 공고했다. 이 용역은 단독 입찰로 유찰됐다. 해수부는 16일 재공고(제2026-1490호)를 냈다. 입찰서는 27일 오전 10시까지 받는다.</p>
+<p>정부는 9월 3일 「공공기관 기능개혁 추진방안」에서 기능은 같으나 지역별로 흩어진 4개 항만공사를 하나로 통합해 국제 항만 경쟁력을 높인다고 밝혔다.</p>
+<p>이보다 앞선 2월 국회는 해사국제상사법원 설치 법안을 통과시켰다. 해사 사건과 국제상사 분쟁을 맡는 이 법원은 인천과 부산 두 곳에 선다.</p>
+<h2>4억원 용역, 8개월에 짜는 통합 설계</h2>
+<p>해수부와 항만공사 넷이 함께 낸 과업지시서를 보면 용역 기간은 계약일로부터 8개월이다. 예산은 4억원이다. 과업지시서는 9월 3일 4개 항만공사와 5개 자회사의 통합 방침이 결정됐다고 적었다.</p>
+<p>용역 과업에는 통합 유형 비교와 지사 직제(안), 자산·부채·공사채 승계가 들어 있다. 항만공사법 개정안 마련도 과업이다. 상위 통합기구의 법적 성격과 기존 항만공사의 권한 배분도 연구 대상이다.</p>
+<p>인천경실련 등은 이 과업에 통합 자체의 필요성과 타당성을 따지는 독립 과업이 없다고 지적했다. 단체들은 통합 외 대안을 포함한 독립적 타당성 검증을 요구했다.</p>
+<h2>자회사 다섯과 한국항만보안시설공단 한 곳</h2>
+<p>해수부는 11일 보도자료에서 4개 항만공사를 가칭 한국항만공사로, 자회사 다섯을 가칭 한국항만보안시설공단으로 통합한다고 밝혔다. 12일에는 별관 회의실에서 자회사 기관장과 노동조합·직원 대표를 만나는 간담회를 연다고 했다.</p>
+<p>다섯 가운데 인천항 몫은 인천항보안공사다. 자회사 통합 과업지시서는 통합기관의 적정 인력규모와 배치기준을 검토하게 했다. 경비·보안처럼 교대근무로 상시 운영하는 업무 특성을 반영하라는 조건이 붙었다. 임직원·노동조합 의견수렴과 노사관계 대응 방안도 과업이다.</p>
+<h2>2월 국회, 해사법원 인천·부산 두 곳</h2>
+<p>국회는 2월 12일 본회의에서 법원조직법과 각급 법원의 설치와 관할구역에 관한 법률 개정안을 통과시켰다. 인천시는 2028년 3월 개원이 목표라고 밝혔다.</p>
+<p>인천시는 인천 해사국제상사법원이 서울·경기·강원·충청 등 중부권을 관할한다고 설명했다. 당사자가 합의하면 다른 권역 사건도 인천에서 재판받을 수 있다.</p>
+<p>인천시에 따르면 유치 서명운동에는 111만명이 참여했다.</p>
+<p>인천시는 국내 선사의 64.2%와 국제물류업체의 약 80%가 수도권(경인경제권)에 몰려 있다고 밝혔다.</p>
+<h2>사건 수와 접근성을 견준 두 보고서</h2>
+<p>대법원 사법정책연구원은 2021년 「해사법원 설치에 관한 연구」(이재찬)를 냈다. 이 보고서는 해사법원을 두 곳에 설치하는 안을 가장 합리적인 안으로 제시했다. 해사사건의 수, 관할 집중의 필요성, 소송당사자의 접근성 등을 함께 고려했다.</p>
+<p>인천연구원 강동준 연구위원은 2023년 이슈브리프 「해사전문법원 인천 설립 당위성」을 냈다. 이슈브리프는 2022년 사법연감을 인용해 해사전담재판부를 둔 법원의 2021년 해사사건 처리 건수를 실었다.</p>
+<p>법원마다 해사·국제거래·상사·중재 등 집계 항목이 다르다. 서울고법 466건, 서울중앙지법 160건, 부산지법 82건, 부산고법 15건이다.</p>
+<p>인천지법은 같은 해 국제거래 11건과 상사 50건을 처리했지만 해사전담재판부가 없었다.</p>
+<p>이슈브리프는 하늘길 접근성도 견줬다. 2022년 10월 기준 인천공항은 50개국 128개 도시와, 김해공항은 10개국 19개 도시와 이어졌다.</p>
+<h2>통합 과업지시서 곳곳의 지역 항목</h2>
+<p>과업지시서의 열두 과업 곳곳에 지역 항목이 있다. 통합조직 설계에는 거버넌스와 지역 자율성 보장이 들어 있다. 재무·자산 전환에는 지역별 구분회계와 투자배분·지역 재투자 원칙이 있다.</p>
+<p>법·제도 정비 과업은 항만공사법 개정안에 지역지사, 지역대표성, 구분회계·지역 재투자를 담게 했다. 이해관계자 협의 과업에는 부산·인천·울산·여수광양 지역별 보완방안이 있다.</p>
+<p>과업지시서가 적은 통합 추진방안 발표 예정 시점은 2027년 초다. 인천 해사국제상사법원 개원 목표는 2028년 3월이다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>해양수산부·부산·인천·여수광양·울산항만공사(2026), 『항만공사 통합 로드맵 수립 및 법·제도 정비 방안 연구 과업지시서』, 2026.10. 나라장터 R26BK01813256 첨부.</li><li>해양수산부·부산·인천·여수광양·울산항만공사(2026), 『항만공사 자회사 통합 로드맵 수립 연구용역 과업지시서』, 2026.11. 해양수산부 공고 제2026-1463호, 나라장터 R26BK01814961 첨부.</li><li>해양수산부(2026), 「항만공사 통합 로드맵 수립 및 법 제도 정비 방안 연구」 용역 입찰 공고(긴급), 해양수산부 공고 제2026-1450호, 2026.11.05. 나라장터 R26BK01813256.</li><li>해양수산부(2026), 「항만공사 통합 로드맵 수립 및 법 제도 정비 방안 연구(긴급공고)」 입찰재공고, 해양수산부 공고 제2026-1490호, 2026.11.16. 나라장터 R26BK01832606(입찰서 제출 2026.11.17~11.27 10시, 개찰 11.27 11시).</li><li>이재찬(2021), 『해사법원 설치에 관한 연구』, 사법정책연구원 연구보고서, 2021.10. <a href="https://jpri.scourt.go.kr/post/postView.do?boardSeq=7&amp;menuSeq=11&amp;lang=ko&amp;seq=1382" target="_blank" rel="noopener">https://jpri.scourt.go.kr/post/postView.do?boardSeq=7&amp;menuSeq=11&amp;lang=ko&amp;seq=1382</a></li><li>강동준(2023), 「해사전문법원 인천 설립 당위성」, 인천연구원 이슈브리프 No.02, 2023.02.24. <a href="http://www.ii.re.kr/storage/board/basic/2024/04/30/BASIC_ATTACH_1714437930730.pdf" target="_blank" rel="noopener">http://www.ii.re.kr/storage/board/basic/2024/04/30/BASIC_ATTACH_1714437930730.pdf</a></li><li>관계부처 합동 「공공기관 기능개혁 추진방안」, &quot;발전 5사 통합, LH는 개발·주거복지 분리…공공기관 109곳 감축&quot;, 대한민국 정책브리핑, 2026.09.03. <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148971154" target="_blank" rel="noopener">https://www.korea.kr/news/policyNewsView.do?newsId=148971154</a></li><li>해양수산부, &quot;해수부, 항만공사 자회사 통합 추진을 위한 노·사 간담회 개최한다&quot; 보도자료, 2026.11.11(11.12 조간). <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788715" target="_blank" rel="noopener">https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788715</a></li><li>인천광역시, &quot;300만 인천시민이 해냈다... 해사국제상사법원 인천 설치 확정!&quot; 보도자료, 2026.02.12(누리집 게시 2026.02.14). <a href="https://www.incheon.go.kr/ml_kr/MLKR020401/3064116" target="_blank" rel="noopener">https://www.incheon.go.kr/ml_kr/MLKR020401/3064116</a></li><li>인천경실련 등 4대 항만 지역 시민사회단체·항만발전협의회·항만공사 노동조합, &quot;‘검증하랬더니 통합 실행계획부터’… 정부의 졸속 항만공사 통합 추진용역 강력 규탄&quot; 공동 보도자료, 경제정의실천시민연합, 2026.11.24. <a href="https://ccej.or.kr/posts/eVtVXPq" target="_blank" rel="noopener">https://ccej.or.kr/posts/eVtVXPq</a></li></ul><h4>[사진 출처]</h4><ul><li>[사진 1] 4개 항만공사 노동조합 제공(부산·인천·울산·여수광양항만공사 노동조합 등 공동 보도자료 붙임 사진, 2026년 11월 24일), <a href="https://ccej.or.kr/posts/eVtVXPq" target="_blank" rel="noopener">https://ccej.or.kr/posts/eVtVXPq</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 AI 프로그램 클로드를 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="sov16.html">[인천해양주권⑯] 해수부 인천항만공사 청산용역, 인천항만공사 돈으로</a></li><li><a href="sov15.html">[인천해양주권⑮] 인천항 투자 65% 줄 때 부산항은 84% 늘었다</a></li><li><a href="sov14.html">[인천해양주권⑭] 항만공사 통합에 기업청산만 바라보는 인천</a></li><li><a href="sov13.html">[인천해양주권⑬] 효과 분석 없는 항만공사 통합, 해법은 협력과 분권</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천해양주권</span><span>#항만공사통합</span><span>#해사법원</span><span>#해사국제상사법원</span><span>#인천항만공사</span><span>#인천항보안공사</span><span>#한국항만공사</span><span>#연구용역</span><span>#인천경실련</span><span>#해양분권</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
