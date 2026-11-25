@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>고속철도역 자리와 역세권 경제, 국내외 연구 네 편 · AI경제저널</title>
+<meta name="description" content="쑤저우 도심 역 창업 증가, 외곽 역은 감소">
+<link rel="canonical" href="https://weminai.com/media/rsta01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="고속철도역 자리와 역세권 경제, 국내외 연구 네 편">
+<meta property="og:description" content="쑤저우 도심 역 창업 증가, 외곽 역은 감소">
+<meta property="og:url" content="https://news.weminai.com/media/rsta01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/rsta01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">철도</div>
+ <h1>고속철도역 자리와 역세권 경제, 국내외 연구 네 편</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.25</span><span class="dt">업데이트 2026.11.25 22:13</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>쑤저우 도심 역 창업 증가, 외곽 역은 감소</p><p>독일 역 178곳 밀도, 국내 역세권 67곳 수요</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 국토교통부는 11월 5일 고속철도 통합 운행 60일 동안 하루 평균 32만2000명이 열차를 탔다고 밝혔다. 지난해 같은 기간보다 12.6% 많았다.</p>
+<p>같은 기간 수서 축 이용객은 지난해 같은 기간보다 29.5% 늘었다. 고속철도와 일반열차를 갈아탄 하루 평균 이용객은 54.4% 늘었다.</p>
+<p>배성호 등 연구진은 역 승하차 인원을 역세권 잠재수요 지표로 썼다. 국제 학술지 논문 셋은 역의 자리와 도시철도 연결, 역 주변 밀도에 따라 역세권 효과가 달랐다고 분석했다. 국내 학술지 논문 하나는 국내 역세권 67곳의 개발 여건과 수요를 비교했다.</p>
+<figure><img src="img/rsta01_01.jpg" alt="한국철도공사가 11월 16일부터 12월 6일까지 전주역에서 여는 「철도문화전」의 1층 맞이방 전시. 전라선 작은 역들의 역사를 담았다." loading="lazy"><figcaption>한국철도공사가 11월 16일부터 12월 6일까지 전주역에서 여는 「철도문화전」의 1층 맞이방 전시. 전라선 작은 역들의 역사를 담았다.</figcaption></figure>
+<h2>쑤저우 고속철도역 2km 안 창업</h2>
+<p>중국·영국·미국 연구진 7명은 쑤저우 고속철도역 넷의 효과를 분석했다. 제1저자는 왕란(Lan Wang)이다. 논문은 2025년 『교통연구 A』(Transportation Research Part A)에 실렸다. 쑤저우는 상하이와 난징 사이 도시다.</p>
+<p>연구진은 2005~2015년 쑤저우 시내 5개 구에 새로 등록한 기업 5만9537곳을 모았다. 이를 가로세로 1km 격자 1973개에 나눠 담고 개통 전후를 견줬다.</p>
+<p>역에서 2km 안 격자마다 개통 뒤 해마다 새 기업이 11~13곳 더 생겼다.</p>
+<p>효과는 개통 3~4년째부터 드러났다.</p>
+<p>지식집약 서비스업과 상업·운수·숙박업이 크게 반응했다. 제조업은 유의한 증가가 없었다. 연구진은 제조업이 생산기지와 화물에 기대는 업종이라고 설명했다.</p>
+<p>연구진은 개통 뒤 4~5년의 단기 효과를 본 한 도시 사례라는 점을 한계로 들었다.</p>
+<h2>도심에서 먼 역의 창업 감소와 시가지 확장</h2>
+<p>역마다 결과가 달랐다. 도심의 쑤저우역 주변은 해마다 새 기업이 27곳 더 생겼다. 개발구 안 공업원구역역 주변은 23곳 늘었다.</p>
+<p>도심에서 약 20km 떨어진 쑤저우북역 주변은 2곳 넘게 줄었다.</p>
+<p>연구진은 걸어서 도시철도로 갈아탈 수 있는 역 묶음에서는 효과가 유의했고, 그렇지 않은 역 묶음에서는 유의하지 않았다고 밝혔다. 외곽 역의 자리를 고를 때 주변 토지계획을 함께 세우고, 역을 도시철도와 이어야 한다고 제언했다.</p>
+<p>중국 연구진 리신(Xin Li)·마샤오둥(Xiaodong Ma)은 중국 280개 도시의 2001~2016년 자료를 분석했다. 논문은 2021년 『교통·토지이용 저널』(Journal of Transport and Land Use)에 실렸다. 고속철도가 들어선 도시는 시가지가 4.1% 더 넓어졌다.</p>
+<p>역이 도심에서 1% 멀어질 때마다 시가지는 0.5% 더 넓어졌다. 역이 멀수록 시가지 단위 면적당 지역총생산은 낮았고, 통계적 유의성은 10% 수준이었다. 연구진은 고속철도 신도시의 무분별한 과잉 개발을 막아 「유령도시」를 피하자고 제언했다.</p>
+<h2>독일 장거리역 178곳의 밀도</h2>
+<p>독일 뮌헨공대 요하네스 모저(Johannes Moser) 연구진은 독일 장거리 철도역 178곳을 분석했다. 논문은 지난 5월 같은 학술지에 실렸다. 역 반경 800m 안 지식집약 기업 수를 셌다.</p>
+<p>역 주변 밀도가 1표준편차 높으면 지식집약 기업은 57.3% 많았다. 장거리 열차 출발이 많을수록, 도심에 가까울수록 기업이 많았다. 업종별로는 고기술 서비스업이 장거리 열차와 밀도에 가장 크게 반응했다.</p>
+<p>연구진은 빈터 채우기와 증축으로 역 주변을 고밀로 개발하자고 제안했다. 다만 이 결과는 인과관계가 아닌 연관성이라고 밝혔고, 후속 과제로 이중차분 분석을 들었다.</p>
+<h2>국내 역세권 67곳의 수요</h2>
+<p>중앙대 배성호·마강래·김찬호 연구진은 국내 고속철도 역세권 67곳을 비교한 논문을 2024년 『지역연구』에 실었다. 2022년 KTX·SRT 정차역 반경 1km가 대상이다.</p>
+<p>연구진은 역을 수도권 대도시 10곳, 비수도권 대도시 14곳, 비수도권 중소도시 43곳으로 나눴다. 전주역은 비수도권 대도시 14곳 가운데 하나다. 2022년 철도통계연보 기준 연간 2911만여명이 타고 내린 서울역이 가장 붐볐다.</p>
+<p>중소도시 역세권은 땅값이 싸고 법정 용적률보다 실제 지은 용적률이 낮아 개발 여건이 나았다. 그러나 승하차 인원과 배후 인구, 도로율의 평균 순위는 세 집단 가운데 가장 낮았다. 비수도권 중소도시 가운데 목포·익산은 미래 잠재수요가 비교적 높았다.</p>
+<p>연구진은 신경주 역세권의 사업 여건이 가장 좋고 나주 역세권도 좋다고 분석했다. 논문은 신경주 역세권이 공공 51%·민간 49% 출자의 민관합동 개발로 진행 중이라고 적었다.</p>
+<p>연구진은 중소도시 역세권에 공공 주도 사업이 필요하다고 제안했다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>Lan Wang·Jia Tao·Wenyao Sun·Chia-Lin Chen·Zhenhua Chen·Po-Chen Lin·Roger Vickerman, 「Impacts of high-speed rail on new firm formation and economic clustering: Evidence from Suzhou, China」, 『Transportation Research Part A: Policy and Practice』 198, Elsevier, 2025년, 104500, <a href="https://doi.org/10.1016/j.tra.2025.104500" target="_blank" rel="noopener">https://doi.org/10.1016/j.tra.2025.104500</a></li><li>Johannes Moser·Fabian Wenner·Alain Thierstein, 「The knowledge economy and transit-oriented development: Effects at long-distance rail stations in Germany」, 『Journal of Transport and Land Use』 19(1), 2026년 5월, 157-181, <a href="https://doi.org/10.5198/jtlu.2026.2767" target="_blank" rel="noopener">https://doi.org/10.5198/jtlu.2026.2767</a></li><li>Xin Li·Xiaodong Ma, 「Impacts of high-speed rail development on urban land expansion and utilization intensity in China」, 『Journal of Transport and Land Use』 14(1), 2021년 5월, 583-601, <a href="https://doi.org/10.5198/jtlu.2021.1804" target="_blank" rel="noopener">https://doi.org/10.5198/jtlu.2021.1804</a></li><li>배성호·마강래·김찬호, 「전국 고속철도 역세권의 개발 사업여건 및 잠재수요 특성 분석」, 『지역연구』 40(2), 한국지역학회, 2024년, 75-89, <a href="https://doi.org/10.22669/krsa.2024.40.2.075" target="_blank" rel="noopener">https://doi.org/10.22669/krsa.2024.40.2.075</a></li><li>&quot;고속철도 통합 60일, 하루 32.2만 명 이용 … 예매·객실 서비스 개선 이어간다&quot;, 국토교통부 철도국 고속철도통합TF, 2026년 11월 5일, <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=289104" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=289104</a></li></ul><h4>[사진 출처]</h4><ul><li>[사진 1] 한국철도공사 보도자료 「코레일, 전주역서 '철도문화전' 개막」(2026년 11월 16일) 붙임 사진, 공공누리 제4유형, <a href="https://info.korail.com/info/selectBbsNttView.do?bbsNo=199&amp;key=911&amp;nttNo=27558" target="_blank" rel="noopener">https://info.korail.com/info/selectBbsNttView.do?bbsNo=199&amp;key=911&amp;nttNo=27558</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 AI 프로그램 클로드를 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="hsr06.html">고속철도 통합 60일, 늘어난 승객 절반 넘게 수서축</a></li><li><a href="hsr05.html">[철도] 고속철도 승객, 운행보다 요금에 더 움직인다…승용차는 잘 안 옮겨</a></li><li><a href="bus03.html">중국 281개 도시의 지하철망 확장과 버스 승객 감소</a></li><li><a href="stram01.html">송도트램 사업비 68% 불어난 채…2027년 예타 재도전</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#고속철도</span><span>#역세권</span><span>#신규창업</span><span>#KTX</span><span>#SRT</span><span>#도시철도연계</span><span>#지식집약서비스업</span><span>#역세권개발</span><span>#쑤저우</span><span>#국제논문해설</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
