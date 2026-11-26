@@ -1,0 +1,91 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>인천 신설 3구 공간전략, 청사 넘어 자족·통합 과제 · AI경제저널</title>
+<meta name="description" content="인천연구원, 2030년 목표 구별 공간 재편안">
+<link rel="canonical" href="https://weminai.com/media/ncs01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="인천 신설 3구 공간전략, 청사 넘어 자족·통합 과제">
+<meta property="og:description" content="인천연구원, 2030년 목표 구별 공간 재편안">
+<meta property="og:url" content="https://news.weminai.com/media/ncs01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/ncs01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">지방자치</div>
+ <h1>인천 신설 3구 공간전략, 청사 넘어 자족·통합 과제</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.27</span><span class="dt">업데이트 2026.11.27 02:36</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>인천연구원, 2030년 목표 구별 공간 재편안</p><p>검단 민간 도시개발 19곳 7만1071세대</p><p>영종 주민 숙원, 응급실 갖춘 종합의료기관</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 7월 1일 출범한 제물포구·영종구·검단구 공간을 어떻게 재편할지 담은 연구보고서를 인천연구원이 23일 발표했다. 연구진은 상위계획·공약·언론 보도에 나타난 신설구 논의가 신청사 위치와 개발계획에 몰렸고, 통합과 자족성을 갖출 공간 전략은 상대적으로 구체성이 부족했다고 진단했다.</p>
+<p>보고서 이름은 「행정체계 개편에 따른 공간구조 변화와 대응 전략」이다. 안내영 도시공간연구부 연구위원이 이끈 2026년 기획연구다. 연구진은 인구·생활SOC 분석과 관계기관 담당자 인터뷰를 거쳐 2030년을 목표연도로 구별 전략을 짰다.</p>
+<p>7월 1일 중구 내륙과 동구가 제물포구로 합쳐지고, 중구 섬지역에 영종구가 생겼다. 옛 서구는 경인아라뱃길 북쪽이 검단구, 남쪽이 서해구가 됐다. 인천은 2군 9구 체제가 됐다. 보고서는 기존 행정 중심지가 있던 서해구를 빼고 세 구를 다뤘다.</p>
+<p>안내영 연구위원은 &quot;신설 3개 구가 자족성과 균형성을 갖춘 도시로 자리 잡으려면 구별 특성에 맞춘 공간 재편과 함께 새로운 지역정체성과 주민통합을 위한 거버넌스 구축이 필요하다&quot;고 밝혔다.</p>
+<figure><img src="img/ncs01_01.jpg" alt="박찬대 인천시장이 7월 1일 인천문화예술회관에서 열린 인천형 행정체제 출범 기념식에서 군수·구청장들과 출범 퍼포먼스를 하고 있다. 뒤 화면에 제물포구·영종구·검단구·서해구가 보인다.(사진제공 인천시)" loading="lazy"><figcaption>박찬대 인천시장이 7월 1일 인천문화예술회관에서 열린 인천형 행정체제 출범 기념식에서 군수·구청장들과 출범 퍼포먼스를 하고 있다. 뒤 화면에 제물포구·영종구·검단구·서해구가 보인다.(사진제공 인천시)</figcaption></figure>
+<h2>검단구 인구, 2030년 추정치 99.8%</h2>
+<p>행정안전부 주민등록인구를 보면 2026년 10월 검단구 인구는 27만9433명이다. 보고서가 2030년 인구로 추정한 28만명의 99.8%다. 영종구는 13만9973명으로 2030년 추정치 16만명의 87.5%, 제물포구는 9만9159명으로 10만1000명의 98.2%다(경세제민 AI·경제 연구소 계산).</p>
+<p>보고서는 개편 전인 2025년 12월 인구로 분석했다. 보고서 표에서 영종지역 인구는 1995년 1만1149명에서 2025년 13만4890명으로 늘었다. 검단지역은 같은 기간 2만1357명에서 26만3338명이 됐다. 두 곳 모두 인구가 30년 새 열두 배 넘게 늘었다(연구소 계산). 중구 내륙과 동구를 합친 인구는 같은 기간 16만2037명에서 9만8054명으로 줄었다.</p>
+<h2>둘로 나뉜 청사, 임대·조립식 임시청사</h2>
+<p>제물포구는 옛 중구청인 신포청사와 옛 동구청인 송림청사로 나뉘어 있다. 보고서는 두 청사가 각각 한쪽에 치우쳐 통합청사로 쓰기에 적절하지 않고, 통합청사 위치가 주요 관심사가 됐다고 적었다.</p>
+<p>영종구는 중산동 민간 건물을 빌려 고쳐 임시청사로 쓴다. 신청사는 운남동에 2030년 준공을 목표로 지을 계획이다. 검단구는 당하동에 조립식 임시청사를 지었다. 보고서는 검단구 임시청사가 6년 계약이라 재계약 여부와 정식 청사 신축 문제가 남았다고 했다.</p>
+<h2>구별 처방, 검단 밀도·영종 의료·제물포 역세권</h2>
+<p>옛 서구가 올해 주요업무 시행계획에 올린 검단지역 민간 도시개발사업은 19개 지구 7만1071세대다. 공사 중인 3개 지구가 9406세대, 구역을 지정한 4개 지구가 1만2621세대다. 나머지 12개 지구 4만9044세대는 구역 지정을 요청했거나 제안한 단계다.</p>
+<p>보고서는 인천시가 북부권 도시개발사업 계획인구밀도를 1㏊당 200명 수준에서 180명 이하로 강화해 관리하는 기준을 마련했다고 적고, 이를 검단구 공간구축 전략 첫머리에 올렸다. 연구진은 개별 사업의 사업성이 아니라 교통·환경·기반시설 수용능력과 장래 인구로 밀도를 관리하라고 했다.</p>
+<p>보고서는 검단구 중심지를 세 곳에 나눠 두는 다핵 구조도 내놨다. 아라역 일대는 상업중심, 검단구 임시청사·소방서와 완정역 일대는 행정중심, 왕길역 일대는 산업중심으로 키우라는 안이다.</p>
+<p>보고서 생활SOC 현황 표(개편 전 행정구역 기준)를 보면 강화·옹진을 뺀 인천의 응급실 운영 의료기관 19곳 가운데 영종지역에는 한 곳도 없다. 건강생활지원센터도 없다. 보고서는 응급실을 갖춘 종합의료기관 유치를 영종구 주민 숙원으로 꼽고, 자치구 위상에 맞는 보건소 확충을 제안했다.</p>
+<p>보고서는 영종구 전략으로 하늘도시·미단시티·유보지 같은 신규 개발지를 도시계획과 잇고 신청사 예비지역을 중심지로 키우라고 제안했다. 섬 생활권은 친수공간을 관리하고 연륙교로 넓어지는 지역과 이을 방안을 마련하라고 했다.</p>
+<p>보고서는 제물포구 전략으로 동인천역·인천역 역세권을 개발하고, 경인선 철로로 갈린 남북을 경인선 지하화로 이어 하나의 공간체계를 만들라고 제안했다. 옛 인천부청사였던 신포청사 본관은 개항장 관광 거점시설로 바꾸자고 했다.</p>
+<figure><img src="img/ncs01_02.jpg" alt="인천연구원이 제시한 신설 3구 미래상과 정책 방향. 제물포구는 역사·문화 기반 회복형 균형 도시, 영종구는 국제 공항경제권 기반 자족·생태도시, 검단구는 수도권 서북부 중심 자족형 신도시를 목표로 잡았다.(그림제공 인천연구원)" loading="lazy"><figcaption>인천연구원이 제시한 신설 3구 미래상과 정책 방향. 제물포구는 역사·문화 기반 회복형 균형 도시, 영종구는 국제 공항경제권 기반 자족·생태도시, 검단구는 수도권 서북부 중심 자족형 신도시를 목표로 잡았다.(그림제공 인천연구원)</figcaption></figure>
+<h2>출범 전 관계기관 인터뷰, 행정공백 최소화 우선</h2>
+<p>연구진은 출범을 앞둔 2월 27일과 3월 12일 인천시 행정체제개편추진단, 동구 구출범준비과, 서구 검단안전환경도시국 담당자를 인터뷰했다. 관계기관은 장기 공간구조 개편보다 출범 시점 행정공백과 주민 불편을 줄이는 데 무게를 뒀고, 구체적 공간계획은 출범 뒤 본격 논의해야 한다는 의견을 냈다.</p>
+<p>노인복지관·장애인복지관은 옛 동구와 중구 내륙에 각각 있다. 관계기관은 출범 단계에서 시설을 없애거나 합치면 형평성과 주민 갈등 문제가 생길 수 있어 곧바로 통폐합하기 어렵다고 했다. 보고서는 출범 초기에는 기존 시설을 두되 앞으로 재정 여건과 이용 수요에 따라 기능 조정과 재배치가 필요해질 것으로 내다봤다.</p>
+<h2>인천시 차원 새 연결축, 3호선·청라하늘대교·김포</h2>
+<p>보고서는 인천시 차원 새 연결축도 짚었다. 연구진은 앞으로 인천지하철 3호선이 개통되면 제물포구가 송도도심·청라부도심과 더 가까워진다고 봤다. 영종구는 최근 완공된 청라하늘대교로 청라국제도시와 연결성이 높아졌다고 했다. 검단구는 김포시를 아우르는 광역생활 중심지로 클 가능성이 있다고 했다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>안내영·이종현·윤혜영·최민아·정민선, 「행정체계 개편에 따른 공간구조 변화와 대응 전략」(2026년 기획연구, 195쪽), 인천연구원, 2026., <a href="https://www.ii.re.kr/base/board/read?boardManagementNo=14&amp;boardNo=19378&amp;menuLevel=2&amp;menuNo=76" target="_blank" rel="noopener">https://www.ii.re.kr/base/board/read?boardManagementNo=14&amp;boardNo=19378&amp;menuLevel=2&amp;menuNo=76</a></li><li>「신설 3개 구(區) 맞춤형 공간 재편 전략 제안 — 인천연구원 『행정체계 개편에 따른 공간구조 변화와 대응 전략』 연구 결과」, 인천연구원 보도자료, 2026.11.23., <a href="https://www.ii.re.kr/base/linked/press/read?contCd=28816&amp;menuLevel=2&amp;menuNo=89" target="_blank" rel="noopener">https://www.ii.re.kr/base/linked/press/read?contCd=28816&amp;menuLevel=2&amp;menuNo=89</a></li><li>「행정동별 주민등록 인구 및 세대현황」(2025년 12월·2026년 10월, 인천광역시 군·구와 중구·서구 행정동), 행정안전부 주민등록 인구통계, 2026.11.23 열람, <a href="https://jumin.mois.go.kr/statMonth.do" target="_blank" rel="noopener">https://jumin.mois.go.kr/statMonth.do</a></li><li>「인천광역시 제물포구ㆍ영종구 및 검단구 설치 등에 관한 법률」(법률 제21247호, 2025.12.30 일부개정), 국가법령정보센터, 2026.11.23 열람, <a href="https://www.law.go.kr/법령/인천광역시제물포구·영종구및검단구설치등에관한법률" target="_blank" rel="noopener">https://www.law.go.kr/법령/인천광역시제물포구·영종구및검단구설치등에관한법률</a></li><li>「인천형 행정체제 개편」 안내, 인천광역시, 2026.11.23 열람, <a href="https://www.incheon.go.kr/IC01070101" target="_blank" rel="noopener">https://www.incheon.go.kr/IC01070101</a></li></ul><h4>[사진 출처]</h4><ul><li>사진1 인천광역시 포토시정 「인천형 행정체제 출범 기념식」, 2026.7.1., <a href="https://www.incheon.go.kr/intv/TV010201/3079373" target="_blank" rel="noopener">https://www.incheon.go.kr/intv/TV010201/3079373</a> (공공기관 보도·홍보 사진)</li><li>사진2 인천연구원 보도자료(2026.11.23 배포) 첨부 참고자료 「구별 미래상과 정책 방향」</li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="fis01.html">인천 신설구 100일, 법은 「지원하며」라 썼는데 개편 국비 예산은 두 해째 0원</a></li><li><a href="sgcf01.html">인천시, 서해구 조정교부금 83억원 11월 조기 교부</a></li><li><a href="mcc01.html">서해구, 해사국제상사법원 본청사 유치 요청…2028년 3월 개원까지 16개월</a></li><li><a href="gdlc01.html">검단 근로자복합문화센터 문 열어…월 1만원 강좌, 평일 밤 9시까지</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천연구원</span><span>#행정체제개편</span><span>#제물포구</span><span>#영종구</span><span>#검단구</span><span>#신설구</span><span>#공간구조</span><span>#임시청사</span><span>#계획인구밀도</span><span>#인천지방자치</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
