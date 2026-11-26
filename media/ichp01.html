@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>인천 주택 매매가격 1~10월 0.01% 제자리, 전세가격 3.08% 상승 · AI경제저널</title>
+<meta name="description" content="서울 8.27%·경기 4.73% 오를 때 인천 0.01%">
+<link rel="canonical" href="https://weminai.com/media/ichp01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="인천 주택 매매가격 1~10월 0.01% 제자리, 전세가격 3.08% 상승">
+<meta property="og:description" content="서울 8.27%·경기 4.73% 오를 때 인천 0.01%">
+<meta property="og:url" content="https://news.weminai.com/media/ichp01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/ichp01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">인천경제</div>
+ <h1>인천 주택 매매가격 1~10월 0.01% 제자리, 전세가격 3.08% 상승</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.27</span><span class="dt">업데이트 2026.11.27 01:54</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>서울 8.27%·경기 4.73% 오를 때 인천 0.01%</p><p>9월 매매거래 3134건, 5년 평균보다 17.8% 적어</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 인천 주택 매매가격이 올해 1~10월 0.01% 오르는 데 그쳤다. 같은 기간 전세가격은 3.08% 올랐다. 두 수치는 인천시가 24일 낸 「2026년 10월 부동산시장 동향」에 실린 한국부동산원 월간 전국주택가격동향조사에서 아파트·연립주택·단독주택을 합친 주택종합 1~10월 누계다.</p>
+<p>같은 기간 매매가격은 서울 8.27%, 경기 4.73%, 국내 전체 2.65% 올랐다. 전세가격은 서울 7.42%, 경기 4.97%, 국내 전체 3.27% 올랐다.</p>
+<figure><img src="img/ichp01_01.jpg" alt="2026년 5월 10일 인천 부평구 부평동 하천변을 시민들이 걷고 있다. 10월 부평구 주택 매매가격은 0.20% 올라 인천 아홉 구 가운데 가장 많이 올랐다(사진 김갑봉)" loading="lazy"><figcaption>2026년 5월 10일 인천 부평구 부평동 하천변을 시민들이 걷고 있다. 10월 부평구 주택 매매가격은 0.20% 올라 인천 아홉 구 가운데 가장 많이 올랐다(사진 김갑봉)</figcaption></figure>
+<p>인천은 지난해 1~10월 매매가격이 0.94%, 전세가격이 0.45% 내렸다. 올해 인천 주택 매매가격은 4월(-0.02%), 5월(-0.06%), 8월(-0.03%), 9월(-0.11%) 네 달 내렸고 3월과 10월은 보합이었다. 10월은 9월 하락에서 보합으로 돌아섰다.</p>
+<p>올해 1~10월 전세가격을 유형별로 보면 아파트는 4.58% 올랐고 연립주택은 0.16% 내렸다.</p>
+<p>10월 인천 평균 주택 매매가격은 약 3억1882만원, 평균 전세가격은 약 2억1037만원이다. 한국부동산원은 이 조사가 지수 산출에 맞게 설계돼 평균·중위가격은 참고 사항으로 쓰라고 안내한다.</p>
+<figure><img src="img/ichp01_02.jpg" alt="2026년 1~10월 서울·경기·국내 전체·인천 주택 매매·전세가격 누적 변동률(자료 인천시·한국부동산원, 그래픽 경세제민 AI·경제 연구소)" loading="lazy"><figcaption>2026년 1~10월 서울·경기·국내 전체·인천 주택 매매·전세가격 누적 변동률(자료 인천시·한국부동산원, 그래픽 경세제민 AI·경제 연구소)</figcaption></figure>
+<h2>1~10월 매매 연립 1.60% 하락, 아파트 0.82% 상승</h2>
+<p>인천 주택 매매가격을 유형별로 보면 1~10월 아파트는 0.82%, 단독주택은 0.86% 올랐다. 연립주택은 1.60% 내렸다. 10월 한 달만 보면 아파트는 0.08% 올랐고 연립주택은 0.15% 내렸다.</p>
+<h2>10월 남동구 0.23% 하락, 부평구 0.20% 상승</h2>
+<p>10월 구별로는 부평구(0.20%), 연수구(0.10%), 검단구(0.09%), 서해구(0.06%)가 올랐다. 제물포구(-0.01%), 계양구(-0.07%), 미추홀구(-0.11%), 영종구(-0.12%), 남동구(-0.23%)는 내렸다.</p>
+<p>남동구는 만수·간석동 위주로 내렸고 부평구는 삼산·부개동 대단지 위주로 올랐다고 시는 밝혔다.</p>
+<h2>10월 전세 0.45%·월세 0.52% 상승</h2>
+<p>10월 전세가격지수 변동률은 0.45%로 9월(0.50%)보다 상승폭이 0.05%포인트 줄었다.</p>
+<p>구별로는 연수구(0.77%), 남동구(0.74%), 영종구(0.53%), 검단구(0.50%), 계양구(0.50%) 순으로 올랐다. 서해구(0.46%), 제물포구(0.32%), 부평구(0.32%), 미추홀구(0.03%)가 뒤를 이었다.</p>
+<p>남동구는 10월 매매가격이 0.23% 내려 아홉 구 가운데 가장 많이 떨어졌다. 같은 달 전세가격은 0.74% 올라 연수구 다음으로 많이 올랐다.</p>
+<figure><img src="img/ichp01_03.jpg" alt="2025년 10월 23일 인천 남동구 구월동에서 바라본 아파트 단지. 10월 남동구 주택 매매가격은 0.23% 내려 인천 아홉 구 가운데 가장 많이 떨어졌다(사진 김갑봉)" loading="lazy"><figcaption>2025년 10월 23일 인천 남동구 구월동에서 바라본 아파트 단지. 10월 남동구 주택 매매가격은 0.23% 내려 인천 아홉 구 가운데 가장 많이 떨어졌다(사진 김갑봉)</figcaption></figure>
+<p>월세통합가격지수 변동률은 0.52%로 9월(0.54%)보다 상승폭이 0.02%포인트 줄었다.</p>
+<p>구별로는 서해구(0.93%), 검단구(0.69%), 남동구(0.54%), 부평구(0.47%), 영종구(0.45%) 순으로 올랐다. 미추홀구(0.42%), 연수구(0.42%), 제물포구(0.41%), 계양구(0.40%)까지 모든 구에서 올랐다. 인천 월세가격은 1~10월 3.70% 올랐다.</p>
+<figure><img src="img/ichp01_04.jpg" alt="인천 주택 매매·전세가격과 국내 전체 매매가격 월별 변동률, 2025년 10월~2026년 10월(자료 인천시·한국부동산원, 그래픽 경세제민 AI·경제 연구소)" loading="lazy"><figcaption>인천 주택 매매·전세가격과 국내 전체 매매가격 월별 변동률, 2025년 10월~2026년 10월(자료 인천시·한국부동산원, 그래픽 경세제민 AI·경제 연구소)</figcaption></figure>
+<h2>9월 인천 매매거래 1년 전보다 5.0% 감소, 서울 33.4% 감소</h2>
+<p>9월 인천 주택 매매거래량(신고일 기준)은 3134건으로 8월(2930건)보다 204건(7.0%) 늘었다. 지난해 9월(3300건)보다 5.0%, 5년 평균보다 17.8% 적다.</p>
+<p>9월 매매거래량을 1년 전과 견주면 서울은 33.4%, 경기는 12.7%, 국내 전체는 22.7% 줄었다. 5년 평균과 견주면 서울은 5.1% 적고 경기는 3.0% 많다.</p>
+<p>구·군별로는 부평구(565건), 남동구(465건), 연수구(434건), 미추홀구(374건), 서해구(368건), 계양구(342건) 순이었다. 검단구(297건), 영종구(117건), 제물포구(97건), 강화군(68건), 옹진군(7건)이 뒤를 이었다.</p>
+<p>같은 달 전월세 거래량은 1만929건으로 8월(1만1230건)보다 301건(2.7%) 줄었다. 지난해 9월(1만3541건)보다 19.3%, 5년 평균보다 4.2% 적다.</p>
+<p>이원주 시 도시계획국장은 &quot;10월 인천 주택 매매가격지수는 보합세로 전환했으며 전세는 연수구와 남동구 중심으로, 월세는 서해구와 검단구 중심으로 임차 수요가 이어지며 가격이 올랐다&quot;고 설명했다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>「인천시, 10월 주택 매매가 보합… 전·월세는 상승세 지속」, 인천광역시 토지정보과 보도자료, 2026.11.24., <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000016076132" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000016076132</a></li><li>「2026년 10월 부동산시장 동향」, 인천광역시 토지정보과(같은 보도자료 첨부 참고자료), 2026.11.24., <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000016076132" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000016076132</a></li><li>「전국주택가격동향조사 2026년 10월 지역별 매매가격지수 변동률 - 아파트」, 한국부동산원 부동산통계정보시스템(R-ONE) 첫 화면, 2026.11.26. 열람, <a href="https://www.reb.or.kr/r-one/portal/main/indexPage.do" target="_blank" rel="noopener">https://www.reb.or.kr/r-one/portal/main/indexPage.do</a></li><li>「전국주택가격동향조사」 통계 개요, 한국부동산원, 2026.11.26. 열람, <a href="https://www.reb.or.kr/reb/cm/cntnts/cntntsView.do?mi=10333&amp;cntntsId=1033&amp;statId=S234820263" target="_blank" rel="noopener">https://www.reb.or.kr/reb/cm/cntnts/cntntsView.do?mi=10333&amp;cntntsId=1033&amp;statId=S234820263</a></li><li>「2026년 9월 주택통계」, 국토교통부 주택정책과 보도자료, 2026.10.30., <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288812" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288812</a> (KDI 경제교육·정보센터 게재본)</li><li>「전국주택가격동향조사」 통계정보, 국토교통부 국토교통 통계누리, 2026.11.26. 열람, <a href="https://stat.molit.go.kr/portal/cate/statMetaView.do?hRsId=487" target="_blank" rel="noopener">https://stat.molit.go.kr/portal/cate/statMetaView.do?hRsId=487</a></li></ul><h4>[사진 출처]</h4><ul><li>사진1 김갑봉 촬영, 2026.5.10., 인천 부평구 부평동</li><li>사진2 김갑봉 촬영, 2025.10.23., 인천 남동구 구월동</li><li>도표1·도표2 경세제민 AI·경제 연구소 작성, 자료 인천시 「2026년 10월 부동산시장 동향」(한국부동산원 전국주택가격동향조사)</li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="icrent01.html">인천 전셋값 올해 4.71% 상승, 집값의 여섯 배</a></li><li><a href="urb05.html">[도시계획·부동산] 인천 아홉 구를 같은 16주로 다시 셌다, 세입자 부담은 영종·계양·연수가 컸다</a></li><li><a href="urb03.html">구월지구 B1구역, 인천에서 가장 높은 용적률 430% 받았다</a></li><li><a href="hou02.html">[한국경제 불편한 진실②] 인구 줄어도 집값은 오른다, 도쿄와 서울이 보여 준 것</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#인천집값</span><span>#인천주택매매가격</span><span>#인천전셋값</span><span>#인천월세</span><span>#한국부동산원</span><span>#전국주택가격동향조사</span><span>#주택거래량</span><span>#남동구</span><span>#부평구</span><span>#인천경제</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
