@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>송도세브란스병원 3720억원 시공 계약과 2028년 말 완공 목표 · AI경제저널</title>
+<meta name="description" content="금호건설 계약기간 2028년 12월 31일까지">
+<link rel="canonical" href="https://weminai.com/media/svb01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="송도세브란스병원 3720억원 시공 계약과 2028년 말 완공 목표">
+<meta property="og:description" content="금호건설 계약기간 2028년 12월 31일까지">
+<meta property="og:url" content="https://news.weminai.com/media/svb01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/svb01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">지방자치</div>
+ <h1>송도세브란스병원 3720억원 시공 계약과 2028년 말 완공 목표</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.27</span><span class="dt">업데이트 2026.11.27 21:44</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>금호건설 계약기간 2028년 12월 31일까지</p><p>착공 당시 목표는 2026년 12월 개원</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 금호건설이 2026년 11월 12일 연세대학교 의료원과 송도세브란스병원 신축공사 계약을 맺었다. 계약금액은 부가가치세를 뺀 3720억원이다. 계약기간은 2028년 12월 31일까지다. 금호건설이 같은 날 금융감독원 전자공시시스템에 낸 공시 내용이다.</p>
+<p>공사 자리는 송도동 162-1 연세대 국제캠퍼스 안이다. 공시는 지하 3층~지상 13층 의료시설 등을 짓는 공사라고 적었다. 인천시와 인천경제청은 2026년 1월 8일 보도자료에서 이 병원을 800병상 규모라고 적었다.</p>
+<p>인천투데이는 2025년 4월 23일 개원이 2029년까지 미뤄질 수 있다고 보도했다. 원 기사는 사업비가 8800억원에서 9700억원 이상으로 늘었다고 썼다. 분양 수익 1000억원으로는 사업비를 대기 어렵다는 것이 연세대 쪽 주장이라고 전했다.</p>
+<figure><img src="img/svb01_01.jpg" alt="2026년 2월 12일 인천시의회 제306회 임시회 본회의에서 조현영 의원이 송도세브란스병원 개원 지연과 추가 지원 논의를 비판하는 5분 자유발언을 하고 있다(출처 인천시의회, 공공누리 제1유형)" loading="lazy"><figcaption>2026년 2월 12일 인천시의회 제306회 임시회 본회의에서 조현영 의원이 송도세브란스병원 개원 지연과 추가 지원 논의를 비판하는 5분 자유발언을 하고 있다(출처 인천시의회, 공공누리 제1유형)</figcaption></figure>
+<h2>밀린 개원 목표 시점</h2>
+<p>인천경제청은 2022년 12월 28일 송도세브란스병원 착공식 소식을 알리며 2026년 12월 개원이 목표라고 밝혔다. 당시 계획은 지상 15층·지하 3층, 800병상이었다.</p>
+<p>인천시는 2025년 5월 12일 「제3기 병상수급 및 관리계획」을 냈다. 이 계획도 개원 시점을 2026년 12월로 적었다. 총사업비는 약 9700억원, 사업기간은 2023~2026년이었다.</p>
+<p>같은 계획은 송도가 속한 인천남부 진료권 병상 수급도 분석했다. 300병상 이상 일반병상은 모자라고 300병상 미만은 남는다는 결과였다(2027년 기준).</p>
+<p>개원 목표 시점은 뒤로 밀렸다. 인천경제청 홍보센터는 2026년 5월 6일 찍은 공사 현장 사진을 올리며 「2029년 개원 예정」이라고 적었다.</p>
+<p>김종철 인천경제청장은 11월 13일 인천시의회 산업경제위원회 행정사무감사에서 완공 시점을 밝혔다. 세브란스병원이 2028년 12월 말까지 제때 완공되도록 하는 것이 가장 현실적인 방안이라고 답했다.</p>
+<figure><img src="img/svb01_02.jpg" alt="2026년 5월 6일 송도국제도시 연세대 국제캠퍼스 안 송도세브란스병원 공사 현장(출처 인천경제자유구역청, 공공누리 제1유형)" loading="lazy"><figcaption>2026년 5월 6일 송도국제도시 연세대 국제캠퍼스 안 송도세브란스병원 공사 현장(출처 인천경제자유구역청, 공공누리 제1유형)</figcaption></figure>
+<h2>추가 건축비 마련 합의</h2>
+<p>유정복 당시 인천시장과 윤동섭 연세대 총장은 2026년 1월 8일 연세대 국제캠퍼스에서 만났다. 두 사람은 송도세브란스병원을 빨리 열자는 데 뜻을 모았다.</p>
+<p>추가 건축비 마련 방식도 정했다. 앞서 합의한 연세대와 송도국제화복합단지개발㈜ 투입비용과 투입비율을 바탕으로 삼는다. 인천경제청이 같은 날 낸 보도자료 내용이다.</p>
+<p>두 사람은 면담 뒤 송도세브란스병원 건립 현장을 함께 둘러봤다. 보도자료는 추가 건축비 규모를 밝히지 않았다.</p>
+<p>조현영 시의원(송도1·3동)은 2월 12일 5분 자유발언에서 그 규모를 거론했다. 연세의료원이 기존 1000억원이던 개발이익금 지원을 최대 3000억원까지 늘려 달라고 요구한다고 했다.</p>
+<h2>시의회 비판과 경제청 설명</h2>
+<p>조 의원은 같은 발언에서 인천시와 인천경제청을 비판했다. 연세의료원 요구에 끌려다니는 행정이 사태를 악화시킨다고 했다.</p>
+<p>조 의원은 인천경제청에 자료를 요구한 결과도 공개했다. 협약 변경, 사업비 증액, 연세사이언스파크 개발이익금 전용 검토 자료 모두 「없다」는 답을 받았다고 했다.</p>
+<p>인천경제청은 6월 26일 송도세브란스 지연을 다룬 한 언론 보도에 설명자료를 냈다. 2006년 인천시와 연세대가 맺은 협약에는 병원 개원·완공 시기와 사업비가 적혀 있지 않다고 밝혔다.</p>
+<p>박성진 인천경제청 투자유치사업본부장은 11월 13일 감사에서 차병원 유치 무산 질의에 답했다. 800병상 세브란스병원을 빨리 착공하려고 준비해 왔다고 했다. 시민에게 주는 의료 편의는 세브란스가 더 크다고 답했다.</p>
+<h2>3720억원 시공 계약</h2>
+<p>인천경제청은 11월 13일 감사 업무보고에서 송도세브란스병원 시공사 선정이 최근 끝났다고 보고했다. 금호건설 공시는 계약 체결일을 11월 12일로 적었다.</p>
+<p>계약금액은 금호건설 최근 매출액 2조184억원(2025년 말 연결 기준)에 견주면 18.43%다. 대금은 공사 진행에 따라 청구하고 지급하며, 계약금과 선급금은 없다.</p>
+<p>금호건설은 설계변경 등으로 계약금액과 기간이 바뀔 수 있다고 적었다. 2022년 착공 발표와 2025년 인천시 계획은 지상 15층이었고, 이번 공시는 지상 13층이다.</p>
+<p>이강구 시의원은 11월 23일 시정질문에서 송도 사업 지연을 따졌다. 송도세브란스병원을 6·8공구 개발사업 등과 함께 속도를 내지 못하는 사업으로 꼽았다. 시의회 보도자료는 이 의원이 시공계약 체결은 긍정적으로 평가했다고 적었다.</p>
+<p>원 기사는 지연손해금도 짚었다. 준공이 미뤄지면 연세대는 병원 부지 매매계약에 따라 연 12~15% 지연손해금을 물어야 한다고 썼다.</p>
+<h2>송도 병상 부족 지적</h2>
+<p>조민경 시의원(민·연수구4)은 11월 13일 감사에서 송도 병상 수를 따졌다. 송도 인구는 23만명인데 병상은 411개로 1000명당 1.8개라고 했다. 조 의원은 송도를 뺀 연수구가 9.3개, 인천 평균이 11.5개라고 했다.</p>
+<p>조 의원은 진료권 구분이 송도 인구가 14만명이던 2018년 말 상황을 기초로 삼았다고 지적했다. 김 청장은 인천시에 병상 수급 계획 재검토를 공식 요청하겠다고 답했다.</p>
+<p>조 의원은 세브란스 800병상이 들어서도 송도 병상은 인천 평균에 못 미친다고 했다. 김 청장은 신규 종합병원 유치 계획을 세워 의회에 보고하라는 요구에 준비하겠다고 답했다.</p>
+<p>인천연구원은 2024년 8월 데이터 브리프에서 2024년 6월 기준 주거지역 1인당 의사 수를 분석했다. 원도심은 0.75명, 경제자유구역·신도시는 0.34명이었다. 연구원은 송도·청라·검단 신도시와 영종·강화·옹진을 보건의료 서비스 개선 대상으로 꼽았다.</p>
+<p>이 글은 인천투데이 2025년 4월 23일 게재 기사를 최신 상황으로 고쳐 썼다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>금호건설, 「단일판매ㆍ공급계약체결(송도세브란스병원 신축공사)」, 금융감독원 전자공시시스템 접수번호 20261112801117, 2026년 11월 12일, <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112801117" target="_blank" rel="noopener">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112801117</a></li><li>인천경제자유구역청 서비스산업유치과, 「송도세브란스병원 착공…800병상 규모 오는 2026년 개원」, 보도자료, 2022년 12월 28일, <a href="https://www.ifez.go.kr/main/pst/view.do?pst_id=noti03&amp;pst_sn=662590" target="_blank" rel="noopener">https://www.ifez.go.kr/main/pst/view.do?pst_id=noti03&amp;pst_sn=662590</a></li><li>인천광역시, 「인천광역시 제3기 병상수급 및 관리계획(2023-2027)」, 2025년 5월 12일, <a href="https://www.incheon.go.kr/comm/getFile?srvcId=IR_004&amp;upperNo=20060902&amp;fileTy=file&amp;fileNo=3" target="_blank" rel="noopener">https://www.incheon.go.kr/comm/getFile?srvcId=IR_004&amp;upperNo=20060902&amp;fileTy=file&amp;fileNo=3</a></li><li>인천경제자유구역청 투자유치기획과, 「유정복 시장, 연세대학교 총장 면담 '양자-바이오·메디컬 클러스터' 조성에 첫걸음 내딛다」, 보도자료(시-청 공동배포), 2026년 1월 8일, <a href="https://www.ifez.go.kr/main/pst/view.do?pst_id=noti03&amp;pst_sn=669002" target="_blank" rel="noopener">https://www.ifez.go.kr/main/pst/view.do?pst_id=noti03&amp;pst_sn=669002</a></li><li>인천광역시의회 교육전문위원실, 「인천시의회 조현영 의원, 송도세브란스병원 협박에 굴복하는 인천시 직격」, 보도자료, 2026년 2월 12일, <a href="https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=3976&amp;bgcd=council&amp;bcd=report" target="_blank" rel="noopener">https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=3976&amp;bgcd=council&amp;bcd=report</a></li><li>인천경제자유구역청 투자유치기획과, 「[설명자료] 『'착공식 쇼' 서울아산청라병원, 송도세브란스 표류 악몽 재현되나』기사 설명자료」, 2026년 6월 26일, <a href="https://www.ifez.go.kr/main/pst/view.do?pst_id=noti04&amp;pst_sn=669462" target="_blank" rel="noopener">https://www.ifez.go.kr/main/pst/view.do?pst_id=noti04&amp;pst_sn=669462</a></li><li>인천광역시의회, 「2026년도 행정사무감사 산업경제위원회 회의록 제4호(피감사기관 경제자유구역청)」(임시회의록), 2026년 11월 13일, <a href="https://record.icouncil.go.kr/assem/viewer.do?cdUid=51112" target="_blank" rel="noopener">https://record.icouncil.go.kr/assem/viewer.do?cdUid=51112</a></li><li>인천광역시의회, 「제314회 인천광역시의회(제2차정례회) 본회의회의록 제3호」(임시회의록), 2026년 11월 23일, <a href="https://record.icouncil.go.kr/assem/viewer.do?cdUid=51096" target="_blank" rel="noopener">https://record.icouncil.go.kr/assem/viewer.do?cdUid=51096</a></li><li>인천광역시의회 산업경제위원회, 「인천시의회 조민경 의원, 송도 4대 현안 정조준…개발률· 워터프런트·발코니 붕괴·재정까지 집중 추궁」, 보도자료, 2026년 11월 19일, <a href="https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4438&amp;bgcd=council&amp;bcd=report" target="_blank" rel="noopener">https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4438&amp;bgcd=council&amp;bcd=report</a></li><li>인천광역시의회 산업경제위원회, 「인천시의회 이강구 의원, 재외동포청 인천 사수·송도 핵심 개발 정상화 촉구」, 보도자료, 2026년 11월 23일, <a href="https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4472&amp;bgcd=council&amp;bcd=report" target="_blank" rel="noopener">https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=4472&amp;bgcd=council&amp;bcd=report</a></li><li>인천연구원 도시정보센터, 「인천시 보건의료시설 서비스 현황」, 데이터 브리프 2024-07(Vol.17), 2024년 8월 30일, <a href="https://www.ii.re.kr/base/board/read?boardManagementNo=63&amp;boardNo=16992&amp;menuLevel=2&amp;menuNo=152" target="_blank" rel="noopener">https://www.ii.re.kr/base/board/read?boardManagementNo=63&amp;boardNo=16992&amp;menuLevel=2&amp;menuNo=152</a></li><li>김갑봉, 「송도 세브란스병원 개원 2029년까지 미뤄질 전망」, 인천투데이, 2025년 4월 23일, <a href="https://www.incheontoday.com/news/articleView.html?idxno=301246" target="_blank" rel="noopener">https://www.incheontoday.com/news/articleView.html?idxno=301246</a></li></ul><h4>[사진 출처]</h4><ul><li>[사진1] 인천광역시의회, 「(사진4)인천시의회_조현영_의원,_송도세브란스병원_협박에_굴복하는_인천시_직격.jpg」, 인천시의회 보도자료 첨부, 공공누리 제1유형, 2026년 2월 12일, <a href="https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=3976&amp;bgcd=council&amp;bcd=report" target="_blank" rel="noopener">https://www.icouncil.go.kr/main/bbs/bbsMsgDetail.do?msg_seq=3976&amp;bgcd=council&amp;bcd=report</a></li><li>[사진2] 인천경제자유구역청 미디어문화과, 「연세대학교 국제캠퍼스와 송도세브란스병원 현장」 첨부 「(260506)송도국제도시(01).jpg」, IFEZ 홍보센터 현장사진, 공공누리 제1유형, 2026년 5월 6일 촬영, <a href="https://www.ifez.go.kr/promote/pst/view.do?pst_id=scene_photo&amp;pst_sn=669348" target="_blank" rel="noopener">https://www.ifez.go.kr/promote/pst/view.do?pst_id=scene_photo&amp;pst_sn=669348</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="phc03.html">[공공의료 위기③] 의대 신설 대상 밖 인천, 인천대 의전원 법안과 제2의료원</a></li><li><a href="phc01.html">[공공의료 위기①] 지방의료원 4곳 중 3곳 진료 중단·축소, 인천 공공간호사 장학 4년째</a></li><li><a href="ifez02.html">인천경제청 &quot;송도 에디슨 박물관 빼지 않는다…C1블록 도서관과 함께 검토&quot;</a></li><li><a href="stram01.html">송도트램 사업비 68% 불어난 채…2027년 예타 재도전</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#송도세브란스병원</span><span>#연세의료원</span><span>#금호건설</span><span>#인천경제자유구역청</span><span>#인천시의회</span><span>#행정사무감사</span><span>#추가건축비</span><span>#병상수급계획</span><span>#송도병상</span><span>#공공의료</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
