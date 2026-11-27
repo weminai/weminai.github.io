@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[AI 노동시장②] AI 노출 직업에서 줄어든 청년 몫과 임금 · AI경제저널</title>
+<meta name="description" content="청년 고용 비중 1.27%포인트·임금 3.6% 더 감소">
+<link rel="canonical" href="https://weminai.com/media/ailab02.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[AI 노동시장②] AI 노출 직업에서 줄어든 청년 몫과 임금">
+<meta property="og:description" content="청년 고용 비중 1.27%포인트·임금 3.6% 더 감소">
+<meta property="og:url" content="https://news.weminai.com/media/ailab02.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/ailab02_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">AI</div>
+ <h1>[AI 노동시장②] AI 노출 직업에서 줄어든 청년 몫과 임금</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.27</span><span class="dt">업데이트 2026.11.27 22:57</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>청년 고용 비중 1.27%포인트·임금 3.6% 더 감소</p><p>고노출 일자리 증가분 80.8% 경인경제권</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 한국은행 경남본부가 11월 12일 「AI 지수 유형별 경남지역 노동 수요 변화 분석과 정책적 시사점」을 공개했다. 방형준 한국노동연구원 선임연구위원, 이환웅 건국대 경제학과 조교수, 이동훈 한국은행 경남본부 과장이 쓴 외부연구용역 보고서다.</p>
+<p>보고서는 AI 노출도가 가장 높은 직업에서 전체 고용이 뚜렷하게 줄지 않았다고 분석했다. 다만 노출도가 가장 낮은 직업보다 청년 고용 비중은 1.27%포인트 더 줄었다. 청년 임금은 3.6% 더 떨어졌다.</p>
+<p>일자리가 늘어난 곳도 한쪽으로 몰렸다. 한국은행 조사국 이슈노트를 보면 2023년 이후 3년 동안 늘어난 생성형 AI 고노출 일자리 80.8%가 경인경제권(서울·인천·경기)에서 나왔다.</p>
+<h2>고노출 직업 총고용 유지</h2>
+<p>AI 노출도는 AI가 그 직업 업무에 쓰일 수 있는 정도를 잰 지수다. 직업 특성과 AI가 해낼 수 있는 업무 특성을 견줘 만든다. 노출도가 높다고 일자리가 곧바로 사라진다는 뜻은 아니다.</p>
+<p>연구진은 지역별고용조사 원자료로 2021년 상반기부터 2025년 하반기까지 10개 반기를 분석했다. 10개 반기를 합친 취업자 표본은 251만5687명이다. 임금은 임금노동자가 받은 최근 3개월 월평균임금을 썼다.</p>
+<p>기준 시점은 챗GPT가 나온 2022년 11월이다. 연구진은 직업을 노출도에 따라 네 구간으로 나누고, 노출도가 가장 낮은 구간을 비교 집단으로 삼았다. 결과 수치는 실제 변화 폭이 아니라 비교 집단과 벌어진 차이다.</p>
+<p>노출도 2·3·4구간 모두 총고용은 비교 집단과 뚜렷한 차이가 없었다. 연구진은 같은 방법으로 미국 자료를 분석한 첸 등(2025)도 고노출 직업 실업률에 뚜렷한 변화가 없었다고 적었다.</p>
+<figure><img src="img/ailab02_01.jpg" alt="9월 19일 인천 상상플랫폼에서 열린 2026 인천 청년의 날 기념행사에서 참석자들이 손팻말을 들고 있다.(인천시 제공, 공공누리 제1유형)" loading="lazy"><figcaption>9월 19일 인천 상상플랫폼에서 열린 2026 인천 청년의 날 기념행사에서 참석자들이 손팻말을 들고 있다.(인천시 제공, 공공누리 제1유형)</figcaption></figure>
+<h2>줄어든 청년 고용 비중</h2>
+<p>직업 안 나이 구성은 달라졌다. 노출도 최상위 직업에서 15~29세 청년 비중이 비교 집단보다 평균 1.27%포인트 더 줄었다. 청년 수를 40~50대 수로 나눈 비율도 더 줄었다.</p>
+<p>이 직업군 청년 비중은 2021년 상반기 17.7%에서 2022년 하반기 17.1%로 내려왔다. 그 뒤 13.4%까지 3.7%포인트 떨어졌다. 노출도 최하위 직업을 섞어 AI 확산 전 흐름을 맞춘 비교 집단은 11.6%에서 9.4%로 2.2%포인트 내렸다.</p>
+<p>고노출 직업 고용 증가는 40~50대와 60세 이상에 몰렸다. 연구진은 고용이 유지되거나 늘었지만 청년층은 그 몫을 나눠 받지 못했다고 해석했다.</p>
+<p>연구진은 청년이 하던 일을 중장년이 넘겨받았는지는 지금 자료로 검정하기 어렵다고 밝혔다. 다만 고용이 늘어난 혜택이 나이에 따라 고르지 않게 나뉘었다는 해석은 가능하다고 적었다.</p>
+<h2>청년만 낮아진 임금</h2>
+<p>청년 신규 진입이 줄면 저임금 진입자가 빠져 평균임금이 오히려 오를 수 있다. 그래서 연구진은 나이대를 고정하고 임금 효과를 다시 따졌다. 노출도 최상위 직업 청년 임금은 비교 집단보다 3.6% 더 떨어졌다.</p>
+<p>30대는 0.2%, 40~50대는 0.5% 낮아 사실상 변화가 없었다. 60세 이상은 4.5% 낮게 추정됐지만 통계로 의미 있는 차이는 아니었다.</p>
+<p>전체 평균임금에서는 효과가 보이지 않았다. 연구진은 다른 나이대 임금이 안정돼 청년 임금 하락이 묻혔기 때문이라고 설명했다.</p>
+<p>노동시간은 AI 노출도와 뚜렷한 관계가 없었다. 연구진은 조정이 노동시간이 아니라 신규 채용과 임금으로 이뤄졌을 가능성이 크다고 봤다.</p>
+<h2>경인경제권 쏠린 일자리 증가</h2>
+<p>김보성 한국은행 조사국 지역경제조사팀 차장 등은 9월 15일 BOK 이슈노트 「AI와 지역 노동시장」에서 지역별 차이를 따졌다. 생성형 AI 노출도는 서울이 가장 높았고 세종, 경기, 인천이 뒤를 이었다.</p>
+<p>경인경제권 취업자 가운데 전문가는 28.1%, 사무직은 20.2%다. 비경인경제권은 18.0%, 15.8%다. 생성형 AI 노출도가 높은 일자리가 경인경제권에 더 많다.</p>
+<p>2023년 이후 3년 동안 생성형 AI 고노출 일자리는 24만7000명 늘었다. 이 가운데 19만9000명(80.8%)이 경인경제권에서 늘었다.</p>
+<p>목표를 주면 여러 단계 작업을 스스로 해내는 에이전트형 AI도 흐름이 비슷했다. 이 AI 고노출 직군에서 2025년 늘어난 10만5000명 가운데 88.3%가 경인경제권이었다.</p>
+<p>실질임금도 갈렸다. 2025년 경인경제권에서는 에이전트형 AI 고·중노출 일자리 임금 상승폭이 저노출 일자리보다 컸다. 비경인경제권 고·중노출 일자리 임금은 제자리이거나 조금 내렸다.</p>
+<p>20대는 달랐다. 고노출 직업 20대 취업자는 경인경제권과 비경인경제권 모두 줄었다. 집필진은 대학교육이 전통적인 지식 축적에 초점을 둬 청년이 전문성과 경험을 갖추기가 지역과 상관없이 어렵다고 풀이했다.</p>
+<h2>경남 저노출·고보완 구조</h2>
+<p>경남 평균 AI 노출도는 51.42로 전국보다 2.60 낮다. AI 보완도는 55.11로 4.24 높다. 보완도는 AI가 사람 일을 대신하기보다 도와 생산성을 높이는 정도다.</p>
+<p>연구진은 이 차이 대부분이 경남 산업 구성, 곧 제조업과 농업 비중에서 나온다고 분석했다. 경남 AI 준비도는 17개 시도 가운데 12위였다.</p>
+<p>AI 숙련을 갖춘 신규 취업자 비중은 15위, AI 연구개발 국비 지원액은 14위였다. 연구진은 세미나 발표자료에서 피지컬 AI 등 제조업 특화 AI 도입을 지원해 청년 일자리를 늘리는 정책을 제안했다.</p>
+<p>연구진은 청년 비중 감소를 모두 생성형 AI 효과로 돌리는 데 신중했다. AI 확산 전 비교 기간이 4개 반기뿐이고 코로나19 뒤 고용 회복기와 겹친다는 점을 들었다. 노출도 높은 직업에 정형화된 일이 많아 기존 자동화 흐름과 가르기 어렵다는 점도 짚었다.</p>
+<figure><img src="img/ailab02_02.jpg" alt="11월 20일 인천스타트업파크에서 열린 인천 AI·AI전환(AX) 협의체 산학혁신 협력분과 사전회의에서 지역 대학과 시 관계자들이 AI 인재·연구 역량을 산업 현장과 잇는 방안을 논의하고 있다.(인천시 제공, 공공누리 제1유형)" loading="lazy"><figcaption>11월 20일 인천스타트업파크에서 열린 인천 AI·AI전환(AX) 협의체 산학혁신 협력분과 사전회의에서 지역 대학과 시 관계자들이 AI 인재·연구 역량을 산업 현장과 잇는 방안을 논의하고 있다.(인천시 제공, 공공누리 제1유형)</figcaption></figure>
+<p>이슈노트 집필진도 지역별 분석이 AI 확산 초기 징후여서 AI가 고용 변화 원인이라고 단정하기 어렵다고 적었다. 집필진은 지역 서비스업 AI 교육 강화와 지역 거점대학 AI 허브화를 정책 과제로 꼽았다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>「한국은행 경남본부와 창원상공회의소, 「AI 대전환 시대, 경남의 선택」을 주제로 지역경제 세미나 개최」, 한국은행 경남본부 보도자료, 2026년 11월 3일, <a href="https://www.bok.or.kr/portal/bbs/P0000720/view.do?nttId=11066178&amp;menuNo=200570" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/P0000720/view.do?nttId=11066178&amp;menuNo=200570</a></li><li>방형준·이환웅·이동훈, 「AI 지수 유형별 경남지역 노동 수요 변화 분석과 정책적 시사점」, 한국은행 경남본부 조사연구자료(2026-2-경남본부), 2026년 10월 16일 작성·11월 12일 공개, <a href="https://www.bok.or.kr/portal/bbs/P0000800/view.do?nttId=11066564&amp;menuNo=201087" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/P0000800/view.do?nttId=11066564&amp;menuNo=201087</a></li><li>방형준·이환웅, 「AI와 경남 노동시장: 현황과 과제」(2026 한국은행 경남본부 지역경제 세미나 발표자료), 2026년 11월 3일, 위 보고서 게시물 첨부</li><li>김보성·정민수·정유정·장수빈, 「AI와 지역 노동시장 - 지역간 격차 확대 위험과 새로운 기회」, BOK 이슈노트 제2026-25호, 한국은행, 2026년 9월 15일, <a href="https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=11064752&amp;menuNo=200433" target="_blank" rel="noopener">https://www.bok.or.kr/portal/bbs/P0002353/view.do?nttId=11064752&amp;menuNo=200433</a></li></ul><h4>[사진 출처]</h4><ul><li>「좋은 일자리에서 안정된 삶까지…인천, 청년이 머무는 도시로」, 인천광역시 보도자료 붙임 사진, 2026년 11월 10일, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015937664" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015937664</a></li><li>「인천시, 지역 13개 대학과 '글로벌 인공지능(AI) 허브' 유치 전략 모색」, 인천광역시 보도자료 붙임 사진, 2026년 11월 20일, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000016054113" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000016054113</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="ailab01.html">[AI 노동시장①] AI 노출 업종에서 좁아진 청년 첫 일자리</a></li><li><a href="job01.html">2분기 임금일자리 40만6000개 증가, 20대 이하 5만6000개 감소</a></li><li><a href="yth01.html">[고용 브리핑] 청년층 고용률 42.9%, 1년 새 1.7%포인트 하락</a></li><li><a href="lbr01.html">청년 많이 일하는 100곳, 장시간 노동·공짜 야근 감독 받는다</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#AI노동시장</span><span>#청년고용비중</span><span>#청년임금</span><span>#AI노출도</span><span>#AI보완도</span><span>#경인경제권</span><span>#지역격차</span><span>#한국은행</span><span>#한국노동연구원</span><span>#경남</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
