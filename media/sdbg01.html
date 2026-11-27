@@ -1,0 +1,101 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>송도 분구 신중론에서 행정체제개편팀까지, 연수구 1년 10개월 · AI경제저널</title>
+<meta name="description" content="송도 22만7253명, 연수구 인구 55%">
+<link rel="canonical" href="https://weminai.com/media/sdbg01.html">
+<meta property="og:type" content="article"><meta property="og:title" content="송도 분구 신중론에서 행정체제개편팀까지, 연수구 1년 10개월">
+<meta property="og:description" content="송도 22만7253명, 연수구 인구 55%">
+<meta property="og:url" content="https://news.weminai.com/media/sdbg01.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/sdbg01_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">지방자치</div>
+ <h1>송도 분구 신중론에서 행정체제개편팀까지, 연수구 1년 10개월</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.27</span><span class="dt">업데이트 2026.11.27 22:20</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>송도 22만7253명, 연수구 인구 55%</p><p>인구 50만 기준 미달, 법안 2년 넘게 소위</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 2026년 11월 2일 인천 연수구 제2청사 송도행정팀이 행정체제개편팀으로 이름을 바꿨다. 연수구는 이 팀에 송도 분구 추진 지원 업무를 새로 맡겼다. 송도 분구는 송도국제도시를 연수구에서 떼어 별도 자치구로 만드는 일이다.</p>
+<p>1년 10개월 전 이재호 연수구청장은 송도 분구론에 선을 그었다. 2025년 1월 16일 신년 기자간담회에서 송도 분구론을 「인기영합적 정치 행위」라고 비판했다.</p>
+<p>그사이 인천은 31년 만에 행정체제를 바꿨다. 2026년 7월 1일 제물포구·영종구·서해구·검단구가 문을 열어 인천은 2군 9구가 됐다. 송도구는 그 명단에 없었다. 송도 분구를 둘러싼 연수구 입장도 바뀌었다.</p>
+<figure><img src="img/sdbg01_01.jpg" alt="2026년 10월 14일 인천 연수구청 브리핑룸에서 이재호 연수구청장이 민선 9기 취임 100일 언론 간담회를 열고 있다. 화면에 「송도국제도시의 변화」 항목이 떠 있다(출처 연수구, 공공누리 제3유형)" loading="lazy"><figcaption>2026년 10월 14일 인천 연수구청 브리핑룸에서 이재호 연수구청장이 민선 9기 취임 100일 언론 간담회를 열고 있다. 화면에 「송도국제도시의 변화」 항목이 떠 있다(출처 연수구, 공공누리 제3유형)</figcaption></figure>
+<h2>2025년 1월의 신중론</h2>
+<p>이 구청장은 당시 정치인들이 마구잡이식 인기성 발언을 자제해야 한다고 말했다. 부평구와 서구 분구도 인구가 아니라 도시 구조 변경 때문이었다고 짚었다. 특별자치구 논의는 국민도 믿지 않을 것이라고 했다.</p>
+<p>송도 행정 구조도 문제로 들었다. 연수구가 맡은 송도 사무는 다섯 가지이고 나머지는 인천경제자유구역청이 맡는다며 「기형적 형태」라고 했다.</p>
+<p>분구를 따질 때 지방세 수입만 보지 말고 도시 관리비용도 따져야 한다고 했다. 분구 찬성 쪽은 반발했다. 송도시민총연합회 등 주민단체 3곳은 1월 20일 합동 성명을 냈다.</p>
+<p>주민단체는 「1구 2도시」 체제 한계를 짚었다. 원도심은 지역 특성에 맞는 행정을, 송도는 국제도시에 걸맞은 행정을 펼쳐야 한다고 주장했다.</p>
+<h2>제1호 제안서와 행안부 건의</h2>
+<p>재선한 이 구청장은 2026년 6월 8일 기자회견에서 연수구 중점 사업 첫머리에 송도 분구를 올렸다. 연수구는 인천시장 당선인에게 줄 5대 현안 제1호 제안서도 만들어 7월 1일 전달하기로 했다.</p>
+<p>연수구가 10월 14일 밝힌 제안서 내용을 보면 첫 항목이 송도구 신설이다. 행정 체계 로드맵 마련과 핵심 행정 권한 사전 이양을 인천시에 요청했다.</p>
+<p>이 구청장은 7월 14일 정부서울청사에서 행정안전부 장관에게 정책 건의문을 전달했다. 국제도시 특성을 반영해 분구 기준을 고쳐 달라는 요청이 담겼다.</p>
+<p>연수구는 영종구·검단구 신설처럼 송도구도 지역 여건과 행정 효율을 함께 따져 달라고 했다. 이 구청장은 행정·치안 체계 구축을 더 미룰 수 없다고 말했다.</p>
+<h2>송도 인구 22만7253명</h2>
+<p>연수구 주민등록 인구는 2026년 10월 기준 41만649명이다. 송도1~5동이 22만7253명으로 55.3%를 차지한다. 원도심 10개 동은 18만3396명이다(연구소 계산).</p>
+<p>2024년 12월 기준과 견주면 송도는 21만2364명에서 1만4889명 늘었다. 같은 기간 원도심은 18만7849명에서 4453명 줄었다(연구소 계산).</p>
+<p>2024년 10월 문을 연 연수구 제2청사는 2026년 9월 말까지 민원 20만8965건을 처리했다. 여권 접수가 4만599건이다.</p>
+<p>연수구는 11월 2일 조직개편으로 송도 교통시설과 공동주택·건축물 관리 업무를 본청에서 제2청사로 옮겼다. 송도교통시설팀과 송도건축관리팀을 새로 만들었다.</p>
+<p>연수구는 11월 26일 송도경찰서 신설 서명에 10만1383명이 참여했다고 밝혔다. 구는 송도 인구가 외국인을 포함해 약 23만명이지만 연수경찰서 한 곳이 연수구 전체 약 44만명 치안을 맡는다고 설명했다.</p>
+<figure><img src="img/sdbg01_02.jpg" alt="2026년 11월 25일 인천 연수구 제2청사에서 열린 송도경찰서 신설 10만 서명운동 목표 조기 달성 기념식에서 이재호 연수구청장과 참석자들이 손팻말을 들고 있다(출처 연수구, 공공누리 제3유형)" loading="lazy"><figcaption>2026년 11월 25일 인천 연수구 제2청사에서 열린 송도경찰서 신설 10만 서명운동 목표 조기 달성 기념식에서 이재호 연수구청장과 참석자들이 손팻말을 들고 있다(출처 연수구, 공공누리 제3유형)</figcaption></figure>
+<h2>인구 50만 기준과 연구원 진단</h2>
+<p>인천연구원은 2023년 12월 인천시 행정체제 개편 연구 보고서를 냈다. 보고서는 현행 법규에 자치구 설치 기준이 명시돼 있지 않다고 적었다.</p>
+<p>보고서가 소개한 행정안전부 행정구역 실무편람 판단 요건은 둘이다. 하나는 기존 체제로 행정 수요를 감당하기 어려운 경우로, 광역시는 인구 50만명 이상일 때다. 다른 하나는 자체수입이 일정 수준에 이르고 인구가 계속 느는 경우다.</p>
+<p>연수구 인구는 50만명에 8만9351명 모자란다(2026년 10월 기준, 연구소 계산). 보고서는 분구 때 자생력과 관할구역 획정, 행·재정 효과를 검토해야 한다고 했다.</p>
+<p>송도구 설치 법안은 다른 잣대를 들었다. 제안 이유는 지방자치법 등에 따라 구당 평균 인구가 20만 이상이면 행안부 장관 승인을 거쳐 개편할 수 있다고 적었다. 2026년 10월 기준 송도 쪽은 22만7253명, 원도심 쪽은 18만3396명이다.</p>
+<h2>2년 넘게 소위에 머문 법안</h2>
+<p>정일영 국회의원(더불어민주당, 인천 연수구을) 등 10명은 2024년 6월 5일 인천광역시 송도구 설치 등에 관한 법률안을 냈다. 같은 날 특별자치구를 둘 수 있게 하는 지방자치법 개정안도 냈다.</p>
+<p>송도구 법안 제안 이유는 송도 인구가 2024년 4월 20만4944명이고 2030년 30만명을 넘을 것으로 예측된다고 적었다. 원도심 행정이 열악해질 우려도 들었다.</p>
+<p>국회 행정안전위원회는 2024년 9월 2일 전체회의에서 두 법안을 상정해 소위원회에 넘겼다. 의안정보시스템에는 2026년 11월 26일 현재 두 법안 모두 소관위 심사 단계로 나오고 소위 상정 기록은 없다. 22대 국회 임기는 2028년까지다.</p>
+<p>인천시는 8월 24일 시행규칙을 고쳐 3급 단장이 이끌던 행정체제개편추진단을 없애고 4급 과장이 맡는 행정체제개편지원과를 뒀다. 이강구 시의원(국민의힘, 연수구 제5선거구)은 9월 10일 시정질문에서 이를 조직 격하라고 지적했다. 전담 조직을 다시 높이고 단계별 로드맵을 내놓으라고 요구했다.</p>
+<p>박찬대 인천시장은 현 조직체계로도 충분히 대응할 수 있다고 답했다. 업무가 늘면 조직과 인력을 제때 보강하겠다고 했다. 연수구 사전 검토와 연계해 재정 여건과 법·제도, 정부 기준을 검토하겠다고 했다. 송도 분구는 자신이 내놓은 공약이라고도 했다.</p>
+<p>박 시장은 검단구·영종구 등 신설구 재정 수요를 충분히 뒷받침하지 못하는 데 아쉬움이 크다고 말했다. 추가 개편이 이뤄지면 준비 부족이 되풀이되지 않게 더 철저히 점검해야 한다고 했다.</p>
+<p>이 글은 인천투데이 2025년 1월 21일 게재 기사를 최신 상황으로 고쳐 썼다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>인천 연수구 송도행정과, 「연수구 제2청사 개청 2주년…누적 민원 20만 건 돌파」, 보도자료, 2026년 10월 28일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29593" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29593</a></li><li>인천 연수구, 「업무별 담당안내 — 송도행정과(행정체제개편팀)」, 2026년 11월 26일 확인, <a href="https://www.yeonsu.go.kr/main/yeonsu/office/charge.asp?dept_kind=M&amp;dept_idx=71" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/yeonsu/office/charge.asp?dept_kind=M&amp;dept_idx=71</a></li><li>인천 연수구 홍보소통실, 「이재호 연수구청장 "신뢰가 크면 책임 또한 무겁다" 민선 9기 공약 90개 확정…연내 실천 계획 마련」, 보도자료, 2026년 10월 14일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29521" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29521</a></li><li>인천 연수구 기획예산실, 「이재호 연수구청장, 행안부 장관에 정책 건의문 전달」, 보도자료, 2026년 7월 15일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29256" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29256</a></li><li>인천 연수구 홍보소통실, 「이재호 연수구청장, '중단없는 연수발전' 다짐하며 민선 9기 출범 준비 박차」, 보도자료, 2026년 6월 16일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29133" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29133</a></li><li>인천 연수구 총무과, 「연수구, 송도경찰서 신설 서명운동 10만 명 목표 조기 달성」, 보도자료, 2026년 11월 26일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29704" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29704</a></li><li>인천 연수구 민원여권과, 「인구 및 세대현황(2026.10월 기준)」, 2026년 11월 2일, <a href="https://www.yeonsu.go.kr/main/administration/open_info/population.asp?page=v&amp;seq=13489&amp;head_idx=42" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/administration/open_info/population.asp?page=v&amp;seq=13489&amp;head_idx=42</a></li><li>인천 연수구 민원여권과, 「인구 및 세대현황(2024.12월 기준)」, 2025년 1월 2일, <a href="https://www.yeonsu.go.kr/main/administration/open_info/population.asp?page=v&amp;seq=12280&amp;head_idx=42" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/administration/open_info/population.asp?page=v&amp;seq=12280&amp;head_idx=42</a></li><li>인천광역시 기획총괄과, 「인천형 행정체제 2군 9구 시대 개막, 300만 시민과 힘찬 첫발」, 보도자료, 2026년 7월 2일, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015062218" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000015062218</a></li><li>인천광역시 기획조정실 정책기획관, 「인천광역시 행정기구 설치 조례 시행규칙 일부개정규칙안 입법예고」(제2026-58호, 신구조문대비표), 2026년 7월 27일, <a href="https://www.incheon.go.kr/legal/LE030104/view?sno=67221&amp;siteNo=52&amp;menuNo=1523" target="_blank" rel="noopener">https://www.incheon.go.kr/legal/LE030104/view?sno=67221&amp;siteNo=52&amp;menuNo=1523</a></li><li>법제처 국가법령정보센터, 「인천광역시 행정기구 설치 조례 시행규칙」(인천광역시규칙 제3413호 2026년 8월 24일 일부개정, 현행 제3418호), 2026년 11월 26일 확인, <a href="https://www.law.go.kr/자치법규/인천광역시행정기구설치조례시행규칙" target="_blank" rel="noopener">https://www.law.go.kr/자치법규/인천광역시행정기구설치조례시행규칙</a></li><li>인천광역시의회, 「제313회 인천광역시의회(임시회) 본회의회의록 제3호」, 2026년 9월 10일, <a href="https://record.icouncil.go.kr/assem/viewer.do?cdUid=51023" target="_blank" rel="noopener">https://record.icouncil.go.kr/assem/viewer.do?cdUid=51023</a></li><li>정일영 의원 등 10인, 「인천광역시 송도구 설치 등에 관한 법률안」 제2200173호, 2024년 6월 5일, 법제처 국민참여입법센터 국회입법현황, <a href="https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2200173/detailRP" target="_blank" rel="noopener">https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2200173/detailRP</a></li><li>국회 의안정보시스템, 「[2200173] 인천광역시 송도구 설치 등에 관한 법률안(정일영의원 등 10인)」 심사정보, 2026년 11월 26일 확인, <a href="https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_H2F4E0C6D0M3K1J3H5I1R5K5S9R2Q1" target="_blank" rel="noopener">https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_H2F4E0C6D0M3K1J3H5I1R5K5S9R2Q1</a></li><li>국회 의안정보시스템, 「[2200171] 지방자치법 일부개정법률안(정일영의원 등 10인)」 심사정보, 2026년 11월 26일 확인, <a href="https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_S2R4P0Q6V0D3C1D3C5A3I3H1G7H3F1" target="_blank" rel="noopener">https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_S2R4P0Q6V0D3C1D3C5A3I3H1G7H3F1</a></li><li>국회사무처 열린국회정보, 「국회의원 인적사항 — 정일영」, 2026년 11월 26일 확인, <a href="https://open.assembly.go.kr/portal/openapi/nwvrqwxyaytdsfvhu?Type=json&amp;HG_NM=정일영" target="_blank" rel="noopener">https://open.assembly.go.kr/portal/openapi/nwvrqwxyaytdsfvhu?Type=json&amp;HG_NM=정일영</a></li><li>채은경 외, 「인천광역시 행정체제 개편 연구(요약보고서)」, 인천연구원, 2023년 12월, 12~13쪽, 인천광역시 정보공개포털 용역결과공개, <a href="https://www.incheon.go.kr/open/OPEN030601/servceResltView?brdPostSeq=BRD_0000000000185326" target="_blank" rel="noopener">https://www.incheon.go.kr/open/OPEN030601/servceResltView?brdPostSeq=BRD_0000000000185326</a></li><li>김갑봉, 「연수구 분구 송도특별자치구 설치 논란 '누가 포퓰리즘인가'」, 인천투데이, 2025년 1월 21일(기사각호 1074 원고)</li></ul><h4>[사진 출처]</h4><ul><li>[사진1] 인천 연수구, 「이재호 연수구청장 "신뢰가 크면 책임 또한 무겁다"…」 보도자료 첨부 사진(_4.JPG), 공공누리 제3유형(출처표시+변경금지), 2026년 10월 14일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29521" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29521</a></li><li>[사진2] 인천 연수구, 「연수구, 송도경찰서 신설 서명운동 10만 명 목표 조기 달성」 보도자료 첨부 사진(.jpg), 공공누리 제3유형(출처표시+변경금지), 2026년 11월 26일, <a href="https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29704" target="_blank" rel="noopener">https://www.yeonsu.go.kr/main/community/notify/report.asp?page=v&amp;seq=29704</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="ncs01.html">인천 신설 3구 공간전략, 청사 넘어 자족·통합 과제</a></li><li><a href="fis01.html">인천 신설구 100일, 법은 「지원하며」라 썼는데 개편 국비 예산은 두 해째 0원</a></li><li><a href="sgcf01.html">인천시, 서해구 조정교부금 83억원 11월 조기 교부</a></li><li><a href="stram01.html">송도트램 사업비 68% 불어난 채…2027년 예타 재도전</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#송도구</span><span>#송도분구</span><span>#연수구</span><span>#이재호</span><span>#행정체제개편</span><span>#송도국제도시</span><span>#정일영</span><span>#송도구설치법</span><span>#자치구설치기준</span><span>#인천연구원</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
