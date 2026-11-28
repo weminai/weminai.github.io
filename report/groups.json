@@ -22,12 +22,16 @@
   }
  ],
  "글": {
+  "avb01": "trans",
   "brief01": "urban",
   "care01": "labor",
   "cpi01": "econ",
+  "csi01": "econ",
   "debt01": "econ",
   "debt02": "labor",
   "debt03": "econ",
+  "debt04": "econ",
+  "enpov01": "climate",
   "ets01": "climate",
   "fin02": "econ",
   "fin03": "econ",
