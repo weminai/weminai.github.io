@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 끝 .af 의 tags 칸에 span 하나씩 # 붙여 넣는다. ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다(2026-11-05)
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ {{ }} 칸을 채운다
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[경제밥상] 수출 1조달러의 열매, 일하는 사람 밥상엔 얼마나 · AI경제저널</title>
+<meta name="description" content="2년 새 법인 소득 37.7% 늘 때 피용자보수 8.7% 실질임금 4년 새 0.2%, 반도체 밖 생산성 후퇴">
+<link rel="canonical" href="https://weminai.com/media/ebap02.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[경제밥상] 수출 1조달러의 열매, 일하는 사람 밥상엔 얼마나">
+<meta property="og:description" content="2년 새 법인 소득 37.7% 늘 때 피용자보수 8.7% 실질임금 4년 새 0.2%, 반도체 밖 생산성 후퇴">
+<meta property="og:url" content="https://news.weminai.com/media/ebap02.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/ebap02_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">오피니언</div>
+ <h1>[경제밥상] 수출 1조달러의 열매, 일하는 사람 밥상엔 얼마나</h1>
+ <div class="byl"><span class="nm">김갑봉 편집국장</span><span class="dt">입력 2026.11.28</span><span class="dt">업데이트 2026.11.28 22:11</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>2년 새 법인 소득 37.7% 늘 때 피용자보수 8.7%</p><p>실질임금 4년 새 0.2%, 반도체 밖 생산성 후퇴</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 편집국장 |</span> 11월 19일 오후 2시 9분 38초, 올해 누계 수출이 1조달러를 넘었다. 산업통상부 잠정 집계다. 지난해 처음 7000억달러를 넘은 수출이 한 해 만에 1조달러에 닿았다.</p>
+<p>독일·미국·중국에 이어 세계 네 번째다. 김정관 산업통상부 장관은 1조달러를 &quot;생산 현장에서 묵묵히 땀 흘린 기업인과 노동자&quot;가 &quot;함께 일궈낸 값진 결실&quot;이라고 말했다. 수출 호조의 온기를 지역경제와 청년 일자리로 잇겠다고도 밝혔다.</p>
+<p>경제밥상은 몫을 묻는다. 1조달러의 열매는 누구 밥상에 올랐나.</p>
+<figure><img src="img/ebap02_01.jpg" alt="경제단체장 간담회 회의 탁자에 둘러앉은 참석자들과 수출 1조 달러 달성 현수막" loading="lazy"><figcaption>11월 20일 서울 중구 달개비컨퍼런스하우스에서 김정관 산업통상부 장관 주재로 열린 「수출 1조불 달성 계기 경제단체장 간담회」에서 경제 6단체 대표들과 참석자들이 회의를 하고 있다. 사진=산업통상부 제공</figcaption></figure>
+<h2>1조달러 결실과 넉 달 뒷걸음친 실질임금</h2>
+<p>산업통상부는 반도체와 컴퓨터가 수출 성장을 이끌었다고 설명했다. 1~10월 반도체를 뺀 품목의 수출도 20% 늘었다고 밝혔다.</p>
+<p>같은 해 실질임금은 7월까지 넉 달 내리 줄었다. 고용노동부가 10월 29일 발표한 사업체노동력조사 내용이다.</p>
+<p>1인당 임금총액(명목)은 8월 409만3000원으로 1년 전보다 3.9% 올랐다. 물가를 뺀 실질임금은 340만9000원으로 0.8% 느는 데 그쳤다.</p>
+<p>임금 오름폭도 고르지 않았다. 상용노동자 임금은 4.8% 늘었다. 고용노동부는 특별급여가 32.4% 늘어난 영향이 컸고, 이는 주로 지급 시기가 바뀐 영향이라고 봤다.</p>
+<p>임시일용노동자 임금은 1.3% 느는 데 그쳤다. 300인 이상 사업체는 5.3%, 300인 미만은 3.0% 올랐다.</p>
+<h2>노동소득분배율 2년 내리 하락, 66.8%</h2>
+<p>올해 1조달러의 분배는 아직 국민계정에 잡히지 않았다. 앞선 두 해의 분배부터 본다.</p>
+<p>한국은행 국민계정에서 피용자보수비율은 2023년 68.8%였다. 흔히 노동소득분배율이라 부르는 이 비율은 2024년 67.4%, 2025년 66.8%로 2년 내리 내렸다.</p>
+<p>같은 2년 동안 피용자보수는 1167조9000억원에서 1269조8000억원으로 8.7% 늘었다. 법인 소득(법인의 기업·재산소득)은 230조4000억원에서 317조3000억원으로 37.7% 불었다(AI경제저널 계산, 2025년은 잠정).</p>
+<p>KDI 연구진도 짚었듯 2023년은 반도체 업황이 일시적으로 부진했던 해라, 법인 소득 증가에는 바닥에서 되오른 몫도 섞여 있다고 봐야 한다. 한편 자영업자 소득이 들어가는 가계 기업·재산소득은 5.9% 느는 데 그쳤다.</p>
+<p>파이는 커졌지만 임금과 가계 몫은 기업 몫을 따라가지 못했다. 노동소득분배율이 2023년 수준이었다면 2025년 피용자보수는 약 37조원 더 많았을 것이다(AI경제저널 계산).</p>
+<h2>반도체 밖에서 뒷걸음친 생산성</h2>
+<p>한국개발연구원(KDI) 송호규·정수환 연구진은 11월 16일 현안분석을 냈다. 실질임금은 2011~2021년 24.0% 올랐지만 2021~2025년에는 0.2% 오르는 데 그쳤다.</p>
+<p>연구진은 기업 재무제표로 수익생산성을 쟀다. 2021~2025년 반도체 제조업은 연평균 8.5% 늘었고, 반도체 밖 부문은 연평균 0.4% 줄었다.</p>
+<p>같은 기간 전자부품 제조업과 다른 산업의 실질 정액급여 4년 누적 상승률 격차는 약 9%포인트였다. 연구진은 이 격차의 3분의 1가량을 생산성 차이로 설명했다.</p>
+<p>이 기간 전자부품 제조업의 실질 정액급여는 4년간 10.3%(연평균 2.5%) 올랐다. KDI는 격차의 나머지 3분의 2의 원인을 따로 밝히지 않았다. 교섭력과 제도의 차이도 따져 볼 대목이다.</p>
+<h2>수출 온기, 임금으로 옮기려면</h2>
+<p>온기는 저절로 퍼지지 않는다. 올해 1~10월 반도체 밖 수출도 20% 늘었다. 그러나 그 앞 4년 동안 반도체 밖 생산성은 뒷걸음쳤고, 전체 실질임금은 거의 제자리였다.</p>
+<p>KDI 연구진은 만기 연장이나 이자 지원 같은 일률적 금융지원만으로는 한계가 있다고 했다. 대신 사업재편과 노동자 전직·재교육 중심 지원을 제언했다.</p>
+<p>옳은 방향이다. 다만 반도체 밖 산업의 생산성이 오르기를 기다리는 동안에도 밥상은 매일 차려야 한다.</p>
+<p>수출이 불린 이윤은 협력업체 단가와 임금으로 돌아가야 한다. 반도체 밖 산업의 설비와 사람에게도 돌아가야 한다.</p>
+<p>장관 말대로 노동자가 함께 일군 결실이라면 함께 나눠야 한다. 내년 임금교섭과 세제 논의가 그 시험대다.</p>
+<div class="refs" style="overflow-wrap:anywhere"><h3>참고문헌</h3><ul>
+<li>산업통상부, 「(참고자료) 대한민국 수출 1조 달러 돌파, 기업이 뛰고 국민이 함께 이룬 성과」, 2026.11.19. <a href="https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172422/view" target="_blank" rel="noopener">https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172422/view</a></li>
+<li>산업통상부, 「한국 수출 사상 첫 &#x27;1조 달러&#x27; 돌파…독·미·중 이어 세계 4번째」, 정책브리핑, 2026.11.19. <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148976090" target="_blank" rel="noopener">https://www.korea.kr/news/policyNewsView.do?newsId=148976090</a></li>
+<li>고용노동부, 「2026년 9월 사업체노동력조사 및 2026년 4월 산업소분류별 고용통계 결과」(임금은 2026년 8월 기준), 2026.10.29. <a href="https://moel.go.kr/news/enews/report/enewsView.do?news_seq=20162" target="_blank" rel="noopener">https://moel.go.kr/news/enews/report/enewsView.do?news_seq=20162</a></li>
+<li>고용노동부, 「&#x27;26년 9월 사업체노동력조사 및 &#x27;26년 4월 산업소분류 고용통계 결과 공표」 브리핑, 정책브리핑, 2026.10.29. <a href="https://www.korea.kr/briefing/policyBriefingView.do?newsId=156787102" target="_blank" rel="noopener">https://www.korea.kr/briefing/policyBriefingView.do?newsId=156787102</a></li>
+<li>한국은행 경제통계시스템, 「국민소득과 부문별 국민처분가능소득(명목, 연간)」(200Y116), 2026.11.6. 조회. <a href="https://ecos.bok.or.kr" target="_blank" rel="noopener">https://ecos.bok.or.kr</a></li>
+<li>송호규·정수환, 「기업 생산성 분석으로 살펴본 실질임금 정체의 배경과 시사점」, KDI 현안분석, 한국개발연구원, 2026.11.16. <a href="https://www.kdi.re.kr/research/analysisView?art_no=3830" target="_blank" rel="noopener">https://www.kdi.re.kr/research/analysisView?art_no=3830</a></li>
+</ul><h4>[사진 출처]</h4><ul><li>[사진1] 산업통상부, 「수출 1조불 달성 계기 경제단체장 간담회」 포토뉴스, 2026.11.20. <a href="https://www.motir.go.kr/kor/article/ATCLb41cda0c5/29382/view" target="_blank" rel="noopener">https://www.motir.go.kr/kor/article/ATCLb41cda0c5/29382/view</a></li></ul></div>
+</div>
+<div class="af">
+<p class="ai">※ 이 기사는 인공지능기자 위민아이(Wemin_AI)와 협력해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="ebap01.html">[경제밥상] 배당 48조원 시대의 밥상, 상위 1%에 몰린 숟가락</a></li><li><a href="pol02.html">[정치밥상] 이재명 정부 사회정책 사실상 낙제, 종부세 후퇴 압박까지</a></li><li><a href="sacho02.html">[경세사초] 외환위기 29년, 일하는 사람들이 먼저 치른 위기의 비용</a></li><li><a href="dongji02.html">[경세제민의 눈] 진보·보수와 좌우·극우·수구를 가르는 바른 잣대</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 편집국장</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#경제밥상</span><span>#수출1조달러</span><span>#반도체</span><span>#실질임금</span><span>#노동소득분배율</span><span>#피용자보수</span><span>#임금격차</span><span>#생산성</span><span>#한국개발연구원</span><span>#AI경제저널</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p></div>
+</div></article>
+
+
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 인천 아02034 · 등록일 2026년 10월 26일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
