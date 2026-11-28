@@ -1,0 +1,102 @@
+<!doctype html>
+<!--
+ AI경제저널 뉴스 기사 공용 틀 (2026-10-22 개정, 처음 2026-10-21, 18 지침 1-3의4 바목 · 소통판 15·16·17항)
+ 1. 바이라인 「김갑봉 기자」. 머리 .byl 과 끝 .af 기자 칸 둘 다. 기자 칸에 사진 넣지 않는다
+ 2. 사진 ‹figure› 의 ‹figcaption› 에는 사진 설명만. 출처 ‹span class="cr"› 넣지 않는다. 출처는 맨 아래 [사진 출처] 목록에만
+ 3. 「경제·AI저널 ○○. 수치는 본문에 적힌 기준일을 따릅니다」 안내 문구, 「전체기사 · 첫 화면」 줄을 넣지 않는다
+ 4. 해시태그는 꼭 열 개. 본문·참고문헌 칸에 두지 않고 끝 .af 의 tags 칸(div, class 이름 tags)에 span 하나씩 # 붙여 넣는다
+ 5. 끝 .af 순서 — ※ AI 고지 → 관련기사 넷(같은 묶음 가까운 편, 모자라면 같은 분야) → 기자 칸(weminaimax@weminai.com, 다른기사 보기) → 해시태그 → 저작권
+ 6. 연재 「인천해양주권」(옛 5극3특 해양주권). 정책 용어 5극3특은 본문에서 그대로
+ 8. ★ 기사 끝 .af 는 .wrap 안에 둔다(본문 폭 가운데 정렬). 소장님 2026-10-21 「가운데 정열하세요」 「하단부」 「지침입니다」
+ 7. 모양은 /news/frame.css(.af, 제호 고딕). 글 쪽에서 따로 꾸미지 않는다
+ 9. ★ 기사 양식은 인천투데이 양식을 준용한다(소장님 2026-10-22 「이 양식을 우리 기사에 준용해야 한다」 「올린 기사 전부」)
+    가. 제목 위 꼬리표는 분야(posts.json 분야 — 경제·국제·정책브리핑·AI·해양·항공·철도 …). 연재 이름은 제목의 [ ] 안에 둔다
+    나. 바이라인 「김갑봉 기자 | 입력 yyyy.mm.dd | 업데이트 yyyy.mm.dd hh:mm」, 그 아래 굵은 가로줄(article.css)
+    다. 부제는 가로줄 아래 본문 첫머리에 굵게(‹div class="subs"›)
+    라. 첫 문단은 「AI경제저널=김갑봉 기자 |」로 시작한다
+    마. 소제목은 번호 없이 굵게(1. 2. 붙이지 않는다)
+    바. 본문 왼쪽 도구 단추 넷(글자 크기·저장·인쇄·공유) — art.js
+ 10. ★ 참고문헌은 꼭 필요한 핵심만 5개 이상 20개 이하(사진 출처는 따로 센다). 소장님 2026-10-22 「하한선 5개 상한선 20개」
+ {{ }} 칸을 채운다
+ ★ 이 주석에 꺾쇠 태그 글자를 적지 않는다. 바꿔 넣기는 「--›」 뒤 본문에만 건다(2026-11-05 흰 화면 네 편, 공통지침 최우선 말미 쉰넷)
+-->
+
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A6DE0">
+<title>[해상풍력 기획⑤] GWO 교육기관 국내 4곳, 인천 7개 기관 인력 양성 협약 · AI경제저널</title>
+<meta name="description" content="15MW급 터빈 국내 생산·기술이전 계획, 정부 이행 점검 강화">
+<link rel="canonical" href="https://weminai.com/media/owf05.html">
+<meta property="og:type" content="article"><meta property="og:title" content="[해상풍력 기획⑤] GWO 교육기관 국내 4곳, 인천 7개 기관 인력 양성 협약">
+<meta property="og:description" content="15MW급 터빈 국내 생산·기술이전 계획, 정부 이행 점검 강화">
+<meta property="og:url" content="https://news.weminai.com/media/owf05.html">
+<meta property="og:image" content="https://news.weminai.com/media/img/owf05_01.jpg">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" type="image/png" href="../favicon_64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<style>.sitehd,.sitefoot{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.62}.sitehd a,.sitefoot a{color:inherit;text-decoration:none}.sitehd .swrap,.sitefoot .swrap{max-width:1160px;margin:0 auto;padding:0 18px}.sitefoot::after{content:none!important}.sitefoot a{text-decoration:underline}.sitehd .util{background:#F2F6FD;border-bottom:1px solid #DDE4F0;font-size:12.5px;color:#71716E}.sitehd .util .swrap{display:flex;justify-content:space-between;padding:6px 18px}.sitehd .mast{border-bottom:1px solid #DDE4F0;background:#fff}.sitehd .mast .swrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}.sitehd .logo{display:block;line-height:0}.sitehd .logo img{width:276px;height:auto;display:block}.sitehd .mast .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}.sitehd .mast .date{font-size:13px;color:#71716E}.sitehd .srchtop{display:flex;gap:6px;align-items:center;margin:0}.sitehd .srchtop input{font:inherit;font-size:14px;padding:7px 11px;border:1px solid #9FB2D4;width:220px;max-width:46vw;border-radius:0}.sitehd .srchtop input:focus{outline:0;border-color:#1A6DFF}.sitehd .srchtop button{font:inherit;font-weight:700;font-size:14px;padding:7px 14px;border:0;background:#1A6DFF;color:#fff;cursor:pointer}.sitehd .srchtop .asktop{font-weight:800;font-size:14px;padding:7px 16px;background:#FF9A33;color:#141414;white-space:nowrap;margin-left:18px;position:relative}.sitehd .srchtop .asktop::before{content:'';position:absolute;left:-10px;top:4px;bottom:4px;border-left:1px solid #C9CED8}.sitehd .srchtop .asktop:hover{background:#FFB15E}.sitehd .gnb{border-bottom:2px solid #0B4FCE;background:#fff}.sitehd .gnb .swrap{display:flex;gap:26px;padding:0 18px;font-weight:700;font-size:16px;overflow-x:auto}.sitehd .gnb a{padding:12px 0 10px;border-bottom:3px solid transparent;white-space:nowrap}.sitehd .gnb a:hover,.sitehd .gnb a.on{border-color:#0B4FCE;color:#0B4FCE}.sitefoot{margin-top:36px;background:#141414;color:#BEBEBA;border-top:5px solid #0B4FCE}.sitefoot .swrap{padding:22px 18px 28px;font-size:13px;line-height:1.9}.sitefoot b{color:#fff}.sitefoot a{text-decoration:underline}@media(max-width:700px){.sitehd .srchtop input{width:100%}.sitehd .mast .rt{align-items:stretch;width:100%}.sitehd .srchtop{flex-wrap:wrap}.sitehd .srchtop .asktop{margin-left:0}.sitehd .srchtop .asktop::before{display:none}}</style>
+<link rel="stylesheet" href="/news/frame.css"><script src="/news/fit.js" defer></script><meta name="art-form" content="261022"><script src="art.js" defer></script>
+</head><body>
+<div class="nf"><div class="top"><div class="wrap"><span>經世濟民 · 두루두루 고루고루 잘 사는 사회</span><span><a href="/news/member.html">후원하기</a> · 032-777-0421</span></div></div><header class="mast"><div class="wrap"><div class="lft"></div><div class="title"><h1><a href="/news/"><span class="lat">AI</span>경제저널</a></h1><span class="en">AI ECONOMY JOURNAL</span><span class="slo">일하는 사람들의 전문지</span></div><div class="rgt">창간 준비호</div></div></header><nav class="gnb"><div class="wrap"><a class="all" href="/news/s.html?k=전체">전체기사</a><a href="/news/s.html?k=인천경제">인천경제</a><a href="/news/s.html?k=경제">경제</a><a href="/news/s.html?k=교통경제">교통경제</a><a href="/news/s.html?k=해양">해양</a><a href="/news/s.html?k=항공">항공</a><a href="/news/s.html?k=도시·부동산">도시·부동산</a><a href="/news/s.html?k=지방자치">지방자치</a><a href="/news/s.html?k=기후·에너지">기후·에너지</a><a href="/news/s.html?k=AI">AI</a><a href="/news/s.html?k=국제">국제</a><a href="/news/s.html?k=학술">학술</a><a href="/news/s.html?k=기획연재">기획연재</a><span class="tools"><form class="sch" action="/news/s.html" method="get" role="search"><input type="search" name="q" placeholder="기사 검색" aria-label="기사 검색"><button type="submit">검색</button></form><a class="tip" href="/news/tip.html">제보</a><a class="join" href="/news/member.html">후원하기</a></span></div></nav></div>
+<article class="art"><div class="wrap">
+ <div class="kick">해양</div>
+ <h1>[해상풍력 기획⑤] GWO 교육기관 국내 4곳, 인천 7개 기관 인력 양성 협약</h1>
+ <div class="byl"><span class="nm">김갑봉 기자</span><span class="dt">입력 2026.11.28</span></div>
+<div class="toolsbox"><div class="tools" role="toolbar" aria-label="기사 도구"><button type="button" data-a="fs" title="글자 크기" aria-label="글자 크기">가</button><button type="button" data-a="save" title="저장" aria-label="저장"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button><button type="button" data-a="print" title="인쇄" aria-label="인쇄"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg></button><button type="button" data-a="share" title="공유" aria-label="공유"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button></div></div>
+ <div class="subs"><p>15MW급 터빈 국내 생산·기술이전 계획, 정부 이행 점검 강화</p><p>풍력 유지·보수 안전 포인트, 141개 단지에 배포</p></div>
+ <div class="body">
+<p><span class="dl">AI경제저널=김갑봉 기자 |</span> 선박해양플랜트연구소(KRISO·소장 정종진)가 해상풍력 기술교육 3개 과정의 국제인증을 받았다고 지난 10월 29일 밝혔다. 블레이드 수리 과정은 국내 첫 인증이다.</p>
+<p>인천시는 인천지역 해상풍력 사업의 상업운전을 2030년 초로 예상했다. 발전기를 세우고 고칠 사람을 어디서 키우는지, 그 사람들이 다룰 기자재는 누가 만드는지 짚는다.</p>
+<h2>GWO 교육기관 4곳, KRISO 모듈 19종</h2>
+<figure><img src="img/owf05_01.jpg" alt="선박해양플랜트연구소 GWO 교육 현장에서 교육생들이 높은 곳 작업을 준비하고 있다. 2026년 10월 29일 배포. 사진 선박해양플랜트연구소." loading="lazy"><figcaption>선박해양플랜트연구소 GWO 교육 현장에서 교육생들이 높은 곳 작업을 준비하고 있다. 2026년 10월 29일 배포. 사진 선박해양플랜트연구소.</figcaption></figure>
+<p>GWO(Global Wind Organisation)는 세계 풍력기업들이 참여해 안전·기술교육 국제기준을 만드는 비영리 협회다. KRISO에 따르면 교육기관은 과정마다 인증을 받아야 한다. 국내 GWO 교육기관은 KRISO를 포함해 4곳이다.</p>
+<p>이번 인증 과정은 블레이드 수리, 기본기술교육, 고급응급처치다. 앞의 둘은 설치·운영·유지보수 전문 기술교육이다. 인증을 더해 KRISO가 제공할 수 있는 교육모듈은 GWO 46종 가운데 19종이 됐다.</p>
+<p>KRISO는 그동안 산업인력이 관련 교육을 받으려면 해외 교육기관을 이용해야 했다고 밝혔다. 이번 인증으로 교육비와 항공·숙박비 부담을 줄일 수 있을 것으로 기대했다.</p>
+<figure><img src="img/owf05_02.jpg" alt="선박해양플랜트연구소 GWO 교육 현장에서 장비를 활용한 시연을 하고 있다. 2026년 10월 29일 배포. 사진 선박해양플랜트연구소." loading="lazy"><figcaption>선박해양플랜트연구소 GWO 교육 현장에서 장비를 활용한 시연을 하고 있다. 2026년 10월 29일 배포. 사진 선박해양플랜트연구소.</figcaption></figure>
+<p>한성종 KRISO 책임기술원은 2030년까지 GWO 모든 교육과정을 국내에 들여오는 것이 목표라고 밝혔다. 정부는 지난해 12월 관계부처 계획에 국내 트레이닝센터를 세우는 방안을 담았다. 터빈 기술을 내재화하려고 베스타스·두산·지멘스 등 터빈사와 협력하는 방안이다.</p>
+<h2>인천 7개 기관 협약, 고교 시범교육</h2>
+<p>인천시는 지난 5월 18일 「인천 해상풍력 미래인재 양성 업무협약」을 맺었다. 시교육청, 인천테크노파크, 인하대·인천대 공과대학, 서울대 환경대학원, 에너지전환포럼이 함께했다.</p>
+<p>협약에서 인천시는 단지 조성과 산업 육성 정책을 총괄하기로 했다. 시교육청은 초·중·고 연계 교육과 진로 프로그램을 맡기로 했다.</p>
+<p>인천테크노파크는 기업 수요 중심 교육과 취업 연계를 맡기로 했다. 인하대와 인천대는 실무형 전문인력 양성과 전환교육을 맡기로 했다.</p>
+<p>인천시는 5월 중 계산공업고등학교와 인천소방고등학교에서 시범교육을 할 예정이라고 협약 당시 밝혔다. 교재는 서울대 환경대학원과 에너지전환포럼이 함께 만들었다. 인천시는 계산공업고를 수도권 첫 에너지고등학교로 소개했다.</p>
+<p>7개 기관은 교육과정 개발과 현장 실습 프로그램을 단계적으로 추진할 계획이라고 인천시는 밝혔다. 이남주 인천시 미래산업국장은 협약이 지역 산업과 연계한 일자리로 이어지게 지원하겠다고 밝혔다.</p>
+<h2>영덕 화재 3명 사망, 안전 포인트 배포</h2>
+<p>지난 3월 23일 경북 영덕군 풍력발전시설에서 정비·점검 작업 중 불이 나 3명이 숨졌다. 고용노동부는 이날 장관이 사고 수습과 재발방지 조치를 긴급 지시했다고 밝혔다.</p>
+<p>기후에너지환경부와 고용노동부는 지난 10월 22일 「한눈에 보는 풍력발전 유지·보수 안전 포인트」를 배포한다고 밝혔다. 두 부처가 함께 만들었고, 영덕 화재사고 같은 재해 사례와 현장 의견을 반영했다.</p>
+<p>자료는 작업 위치를 타워 하부, 타워 내부, 나셀, 블레이드·허브 등으로 나눴다. 5가지 유지·보수 공정의 안전수칙은 그림과 도표로 담았다. 위험성이 높은 블레이드 작업에는 위험성평가 예시를 실었다.</p>
+<p>두 부처는 이 자료를 141개 풍력발전단지와 관련 업계·단체에 보내고 산업안전포털에도 올렸다. 고용노동부는 「재생에너지 안전 작업 가이드(풍력발전)」를 11월에 추가로 배포할 계획이라고 당시 밝혔다. 해상풍력과 설비 설치·해체를 다룬 가이드다.</p>
+<h2>15MW급 터빈, 국내 생산·기술이전 계획</h2>
+<p>관계부처는 지난해 12월 10일 「해상풍력 기반시설(인프라) 확충 및 보급 계획」을 내놨다. 계획은 타워·케이블·하부구조물은 경쟁력을 갖췄지만 터빈은 경쟁력이 뒤져 공급망 우려가 있다고 적었다.</p>
+<p>계획을 보면 2025년 공공 트랙은 모두 국산 터빈을 쓴다. 2022~2024년 낙찰 사업 대다수는 외산 터빈을 쓸 예정이다.</p>
+<p>계획은 세계풍력에너지협의회(GWEC) 2023년 자료를 인용했다. 이 자료에서 미국·중국·유럽연합 국적 상위 10개사의 세계 터빈 시장 점유율은 86%다.</p>
+<p>기후에너지환경부는 지난 6월 30일 상반기 입찰에서 5개 사업 1786MW를 뽑았다고 밝혔다. 선정 사업들은 하부구조물·케이블·설치·시공에서 국내 공급망을 쓰겠다는 계획을 냈다.</p>
+<p>터빈 계획은 10MW급이 국내 기술 기반이고, 15MW급은 국내 생산과 기술이전을 담았다. 기후에너지환경부는 이 계획들의 이행 점검을 강화할 계획이라고 밝혔다.</p>
+<p>기후에너지환경부는 지난 7월 16일 전남 신안우이 해상풍력(390MW급) 착공식을 열었다. 기후에너지환경부는 순수 국내자본으로 15MW급 터빈을 처음 세우는 대규모 해상풍력 사업이라고 소개했다.</p>
+<p>터빈을 뺀 핵심 기자재에는 국내 기업이 참여한다. 상업운전 목표는 2029년 1월이다.</p>
+<h2>호주 21GW, 운영·유지보수 6300명</h2>
+<p>호주 태즈메이니아대학교 페기 슈링 천(Peggy Shu-Ling Chen) 연구팀은 『윈드 에너지』 제29권 11호에 논문을 실었다. 깁스랜드 해역의 해상풍력 공급망 수요를 모형으로 추정했다.</p>
+<p>가장 큰 시나리오는 2040년까지 21GW가 들어서는 경우다. 연구팀은 이때 터빈 1000기 넘게, 설치선 최대 5척이 필요하다고 계산했다. 그해 직접 일자리는 건설 1401명, 운영·유지보수 6300명으로 추정했다. 단위는 전일제 환산이다.</p>
+<p>연구팀은 1GW당 건설 600명, 운영·유지보수 300명을 기준으로 삼았다. 빅토리아주 정부 목표인 9GW 시나리오에서는 2040년 운영·유지보수 일자리를 2700명으로 추정했다.</p>
+<figure><img src="img/owf05_03.jpg" alt="호주 깁스랜드 해역 시나리오별 2040년 연간 해상풍력 직접 일자리(전일제 환산, 명). 자료 Chen 외(2026) 『Wind Energy』." loading="lazy"><figcaption>호주 깁스랜드 해역 시나리오별 2040년 연간 해상풍력 직접 일자리(전일제 환산, 명). 자료 Chen 외(2026) 『Wind Energy』.</figcaption></figure>
+<p>연구팀은 호주의 취약점을 넷으로 꼽았다. 대형 터빈 부품 제조 역량 부재, 항만 기반시설 부족, 설치·지원 선박 확보 제약, 맞춤형 인력 훈련 경로 부족이다. 처방으로는 직업훈련과 고등교육, 다른 업종 인력의 재교육을 묶은 인력 전략을 제시했다.</p>
+<p>관계부처 계획은 해상풍력 산업육성방안과 전문인력 양성방안을 2026년에 수립·발표한다고 적었다.</p>
+<div class="refs"><h3>참고문헌</h3><ul><li>Peggy Shu-Ling Chen 외 7명, 「Enabling Offshore Wind in Australia: A Supply Chain Modelling Approach to Identifying Infrastructure and Capability Gaps」, 『Wind Energy』 29(11), 와일리, 2026년(온라인 10월 14일), e70159, <a href="https://doi.org/10.1002/we.70159" target="_blank" rel="noopener">https://doi.org/10.1002/we.70159</a></li><li>관계부처 합동(기후에너지환경부·해양수산부·국방부·금융위원회), 「해상풍력 기반시설(인프라) 확충 및 보급 계획」, 보도자료와 붙임, 2025년 12월 10일</li><li>기후에너지환경부 해상풍력발전추진단, 「'26년 상반기 해상풍력 입찰 결과 5개 사업 1,786MW 선정」, 보도자료, 2026년 6월 30일, <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=283572" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=283572</a> (KDI 경제교육·정보센터 게재본)</li><li>기후에너지환경부 해상풍력발전추진단, 「신안우이 해상풍력 착공, 순수 국내자본 대규모 해상풍력 본격화」, 보도자료, 2026년 7월 16일, <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=284313" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=284313</a> (KDI 경제교육·정보센터 게재본)</li><li>고용노동부·기후에너지환경부, 「풍력발전 유지·보수는 안전수칙 확인부터」, 보도자료, 2026년 10월 22일, <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=288403" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=288403</a> (KDI 경제교육·정보센터 게재본)</li><li>선박해양플랜트연구소, 「KRISO, 해상풍력 핵심 기술교육 국제인증 획득… 국내 교육 기반 확대」, 보도자료, 2026년 10월 29일, <a href="https://www.kriso.re.kr/gallery.es?mid=a10403000000&amp;amp;bid=0019&amp;amp;list_no=1115&amp;amp;act=view" target="_blank" rel="noopener">https://www.kriso.re.kr/gallery.es?mid=a10403000000&amp;amp;bid=0019&amp;amp;list_no=1115&amp;amp;act=view</a></li><li>고용노동부, 「(참고) 노동부장관, 영덕 풍력발전기 화재사고 관련 사고수습 및 재발방지 조치 철저 긴급지시」, 보도참고자료, 2026년 3월 23일, <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19116" target="_blank" rel="noopener">https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19116</a></li><li>인천광역시, 「인천시, 해상풍력 미래인재 키운다」, 보도자료, 2026년 5월 18일, <a href="https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000014717967" target="_blank" rel="noopener">https://www.incheon.go.kr/IC010205/view?repSeq=DOM_0000000014717967</a></li></ul><h4>[사진 출처]</h4><ul><li>[사진 1·2] 선박해양플랜트연구소 제공, 「KRISO, 해상풍력 핵심 기술교육 국제인증 획득… 국내 교육 기반 확대」 보도자료 사진, 2026년 10월 29일, <a href="https://www.kriso.re.kr/gallery.es?mid=a10403000000&amp;amp;bid=0019&amp;amp;list_no=1115&amp;amp;act=view" target="_blank" rel="noopener">https://www.kriso.re.kr/gallery.es?mid=a10403000000&amp;amp;bid=0019&amp;amp;list_no=1115&amp;amp;act=view</a></li></ul></div>
+</div>
+ <div class="af">
+<p class="ai">※ 이 기사는 AI 프로그램 클로드를 활용해 작성했습니다.</p>
+<h3>관련기사</h3><ul class="rel"><li><a href="owf04.html">[해상풍력 기획④] 설치항만 후보로 꼽힌 인천신항, 인천시는 정비 거점 구상</a></li><li><a href="owf03.html">[해상풍력 기획③] 하반기 해상풍력 입찰 2.2GW, 공공주도 몫 300MW</a></li><li><a href="owf02.html">[해상풍력 기획②] 인천 공공 해상풍력 1000MW, 연내 전력계통 협의 목표</a></li><li><a href="owf01.html">[해상풍력 기획①] 인천 해상풍력 섬 주민 몫, 세 제도의 공백</a></li></ul>
+<div class="by"><div class="who"><b>김갑봉 기자</b><span>weminaimax@weminai.com</span></div><a class="more" href="/news/s.html?k=전체">다른기사 보기</a></div>
+<div class="tags"><span>#해상풍력</span><span>#인력양성</span><span>#GWO</span><span>#선박해양플랜트연구소</span><span>#영덕풍력화재</span><span>#인천해상풍력</span><span>#미래인재양성협약</span><span>#풍력안전</span><span>#해상풍력공급망</span><span>#국산터빈</span></div>
+<p class="copy">저작권자 © AI경제저널 무단전재 및 재배포, AI학습 및 활용 금지</p>
+</div>
+</div></article>
+<div class="nf"><footer class="nff"><div class="wrap"><div class="pub"><a href="/news/">AI경제저널</a></div><div class="meta">
+    AI경제저널 · 인터넷신문 등록번호 임시00155(인천광역시) · 등록일 2026년 11월 10일<br>
+    발행인 김효진 · 편집인 김효진 · 청소년보호책임자 김갑봉<br>
+    (22180) 인천광역시 미추홀구 수봉남로24번길 74 · 032-777-0421 · weminaimax@weminai.com
+    <!-- 정식 등록번호가 나오면 임시00155를 갈음한다 -->
+  </div><div class="links"><a href="/news/about.html">매체소개</a><a href="/news/s.html?k=전체">전체기사</a><a href="/news/reader.html">독자참여</a><a href="/news/ethics.html">윤리강령</a><a href="/news/code.html">편집규약</a><a href="/news/corrections.html">정정·반론</a><a href="/news/tip.html">제보하기</a><a href="/news/member.html">후원하기</a><a href="/news/privacy.html"><b>개인정보 처리방침</b></a></div><div class="copy">AI경제저널에 실린 글과 그림의 저작권은 AI경제저널에 있습니다. 무단 복사·전재·재배포를 금합니다. 인용할 때는 출처(AI경제저널, news.weminai.com)를 반드시 밝혀 주십시오.</div></div></footer></div>
+<script>(function(){var d=new Date(),w="일월화수목금토";var e=document.getElementById("today");if(e)e.textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 "+w[d.getDay()]+"요일";})();</script>
+<script src="../nocopy.js"></script>
+</body></html>
